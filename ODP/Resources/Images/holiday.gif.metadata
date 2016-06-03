@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="4ca" sequence="5010" unid="7ED172D09D2B8F4D852566CC0070494A">
+<created><datetime>19981130T152627,94-05</datetime></created>
+<modified><datetime dst="true">20150507T110154,16+02</datetime></modified>
+<revised><datetime dst="true">20130909T095404,82-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150507T110154,15+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150507T110154,15+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<item name="$TITLE" sign="true"><textlist><text>holiday.gif</text><text>holiday</text></textlist></item>
+
+
+<item name="$MimeType" sign="true"><text>image/gif</text></item>
+<item name="$FileModDT" sign="true"><datetime>20010226T074356,00-05</datetime></item>
+<item name="$Flags"><text>34Ci</text></item>
+<item name="$ImageNames" sign="true"><text>holiday.gif</text></item>
+<item name="$LANGUAGE" sign="true"><text>en</text></item></note>

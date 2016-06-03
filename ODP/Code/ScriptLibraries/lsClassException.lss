@@ -1,0 +1,190 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+%REM ////////////////////////////////////////////////////////////////////////////////////
+
+	library:		lsClassException
+
+	methods:		HandleError
+				RaiseError
+
+	properties:	NotesError
+				CallStack
+				Javascript
+				HTML
+				IsDebug
+
+	created:		September 8, 2003
+
+	contributed:	Thomas Gumz 
+
+%END REM ////////////////////////////////////////////////////////////////////////////////
+
+Option Public
+Option Declare
+
+%Include "lsconst.lss"
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Class cException
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Private Const MODULE_NAME	= "lsClassException"
+Private Const CLASS_NAME  	= "cException"
+Private Const DEBUG_PUBNAMES	= "DEBUG_PUBNAMES"
+
+Class cException
+	
+	Private m_lIndex			As Long	
+	Private m_aCallStack()		As String
+	Private m_sNotesError		As String
+	Private m_sErrorJS			As String
+	Private m_sErrorHTML		As String
+	Private m_sOptionalInfo		As String
+	
+	Private m_isDebug			As Boolean	
+	Private m_isShowInConsole	As Boolean	
+	
+	'-------------
+	Public Sub New 'class constructor
+	'-------------
+		
+		Dim session	As New Notessession
+		
+		If Val(session.GetEnvironmentString(DEBUG_PUBNAMES, True)) >= 2 Then
+			Me.m_isDebug = True	
+		End If
+		
+		m_isShowInConsole = True
+		
+	End Sub
+	
+	'----------------
+	Public Sub Delete 'class destructor
+	'----------------
+		
+	End Sub		
+	
+	Public Property Get IsDebug() As Boolean
+		IsDebug = m_isDebug
+	End Property
+	
+	Property Get HTML As String
+		HTML = "HTML error not yet implemented"				'm_sErrorHTML
+	End Property
+	
+	Property Get JavaScript As String
+		JavaScript = "JavaScript error not yet implemented"	'm_sErrorJS
+	End Property
+	
+	Public Property Get NotesError As String
+		NotesError = m_sNotesError	
+	End Property
+	
+	Public Property Get Callstack As String
+		Callstack = Join(m_aCallStack, Chr$(13) & Chr$(10))
+	End Property
+	
+	'--------------------
+	Public Sub RaiseError(sModule As String, sClass As String, vOptional As Variant)
+	'--------------------
+		
+		Call Me.ProcessError(sModule, sClass, Getthreadinfo(LSI_THREAD_CALLPROC), Error, Err, Erl, vOptional)
+		Error Err 're-issue error to bubble it up in the chain...
+		
+	End Sub
+	
+	'---------------------
+	Public Sub HandleError(sModule As String, sClass As String, vOptional As Variant)
+	'---------------------	
+		
+		On Error Goto ERROR_HANDLER
+		
+		Dim lIndex As Long
+		
+		Call Me.ProcessError(sModule, sClass, Getthreadinfo(LSI_THREAD_CALLPROC), Error, Err, Erl, vOptional)
+		
+		'append optional info to end of callstack
+		If m_sOptionalInfo <> "" Then
+			Redim Preserve m_aCallStack(m_lIndex)			
+			m_aCallStack(m_lIndex) = Chr$(13) + "Additional Info:" + Chr$(13) + m_sOptionalInfo
+		End If
+		
+		'now that the error is handled, reset the callstack index and error code...
+		m_lIndex = 0
+		Err = 0
+		
+		If Me.m_isShowInConsole Then
+			
+			Msgbox "-------------------------------"
+			Msgbox "Domino Directory Error:"
+			Msgbox "(Please report the error below "
+			Msgbox " to IBM software support)"
+			Msgbox "-------------------------------"
+			For lIndex = 0 To Ubound(m_aCallStack)
+				Msgbox m_aCallStack(lIndex)
+			Next lIndex
+			Msgbox "-------------------------------"	
+			
+		End If
+		
+		Exit Sub
+		
+ERROR_HANDLER:
+		
+		Msgbox "-------------------------------"
+		Msgbox "Domino Directory Error:"
+		Msgbox "(Please report the error below "
+		Msgbox " to IBM software support)"
+		Msgbox "-------------------------------"
+		Msgbox Error & " (#" & Err & ") in:"
+		Msgbox MODULE_NAME & ":" & CLASS_NAME & "::" & Getthreadinfo(LSI_THREAD_PROC) & " (" & Erl & ")"
+		Msgbox "Original error: " & m_sNotesError	
+		Msgbox "-------------------------------"		
+		
+		Exit Sub
+		
+	End Sub
+	
+	'----------------------
+	Private Sub ProcessError(sModule As String, sClass As String, sFunction As String, sError As String, lErr As Long, lLine As Long, vOptional As Variant)
+	'----------------------
+		
+		On Error Goto ERROR_HANDLER
+		
+		Dim sStackHeader	As String		
+		Dim sStackFrame	As String
+		
+		If m_lIndex = 0 Then
+			
+			If Not Isnull(vOptional) Then
+				m_sOptionalInfo	= Cstr(vOptional)
+			End If
+			
+			m_sNotesError			= sError
+			sStackHeader			= sError + " (#" + Cstr(lErr) + ") in:"
+			Redim Preserve m_aCallStack(m_lIndex)			
+			m_aCallStack(m_lIndex)	= sStackHeader
+			m_lIndex				= m_lIndex + 1
+			
+		End If
+		
+		If sClass = "" Then
+			sStackFrame = sModule + ":" + sFunction + " (" + Cstr(lLine) + ")"
+		Else
+			sStackFrame = sModule + ":" + sClass + "::" + sFunction + " (" + Cstr(lLine) + ")"
+		End If
+		
+		Redim Preserve m_aCallStack(m_lIndex)	
+		m_aCallStack(m_lIndex) = sStackFrame	
+		m_lIndex = m_lIndex + 1
+		
+		Exit Sub
+		
+ERROR_HANDLER:
+		
+		Error Err, Error$ & " in " & MODULE_NAME & ":" & CLASS_NAME & "::" & Getthreadinfo(LSI_THREAD_PROC) & " (" & Erl & ")"
+		Exit Sub
+		
+	End Sub
+	
+End Class

@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='4e2' unid='A8BE7CD1E3C6674885256178000D277A' sequence='5051'>
+<created><datetime>19950306T212340,74-05</datetime></created>
+<modified><datetime dst='true'>20150507T110154,29+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095401,84-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110154,28+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110154,28+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T143939,43-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='x400permanentAssociation' summary='false' sign='true'><number
+>0</number></item>
+<item name='x400temporarythreshold' summary='false' sign='true'><number>0</number></item>
+<item name='$TITLE'><textlist><text>$X400ConnectionFormSubform1</text><text
+>1.0</text><text>$X400ConnectionFormSubform1</text></textlist></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUA3x</text></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>$X400ConnectionFormSubform1</text></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+gv9GAAEAAAAAAAAAAQDgEKsncAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAADAAAAACUAKYsAAAAAAEAUm9iIFNsYXBpa29mZi1Sb2IAAAAAAAAAAAAAAAAAAAAAAAAA
+gQKC/1IAAgAAAAAAAAAAAKAFAACgBQAAqwgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAJAAAAAJQEoAUKAKAFCgAAAAAAu/88AAIA7wMBAAAAlHYuAAAAIAAFAA4AQ29ubmVj
+dGlvblR5cGUBAAEAMwALAgMABwAMAAUACTBTMEUAgwQCAIX/HgABAAAJRmVhdHVyZSBub3QgaW5z
+dGFsbGVkLg==
+</rawitemdata></item></note>
+

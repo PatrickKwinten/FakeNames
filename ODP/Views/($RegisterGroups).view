@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='352' unid='6D8FDD98AFA16323852565A40073A254' sequence='5021'>
+<created><datetime>19980207T160301,96-05</datetime></created>
+<modified><datetime dst='true'>20150507T110152,09+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095403,12-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110152,08+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110152,08+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T144045,83-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>($RegisterGroups)</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+xgECAP4AAgAkNgUACQBHcm91cFR5cGUAAQABADAACgIFAAkAR3JvdXBUeXBlAFkBHQKvAMoAEAAA
+AAAAAAAAABBArgC6AAUACQBHcm91cFR5cGUAAQABADEACgKvAKAAEAAAAAAAAAAAgF5ArgCQAAUA
+CQBHcm91cFR5cGUAAQABADIACgKvAHYAEAAAAAAAAAAAgE5ArgBmAAUACQBHcm91cFR5cGUAAQAB
+ADMACgKvAEwAEAAAAAAAAAAAAFdArgA8AAUACQBHcm91cFR5cGUAAQABADQACgKvACIAEAAAAAAA
+AAAAAEpArgASAAAAAAAAAAAAAACuAAQAtQsDAAIAIgACACQ0AgAFAAAAAAAAAAUACABMaXN0TmFt
+ZbQCAwACACAACQBHcm91cFR5cGUABQAJAEdyb3VwVHlwZQADAAUALAAoAAUAAgACAAkACQAEACQ2
+JDRHcm91cFR5cGUkQ29uZmxpY3QkUkVGBAAEAAAAQgAFAAQAVHlwZQEABQBHcm91cAAKAgUABABG
+b3JtAQAFAEdyb3VwAAoCHAIFAAkAJENvbmZsaWN0AFkBHAIDAAcAEgAMAAlMMVM0UzVTOFM5Uw==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+DwABAABECGYAAAACACQ0
+</rawitemdata></item>
+<item name='$Collation1' summary='true'>
+<rawitemdata type='2'>
+DwABAABEAGYAAAACACQ2
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAAcACAQAAFZDQAECAAAAJgEAAA8AAQAACgAAAAAIAAAAAAICAAAAVkMBAAIACAAwAAAA0AAB
+AAAJAAEAAAAAAAAAAgIAAABWQwgACQAJACIAAABQAAEAAAoAAAAAAAAAAAACAgAAACQ2JgECAP4A
+AgAkNgUACQBHcm91cFR5cGUAAQABADAACgIFAAkAR3JvdXBUeXBlAFkBHQKvAMoAEAAAAAAAAAAA
+ABBArgC6AAUACQBHcm91cFR5cGUAAQABADEACgKvAKAAEAAAAAAAAAAAgF5ArgCQAAUACQBHcm91
+cFR5cGUAAQABADIACgKvAHYAEAAAAAAAAAAAgE5ArgBmAAUACQBHcm91cFR5cGUAAQABADMACgKv
+AEwAEAAAAAAAAAAAAFdArgA8AAUACQBHcm91cFR5cGUAAQABADQACgKvACIAEAAAAAAAAAAAAEpA
+rgASAAAAAAAAAAAAAACuAAQAtQsDAAcAJgAgAAkzUzRTMTBTMTFTMTNTMTdTMTlTMjNTMjVTMjlT
+MzhTJDRMaXN0TmFtZTAAAgAiAAIAJDQCAAUAAAAAAAAABQAIAExpc3ROYW1ltAIDAAcADAAFAAkw
+UzBFAEdyb3VwVHlwZUdyb3VwVHlwZSIAAgAgAAkAR3JvdXBUeXBlAAUACQBHcm91cFR5cGUAAwAm
+AAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAA
+AAABAMAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/
+/wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAA
+AAAAAEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAABAAAAAAAB
+AICAgAABAAAAAAAAAAgAAAAAAAEAWEMADIACAAAAAAABAgICAQEBAQEABAAAAAAAAAAAIC8vOllD
+AAAIAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAuLCQA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>8</text></item></note>
+

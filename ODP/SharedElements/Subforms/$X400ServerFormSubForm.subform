@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='642' unid='BA6848F2F30935A7852561660009B6EB' sequence='5060'>
+<created><datetime>19950216T204606,51-05</datetime></created>
+<modified><datetime dst='true'>20150507T110156,06+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095402,50-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110156,05+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110156,05+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T143939,53-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='X400DeliverContentLength' summary='false' sign='true'><number
+>0</number></item>
+<item name='X400MaximumAssociationCount' summary='false' sign='true'><number
+>0</number></item>
+<item name='UrgentHoldForTransfer' summary='false' sign='true'><number>0</number></item>
+<item name='NormalHoldForTransfer' summary='false' sign='true'><number>0</number></item>
+<item name='NonUrgentHoldForTransfer' summary='false' sign='true'><number
+>0</number></item>
+<item name='RerouteOverrideTimer' summary='false' sign='true'><number>0</number></item>
+<item name='OSITransportConnectTimer' summary='false' sign='true'><number
+>0</number></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSJBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>$X400ServerFormSubForm</text><text>1.0</text><text
+>$X400ServerFormSubForm</text></textlist></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUA3x</text></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>$X400ServerFormSubForm</text></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+gv9GAAEAAAAAAAAAAQDgEKsncAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAADAAAAACUAKYsAAAAAAEAUm9iIFNsYXBpa29mZi1Sb2IAAAAAAAAAAAAAAAAAAAAAAAAA
+gQKC/1IAAgAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQCAIX/HgABAAAJRmVhdHVyZSBub3QgaW5zdGFs
+bGVkLoECgv9SAAMAAAAAAAAAAABwCAAAcAgAAAAATxleIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAABwYwAAAACUBHAIEgBwCBIAAAAAAIMEAwDdBgAAhf+F/wgAAQUKCdIIAQAAAIAA
+3gYAAIX/
+</rawitemdata></item></note>
+

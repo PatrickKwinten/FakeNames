@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='6da' unid='28E7C1A4867448BF8525661E0048635E' sequence='5007'>
+<created><datetime dst='true'>19980609T091040,30-04</datetime></created>
+<modified><datetime dst='true'>20150507T110156,82+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095409,42-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110156,81+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110156,81+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime dst='true'>20081007T114831,57-04</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$TITLE'><textlist><text>$LotusFaxLocationSubform</text><text>1.0</text><text
+>$LotusFaxLocationSubform</text></textlist></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUA3x</text></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSJTbWFsbCBGb250cwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>$LotusFaxLocationSubform</text></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAJAAAAAJQHAAAAAAAAAAAAAAAAu/80AAEA7wMBAAAAQHMmAAAAGAAFAAkARmF4RG9t
+YWluAGgBHgEDAAcADAAFAAkwUzBFAIMEAQCF/wgABQAAAg==
+</rawitemdata></item></note>
+

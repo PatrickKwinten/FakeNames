@@ -1,0 +1,425 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Base 0
+Option Compare Nocase
+Option Declare
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Function UtilPrintLSContainerInToJSArray(hvContainer As Variant, isSkipEmpty As Boolean)
+Declare Function UtilEscape(sUrl As String) As String
+Declare Function UtilEscapePath(sUrl As String) As String
+Declare Sub UtilPrintCatViewColumnIntoJSArray(vw As NotesView, iColumn As Integer, cat As String)
+Declare Function UtilSprintf(hsFormat As String, hsData As String, hsDelimiter As String) As String
+Declare Sub UtilPrintViewColumnIntoJSArray(vw As NotesView, iColumn As Integer)
+Declare Function UtilGetStrResource(strTmp As String, strFormula As String) As String
+Declare Function UtilEscapeJS(hsSource As String) As String
+Declare Public Function UtilGetRemoteUserName() As String
+Declare Function UtilGetQueryParameter(sQueryString As String, sKey As String) As String
+Declare Function UtilEncodeParam (sParam As String) As String
+Declare Function UtilWebDbName(ndb As NotesDatabase) As String
+Declare Function UtilUnescape(sUrl) As String
+Declare Public Function UtilOpenSysDb(sSysDbAlias As String) As NotesDatabase
+Declare Function UtilGetMailInDbString(vw As NotesView) As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+%INCLUDE "lsconst.lss"
+
+Public Const SYSDB_SCHEMA	= "SysDbSchema"
+
+'++LotusScript Development Environment:2:1:UtilPrintLSContainerInToJSArray:1:8
+Function UtilPrintLSContainerInToJSArray(hvContainer As Variant, isSkipEmpty As Boolean)
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim isFirst	As Boolean
+	Dim isInArray	As Boolean
+	
+	Print |[|
+	
+	isFirst	= True
+	isInArray = True
+	
+	If Isscalar(hvContainer) Then
+		Print |'| & UtilEscapeJS(Cstr(hvContainer)) & |'| & Chr(13) & Chr(10)
+	Else
+		Forall sEntry In hvContainer
+			If Not (isSkipEmpty And Cstr(sEntry) = "") Then
+				If isFirst Then
+					isFirst = False
+				Else
+					Print |,|
+				End If
+				Print |'| & UtilEscapeJS(Cstr(sEntry)) & |'| & Chr(13) & Chr(10)
+			End If		
+		End Forall
+	End If
+	
+	Print |]|
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	If isInArray Then Print |]|
+	
+	Error Err, "<e>" & Getthreadinfo(LSI_THREAD_PROC) & " (" & Cstr(Erl) & ") " & Error
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:UtilEscape:1:8
+Function UtilEscape(sUrl As String) As String
+	
+	'this function escapes special characters
+	
+	UtilEscape = sUrl
+	UtilEscape = Replace(UtilEscape, |&|,	|$1|)
+	UtilEscape = Replace(UtilEscape, |=|,	|$2|)
+	UtilEscape = Replace(UtilEscape, |+|,	|$3|)
+	UtilEscape = Replace(UtilEscape, | |,	|$4|)
+	
+End Function
+
+
+'++LotusScript Development Environment:2:1:UtilEscapePath:1:8
+Function UtilEscapePath(sUrl As String) As String
+	
+	UtilEscapePath = sUrl
+	UtilEscapePath = Replace(UtilEscapePath, | |,	|+|)
+	UtilEscapePath = Replace(UtilEscapePath, |\|,	|/|)
+	
+End Function
+
+
+'++LotusScript Development Environment:2:2:UtilPrintCatViewColumnIntoJSArray:1:8
+Sub UtilPrintCatViewColumnIntoJSArray(vw As NotesView, iColumn As Integer, cat As String)
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim vwnav		As NotesViewNavigator
+	Dim vwe		As NotesViewEntry
+	Dim isFirst	As Boolean
+	Dim isInArray	As Boolean
+	
+	Set vwnav = vw.CreateViewNavFromCategory(cat)
+	Set vwe	= vwnav.GetFirst
+	
+	Print |[|
+	
+	isFirst	= True
+	isInArray = True
+	
+	If iColumn > 0 Then
+		iColumn = iColumn - 1
+	End If
+	
+	While Not vwe Is Nothing
+		
+		If isFirst Then
+			isFirst = False
+		Else
+			Print |,|
+		End If
+		
+		Print |'| & UtilEscapeJS(Cstr(vwe.ColumnValues(iColumn))) & |'| & Chr(13) & Chr(10)
+		
+		Set vwe = vwnav.GetNext(vwe)
+	Wend
+	
+	Print |]|
+	
+	Exit Sub
+	
+ERROR_HANDLER:
+	If isInArray Then Print |]|
+	
+	Error Err, "<e>" & Getthreadinfo(LSI_THREAD_PROC) & " (" & Cstr(Erl) & ") " & Error
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:UtilSprintf:1:8
+Function UtilSprintf(hsFormat As String, hsData As String, hsDelimiter As String) As String
+	
+	'C-style sprintf() function for string formatting. Currently only %s is implemented
+	
+	'hsFormat:    the input string, like "In %s2 we trust, but lock your %s1"
+	'hsData:      the keywords separated by '|', like "Car|God"
+	'hsDelimiter: the delimiter. Defaults to '|' if empty.
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim vData		As Variant
+	Dim sDelimiter	As String
+	Dim iCounter	As Integer
+	
+	'get custom delimiter to splice the data, if specified
+	If hsDelimiter = "" Then
+		sDelimiter = "|"
+	Else
+		sDelimiter = Trim$(hsDelimiter)
+	End If
+	
+	vData = Split(hsData, sDelimiter, , 5)
+	
+	UtilSprintf = hsFormat
+	For iCounter = 0 To Ubound(vData)
+		
+		UtilSprintf = Replace(UtilSprintf, "%s" & iCounter + 1, vData(iCounter),,, 5)
+		
+	Next iCounter
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Error Err, "<e>" & Getthreadinfo(LSI_THREAD_PROC) & " (" & Cstr(Erl) & ") " & Error
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:2:UtilPrintViewColumnIntoJSArray:1:8
+Sub UtilPrintViewColumnIntoJSArray(vw As NotesView, iColumn As Integer)
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim vwnav		As NotesViewNavigator
+	Dim vwe		As NotesViewEntry
+	Dim isFirst	As Boolean
+	Dim isInArray	As Boolean
+	
+	Set vwnav = vw.CreateViewNav()
+	Set vwe	= vwnav.GetFirst
+	
+	Print |[|
+	
+	isFirst	= True
+	isInArray = True
+	
+	While Not vwe Is Nothing
+		
+		If isFirst Then
+			isFirst = False
+		Else
+			Print |,|
+		End If
+		
+		Print |'| & UtilEscapeJS(Cstr(vwe.ColumnValues(iColumn))) & |'| & Chr(13) & Chr(10)
+		
+		Set vwe = vwnav.GetNext(vwe)
+	Wend
+	
+	Print |]|
+	
+	Exit Sub
+	
+ERROR_HANDLER:
+	If isInArray Then Print |]|
+	
+	Error Err, "<e>" & Getthreadinfo(LSI_THREAD_PROC) & " (" & Cstr(Erl) & ") " & Error
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:1:UtilGetStrResource:1:8
+Function UtilGetStrResource(strTmp As String, strFormula As String) As String
+	
+	'----------------------------------------------------------------------------------------------------
+	'	Given a variable name and a formula, this function will
+	'	return  the string value from the variable
+	'----------------------------------------------------------------------------------------------------
+	
+	strFormula = Strright(strFormula, strTmp)
+	strFormula = Strleft(strFormula, |;| )
+	strFormula = Trim(Strright(strFormula, |:=| ))		
+	strFormula = Strright(strFormula, |"| )
+	strFormula = Strleft(strFormula, |"| )
+	
+	UtilGetStrResource = strFormula
+	
+End Function
+
+'++LotusScript Development Environment:2:1:UtilEscapeJS:1:8
+Function UtilEscapeJS(hsSource As String) As String
+	
+	'this function escapes special characters to make sure
+	'javascript strings in transit/on the wire don't "break".
+	
+	UtilEscapeJS = hsSource
+	UtilEscapeJS = Replace(UtilEscapeJS, |\|,	|\\|)
+	UtilEscapeJS = Replace(UtilEscapeJS, |'|,	|\'|)
+	UtilEscapeJS = Replace(UtilEscapeJS, |[<|,	|[[<|)
+	UtilEscapeJS = Replace(UtilEscapeJS, |>]|, 	|>]]|)
+	
+	UtilEscapeJS = Replace(UtilEscapeJS, Chr$(13) & Chr$(10), |\n|)	
+	UtilEscapeJS = Replace(UtilEscapeJS, Chr$(13), |\n|)	
+	UtilEscapeJS = Replace(UtilEscapeJS, Chr$(10), ||)
+	
+End Function
+
+
+'++LotusScript Development Environment:2:1:UtilGetRemoteUserName:1:8
+Public Function UtilGetRemoteUserName() As String
+	
+	'return the current remote user name (canonicalized format)
+	
+	Dim ses As New Notessession
+	
+	If Not ses.DocumentContext Is Nothing Then
+		UtilGetRemoteUserName = ses.DocumentContext.REMOTE_USER(0)
+	End If
+	
+	If UtilGetRemoteUserName = "" Then
+		UtilGetRemoteUserName = "Anonymous"
+	End If
+	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:UtilGetQueryParameter:1:8
+Function UtilGetQueryParameter(sQueryString As String, sKey As String) As String
+	'
+	'Returns a parameter from Query_String
+	'
+	Dim nPos As Integer
+	Dim nTotalLength As Integer
+	Dim nKeyLength As Integer
+	Dim nNextPos As Integer
+	
+	UtilGetQueryParameter = ""
+	
+	nTotalLength = Len(sQueryString)
+	nKeyLength = Len(sKey)
+	
+	If nTotalLength = 0 Or nKeyLength = 0 Then Exit Function
+	
+	'find the first occurence of the variable
+	nPos = Instr(sQueryString, sKey)
+	
+	If (nPos = 0) Then Exit Function
+	
+	' See if there is a parameter after this one
+	nNextPos = Instr(nPos+1, sQueryString, "&")
+	
+	If (nNextPos = 0) Then
+		UtilGetQueryParameter = UtilEncodeParam(Mid$(sQueryString, nPos+nKeyLength, nTotalLength - nPos))
+'		UtilGetQueryParameter = Mid$(sQueryString, nPos+nKeyLength, nTotalLength - nPos)
+	Else
+		UtilGetQueryParameter = UtilEncodeParam(Mid$(sQueryString, nPos+nKeyLength, nNextPos - nKeyLength - nPos))		
+'		UtilGetQueryParameter = Mid$(sQueryString, nPos+nKeyLength, nNextPos - nKeyLength - nPos)
+	End If
+End Function
+
+'++LotusScript Development Environment:2:1:UtilEncodeParam:1:8
+Function UtilEncodeParam (sParam As String) As String
+	
+	sParam = Replace(sParam,|!|,|%21|)
+	sParam = Replace(sParam,|"|,|%22|)
+	sParam = Replace(sParam,|#|,|%23|)
+'	sParam = Replace(sParam,|$|,|%24|)   ' do not use this one as it breaks policy docs
+'sParam = Replace(sParam,|%|,|%25|) ' do not use this one
+'sParam = Replace(sParam,|&|,|%26|) ' do not use this one
+	sParam = Replace(sParam,|'|,|%27|)
+	sParam = Replace(sParam,|(|,|%28|)
+	sParam = Replace(sParam,|)|,|%29|)
+	sParam = Replace(sParam,|*|,|%2A|)
+	sParam = Replace(sParam,|-|,|%2D|)
+'	sParam = Replace(sParam,|.|,|%2E|) do not use this one as it breaks Criteria dialog
+	sParam = Replace(sParam,|/|,|%2F|)
+	sParam = Replace(sParam,|:|,|%3A|)
+	sParam = Replace(sParam,|;|,|%3B|) 
+	sParam = Replace(sParam,|<|,|%3C|)
+'sParam = Replace(sParam,|=|,|%3D|) ' do not use this one
+	sParam = Replace(sParam,|>|,|%3E|)
+	sParam = Replace(sParam,|?|,|%3F|)
+	sParam = Replace(sParam,|@|,|%40|)
+	sParam = Replace(sParam,|`|,|%60|)
+	sParam = Replace(sParam,"|",|%7C|)
+	sParam = Replace(sParam,|~|,|%7E|)
+	
+	UtilEncodeParam = sParam
+	
+End Function
+
+'++LotusScript Development Environment:2:1:UtilWebDbName:1:8
+Function UtilWebDbName(ndb As NotesDatabase) As String
+	
+	UtilWebDbName = |/| & UtilEscapePath(ndb.FileName) & |/|
+	
+End Function
+
+'++LotusScript Development Environment:2:1:UtilUnescape:1:8
+Function UtilUnescape(sUrl) As String
+	
+	'this function unescapes special characters
+	
+	UtilUnescape = sUrl
+	UtilUnescape = Replace(UtilUnescape, |$1|,	|&|)
+	UtilUnescape = Replace(UtilUnescape, |$2|,	|=|)
+	UtilUnescape = Replace(UtilUnescape, |$3|,	|+|)
+	UtilUnescape = Replace(UtilUnescape, |$4|,	| |)
+	
+End Function
+
+'++LotusScript Development Environment:2:1:UtilOpenSysDb:1:8
+Public Function UtilOpenSysDb(sSysDbAlias As String) As NotesDatabase
+	
+	'return handle to a opened system database
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim nDatabase			As New NotesDatabase("", "")	
+	Dim sFileName			As String
+	
+	Select Case sSysDbAlias	
+	Case SYSDB_SCHEMA			'LDAP Schema
+		sFileName = "schema.nsf"		
+	End Select
+	
+	'try to open the system database
+	Call nDatabase.Open ("", sFileName)
+	If nDatabase.IsOpen Then
+		Set UtilOpenSysDB = nDatabase
+	Else
+		Set UtilOpenSysDB = Nothing
+	End If		
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Error Err, "<e>" & Getthreadinfo(LSI_THREAD_PROC) & " (" & Cstr(Erl) & ") " & Error
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:UtilGetMailInDbString:1:8
+Function UtilGetMailInDbString(vw As NotesView) As String
+	'---------------------------------------------------------------------------
+	'	Returns the 'Database' component from column 1
+	'	of the Mail-In Database view
+	'---------------------------------------------------------------------------
+	
+	Dim vc As NotesViewColumn
+	Set vc = vw.Columns(0)
+	
+	Dim strFormula As String
+	strFormula = vc.Formula
+	
+	strFormula = Strrightback(strFormula, |;| )
+	
+	If Instr(strFormula, |")| ) Then
+		strFormula = Strleft(strFormula, |")| )
+		strFormula = Strright(strFormula, |"| )	
+	Else	
+		Dim strTmp As String		
+		strTmp = Strleft(strFormula, |)| )
+		
+		strFormula = vc.Formula
+		
+		strFormula = UtilGetStrResource(strTmp, strFormula)
+		
+	End If
+	
+	UtilGetMailInDbString = strFormula
+	
+End Function

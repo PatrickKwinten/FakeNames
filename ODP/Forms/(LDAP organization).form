@@ -1,0 +1,243 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='49e' unid='866CC8C118C3EC0A85256A02004DB1F5' sequence='5025'>
+<created><datetime>20010301T090838,29-05</datetime></created>
+<modified><datetime dst='true'>20150507T110153,84+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095403,94-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110153,83+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110153,83+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T143947,06-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAIADwAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><textlist><text>(LDAP organization)</text><text>organization</text></textlist></item>
+<item name='$Comment' sign='true'><text>LDAP Object Class</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$SubForms' sign='true'><text>$organizationInheritableSchema</text></item>
+<item name='$SubForm_RepIDs' sign='true'><text>0000000000000000</text></item>
+<item name='$HTMLHeadTag' sign='true'><formula>"&lt;meta http-equiv='expires' content='0'&gt;" +
+"&lt;link rel=stylesheet type='text/css' href='/" + @Subset(@DbName;-1) + "/cssForm?ReadForm'&gt;" +
+"&lt;style type='text/css'&gt; .TableImage {background-image:url(/" + @Subset(@DbName;-1) + "/servers.gif?OpenImageResource);} &lt;/style&gt;"</formula></item>
+<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></item>
+<item name='$Flags'><text>C</text></item>
+<item name='$DesignerVersion' sign='true'><text>8</text></item>
+<item name='$Script' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Use "LDAPObjectClassLib"
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+<break/></text></item>
+<item name='$$FormScript' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Postopen(Source As Notesuidocument)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:2
+
+'++LotusScript Development Environment:2:2:BindEvents:1:129
+Private Sub BindEvents(Byval Objectname_ As String)
+	Static Source As NOTESUIDOCUMENT
+	Set Source = Bind(Objectname_)
+	On Event Postopen From Source Call Postopen
+End Sub
+
+'++LotusScript Development Environment:2:2:Postopen:1:12
+Sub Postopen(Source As Notesuidocument)
+	'Call displayType(Source)
+End Sub<break/></text></item>
+<item name='o' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='userPassword' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='searchGuide' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='seeAlso' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='businessCategory' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='x121Address' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='registeredAddress' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='destinationIndicator' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='preferredDeliveryMethod' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='telexNumber' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='teletexTerminalIdentifier' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='telephoneNumber' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='internationaliSDNNumber' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='facsimileTelephoneNumber' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Street' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='postOfficeBox' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='postalCode' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='PostalAddress' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='physicalDeliveryOfficeName' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='st' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='l' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Description' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Comments' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='Type' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$FIELDS'><textlist><text>Type</text><text>Comments</text><text
+>description</text><text>l</text><text>st</text><text>physicalDeliveryOfficeName</text><text
+>postalAddress</text><text>postalCode</text><text>postOfficeBox</text><text
+>street</text><text>facsimileTelephoneNumber</text><text>internationaliSDNNumber</text><text
+>telephoneNumber</text><text>teletexTerminalIdentifier</text><text>telexNumber</text><text
+>preferredDeliveryMethod</text><text>destinationIndicator</text><text>registeredAddress</text><text
+>x121Address</text><text>businessCategory</text><text>seeAlso</text><text
+>searchGuide</text><text>userPassword</text><text>o</text></textlist></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAACAHn/bAABALGx0gABAAAAAAABAAAAAAABAMDAwAAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/7oAAAABAAAAHiERAAYAFgAYAAAAQ2FuY2VsiAAHABIA
+DAB3ZWIgbmV3IGRvY3MHAAoAAwAJMVMAAQAsAAsAQ3VycmVudFZpZXcAAQAGAFJldHVybgEACABW
+aWV3TmFtZfcCAwAHABAACQAJMFIxUzJTNlMAAAAiAAIAWRsAAAAAAAAFAAsAQ3VycmVudFZpZXcA
+7QIDAAcADAAFAAkwUjRTABYAAAAKAIkAHgEDAAcACgADAAkwUwD2/y8AAAAAAAMAEwANAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAYnRuQ2FuY2VsLmdpZj++/14AAAABAAAAHiERAAYACgAZAAAAQ2FuY2Vs
+OAAHABAACgBzYXZlZCBkb2NzBwAKAAMACTFTAAAAEgACAPwRAAAAAAAA7QEDAAcACgADAAkwUgAK
+AAAACACJAAMA9v8vAAAAAAADABMADQAAAAAAAAAAAAAAAAAAAAAAAAAAAGJ0bkNhbmNlbC5naWY/
+vv+CAAAAAQAAAJpAEQAGAAAAGgAAAENhbmNlbGYABwAQAAoATm90ZXMgb25seQcACgADAAkxUwAD
+AB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHABAACQAJMFIxUzJTM1MAAAASAAIA/BEAAAAA
+AADtAQMABwAKAAMACTBSAPb/LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABidG5DYW5j
+ZWwuZ2lmPw==
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAACAL7/ugAAAAEAAAAeIREABgAWABgAAABDYW5jZWyI
+AAcAEgAMAHdlYiBuZXcgZG9jcwcACgADAAkxUwABACwACwBDdXJyZW50VmlldwABAAYAUmV0dXJu
+AQAIAFZpZXdOYW1l9wIDAAcAEAAJAAkwUjFTMlM2UwAAACIAAgBZGwAAAAAAAAUACwBDdXJyZW50
+VmlldwDtAgMABwAMAAUACTBSNFMAFgAAAAoAiQAeAQMABwAKAAMACTBTAL7/XgAAAAEAAAAeIREA
+BgAKABkAAABDYW5jZWw4AAcAEAAKAHNhdmVkIGRvY3MHAAoAAwAJMVMAAAASAAIA/BEAAAAAAADt
+AQMABwAKAAMACTBSAAoAAAAIAIkAAwC+/4IAAAABAAAAmkARAAYAAAAaAAAAQ2FuY2VsZgAHABAA
+CgBOb3RlcyBvbmx5BwAKAAMACTFTAAMAHgALAFNhdmVPcHRpb25zAAAAAAAAAAAAAAADAAcAEAAJ
+AAkwUjFTMlMzUwAAABIAAgD8EQAAAAAAAO0BAwAHAAoAAwAJMFIA
+</rawitemdata></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>organization</text></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+gQKC/1oAAQAEAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEAzP8IAAAAAACF/wgAAQAACc3/
+CAAAAAAAgQKC/1oAAgAAAAAAAAAAADgEAAA4BAMAQhhCGJwYAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAABAAAAAJSEOAQNADgEDQAAAAAAAQAAAAQAAACDBAIA3QYBAPv/+/8sAAAA
+AAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAABc/z4AAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAABAAAKAAAAAAEAAAAAAHr/JAAAAAoAAAAAAAAA
+AAAAAAAAAAAAAAAAVGFibGVJbWFnZd4GAQD7/6MOOAQoADwAAAAAAAIApBIAADgECUIAAFUCEREB
+AQAAgQKC/1oAAwAAAAAAAAAAAEcECUJHBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAIYBAAAAAFSEDwAAAA8AAAAAAAAAAQAAAAQAAACDBAMAhf8JAAEAAAkgAIECgwQD
+AN0GAACF/4X/GwABAegOICBMREFQIE9yZ2FuaXphdGlvbgDSCAEAQkKCAN4GAACF/4ECgv9aAAQA
+AAAAAAAAAABHBAlCRwQAAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM+v/d3S6G
+AQAAAABUhA8AAAAPAAAAAAAAAAEAAAAEAAAAgwQEAIX/CgABAAAJ/yB4/ykAAAAAAAMAEwAHAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAc2VydmVycwClBgAAAACBAoL/WgAFAAAAAAAAAAAAoAUAAKAFAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAlIcAAAAAAAAAAAAA
+AAABAAAABAAAAIMEBQCF/wgAAQEACd0GAACt/3H/QAAAAAAAAwAYAB4AAAAAAAAAAAAAAAAAAAAA
+AAAAAAAkb3JnYW5pemF0aW9uSW5oZXJpdGFibGVTY2hlbWGt/ysADgAIAAAAHwAkb3JnYW5pemF0
+aW9uSW5oZXJpdGFibGVTY2hlbWEAAK4C3gYAAK4Ahf8IAAEAAAqBAoL/WgAGAAAAAAAAAAAAoAUA
+AKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGMAAAAAlIcAAAAA
+AAAAAAAAAAABAAAABQAAAIMEBgDdBgAAhf+F/wgAAQEKCtIIAQAAAIAA3gYAAIX/3QYAAIr//v9Q
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAACK/0AAiAUABQAwAgAAAAAAAAIBAAAKGAAAAAAAAAAEAAAAAAAY
+AAAAFgABAAwAb3JnYW5pemF0aW9uAwBUeXBl3gYAAIr/3QYAAIX/hf8IAAEBCgrSCAEAAACAAN4G
+AACF/w==
+</rawitemdata></item>
+<item name='$$Script_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZW4AAAQAAQAMAAAAAAAYAPgAAAAAAAQAAAAAAAAAAAA8AP//AABQAP//zABs
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAAAAAADAAAAAAAAAAYAAAA+AAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
+AAMAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwD8AAAAAAAwABUAKABHAEwATwBCAEEATABTACkATwBSAEcAQQBOAEkAWgBBAFQASQBPAE4A
+AACEAAMATgBFAFcAAACYAAYARABFAEwARQBUAEUAAAAAAKAACgBJAE4ASQBUAEkAQQBMAEkAWgBF
+AAAAAAD//wkAVABFAFIATQBJAE4AQQBUAEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAA
+//8SAEwARABBAFAATwBiAGoAZQBjAHQAQwBsAGEAcwBzAEwAaQBiAAAAAAD//xIATABEAEEAUABP
+AEIASgBFAEMAVABDAEwAQQBTAFMATABJAEIAAAAAAAUAHAAAAAAAEjdewBgAAAAAANAAmChYFAAA
+AAAAAAAABAAQAAAAAAA6AAAaAwDSpAAdAAACAAAAEQAQAAAAAAD//wEAAwAFAAAABwAKAAAA
+</rawitemdata></item>
+<item name='$$$FormScript_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZW4AAAQACQAoAAQAAAAkApABAAAAAAQAwADMAAAAAAAwAAgBJABEAP//AABg
+AAAAAAAAAAIAAAAYAGwBAAAAAAAAAAAAAAAAbAFsAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAGAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAEAAADMAMwAzADMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAEAAAAKAAAAAAAAAAkAgAAkAEAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAA
+AAUAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwCUAQAAAADEAA8AJAAkACQARgBPAFIATQBTAEMAUgBJAFAAVABfAE8AAAB4AAMATgBFAFcA
+AACMAAYARABFAEwARQBUAEUAAAAAAEABCgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABF
+AFIATQBJAE4AQQBUAEUAAACUAAYATwBCAEoARQBDAFQAAAAAAPQAAAAAAAAAZAEVACgARwBMAE8A
+QgBBAEwAUwApAE8AUgBHAEEATgBJAFoAQQBUAEkATwBOAAAAJAEVACgARwBsAG8AYgBhAGwAcwAp
+AG8AcgBnAGEAbgBpAHoAYQB0AGkAbwBuAAAA//8GAFMATwBVAFIAQwBFAAAAAAD//woAQgBJAE4A
+RABFAFYARQBOAFQAUwAAAAAA//8LAE8AQgBKAEUAQwBUAE4AQQBNAEUAXwAAAHgBDwBOAE8AVABF
+AFMAVQBJAEQATwBDAFUATQBFAE4AVAAAAP//BgAlAEwAUwBYAFUASQAAAAAA//8IAFAATwBTAFQA
+TwBQAEUATgAAAAAABQAoAgAAAAAPpYtoGAAAAAAAmAAwJj8UAAAAAAAAAAAIAAAAbAEAAAwBAAAA
+AAAAAgAAALAAXAEAAAAAAAAAAAAAAAAAAAAAsACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAFcAQAA
+AAAAAAAAAQAAAAIAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAQBcAQAAKAEGCAAAAAAaAAAAaAH//wAAAAAQAAAA
+AAAAAEQBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAABBUTKe0uaRC/XQDdARGGtwAAAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAA
+AAAAAAAAAgDAAAAAFAIAAAAACgABAP//AAADACAAAAAAAPgACQIAAMwACAAAAAAAAAB8AQAAAAAA
+AAEAAAAEAgQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQCBAIAAAAA
+AAAAAAEAAAAAAAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAEAAAAAAPgACQIAAMwAEwAAAHwBAADLAAAAAAAAAAQA
+LAAAAAAA0sgAHQAAGgsAW1wBSbAAyswAphoMAEdcAcvLAAAAbAEaDQAdGhIAHQIAAAARABgAAAAA
+AP//AQADAAMAAAAGAAwBCAB8AQ8ACgAAAA==
+</rawitemdata></item></note>
+

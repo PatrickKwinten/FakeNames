@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="292" sequence="5104" unid="F87B202C9F265F57C1256B9D00587103">
+<created><datetime dst="true">20020416T180600,99+02</datetime></created>
+<modified><datetime dst="true">20150507T110151,20+02</datetime></modified>
+<revised><datetime dst="true">20130909T095406,58-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150507T110151,19+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150507T110151,19+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime dst="true">20090514T140101,44-04</datetime><datetime>20100304T143914,76-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name="$TITLE" sign="true"><text>WebLSClassTransfer</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+
+<item name="$POID"><datetime dst="true">20130909T095406,58-04</datetime></item></note>

@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='5c6' unid='E5C89535797B1CE48525696E0048BFE3' sequence='5010'>
+<created><datetime dst='true'>20001004T091437,15-04</datetime></created>
+<modified><datetime dst='true'>20150507T110155,44+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095401,56-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110155,43+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110155,43+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T143929,84-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$FIELDS'><text>MSDInstalledComponents</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+X/8QAAEA/gACAAAAAAAAAF//EAABAMAAAgAAAAAAAAA=
+</rawitemdata></item>
+<item name='$TITLE'><text>$MobileServicesPersonSubform</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUAx3</text></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>$MobileServicesPersonSubform</text></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAACBAAAAAJUHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK
+</rawitemdata></item></note>
+

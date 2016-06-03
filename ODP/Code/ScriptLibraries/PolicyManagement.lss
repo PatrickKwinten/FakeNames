@@ -1,0 +1,2750 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Function CheckIfDependentField(strField As String) As Variant
+Declare Sub IncrementGrpPrecedence(hPolicy As NotesDocument, alreadyExist As Boolean)
+Declare Sub ComputeHAItemList(hPolicy As NotesDocument)                         
+Declare Sub ResetGenericFields(hPolicy As notesdocument, ItemName As String)
+Declare Sub CreateINIFields(hPolicy As NotesDocument, sParamList As String, sPrefType As String)
+Declare Sub ComputePOItemList(hPolicy As NotesDocument)
+Declare Sub ActionIncGrpPrecedence
+Declare Sub FieldDependencyReset(hPolicy As NotesDocument)
+Declare Sub VerifyUnique(Source As NotesUIDocument, Continue As Variant)
+Declare Sub ComputeIFPItemList(hPolicy As NotesDocument)
+Declare Sub SetMIMEFields(hPolicy As notesdocument)
+Declare Sub ComputeBLItemList(hPolicy As NotesDocument)
+Declare Sub PolSetQMC(Source As NotesUIDocument, Continue As Variant)
+Declare Sub SetOldDocNm (Source As NotesUIDocument, Isnewdoc As Variant)
+Declare Function ProcessDependencyFields(HPolicy As NotesDocument, strField As String) As Variant
+Declare Sub ProcessAcctNote(allAcctNoteIDs() As String,processType As Integer)
+Declare Sub CritDocs(hPolicy As NotesDocument)	
+Declare Function VerifyUniquePolicy(Source As NotesUIDocument, entered As Integer) As Integer
+Declare Sub PolSetPostOpen(Source As NotesUIDocument)
+Declare Function CheckExclusionFields(strField As String) As Variant
+Declare Sub CleanPxyFields(hPolicy As Notesdocument)
+Declare Sub ComputeDPLckItemList(hPolicy As NotesDocument)
+Declare Sub ActionDecGrpPrecedence
+Declare Function SkipHTASetFields(strField As String) As Variant
+Declare Sub ProcessCertNote(allCertNoteIDs() As String,processType As Integer)
+Declare Sub wWriteOutProxies(hPolicy As NotesDocument)
+Declare Function CheckDependencyFields(strField As String) As Variant
+Declare Sub SetNonLocking(hPolicy As NotesDocument)
+Declare Sub addStringToArray(allStrings() As String,newString As String)
+Declare Sub ActionIncGrpPrecendenceCat
+Declare Sub PolSetQuerySave(Source As NotesUIDocument)
+Declare Sub ProcessDynamicItems(hPolicy As NotesDocument)
+Declare Sub IncGrpPrecedenceAll
+Declare Sub ActionDecGrpPrecedenceCat
+Declare Sub ConvertLongNameFields(hPolicy As Notesdocument)
+Declare Sub ComputeCTLItemList(hPolicy As NotesDocument)
+Declare Sub GenerateSlamList(hPolicy As NotesDocument, sItemName As String)
+Declare Sub RemoveINIFields(hPolicy As NotesDocument, sParamList As String, sPrefType As String)
+Declare Sub WriteOutProxies(Source As NotesUIDocument)
+Declare Sub PolSetQueryOpen(Source As Notesuidocument, Mode As Integer, Isnewdoc As Variant, Continue As Variant)                                        
+Declare Sub CheckPlcyModRole(Source As NotesUIDocument, FromWhere As Integer, IsSettingsDoc As Boolean, Continue As Variant)
+Declare Sub DontChangeItems(hPolicy As NotesDocument)
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+'PolicyManagement: 
+
+'PolicyManagement: 
+
+'PolicyManagement: 
+
+'Option Declare
+'PolicyManagement: 
+
+%INCLUDE "lsconst.lss"
+
+
+Const DOC_NOT_SAVED = "This document will not be saved."
+Const CONFLICT_RISK = "Saving this document may result in a replication or save conflict."
+Const ERROR_FLAG = 0
+Const POL_CLIENT_WARNING = "You must use a Notes 6 client or later to create or modify policy documents."
+Const POL_BUG_WARNING = "The Notes version you are using will not properly create or modify policy documents. A Notes 7 client or later should be used.  Do you wish to continue?"
+Const ERR_TITLE = "Warning"
+Const DONT_SET_STRING = "Don't set value"
+Const COMPILE_SUCCESS_TITLE = "Compiled Successfully"
+Const COMPILE_SUCCESS_BODY = "There are no syntax errors, the formula compiled successfully."
+Const COMPILE_FAILURE_TITLE = "Syntax Error"
+Const COMPILE_FAILURE_BODY = "There is at least one syntax error in the formula.  It did not compile."
+Const COMPILE_FAILURE_SAVE_BODY = "There is at least one syntax error in the formula.  This document could not be saved."
+
+'Begin DNT
+Const LOCALL_PREFIX = "LocAll"
+Const MS_PREFIX = "$qual"
+Const NOTESINI_PREFIX = "$Pref"
+Const DUMMY_STRING = "**$$DUMMY$$**"
+Const MG_SET_BOOL = "bPolicyMg"
+Const NAME_PLUGIN_LIST = "NamePlugInList"
+Const ECLIPSE_PARAMETERS = "EclipseParameters"
+Const MAIL_POLICY = "PolicyMail"
+Const ENFORCE_SUFFIX = ", Enforce"
+Const SETONCE_SUFFIX = ": SetOnce"
+'End DNT
+Const APPSUPPORTS1 = "Send invitations as rich data"
+Const APPSUPPORTS2 = "Specify custom options for repeating meetings"
+Const APPSUPPORTS3 = |Select "All instances" when acting on a repeating meeting|
+Const APPSUPPORTS4 = |Select "This and all future instances" when acting on a repeating meeting|
+Const APPSUPPORTS5 = "Preserve rich data as htm attachments"
+
+
+Const DELETED_CERTIFICATE = 1
+Const MODIFIED_CERTIFICATE = 2
+'added by LBH
+Const DELETED_ACCOUNT = 1
+Const MODIFIED_ACCOUNT = 2
+
+Dim s As NotesSession
+Dim db As NotesDatabase
+Dim view As NotesView
+Dim doc As NotesDocument
+Dim OldDocNm As String
+
+Type tDNCEntry
+	sFieldName As String
+	sFieldVal As String
+End Type
+Dim iIndex As Integer                                                   
+Dim fieldName As String                                                
+Dim storedVal As String                                                
+Dim Policy As NotesDocument                                            
+Dim inhItem, enfItem, nmItem As NotesItem                              
+Dim itemNm As String                                                   
+Dim itemName As String                                                 
+Dim itemHTAName As String                                              
+Dim suffixStr As String                                                
+Dim blNameStr As String                                                
+Dim strlen As Integer                                                  
+Dim settingTypeStr As String                                           
+Dim needsConversion As Boolean         
+Dim POCounter     As Integer
+Dim SOCounter As Integer
+Dim IPCounter     As Integer
+Dim UP1_Counter     As Integer
+Dim UP2_Counter     As Integer
+Dim UP3_Counter     As Integer
+Dim UP4_Counter     As Integer
+Dim UP5_Counter     As Integer
+Dim DPL_Counter As Integer
+Dim POItemNames() As String     'array of item names
+Dim IPItemNames() As String     'array of item names
+Dim UP1_ItemNames() As Variant     'array of item names
+Dim UP2_ItemNames() As Variant     'array of item names
+Dim UP3_ItemNames() As Variant     'array of item names
+Dim UP4_ItemNames() As Variant     'array of item names
+Dim UP5_ItemNames() As Variant     'array of item names
+Dim DPL_ItemNames() As Variant     'array of item names for $DPLocked
+Dim SO_ItemNames() As Variant        'array of item names for $PolicyHTASetOnceItems    
+Dim pRefItemName As String     'real item name refered by the PO item
+
+
+
+
+'++LotusScript Development Environment:2:1:CheckIfDependentField:1:8
+Function CheckIfDependentField(strField As String) As Variant
+	
+	
+	CheckIfDependentField = False
+	
+	If strField <> "" Then
+		
+		Select Case strField
+			
+		Case "$TimesDisp1"
+			CheckIfDependentField = True
+			
+		Case "$TimesDisp2"
+			CheckIfDependentField = True
+			
+		Case "$TimesDisp3"
+			CheckIfDependentField = True
+			
+		Case "$TimesDisp4"
+			CheckIfDependentField = True
+			
+		Case "$TimesDisp5"
+			CheckIfDependentField = True
+			
+		Case "$TimesDisp6"
+			CheckIfDependentField = True
+			
+		Case "$TimesDisp7"
+			CheckIfDependentField = True
+			
+		Case "AppointmentLead"	
+			CheckIfDependentField = True
+			
+			
+		Case "ReminderLead"
+			CheckIfDependentField = True
+			
+			
+		Case "EventLead"	
+			CheckIfDependentField = True
+			
+		Case "AnniversaryLead"
+			CheckIfDependentField = True
+			
+			
+		Case "TaskLead"	
+			CheckIfDependentField = True
+			
+		Case "DefaultLogo"
+			CheckIfDependentField = True
+			
+		Case "DSFVoteGood"
+			CheckIfDependentField = True
+			
+		Case "DSFVoteBad"
+			CheckIfDependentField = True
+			
+		Case "$FL_2"
+			CheckIfDependentField = True
+			
+		Case "$FL_3"
+			CheckIfDependentField = True
+			
+		Case Else
+			CheckIfDependentField = False
+			
+		End Select
+		
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:2:IncrementGrpPrecedence:1:8
+Sub IncrementGrpPrecedence(hPolicy As NotesDocument, alreadyExist As Boolean)
+	Dim gpolView As NotesView
+	Dim precStr As String
+	Dim s As New NotesSession
+	Dim doc As NotesDocument
+	
+	Set db = s.CurrentDatabase
+	Set gpolView = db.GetView("($PoliciesDynamic)")
+	Call gpolView.Refresh
+	precStr = "Precedence"
+	Set doc = gpolView.GetLastDocument
+	
+	If doc Is Nothing Then
+		Call hPolicy.ReplaceItemValue(precStr, 1)
+	Elseif Not doc.HasItem(precStr) Then
+		Call hPolicy.ReplaceItemValue(precStr, 1)
+	Else
+		Call hPolicy.ReplaceItemValue(precStr, doc.GetItemValue(precStr)(0) + 1)
+	End If
+End Sub 
+
+'++LotusScript Development Environment:2:2:ComputeHAItemList:1:8
+Sub ComputeHAItemList(hPolicy As NotesDocument)                         
+	
+'This function finds all "how to apply" items on a policy note.         
+'An item is "HA" enabled if an accompanying item with the suffix "$HA"  exists.                                                                 
+'If the value of that accompanying item is "1" then we store the item name(s) of                                                              
+ 'all "HA" enabled items as a list in a special item "$PolicyHTASetOnceItems".                                               
+'If the value of that accompanying item is "2" then we store the item name(s) of                                                              
+ 'all "HA" enabled items as a list in a special item "$DPLocked".       
+	Dim pCounter1     As Integer                                            
+	Dim pCounter2     As Integer                                            
+	Dim pCounter3     As Integer                                            
+	Dim pCounter5     As Integer                                            
+	Dim pItemNames1() As String     'array of item names                    
+	Dim pItemNames2() As String     'array of item names                    
+	Dim pItemNames11() As String     'array of item names                   
+	Dim pItemNames22() As String     'array of item names                   
+	Dim pItemNames3() As String     'array of item names                    
+	Dim pItemNamesDNC() As String                                           
+	Dim pItemNames5() As String     'array of item names                    
+	Dim pRefItemName As String     'real item name refered by the PO item   
+	Dim pRefItemName2 As String                                             
+	Dim arrDNCEntries() As tDNCEntry                                        
+	Dim arrDNCNames() As String                                             
+	Dim arrDNCVals() As String                                              
+	Dim iIndex As Integer                                                   
+	Dim itemToDelete As NotesItem                                           
+	
+'// pRefItemName holds the Unstripped field name                        
+'// pRefItemName holds the possibly stripped field name                 
+	Forall item In hPolicy.Items                                            
+		If Ucase$(Right$(item.Name, 3)) = "$HA" Then                           
+			If item.Values(0) = "3" Then                                          
+				pRefItemName2 = Left$(item.name, Len(item.name) - 3)                 
+				If Ucase$(Left$(item.name, 5)) = "$PREF" Then                        
+					pRefItemName = Right$(pRefItemName2, Len(pRefItemName2) - 5)        
+				Else                                                                 
+					pRefItemName = pRefItemName2                                        
+				End If                                                               
+				Redim Preserve pItemNames1(pCounter1) As String                      
+				Redim Preserve pItemNames11(pCounter1) As String                     
+				pItemNames1(pCounter1) = pRefitemName                                
+				pItemNames11(pCounter1) = pRefitemName2                              
+				pCounter1 = pCounter1 + 1                                            
+			Elseif item.Values(0) = "2" Then                                      
+				pRefItemName2 = Left$(item.name, Len(item.name) - 3)                 
+				If Ucase$(Left$(item.name, 5)) = "$PREF" Then                        
+					pRefItemName = Right$(pRefItemName2, Len(pRefItemName2) - 5)        
+				Else                                                                 
+					pRefItemName = pRefItemName2                                        
+				End If                                                               
+				Redim Preserve pItemNames2(pCounter2) As String                      
+				Redim Preserve pItemNames22(pCounter2) As String                     
+				pItemNames2(pCounter2) = pRefitemName                                
+				pItemNames22(pCounter2) = pRefitemName2                              
+				pCounter2 = pCounter2 + 1                                            
+			Elseif  item.Values(0) = "1" Then                                     
+				pRefItemName = Left$(item.name, Len(item.name) - 3)    
+				If pRefItemName <> "" Then
+					If Right$(pRefItemName, 3) <> "$SF" Then
+					Redim Preserve arrDNCNames(pCounter3) As String                      
+					Redim Preserve arrDNCVals(pCounter3) As String                       
+					arrDNCNames(pCounter3) = pRefItemName                                
+					arrDNCVals(pCounter3) = hPolicy.GetItemValue(pRefItemName)(0)        
+					
+					Redim Preserve pItemNames3(pCounter3) As String                      
+					pItemNames3(pCounter3) = pRefItemName                                
+					pCounter3 = pCounter3 + 1                                            
+'   Call hPolicy.removeItem(pRefItemName)                               
+					Set itemToDelete = hPolicy.GetFirstItem(pRefItemName)                
+					If Not itemToDelete Is Nothing Then                                  
+						itemToDelete.SaveToDisk = False                                     
+					End If  
+					End If  
+				End If
+			Elseif item.Values(0) = "5" Or item.Values(0) ="" Then                                      
+				pRefItemName = Left$(item.name, Len(item.name) - 3)   
+				Redim Preserve pItemNames5(pCounter5) As String                      
+				pItemNames5(pCounter5) = pRefitemName                                
+				pCounter5 = pCounter5 + 1
+			End If                                                                
+			
+		End If                                                                 
+	End Forall                                                              
+	
+	Call hPolicy.ReplaceItemValue("$PolicySetOnceUnstripped", pItemNames11())                                                         
+	Call hPolicy.ReplaceItemValue("$PolicyHTASetOnceItems",pItemNames1())   
+	Call hPolicy.ReplaceItemValue("$DPLocked",pItemNames2())                
+	Call hPolicy.ReplaceItemValue("$DPLockedUnstripped",pItemNames22())     
+	Call hPolicy.ReplaceItemValue("$DontChangeItems",pItemNames3())         
+	Call hPolicy.ReplaceItemValue("PolicyDNCNames", arrDNCNames())          
+	Call hPolicy.ReplaceItemValue("PolicyDNCVals", arrDNCVals())            
+	Call hPolicy.ReplaceItemValue("AlwaysSetItems",pItemNames5())           
+	
+End Sub    
+
+'++LotusScript Development Environment:2:2:ResetGenericFields:1:8
+Sub ResetGenericFields(hPolicy As notesdocument, ItemName As String)
+	
+	On Error Goto ERROR_HANDLER
+	
+	If ItemName <> "" Then
+		If Not (hPolicy Is Nothing) Then
+		'// catch item name to reset
+			Call hPolicy.replaceitemvalue(ItemName + "$UP", "1")
+			Call hPolicy.replaceitemvalue(ItemName + "$BL", "1")
+			Call hPolicy.replaceitemvalue(ItemName + "$PO", "")
+			Call hPolicy.replaceitemvalue(ItemName + "$IP", "")	
+			Set remItem = hPolicy.GetFirstItem(ItemName + "$UP")
+			remItem.SaveToDisk = False
+			Set remItem = hPolicy.GetFirstItem(ItemName + "$BL")
+			remItem.SaveToDisk = False
+			Set remItem = hPolicy.GetFirstItem(ItemName + "$PO")
+			remItem.SaveToDisk = False
+			Set remItem = hPolicy.GetFirstItem(ItemName + "$IP")
+			remItem.SaveToDisk = False
+		End If
+	End If
+	
+ROUTINE_EXIT:
+	Exit Sub
+	
+ERROR_HANDLER:
+	Print "FieldDependencyCleanup " & Cstr(Err()) & ": " & Error & " occurred on line " & Cstr(Erl())
+	Resume ROUTINE_EXIT
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:CreateINIFields:1:8
+Sub CreateINIFields(hPolicy As NotesDocument, sParamList As String, sPrefType As String)
+	Dim sItemName As String
+	Dim sItemVal As String
+	Dim sTmpVal As String
+	Dim iPosOfChar As Integer
+	Dim iPosOfEnfChar As Integer
+	Dim iPosOfSOChar As Integer
+	Dim itemToDisk As NotesItem
+	Dim sPrefix As String
+	Dim squalName As String
+	Dim spluginName As String
+	Dim arrEclPrefNames() As String
+	Dim arrPlugInList() As String
+	Dim listCounter As Integer
+	Dim pCounter As Integer
+	
+	ReDim arrPlugInList(0) As String
+	
+	bCreate = True
+	If Not hPolicy.GetItemValue(sParamList)(0) = "" Then
+		
+		sPrefix = ""
+		
+		If sPrefType = LOCALL_PREFIX Then
+			sPrefix = LOCALL_PREFIX
+		ElseIf sPrefType = NOTESINI_PREFIX Then
+			sPrefix = NOTESINI_PREFIX
+		End If
+		
+		ForAll item In hPolicy.GetItemValue(sParamList)
+			iPosOfChar = InStr(item, "=")
+			sItemName = sPrefix + Left(item, iPosOfChar - 1)
+			
+			iPosOfEnfChar = InStr(item, ", Enforce")
+			iPosOfSOChar = InStr(item, ": SetOnce")
+			If iPosOfEnfChar > 0 Then
+				Call hPolicy.ReplaceItemValue(sItemName + "$PO", "1")
+				Set itemToDisk = hPolicy.GetFirstItem(sItemName + "$PO")
+				itemToDisk.SaveToDisk = False
+				If iPosOfSOChar > 0 Then
+					Call hPolicy.ReplaceItemValue(sItemName + "$HA", "3")
+				Else
+					Call hPolicy.ReplaceItemValue(sItemName + "$HA", "5")
+				End If
+				Set itemToDisk = hPolicy.GetFirstItem(sItemName + "$HA")
+				itemToDisk.SaveToDisk = False
+				sTmpVal = Left(item, iPosOfEnfChar - 1)
+				sItemVal = Right(sTmpVal, Len(sTmpVal) - iPosOfChar)
+			Else
+				If iPosOfSOChar > 0 Then
+					Call hPolicy.ReplaceItemValue(sItemName + "$HA", "3")
+					Set itemToDisk = hPolicy.GetFirstItem(sItemName + "$HA")
+					itemToDisk.SaveToDisk = False
+					sTmpVal = Left(item, iPosOfSOChar - 1)
+					sItemVal = Right(sTmpVal, Len(sTmpVal) - iPosOfChar)
+				Else
+					sItemVal = Right(item, Len(item) - iPosOfChar)
+					Call hPolicy.ReplaceItemValue(sItemName + "$PO", "")
+					Set itemToDisk = hPolicy.GetFirstItem(sItemName + "$PO")
+					itemToDisk.SaveToDisk = False
+					Call hPolicy.ReplaceItemValue(sItemName + "$HA", "5")
+					Set itemToDisk = hPolicy.GetFirstItem(sItemName + "$HA")
+					itemToDisk.SaveToDisk = False
+				End If
+			End If
+			
+			If sPrefType = MS_PREFIX Then
+				spluginName = StrRight(sItemVal, "; ")
+				squalName = MS_PREFIX + "_" + Trim(spluginName) + "_" + Trim(sItemName)
+				sItemVal = StrLeft(sItemVal, ";")
+				ReDim Preserve arrEclPrefNames(pCounter) As String
+				arrEclPrefNames(pCounter) = spluginName
+				ReDim Preserve arrEclPrefNames(pCounter+1) As String
+				arrEclPrefNames(pCounter + 1) = sItemName
+				
+				'Build NamePlugInList
+				listCounter = UBound(arrPlugInList, 1)
+				ReDim Preserve arrPlugInList(listCounter+1) As String
+				arrPlugInList(listCounter) = sItemName + "?" + spluginName
+						
+				Call hPolicy.ReplaceItemValue(squalName,arrEclPrefNames())
+				
+				Call hPolicy.ReplaceItemValue(sItemName, sItemVal)
+				listCounter = listCounter + 1
+			Else
+				Call hPolicy.ReplaceItemValue(sItemName, sItemVal)
+			End If
+		End ForAll
+		Call hPolicy.replaceitemvalue("NamePlugInList", arrPlugInList())
+	End If
+End Sub
+
+'++LotusScript Development Environment:2:2:ComputePOItemList:1:8
+Sub ComputePOItemList(hPolicy As NotesDocument)
+	
+	'This function finds all "prohibit override" enabled items on a policy note.
+	'A "PO" enabled item means it can't be overridden in child policies.
+	'An item is "PO" enabled if an accompanying item with the suffix "$PO" exists.
+	'If the value of that accompanying item is "1" then we store the item name(s) of
+     'all "PO" enabled items as a list in a special item "$PolicyPOItems"
+	
+	Dim pCounter     As Integer
+	Dim pItemNames() As String     'array of item names
+	Dim pRefItemName As String     'real item name refered by the PO item
+	
+	Forall item In hPolicy.Items
+		If Ucase$(Right$(item.Name, 3)) = "$PO" Then
+			If item.Values(0) = "1" Then
+				pRefItemName = Left$(item.name, Len(item.name) - 3)
+				Redim Preserve pItemNames(pCounter) As String
+				pItemNames(pCounter) = pRefitemName
+				pCounter = pCounter + 1
+			End If
+		End If
+	End Forall
+	
+	Call hPolicy.ReplaceItemValue("$PolicyPOItems",pItemNames())
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionIncGrpPrecedence:1:8
+Sub ActionIncGrpPrecedence
+	Dim s As New NotesSession
+	Dim ws As New NotesUIWorkspace
+	Dim db As NotesDatabase
+	Dim dc As NotesDocumentCollection
+	Dim doc As NotesDocument
+	Dim higherdoc As NotesDocument
+	Dim iPrec As Integer
+	Dim gpolView As NotesView
+	Dim uidoc As NotesUIDocument
+	Dim precStr As String
+	Dim uiview As NotesUIView 
+	
+	Set db = s.CurrentDatabase
+	Set uidoc = ws.CurrentDocument
+	Set uiview = ws.CurrentView
+	Set gpolView = db.GetView("($PoliciesDynamic)")
+	Set dc = db.UnprocessedDocuments
+	If Not (dc.Count > 0) Then
+		Msgbox "Please select a Policy document",MB_OK + MB_ICONSTOP,"Policy Error"								
+		Exit Sub
+	End If
+	Set doc = dc.GetFirstDocument
+	precStr = "Precedence"
+	iPrec = doc.GetItemValue(precStr)(0)
+	
+	If dc.Count > 1 Then
+		Msgbox "Please select only one Policy document",MB_OK + MB_ICONSTOP,"Policy Error"								
+		Exit Sub
+	End If
+	
+	'Get document that has higher precedence & switch precedence values
+	Set higherdoc = gpolView.GetPrevDocument(doc)
+	If Not higherdoc Is Nothing Then
+		Call higherdoc.ReplaceItemValue(precStr, iPrec)
+		Call doc.ReplaceItemValue(precStr, iPrec - 1)
+		Call higherdoc.Save(True, True)
+		Call doc.Save(True, True)
+	Else
+		Msgbox "This Policy document already has the highest precedence",MB_OK + MB_ICONSTOP,"Policy Error"	
+		Exit Sub
+	End If
+	
+	Call ws.ViewRefresh
+	Call uiview.SelectDocument(doc)
+End Sub
+
+
+'++LotusScript Development Environment:2:2:FieldDependencyReset:1:8
+Sub FieldDependencyReset(hPolicy As NotesDocument)
+	
+	On Error Goto ERROR_HANDLER
+	
+	If Not (hPolicy Is Nothing) Then
+		
+		'// LetterHead
+		If hPolicy.GetItemValue("LetterHead")(0) <> "1"_ 
+		And hPolicy.GetItemValue("LetterHead$UP")(0) <> "1" Then
+			'// need to reset DefaultLogo fields
+			Call ResetGenericFields(hPolicy,"DefaultLogo")
+		End If
+		'// Scheduling
+		If hPolicy.GetItemValue("ConflictMeeting")(0) <> "1"_ 
+		And hPolicy.GetItemValue("ConflictMeeting$UP")(0) <> "1" Then
+			Call hPolicy.replaceitemvalue("ConflictOfficeHours", "")
+			Call ResetGenericFields(hPolicy,"ConflictOfficeHours")
+		End If
+		'// Alarms
+		If hPolicy.GetItemValue("EnableAlarms")(0) <> "1"_ 
+		And hPolicy.GetItemValue("EnableAlarms$UP")(0) <> "1" Then
+			'//SetAlarmAppointment
+			Call hPolicy.replaceitemvalue("SetAlarmAppointment", "")
+			Call hPolicy.replaceitemvalue("AppointmentLead", "30")
+			Call ResetGenericFields(hPolicy,"SetAlarmAppointment")
+			
+			'//SetAlarmReminder
+			Call hPolicy.replaceitemvalue("SetAlarmReminder", "")
+			Call hPolicy.replaceitemvalue("ReminderLead", "0")
+			Call ResetGenericFields(hPolicy,"SetAlarmReminder")
+			
+			'//SetAlarmEvent
+			Call hPolicy.replaceitemvalue("SetAlarmEvent", "")
+			Call hPolicy.replaceitemvalue("EventLead", "1")
+			Call ResetGenericFields(hPolicy,"SetAlarmEvent")
+			
+			'//SetAlarmAnniversary
+			Call hPolicy.replaceitemvalue("SetAlarmAnniversary", "")
+			Call hPolicy.replaceitemvalue("AnniversaryLead", "30")
+			Call ResetGenericFields(hPolicy,"SetAlarmAnniversary")
+			
+			'//SetAlarmTask
+			Call hPolicy.replaceitemvalue("SetAlarmTask", "")
+			Call hPolicy.replaceitemvalue("TaskLead", "30")
+			Call ResetGenericFields(hPolicy,"SetAlarmTask")
+		End If
+		
+		'// AutoProcess Tab
+		If hPolicy.GetItemValue("AutoProcessType")(0) = ""_ 
+		And hPolicy.GetItemValue("AutoProcessType$UP")(0) <> "1" Then
+			'//AutoProcessConflictOptions
+			Stop
+			Call hPolicy.replaceitemvalue("AutoProcessConflictOptions", "1")
+			Call ResetGenericFields(hPolicy,"AutoProcessConflictOptions")
+		End If
+		
+				'//Don't want to loop through this value in ComputeHAItemList
+		If hPolicy.GetItemValue("AutoProcessFromType$UP")(0) <> "1" Then
+			Call hPolicy.replaceitemvalue("AutoProcessFromType$UP", "1")
+			Call hPolicy.replaceitemvalue("AutoProcessTypeDisabled$UP", "1")
+		End If
+		
+		'// Access Schedule tab
+		If hPolicy.GetItemValue("tmpScheduleAccessAllowed")(0) <> "1"_ 
+		And hPolicy.GetItemValue("tmpScheduleAccessAllowed$UP")(0) <> "1" Then
+		'//Respect if an Admin sets the parent choice to Don't change, after having 
+		'// the entire dependency chain being enforced to users, at least once...
+			
+			'//tmpScheduleInfoAllowed
+			Call hPolicy.replaceitemvalue("tmpScheduleInfoAllowed", "1")
+			Call ResetGenericFields(hPolicy,"tmpScheduleInfoAllowed")
+			
+			'//DisallowControversialFields
+			Call hPolicy.replaceitemvalue("DisallowControversialFields", "1")
+			Call ResetGenericFields(hPolicy,"DisallowControversialFields")
+		End If
+		
+		
+	End If
+	
+ROUTINE_EXIT:
+	Exit Sub
+	
+ERROR_HANDLER:
+	Print "FieldDependencyReset " & Cstr(Err()) & ": " & Error & " occurred on line " & Cstr(Erl())
+	Resume ROUTINE_EXIT
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:VerifyUnique:1:8
+Sub VerifyUnique(Source As NotesUIDocument, Continue As Variant)
+	Set s = New NotesSession
+	Set db=s.CurrentDatabase
+	Set view = db.GetView("Settings")
+	Set doc=view.GetFirstDocument
+	
+	Dim SettingType As Variant
+	Dim FName As Variant
+	If Not doc Is Nothing Then
+		While Not doc Is Nothing
+			If (doc.GetItemValue("Type")(0) = Source.Document.GetItemValue("Type")(0)) Then
+				FName = Evaluate("@Name([Canonicalize];FullName)", Source.Document)
+				Dim policyA As New NotesName(FName(0))
+				Dim policyB As New NotesName(doc.FullName(0))
+				
+				If FName(0) = OldDocNm Then
+					Exit Sub
+				End If
+				
+				If Lcase(policyA.Canonical) = Lcase(policyB.Canonical)  And Not (Source.Document.UniversalID = doc.UniversalID) Then
+					Msgbox  "A Settings document with this name already exists." & Chr(13) & CONFLICT_RISK,MB_OK + MB_ICONSTOP,"Settings Error"								
+					Source.GoToField("FullNameEntry")
+					Continue = False
+					Exit Sub
+				End If
+			End If
+			Set doc=view.GetNextDocument(doc)
+		Wend
+	End If
+	
+End Sub
+
+
+'++LotusScript Development Environment:2:2:ComputeIFPItemList:1:8
+Sub ComputeIFPItemList(hPolicy As NotesDocument)
+	'This function finds all "inherit from parent" enabled items on a policy note.
+	'A "IFP" enabled item means it value is inherited from the parent.
+	'An item is "IFP" enabled if an accompanying item with the suffix "$IFP" exists.
+	'If the value of that accompanying item is "1" then we store the item name(s) of
+     'all "IFP" enabled items as a list in a special item "$PolicyIFPItems"
+	
+	Dim pCounter     As Integer
+	Dim pItemNames() As String     'array of item names
+	Dim pRefItemName As String     'real item name refered by the IFP item
+	
+	Forall item In hPolicy.Items
+		If Ucase$(Right$(item.Name, 3)) = "$IP" Then
+			If item.Values(0) = "1" Then
+				pRefItemName = Left$(item.name, Len(item.name) - 3)
+				Redim Preserve pItemNames(pCounter) As String
+				pItemNames(pCounter) = pRefitemName
+				pCounter = pCounter + 1
+			End If
+		End If
+	End Forall
+	
+	Call hPolicy.ReplaceItemValue("$PolicyIFPItems",pItemNames())
+	
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:SetMIMEFields:1:8
+Sub SetMIMEFields(hPolicy As notesdocument)
+	MailFormat = hPolicy.GetItemValue("$PrefMIMEMail")
+	NewsFormat = hPolicy.GetItemValue("$PrefMIMENews")
+	Select Case MailFormat(0)
+	Case "0" :   
+		Select Case NewsFormat(0)
+		Case "0" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "17") 
+		Case "1" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "33")
+		Case "2" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "65")
+		Case "3" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "129")
+		End Select
+	Case "1" : 
+		Select Case NewsFormat(0)
+		Case "0" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "18")
+		Case "1" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "34")
+		Case "2" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "66")
+		Case "3" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "130")
+		End Select
+	Case "2" : 
+		Select Case NewsFormat(0)
+		Case "0" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "20")
+		Case "1" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "36")
+		Case "2" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "68")
+		Case "3" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "132")
+		End Select
+	Case "3" : 
+		Select Case NewsFormat(0)
+		Case "0" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "24")
+		Case "1" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "40")
+		Case "2" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "72")
+		Case "3" : Call hPolicy.ReplaceItemValue("$PrefMIMESaveFormat", "136")
+		End Select
+	End Select
+End Sub
+
+
+'++LotusScript Development Environment:2:2:ComputeBLItemList:1:8
+Sub ComputeBLItemList(hPolicy As NotesDocument)
+	
+	'This function finds all "prohibit override" enabled items on a policy note.
+	'A "BL" enabled item means it can't be overridden in child policies.
+	'An item is "BL" enabled if an accompanying item with the suffix "$BL" exists.
+	'If the value of that accompanying item is "1" then we store the item name(s) of
+     'all "BL" enabled items as a list in a special item "$PolicyBLItems"
+	
+	Dim pCounter     As Integer
+	Dim pItemNames() As String     'array of item names
+	Dim pRefItemName As String     'real item name refered by the PO item
+	
+	Forall item In hPolicy.Items
+		If Ucase$(Right$(item.Name, 3)) = "$BL" Then
+			If item.Values(0) = "1" Then
+				pRefItemName = Left$(item.name, Len(item.name) - 3)
+				Redim Preserve pItemNames(pCounter) As String
+				pItemNames(pCounter) = pRefitemName
+				pCounter = pCounter + 1
+			End If
+		End If
+	End Forall
+	
+	Call hPolicy.ReplaceItemValue("$DPLocked",pItemNames())
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:PolSetQMC:1:8
+Sub PolSetQMC(Source As NotesUIDocument, Continue As Variant)
+	Dim vVersion As Variant	
+	vVersion = Evaluate(|@TextToNumber(@Version)|,doc)
+	If vVersion(0) < 171 Then
+		Messagebox POL_CLIENT_WARNING, 0 + 16, ERR_TITLE
+		Continue = False
+	End If
+End Sub
+
+'++LotusScript Development Environment:2:2:SetOldDocNm:1:8
+Sub SetOldDocNm (Source As NotesUIDocument, Isnewdoc As Variant)
+	Dim doc As NotesDocument
+	
+	Set doc = Source.Document
+	If IsNewdoc Then
+		OldDocNm = ""
+	Else
+		OldDocNm = doc.FullName(0)
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:ProcessDependencyFields:1:8
+Function ProcessDependencyFields(HPolicy As NotesDocument, strField As String) As Variant
+	
+	'// This function will process field dependency, meaning fields that
+	'// once selected to be On/Off, required that other fields values must be copied
+	'// into the apppropriate bucket to (Always, Initially, etc..) so it's
+	'// values can also be copied to the user's Profile.
+	'// Ex: Bfield is dependent of AField, so once Afield is select BField also need to be
+	'// added to the bucket.
+	
+	Dim vItemNames() As String
+	Dim i As Integer
+	Dim strRefItem As String
+	Dim iDynCounter As Integer		'//Control Dynamic Array Elements
+	Dim SetItem(1) As String
+	Dim SetAccessItem(2) As String
+	
+	If strField <> "" Then
+		strRefItem = ""
+		iDynCounter = 0
+		
+		Select Case strField
+			
+		Case "$Times"
+			Dim AvailStatus As Integer
+			Dim SetWeekDay(6) As String
+			'//Check for Weekday setting
+			SetWeekDay(0)= "Sunday"
+			SetWeekDay(1)= "Monday"
+			SetWeekDay(2)= "Tuesday"
+			SetWeekDay(3)= "Wednesday"
+			SetWeekDay(4)= "Thursday"
+			SetWeekDay(5)= "Friday"
+			SetWeekDay(6)= "Saturday"
+			Stop					
+			If Not HPolicy Is Nothing Then
+				For i=0 To Ubound(SetWeekDay)
+					'If hPolicy.GetItemValue(SetWeekDay(i))(0) <> "" Then    // REM fixes LMAN6BPH6U
+					
+					If hPolicy.GetItemValue(SetWeekDay(i))(0) <> "" Then  AvailStatus = True  
+					
+					strRefItem = SetWeekDay(i)
+					Redim Preserve vItemNames(iDynCounter) As String
+					vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+					iDynCounter = iDynCounter + 1
+						'// For all selected weekdays, copy all referent $TimesDispxxx fields
+						'// Add dependent Item now
+					strRefItem = "$TimesDisp"+ Cstr(i + 1)
+					Redim Preserve vItemNames(iDynCounter) As String
+					vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+					iDynCounter = iDynCounter + 1
+					'End If		
+				Next
+			End If
+			
+			
+			If AvailStatus Then
+				ProcessDependencyFields = vItemNames
+			Else
+				ProcessDependencyFields = ""
+			End If
+			
+			
+		Case  "SetAlarmAppointment"
+			
+			SetItem(0)= "SetAlarmAppointment"
+			SetItem(1)= "AppointmentLead"
+			
+			For i=0 To Ubound(SetItem)
+				strRefItem = SetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+		Case "SetAlarmReminder"
+			SetItem(0)= "SetAlarmReminder"
+			SetItem(1)= "ReminderLead"
+			
+			For i=0 To Ubound(SetItem)
+				strRefItem = SetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+		Case "SetAlarmEvent"
+			SetItem(0)= "SetAlarmEvent"
+			SetItem(1)= "EventLead"
+			
+			For i=0 To Ubound(SetItem)
+				strRefItem = SetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+			
+		Case "SetAlarmAnniversary"
+			SetItem(0)= "SetAlarmAnniversary"
+			SetItem(1)= "AnniversaryLead"
+			
+			For i=0 To Ubound(SetItem)
+				strRefItem = SetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+			
+		Case "SetAlarmTask"
+			SetItem(0)= "SetAlarmTask"
+			SetItem(1)= "TaskLead"
+			
+			For i=0 To Ubound(SetItem)
+				strRefItem = SetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+		Case "AutoProcessType"
+			Dim AutoProcessSetItem(3) As String
+			
+			' REM removed AutoProcessConflictOptions for spr LMAN6PVJS9
+			AutoProcessSetItem(0)= "AutoProcessType"
+			AutoProcessSetItem(1)= "AutoProcessFromType"
+			AutoProcessSetItem(2)= "AutoProcessTypeDisabled"
+			
+			For i=0 To Ubound(AutoProcessSetItem)
+				strRefItem = AutoProcessSetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+		Case "LetterHead"
+			SetItem(0)= "LetterHead"
+			SetItem(1)= "DefaultLogo"
+			
+			For i=0 To Ubound(SetItem)
+				strRefItem = SetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+		Case "DSFVotingUIEnabled"
+			Dim DSFSetItem(2) As String
+			
+			DSFSetItem(0)="DSFVotingUIEnabled"
+			DSFSetItem(1)="DSFVoteGood"
+			DSFSetItem(2)="DSFVoteBad"
+			
+			For i=0 To Ubound(DSFSetItem)
+				strRefItem = DSFSetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+		Case  "FUPStat"
+			Dim FUPSetItem(1) As String
+			
+			FUPSetItem(0)= "FUPStat"
+			FUPSetItem(1)= "tmpFollowupStatus"
+			
+			For i=0 To Ubound(FUPSetItem)
+				strRefItem = FUPSetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+		Case "tmpScheduleInfoAllowed"
+			SetAccessItem(0)= "tmpScheduleInfoAllowed"
+			SetAccessItem(1)= "BusyTimeHarvestOptOut"
+			SetAccessItem(2) = "AllowBusyDetailsAccess"
+			
+			For i=0 To Ubound(SetAccessItem)
+				strRefItem = SetAccessItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+		Case "tmpScheduleAccessAllowed"
+			SetItem(0)= "tmpScheduleAccessAllowed"
+			SetItem(1)= "AllowBusyAccess"
+			
+			For i=0 To Ubound(SetItem)
+				strRefItem = SetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem + ":" + strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+		Case Else
+			'// All other cases - Just return some value
+			SetItem(0)= ""
+			SetItem(1)= ""
+			For i=0 To Ubound(SetItem)
+				strRefItem = SetItem(i)
+				Redim Preserve vItemNames(iDynCounter) As String
+				vItemNames(iDynCounter) = strRefItem
+				iDynCounter = iDynCounter + 1
+			Next
+			ProcessDependencyFields = vItemNames
+			
+		End Select
+		
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:2:ProcessAcctNote:1:8
+Sub ProcessAcctNote(allAcctNoteIDs() As String,processType As Integer)
+	Dim settingsView As NotesView,settingsDoc As NotesDocument,tempDoc As NotesDocument
+	Dim acctsDoc As NotesDocument
+	Dim policyView As NotesView
+	Dim hasAcctId As Boolean
+	Dim s As NotesSession
+	Dim db As NotesDatabase
+	Dim acctDoc As NotesDocument
+	Dim FinalLinkIds() As String
+	Dim tmpLinkIds() As String
+	Dim FlinkIdx, tmpIdx As Integer
+	Dim compareDoc As NotesDocument
+	Dim SAMLUnid As String
+	
+	FlinkIdx = 0
+	tmpIdx = 0
+	
+	
+	Dim linkIdsItem As NotesItem
+	On Error GoTo ERROR_HANDLER
+	
+	If db Is Nothing Then
+		If s Is Nothing Then
+			Set s = New NotesSession
+		End If
+		Set db = s.CurrentDatabase
+	End If
+	Set settingsView = db.GetView("Settings")
+	If Not (settingsView Is Nothing) Then
+		Set settingsDoc = settingsView.GetFirstDocument()
+		While Not (settingsDoc Is Nothing)
+			hasAcctId = False
+			Set tempDoc = settingsDoc
+			If settingsDoc.HasItem("$AccountLinkIds") Then
+				Set linkIdsItem = settingsDoc.GetFirstItem("$AccountLinkIds")
+				Forall acctNoteId In allAcctNoteIDs
+					ReDim Preserve tmpLinkIds(tmpIdx)
+					tmpLinkIds(tmpIdx) = acctNoteId 
+					tmpIdx = tmpIdx + 1
+					
+					If Not (Isnull(Arraygetindex(linkIdsItem.Values,acctNoteId,5))) Then
+						hasAcctId = True
+						Set acctDoc = db.getdocumentbyunid(acctNoteId)
+						If acctDoc.getitemvalue("AccountType")(0) = "SAML-IdP" Then
+							ForAll linkId In linkIdsItem.Values
+								Set compareDoc = db.Getdocumentbyunid(LinkId)
+								SAMLUnid = compareDoc.getitemvalue("SSOCredentialID")(0)
+								If SAMLUnid <> "" Then
+									If SAMLUnid = acctNoteId Then
+										ReDim Preserve tmpLinkIds(tmpIdx)
+										tmpLinkIds(tmpIdx) = linkId
+										tmpIdx = tmpIdx + 1
+									End If
+								End If
+							End ForAll
+						Else
+							If acctDoc.Getitemvalue("SSOCredentialID")(0) <> "" Then
+								ReDim Preserve tmpLinkIds(tmpIdx)
+								tmpLinkIds(tmpIdx) = acctDoc.Getitemvalue("SSOCredentialID")(0)
+							End If
+						End If
+					End If
+				End Forall
+				If hasAcctId Then
+processDoc:
+					If processType = DELETED_ACCOUNT Then
+						Call settingsDoc.ReplaceItemValue("$AccountLinkIds", Fulltrim(Arrayreplace(linkIdsItem.Values,tmpLinkIds,"")))
+					End If
+					Set linkIdsItem = settingsDoc.GetFirstItem("$AccountLinkIds")
+					ForAll  LinkId In linkIdsItem.Values
+						ReDim Preserve FinalLinkIds(FlinkIdx)
+						FinalLinkIds(FlinkIdx) = LinkId
+						FlinkIdx = FlinkIdx + 1
+						Set compareDoc = db.Getdocumentbyunid(LinkId)
+						
+						SAMLUnid = compareDoc.getitemvalue("SSOCredentialID")(0)
+						If SAMLUnid <> "" Then
+							If IsNull(ArrayGetIndex(linkIdsItem.Values,SAMLUnid,5)) Then
+								ReDim Preserve FinalLinkIds(FlinkIdx)
+								FinalLinkIds(FlinkIdx) = SAMLUnid
+								FlinkIdx = FlinkIdx + 1
+							End If
+						End If
+					End ForAll
+					
+					Call settingsDoc.ReplaceItemValue("$AccountLinkIds", ArrayUnique(FinalLinkIds()))
+					Call settingsDoc.ReplaceItemValue("$dtAccountsUpdate",Now)
+					Call settingsDoc.ReplaceItemValue("$PolMdTm", Now)
+					Call settingsDoc.Save(True,False)
+				End If
+			End If
+			tmpIdx = 0
+			FlinkIdx = 0
+			ReDim FinalLinkIds(FlinkIdx)
+			ReDim tmpLinkIds(tmpIdx)
+			Set settingsDoc = settingsView.GetNextDocument(tempDoc)
+		Wend	
+		Set policyView = db.GetView("($Policies)")
+		If Not (policyView Is Nothing) Then
+			Call policyView.Refresh
+		End If
+		
+	End If	
+	
+	Set settingsView = db.GetView("Accounts")
+	If Not (settingsView Is Nothing) Then
+		Set acctsDoc = settingsView.GetFirstDocument()
+		'loop through all deleted docs
+		ForAll acctNoteId In allAcctNoteIDs
+			Set tempDoc = db.getdocumentbyunid(acctNoteId)
+			'if deleted doc is SAML, check all other account docs for dependency 
+			If tempDoc.Getitemvalue("AccountType")(0) = "SAML-IdP" Then
+				While Not (acctsDoc Is Nothing)
+					If acctsDoc.getitemvalue("SSOCredentialID")(0) = tempDoc.universalId Then
+						Call acctsDoc.replaceitemvalue("SSOCredentialID", "")
+						Call acctsDoc.replaceitemvalue("samlAcctName", "")
+						Call acctsDoc.save(True, False)
+					End If
+					Set acctsDoc = settingsView.GetNextDocument(acctsDoc)
+				Wend
+			End If
+		End ForAll
+	End If
+	
+ROUTINE_EXIT:
+	Exit Sub
+	
+ERROR_HANDLER:
+	Print "PostDocumentDelete Error " & CStr(Err()) & ": " & Error & " occurred on line " & CStr(Erl())
+	Resume ROUTINE_EXIT
+	
+	
+End Sub
+
+
+'++LotusScript Development Environment:2:2:CritDocs:1:8
+Sub CritDocs(hPolicy As NotesDocument)	
+	Dim critDoc As NotesDocument
+	Dim item As NotesItem
+	Dim dspItem As NotesItem
+	Dim db As NotesDatabase
+	Dim s As New NotesSession
+	
+	Set item=hPolicy.GetFirstItem("ACP")
+	Set dspItem = hPolicy.GetFirstItem("ACPDsp")
+	Set db = s.CurrentDatabase
+	If dspItem.Text = "" Then
+		Forall v In item.Values
+			If Not v = "" Then
+				Set critDoc = db.GetDocumentByUNID(v)
+				Call dspItem.AppendToTextList(critDoc.GetItemValue("FullName"))
+			End If
+		End Forall
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:VerifyUniquePolicy:1:8
+Function VerifyUniquePolicy(Source As NotesUIDocument, entered As Integer) As Integer
+	
+	Set s = New NotesSession
+	Set db=s.CurrentDatabase
+	Set view = db.GetView("Policies")
+	Set doc=view.GetFirstDocument
+	
+	VerifyUniquePolicy = 1
+	
+	If entered < 2 Then
+		Dim FName As Variant
+		If Not doc Is Nothing Then
+			While Not doc Is Nothing
+				Dim policyB As New NotesName(doc.FullName(0))     'this needs to come before the Source.Refresh
+				Source.Refresh  'This is needed so that FullNameEntry gets its Input Translation formula run
+				FName = Evaluate("@Name([Canonicalize];FullNameEntry)", Source.Document)
+				If FName(0) = OldDocNm Then
+					Exit Function
+				End If
+				Dim policyA As New NotesName(FName(0))
+				
+				
+				If Lcase(policyA.Canonical) = Lcase(policyB.Canonical)  And Not (Source.Document.UniversalID = doc.UniversalID) Then
+					Msgbox  "A Policy document with this name already exists." & Chr(13) & CONFLICT_RISK,MB_OK + MB_ICONSTOP,"Policy Error"								
+					Source.GoToField("FullNameEntry")
+					VerifyUniquePolicy = False
+					Exit Function
+				End If
+				
+				Set doc=view.GetNextDocument(doc)
+			Wend
+		End If
+	Else
+		VerifyUniquePolicy = False
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:2:PolSetPostOpen:1:8
+Sub PolSetPostOpen(Source As NotesUIDocument)
+	Forall v In Source.Document.Items		
+		If Ucase$(Right$(v.Name, 3)) = "$PO" _
+		Or Ucase$(Right$(v.Name, 3)) = "$IP"_ 
+		Or Ucase$(Right$(v.Name, 3)) = "$BL"_ 
+		Or Ucase$(Right$(v.Name, 3)) = "$HA"_ 
+		Or Ucase$(Right$(v.Name, 3)) = "$UP"_
+		Or Ucase$(Right$(v.Name, 3)) = "$FO"_
+		Or UCase$(Left$(v.Name, 7)) = "$QUAL_1" _
+		Or Ucase$(Right$(v.Name, 3)) = "$CL" Then
+			v.SaveToDisk = False
+		End If
+	End Forall
+End Sub
+
+'++LotusScript Development Environment:2:1:CheckExclusionFields:1:8
+Function CheckExclusionFields(strField As String) As Variant
+	
+	'// This function will process all field dependency exclusions, meaning fields that
+	'// once selected. have dependencies of other fields, and can only be added
+	'// into the apppropriate bucket (Always, Initially, etc..)
+	'// Ex: Sunday can only be added to ANY bucket if $Times has been selected to that bucket. 
+	
+	CheckExclusionFields = False
+	
+	If strField <> "" Then
+		
+		Select Case strField
+			
+		Case "Sunday"
+			CheckExclusionFields = True
+			
+		Case "Monday"
+			CheckExclusionFields = True
+			
+		Case "Tuesday"
+			CheckExclusionFields = True
+			
+		Case "Wednesday"
+			CheckExclusionFields = True
+			
+		Case "Thursday"
+			CheckExclusionFields = True
+			
+		Case "Friday"
+			CheckExclusionFields = True
+			
+		Case "Saturday"
+			CheckExclusionFields = True
+			
+		Case "DefaultLogo"
+			CheckExclusionFields = True
+			
+		Case Else
+			CheckExclusionFields = False
+			
+		End Select
+		
+	End If
+	
+End Function
+
+
+
+'++LotusScript Development Environment:2:2:CleanPxyFields:1:8
+Sub CleanPxyFields(hPolicy As Notesdocument)
+	Dim lengthArray As Integer
+	Dim iCount As Integer
+	Dim sFieldsList(6) As String
+	Dim sDlgName As String
+	Dim sDlgFieldName As String
+	'Begin Do Not Translate
+	sFieldsList(0) = "PxyCookies"
+	sFieldsList(1) = "PxyActions" 
+	sFieldsList(2) = "PxyCtxt"
+	sFieldsList(3) = "PxyURL"
+	sFieldsList(4) = "PxyMIMETypes"
+	sFieldsList(5) = "PxyHeaders"
+	sDlgName = "Dlg"
+	'End Do Not Translate
+	
+	Forall fieldToCheck In sFieldsList
+		sDlgFieldName = sDlgName + fieldToCheck 
+		vCookies = hPolicy.GetItemValue(sDlgFieldName)
+		lengthArray = Ubound(vCookies)
+		iCount = 0
+		Dim tmpArray() As String
+		Forall v In vCookies
+			If v= DUMMY_STRING Then
+				Redim  Preserve tmpArray(iCount) As String
+				tmpArray(iCount) = ""
+			Else
+				Redim Preserve tmpArray(iCount) As String
+				tmpArray(iCount) = v
+			End If
+			iCount = iCount + 1
+		End Forall
+		
+		Call hPolicy.ReplaceItemValue(fieldToCheck, tmpArray())
+	End Forall
+End Sub
+
+'++LotusScript Development Environment:2:2:ComputeDPLckItemList:1:8
+Sub ComputeDPLckItemList(hPolicy As NotesDocument)
+	Dim pCounter     As Integer
+	Dim pItemNames() As String     'array of item names
+	Dim pRefItemName As String     'real item name refered by the SettLck item
+	Dim dpLck As String
+	Dim lckVal As Variant
+	
+	Forall item In hPolicy.Items
+		If Ucase$(Left$(item.Name, 7)) = "SETTLCK"  And item.Text = "0" Then
+			dpLck = "$DPHld" + Right$(item.Name, Len(item.name) - 7)
+			lckVal = hPolicy.GetItemValue(dpLck)
+			Forall v2 In lckVal
+				If Not (hPolicy.GetItemValue(v2)(0) = "")  Then
+					If Ucase$(Left$(v2, 5)) = "$PREF" Then
+						pRefItemName = Right$(v2, Len(v2) - 5)
+						Redim Preserve pItemNames(pCounter) As String
+						pItemNames(pCounter) = pRefitemName
+						pCounter = pCounter + 1
+					Else
+						pRefItemName =v2
+						Redim Preserve pItemNames(pCounter) As String
+						pItemNames(pCounter) = pRefitemName
+						pCounter = pCounter + 1
+					End If
+				End If
+			End Forall
+		End If
+	End Forall
+	
+	Call hPolicy.ReplaceItemValue("$DPLocked",pItemNames())
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionDecGrpPrecedence:1:8
+Sub ActionDecGrpPrecedence
+	Dim s As New NotesSession
+	Dim ws As New NotesUIWorkspace
+	Dim db As NotesDatabase
+	Dim dc As NotesDocumentCollection
+	Dim doc As NotesDocument
+	Dim lowerdoc As NotesDocument
+	Dim holddoc As NotesDocument
+	Dim dPrec As Integer
+	Dim gpolView As NotesView
+	Dim uidoc As NotesUIDocument
+	Dim precStr As String
+	Dim uiview As NotesUIView
+	
+	Set db = s.CurrentDatabase
+	Set uidoc = ws.CurrentDocument
+	Set uiview = ws.currentview
+	Set gpolView = db.GetView("($PoliciesDynamic)")
+	Set dc = db.UnprocessedDocuments
+	If Not (dc.Count > 0) Then
+		Msgbox "Please select a Policy document",MB_OK + MB_ICONSTOP,"Policy Error"								
+		Exit Sub
+	End If
+	If dc.Count > 1 Then
+		Msgbox "Please select only one Policy document",MB_OK + MB_ICONSTOP,"Policy Error"								
+		Exit Sub
+	End If
+	
+	Set doc = dc.GetFirstDocument
+	precStr = "Precedence"
+	dPrec = doc.GetItemValue(precStr)(0)
+	
+	'Get document that has lower precedence number & switch precedence values
+	Set lowerdoc = gpolView.GetNextDocument(doc)
+	If Not lowerdoc Is Nothing Then
+		Call lowerdoc.ReplaceItemValue(precStr, dPrec)
+		Call doc.ReplaceItemValue(precStr, dPrec + 1)
+		Call lowerdoc.Save(True, True)
+		Call doc.Save(True, True)
+	Else
+		Msgbox "This Policy document already has the lowest precedence",MB_OK + MB_ICONSTOP,"Policy Error"	
+		Exit Sub
+	End If
+	
+	Call ws.ViewRefresh
+	Call uiview.SelectDocument(doc)
+End Sub
+
+'++LotusScript Development Environment:2:1:SkipHTASetFields:1:8
+Function SkipHTASetFields(strField As String) As Variant
+	
+	SkipHTASetFields = False
+	
+	If strField <> "" Then
+		
+		Select Case strField
+			
+		Case "RecallSenderUIEnabled"
+			SkipHTASetFields = True
+			
+		Case "PolicyRecallCriteria"
+			SkipHTASetFields = True
+			
+		Case "PolicyRecallCriteriaPeriod"
+			SkipHTASetFields = True
+			
+		Case "tmpFollowupStatus"
+			SkipHTASetFields = True
+			
+		Case Else
+			SkipHTASetFields = False
+			
+		End Select
+		
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:2:ProcessCertNote:1:8
+Sub ProcessCertNote(allCertNoteIDs() As String,processType As Integer)
+	Dim settingsView As NotesView,settingsDoc As NotesDocument,tempDoc As NotesDocument
+	Dim policyView As NotesView
+	Dim hasCertId As Boolean
+	Dim s As NotesSession
+	Dim db As NotesDatabase
+	Dim supportLinksVw As NotesView
+	
+	Dim linkIdsItem As NotesItem
+	If db Is Nothing Then
+		If s Is Nothing Then
+			Set s = New NotesSession
+		End If
+		Set db = s.CurrentDatabase
+	End If
+	Set settingsView = db.GetView("Settings")
+	If Not (settingsView Is Nothing) Then
+		Set settingsDoc = settingsView.GetFirstDocument()
+		While Not (settingsDoc Is Nothing)
+			hasCertId = False
+			Set tempDoc = settingsDoc
+			If settingsDoc.HasItem("$TrustLinkIds") Then
+				Set linkIdsItem = settingsDoc.GetFirstItem("$TrustLinkIds")
+				Forall certNoteId In allCertNoteIDs
+					If Not (Isnull(Arraygetindex(linkIdsItem.Values,certNoteId,5))) Then
+						hasCertId = True
+						Goto processDoc
+					End If
+				End Forall
+				If hasCertId Then
+processDoc:
+					If processType = DELETED_CERTIFICATE Then
+						Call settingsDoc.ReplaceItemValue("$TrustLinkIds", Fulltrim(Arrayreplace(linkIdsItem.Values,allCertNoteIDs,"")))
+					End If
+					Call settingsDoc.ReplaceItemValue("$dtLinksUpdate",Now)
+					Call settingsDoc.ReplaceItemValue("$PolMdTm", Now)
+					Call settingsDoc.Save(True,False)
+				End If
+			End If
+			Set settingsDoc = settingsView.GetNextDocument(tempDoc)
+		Wend	
+		Set policyView = db.GetView("($Policies)")
+		If Not (policyView Is Nothing) Then
+			Call policyView.Refresh
+		End If
+		
+		Set supportLinksVw=db.getview("(trustCertLkup)")
+		If Not (supportLinksVw Is Nothing) Then
+			Call supportLinksVw.Refresh()
+		End If
+	End If	
+End Sub
+
+'++LotusScript Development Environment:2:2:wWriteOutProxies:1:8
+Sub wWriteOutProxies(hPolicy As NotesDocument)
+	Dim ProxyFLag As String
+	Dim FTPDisplay As String
+	Dim GopherDisplay As String
+	Dim SecDisplay As String
+	
+	'Sync up the Proxy fields were necessary
+	ProxyFlag = hPolicy.GetItemValue("LocAllProxyFlag")
+	FTPDisplay = hPolicy.GetItemValue("$dspLocAllProxy_FTP")
+	GopherDisplay = hPolicy.GetItemValue("$dspLocAllProxy_Gopher")
+	SecDisplay = hPolicy.GetItemValue("$dspLocAllProxy_SSL")
+	
+	If ProxyFlag = "Yes" Then
+		If FTPDisplay <> hPolicy.GetItemValue("LocAllProxy_FTP") Then
+			Call hPolicy.ReplaceItemValue("LocAllProxy_FTP", FTPDisplay)
+		End If
+		
+		If GopherDisplay <> hPolicy.GetItemValue("LocAllProxy_Gopher") Then
+			Call hPolicy.ReplaceItemValue("LocAllProxy_Gopher", GopherDisplay)
+		End If
+		
+		If SecDisplay <> hPolicy.GetItemValue("LocAllProxy_SSL") Then
+			Call hPolicy.ReplaceItemValue("LocAllProxy_SSL", SecDisplay)
+		End If
+		
+	End If
+End Sub
+
+'++LotusScript Development Environment:2:1:CheckDependencyFields:1:8
+Function CheckDependencyFields(strField As String) As Variant
+	
+	'// This function will process all field dependency, meaning fields that
+	'// once it's selected to be On/Off, other fields values should be copied
+	'// into the apppropriate bucket (Always, Initially, etc..) so it's respective 
+	'// values can also be copied to the user's Profile.
+	
+	CheckDependencyFields = False
+	
+	If strField <> "" Then
+		
+		Select Case strField
+			
+		Case "$Times"
+			CheckDependencyFields = True
+			
+		Case "$TimesDisp1"
+			CheckDependencyFields = True
+			
+		Case "$TimesDisp2"
+			CheckDependencyFields = True
+			
+		Case "$TimesDisp3"
+			CheckDependencyFields = True
+			
+		Case "$TimesDisp4"
+			CheckDependencyFields = True
+			
+		Case "$TimesDisp5"
+			CheckDependencyFields = True
+			
+		Case "$TimesDisp6"
+			CheckDependencyFields = True
+			
+		Case "$TimesDisp7"
+			CheckDependencyFields = True
+			
+		Case  "SetAlarmAppointment"
+			CheckDependencyFields = True
+			
+		Case "AppointmentLead"	
+			CheckDependencyFields = True
+			
+		Case "SetAlarmReminder"
+			CheckDependencyFields = True
+			
+		Case "ReminderLead"
+			CheckDependencyFields = True
+			
+		Case "SetAlarmEvent"
+			CheckDependencyFields = True
+			
+		Case "EventLead"	
+			CheckDependencyFields = True
+			
+		Case "SetAlarmAnniversary"
+			CheckDependencyFields = True
+			
+		Case "AnniversaryLead"
+			CheckDependencyFields = True
+			
+		Case "SetAlarmTask"
+			CheckDependencyFields = True
+			
+		Case "TaskLead"	
+			CheckDependencyFields = True
+			
+		Case "AutoProcessType"	
+			CheckDependencyFields = True
+			
+		Case "LetterHead"
+			CheckDependencyFields = True
+			
+'		Case "DSFVotingUIEnabled"
+'			CheckDependencyFields = True
+			
+		Case "FUPStat"
+			CheckDependencyFields = True
+			
+		Case "tmpScheduleInfoAllowed"
+			CheckDependencyFields = True
+			
+		Case "tmpScheduleAccessAllowed"
+			CheckDependencyFields = True
+		Case Else
+			CheckDependencyFields = False
+			
+		End Select
+		
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:2:SetNonLocking:1:8
+Sub SetNonLocking(hPolicy As NotesDocument)
+	If Not hPolicy Is Nothing Then
+		If hPolicy.HasItem("Owner$UP") Then
+			Call hPolicy.replaceitemvalue("Owner$LO", hPolicy.GetItemValue("Owner$UP"))
+			Call hPolicy.removeitem("Owner$UP")
+		End If
+	End If 
+End Sub
+
+'++LotusScript Development Environment:2:2:addStringToArray:1:8
+Sub addStringToArray(allStrings() As String,newString As String)
+	If Not (allStrings(Ubound(allStrings))="") Then		
+		Redim Preserve allStrings(Ubound(allStrings)+1)
+	End If
+	allStrings(Ubound(allStrings))=newString
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionIncGrpPrecendenceCat:1:8
+Sub ActionIncGrpPrecendenceCat
+	Dim ws As New NotesUIWorkspace
+	Dim s As New NotesSession
+	Dim db As NotesDatabase
+	Dim dc As NotesDocumentCollection
+	Dim doc As NotesDocument
+	Dim higherdoc As NotesDocument
+	Dim holddoc As NotesDocument
+	Dim iPrec As Integer
+	Dim currPrec As Integer
+	Dim holdPrec As Integer
+	Dim gpolView As NotesView
+	Dim precStr As String
+	Dim catStr As String
+	Dim vnav As NotesViewNavigator
+	Dim vne As NotesViewEntry
+	Dim bChangeVal As Boolean
+	Dim uiview As NotesUIView
+	Dim EmptyCatdc As NotesDocumentCollection
+	Dim vc As NotesViewEntryCollection
+	Dim entry As NotesViewEntry
+	
+	Set db = s.CurrentDatabase
+	Set uiview = ws.CurrentView
+	Set gpolView = db.GetView("($PoliciesDynamicCat)")
+	Set dc = db.UnprocessedDocuments
+	If Not (dc.Count > 0) Then
+		Msgbox "Please select a Policy document",MB_OK + MB_ICONSTOP,"Policy Error"								
+		Exit Sub
+	End If
+	If dc.Count > 1 Then
+		Msgbox "Please select only one Policy document",MB_OK + MB_ICONSTOP,"Policy Error"								
+		Exit Sub
+	End If
+	
+	Set doc = dc.GetFirstDocument
+	precStr = "Precedence"
+	holdPrec = 1
+	iPrec = doc.GetItemValue(precStr)(0)
+	catStr = doc.GetItemValue("PlcyCat")(0)
+	bChangeVal = False
+	
+	'Check the case for uncategorized docs
+	If catStr = "" Then
+		Set EmptyCatdc = gpolView.GetAllDocumentsByKey("", True)
+		Set vc = gpolView.AllEntries
+		Set entry = vc.GetFirstEntry
+		While Not entry Is Nothing
+			If entry.Document.GetItemValue("PlcyCat")(0) = "" Then
+				Call EmptyCatdc.AddDocument(entry.Document)
+			End If
+			Set entry = vc.GetNextEntry(entry)
+		Wend
+		
+		If (EmptyCatdc.Count < 2) Then
+			Exit Sub
+		Else
+			If iPrec = 1 Then
+				Msgbox "This Policy document already has the highest precedence in this category",MB_OK + MB_ICONSTOP,"Policy Error"	
+				Exit Sub
+			Else
+				Set higherdoc = EmptyCatdc.GetFirstDocument
+				While Not higherdoc Is Nothing
+					currPrec = higherdoc.GetItemValue(precStr)(0)
+					If (iPrec > currPrec)  Then
+						If (currPrec > holdPrec Or holdPrec = 1) Then
+							bChangeVal = True
+							holdPrec = currPrec
+							Set holddoc = higherdoc
+						End If
+					End If
+					Set higherdoc = EmptyCatdc.GetNextDocument(higherdoc)
+				Wend
+				If (bChangeVal = True) Then
+					Call holddoc.ReplaceItemValue(precStr, iPrec)
+					Call doc.ReplaceItemValue(precStr, holdPrec)
+					Call holddoc.Save(True, False)
+					Call doc.Save(True, False)
+					
+					Call ws.ViewRefresh					
+					Call uiview.SelectDocument(doc)
+				Else
+					Msgbox "This Policy document already has the highest precedence in this category",MB_OK + MB_ICONSTOP,"Policy Error"	
+					Exit Sub
+				End If
+			End If  
+		End If  
+	Else   
+		
+	'Get document from within the category that has lower precedence & switch precedence values
+		Set vnav = gpolView.CreateViewNavFromCategory(catStr)
+		Set vne = vnav.GetFirstDocument
+		Set higherdoc = vne.Document
+		currPrec = higherdoc.GetItemValue(precStr)(0)
+		If (vnav.Count < 2) Then
+			Exit Sub
+		Else
+			If iPrec = 1 Then
+				Msgbox "This Policy document already has the highest precedence in this category",MB_OK + MB_ICONSTOP,"Policy Error"	
+				Exit Sub
+			Else
+				While Not vne Is Nothing
+					Set higherdoc = vne.Document
+					currPrec = higherdoc.GetItemValue(precStr)(0)
+					If (iPrec > currPrec)  Then
+						If (currPrec > holdPrec Or holdPrec = 1) Then
+							bChangeVal = True
+							holdPrec = currPrec
+							Set holddoc = higherdoc
+						End If
+					End If
+					Set vne = vnav.GetNextDocument(vne)
+				Wend
+				If (bChangeVal = True) Then
+					Call holddoc.ReplaceItemValue(precStr, iPrec)
+					Call doc.ReplaceItemValue(precStr, holdPrec)
+					Call holddoc.Save(True, False)
+					Call doc.Save(True, False)
+					
+					Call ws.ViewRefresh					
+					Call uiview.SelectDocument(doc)
+				Else
+					Msgbox "This Policy document already has the highest precedence in this category",MB_OK + MB_ICONSTOP,"Policy Error"	
+					Exit Sub
+				End If
+			End If
+		End If
+	End If
+End Sub
+
+'++LotusScript Development Environment:2:2:PolSetQuerySave:1:8
+Sub PolSetQuerySave(Source As NotesUIDocument)
+	
+	On Error Goto ERROR_HANDLER
+	
+	' iterate throught the items on the note, setting the sign bit
+	' on those that will be saved to disk
+	Forall v In Source.Document.Items		
+		If Ucase$(Right$(v.Name, 3)) 	= "$PO" _
+		Or Ucase$(Right$(v.Name, 3)) 	= "$IP"_ 
+		Or Ucase$(Right$(v.Name, 3)) 	= "$HA"_ 
+		Or Ucase$(Right$(v.Name, 3)) 	= "$BL"_ 
+		Or Ucase$(Right$(v.Name, 3)) 	= "$UP"_
+		Or Ucase$(Right$(v.Name, 3)) 	= "$CL"_
+		Or Ucase$(Left$(v.Name, 5)) 	= "$SIGN" Then			
+			Goto LOOP_CONTINUE
+		Else
+			v.IsSigned=True
+		End If
+		
+		
+		
+LOOP_CONTINUE:
+	End Forall
+	
+	Call Source.Document.Sign
+	Call Source.Document.Save(True,True)
+	
+ROUTINE_EXIT:
+	Exit Sub
+	
+ERROR_HANDLER:
+	Msgbox "Error " + Cstr(Err()) + ": " + Error() + " -- Line " + Cstr(Erl())
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:ProcessDynamicItems:1:8
+Sub ProcessDynamicItems(hPolicy As NotesDocument)
+	'This function finds all "prohibit override" enabled items on a policy note.
+	'A "BL" enabled item means it can't be overridden in child policies.
+	'An item is "BL" enabled if an accompanying item with the suffix "$BL" exists.
+	'If the value of that accompanying item is "1" then we store the item name(s) of
+     'all "BL" enabled items as a list in a special item "$PolicyBLItems"
+	
+	On Error Goto ERROR_HANDLER
+	
+'	Dim BLCounter     As Integer
+	
+	Dim i As Integer
+	Dim v As Variant
+	Dim e As Integer
+	
+'	Dim BLItemNames() As String     'array of item names
+	
+	
+'	BLCounter = 0
+	POCounter = 0
+	IPCounter = 0
+	UP1_Counter = 0
+	UP2_Counter = 0
+	DPL_Counter = 0
+	UP3_Counter = 0
+	UP4_Counter = 0
+	UP5_Counter = 0
+	SOCounter = 0
+	
+	If Not (hPolicy Is Nothing) Then
+		'reset values, if any
+		Call hPolicy.RemoveItem( "$DPLocked" )				'//Locked Items
+		Call hPolicy.RemoveItem( "$PolicyPOItems" )		'/PO Items
+		Call hPolicy.RemoveItem( "$PolicyIFPItems" )		'// IP Items	
+		Call hPolicy.RemoveItem("$PolicyHTASetOnceItems")
+		Call hPolicy.RemoveItem( "$PolicyAlwaysPush")
+		Call hPolicy.RemoveItem( "AlwaysSetItems")
+		Call hPolicy.RemoveItem( "$FL_1" )				'// Bucket1 Items
+		Call hPolicy.RemoveItem( "$FL_2" )				'// Bucket2 Items
+		Call hPolicy.RemoveItem( "$FL_3" )				'// Bucket3 Items
+		
+		'reslam this setting just in case How To apply overrode the setting
+		Call hPolicy.ReplaceItemValue("RtrDeliveryUseDSF$UP", "4")
+		
+		Forall item In hPolicy.Items
+			If Not item Is Nothing Then
+				pRefitemName = ""
+				If Ucase$(Right$(item.Name, 3)) = "$PO" Then
+					If item.Values(0) = "1" Then
+						pRefItemName = Left$(item.name, Len(item.name) - 3)
+						Redim Preserve POItemNames(POCounter) As String
+						POItemNames(POCounter) = pRefitemName
+						POCounter = POCounter + 1
+					End If
+				Elseif Ucase$(Right$(item.Name, 3)) = "$IP" Then
+					If item.Values(0) = "1" Then
+						pRefItemName = Left$(item.name, Len(item.name) - 3)
+						Redim Preserve IPItemNames(IPCounter) As String
+						IPItemNames(IPCounter) = pRefitemName
+						IPCounter = IPCounter + 1
+					End If
+				Elseif Ucase$(Right$(item.Name, 3)) = "$LO" Then
+						' for spr LMAN6PVR3Q - want this Locked only, do not push any values - don't want Owner field of Settings doc to get pushed
+					pRefItemName = Left$(item.name, Len(item.name) - 3)
+'					pRefItemName = pRefItemName + "$LO"
+					If (hPolicy.GetItemValue(item.Name)(0) = "2" Or hPolicy.GetItemValue(item.Name)(0) = "") And (Not hPolicy.GetItemValue(pRefItemName + "$UP")(0) = "1") Then
+						Redim Preserve DPL_ItemNames(DPL_Counter) As Variant
+						DPL_ItemNames(DPL_Counter) = Left$(item.name, Len(item.name) - 3)
+						DPL_Counter = DPL_Counter + 1
+					End If		
+				Elseif Ucase$(Right$(item.Name, 3)) = "$UP" Then
+					Select Case item.Values(0)
+					Case "1"  ' Bucket 1 - Do not change
+						pRefItemName = Left$(item.name, Len(item.name) - 3)
+						Redim Preserve UP1_ItemNames(UP1_Counter) As Variant                      
+						UP1_ItemNames(UP1_counter) = pRefItemName                                
+						UP1_counter = UP1_counter + 1                   
+						
+						
+'						Call hPolicy.RemoveItem(pRefItemName)
+					Case "2"  	' Bucket 2 - Always
+						pRefItemName = Left$(item.name, Len(item.name) - 3)
+						If (CheckDependencyFields(pRefItemName)) Then
+							Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+							Redim Preserve DPL_ItemNames(DPL_Counter) As Variant
+							If Not (CheckIfDependentField(pRefItemName)) Then
+								DPL_ItemNames(DPL_Counter) = pRefItemName
+								DPL_Counter = DPL_Counter + 1
+							End If
+							v = Fulltrim(Arrayappend( UP2_ItemNames, ProcessDependencyFields(hPolicy, pRefItemName)))
+							Erase UP2_ItemNames
+							UP2_Counter = 0
+							
+							For e=0 To Ubound(v)
+								Redim Preserve UP2_ItemNames(e) As Variant
+								UP2_ItemNames(e) = v(e)				
+								UP2_Counter = UP2_Counter + 1
+							Next	
+						Else
+						'All other cases handled here.
+							If Not(CheckExclusionFields(pRefItemName)) Then
+								Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+								Redim Preserve DPL_ItemNames(DPL_Counter) As Variant
+								If Not ((pRefitemName = "$FL_3") Or (pRefitemName = "$FL_2")) Then
+									UP2_ItemNames(UP2_Counter) = pRefitemName + ":" + pRefitemName
+									If Not (CheckIfDependentField(pRefItemName)) Then
+										DPL_ItemNames(DPL_Counter) = pRefitemName
+										DPL_Counter = DPL_Counter + 1
+									End If
+									UP2_Counter = UP2_Counter + 1
+								End If
+							End If
+						End If
+						
+					Case "3" 	' Bucket 3 - Initially
+						pRefItemName = Left$(item.name, Len(item.name) - 3)
+						If (CheckDependencyFields(pRefItemName)) Then
+							Redim Preserve UP3_ItemNames(UP3_Counter) As Variant
+							Redim Preserve SO_ItemNames(SOCounter) As Variant
+							v = Fulltrim(Arrayappend( UP3_ItemNames, ProcessDependencyFields(hPolicy, pRefItemName)))
+							Erase UP3_ItemNames
+							Erase SO_ItemNames
+							UP3_Counter = 0
+							SOCounter = 0
+							
+							For e=0 To Ubound(v)
+								Redim Preserve UP3_ItemNames(e) As Variant
+								Redim Preserve SO_ItemNames(e) As Variant
+								UP3_ItemNames(e) = v(e)
+								SO_ItemNames(e) = Strright(v(e),":")
+								UP3_Counter = UP3_Counter + 1
+								SOCounter = SOCounter + 1
+							Next
+						Else
+						'All other cases handled here.
+							If Not(CheckExclusionFields(pRefItemName)) Then
+								Redim Preserve UP3_ItemNames(UP3_Counter) As Variant
+								Redim Preserve SO_ItemNames(SOCounter) As Variant
+								If Not ((pRefitemName = "$FL_3") Or (pRefitemName = "$FL_2")) Then
+									UP3_ItemNames(UP3_Counter) = pRefitemName + ":" + pRefitemName
+									SO_ItemNames(SOCounter) = pRefitemName
+									SOCounter = SOCounter + 1
+									UP3_Counter = UP3_Counter + 1
+								End If
+							End If
+						End If
+					Case "4"  	' Bucket 2 - Always
+						pRefItemName = Left$(item.name, Len(item.name) - 3)
+						If Not ((pRefitemName = "$FL_3") Or (pRefitemName = "$FL_2")) Then
+							Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+							UP2_ItemNames(UP2_Counter) = pRefitemName + ":" + pRefitemName
+							UP2_Counter = UP2_Counter + 1
+							Redim Preserve UP4_ItemNames(UP4_Counter) As Variant
+							UP4_ItemNames(UP4_Counter) = pRefitemName 
+							UP4_Counter = UP4_Counter + 1
+						End If
+						
+					Case "5"  ' Bucket 2 - Slam
+						If item.name <> "Owner$UP" And item.name <> "DefaultAppAssoc$UP" And item.name <> "DefaultAppDom$UP" Then
+							Call GenerateSlamList(hPolicy, item.name)
+						End If
+						Case ""
+							DoNothing = True
+					Case Else
+						If (item.name <> "Owner$UP") And (item.text = "") Then
+							Call GenerateSlamList(hPolicy, item.name)
+						End If
+					End Select
+				End If
+			End If
+		End Forall
+		
+		If hPolicy.HasItem("RecallSenderUIEnabled") Then
+			If (hPolicy.GetItemValue("RecallSenderUIEnabled")(0)) <> "" Then
+				Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+				UP2_ItemNames(UP2_Counter) = "RecallSenderUIEnabled:RecallSenderUIEnabled"
+				UP2_Counter = UP2_Counter + 1
+			End If		
+		End If
+		If hPolicy.HasItem("PolicyRecallCriteria") Then
+			If (hPolicy.GetItemValue("PolicyRecallCriteria")(0)) <> "" Then
+				Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+				UP2_ItemNames(UP2_Counter) = "PolicyRecallCriteria:PolicyRecallCriteria"
+				UP2_Counter = UP2_Counter + 1
+			End If		
+		End If
+		If hPolicy.HasItem("PolicyRecallCriteriaPeriod") Then
+			If ((hPolicy.GetItemValue("MailRecallCritUnit")(0) <> "")  And (hPolicy.GetItemValue("dspMailRcllCritPeriodItem")(0) <> "")) Then
+				Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+				UP2_ItemNames(UP2_Counter) = "PolicyRecallCriteriaPeriod:PolicyRecallCriteriaPeriod"
+				UP2_Counter = UP2_Counter + 1
+			End If	
+		End If
+		
+		
+		'//Set values to the correct table lists
+		If DPL_Counter > 0 Then
+			Call hPolicy.ReplaceItemValue("$DPLocked",Fulltrim(Arrayunique(DPL_ItemNames())))				'//Locked Items
+		Else
+			Call hPolicy.ReplaceItemValue("$DPLocked",DPL_ItemNames())				'//Locked Items
+		End If
+		
+		If POCounter > 0 Then
+			Call hPolicy.ReplaceItemValue("$PolicyPOItems", Fulltrim(Arrayunique(POItemNames())))		'/PO Items
+		Else
+			Call hPolicy.ReplaceItemValue("$PolicyPOItems", POItemNames())		'/PO Items
+		End If
+		
+		If IPCounter > 0 Then
+			Call hPolicy.ReplaceItemValue("$PolicyIFPItems",Fulltrim(Arrayunique(IPItemNames())))		'// IP Items
+		Else
+			Call hPolicy.ReplaceItemValue("$PolicyIFPItems",IPItemNames())		'// IP Items
+		End If
+		
+		If UP1_Counter > 0 Then
+			Call hPolicy.ReplaceItemValue("$FL_1",Fulltrim(Arrayunique(UP1_ItemNames())))				'// Bucket1 Items
+			Call hPolicy.ReplaceItemValue("$DontChangeItems", 		UP1_ItemNames())		
+		Else
+			Call hPolicy.ReplaceItemValue("$FL_1",UP1_ItemNames())				'// Bucket1 Items
+		End If
+		
+		If UP2_Counter > 0 Then
+			Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+			UP2_ItemNames(UP2_Counter) = "$FL_2" + ":" + "$FL_2"
+			Call hPolicy.ReplaceItemValue("$FL_2",Fulltrim(Arrayunique(UP2_ItemNames())))				'// Bucket2 Items
+		Else
+			Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+			UP2_ItemNames(UP2_Counter) = "$FL_2" + ":" + "$FL_2"
+			Call hPolicy.ReplaceItemValue("$FL_2",UP2_ItemNames())				'// Bucket2 Items
+		End If
+		
+		If UP3_Counter > 0 Then
+			Redim Preserve UP3_ItemNames(UP3_Counter) As Variant
+			UP3_ItemNames(UP3_Counter) = "$FL_3" + ":" + "$FL_3"
+			Call hPolicy.ReplaceItemValue("$FL_3",Fulltrim(Arrayunique(UP3_ItemNames())))				'// Bucket3 Items
+			Call hPolicy.ReplaceItemValue("$PolicyHTASetOnceItems",Fulltrim(Arrayunique(SO_ItemNames())))
+		Else
+			Redim Preserve UP3_ItemNames(UP3_Counter) As Variant
+			UP3_ItemNames(UP3_Counter) = "$FL_3"  + ":" + "$FL_3"
+			Call hPolicy.ReplaceItemValue("$FL_3",UP3_ItemNames())				'// Bucket3 Items
+			Call hPolicy.ReplaceItemValue("$PolicyHTASetOnceItems",SO_ItemNames())		
+		End If
+		
+		If UP4_Counter > 0 Then
+			Redim Preserve UP4_ItemNames(UP4_Counter) As Variant
+			Call hPolicy.ReplaceItemValue("$PolicyAlwaysPush",Fulltrim(Arrayunique(UP4_ItemNames())))
+		End If
+		
+		If UP5_Counter > 0 Then
+			Redim Preserve UP5_ItemNames(UP5_Counter) As Variant
+			Call hPolicy.ReplaceItemValue("AlwaysSetItems",Fulltrim(Arrayunique(UP5_ItemNames())))
+		End If
+		
+'		Call hPolicy.ReplaceItemValue("bAllHA", "1")
+	End If	
+	
+ROUTINE_EXIT:
+	Exit Sub
+	
+ERROR_HANDLER:
+	Print "ProcessDynamicItems " & Cstr(Err()) & ": " & Error & " occurred on line " & Cstr(Erl())
+	Resume ROUTINE_EXIT
+	
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:IncGrpPrecedenceAll:1:8
+Sub IncGrpPrecedenceAll
+	Dim gpolView As NotesView
+	Dim precStr As String
+	Dim currPrec As Integer
+	Dim currdoc As NotesDocument
+	Dim vec As NotesViewEntryCollection
+	Dim vne As NotesViewEntry
+	
+	Set db = s.CurrentDatabase
+	Set gpolView = db.GetView("($PoliciesDynamic)")
+	precStr = "Precedence"
+	Set vec = gpolView.allentries
+	Set vne = vec.GetFirstEntry
+	
+	While Not vne Is Nothing
+		Set currdoc = vne.document
+		currPrec = currdoc.GetItemValue(precStr)(0)
+		Call currdoc.ReplaceItemValue(precStr, currPrec + 1)
+		Call currdoc.save(True, False)
+		Set vne = vec.GetNextEntry(vne)
+	Wend
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionDecGrpPrecedenceCat:1:8
+Sub ActionDecGrpPrecedenceCat
+	Dim s As New NotesSession
+	Dim ws As New NotesUIWorkspace
+	Dim db As NotesDatabase
+	Dim dc As NotesDocumentCollection
+	Dim doc As NotesDocument
+	Dim lowerdoc As NotesDocument
+	Dim holddoc As notesdocument
+	Dim dPrec As Integer
+	Dim currPrec As Integer
+	Dim holdPrec As Integer
+	Dim gpolView As NotesView
+	Dim precStr As String
+	Dim catStr As String
+	Dim vnav As NotesViewNavigator
+	Dim vne As NotesViewEntry
+	Dim bChangeval As Boolean
+	Dim uiview As NotesUIView
+	Dim EmptyCatdc As NotesDocumentCollection
+	Dim vc As NotesViewEntryCollection
+	Dim entry As NotesViewEntry
+	
+	Set db = s.CurrentDatabase
+	Set uiview = ws.CurrentView
+	Set gpolView = db.GetView("($PoliciesDynamicCat)")
+	Set dc = db.UnprocessedDocuments
+	If Not (dc.Count > 0) Then
+		Msgbox "Please select a Policy document",MB_OK + MB_ICONSTOP,"Policy Error"								
+		Exit Sub
+	End If
+	If dc.Count > 1 Then
+		Msgbox "Please select only one Policy document",MB_OK + MB_ICONSTOP,"Policy Error"								
+		Exit Sub
+	End If
+	
+	Set doc = dc.GetFirstDocument
+	precStr = "Precedence"
+	dPrec = doc.GetItemValue(precStr)(0)
+	catStr = doc.GetItemValue("PlcyCat")(0)
+	bChangeval = False
+	holdPrec = 1
+	
+		'Check the case for uncategorized docs
+	If catStr = "" Then
+		Set EmptyCatdc = gpolView.GetAllDocumentsByKey("", True)
+		Set vc = gpolView.AllEntries
+		Set entry = vc.GetFirstEntry
+		While Not entry Is Nothing
+			If entry.Document.GetItemValue("PlcyCat")(0) = "" Then
+				Call EmptyCatdc.AddDocument(entry.Document)
+			End If
+			Set entry = vc.GetNextEntry(entry)
+		Wend
+		
+		If (EmptyCatdc.Count < 2) Then
+			Exit Sub
+		Else
+			Set lowerdoc = EmptyCatdc.GetLastDocument
+			While Not lowerdoc Is Nothing
+				currPrec = lowerdoc.GetItemValue(precStr)(0)
+				If (dPrec < currPrec)  Then
+					If (currPrec < holdPrec Or holdPrec = 1) Then
+						bChangeVal = True
+						holdPrec = currPrec
+						Set holddoc = lowerdoc
+					End If
+				End If
+				Set lowerdoc = EmptyCatdc.GetPrevDocument(lowerdoc)
+			Wend
+			If (bChangeVal = True) Then
+				Call holddoc.ReplaceItemValue(precStr, dPrec)
+				Call doc.ReplaceItemValue(precStr, holdPrec)
+				Call holddoc.Save(True, False)
+				Call doc.Save(True, False)
+				
+				Call ws.ViewRefresh					
+				Call uiview.SelectDocument(doc)
+			Else
+				Msgbox "This Policy document already has the lowest precedence in this category",MB_OK + MB_ICONSTOP,"Policy Error"	
+				Exit Sub
+			End If
+		End If  
+	Else   
+	'Get document from within the category that has lower precedence & switch precedence values
+		Set vnav = gpolView.CreateViewNavFromCategory(catStr)
+		Set vne = vnav.GetLastDocument
+		Set lowerdoc = vne.Document
+		currPrec = lowerdoc.GetItemValue(precStr)(0)
+		If (vnav.Count < 2) Then
+			Exit Sub
+		Else
+			While Not vne Is Nothing
+				Set lowerdoc = vne.Document
+				currPrec = lowerdoc.GetItemValue(precStr)(0)
+				If (dPrec < currPrec) Then
+					If (currPrec < holdPrec Or holdPrec = 1)Then
+						holdPrec = currPrec
+						Set holddoc = lowerdoc
+						bChangeval = True
+					End If
+					Set vne = vnav.GetPrevDocument(vne)
+				Else
+					Set vne = vnav.GetPrevDocument(vne)
+				End If
+			Wend
+			If bChangeval = True Then
+				Call doc.ReplaceItemValue(precStr, holdPrec)
+				Call holddoc.ReplaceItemValue(precStr, dPrec)
+				Call holddoc.Save(True, False)
+				Call doc.Save(True, False)
+				Call ws.ViewRefresh
+				Call uiview.SelectDocument(doc)
+			Else
+				Msgbox "This Policy document already has the lowest precedence in its category",MB_OK + MB_ICONSTOP,"Policy Error"	
+				Exit Sub
+			End If
+		End If
+	End If
+End Sub
+
+'++LotusScript Development Environment:2:2:ConvertLongNameFields:1:8
+Sub ConvertLongNameFields(hPolicy As Notesdocument)
+	
+' this is the index into the list of long names
+	Dim iLongName As Integer
+	Dim strLNrefval$
+	Dim strLNrefName As String
+	Dim holdItem As NotesItem
+	
+	iLongName = 1
+'Begin DNT	
+	Forall v In hPolicy.getItemValue("LongNameFields")
+		
+		If Not Isempty(v) Then
+		'create/set item
+			
+			strLNrefName = "$LNref" + Cstr(iLongName)
+			
+			strLNrefval = hPolicy.GetItemValue(strLNrefName)(0)
+			Call hPolicy.ReplaceItemValue(v, strLNrefval)
+			
+			
+		'create/set $HA value
+			strLNrefval = hPolicy.GetItemValue(strLNrefName + "$HA")(0)
+			Call hPolicy.ReplaceItemValue(v + "$HA", strLNrefval)
+			Set holdItem = hPolicy.GetFirstItem(v + "$HA")
+			holdItem.SaveToDisk = False
+			
+		'create/set $IP value
+			strLNrefval = hPolicy.GetItemValue(strLNrefName + "$IP")(0)
+			Call hPolicy.ReplaceItemValue(v + "$IP", strLNrefval)
+			Set holdItem = hPolicy.GetFirstItem(v + "$IP")
+			holdItem.SaveToDisk = False
+			
+		'create/set $PO value
+			strLNrefval = hPolicy.GetItemValue(strLNrefName + "$PO")(0)
+			Call hPolicy.ReplaceItemValue(v + "$PO", strLNrefval)
+			Set holdItem = hPolicy.GetFirstItem(v + "$PO")
+			holdItem.SaveToDisk = False
+			
+			iLongName = iLongName + 1
+		End If
+	End Forall
+'End DNT
+End Sub
+
+'++LotusScript Development Environment:2:2:ComputeCTLItemList:1:8
+Sub ComputeCTLItemList(hPolicy As NotesDocument)
+	
+	Dim pCounter     As Integer
+	Dim pItemNames() As String     'array of item names
+	Dim pRefItemName As String     'real item name refered by the IFP item
+	
+	Forall item In hPolicy.Items
+		If Ucase$(Right$(item.Name, 3)) = "$CL" Then
+			If item.Values(0) = "" Then
+				pRefItemName = Left$(item.name, Len(item.name) - 3)
+				Redim Preserve pItemNames(pCounter) As String
+				pItemNames(pCounter) = pRefitemName
+				pCounter = pCounter + 1
+			End If
+		End If
+	End Forall
+	
+	Call hPolicy.ReplaceItemValue("$PolicyCTLItems",pItemNames())
+	
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:GenerateSlamList:1:8
+Sub GenerateSlamList(hPolicy As NotesDocument, sItemName As String)
+	pRefItemName = Left$(sItemName, Len(sItemName) - 3)
+	If (CheckDependencyFields(pRefItemName)) Then
+		Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+		Redim Preserve UP5_ItemNames(UP5_Counter) As Variant
+		If Not (CheckIfDependentField(pRefItemName)) Then
+			UP5_ItemNames(UP5_Counter) = pRefItemName
+			UP5_Counter = UP5_Counter + 1
+		End If
+		v = Fulltrim(Arrayappend( UP2_ItemNames, ProcessDependencyFields(hPolicy, pRefItemName)))
+		Erase UP2_ItemNames
+		UP2_Counter = 0
+		
+		For e=0 To Ubound(v)
+			Redim Preserve UP2_ItemNames(e) As Variant
+			UP2_ItemNames(e) = v(e)				
+			UP2_Counter = UP2_Counter + 1
+		Next	
+	Else
+						'All other cases handled here.
+		If Not(CheckExclusionFields(pRefItemName)) Then
+			Redim Preserve UP2_ItemNames(UP2_Counter) As Variant
+			Redim Preserve UP5_ItemNames(UP5_Counter) As Variant
+			If Not ((pRefitemName = "$FL_3") Or (pRefitemName = "$FL_2")) Then
+				UP2_ItemNames(UP2_Counter) = pRefitemName + ":" + pRefitemName
+				If Not (CheckIfDependentField(pRefItemName)) Then
+					UP5_ItemNames(UP5_Counter) = pRefitemName
+					UP5_Counter = UP5_Counter + 1
+				End If
+				UP2_Counter = UP2_Counter + 1
+			End If
+		End If
+	End If	
+End Sub
+
+
+'++LotusScript Development Environment:2:2:RemoveINIFields:1:8
+Sub RemoveINIFields(hPolicy As NotesDocument, sParamList As String, sPrefType As String)
+	Dim sPrefix As String
+	Dim sItemName As String
+	Dim sPluginName As String
+	Dim squalContents As String
+	Dim sItemNameAdded As String
+	Dim iItemToRem As NotesItem
+	Dim iItemAddList As NotesItem
+	Dim bDontRemove As Boolean
+	
+	bDontRemove = False
+	
+	If Not hPolicy.GetItemValue(sParamList)(0) = "" Then
+		
+		sPrefix = ""
+		
+		If sPrefType = LOCALL_PREFIX Then
+			sPrefix = LOCALL_PREFIX
+		Elseif sPrefType = NOTESINI_PREFIX Then
+			sPrefix = NOTESINI_PREFIX
+		End If
+		
+		Set iItemAddList = hPolicy.getFirstItem("EclipseParameters")
+		Forall item In hPolicy.GetItemValue(sParamList)
+			If sPrefType = MS_PREFIX Then
+				sItemName = Strleft(item, ";")
+				sPluginName = Strright(item, ";")
+			Else
+				sItemName = sPrefix + item
+			End If
+			
+			ForAll AddedItems In hPolicy.GetItemvalue("EclipseParameters")
+				sItemNameAdded = StrLeft(AddedItems, "=")
+				If sItemNameAdded = sItemName Then
+					bDontRemove = True
+				End If
+			End ForAll
+			
+			If Not (bDontRemove) Then	
+				If hPolicy.HasItem(sItemName) Then
+					Set iItemToRem = hPolicy.GetFirstItem(sItemName)
+					iItemToRem.SaveToDisk = False
+				End If
+				If hPolicy.HasItem(sItemName + "$PO") Then
+					Call hPolicy.ReplaceItemValue(sItemName + "$PO", "")
+				End If
+				If hPolicy.HasItem(sItemName+ "$HA") Then
+					Call hPolicy.ReplaceItemValue(sItemName + "$HA", "1")
+				End If
+			
+				If sPrefType = MS_PREFIX Then
+					qualItemName = "$qual_" + Trim(sPluginName) + "_" + Trim(sItemname)
+					If hPolicy.HasItem(qualItemName) Then
+						Set iItemToRem = hPolicy.Getfirstitem(qualItemName)
+						iItemToRem.savetodisk = False
+					End If
+				End If
+			End If
+			bDontRemove = False
+		End Forall
+	End If
+	Set iItemToRem = hPolicy.Getfirstitem("RemParameters")
+	iItemToRem.saveToDisk = False
+	Set iItemToRem = hPolicy.Getfirstitem("RemLocParameters")
+	iItemToRem.saveToDisk = False
+	Set iItemToRem = hPolicy.Getfirstitem("RemEclipseParameters")
+	iItemToRem.saveToDisk = False
+End Sub
+
+'++LotusScript Development Environment:2:2:WriteOutProxies:1:8
+Sub WriteOutProxies(Source As NotesUIDocument)
+	
+	Dim ProxyFLag As String
+	Dim FTPDisplay As String
+	Dim GopherDisplay As String
+	Dim SecDisplay As String
+	
+	'Sync up the Proxy fields were necessary
+	ProxyFlag = source.FieldGetText("LocAllProxyFlag")
+	FTPDisplay = source.FieldGetText("$dspLocAllProxy_FTP")
+	GopherDisplay = source.FieldGetText("$dspLocAllProxy_Gopher")
+	SecDisplay = source.FieldGetText("$dspLocAllProxy_SSL")
+	
+	If ProxyFlag = "Yes" Then
+		If FTPDisplay <> source.FieldGetText("LocAllProxy_FTP") Then
+			Call Source.Document.ReplaceItemValue("LocAllProxy_FTP", FTPDisplay)
+		End If
+		
+		If GopherDisplay <> source.FieldGetText("LocAllProxy_Gopher") Then
+			Call Source.Document.ReplaceItemValue("LocAllProxy_Gopher", GopherDisplay)
+		End If
+		
+		If SecDisplay <> source.FieldGetText("LocAllProxy_SSL") Then
+			Call Source.Document.ReplaceItemValue("LocAllProxy_SSL", SecDisplay)
+		End If
+		
+	End If
+End Sub
+
+
+
+'++LotusScript Development Environment:2:2:PolSetQueryOpen:1:8
+Sub PolSetQueryOpen(Source As Notesuidocument, Mode As Integer, Isnewdoc As Variant, Continue As Variant)                                        
+	Dim s As New NotesSession                                               
+	Dim ret As Integer
+	Dim arrPlugInList() As String
+	Dim listCounter As Integer
+	Dim sItemName As String
+	Dim sTmpVal As String
+	Dim spluginName As String
+	Dim iPosOfChar As Integer
+	Dim iPosOfEnfChar As Integer
+	Dim iPosOfSOChar As Integer
+	
+	ReDim arrPlugInList(0) As String
+	
+	'// For R6 setSaveToDisk bug
+	If s.NotesBuildVersion < 256 Then
+		ret = Messagebox(POL_BUG_WARNING, 4 + 16, ERR_TITLE)
+		If Not ret = 6 Then
+			Continue = False
+			Exit Sub
+		End If
+	End If
+	
+'// For R5 Compatibility                                                
+ '// Don't allow new docs                                               
+	If IsNewDoc Then                                                        
+		If s.NotesBuildVersion < 171 Then                                      
+			Messagebox POL_CLIENT_WARNING, 0 + 16, ERR_TITLE                      
+			Continue = False                                                      
+			Exit Sub                                                              
+		End If                                                                 
+	Else                                                                    
+ '// Let's set values back to the form                                  
+		Set Policy = Source.Document                                           
+		
+		
+		settingTypeStr = Policy.GetItemValue("Type")(0)                        
+		If settingTypeStr = "PolicyMail" Then                                  
+			suffixStr = "$UP"                                                     
+		Else                                                                   
+			suffixStr = "$HA"                                                     
+		End If                                                                 
+		
+		needsConversion = Not Policy.HasItem("$PolicyHTASetOnceItems")         
+		
+		If needsConversion Then                                                
+			If Not settingTypeStr = "PolicyMail" Then                             
+				Forall item In Policy.Items                                          
+					If (Ucase$(Right$(item.Name, 3)) <> "$HA") And item.Text <> ""  And Not Policy.HasItem(item.Name + "$HA") Then                              
+						itemHTAName = item.Name + "$HA"                                    
+						Call Policy.replaceItemValue(itemHTAName, "5")                     
+					End If                                                              
+				End Forall                                                           
+			End If                                                                
+		End If                                                                 
+		
+		bMgSetfixup = Not Policy.hasitem(MG_SET_BOOL)
+		
+		If Not settingTypeStr = MAIL_POLICY Then
+			ForAll item In Policy.GetItemValue(ECLIPSE_PARAMETERS)
+				If item <> "" Then
+					'Delete all $qual fields that were generated, so start with clean slate
+					iPosOfChar = InStr(item, "=")
+					sItemName = Left(item, iPosOfChar - 1)
+					spluginName = StrRight(item, "; ")
+					sItemToRemove = "$qual_" + spluginName + "_" + sItemName
+					If Policy.hasItem(sItemToRemove) Then
+						Call Policy.removeitem(sItemToRemove)
+					End If
+				End If
+			End ForAll
+		End If
+		
+		If bMgSetfixup Then
+			If Not settingTypeStr = MAIL_POLICY Then
+				ForAll item In Policy.GetItemValue(ECLIPSE_PARAMETERS)
+					If item <> "" Then
+						'Build NamePlugInList
+						listCounter = UBound(arrPlugInList, 1)
+						ReDim Preserve arrPlugInList(listCounter+1) As String
+						iPosOfChar = InStr(item, "=")
+						iPosOfEnfChar = InStr(item, ENFORCE_SUFFIX)
+						iPosOfSOChar = InStr(item, SETONCE_SUFFIX)
+					
+						sItemName = Left(item, iPosOfChar - 1)
+						If iPosOfEnfChar > 0 Then
+							sTmpVal = Left(item, iPosOfEnfChar - 1)
+							sItemVal = Right(sTmpVal, Len(sTmpVal) - iPosOfChar)
+						Else 
+							If iPosOfSOChar > 0 Then 
+								sTmpVal = Left(item, iPosOfSOChar - 1)
+								sItemVal = Right(sTmpVal, Len(sTmpVal) - iPosOfChar)
+							Else
+								sItemVal = Right(item, Len(item) - iPosOfChar)
+							End If
+						End If
+						spluginName = StrRight(sItemVal, "; ")
+						arrPlugInList(listCounter) = sItemName + "?" + spluginName
+						listCounter = listCounter + 1
+					End If
+				End ForAll
+				Call Policy.replaceitemvalue(NAME_PLUGIN_LIST, arrPlugInList())
+				Call Policy.replaceitemvalue(MG_SET_BOOL, "1")
+			End If
+		End If
+		Set enfItem = Policy.GetFirstItem("$PolicyPOItems")                    
+		If Not enfitem Is Nothing Then                                         
+			Forall v In enfItem.Values     
+				If Not v = "" Then
+					fieldName = v & "$PO"                                                
+					Call Policy.ReplaceItemValue(fieldName, "1")      
+				End If
+			End Forall                                                            
+		End If                                                                 
+		
+		Set inhItem = Policy.GetFirstItem("$PolicyIFPItems")                   
+		If Not inhitem Is Nothing Then                                         
+			Forall v In inhItem.Values    
+				If Not v = "" Then
+					fieldName = v & "$IP"                                                
+					Call Policy.ReplaceItemValue(fieldName, "1")                         
+				End If
+			End Forall                                                            
+		End If                                                                 
+		
+		
+		Set inhItem = Policy.GetFirstItem("$DPLockedUnstripped")               
+		If Not inhitem Is Nothing Then                                         
+			Forall v In inhItem.Values               
+				If Not v = "" Then
+					fieldName = v & "$HA"                                                
+					Call Policy.ReplaceItemValue(fieldName, "2")                         
+				End If
+			End Forall                                                            
+		End If                                                                 
+		
+		
+		Set inhItem = Policy.GetFirstItem("$PolicySetOnceUnstripped")          
+		If Not inhitem Is Nothing Then                                         
+			Forall v In inhItem.Values     
+				If Not v = "" Then
+					fieldName = v & "$HA"                                                
+					Call Policy.ReplaceItemValue(fieldName, "3")    
+				End If
+			End Forall                                                            
+		End If                                                                 
+		
+		Set inhItem = Policy.GetFirstItem("$DontChangeItems")                  
+		If Not inhitem Is Nothing Then                                         
+			Forall v In inhItem.Values   
+				If Not v = "" Then
+					fieldName = v & suffixStr                                              
+					Call Policy.ReplaceItemValue(fieldName, "1")                         
+				End If
+			End Forall                                                            
+		End If                                                                 
+		
+		iIndex = 0                                                             
+		Set inhItem = Policy.GetFirstItem("PolicyDNCNames")    
+		If Not inhItem Is Nothing Then
+			Forall v In inhItem.Values
+				If Not v = "" Then
+					Call Policy.ReplaceItemValue(v, Policy.PolicyDNCVals(iIndex))         
+					iIndex = iIndex + 1       
+				End If
+			End Forall                                                             
+		End If
+		
+		Set ctlItem = Policy.GetFirstItem("$PolicyCTLItems")                   
+		If Not ctlItem Is Nothing Then                                         
+			Forall v In ctlItem.Values                  
+				If Not v = "" Then
+					fieldName = v & "$CL"                                                
+					Call Policy.ReplaceItemValue(fieldName, "")                          
+				End If
+			End Forall                                                            
+		End If                                                                 
+		
+ '//  ' for spr LMAN6PVR3Q - want this Locked only, do not push any values - don't want Owner field of Settings doc to get pushed           
+		Set inhItem = Policy.GetFirstItem("$DPLocked")                         
+		If Not inhitem Is Nothing Then                                         
+			Forall v In inhItem.Values                                            
+				If v = "Owner" Or v = "OtherUsersPicker" Then                        
+					fieldName = v & "$LO"                                               
+					Call Policy.ReplaceItemValue(fieldName, "2")                        
+				End If                                                               
+			End Forall                                                            
+		End If                                                                 
+		
+ '// Bucket 2 Field settings back to the form                           
+		Set inhItem = Policy.GetFirstItem("$FL_2")                             
+		If Not inhitem Is Nothing Then                                         
+			Forall v In inhItem.Values                                            
+				If Not (Instr(v, ":")  < 2) Then                                     
+					If Not SkipHTASetFields(Cstr(Left$(v, Instr(v, ":") - 1))) Then     
+						If CheckExclusionFields(Cstr(Left$(v, Instr(v, ":") - 1))) Then  '//check for $Times item dependency                               
+							If Not (Cstr(Left$(v, Instr(v, ":") - 1)) = "DefaultLogo") Then   
+								fieldName = "$Times" & suffixStr                                 
+							End If                                                            
+						Else                                                               
+							fieldName = Left$(v, Instr(v, ":") - 1) & suffixStr               
+						End If                                                             
+						
+'						If needsConversion = "True" Then                                   
+						Call Policy.ReplaceItemValue(fieldName, "5")                      
+'						Else                                                               
+'							Call Policy.ReplaceItemValue(fieldName, "2")                      
+'						End If                                                             
+					End If                                                              
+				End If                                                               
+			End Forall                                                            
+		End If                                                                 
+ '// Bucket 3 Field settings back to the form                           
+		Set inhItem = Policy.GetFirstItem("$FL_3")                             
+		If Not inhitem Is Nothing Then                                         
+			Forall v In inhItem.Values                                            
+				If Not (Instr(v, ":")  < 2) Then                                     
+					If CheckExclusionFields(Cstr(Left$(v, Instr(v, ":") - 1)))  Then  '//check for $Times item dependency                               
+						If Not (Cstr(Left$(v, Instr(v, ":") - 1)) = "DefaultLogo") Then    
+							fieldName = "$Times" & suffixStr                                  
+						End If                                                             
+					Else                                                                
+						fieldName = Left$(v, Instr(v, ":") - 1) & suffixStr                
+					End If                                                              
+'    fieldName = v & "$UP"                                              
+					Call Policy.ReplaceItemValue(fieldName, "3")                        
+				End If                                                               
+			End Forall                                                            
+		End If                                                                 
+		
+		If needsConversion Or suffixStr = "$UP" Then                                                
+			Set inhItem = Policy.GetFirstItem("$DPLocked")                        
+			If Not inhitem Is Nothing Then                                        
+				Forall v In inhItem.Values   
+					If Not v = "" Then
+						fieldName = v & suffixStr                                           
+						If settingTypeStr = "PolicyDesktop" Then                            
+							If Policy.HasItem(fieldname) Then                                  
+								Call Policy.ReplaceItemValue(fieldName, "2")                      
+							Else                                                               
+								fieldname = "$Pref" & fieldname                                   
+								Call Policy.ReplaceItemValue(fieldName, "2")                      
+							End If                                                             
+						Else                                                                
+							If v = "Owner" Or v = "OtherUsersPicker" Then                      
+								fieldName = v & "$LO"                                             
+							End If                                                             
+							Call Policy.ReplaceItemValue(fieldName, "2")                       
+						End If 
+					End If
+				End Forall                                                           
+			End If                                                                
+		End If                                                                 
+		
+   '// This needs to come after the Bucket 2 code                       
+		Set inhItem = Policy.GetFirstItem("$PolicyAlwaysPush")                 
+		If Not inhitem Is Nothing Then                                         
+			Forall v In inhItem.Values                     
+				If Not v = "" Then
+					fieldName = v & suffixStr                                            
+					Call Policy.ReplaceItemValue(fieldName, "4")    
+				End If
+			End Forall                                                            
+		End If                                                                 
+		
+		
+		Set inhItem = Policy.GetFirstItem("AlwaysSetItems")                    
+		If Not inhitem Is Nothing Then         
+			If suffixStr = "$UP" Then
+				AlwaysSuffixStr = "$FO"
+			Else
+				AlwaysSuffixStr = "$HA"
+			End If
+			Forall v In inhItem.Values                                            
+				If Not v = "" Then
+					fieldName = v & AlwaysSuffixStr                                            
+					Call Policy.ReplaceItemValue(fieldName, "5")     
+				End If
+			End Forall                                                            
+		End If                                                                 
+		
+		If needsConversion And settingTypeStr = "PolicyMail" Then              
+			Call Policy.ReplaceItemValue("ShowToDosOnCalendar$IP", Policy.GetItemValue("HideToDosFromCalendar$IP")(0))                     
+			Call Policy.ReplaceItemValue("ShowToDosOnCalendar$PO", Policy.GetItemValue("HideToDosFromCalendar$PO")(0))                     
+			Call Policy.ReplaceItemValue("ShowToDosOnCalendar$UP", Policy.GetItemValue("HideToDosFromCalendar$UP")(0))                     
+			
+			If Not Policy.GetItemValue("HideToDosFromCalendar")(0) = "1" Then     
+				Call Policy.ReplaceItemValue("ShowToDosOnCalendar", "1")             
+			End If                                                                
+		End If                                                                 
+		
+	End If                                                                  
+	
+End Sub       
+
+'++LotusScript Development Environment:2:2:CheckPlcyModRole:1:8
+Sub CheckPlcyModRole(Source As NotesUIDocument, FromWhere As Integer, IsSettingsDoc As Boolean, Continue As Variant)
+			'check to see if authorized to edit the document
+	Dim s As New NotesSession
+	Dim db As NotesDatabase
+	Dim acl As NotesACL
+	Dim entry As NotesACLEntry
+	Dim user As String
+	Dim found As Boolean
+	Dim authString As String
+	
+	If isSettingsDoc = True Then
+		authString = "You are not authorized to edit this Policy Settings document."
+	Else
+		authString = "You are not authorized to edit this Policy document."
+	End If
+	
+	Set db = s.CurrentDatabase
+	
+	'FromWhere values are 1=View level, 2=doc level
+	If (Source.EditMode = True And FromWhere = 1) Or (Source.EditMode = False And FromWhere = 2) Then
+		
+		'Use Evaluate, since acl.GetEntry doesn't return Group member info
+		haveRole = Evaluate(|@IsMember("[PolicyModifier]";@UserRoles)|)
+		Found = False
+		
+		Found = haveRole(0)
+		Dim accint As Integer
+		
+		accint = db.CurrentAccessLevel
+		If (db.Server = "") Or (db.CurrentAccessLevel > 2 And  Found = True)  Then
+			Found = True  'do nothing
+		Else
+			Msgbox authString, 48, "Not Authorized"
+			Continue = False
+			Exit Sub
+		End If
+	End If
+End Sub
+
+'++LotusScript Development Environment:2:2:DontChangeItems:1:8
+Sub DontChangeItems(hPolicy As NotesDocument)
+	Dim dcItem As notesitem
+	Dim listItems As NotesItem
+	
+	Set listItems = hPolicy.GetFirstItem("DontChangeItems")
+	If Not listItems Is Nothing Then
+		Forall c In listItems.Values
+			If Not c = "" Then
+				Set dcItem = hPolicy.GetFirstItem(c)
+				If Not dcItem Is Nothing Then
+					dcItem.SaveToDisk=False
+				End If
+			End If
+		End Forall	
+	End If
+End Sub

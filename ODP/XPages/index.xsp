@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+
+	<xc:ccLayout><xp:this.facets>
+	<xp:panel xp:key="facet_1">
+	<xp:panel>
+	<h2>Directory</h2>
+	
+	<ul class="list-group">
+	<xp:repeat id="rptPersons" rows="10"
+		var="persons">
+
+		<xp:this.value><![CDATA[#{javascript:com.quintessens.FakeNames.DASRest.getPersons('http://dev1/fakenames40k.nsf/api/data/collections/name/people?count=100')
+}]]></xp:this.value><li class="list-group-item">
+			<h4>
+				<xp:text escape="true"
+					value="#{javascript:persons.getName()}">
+				</xp:text>
+			</h4>
+			<p>
+				<xp:text escape="true" id="computedField1"
+					value="#{javascript:persons.getCompanyname()}">
+				</xp:text>
+			</p>
+			<p>
+				<xp:text escape="true" id="computedField2"
+					value="#{javascript:persons.getJobtitle()}">
+				</xp:text>
+			</p>
+		</li>
+	</xp:repeat>
+	</ul>
+	<xc:ccInifiniteScroll repeatId="rptPersons"></xc:ccInifiniteScroll>
+	<xp:br></xp:br>
+	</xp:panel>
+	</xp:panel></xp:this.facets>
+	
+	
+	</xc:ccLayout>
+	</xp:view>
+

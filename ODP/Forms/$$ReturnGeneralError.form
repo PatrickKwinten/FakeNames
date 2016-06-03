@@ -1,0 +1,84 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='65a' unid='BE1AD96356FBC04985256B99003A1FA8' sequence='5011'>
+<created><datetime dst='true'>20020412T063451,92-04</datetime></created>
+<modified><datetime dst='true'>20150507T110156,18+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095406,26-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110156,17+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110156,17+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime dst='true'>20090514T140109,03-04</datetime><datetime
+>20100304T143921,52-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$Fonts'>
+<rawitemdata type='1'>
+i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$SignatureStatus'><text>1</text></item>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
++f8gAAAAAAANAAQAHgAAAAAAAAAAAAAAAAAAAAAAAADc/zAA+f8eACBOAAAAAAAAAABudEdlbmVy
+YWxFcnJvcih3aW5kb3cuc0Vycm9yKQBf/xAAAgAPAAcAAAAAAAAAX/8QAAIADQAHAAAAAAAAAA==
+</rawitemdata></item>
+<item name='$TITLE'><text>$$ReturnGeneralError</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$HTMLHeadTag' sign='true'><formula>_tDb	:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_is6	:= @TextToNumber(@Version) &gt; 171;
+
+"&lt;meta http-equiv='expires' content='0'&gt;
+&lt;link rel=stylesheet type='text/css' href='/" + _tDb + "/cssForm?ReadForm'&gt;
+&lt;script&gt;
+	var sWebDbName		= '/" + _tDb + "/';
+&lt;/script&gt;" +
+@If(_is6;
+	"&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+
+	"&lt;script src='/" + _tDb + "/WebJSNavigationTools5?OpenPage'&gt;&lt;/script&gt;"
+)</formula></item>
+<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></item>
+<item name='$Flags'><text>CD</text></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item>
+<item name='$$Script_O' sign='true'>
+<rawitemdata type='14'>
+AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//AAA4AP////9U
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
+AAAAAABXMzJJQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAwCMAAAAAAAYAAgAKgAzADkANAAwADEAQQBDAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
+RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
+AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAABCiulWBAAHAAAAAAAdAAAC
+AAAACgAAAA==
+</rawitemdata></item>
+<item name='MessageString' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$FIELDS'><text>MessageString</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>$$ReturnGeneralError</text></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQEoAUMAKAFDAAAAAAAu/8yAAEA+AYBAAAAhH0kAAAAFgC/AFgBAAAAAAAA
+AKBhQA4CAwAHAAwABQAJMFMwRQCDBAEAzP8IAAAAAACF/xAAAQAACjxzY3JpcHQ+gQKC/1IAAgAA
+AAAAAAAAAAgHAAAIBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
+AAAAAJQECAcMAAgHDAAAAAAAgwQCALwGAQACAIX/FgABAAAKdmFyIHNFcnJvciA9ICfdBgAArf+p
+/0AAAQAYAAQANAA0AAAAJgAFAA0ATWVzc2FnZVN0cmluZwABAAEAJwABAAIAXCeEAwMABwAMAAUA
+CTRTNlMAhf8IAAEAAAqqAt4GAACuAIX/CgABAAAKJzuBAoMEAQCF/xEAAQAACjwvc2NyaXB0PgCB
+AoMEAQCF/wwAAQAACjxCUj7dBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/TACIAQAFADAC
+AAAAAAAAAgEAAAoaAAAAAAAAAA0AAAAAABoAAAAYAAUADQBNZXNzYWdlU3RyaW5nAAMATWVzc2Fn
+ZVN0cmluZwB6/ygADQAAAAAAAAAAAAAAAAAAAAAAAAAAAE1lc3NhZ2VTdHJpbmcA3gYAAIr/hf8M
+AAEAAAo8SFI+zf8IAAAAAACBAoL/UgADAAQAAAAAAAAAoAUAAKAFCADQAqAFcAhACxAO4BCwE4AW
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAlASgBQoAoAUKAAAAZACDBAMAhf8IAAEAAAqB
+AoMEAQDdBgAAhf+F/wgAAQQECtIIAQAAAP8A3gYAAIX/
+</rawitemdata></item></note>
+

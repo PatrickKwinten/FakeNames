@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="186" sequence="5015" unid="903070B9D60ED7B48525690700411F35">
+<created><datetime dst="true">20000623T075118,29-04</datetime></created>
+<modified><datetime dst="true">20150507T110150,14+02</datetime></modified>
+<revised><datetime dst="true">20130909T095403,48-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150507T110150,13+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150507T110150,13+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T143912,92-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name="$TITLE" sign="true"><text>LDAPObjectClassLib</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$LANGUAGE" sign="true"><text>en</text></item>
+
+
+<item name="$POID"><datetime dst="true">20130909T095403,48-04</datetime></item></note>

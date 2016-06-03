@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="2be" sequence="5024" unid="ED7228C89EF82DE8C1256BD500351C3E">
+<created><datetime dst="true">20020611T114006,38+02</datetime></created>
+<modified><datetime dst="true">20150507T110151,36+02</datetime></modified>
+<revised><datetime dst="true">20130909T095406,14-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150507T110151,35+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150507T110151,35+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime dst="true">20020611T114126,61+02</datetime><datetime dst="true">20020618T092859,67+02</datetime><datetime dst="true">20020618T093004,08+02</datetime><datetime dst="true">20020618T094032,87+02</datetime><datetime dst="true">20020618T124859,41+02</datetime><datetime dst="true">20020618T132115,95+02</datetime><datetime dst="true">20020618T133205,49+02</datetime><datetime dst="true">20020618T135241,14+02</datetime><datetime dst="true">20020619T091131,91+02</datetime><datetime dst="true">20020620T091906,94+02</datetime><datetime dst="true">20020620T092205,31+02</datetime><datetime dst="true">20020620T100551,46+02</datetime><datetime dst="true">20020620T105420,72+02</datetime><datetime dst="true">20020620T113459,07+02</datetime><datetime dst="true">20020620T124250,50+02</datetime><datetime dst="true">20020620T124505,70+02</datetime><datetime dst="true">20020620T125204,80+02</datetime><datetime dst="true">20020620T134748,55+02</datetime><datetime dst="true">20020620T135055,35+02</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name="$TITLE" sign="true"><text>WebJSViewTemplate</text></item>
+<item name="$Flags"><text>h534Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+<item name="$POID"><datetime dst="true">20130909T095406,14-04</datetime></item></note>

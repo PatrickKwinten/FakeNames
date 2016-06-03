@@ -1,0 +1,1682 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+%INCLUDE "lserr.lss"
+%INCLUDE "lsxbeerr.lss"
+
+
+Use "lsClassException"
+
+
+
+
+
+
+
+
+
+'from inc\global.h:	(these values are returned by @Platform and NotesSession.Platform)
+
+'from inc\oskernel.h: (these values are returned by @Platform([Specific])
+
+'these are OUR OWN platform definitions queriable via IsOSPlatform()
+
+
+
+
+
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Public Function CstrBoolJs(bData) As String
+Declare Public Function IsOSPlatform(hsQueryOSPlatform) As Boolean
+Declare Function xCint(hVariant As Variant) As Integer
+Declare Public Function URLEncode(Byval sURL) As String
+Declare Public Function GetOSPathSeparator() As String
+Declare Function GetSysDBNameFromAlias(hAlias As String) As Variant
+Declare Function ISO86012NotesDateTime(hISODateTime As String) As NotesDateTime
+Declare Function NotesDateTime2ISO8601(hNDT As NotesDateTime) As String
+Declare Public Function CstrBoolAt2Js(vBoolean As Variant) As String
+Declare Public Function GetSystemInfo(hiSystemInfo As Integer) As Variant
+Declare Public Function NormalizeOSPath(sPath As String) As String
+Declare Public Function GetServerAccess(vName As Variant, tAccess As typeAdminAccess) As Boolean
+Declare Function NotesDateTime2RFC822(ndt As NotesDateTime) As String
+Declare Public Function BitClear(hlNumber As Long, Byval hlBit As Long) As Long
+Declare Public Function OpenSysDb(hAlias As String) As NotesDatabase
+Declare Public Function BitIsSet(Byval hlNumber As Long, Byval hlBit As Long) As Boolean
+Declare Public Sub GetServerConfigItem(sServerName As String, sItemName As String, hDoc As NotesDocument)
+Declare Public Function IsUnix As Boolean
+Declare Function NotesDateTime2ISO8601Ext(ndt As NotesDateTime) As String
+Declare Function xCbool(Byval hVariant As Variant) As Boolean
+Declare Public Function BitSet(hlNumber As Long, Byval hlBit As Long) As Long
+Declare Function GetServerControllerPort(hLog As Variant) As String
+Declare Function DBOptionBit(hlDBOptions() As Long, hiBitToTest As Integer) As Boolean
+Declare Public Function IsDB2Platform As Boolean
+Declare Function NotesDateTime2RFC3339(ndt As NotesDateTime) As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Public CR					As String
+Public CRLF				As String
+Public CONSOLE_PREFIX		As String
+
+
+Public oException			As cException
+
+'Microsoft Windows Operating system brand names
+Const OS_BRANDNAME_XP			= "Windows XP"
+Const OS_BRANDNAME_W2K			= "Windows 2000"
+Const OS_BRANDNAME_W2003			= "Windows 2003 Server"
+Const OS_BRANDNAME_VISTA			= "Windows Vista"
+
+Private Type TypeISO8601DateTime
+	
+	'ISO8601 format we use in our XML is:
+	'yyyymmddTHHMMSS,FF-TZ
+	'20020303T234855,87-05
+	
+	Year				As String * 4
+	Month			As String * 2
+	Day				As String * 2
+	TimeSep			As String * 1	
+	Hour				As String * 2
+	Minute			As String * 2
+	Second			As String * 2
+	Comma			As String * 1
+	Fraction			As String * 2
+	TZSign			As String * 1
+	TimeZone			As String * 2
+	
+End Type
+
+Public Type typeAdminAccess
+	
+	isAdmin				As Boolean
+	isFullAdmin			As Boolean
+	isDatabaseAdmin		As Boolean	
+	isRemoteConsoleAdmin	As Boolean
+	isRemoteViewOnlyAdmin	As Boolean
+	isOSAdmin				As Boolean
+	isFullOSAdmin			As Boolean
+	
+	canServerTrackMessage	As Boolean	
+	canTrackMessage		As Boolean
+	canTrackMessageSubject	As Boolean
+	canCreateDatabase		As Boolean
+	canCreateReplica		As Boolean
+	canCreateTemplate		As Boolean
+	
+End Type
+
+Private Const MODULE_NAME		= "lsCommon"
+Private Const CLASS_NAME			= ""
+Const SYSINFO_WEBADMINBUILD		= 1
+Const SYSINFO_OS_BRANDNAME		= 2
+Const SYSINFO_OS_PATCHLEVEL		= 3
+Const SYSINFO_DB2ENVIRONMENT		= 4
+Const DB2_INSTANCENAME			= 0
+Const DB2_VERSIONNUMBER			= 1
+Const DB2_VERSIONSTRING			= 2
+Const DB2_ISCONFIGURED			= 3
+Const DDVIEW_DENYGROUPS			= "DenyLists"
+Const DDVIEW_EXPLICITPOLICIES		= "($PoliciesExplicit)"
+Const DDVIEW_CERTIFIERS			= "($Certifiers)"
+Const DDVIEW_CA				= "($CertificateAuthorities)"
+Const DDVIEW_SERVERS			= "($Servers)"
+Const DDVIEW_VIMGROUPS			= "($VIMGroups)"
+Const DDVIEW_REGISTERGROUPS		= "($RegisterGroups)"
+Const DDVIEW_SERVERCONFIG		= "($ServerConfig)"
+Const LBOX_ERROR_ITEM			= "$$ERROR"
+Const TABLE_DATATYPE_BOOL		= 0
+Const TABLE_DATATYPE_NUMBER		= 1
+Const TABLE_DATATYPE_DATETIME		= 2
+Const TABLE_DATATYPE_TEXT		= 4
+Const TABLE_DATATYPE_SELECTION	= 5
+Const TABLE_DATATYPE_ICON		= 6
+Const TABLE_DATATYPE_TEXT_NUMBER	= 7		'same as text but sorted as number
+Const STAMP_CONFIGFILE		= "WEBADMIN_CONFIGFILE_STAMP"
+Const CONSOLE_XML			= "-xml"
+Const LINK_STREAM_CHARSET	= "System"
+Const PROFILE_SHARED_NAME	= "SharedProfile"
+Const PROFILE_ITEM_SERVER	= "AllServer"			'stores list of servers
+Const PROFILE_ITEM_VOCS		= "ViewOnlyCommands"	'stores list of console readonlycommands
+Const SYSDB_ACTIVITY		= "kwSysDbActivity"
+Const SYSDB_ADMIN4			= "kwSysDBAdminRequest"
+Const SYSDB_ALLDIRECTORIES	= "kwSysDbAllDirectories"
+Const SYSDB_ALLEDS			= "kwSysDbAllEDs"
+Const SYSDB_CATALOG			= "kwSysDbCatalog"
+Const SYSDB_CLDBDIR			= "kwSysDbcldbdir"
+Const SYSDB_DECS			= "kwSysDbDECS"
+Const SYSDB_DIRASSIST		= "kwSysDbDirAssist"
+Const SYSDB_DIRCAT			= "kwSysDbDirCat"
+Const SYSDB_DIRECTORY		= "kwSysDbDirectory"
+Const SYSDB_DOLS			= "kwSysDbDOLS"
+Const SYSDB_DOMCFG			= "kwSysDbDomCfg"
+Const SYSDB_DOMCHANGE		= "kwSysDbDomChange"
+Const SYSDB_DOMWEBLOG		= "kwSysDbDomLog"
+Const SYSDB_EVENTS4			= "kwSysDbEvents"
+Const SYSDB_LDAPSCHEMA		= "kwSysDbLDAPSchema"
+Const SYSDB_LOGFILE			= "kwSysDbLog"
+Const SYSDB_REPORTS			= "kwSysDbReports"
+Const SYSDB_STCONFIG		= "kwSysDbStConfig"
+Const SYSDB_STATREP			= "kwSysDbStatRep"
+Const SYSDB_USERLICS		= "kwSysDbUserLics"
+Const SYSDB_FAULTREPORTS		= "kwSysDbFaultReports"
+Const EVENT_QUEUE_NAME		= "EventDispatcher"
+Const EVENT_PREFIX			= "Domino Directory:"
+Const LOGIN_COOKIE_FILENAME	= "pubnames.xml"
+Const LOGIN_COOKIE_VERSION	= "1"
+Const CONTROLLER_NOTES_INI	= "ServerController"
+Const CONTROLLER_INI_FILE	= "dcontroller.ini"
+Const CONTROLLER_PORT_ENTRY	= "Port_Number"
+Const CONTROLLER_PORT_DEFAULT	= "2050"
+Const SERVER_RESTART_DELAY	= "10"
+Const DFC_DEBUG_OVERRIDE		= "pubnames_dfc"
+Const MAIL_NTF_FILENAME		= "mail85.ntf"
+Const DOMADMIN_NTF_FILENAME	= "domadmin.ntf"
+Const ADMINDATA_XML_FILE		= "admindata.xml"
+Const LNDFR_MAILIN_DB_NAME	= "IBM Notes/Domino Fault Reports"
+Const LNDFR_MAILIN_DB_ITEM	= "DCLoc"
+Private Const OS_OS400		= "OS/400"
+Private Const OS_UNIX		= "UNIX"
+Private Const OS_WIN32		= "Windows/32"
+Private Const OS_WIN64		= "Windows/64"
+Private Const OS_AIX64		= "AIX/64"
+Private Const OS_LINUX64		= "Linux/64"
+Private Const OS_SOLARIS64	= "Solaris/64"
+Private Const OSS_WINNT		= "Windows/NT"
+Private Const OSS_OS400		= "IBM OS/400"
+Private Const OSS_OS390		= "IBM OS/390"
+Private Const OSS_ZLINUX		= "Linux for zSeries"
+Private Const OSS_LINUX32	= "Linux"
+Private Const OSS_LINUX64	= "Linux/64"
+Private Const OSS_AIX32		= "AIX"
+Private Const OSS_AIX64		= "AIX/64"
+Private Const OSS_SOLARIS32	= "SOLARIS Sparc"
+Private Const OSS_SOLARIS64	= "SOLARIS/64 Sparc"
+Const PLATFORM_32BIT		= "32BIT"
+Const PLATFORM_64BIT		= "64BIT"
+Const PLATFORM_OS400		= "IBM OS/400"
+Const PLATFORM_OS390		= "IBM OS/390"
+Const PLATFORM_LINUX32		= "Linux/32"
+Const PLATFORM_LINUX64		= "Linux/64"
+Const PLATFORM_ZLINUX		= "LINUX ZSERIES"
+Const PLATFORM_LINUX		= PLATFORM_LINUX32 + PLATFORM_LINUX64 + PLATFORM_ZLINUX
+Const PLATFORM_SOLARIS32		= "SOLARIS/32"
+Const PLATFORM_SOLARIS64		= "SOLARIS/64"
+Const PLATFORM_SOLARIS		= PLATFORM_SOLARIS32 + PLATFORM_SOLARIS64
+Const PLATFORM_AIX32		= "AIX/32"
+Const PLATFORM_AIX64		= "AIX/64"
+Const PLATFORM_AIX			= PLATFORM_AIX32 + PLATFORM_AIX64
+Const PLATFORM_WIN32		= "WIN/32"
+Const PLATFORM_WIN64		= "WIN/64"
+Const PLATFORM_WIN			= PLATFORM_WIN32 + PLATFORM_WIN64
+Const PLATFORM_WINNT4		= "4.0"
+Const PLATFORM_WIN2K		= "5.0"
+Const PLATFORM_WINXP		= "5.1"
+Const PLATFORM_WIN2K3		= "5.2"
+Const PLATFORM_WINVISTA		= "6.0"
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+	CR	= Chr$(13)
+	CRLF	= Chr$(13) & Chr$(10)
+	
+	'always escape and silence the console command
+	CONSOLE_PREFIX = Chr$(27) & "!"
+	
+	'global exception object for error handling
+	Set oException = New cException
+	
+	'set the error handler AFTER we instantiated the exception object
+	On Error Goto ERROR_HANDLER
+	
+	Exit Sub
+	
+ERROR_HANDLER:
+	
+	Call oException.HandleError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:CstrBoolJs:1:8
+Public Function CstrBoolJs(bData) As String
+	
+	'convert LotusScript boolean into JavaScript boolean
+	
+	On Error Goto ERROR_HANDLER
+	
+	If bData Then
+		CstrBoolJs = "true"
+	Else
+		CstrBoolJs = "false"
+	End If
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:IsOSPlatform:1:8
+Public Function IsOSPlatform(hsQueryOSPlatform) As Boolean
+	
+	'This function returns true if the queried platform is currently being used
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim vOSPlatform	As Variant
+	Dim vOSSpecific	As Variant
+	
+	Static sOSPlatform	As String
+	Static sOSSpecific	As String
+	Static sOSVersion	As String
+	Static IsComputed	As Boolean
+	Static Is64Bit		As Boolean
+	
+	'do this only once	
+	If IsComputed	= False Then
+		
+		vOSPlatform	= Evaluate(|@Platform|)
+		vOSSpecific	= Evaluate(|@Platform([Specific])|)
+		
+		sOSPlatform	= vOSPlatform(0)
+		sOSSpecific	= vOSSpecific(0)
+		
+		If Ubound(vOSSpecific) = 1 Then
+			sOSVersion = vOSSpecific(1)
+		End If
+		
+		'check for 64bit
+		If (sOSPlatform = OS_WIN64) _
+		Or (sOSPlatform = OS_AIX64) _
+		Or (sOSPlatform = OS_LINUX64) _
+		Or (sOSPlatform = OS_SOLARIS64) Then
+			Is64Bit = True
+		End If
+		
+		IsComputed = True
+		
+	End If
+	
+	Select Case hsQueryOSPlatform
+		
+	Case PLATFORM_32BIT:	If Is64Bit = False				Then IsOSPlatform = True	
+	Case PLATFORM_64BIT:	If Is64Bit = True				Then IsOSPlatform = True			
+		
+	Case PLATFORM_OS400:	If sOSSpecific = OSS_OS400		Then IsOSPlatform = True
+	Case PLATFORM_OS390:	If sOSSpecific = OSS_OS390		Then IsOSPlatform = True
+		
+	Case PLATFORM_LINUX32:	If sOSSpecific	= OSS_LINUX32		Then IsOSPlatform = True		
+	Case PLATFORM_LINUX64:	If sOSSpecific	= OSS_LINUX64		Then IsOSPlatform = True
+	Case PLATFORM_ZLINUX:	If sOSSpecific = OSS_ZLINUX		Then IsOSPlatform = True
+	Case PLATFORM_LINUX:	If (sOSSpecific = OSS_LINUX32)	Or (sOSSpecific = OSS_LINUX64)	Or (sOSSpecific = OSS_ZLINUX) Then IsOSPlatform = True
+		
+	Case PLATFORM_SOLARIS32:	If sOSSpecific	= OSS_SOLARIS32	Then IsOSPlatform = True
+	Case PLATFORM_SOLARIS64:	If sOSSpecific	= OSS_SOLARIS64	Then IsOSPlatform = True
+	Case PLATFORM_SOLARIS:	If (sOSSpecific = OSS_SOLARIS32)	Or (sOSSpecific = OSS_SOLARIS64)	Then IsOSPlatform = True
+		
+	Case PLATFORM_AIX32:	If sOSSpecific	= OSS_AIX32		Then IsOSPlatform = True
+	Case PLATFORM_AIX64:	If sOSSpecific	= OSS_AIX64		Then IsOSPlatform = True
+	Case PLATFORM_AIX:		If (sOSSpecific = OSS_AIX32)		Or (sOSSpecific = OSS_AIX64)		Then IsOSPlatform = True
+		
+	Case PLATFORM_WIN32:	If sOSPlatform	= OS_WIN32		Then IsOSPlatform = True
+	Case PLATFORM_WIN64:	If sOSPlatform	= OS_WIN64		Then IsOSPlatform = True
+	Case PLATFORM_WIN:		If (sOSPlatform = OS_WIN32)		Or (sOSPlatform = OS_WIN64)		Then IsOSPlatform = True
+		
+	Case PLATFORM_WINNT4:	If (sOSSpecific = OSS_WINNT)		And (sOSVersion = PLATFORM_WINNT4)	Then IsOSPlatform = True
+	Case PLATFORM_WIN2K:	If (sOSSpecific = OSS_WINNT)		And (sOSVersion = PLATFORM_WIN2K)	Then IsOSPlatform = True
+	Case PLATFORM_WINXP:	If (sOSSpecific = OSS_WINNT)		And (sOSVersion = PLATFORM_WINXP)	Then IsOSPlatform = True
+	Case PLATFORM_WIN2K3:	If (sOSSpecific = OSS_WINNT)		And (sOSVersion = PLATFORM_WIN2K3)	Then IsOSPlatform = True
+		
+	End Select
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:xCint:1:8
+Function xCint(hVariant As Variant) As Integer
+	
+	' Convinient wrapper around Cint.
+	' Cint raises an error if the argument is an empty string etc.
+	' Instead, xCint() will simply return 0, so that the caller doesn't have
+	' to do the error handling.
+	
+	On Error Goto RETURN_ZERO
+	
+	xCint = Cint(Val(Cstr(hVariant)))
+	
+	Exit Function
+	
+RETURN_ZERO:
+	
+	xCint = 0
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:URLEncode:1:8
+Public Function URLEncode(Byval sURL) As String
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim vResult As Variant
+	
+	vResult	= Evaluate(|@URLEncode("UTF-8"; "| + sURL + |")|)
+	URLEncode = Cstr(vResult(0))
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:GetOSPathSeparator:1:8
+Public Function GetOSPathSeparator() As String
+	
+	'This function returns the OS platform specific path separator
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim session	As NotesSession
+	Dim sPlatform	As String
+	
+	Const WINDOWS	= "WINDOWS"
+	
+	Set session	= New NotesSession
+	sPlatform		= Trim$(Ucase$(session.Platform))
+	
+	If Left$(sPlatform, Len(WINDOWS)) = WINDOWS Then
+		GetOSPathSeparator = "\"	
+	Else
+		GetOSPathSeparator = "/"
+	End If
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)	
+	Exit Function
+	
+End Function
+
+
+'++LotusScript Development Environment:2:1:GetSysDBNameFromAlias:1:8
+Function GetSysDBNameFromAlias(hAlias As String) As Variant
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim session				As New NotesSession
+	Dim db					As NotesDatabase
+	Dim view					As NotesView
+	Dim viewEntry				As NotesViewEntry
+	Dim docTemp				As NotesDocument
+	
+	Dim vFileName				As Variant
+	Dim vAddressBooks			As Variant
+	Dim iCount				As Integer
+	
+	Static dbThis				As NotesDatabase
+	
+	Static bIsAllDirsCached		As Boolean
+	Static liCacheAllDirs		List As String	
+	
+	Static bIsAllEDsCached		As Boolean
+	Static liCacheAllEDs		List As String
+	
+	Static bIsPrimaryDirCached	As Boolean
+	Static sCachePrimaryDir		As String
+	
+	Static bIsDirCatCached		As Boolean
+	Static sCacheDirCat			As String
+	
+	Static bIsDirAssistCached	As Boolean
+	Static sCacheDirAssist		As String
+	
+	Static bIsFaultReportCached	As Boolean
+	Static sCacheFaultReport		As String
+	
+	Static bIsLogCached			As Boolean	
+	Static sCacheLog			As String
+	
+	If dbThis Is Nothing Then
+		Set dbThis = session.CurrentDatabase 
+	End If
+	
+	vFileName = ""
+	
+	Select Case hAlias
+		
+	'----------------------
+	Case SYSDB_FAULTREPORTS		'Lotus Notes/Domino Fault Reports DB
+	'----------------------
+		
+		Dim sMailInTitle	As String
+		Dim item			As NotesItem
+		
+		If Not bIsFaultReportCached Then
+			
+			Set docTemp	= dbThis.CreateDocument
+			
+			'try to get the fault reports mail-in name from server config doc
+			Call GetServerConfigitem("", LNDFR_MAILIN_DB_ITEM, docTemp)
+			Set item = docTemp.GetFirstItem(LNDFR_MAILIN_DB_ITEM)
+			If Not item Is Nothing Then
+				sMailInTitle = Trim$(item.Text)
+			End If
+			
+			If sMailInTitle = "" Then
+				docTemp.tDBName = LNDFR_MAILIN_DB_NAME
+			Else
+				docTemp.tDBName = sMailInTitle
+			End If
+			
+			vFileName			= Evaluate(|@NameLookup([NOUPDATE]:[NOSEARCHING]; tDBName; "MailServer")|, docTemp)
+			If vFileName(0)	= dbThis.Server Then
+				vFileName		= Evaluate(|@NameLookup([NOUPDATE]:[NOSEARCHING]; tDBName; "MailFile")|, docTemp)
+				sCacheFaultReport = Trim$(vFileName(0))
+			End If				
+			bIsFaultReportCached = True
+		End If
+		vFileName = sCacheFaultReport
+		
+	'-------------------	
+	Case SYSDB_DIRASSIST		'Directory Assistance Database
+	'-------------------	
+		
+		If Not bIsDirAssistCached Then
+			Set db = OpenSysDb(SYSDB_DIRECTORY)
+			If Not db Is Nothing Then
+				Set view = db.GetView("($Servers)")
+				If Not view Is Nothing Then
+					Set viewEntry = view.GetEntryByKey(dbThis.Server, True)
+					If Not viewEntry Is Nothing Then
+						sCacheDirAssist = Cstr(viewEntry.ColumnValues(10))
+						'SPR # JBUD6M9U72
+						If Len(Trim$(sCacheDirAssist)) > 0 Then
+							If Lcase$(Right$(sCacheDirAssist, 4)) <> ".nsf" Then
+								sCacheDirAssist = sCacheDirAssist & ".nsf"
+							End If
+						End If
+					End If
+				End If
+			End If
+			bIsDirAssistCached = True
+		End If
+		vFileName = sCacheDirAssist
+		
+	'-------------------
+	Case SYSDB_DIRECTORY		'PRIMARY Domino Directory
+	'-------------------
+		
+		If Not bIsPrimaryDirCached Then
+			vAddressBooks = session.AddressBooks
+			Forall directory In vAddressBooks
+				If directory.IsPublicAddressBook Then
+					sCachePrimaryDir = directory.fileName
+					Exit Forall
+				End If
+			End Forall
+			bIsPrimaryDirCached = True
+		End If
+		vFileName = sCachePrimaryDir
+		
+	'----------------
+	Case SYSDB_ALLEDS			'List of all Enterprise Directory Catalogs
+	'----------------
+		
+		If Not bIsAllEDsCached Then
+			iCount = 0
+			Set db = OpenSysDb(SYSDB_DIRECTORY)
+			If Not db Is Nothing Then
+				Set view = db.GetView("($Servers)")
+				If Not view Is Nothing Then
+					Set viewEntry = view.GetEntryByKey(dbThis.Server, True)
+					If Not viewEntry Is Nothing Then
+						vAddressBooks = viewEntry.ColumnValues(13)
+						If Isarray(vAddressBooks) Then
+							Forall ED In vAddressBooks
+								liCacheAllEDs(iCount) = ED
+								iCount = iCount + 1
+							End Forall
+						Else
+							liCacheAllEDs(iCount) = vAddressBooks
+						End If
+					End If
+				End If
+			End If
+			bIsAllEDsCached = True
+		End If
+		vFileName = liCacheAllEDs
+		
+	'------------------------
+	Case SYSDB_ALLDIRECTORIES	'List of all Domino Directories (excluding DirCat)
+	'------------------------
+		
+		If Not bIsAllDirsCached Then
+			iCount = 0
+			vAddressBooks = session.AddressBooks
+			Forall directory In vAddressBooks
+				If directory.IsPublicAddressBook Then
+					If directory.server = dbThis.Server Then
+						If directory.open("", "") = True Then
+							If directory.IsDirectoryCatalog = False Then
+								liCacheAllDirs(iCount) = directory.fileName
+								iCount = iCount + 1
+							End If
+						End If
+					End If
+				End If
+			End Forall
+			bIsAllDirsCached = True
+		End If
+		vFileName = liCacheAllDirs
+		
+	'----------------
+	Case SYSDB_DIRCAT			'Directory Catalog
+	'----------------
+		
+		If Not bIsDirCatCached Then
+			vAddressBooks = session.AddressBooks
+			Forall directory In vAddressBooks
+				If directory.IsPublicAddressBook Then
+					If directory.server = dbThis.Server Then
+						If directory.open("", "") = True Then 
+							If directory.IsDirectoryCatalog = True Then
+								sCacheDirCat = directory.fileName
+								Exit Forall
+							End If		
+						End If
+					End If
+				End If
+			End Forall
+			bIsDirCatCached = True
+		End If		
+		vFileName = sCacheDirCat
+		
+	'-----------------
+	Case SYSDB_LOGFILE			'Logfile
+	'-----------------
+		
+		If Not bIsLogCached Then
+			sCacheLog = session.GetEnvironmentString("Log", True)
+			sCacheLog = Strleft(sCacheLog, ",", 5)
+			bIsLogCached = True
+		End If
+		vFileName = sCacheLog
+		
+	'all other static stuff below here obviously doesn't need to be cached :-)	
+		
+	'-------------------
+	Case SYSDB_DOMWEBLOG		'Domino Web server logs
+	'-------------------
+		vFileName = "domlog.nsf"
+		
+	'-----------------
+	Case SYSDB_EVENTS4			'Monitoring Configuration
+	'-----------------	
+		vFileName = "events4.nsf"
+		
+	'-----------------
+	Case SYSDB_CATALOG			'Database Catalog
+		vFileName = "catalog.nsf"
+		
+	'-----------------
+	Case SYSDB_STCONFIG			'Sametime Configuration
+		vFileName = "stconfig.nsf"
+		
+	'-----------------
+	Case SYSDB_STATREP			'Statistics & Reports
+		vFileName = "statrep.nsf"
+		
+	'----------------
+	Case SYSDB_ADMIN4			'Administration Process
+	'----------------
+		vFileName = "admin4.nsf"
+		
+	'-----------------
+	Case SYSDB_REPORTS			'Mail Reports
+	'-----------------
+		vFileName = "reports.nsf"
+		
+	'-----------------
+	Case SYSDB_CLDBDIR			'Cluster Directory
+	'-----------------
+		vFileName = "cldbdir.nsf"
+		
+	'----------------
+	Case SYSDB_DOMCFG			'Domino Web configuration
+	'----------------
+		vFileName = "domcfg.nsf"
+		
+	'--------------
+	Case SYSDB_DECS			'Domino Enterprise Connect
+	'--------------
+		vFileName = "decsadm.nsf"
+		
+	'--------------
+	Case SYSDB_DOLS			'Domino Offline Services
+	'--------------
+		vFileName = "doladmin.nsf"
+		
+	'-------------------
+	Case SYSDB_DOMCHANGE		'Domino Change Manager
+	'-------------------
+		vFileName = "domchange.nsf"
+		
+	'------------------
+	Case SYSDB_ACTIVITY			'Activity Trends
+	'------------------
+		vFileName = "activity.nsf"
+		
+	'------------------
+	Case SYSDB_USERLICS			'Userlicenses
+	'------------------
+		vFileName = "userlicenses.nsf"
+		
+	'--------------------
+	Case SYSDB_LDAPSCHEMA		'LDAP schema db
+	'--------------------
+		vFileName = "schema.nsf"
+		
+	End Select
+	
+	GetSysDBNameFromAlias = vFileName
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:ISO86012NotesDateTime:1:8
+Function ISO86012NotesDateTime(hISODateTime As String) As NotesDateTime
+	
+	'Converts an ISO8601 datetime string into a NotesDateTime object
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim vLSDateTime	As Variant
+	Dim tISODateTime	As TypeISO8601DateTime
+	
+	'Remove possible dashes and colons (they are optional)
+	hISODateTime = Replace(hISODateTime, "-", "")
+	hISODateTime = Replace(hISODateTime, ":", "")
+	
+	'check whether we have a full or partial datetime string
+	If Len(hISODateTime) < 15 Then
+		
+		If Left$(hISODateTime, 1) = "T" Then
+			
+			'time part only: (T)HHMMSS
+			tISODateTime.Hour	= Mid$(hISODateTime, 2, 2)
+			tISODateTime.Minute	= Mid$(hISODateTime, 4, 2)
+			tISODateTime.Second	= Mid$(hISODateTime, 6, 2)
+			
+			'convert into Lotusscript datetime structure and then NotesDateTime object
+			vLSDateTime = Timenumber(Val(tISODateTime.Hour), Val(tISODateTime.Minute), Val(tISODateTime.Second))
+			Set ISO86012NotesDateTime = New NotesDateTime(vLSDateTime)
+			Call ISO86012NotesDateTime.SetAnyDate
+			
+		Else
+			
+			'date part only: yyyymmdd
+			tISODateTime.Year		= Left$(hISODateTime, 4)
+			tISODateTime.Month		= Mid$(hISODateTime, 5,2)
+			tISODateTime.Day		= Mid$(hISODateTime, 7,2)
+			
+			'convert into Lotusscript datetime structure and then NotesDateTime object
+			vLSDateTime = Datenumber(Val(tISODateTime.Year), Val(tISODateTime.Month), Val(tISODateTime.Day))
+			Set ISO86012NotesDateTime = New NotesDateTime(vLSDateTime)			
+			Call ISO86012NotesDateTime.SetAnyTime 
+			
+		End If
+		
+	Else
+		
+		'Convert from full ISO8601 format: yyyymmddTHHMMSS
+		tISODateTime.Year		= Left$(hISODateTime, 4)
+		tISODateTime.Month		= Mid$(hISODateTime, 5,2)
+		tISODateTime.Day		= Mid$(hISODateTime, 7,2)
+		tISODateTime.TimeSep	= Mid$(hISODateTime, 9,1)
+		tISODateTime.Hour		= Mid$(hISODateTime, 10,2)
+		tISODateTime.Minute		= Mid$(hISODateTime, 12,2)
+		tISODateTime.Second		= Mid$(hISODateTime, 14,2)
+		
+		'convert into Lotusscript datetime structure and then NotesDateTime object
+		vLSDateTime = _
+		Datenumber(Val(tISODateTime.Year), Val(tISODateTime.Month), Val(tISODateTime.Day)) + _
+		Timenumber(Val(tISODateTime.Hour), Val(tISODateTime.Minute), Val(tISODateTime.Second))
+		Set ISO86012NotesDateTime = New NotesDateTime(vLSDateTime)
+		
+	End If
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:NotesDateTime2ISO8601:1:8
+Function NotesDateTime2ISO8601(hNDT As NotesDateTime) As String
+	
+	'Converts a NotesDateTime object into an ISO8601 datetime string
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim tISODateTime	As TypeISO8601DateTime
+	
+	If Not hNDT.IsValidDate Then
+		NotesDateTime2ISO8601 = ""
+		Exit Function
+	End If
+	
+	If hNDT.DateOnly <> "" Then
+		
+		'build date part
+		tISODateTime.Year		= Format(Year(hNDT.LSLocalTime), "0000")
+		tISODateTime.Month		= Format(Month(hNDT.LSLocalTime), "00")
+		tISODateTime.Day		= Format(Day(hNDT.LSLocalTime), "00")
+		
+	End If
+	
+	If hNDT.TimeOnly <> "" Then
+		
+		'build time part
+		tISODateTime.TimeSep	= "T"
+		tISODateTime.Hour		= Format(Hour(hNDT.LSLocalTime), "00")
+		tISODateTime.Minute		= Format(Minute(hNDT.LSLocalTime), "00")
+		tISODateTime.Second		= Format(Second(hNDT.LSLocalTime), "00")
+		tISODateTime.Comma		= ","
+		tISODateTime.Fraction	= "00"
+		
+		If hNDT.TimeZone < 0 Then
+			tISODateTime.TZSign	= "+"
+		Else
+			tISODateTime.TZSign	= "-"
+		End If
+		
+		If hNDT.IsDST Then
+			tISODateTime.TimeZone = Format(Abs(hNDT.TimeZone) - 1, "00")
+		Else
+			tISODateTime.TimeZone = Format(Abs(hNDT.TimeZone), "00")
+		End If
+		
+	End If
+	
+	NotesDateTime2ISO8601	= _
+	tISODateTime.Year 		+ _
+	tISODateTime.Month		+ _
+	tISODateTime.Day		+ _
+	tISODateTime.TimeSep	+ _
+	tISODateTime.Hour		+ _
+	tISODateTime.Minute		+ _
+	tISODateTime.Second		+ _
+	tISODateTime.Comma		+ _
+	tISODateTime.Fraction	+ _
+	tISODateTime.TZSign		+ _
+	tISODateTime.TimeZone
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)	
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:CstrBoolAt2Js:1:8
+Public Function CstrBoolAt2Js(vBoolean As Variant) As String
+	
+	'convert @formula boolean to JavaScript boolean
+	
+	On Error Goto ERROR_HANDLER
+	
+	If Cint(vBoolean) = 1 Then
+		CstrBoolAt2Js = "true"
+	Else
+		CstrBoolAt2Js = "false"
+	End If
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:GetSystemInfo:1:8
+Public Function GetSystemInfo(hiSystemInfo As Integer) As Variant
+	
+	On Error Goto ERROR_HANDLER
+	
+	Const REG_HKLM		= "HKEY_LOCAL_MACHINE"
+	
+	Dim session		As NotesSession
+	Dim stream		As NotesStream
+	Dim db			As NotesDatabase
+	Dim nc			As NotesNoteCollection	
+	Dim doc			As NotesDocument	
+	Dim outline		As NotesOutline
+	Dim item			As NotesItem
+	Dim liRelease	List	As String
+	Dim vOSPlatform	As Variant
+	Dim vOSPatchLevel	As Variant
+	Dim bScanRelFile	As Boolean
+	
+	Dim vDB2Version	As Variant
+	Dim vDB2Release	As Variant
+	Dim vDB2Mod		As Variant
+	
+	Dim sNoteID		As String
+	Dim iCount		As Integer
+	Dim sRegKey		As String
+	Dim sRegValue		As String
+	
+	Set session	= New NotesSession
+	Set db		= session.CurrentDatabase 
+	
+	Select Case hiSystemInfo
+		
+	'--------------------------	
+	Case SYSINFO_DB2ENVIRONMENT
+	'--------------------------
+		
+		Const ENV_DB2INSTANCE	= "DB2INSTANCE"
+		Const INI_DB2DATABASE	= "DB2DATABASE"
+		
+		Redim aDB2Env(3)
+		
+		aDB2Env(DB2_INSTANCENAME)	= ""
+		aDB2Env(DB2_VERSIONNUMBER)	= 0
+		aDB2Env(DB2_VERSIONSTRING)	= ""
+		aDB2Env(DB2_ISCONFIGURED)	= False
+		
+		If IsOSPlatform(PLATFORM_WIN) Then
+			
+			'get the default db2 instance name from the environment
+			aDB2Env(DB2_INSTANCENAME) = Environ$(ENV_DB2INSTANCE)
+			
+			'get the installed DB2 version number
+			'(816 means version 8.1.6, 0 means not installed)
+			
+			sRegKey		= "SOFTWARE\\IBM\\DB2\\CurrentVersion"
+			
+			sRegValue		= "Version"
+			vDB2Version	= Evaluate(|@RegQueryValue("| + REG_HKLM + |";"| + sRegKey + |";"| + sRegValue +|")|)
+			vDB2Version	= Val(vDB2Version(0))
+			
+			sRegValue		= "Release"
+			vDB2Release	= Evaluate(|@RegQueryValue("| + REG_HKLM + |";"| + sRegKey + |";"| + sRegValue +|")|)
+			vDB2Release	= Val(vDB2Release(0))
+			
+			sRegValue		= "Modification"
+			vDB2Mod		= Evaluate(|@RegQueryValue("| + REG_HKLM + |";"| + sRegKey + |";"| + sRegValue +|")|)
+			vDB2Mod		= Val(vDB2Mod(0))
+			
+			aDB2Env(DB2_VERSIONNUMBER) = (vDB2Version * 100) + (vDB2Release * 10) + vDB2Mod
+			aDB2Env(DB2_VERSIONSTRING) = vDB2Version & "." & vDB2Release & "." & vDB2Mod
+			
+		End If
+		
+		If IsDB2Platform() Then
+			
+			'check the notes.ini to see whether DB2 is at least *configured*
+			'(this does not mean DB2 is actually *enabled*)
+			If session.GetEnvironmentString(INI_DB2DATABASE, True) <> "" Then
+				aDB2Env(DB2_ISCONFIGURED) = True
+			Else
+				aDB2Env(DB2_ISCONFIGURED) = False
+			End If
+			
+		End If
+		
+		GetSystemInfo = aDB2Env()
+		
+	'-------------------------
+	Case SYSINFO_OS_PATCHLEVEL
+	'-------------------------		
+		
+		If IsOSPlatform(PLATFORM_WIN) Then
+			
+			sRegKey		= "SOFTWARE\\Microsoft\\Windows NT\\CurrentVersion"
+			sRegValue		= "CSDVersion"
+			vOSPatchLevel	= Evaluate(|@RegQueryValue("| + REG_HKLM + |";"| + sRegKey + |";"| + sRegValue +|")|)
+			GetSystemInfo	= vOSPatchLevel(0)
+			
+		End If
+		
+	'------------------------	
+	Case SYSINFO_OS_BRANDNAME
+	'------------------------			
+		
+		GetSystemInfo	= ""
+		bScanRelFile	= False
+		
+		'try to get the particular linux distribution
+		If IsOSPlatform(PLATFORM_LINUX) Then
+			
+			bScanRelFile = True
+			
+			'the distributions store their brand signature in those files (in order of scan priority)
+			liRelease("SuSE1")		= "/etc/SuSE-release"
+			liRelease("SuSE2")		= "/etc/sles-release"
+			liRelease("redhat")		= "/etc/redhat-release"
+			liRelease("fedora")		= "/etc/fedora-release"
+			liRelease("ubuntu")		= "/etc/lsb-release"
+			liRelease("united")		= "/etc/UnitedLinux-release"
+			liRelease("mandrake")	= "/etc/mandrake-release"			
+			liRelease("debian1")	= "/etc/debian_release"
+			liRelease("debian2")	= "/etc/debian-release"
+			liRelease("debian3")	= "/etc/debian_version"
+			liRelease("slackware1")	= "/etc/slackware-release"
+			liRelease("slackware2")	= "/etc/slackware-version"
+			liRelease("redflag")	= "/etc/redflag-release"		'a chinese distribution
+			liRelease("gentoo")		= "/etc/gentoo-release"
+			liRelease("knoppix")	= "/etc/knoppix_version"
+			liRelease("novell1")	= "/etc/nld-release"
+			liRelease("novell2")	= "/etc/novell-release"
+			
+		Elseif IsOSPlatform(PLATFORM_SOLARIS) Then
+			
+			bScanRelFile = True
+			liRelease("solaris")	= "/etc/release"
+			
+		End If
+		
+		If bScanRelFile = True Then
+			
+			'try to open any of those files and read the specific linux distribution
+			On Error Goto SKIP_DISTRIBUTION
+			Set stream = session.CreateStream()
+			Forall file In liRelease
+				If stream.Open(file, "system") = True Then
+					If Not stream.IsEOS Then
+						GetSystemInfo = Trim$(stream.ReadText(STMREAD_LINE, EOL_PLATFORM))
+						GetSystemInfo = Replace(GetSystemInfo, Chr$(13), "") 'strip CR
+						GetSystemInfo = Replace(GetSystemInfo, Chr$(10), "") 'strip LF
+						Call stream.close()
+						Exit Function
+					End If
+				End If
+			End Forall
+			On Error Goto ERROR_HANDLER
+			
+		End If
+		
+SKIP_DISTRIBUTION:
+		
+		Err = 0
+		
+		If IsOSPlatform(PLATFORM_WIN) Then
+			
+			'try to map the generic Microsoft Windows build name to the OS brand name
+			Redim aOSSignature(3)	As String
+			Redim aOSBrandName(3)	As String	
+			
+			aOSSignature(0) = "Windows/NT 5.0"	'dnt
+			aOSBrandName(0) = OS_BRANDNAME_W2K
+			
+			aOSSignature(1) = "Windows/NT 5.1" 'dnt
+			aOSBrandName(1) = OS_BRANDNAME_XP
+			
+			aOSSignature(2) = "Windows/NT 5.2" 'dnt
+			aOSBrandName(2) = OS_BRANDNAME_W2003
+			
+			aOSSignature(3) = "Windows/NT 6.0" 'dnt
+			aOSBrandName(3) = OS_BRANDNAME_VISTA
+			
+			vOSPlatform	= Evaluate(|@Implode(@Platform([Specific]);" ")|)
+			vOSPlatform	= Replace(vOSPlatform, aOSSignature, aOSBrandName, 1, 1, 5)
+			GetSystemInfo	= vOSPlatform(0)
+			
+		Else
+			
+			'if we couldn't figure out a specific distribution above, return an empty value. 
+			'This will cause the 'wqoHomepage$UserL2' agent to use 'server.os' from the server xml instead.
+			GetSystemInfo = ""
+			Exit Function
+			
+		End If
+		
+	'-------------------------	
+	Case SYSINFO_WEBADMINBUILD
+	'-------------------------
+		
+		Redim aTemplateBuild(1)
+		
+		Const ITEM_BUILD_NAME	= "$TemplateBuild"
+		Const ITEM_BUILD_DATE	= "$TemplateBuildDate"
+		
+		Set nc = db.CreateNoteCollection(False)
+		If Not nc Is Nothing Then
+			
+			nc.SelectSharedFields = True
+			Call nc.BuildCollection
+			
+			sNoteID = nc.GetFirstNoteId
+			For iCount = 1 To nc.Count
+				Set doc = db.GetDocumentByID(sNoteID)
+				If Not doc Is Nothing Then
+					If doc.HasItem(ITEM_BUILD_NAME) Then
+						aTemplateBuild(0) = doc.GetItemValue(ITEM_BUILD_NAME)(0)
+						aTemplateBuild(1) = doc.GetItemValue(ITEM_BUILD_DATE)(0)
+						Exit For
+					End If
+				End If
+				sNoteID = nc.GetNextNoteID(sNoteID)
+			Next iCount
+			
+		End If
+		
+		GetSystemInfo = aTemplateBuild()
+		
+	End Select
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:NormalizeOSPath:1:8
+Public Function NormalizeOSPath(sPath As String) As String
+	
+	'Returns a path using the correct path separators for the current platform
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim sPathSep		As String
+	Dim aOld(1)		As String
+	Dim aNew(1)		As String
+	
+	sPathSep			= GetOSPathSeparator()
+	
+	aOld(0)			= "/"
+	aOld(1)			= "\"
+	aNew(0)			= sPathSep
+	aNew(1)			= sPathSep
+	
+	NormalizeOSPath	= Replace(sPath, aOld, aNew, , , 5)
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, sPath)
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:GetServerAccess:1:8
+Public Function GetServerAccess(vName As Variant, tAccess As typeAdminAccess) As Boolean
+	
+	'input:	vName can be a NotesName object or a plain string
+	'output:	returns a typeAdminAccess structure in the 2nd argument
+	
+	'note:	"canServerTrackMessage" is ALWAYS for the local servr, regardless of vName
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim session		As New NotesSession
+	Dim vResult		As Variant
+	Dim sName			As String
+	
+	If Isobject(vName) Then
+		If vName Isa "NotesName" Then
+			sName = vName.Abbreviated
+		End If	
+	Else
+		sName = Cstr(vName)
+	End If
+	
+	vResult	= Evaluate(|@ServerAccess([Access];"| 				+ sName + |")|)
+	tAccess.isAdmin				= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([FullAccess];"| 			+ sName + |")|)
+	tAccess.isFullAdmin				= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([DatabaseAccess];"| 		+ sName + |")|)
+	tAccess.isDatabaseAdmin			= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([RemoteAccess];"| 			+ sName + |")|)
+	tAccess.isRemoteConsoleAdmin		= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([ViewOnlyAccess];"| 		+ sName + |")|)
+	tAccess.isRemoteViewOnlyAdmin		= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([RestrictedSystemAccess];"|	+ sName + |")|)
+	tAccess.isOSAdmin				= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([SystemAccess];"| 			+ sName + |")|)
+	tAccess.isFullOSAdmin			= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([TrackMessage];"| 			+ sName + |")|)
+	tAccess.canTrackMessage			= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([TrackMessageSubject];"| 	+ sName + |")|)
+	tAccess.canTrackMessageSubject	= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([CreateDatabase];"| 		+ sName + |")|)
+	tAccess.canCreateDatabase		= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([CreateReplica];"|			+ sName + |")|)
+	tAccess.canCreateReplica			= Cbool(vResult(0))
+	
+	vResult	= Evaluate(|@ServerAccess([CreateTemplate];"| 		+ sName + |")|)
+	tAccess.canCreateTemplate		= Cbool(vResult(0))	
+	
+	vResult	= Evaluate(|@ServerAccess([TrackMessage];"| 			+ session.UserName + |")|)
+	tAccess.canServerTrackMessage		= Cbool(vResult(0))
+	
+	GetServerAccess = True
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)	
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:NotesDateTime2RFC822:1:8
+Function NotesDateTime2RFC822(ndt As NotesDateTime) As String
+	
+	'Converts a NotesDateTime object into an RFC822 formatted datetime string
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim ndtGMT		As NotesDateTime
+	Dim sTime			As String
+	Dim sSign			As String	
+	Dim sOffset		As String
+	Dim sDiffHours		As String
+	Dim sDiffMins		As String
+	Dim dDiffMins		As Double
+	
+	If (Not ndt.IsValidDate) Or (ndt.TimeOnly = "") Then
+		Error 1000, "Invalid NotesDateTime object"
+	End If
+	
+	Set ndtGMT = New NotesDateTime(ndt.LSGMTTime)
+	dDiffMins	= ndtGMT.TimeDifference(ndt) / 60
+	If dDiffMins > 0 Then sSign = "-" Else sSign = "+"
+	
+	sDiffHours	= Format$(Fix(dDiffMins / 60), "00")
+	sDiffMins		= Format$(Fraction(dDiffMins / 60) * 60, "00")
+	sTime		= Format$(ndt.LSLocalTime, "ddd, dd mmm yyyy hh:nn:ss")
+	sOffset		= sSign + sDiffHours + sDiffMins
+	
+	NotesDateTime2RFC822 = sTime + " " + sOffset
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, "", Null)	
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:BitClear:1:8
+Public Function BitClear(hlNumber As Long, Byval hlBit As Long) As Long
+	
+	On Error Goto ERROR_HANDLER
+	
+	'Clears a given Bit in a Number
+	
+	If hlBit = 31 Then
+		hlNumber = &H7FFFFFFF And hlNumber
+	Else
+		hlNumber = ((2 ^ hlBit) Xor &HFFFFFFFF) And hlNumber
+	End If
+	
+	BitClear = hlNumber
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:OpenSysDb:1:8
+Public Function OpenSysDb(hAlias As String) As NotesDatabase
+	
+	On Error Goto ERROR_HANDLER
+	
+	Static liDBCache	List As NotesDatabase
+	
+	'see if we have the requested db handle already cached
+	Forall dbhandle In liDBCache
+		If Listtag(dbhandle) = hAlias Then
+			Set OpenSysDb = dbhandle
+			Exit Function
+		End If
+	End Forall
+	
+	Dim db As New NotesDatabase("", "")
+	
+	'try to open the requested system database
+	Call db.Open("", GetSysDBNameFromAlias(hAlias))
+	If db.IsOpen Then
+		Set OpenSysDb = db
+	Else
+		Set OpenSysDb = Nothing
+	End If		
+	
+	'and add to cache
+	Set liDBCache(hAlias) = OpenSysDb
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:BitIsSet:1:8
+Public Function BitIsSet(Byval hlNumber As Long, Byval hlBit As Long) As Boolean
+	
+	'Tests if Bit 0 to Bit 31 is set
+	
+	On Error Goto ERROR_HANDLER
+	
+	BitIsSet = False
+	
+	If hlBit = 31 Then
+		If hlNumber And &H80000000 Then BitIsSet = True
+	Else
+		If hlNumber And (2 ^ hlBit) Then BitIsSet = True
+	End If
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:2:GetServerConfigItem:1:8
+Public Sub GetServerConfigItem(sServerName As String, sItemName As String, hDoc As NotesDocument)
+	
+	'This function returns a requested item in the supplied doc handle for a server
+	'based on server configuration documents in the Domino Directory
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim session	As New NotesSession	
+	Dim db		As NotesDatabase
+	Dim view		As NotesView
+	Dim viewnav	As NotesViewNavigator
+	Dim viewentry	As NotesViewEntry
+	Dim doc		As NotesDocument
+	Dim item		As NotesItem
+	Dim oName		As NotesName
+	Dim sGroupName	As String
+	
+	Const COL_USEASDEFAULT	= 2
+	
+	'get domino directory
+	Set db = OpenSysDb(SYSDB_DIRECTORY)
+	If db Is Nothing Then
+		Exit Sub
+	End If		
+	
+	'if the server argument is empty, assume the current server
+	If Trim$(sServerName) = "" Then
+		sServerName	= db.Server
+	Else
+		Set oName		= New NotesName(sServerName)
+		sServerName	= oName.Canonical
+	End If
+	
+	Set view = db.GetView(DDVIEW_SERVERCONFIG)
+	If view Is Nothing Then
+		Exit Sub
+	End If
+	view.AutoUpdate = False
+	
+	'first, check for server-specific configuration doc first	
+	Set doc = view.GetDocumentByKey(sServerName, True)
+	If Not doc Is Nothing Then
+		Set item = doc.GetFirstItem(sItemName)
+		If Not item Is Nothing Then
+			Call item.CopyItemToDocument(hDoc, sItemName)
+		End If
+		Exit Sub
+	End If
+	
+	'next, check for server groups
+	If Not Isempty(session.UserGroupNameList) Then
+		Forall group In session.UserGroupNameList
+			sGroupName = Trim$(group.Abbreviated)
+			If Left$(sGroupName, 2) <> "*/" Then
+				Set doc = view.GetDocumentByKey(sGroupName, True)
+				If Not doc Is Nothing Then
+					Set item = doc.GetFirstItem(sItemName)
+					If Not item Is Nothing Then
+						Call item.CopyItemToDocument(hDoc, sItemName)
+					End If
+					Exit Sub
+				End If
+			End If
+		End Forall
+	End If
+	
+	'last, try to find the default configuration doc
+	Set viewNav	= view.CreateViewNav()
+	Set viewEntry	= viewNav.GetFirst()
+	Do Until viewEntry Is Nothing
+		If Cstr(viewEntry.ColumnValues(COL_USEASDEFAULT)) = "1" Then
+			Set doc = viewEntry.Document
+			If Not doc Is Nothing Then
+				Set item = doc.GetFirstItem(sItemName)
+				If Not item Is Nothing Then
+					Call item.CopyItemToDocument(hDoc, sItemName)
+				End If
+				Exit Sub
+			End If
+		End If
+		Set viewEntry = viewNav.GetNext(viewEntry)
+	Loop
+	
+	Exit Sub
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)	
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:IsUnix:1:8
+Public Function IsUnix As Boolean
+	
+	'This function returns true for all UNIX-based platforms
+	
+	On Error Goto ERROR_HANDLER
+	
+	If IsOSPlatform(PLATFORM_OS400) _
+	Or IsOSPlatform(PLATFORM_OS390) _
+	Or IsOSPlatform(PLATFORM_SOLARIS) _
+	Or IsOSPlatform(PLATFORM_AIX) _
+	Or IsOSPlatform(PLATFORM_LINUX) Then
+		IsUnix = True
+	End If
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:NotesDateTime2ISO8601Ext:1:8
+Function NotesDateTime2ISO8601Ext(ndt As NotesDateTime) As String
+	
+	'Converts a NotesDateTime object into an ISO8601 datetime string
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim ndtGMT		As NotesDateTime
+	Dim sDateTime		As String
+	Dim sSign			As String	
+	Dim sOffset		As String
+	Dim sDiffHours		As String
+	Dim sDiffMins		As String
+	Dim dDiffMins		As Double
+	
+	If (Not ndt.IsValidDate) Or (ndt.TimeOnly = "") Then
+		Error 1000, "Invalid NotesDateTime object"
+	End If
+	
+	Set ndtGMT = New NotesDateTime(ndt.LSGMTTime)
+	dDiffMins	= ndtGMT.TimeDifference(ndt) / 60
+	If dDiffMins > 0 Then sSign = "-" Else sSign = "+"
+	
+	sDiffHours	= Format$(Fix(dDiffMins / 60), "00")
+	sDiffMins		= Format$(Fraction(dDiffMins / 60) * 60, "00")
+	sDateTime		= Format$(ndt.LSLocalTime, "yyyy-mm-ddThh:mm:ss")
+	sOffset		= sSign + sDiffHours + ":" + sDiffMins
+	
+	NotesDateTime2ISO8601Ext = sDateTime + sOffset
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, "", Null)	
+	Exit Function		
+	
+End Function
+
+'++LotusScript Development Environment:2:1:xCbool:1:8
+Function xCbool(Byval hVariant As Variant) As Boolean
+	
+	' Convinient wrapper around Cbool.
+	' Cbool raises an error if the argument is an empty string etc.
+	' Instead, xCbool() will simply return false, so that the caller doesn't have
+	' to do the error handling.
+	
+	On Error Goto RETURN_FALSE
+	
+	' do the right thing depending on the datatype passed in
+	Select Case Datatype(hVariant)
+		
+	Case V_STRING
+		hVariant	= Trim$(Strconv(hVariant, SC_ProperCase))
+		xCbool	= Cbool(hVariant)
+		
+	Case Else
+		xCbool = Cbool(hVariant)	
+		
+	End Select
+	
+	Exit Function
+	
+RETURN_FALSE:
+	
+	XCbool = False
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:BitSet:1:8
+Public Function BitSet(hlNumber As Long, Byval hlBit As Long) As Long
+	
+	'Sets a given Bit in Number
+	
+	On Error Goto ERROR_HANDLER
+	
+	If hlBit = 31 Then
+		hlNumber = &H80000000 Or hlNumber
+	Else
+		hlNumber = (2 ^ hlBit) Or hlNumber
+	End If
+	
+	BitSet = hlNumber
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:GetServerControllerPort:1:8
+Function GetServerControllerPort(hLog As Variant) As String
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim session	As NotesSession
+	Dim stream	As NotesStream
+	Dim item		As NotesItem
+	Dim sTemp		As String
+	
+	Set session	= New NotesSession
+	Set stream	= session.CreateStream
+	
+	sTemp = ""
+	If stream.open(CONTROLLER_INI_FILE, "UTF-8") Then
+		
+		Call hLog.LogText("Scanning controller config file", CONTROLLER_INI_FILE)
+		Do Until stream.IsEOS
+			
+			sTemp = stream.ReadText(STMREAD_LINE, EOL_PLATFORM)
+			If Left$(sTemp, Len(CONTROLLER_PORT_ENTRY)) = CONTROLLER_PORT_ENTRY Then
+				sTemp				= Val(Strright(sTemp, "=", 5))
+				GetServerControllerPort	= sTemp
+				Call hLog.LogText("Identified controller port number as", GetServerControllerPort)
+				Exit Do
+			End If
+			
+		Loop
+		
+		Call stream.close
+		
+	Else
+		Call hLog.LogText("Unable to open controller config file", CONTROLLER_INI_FILE)		
+	End If
+	
+	If sTemp = "" Then
+		
+		Call hLog.LogText("Unable to identify controller port number in", CONTROLLER_INI_FILE)
+		
+		'in case we couldn't read the ini file, fall back to the default port number		
+		GetServerControllerPort = CONTROLLER_PORT_DEFAULT
+		Call hLog.LogText("Falling back to controller default port", GetServerControllerPort)
+		
+	End If
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)	
+	Exit Function	
+	
+End Function
+
+'++LotusScript Development Environment:2:1:DBOptionBit:1:8
+Function DBOptionBit(hlDBOptions() As Long, hiBitToTest As Integer) As Boolean
+	
+	'This function tests if a bit in the NSFDBOptions DWORDS is set.
+	'Currently there are 4 DWORDS representing all bits.
+	'returns TRUE if the bit to test is set, otherwise FALSE
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim iDWORDToTest	As Integer
+	Dim iBitInDWORD	As Integer
+	
+	iDWordToTest	= Int(hiBitToTest / 32)
+	iBitInDWORD	= hiBitToTest Mod 32
+	DBOptionBit	= hlDBOptions(iDWORDToTest) And (2 ^ iBitInDWORD)
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function
+	
+End Function
+
+
+'++LotusScript Development Environment:2:1:IsDB2Platform:1:8
+Public Function IsDB2Platform As Boolean
+	
+	'This function returns TRUE for all DB2-enabled platforms
+	
+	On Error Goto ERROR_HANDLER
+	
+	If IsOSPlatform(PLATFORM_WIN32) Then
+		IsDB2Platform = True
+		
+	Elseif IsOSPlatform(PLATFORM_AIX) Then
+		IsDB2Platform = True
+		
+	Elseif IsOSPlatform(PLATFORM_LINUX) Then
+		IsDB2Platform = True
+		
+	Elseif IsOSPlatform(PLATFORM_OS400) Then
+		IsDB2Platform = True
+		
+	Else
+		IsDB2Platform = False
+	End If
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, CLASS_NAME, Null)
+	Exit Function		
+	
+End Function
+
+'++LotusScript Development Environment:2:1:NotesDateTime2RFC3339:1:8
+Function NotesDateTime2RFC3339(ndt As NotesDateTime) As String
+	
+	'Converts a NotesDateTime object into an RFC3339 formatted datetime string
+	'within the UTC (GMT) TimeZone
+	
+	On Error Goto ERROR_HANDLER
+	
+	Dim ndtGMT As NotesDateTime
+	
+	If (Not ndt.IsValidDate) Or (ndt.TimeOnly = "") Then
+		Error 1000, "Invalid NotesDateTime object"
+	End If
+	
+	Set ndtGMT = New NotesDateTime(ndt.LSGMTTime)
+	NotesDateTime2RFC3339 = Format$(ndtGMT.LSLocalTime, "yyyy-mm-ddThh:mm:ssZ")
+	
+	Exit Function
+	
+ERROR_HANDLER:
+	
+	Call oException.RaiseError(MODULE_NAME, "", Null)	
+	Exit Function	
+	
+End Function

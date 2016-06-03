@@ -1,0 +1,41 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='54e' unid='50EABF3CA26D96FA8525649D00689EF2' sequence='5040'>
+<created><datetime dst='true'>19970520T150244,34-04</datetime></created>
+<modified><datetime dst='true'>20150507T110154,83+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095402,12-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110154,82+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110154,82+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T143930,04-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='MTAUrgentHighThreshold' summary='false' sign='true'><number>0</number></item>
+<item name='MTAUrgentLowThreshold' summary='false' sign='true'><number>0</number></item>
+<item name='MTANormalHighThreshold' summary='false' sign='true'><number>0</number></item>
+<item name='MTAnormalLowThreshold' summary='false' sign='true'><number>0</number></item>
+<item name='MTANonUrgentHighThreshold' summary='false' sign='true'><number
+>0</number></item>
+<item name='MTANonUrgentLowThreshold' summary='false' sign='true'><number
+>0</number></item>
+<item name='$TITLE'><textlist><text>$MTAConnectionFormSubform</text><text
+>1.0</text><text>$MTAConnectionFormSubform</text></textlist></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text>CUA3x</text></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>$MTAConnectionFormSubform</text></item>
+<item name='$BODY' sign='true'>
+<rawitemdata type='1'>
+gv9GAAEAAAAAAAAAAQDgEKsncAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAADAAAAACUAKYsAAAAAAEAUm9iIFNsYXBpa29mZi1Sb2IAAAAAAAAAAAAAAAAAAAAAAAAA
+gQKC/1IAAgAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAJAAAAAJQEoAUMAKAFDAAAAAAAu/9EAAIAvwMBAAAAVCU2AAAAKAAFAA4AQ29ubmVj
+dGlvblR5cGUBAAEAMwABAAEANAAfAnUCAwAHAAwABQAJMFMwRQCDBAIAhf8IAAEAAAmBAoL/UgAD
+AAAAAAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAEAAAAAlAcAAAAAAAAAAAAAAACDBAMAhf8IAAEAAAo=
+</rawitemdata></item></note>
+

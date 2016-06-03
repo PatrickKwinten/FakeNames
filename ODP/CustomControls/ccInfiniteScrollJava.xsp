@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+ 
+  <!-- make sure 'add rows' component is hidden -->
+  <style>
+    .infiniteScroll{display:none;}
+  </style>
+   
+  
+ 
+ <xp:button value="Label" id="button2" styleClass="infiniteScroll">
+						<xp:eventHandler event="onclick" submit="true"
+							refreshMode="partial"
+							refreshId="#{javascript:compositeData.repeatId}">
+							<xp:this.action><![CDATA[#{javascript:var repeater = compositeData.repeatControlId;
+
+var counter = getComponent(repeater).getRowCount();
+var numb = compositeData.increment;
+
+var query = context.getUrlParameter("search");
+
+var url = compositeData.baseURL;
+
+var scope = compositeData.scopeVarName
+
+var currPersons =  viewScope.get(scope);
+
+if (query ==null){
+	var morePersons =  personsBeanTest.getPersons(url + counter + "&count=" + numb);
+}
+else{
+	var morePersons =  personsBeanTest.getPersons(url + counter + "&count=" + numb + "&search=" + query);
+}
+
+var allPersons =  currPersons.concat(morePersons);
+
+viewScope.put(scope,allPersons);
+
+}]]></xp:this.action>
+						</xp:eventHandler>
+ </xp:button>
+   
+  <!-- small script to check if we need to auto-click the 'add rows' button -->
+  <xp:scriptBlock id="scriptBlock1">
+    <xp:this.value><![CDATA[$(window).scroll(function(){
+    if($(window).scrollTop() == $(document).height() - $(window).height()) {
+       $(".infiniteScroll").click();
+    }
+});]]></xp:this.value>
+  </xp:scriptBlock>
+</xp:view>

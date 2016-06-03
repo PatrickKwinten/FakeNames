@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6a6" sequence="5008" unid="D33732E6D026012D85256A7D00797EA1">
+<created><datetime dst="true">20010702T180702,73-04</datetime></created>
+<modified><datetime dst="true">20150507T110156,56+02</datetime></modified>
+<revised><datetime dst="true">20130909T095401,40-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150507T110156,55+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150507T110156,55+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name="$Flags"><text>34CiQ</text></item>
+<item name="$ImagesWide" sign="true"><number>1</number></item>
+<item name="$ImagesHigh" sign="true"><number>1</number></item>
+<item name="$ImagesColorize" sign="true"><number>0</number></item>
+
+<item name="$ImageNames" sign="true"><text>refresh.gif</text></item>
+<item name="$TITLE" sign="true"><text>btnRefresh.gif</text></item>
+<item name="$DesignerVersion" sign="true"><text>6</text></item>
+<item name="$LANGUAGE" sign="true"><text>en</text></item></note>

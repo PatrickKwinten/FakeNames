@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='396' unid='BBCF39D335141B9C8525660900572347' sequence='5021'>
+<created><datetime dst='true'>19980519T115146,63-04</datetime></created>
+<modified><datetime dst='true'>20150507T110152,43+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095402,92-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150915T202353,63+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110152,42+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T144043,41-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$TITLE' sign='true'><text>($Holidays)</text></item>
+<item name='$Index' sign='true'><text>/O</text></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+MgECACQADABIb2xpZGF5R3JvdXAFAAwASG9saWRheUdyb3VwAwACABwACABBUFBUVU5JRAUACABB
+UFBUVU5JRAMAAgAcAAcAU3ViamVjdAAFAAcAU3ViamVjdAADAAIAHAAHAFZlcnNpb24ABQAHAFZl
+cnNpb24AAwAFAD4AOQAFAAwACAAHAAcACQBIb2xpZGF5R3JvdXBBUFBUVU5JRFN1YmplY3RWZXJz
+aW9uJENvbmZsaWN0AAQABAAAAFYABQAEAFR5cGUBAAcASG9saWRheQAKAgUABABGb3JtAQAHAEhv
+bGlkYXkACgIcAgUACABBUFBUVU5JRGgBHAIFAAkAJENvbmZsaWN0AFkBHAIDAAcAIAAaAAlMMVMy
+UzNTNFM1UzZTN1M4UzlTMTNTMTRT
+</formula></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+NgADAABECGYHAAAMAAhmBwwACAAAZgAUAAcASG9saWRheUdyb3VwQVBQVFVOSURTdWJqZWN0
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAEAAIACjQAAFZDAwAMAAwAJgAAAFAAAQAACgABAAAIAAAAAAICAAAAVkMDAAgACAAeAAAAPgAB
+AAAKAAEAAAAAAAAAAgIAAABWQwEABwAHAB4AAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAHAAcA
+HgAAAFAAAQAACgAAAAAAAAAAAAICAAAASG9saWRheUdyb3VwSG9saWRheUdyb3VwJgACACQADABI
+b2xpZGF5R3JvdXAFAAwASG9saWRheUdyb3VwAwBBUFBUVU5JREFQUFRVTklEHgACABwACABBUFBU
+VU5JRAUACABBUFBUVU5JRAMAU3ViamVjdFN1YmplY3QeAAIAHAAHAFN1YmplY3QABQAHAFN1Ympl
+Y3QAAwBWZXJzaW9uVmVyc2lvbh4AAgAcAAcAVmVyc2lvbgAFAAcAVmVyc2lvbgADACYAAQAAAAEB
+AAkBAAAKAQEOCgAAAQCtKwEAAQABAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAEAwAAA
+AAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAA
+AAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MB
+AAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAUA
+////AAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAA
+AAEAWEMADIACAAAAAAABAgICAQEBAQEABAAAAAAAAAAAIC8vOllDAAAIAAAAAQAAAAEAAAAAAAAA
+AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAuLCQA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+

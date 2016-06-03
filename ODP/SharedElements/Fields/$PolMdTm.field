@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='192' unid='57DA4DBFFE7EBD6285256BAC00480DC7' sequence='5005'>
+<created><datetime dst='true'>20020501T090701,19-04</datetime></created>
+<modified><datetime dst='true'>20150507T110150,20+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095406,02-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110150,19+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110150,19+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$HTMLCode' sign='true'>
+<rawitemdata type='1'>
+</rawitemdata></item>
+<item name='$TITLE'><text>$PolMdTm</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item>
+<item name='$PolMdTm' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$FIELDS'><text>$PolMdTm</text></item>
+<item name='$BODY' summary='true' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9UAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIACAAAAAAABAQICAQEBAQcEAAAA
+AAAAAAAAAAAAAAAgLy86iv82AIgBAAQAMAIAAAAAAAAAAQAACgoAAAAAAAAACAAAAAAACgAAAAgA
+LAADACRQb2xNZFRt3gYAAIr/hf8IAAEAAAo=
+</rawitemdata></item></note>
+

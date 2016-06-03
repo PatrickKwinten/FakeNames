@@ -1,0 +1,3562 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Sub Initialize
+Declare Function FieldString( strValue As String ) As String
+Declare Function LogicString(COND_sLogic As String, strCond As Variant) As String
+Declare Function ActionString(ACT_sAction As Variant, note As notesdocument) As String
+Declare Sub ProcessConditions()
+Declare Function ProcessActions As Integer
+Declare Sub ProcessExceptions()
+Declare Function ConditionParser() As Integer
+Declare Sub ActionParser()
+Declare Sub AddCondition()
+Declare Sub AddException
+Declare Sub GetValues
+Declare Function OperatorString(voperator As Variant)
+Declare Function GetString ( StringType As Variant) As String
+Declare Sub ButtonAddCondition()
+Declare Sub ButtonRemoveCondition()
+Declare Sub ButtonRemoveAllConditions()
+Declare Sub ButtonAddAction()
+Declare Sub ButtonRemoveAction()
+Declare Sub ButtonRemoveAllActions()
+Declare Sub ButtonOKClient()
+Declare Sub ActionNewRule
+Declare Sub ActionEditRule
+Declare Sub ActionMoveUp()
+Declare Sub ActionMoveDown()
+Declare Sub ActionEnableRule
+Declare Sub ActionDisableRule
+Declare Sub SwapDocuments(SourceDoc As NotesDocument,DestDoc As NotesDocument)
+Declare Sub SwitchFormula(SourceDoc As notesdocument, DestDoc As notesdocument, dsort As Integer, ssort As Integer, bserver As Integer)
+Declare Function ArrayToString(vInput As Variant, mySep As String) As String
+Declare Function BehaviorString(vbehavior As String)
+Declare Sub ButtonOKSRV()
+Declare Function IsDocBeingModified(source As NotesUIDocument)
+Declare Sub GatherRules(ConfigDocUNID As String, Doc As NotesDocument)
+Declare Function GetConfigDoc(Key As String) As NotesDocument
+Declare Sub ActionDeleteRule()
+Declare Sub ResetCondition()
+Declare Sub ResetActions()
+Declare Sub ActionDeleteServerConfig()
+Declare Function ValidateAction(ACT_sActionValue) As Integer
+Declare Function ValidateCondition()
+Declare Sub ButtonOKWeb(Note As Notesdocument)
+Declare Function ValidateSystemFolder(NameFolder As String)
+Declare Function CompactMailRules (tmpSession As NotesSession, tmpdb As NotesDatabase, CalProfile As NotesDocument) As Integer
+Declare Sub ButtonOKQuick()
+Declare Function ValidateFolder(FolderName As String) As String
+Declare Function UtilReplaceString(strSource As String, strSearch As String, strReplace As String) As String
+Declare Sub GatherAllRules(CfgDocUnid As String, Doc As NotesDocument)
+Declare Sub GetGlobalCondValues()
+Declare Function FormulaEnhanceFactory() As String
+Declare Sub TokenParserCond( strTmp As String)
+Declare Sub TokenParserAction( strTmp As String)
+Declare Function DefineTokenChar(strTmp As String) As String
+Declare Function BuildCVarBlock(vCUniqueList As Variant) As String
+Declare Function BuildIVarBlock(vIUniqueList As Variant) As String
+Declare Sub GetGlobalActionValues()
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+'Rules:
+
+'Rules:
+
+
+%REM
+
+
+This library's code supports the Mail Template (Mail6.ntf) as
+well as Domino Directory Template (PubNames.ntf).
+
+In Mail Template it supports Rules for Client and Web, and in
+Domino Directory, the server rules.
+
+It should work seamless in either template. This means you should
+be able to import the library into either of these places and
+successfully Create/Save/Modify any Rule.
+
+Common functions will be clearly idenfied soon.
+
+%END REM
+
+'*****************////////////////**************************
+
+'Conditions
+Const COND_SENDER							= 	&h00000101&
+Const COND_SUBJECT 						= 	&h00000102&
+Const COND_BODY								=	&h00000103&
+Const COND_IMPORTANCE						=	&h00000104&
+Const COND_DELPRIORITY						=	&h00000105&
+Const COND_TO								=	&h00000106&
+Const COND_CC								=	&h00000107&
+Const COND_BCC								=	&h00000108&
+Const COND_TOORCC							= 	&h00000109&
+Const COND_BODYORSUBJECT				=	&h00000110&
+Const COND_INTERNETDOMAIN				= 	&h00000111&
+Const COND_SIZE							=	&h00000112&
+Const COND_ALLDOCS					=	&h00000113&
+Const COND_ATTCHNAMES				=	&h00000114&
+Const COND_ATTCHNUMBER				=	&h00000115&
+Const COND_FORM						=	&h00000116&
+Const COND_RECIPIENTCOUNT			=	&h00000117&
+Const COND_ANYRECIPIENT				=	&h00000118&
+Const COND_BLACKLIST						=	&h00000119&
+Const COND_WHITELIST						=	&h00000120&
+Const COND_CUSTOMIZE						=	&h00000121&
+
+'Operators
+Const OPER_AND								=	&h00000201&
+Const OPER_OR								=	&h00000202&
+'Logic
+Const LOGIC_NUMLESS						=	&h00000203&
+Const LOGIC_NUMGREATER					=	&h00000204&
+Const LOGIC_CONTAINS						=	&h00000207&
+Const LOGIC_CONTAINSNOT					=	&h00000208&
+Const LOGIC_IS								=	&h00000209&
+Const LOGIC_ISNOT							=	&h00000210&
+
+'Client/Server Actions
+Const ACT_MOVETOFOLDER					=	&h00000301&
+Const ACT_HIGH								=	&h00000302&
+Const ACT_NORMAL							=	&h00000303&
+Const ACT_LOW								=	&h00000304&
+Const ACT_CHANGEIMP						=	&h00000305&
+Const ACT_DELETE							=	&h00000306&
+Const ACT_COPYTOFOLDER					=	&h00000307&
+Const ACT_JOURNAL						=	&h00000308&
+Const ACT_MOVETODB					=	&h00000309&
+Const ACT_DONOTACCEPT				=	&h00000310&
+Const ACT_DONOTDELIVER		 		=	&h00000311&
+Const ACT_SILENTLYDELETE				=	&h00000312&
+Const ACT_SENDNDRFULL				=	&h00000313&
+Const ACT_SENDNDRHEADER				=	&h00000314&
+Const ACT_ROUTINGSTATE				=	&h00000315&
+Const ACT_MARKHELD					=	&h00000316&
+Const ACT_MARKDEAD					=	&h00000317&
+Const ACT_HONORDNS					= 	&h00000318&
+Const ACT_SETEXPIREDATE				= 	&h00000319&
+Const ACT_DAY								= 	&h00000320&
+Const ACT_WEEK								= 	&h00000321&
+Const ACT_MONTH							= 	&h00000322&
+Const ACT_YEAR								= 	&h00000323&
+Const ACT_COPYTO_TO						= 	&h00000324&		'email address
+Const ACT_COPYTO_1							=	&h00000325&		'Full
+Const ACT_COPYTO_2							=	&h00000326&		'Full w/o Attach.
+Const ACT_COPYTO_3							=	&h00000327&		'Header + 2K
+Const ACT_COPYTO_4							=	&h00000328&		'Header only
+Const ACT_STOP_PROCESSING				=	&h00000329&		'Stop Processing
+
+'Special cases
+Const SPEC_STR1								=	&h00000401&
+Const SPEC_STR2								=	&h00000402&
+Const SPEC_STR3								=	&h00000403&
+Const SPEC_STR4								=	&h00000404&
+Const SPEC_STR5								=	&h00000405&
+Const SPEC_STR6								=  	&h00000406&
+Const SPEC_STR7								=  	&h00000407&
+Const SPEC_STR8								=  	&h00000408&
+Const SPEC_STR9								=  	&h00000409&
+Const SPEC_STR10								=  	&h00000410&
+Const SPEC_STR11								=  	&h00000411&
+Const SPEC_STR12								=  	&h00000412&
+Const SPEC_STR13								=  	&h00000413&
+Const SPEC_STR14								=  	&h00000414&
+Const SPEC_STR15								=  	&h00000415&
+Const SPEC_STR16								=  	&h00000416&
+Const SPEC_STR17								=  	&h00000417&
+Const SPEC_STR18								=  	&h00000418&
+Const SPEC_STR19								=  	&h00000419&
+Const SPEC_STR20								=  	&h00000420&
+Const SPEC_STR21								=  	&h00000421&
+Const SPEC_STR22								=  	&h00000422&
+Const SPEC_STR23								=  	&h00000423&
+Const SPEC_STR24								=  	&h00000424&
+Const SPEC_STR25								=  	&h00000425&
+Const SPEC_STR26								=  	&h00000426&
+Const SPEC_STR27								=  	&h00000427&
+Const SPEC_STR28								=  	&h00000428&
+Const SPEC_STR29								=  	&h00000429&
+Const SPEC_STR30								=  	&h00000430&
+
+'// Token Constants
+Const STR_TOKENSEPARATOR = "¦"					'// This is ascii 166 - not the ASCII 124 ("|") character from keyboard
+Const STR_ALTTOKENSEPARATOR = "|" 			'// Alternate Token Seperator: Vertical line &#124
+Const STR_OLDTOKENSEPARATOR = ":"			'// Old style Token separator - Here for backward comp. No longer in use.
+Const STR_DELIMETERSEP = " +=+ " 				'// <SPACE>+=+<SPACE>
+
+Const MaxMsg1 = "An error has occurred while creating or saving a mail rule." 
+Const MaxMsg2 = "Some things to check:"
+Const MaxA = "-  You may have exceeded the maximum capacity for mail rule storage; try deleting one more or mail rules first. (Exit and relaunch Notes first.)"
+Const MaxB = "-  Your mail application could be over quota; try deleting some messages first."
+Const MaxC  = "-  You may not be authorized to create mail rules in this mail application."
+
+
+'*****************////////////////**************************
+
+'// General Variables
+Dim session As NoteSsession
+Dim note As NotesDocument
+Dim view As NotesView
+Dim db As NotesDatabase
+Dim uidoc As notesuidocument
+Dim nav As NotesViewNavigator
+Dim entry As NotesViewEntry
+
+Dim v_IsNewDoc As Variant
+Dim s_MAINFORMULA As String
+Dim s_AllowEditMode As Integer
+Dim i_IsServerRules As Integer
+
+'// Global Condition/Exception Vars
+Dim COND_LsLogicContainsLIst() As String
+Dim COND_LsLogicISList() As String
+Dim EXC_LsLogicContainsLIst() As String
+Dim EXC_LsLogicISList() As String
+Dim EXC_FLAG As Variant
+
+Dim COND_it_ExceptionList As notesitem
+Dim COND_it_TokExceptionList As notesitem
+Dim COND_it_ConditionlLst As notesitem
+Dim COND_it_TokConditionList As notesitem
+
+Dim COND_sCondition As String
+Dim COND_sString As String
+Dim COND_sOperator As String
+Dim COND_sLogic As String
+Dim COND_vLogic As Variant
+
+'// Global Action Vars
+Dim ACT_sAction As String
+Dim ACT_sString As String
+Dim ACT_sFolder As String
+Dim ACT_sImportance As String
+Dim ACT_sChoice As String
+Dim ACT_sExpNumber As String
+Dim ACT_sExpDate As String
+Dim ACT_sBehavior As String
+Dim ACT_vAddress As Variant
+
+
+
+
+
+'++LotusScript Development Environment:2:2:BindEvents:0:137
+Private Sub BindEvents(Byval Objectname As String)
+	Static Source As NOTESUIDATABASE
+	Set Source = Bind(Objectname)
+End Sub
+
+
+'++LotusScript Development Environment:2:2:Initialize:1:10
+Sub Initialize
+	
+	s_AllowEditMode = True
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:FieldString:1:8
+Function FieldString( strValue As String ) As String
+	'//This function tells you which field action to perform
+	
+	Select Case strValue
+		
+	Case "1"
+		FieldString = GetString(COND_SENDER)
+		
+	Case "2"
+		FieldString =  GetString(COND_SUBJECT)
+		
+	Case "3"
+		FieldString = GetString(COND_BODY)
+		
+	Case "4"
+		FieldString = GetString(COND_IMPORTANCE)
+		
+	Case "5"
+		FieldString = GetString(COND_DELPRIORITY)
+		
+	Case "6"
+		FieldString =GetString(COND_TO)
+		
+	Case "7"
+		FieldString=GetString(COND_CC)
+		
+	Case "8"
+		FieldString = GetString(COND_TOORCC)
+		
+	Case "9"
+		FieldString = GetString(COND_BODYORSUBJECT)
+		
+	Case "A"
+		FieldString=GetString(COND_BCC)
+		
+	Case "B"
+		FieldString = GetString(COND_INTERNETDOMAIN)
+		
+	Case "C"
+		FieldString = GetString(COND_SIZE)
+		
+	Case "D"
+		FieldString = GetString(COND_ALLDOCS)
+		
+	Case "E"
+		FieldString = GetString(COND_ATTCHNAMES)
+		
+	Case "F"
+		FieldString = GetString(COND_ATTCHNUMBER)
+		
+	Case "G"
+		FieldString = GetString(COND_FORM)
+		
+	Case "H"
+		FieldString = GetString(COND_RECIPIENTCOUNT)
+		
+	Case "I"
+		FieldString = GetString(COND_ANYRECIPIENT)
+		
+	Case "J"
+		FieldString = GetString(COND_CUSTOMIZE)
+		
+	Case "K"
+		FieldString = GetString(COND_BLACKLIST)
+		
+	Case "L"
+		FieldString = GetString(COND_WHITELIST)
+		
+	End Select
+	
+End Function
+
+'++LotusScript Development Environment:2:1:LogicString:1:8
+Function LogicString(COND_sLogic As String, strCond As Variant) As String
+	
+	Select Case COND_sLogic
+		
+	Case "1"
+		If (strCond = "C") Or (strCond = "H")  Or (strCond = "F") Then
+			logicstring = GetString (LOGIC_NUMLESS)
+		Else
+			logicstring = GetString(LOGIC_CONTAINS)
+		End If
+	Case "2"
+		If (strCond = "C") Or (strCond = "H")  Or (strCond = "F")Then
+			logicstring = GetString (LOGIC_NUMGREATER)
+		Else
+			logicstring = GetString (LOGIC_CONTAINSNOT)
+		End If
+	Case "3"
+		logicstring = GetString(LOGIC_IS)
+	Case "4"
+		logicstring = GetString (LOGIC_ISNOT)
+		
+	End Select
+	
+End Function
+
+'++LotusScript Development Environment:2:1:ActionString:1:8
+Function ActionString(ACT_sAction As Variant, note As notesdocument) As String
+	
+	Select Case ACT_sAction
+	Case "1"
+		ActionString = GetSTring (ACT_MOVETOFOLDER)+ ACT_sFolder
+	Case "2"
+		Select Case ACT_sImportance
+		Case "1"
+			ActionString = GetString(ACT_CHANGEIMP) + GetString(ACT_HIGH)
+		Case "2"
+			ActionString = GetString(ACT_CHANGEIMP) + GetString(ACT_NORMAL)
+		Case "3"
+			ActionString = GetString(ACT_CHANGEIMP) + GetString(ACT_LOW)
+		End Select
+	Case "3"
+		ActionString = GetString(ACT_DELETE)
+	Case "4"
+		ActionString =GetString(ACT_COPYTOFOLDER) + ACT_sFolder
+	Case "5"
+		ActionString = GetString(ACT_JOURNAL)
+	Case "6"
+		ActionString = GetString(ACT_MOVETODB) + ACT_sFolder
+	Case "7"
+		ActionString = GetString(ACT_DELETE)
+	Case "8"
+		ActionString = GetString(ACT_DONOTDELIVER) + BehaviorString(ACT_sBehavior)
+	Case "9"
+		ActionString = GetString(ACT_ROUTINGSTATE) + BehaviorString(ACT_sBehavior)
+	Case "A"
+		ActionString = GetString( ACT_SETEXPIREDATE ) +| | + ACT_sExpNumber + | | + BehaviorString(ACT_sExpDate)
+	Case "B"
+		Select Case ACT_sChoice
+		Case "1"
+			ActionString = GetString(ACT_COPYTO_1) + | | + ArrayToString(ACT_vAddress, ", ")
+		Case "2"
+			ActionString = GetString(ACT_COPYTO_2) + | | + ArrayToString(ACT_vAddress, ", ")
+		Case "3"
+			ActionString = GetString(ACT_COPYTO_3) + | | + ArrayToString(ACT_vAddress, ", ")
+		Case "4"
+			ActionString = GetString(ACT_COPYTO_4) + | | + ArrayToString(ACT_vAddress, ", ")
+		End Select
+	Case "C"
+		ActionString = GetString(ACT_STOP_PROCESSING)
+	Case Else
+		ActionString = ""
+	End Select
+	
+End Function
+
+'++LotusScript Development Environment:2:2:ProcessConditions:1:8
+Sub ProcessConditions()
+	Dim COND_it_TokConditionList As Variant
+	Dim iLength As Integer
+	Dim iTokenSepAt As Integer
+	Dim strTmp As String
+	Dim x As Integer
+	
+	COND_it_TokConditionList = note.getitemvalue("tokconditionlist")
+	
+	If COND_it_TokConditionList(0)="" Then Exit Sub
+	
+	'//Initialize string Array with non-exiting Condition values
+	Redim Preserve COND_LsLogicContainsLIst(x)
+	Redim Preserve COND_LsLogicISList(x)
+	Redim Preserve EXC_LsLogicContainsLIst(x)
+	Redim Preserve EXC_LsLogicISList(x)
+	COND_LsLogicContainsLIst(x) = "0"
+	COND_LsLogicISList(x) = "0"
+	EXC_LsLogicContainsLIst(x) = "0"
+	EXC_LsLogicISList(x) = "0"
+	
+	'// Initialize the Rule's formula
+	s_MAINFORMULA = "@If(( "
+	
+	For  x = 0 To Ubound(COND_it_TokConditionList)
+		
+		Call TokenParserCond(Cstr(COND_it_TokConditionList(x)))
+		
+		If x <> 0 Then
+			If COND_sOperator="0" Then
+				s_MAINFORMULA = s_MAINFORMULA +" & "
+			Elseif COND_sOperator="1" Then
+				s_MAINFORMULA = s_MAINFORMULA +" | "
+			End If
+		End If
+		
+		If ConditionParser() Then
+			'//store list of Conditions with Contains logic, to enhance formula
+			Redim Preserve COND_LsLogicContainsLIst(x)
+			COND_LsLogicContainsLIst(x) = COND_sCondition
+		Else
+			'//store list of Conditions with IS logic, to enhance formula
+			Redim Preserve COND_LsLogicISList(x)
+			COND_LsLogicISList(x) = COND_sCondition
+		End If
+		
+	Next
+	'// Finalize Condition portion of the Rule's formula
+	s_MAINFORMULA = s_MAINFORMULA + " ) "
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:ProcessActions:1:8
+Function ProcessActions As Integer
+	
+	Dim vTokActionList As Variant
+	Dim x As Integer
+	
+	ProcessActions = False
+	vTokActionList= note.getitemvalue("tokactionlist")
+	
+	If vTokActionList(0)="" Then Exit Function
+	s_MAINFORMULA = s_MAINFORMULA + "; (@Do("
+	
+	For  x = 0 To Ubound(vTokActionList)
+		
+		ProcessActions=True
+		
+		Call TokenParserAction(Cstr(vTokActionList(x)))
+		
+		Call ActionParser()
+		
+		If x <> Ubound(vTokActionList) Then s_MAINFORMULA = s_MAINFORMULA + " ; "
+	Next
+	
+	s_MAINFORMULA = s_MAINFORMULA + |)); "" )|
+	
+End Function
+
+'++LotusScript Development Environment:2:2:ProcessExceptions:1:8
+Sub ProcessExceptions()
+	Dim COND_it_TokExceptionList As Variant
+	Dim iTokenSepAt As Integer
+	Dim iLength As Integer
+	Dim strTmp As String
+	Dim x As Integer
+	
+	EXC_FLAG = False
+	COND_it_TokExceptionList = note.getitemvalue("tokexceptionlist")
+	
+	If COND_it_TokExceptionList(0)="" Then	Exit Sub
+	
+	'// Set global flag for Enhance formula performance
+	EXC_FLAG = True
+	
+	'// Append/force operator '&' before any exception
+	s_MAINFORMULA=s_MAINFORMULA+ " & ! ("
+	
+	For  x = 0 To Ubound(COND_it_TokExceptionList)
+		
+		Call TokenParserCond(Cstr(COND_it_TokExceptionList(x)))
+		
+		If x <> 0 Then
+			If COND_sOperator="0" Then
+				s_MAINFORMULA = s_MAINFORMULA +" & "
+			Elseif COND_sOperator="1" Then
+				s_MAINFORMULA = s_MAINFORMULA +" | "
+			End If
+		End If
+		
+		If ConditionParser() Then
+			'//store list of Conditions with Contains logic, to enhance formula
+			Redim Preserve EXC_LsLogicContainsLIst(x)
+			EXC_LsLogicContainsLIst(x) = COND_sCondition
+		Else
+			'//store list of Conditions with IS logic, to enhance formula
+			Redim Preserve EXC_LsLogicISList(x)
+			EXC_LsLogicISList(x) = COND_sCondition
+		End If
+	Next
+	
+	s_MAINFORMULA = s_MAINFORMULA + ")"
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:ConditionParser:1:8
+Function ConditionParser() As Integer
+	
+	Dim FieldString As String
+	Dim FieldString2 As String
+	Dim LogicString As String
+	Dim bnormal As Integer
+	Dim myList As String
+	
+	bnormal = False
+	ConditionParser = False
+	
+	Select Case COND_sCondition
+	Case "1"
+		Fieldstring = "CondSender"
+	Case "2"
+		FieldString = "CondSubject"
+	Case "3"
+		FieldString = "CondBody"
+	Case "4"
+		FieldString = "CondImportance"
+		If Lcase(COND_sString) = "high" Then
+			COND_sString = "1"
+		Elseif Lcase(COND_sString) = "normal" Then
+			COND_sString = "2"
+			bnormal=True
+		Elseif Lcase(COND_sString) = "low" Then
+			COND_sString = "3"
+		End If
+	Case "5"
+		FieldString = "CondDeliveryPriority"
+		If Lcase(COND_sString) =  "high" Then
+			COND_sString = "H"
+		Elseif Lcase(COND_sString) = "normal" Then
+			COND_sString = "N"
+			bnormal=True
+		Elseif Lcase(COND_sString) = "low" Then
+			COND_sString = "L"
+		End If
+	Case "6"
+		FieldString = "CondSendTo"
+	Case "7"
+		FieldString = "CondCopyTo"
+	Case "8"
+		FieldString = "CondSendTo"
+		FieldSTring1="CondCopyTo"
+	Case "9"
+		FieldString = "CondBody"
+		FieldSTring1 ="CondSubject"
+	Case "A"
+		'//BCC
+		FieldString = "CondBlindCopyTo"
+	Case "B"
+		'//Internet Domain
+		FieldString = "CondInternetDomain"
+	Case "C"
+		'//size
+		FieldString = "CondDocLength"
+	Case "D"
+		'// All Documents
+		FieldString = "CondAllDocs"
+	Case "E"
+		'// Attachment Names
+		FieldString = "CondAttachName"
+	Case "F"
+		'// Number of Attachments
+		FieldString = "CondAttachNumber"
+	Case "G"
+		'// Form
+		FieldString = "CondForm"
+	Case "H"
+		'// Recipient Count
+		FieldString = "CondRecipientCount"
+	Case "I"
+		'// Any Recipient
+		FieldString = "CondAnyRecipient"
+	Case "K"
+		'//BlackList
+		FieldString = "CondBlackList"
+		'// White List
+	Case "L"
+		'//BlackList
+		FieldString = "CondWhiteList"
+	Case "J"
+		Fieldstring = "CondCustomize"
+	End Select
+	
+	'// Get the Rule Logic
+	Select Case COND_sLogic
+	Case "1"
+		If COND_sCondition = "C" Or COND_sCondition = "F" Or COND_sCondition = "H" Then
+			LogicString = " < "
+		Else
+			'//contains
+			LogicString = " @Contains( "
+		End If
+		ConditionParser = True
+	Case "2"
+		'//does not contain
+		If COND_sCondition <> "C" And  COND_sCondition <> "F" And COND_sCondition <> "H" Then
+			LogicString = " !@Contains( "
+		Else
+			LogicString = " > "
+		End If
+		ConditionParser = True
+	Case "3"
+		'//is
+		LogicString = " = "
+	Case "4"
+		'//is not
+		LogicString = " != "
+	End Select
+	
+	'// Special case for certain types of conditions, such as:
+	'// Multiple fields, searching Body, when Delivery Priority or Importance are Normal,
+	'// and Document Size
+	
+	Select Case COND_sCondition
+	Case "1"		'//Sender
+		Select Case COND_sLogic
+		Case "1" , "2"
+			s_MAINFORMULA = s_MAINFORMULA+ "(" + LogicString + FieldString + "_C"+ | ;"|+ Lcase(COND_sString) + |"))|
+		Case "3" , "4"
+			s_MAINFORMULA = s_MAINFORMULA + "(" + FieldString + "_I"+ LogicString + " """ + COND_sString + """)"
+		End Select
+		
+	Case "C"		'//Size
+		s_MAINFORMULA = s_MAINFORMULA + FieldString +  "_I" + LogicString + Ucase( COND_sString )
+		ConditionParser = False		'//Force Logic to IS.
+		
+	Case "D"		'//All Docs
+		s_MAINFORMULA = s_MAINFORMULA + FieldString +  "_I"
+		ConditionParser = False		'//Force Logic to IS.
+		
+	Case "F"		'//Number of Attachements
+		s_MAINFORMULA = s_MAINFORMULA + FieldString +  "_I" + LogicString + COND_sString
+		ConditionParser = False		'//Force Logic to IS.
+		
+	Case "I"		'//Any Recipient
+		Select Case COND_sLogic
+		Case "1" , "2"
+			s_MAINFORMULA = s_MAINFORMULA + LogicString + FieldString + "_C"+ ";"""+ Lcase(COND_sString) +""")"
+		Case "3" , "4"
+			s_MAINFORMULA = s_MAINFORMULA + FieldString +  "_I"+ LogicString + """" + COND_sString + """"
+		End Select
+		
+	Case "H"		'//Recipient Count
+		s_MAINFORMULA = s_MAINFORMULA + FieldString + "_I" + LogicString + Ucase(COND_sString)
+		ConditionParser = False		'//Force Logic to IS.
+		
+	Case "3"		'//Body - body field needs to be converted to ascii
+		Select Case COND_sLogic
+		Case "1" , "2"
+			s_MAINFORMULA = s_MAINFORMULA + LogicString + FieldString + "_C"+ ";"""+ Lcase(COND_sString) +""")"
+		Case "3" , "4"
+			s_MAINFORMULA = s_MAINFORMULA + FieldString +  "_I"+ LogicString + "@Ascii(""" + COND_sString + """)"
+		End Select
+		
+	Case "4", "5"	'//Importance OR Delivery Priority
+		ConditionParser = False		'//Force Logic to IS.
+		Select Case COND_sLogic
+		Case "1", "3"
+			If bnormal Then
+				s_MAINFORMULA = s_MAINFORMULA + FieldString + "_I" + " = """" | " + FieldString + "_I"+ | = "| + COND_sString + |"|
+			Else
+				s_MAINFORMULA = s_MAINFORMULA + FieldString +  "_I"+ | = "| + COND_sString + |"|
+			End If
+		Case "2", "4"
+			If bnormal Then
+				s_MAINFORMULA = s_MAINFORMULA + "!( " + FieldString + "_I" + " = """" | " + FieldString + "_I"+ | = "| + COND_sString + |" )|
+			Else
+				s_MAINFORMULA = s_MAINFORMULA + FieldString +  "_I"+ | != "| + COND_sString + |"|
+			End If
+		End Select
+		
+	Case "8", "9"		'//"To or Cc"  OR "Body or Subject"
+		Select Case COND_sLogic
+		Case "1" , "2"
+			s_MAINFORMULA = s_MAINFORMULA + LogicString + FieldString + "_C"+ "; """ + Lcase(COND_sString) +""") | "+ LogicString + FieldString1 + "_C" + |; "| + Lcase(COND_sString) + |" ) |
+		Case "3"
+			s_MAINFORMULA = s_MAINFORMULA + "( " + FieldString  + "_I"+ | = "| + COND_sString + |"| + " | "  + FieldString1  + "_I" + |= "| + COND_sString + |") |
+		Case 4
+			s_MAINFORMULA = s_MAINFORMULA + "!( " + FieldString  + "_I"+ | = "| + COND_sString + |"| + " | "  + FieldString1  + "_I" + |= "| + COND_sString + |") |
+		End Select
+		
+	Case Else '// All other common cases
+		Select Case COND_sLogic
+		Case "1" , "2"
+			s_MAINFORMULA = s_MAINFORMULA + LogicString + FieldString + "_C"+ ";""" + Lcase(COND_sString) + """)"
+		Case "3" , "4"
+			s_MAINFORMULA=s_MAINFORMULA + FieldString +  "_I"+ LogicString +"""" + COND_sString + """"
+		End Select
+		
+	End Select
+	
+End Function
+
+'++LotusScript Development Environment:2:2:ActionParser:1:8
+Sub ActionParser()
+	
+	Let str_tmpAppendString = ""
+	
+	Select Case ACT_sAction
+	'// Move to Folder
+	Case "1"
+		s_MAINFORMULA = s_MAINFORMULA + "(@MailFilterAddtofolder(""" + ValidateFolder(ACT_sString) + """; @True))"
+	'// Change Importance
+	Case "2"
+		ACT_sImportance = ACT_sBehavior
+		s_MAINFORMULA = s_MAINFORMULA+"@setfield(""Importance"";"""+ ACT_sImportance + """)"
+	'// Delete
+	Case "3"
+		s_MAINFORMULA = s_MAINFORMULA + "(@deletedocument)"
+	'// Copy to Folder
+	Case "4"
+		s_MAINFORMULA = s_MAINFORMULA + "(@MailFilterAddtofolder(""" + ValidateFolder(ACT_sString) +"""))"
+	'// Journal Message
+	Case "5"
+		s_MAINFORMULA = s_MAINFORMULA + "@If($JournalResponsibility=""""; @SetField(""$JournalResponsibility"";""1"");"""")"
+	'// move to database
+	Case "6"
+		'// if path is found, we need to doubled slashes so formula can compile
+		If Instr(ACT_sString, |\|) > 0 Then
+			ACT_sString = Replace(ACT_sString,|\|,|\\|)
+		End If
+		Let str_tmpAppendString = |"MOVE | + STR_DELIMETERSEP + ACT_sString + |")|
+		s_MAINFORMULA = s_MAINFORMULA + "@SetField(""$FilterActions"";" + "@Trim($FilterActions:" + str_tmpAppendString + ")"
+	'// Delete - don't accept message
+	Case "7"
+		s_MAINFORMULA = s_MAINFORMULA + "(@deletedocument)"
+	'// don't deliver message
+	Case "8"
+		Let str_tmpAppendString =|"|+|NDR|+ STR_DELIMETERSEP + ACT_sBehavior +|"|+")"
+		s_MAINFORMULA = s_MAINFORMULA+ "@SetField(""$FilterActions"";"+"$FilterActions"+":" & str_tmpAppendString
+	'// Change routing state
+	Case "9"
+		Select Case ACT_sBehavior
+		Case "1"
+			s_MAINFORMULA = s_MAINFORMULA+"@SetField(""RoutingState"";""HOLD"")" + ";@SetField(""RoutingStateBy"";""2"")"
+		Case "2"
+			s_MAINFORMULA = s_MAINFORMULA+"@SetField(""RoutingState"";""DEAD"")"
+		End Select
+	'// Set expire date
+	Case "A"
+		Select Case ACT_sBehavior
+		Case "D"
+			s_MAINFORMULA = s_MAINFORMULA + "@SetField(""ExpireDate"";@Adjust(@Now;0;0;" + ACT_sString + ";0;0;0))"
+		Case "W"
+			s_MAINFORMULA = s_MAINFORMULA + "@SetField(""ExpireDate"";@Adjust(@Now;0;0;"+ Cstr(Cint(ACT_sString) * 7) +";0;0;0))"
+		Case "M"
+			s_MAINFORMULA = s_MAINFORMULA + "@SetField(""ExpireDate"";@Adjust(@Now;0;"+ ACT_sString +";0;0;0;0))"
+		Case "Y"
+			s_MAINFORMULA = s_MAINFORMULA + "@SetField(""ExpireDate"";@Adjust(@Now;"+ ACT_sString +";0;0;0;0;0))"
+		End Select
+	'//Forward to
+	Case "B"
+		Let str_tmpAppendString = |"COPYTO| + ACT_sBehavior + STR_DELIMETERSEP + Replace(ACT_sString,|:|,|,|) + |")|
+		s_MAINFORMULA = s_MAINFORMULA + "@SetField(""$FilterActions"";" + "@Trim($FilterActions:" + str_tmpAppendString  + ");@SetField(""DisplayCopyTo_Icon"";""1"")"
+	'// Stop Processing
+	Case "C"
+		s_MAINFORMULA  = s_MAINFORMULA  + "(@MailFilterStopProcessing)"
+	End Select
+End Sub
+
+'++LotusScript Development Environment:2:2:AddCondition:1:8
+Sub AddCondition()
+	Static nErrors As Integer
+	On Error Goto TrapInvalidToken
+	Dim strDSPCond As String
+	
+	Set COND_it_ConditionlLst = note.getfirstitem( "ConditionList" )
+	Set COND_it_TokConditionList = note.getfirstitem( "tokConditionList" )
+	strDSPCond = ""
+	
+	If COND_it_ConditionlLst.values(0) = "" Then
+		strDSPCond ="  "+ FieldString( COND_sCondition ) + LogicString( COND_sLogic, COND_sCondition ) + COND_sString
+	Else
+		strDSPCond = "    "+ OperatorString( COND_sOperator ) + FieldString( COND_sCondition ) +_
+		LogicString( COND_sLogic, COND_sCondition ) + COND_sString
+	End If
+	
+	'// Store string for display
+	Call COND_it_ConditionlLst.AppendToTextList( strDSPCond )
+	
+	'// Eliminating the string 'bytes' when storing the value in COND_it_TokConditionList
+	If COND_sCondition = "C" Then
+		COND_sString = Left( COND_sString, Len(COND_sString) - Len(GetString(SPEC_STR31)))
+	End If
+	
+	'// Store Token phrase
+	Call COND_it_TokConditionList.AppendToTextList( COND_sCondition + STR_TOKENSEPARATOR +_
+	COND_sLogic + STR_TOKENSEPARATOR+ COND_sString + STR_TOKENSEPARATOR + COND_sOperator )
+	
+	uidoc.refresh
+	
+	Exit Sub
+	
+TrapInvalidToken:
+	nErrors = nErrors + 1
+	If Err = 5 And nErrors = 1 Then
+'		STR_TOKENSEPARATOR = ":"
+		Resume 0
+	Else
+		Print(Err & ": " & Error$)
+		Exit Sub
+	End If
+End Sub
+
+'++LotusScript Development Environment:2:2:AddException:1:8
+Sub AddException
+	Static nErrors As Integer
+	On Error Goto TrapInvalidToken
+	Dim strDSPExc As String
+	
+	Set COND_it_ExceptionList = note.getfirstitem("ExceptionList")
+	Set COND_it_TokExceptionList = note.getfirstitem("tokExceptionList")
+	
+	If COND_it_ExceptionList.values(0) = "" Then
+		strDSPExc ="  "+ FieldString( COND_sCondition) + LogicString( COND_sLogic, COND_sCondition)+COND_sString
+	Else
+		strDSPExc =  "    "+ OperatorString( COND_sOperator ) + FieldString( COND_sCondition ) +_
+		LogicString( COND_sLogic, COND_sCondition ) + COND_sString
+	End If
+	
+	'// Store string for display
+	Call COND_it_ExceptionList.appendtotextlist(strDSPExc)
+	
+	'// Eliminating the string 'bytes' when storing the value in COND_it_TokConditionList
+	If COND_sCondition="C" Then
+		COND_sString = Left( COND_sString, Len(COND_sString) - Len(GetString(SPEC_STR31)))
+	End If
+	
+	'// Store Token phrase -- Cond | Logic | StringVal | Operator
+	Call COND_it_TokExceptionList.appendtotextlist( COND_sCondition + STR_TOKENSEPARATOR +_
+	COND_sLogic + STR_TOKENSEPARATOR+ COND_sString + STR_TOKENSEPARATOR + COND_sOperator )
+	
+	uidoc.refresh
+	
+	Exit Sub
+	
+TrapInvalidToken:
+	nErrors = nErrors + 1
+	If Err = 5 And nErrors = 1 Then
+		
+		Resume 0
+	Else
+		Print(Err & ": " & Error$)
+		Exit Sub
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:GetValues:1:8
+Sub GetValues
+	
+	'On Error Goto Errhandle
+	Dim xname As New notesname("")
+	vcondition = note.getitemvalue("condition")(0)
+	vlogic = note.getitemvalue("logic")(0)
+	voperator = note.getitemvalue("Operator")(0)
+	
+	Select Case vcondition
+	Case "4","5"
+		vimportance = note.getitemvalue("importance")(0)
+		Select Case vimportance
+		Case "1"
+			vstring="High"  'High
+		Case "2"
+			vstring="Normal"		'Normal
+		Case "3"
+			vstring="Low"		'Low
+		End Select
+		
+	Case "B"
+		vstring = note.getitemvalue("domainlist")(0)
+		
+	Case "C"
+		vstring = note.getitemvalue("string")(0) + " bytes(s)"
+		
+	Case "D"
+		vlogic = ""
+		vstring = ""
+		
+	Case "1","6","7","8","A"
+		vstring = note.getitemvalue("string")(0)
+			'We are doing this because @Contains does not support slashes
+		Set xname = New notesname(vstring)
+		If xname.Ishierarchical Then
+			vstring=xname.common
+		End If
+	Case "K","L"
+		vstring = note.getitemvalue("string")(0)
+		
+	Case Else
+		'// Setting Customize Condition choice to "J"
+		vstring = note.getitemvalue("string")(0)
+		'vcondition = STR_TOKENCONDCUSTOMIZE & "-" & vcondition
+		'Exit Sub
+		
+	End Select
+	
+'Errhandle:
+   ' Use the Err function to return the error number and
+   ' the Error$ function to return the error message.
+'	Messagebox "Error" & Str(Err) & ": " & Error$
+'	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:OperatorString:1:8
+Function OperatorString(voperator As Variant)
+	'This function converts the operator to it's translated value
+	Select Case voperator
+	Case "0"
+		OperatorString=GetString(OPER_AND)
+	Case "1"
+		OperatorString=GetString(OPER_OR)
+	End Select
+	
+End Function
+
+'++LotusScript Development Environment:2:1:GetString:1:8
+Function GetString ( StringType As Variant) As String
+	
+	'// ALL STRING RESOURCES
+	
+	GetString = ""
+	
+	Select Case StringType
+		
+	Case COND_SENDER
+		GetString = " Sender"
+		
+	Case COND_SUBJECT
+		GetString = " Subject"
+		
+	Case COND_BODY
+		GetString = " Body"
+		
+	Case COND_IMPORTANCE
+		GetString =  " Importance"
+		
+	Case COND_DELPRIORITY
+		GetString = " Delivery Priority"
+		
+	Case COND_TO
+		GetString = " To"
+		
+	Case COND_CC
+		GetString = " Cc"
+		
+	Case COND_TOORCC
+		GetString = " To or Cc"
+		
+	Case COND_BODYORSUBJECT
+		GetString = " Body or Subject"
+		
+	Case COND_BCC
+		GetString = " BCc"
+		
+	Case COND_INTERNETDOMAIN
+		GetString = " Internet Domain"
+		
+	Case COND_SIZE
+		GetString = " Size "
+		
+	Case COND_ALLDOCS
+		GetString = " All Documents"
+		
+	Case COND_ATTCHNAMES
+		GetString = " Attachment names"
+		
+	Case COND_ATTCHNUMBER
+		GetString = " number of Attachments"
+		
+	Case COND_FORM
+		GetString = " Form"
+		
+	Case COND_RECIPIENTCOUNT
+		GetString = " Recipient Count"
+		
+	Case COND_ANYRECIPIENT
+		GetString = " any Recipient"
+		
+	Case COND_BLACKLIST
+		GetString = " BlackList tag"
+		
+	Case COND_WHITELIST
+		GetString = " WhiteList tag"
+		
+		
+	'////// LIST OF LOGIC
+	Case LOGIC_CONTAINS
+		GetString = " contains "
+		
+	Case LOGIC_NUMLESS
+		GetString = " is less than "
+		
+	Case LOGIC_CONTAINSNOT
+		GetString = " does not contain "
+		
+	Case LOGIC_NUMGREATER
+		GetString = " is greater than "
+		
+	Case LOGIC_IS
+		GetString = " is "
+		
+	Case LOGIC_ISNOT
+		GetString = " is not "
+		
+	Case OPER_AND
+		GetString =  " AND"
+		
+	Case OPER_OR
+		GetString = "OR"
+		
+	'/////// LIST OF ACTIONS
+	Case ACT_MOVETOFOLDER
+		GetString = " move to folder "
+		
+	Case ACT_HIGH
+		GetString = " High"
+		
+	Case ACT_NORMAL
+		GetString = " Normal"
+		
+	Case ACT_LOW
+		GetString = " Low"
+		
+	Case ACT_DAY
+		GetString = "day(s)"
+		
+	Case ACT_WEEK
+		getString = "week(s)"
+		
+	Case ACT_MONTH
+		getString = "month(s)"
+		
+	Case ACT_YEAR
+		getString = "year(s)"
+		
+	Case ACT_CHANGEIMP
+		GetString = " change Importance to"
+		
+	Case ACT_DELETE
+		GetString = " don't Accept Message"
+		
+	Case ACT_COPYTOFOLDER
+		GetString =  " copy to Folder "
+		
+	Case ACT_JOURNAL
+		GetString = " Journal this Message"
+		
+	Case ACT_MOVETODB
+		GetString = " move to Database "
+		
+	Case ACT_DONOTACCEPT
+		GetString = " don't Accept Message"
+		
+	Case ACT_DONOTDELIVER
+		GetString = " don't Deliver Message -"
+		
+	Case ACT_ROUTINGSTATE
+		GetString = " change Routing State -"
+		
+	Case ACT_MARKHELD
+		GetString = " mark as Held"
+		
+	Case ACT_MARKDEAD
+		GetString = " mark as Dead"
+		
+	Case ACT_SILENTLYDELETE
+		GetString = " silently Delete"
+		
+	Case ACT_SENDNDRFULL
+		GetString = " send NDR Full"
+		
+	Case ACT_SENDNDRHEADER
+		GetString = " send NDR Headers only"
+		
+	Case ACT_SETEXPIREDATE
+		GetString = " set Expire Date to"
+		
+	Case ACT_COPYTO_1
+		GetString = " send Full Copy to"
+		
+	Case ACT_COPYTO_2
+		GetString = " send Copy w/o Attachment(s) to"
+		
+	Case ACT_COPYTO_3
+		GetString = " send Copy that has been truncated at 2K to"
+		
+	Case ACT_COPYTO_4
+		GetString = " send Copy of Headers to"
+		
+	Case ACT_STOP_PROCESSING
+		GetString = " Stop Processing further Rules"
+		
+	'//// WARNING & ERROR MESSAGES
+	Case SPEC_STR1
+		GetString = "You cannot include Delete Document in multiple actions.  Would you like to remove the Delete action from the actions list?"
+		
+	Case SPEC_STR2
+		getString = "You must enter a valid condition."
+		
+	Case SPEC_STR3
+		getString = "You must enter a valid action."
+		
+	Case SPEC_STR4
+		GetString = "Select a folder to move messages to."
+		
+	Case SPEC_STR5
+		GetString = "You must enter a valid range (1 - 999)"
+		
+	Case SPEC_STR6
+		GetString = "You must type an email address"
+		
+	Case SPEC_STR7
+		GetString = "You are about to delete a Configuration Document and its children documents. Do you want to continue?"
+		
+	Case SPEC_STR8
+		GetString = "Continue."
+		
+	Case SPEC_STR9
+		GetString = "You must select one document."
+		
+	Case SPEC_STR10
+		GetString = "Error!"
+		
+	Case SPEC_STR11
+		GetString = "You must be in edit mode to delete rules."
+		
+	Case SPEC_STR12
+		GetString = "Delete Rule"
+		
+	Case SPEC_STR13
+		GetString = "You must be in edit mode to disable rules."
+		
+	Case SPEC_STR14
+		GetString = "Disable Rule."
+		
+	Case SPEC_STR15
+		GetString = "You must be in edit mode to enable rules."
+		
+	Case SPEC_STR16
+		GetString = "Enable Rule."
+		
+	Case SPEC_STR17
+		GetString = "You must be in edit mode to add new rules."
+		
+	Case SPEC_STR18
+		GetString = "New Rule."
+		
+	Case SPEC_STR19
+		GetString = "You must be in edit mode to edit rules."
+		
+	Case SPEC_STR20
+		GetString = "Edit Rule."
+		
+	Case SPEC_STR21
+		GetString = "You must be in edit mode to move rules."
+		
+	Case SPEC_STR22
+		GetString = "Move Rule."
+		
+	Case SPEC_STR23
+		GetString = "You cannot demote the bottom-level document."
+		
+	Case SPEC_STR24
+		GetString = "You cannot promote the top-level document."
+		
+	Case SPEC_STR25
+		GetString = "Too many addresses. Please remove some names or create another Rule."
+		
+	Case SPEC_STR26
+		GetString = "A Rule cannot contain any of the following characters:" & Chr(13)  & | \  ;  ,  *  " |
+		
+	Case SPEC_STR27
+		GetString = "Rules can only be created, deleted or changed from the Configuration Document!"
+		
+	Case SPEC_STR28
+		GetString = "Mail Rules"
+		
+	Case SPEC_STR29
+		GetString = "Please name and save the configuration document before creating a Rule."
+		
+	Case SPEC_STR30
+		GetString = "Permanently remove the selected rule from this configuration document?"
+		
+	Case SPEC_STR31
+		GetString =  " bytes(s)"
+		
+	End Select
+	
+End Function
+
+'++LotusScript Development Environment:2:2:ButtonAddCondition:1:8
+Sub ButtonAddCondition()
+	
+	If (ValidateCondition) Then 'validates all conditions
+		If (note.getitemvalue("ConditionList")(0)="") Then
+		'// This is the first time so add a condition
+			AddCondition
+		Else
+		''' There already is a condition so check the type
+			If (note.getitemvalue("Type")(0) = "0") Then
+				AddCondition
+			Else
+				AddException
+			End If
+		End If
+	End If
+	
+	Call ResetCondition
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:ButtonRemoveCondition:1:8
+Sub ButtonRemoveCondition()
+	
+	On Error Goto TrapError
+	
+	Dim vcondtoremove As Variant
+	Dim COND_it_ConditionlLst As Variant
+	Dim COND_it_TokConditionList As Variant
+	Dim COND_it_ExceptionList As Variant
+	Dim COND_it_TokExceptionList As Variant
+	Dim functionname As String
+	functionname = "ButtonRemoveCondition"
+	
+	'// Is this server or client Rules?
+	If i_IsServerRules Then
+		vcondtoremove = note.getitemvalue("CondLstDsp")(0)
+	Else
+		vcondtoremove = note.getitemvalue("conditionlistdisplay")(0)
+	End If
+	
+	COND_it_ConditionlLst = note.getitemvalue("ConditionList")
+	COND_it_ExceptionList = note.getitemvalue("ExceptionList")
+	COND_it_TokConditionList = note.getitemvalue("tokConditionList")
+	COND_it_TokExceptionList=note.getitemvalue("tokExceptionList")
+	
+	If Not (vcondtoremove = "When:" Or vcondtoremove = "Except when:" Or vcondtoremove = "") Then 'Prevent from selecting wrong line
+		
+		For  x = 0 To Ubound(COND_it_ConditionlLst)
+			If x = 0 And x <> Ubound(COND_it_ConditionlLst) And COND_it_ConditionlLst(x) = vcondtoremove Then
+				COND_it_ConditionlLst(1) = Right$(COND_it_ConditionlLst(1), Len(COND_it_ConditionlLst(1))-Instr(COND_it_ConditionlLst(1)," "))
+			End If
+			If COND_it_ConditionlLst(x) = vcondtoremove Then
+				COND_it_ConditionlLst(x) = ""
+				COND_it_TokConditionList(x) = ""
+				Call note.replaceitemvalue("conditionlist",COND_it_ConditionlLst)
+				COND_it_TokConditionList = note.getitemvalue("tokConditionList")
+				COND_it_TokConditionList(x) = ""
+				Call note.replaceitemvalue("tokConditionList", COND_it_TokConditionList)
+				Goto done
+			End If
+		Next
+		
+		For  x = 0 To Ubound(COND_it_ExceptionList)
+			If x = 0 And x <> Ubound(COND_it_ExceptionList) And COND_it_ExceptionList(x) = vcondtoremove Then
+				COND_it_ExceptionList(1) = Right$(COND_it_ExceptionList(1), Len(COND_it_ExceptionList(1))-Instr(COND_it_ExceptionList(1)," "))
+			End If
+			If COND_it_ExceptionList(x) = vcondtoremove Then
+				COND_it_ExceptionList(x) = ""
+				Call note.replaceitemvalue("exceptionlist",COND_it_ExceptionList)
+				COND_it_TokExceptionList=note.getitemvalue("tokExceptionList")
+				COND_it_TokExceptionList(x)=""
+				Call note.replaceitemvalue("exceptionlist",COND_it_ExceptionList)
+				Call note.replaceitemvalue("tokexceptionlist",COND_it_TokExceptionList)
+				Goto done
+			End If
+		Next
+done:
+	End If
+	Call note.replaceitemvalue("conditionlist",COND_it_ConditionlLst)
+	Call note.replaceitemvalue("tokconditionlist", COND_it_TokConditionList)
+	Call note.replaceitemvalue("exceptionlist", COND_it_ExceptionList)
+	Call note.replaceitemvalue("tokexceptionlist", COND_it_TokExceptionList)
+	Call ResetCondition
+	Exit Sub
+TrapError:
+	Msgbox "Error on " & functionName & "  --> " & (Err & ": " & Error$)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:ButtonRemoveAllConditions:1:8
+Sub ButtonRemoveAllConditions()
+	
+	On Error Goto TrapError
+	
+	Dim COND_it_ConditionlLst As Variant
+	Dim COND_it_ExceptionList As Variant
+	Dim COND_it_TokConditionList As Variant
+	Dim COND_it_TokExceptionList As Variant
+	
+	COND_it_ConditionlLst = note.getitemvalue("ConditionList")
+	COND_it_ExceptionList = note.getitemvalue("ExceptionList")
+	COND_it_TokConditionList = note.getitemvalue("tokConditionList")
+	COND_it_TokExceptionList = note.getitemvalue("tokExceptionList")
+	
+	For  x = 0 To Ubound(COND_it_ConditionlLst)
+		COND_it_ConditionlLst(x) = ""
+		COND_it_TokConditionList(x) = ""
+	Next
+	For  x = 0 To Ubound(COND_it_ExceptionList)
+		COND_it_ExceptionList(x) = ""
+		COND_it_TokExceptionList(x)=""
+	Next
+	Call note.replaceitemvalue("ConditionList",COND_it_ConditionlLst)
+	Call note.replaceitemvalue("tokconditionlist", COND_it_TokConditionList(0))
+	Call note.replaceitemvalue("exceptionlist", COND_it_ExceptionList(0))
+	Call note.replaceitemvalue("tokexceptionlist", COND_it_TokExceptionList(0))
+	Call ResetCondition
+	Exit Sub
+	
+TrapError:
+	
+	Print(Err & ": " & Error$)
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:ButtonAddAction:1:8
+Sub ButtonAddAction()
+	
+	Dim itmactionlist As NotesItem
+	Dim itmtokactionlist As notesitem
+	Dim vimportance As Variant
+	Dim iActiondisplay As Variant
+	
+	Set itmactionlist = note.getfirstitem("ActionList")
+	Set itmTokActionList = note.getfirstitem("TokActionList")
+	
+	Call GetGlobalActionValues()
+	
+	'// Validate some choice is selected
+	If ValidateAction(ACT_sAction) Then
+		'//Exclusion Rules for Delete Action:
+		'// 1 - Don't allow it to be added more than once
+		'// 2 - Don't allow it to be combined with other actions -
+		'// We are handling this way because the incoming Message will be deleted,
+		'// so it won't matter the next action
+		If (ACT_sAction = "3" And itmtokactionlist.contains("3:1:")) Or _
+		(ACT_sAction = "3" And note.GetItemvalue("TokActionList")(0) <> "") Or itmTokActionList.contains("3:1:") Then
+			If Messagebox (GetString(SPEC_STR1), 36, GetString(SPEC_STR28))  <> 6 Then Exit Sub
+			
+			Dim vTkList As Variant
+			Dim vActList As Variant
+			vActList = note.GetItemvalue("ActionList")
+			vTkList = note.GetItemvalue("TokActionList")
+			
+			For x = 0 To Ubound(vTkList)
+				If Left(vTkList(x), 1) = "3" Then
+					vTkList(x)  = ""
+				End If
+			Next
+			
+			For x = 0 To Ubound(vActList)
+				If vActList(x) = GetString(ACT_DELETE) Or _
+				vActList(x) = Trim(GetString(OPER_AND) + GetString(ACT_DELETE)) Then
+					vActList(x) = ""
+				End If
+			Next
+			
+			Call note.replaceitemvalue("ActionList", Fulltrim(vActList))
+			Call note.replaceitemvalue("TokActionList", Fulltrim(vTkList))
+			
+			If ACT_sAction = "3" Then
+				Goto ResetAction
+			End If
+		End If
+		
+		If ACT_sAction = "1" Or ACT_sAction = "4" Then
+			'// Validate if folders exist
+			If ValidateFolder( ACT_sFolder ) = "" Then
+				Msgbox getString(SPEC_STR4), 16, GetString(SPEC_STR28)
+				Exit Sub
+			End If
+		End If
+		
+		'// Get value disposition to display in Actions list
+		If itmactionlist.values(0) = "" Then
+			iActiondisplay = ActionString(ACT_sAction, note)
+		Else
+			iActiondisplay = " " + GetString(OPER_AND) + ActionString(ACT_sAction, note)
+		End If
+		
+		'//********Adding Actions to display list ********
+		Call itmactionlist.appendtotextlist( iActiondisplay )
+		
+		'//********Build Action Token list ********
+		Select Case ACT_sAction
+		Case "A"
+			Call itmTokActionList.AppendToTextList( ACT_sAction + STR_TOKENSEPARATOR + ACT_sExpDate + STR_TOKENSEPARATOR + ACT_sExpNumber)
+		Case "B"
+			Call itmTokActionList.AppendToTextList( ACT_sAction + STR_TOKENSEPARATOR + ACT_sChoice + STR_TOKENSEPARATOR+ ArrayToString(ACT_vAddress, ":") )
+		Case "8"
+			Call itmTokActionList.AppendToTextList( ACT_sAction + STR_TOKENSEPARATOR + ACT_sBehavior )
+		Case Else
+			Call itmTokActionList.AppendToTextList( ACT_sAction + STR_TOKENSEPARATOR + ACT_sImportance + STR_TOKENSEPARATOR + ACT_sFolder)
+		End Select
+	End If
+	
+ResetAction:
+	Call ResetActions
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:ButtonRemoveAction:1:8
+Sub ButtonRemoveAction()
+	
+	Static nErrors As Integer
+	On Error Goto TrapInvalidExecution
+	
+	Dim vactiontoremove As Variant
+	Dim vactionlist As Variant
+	Dim vtokactionlist As Variant
+	
+		'// Is this server or client Rules?
+	If i_IsServerRules Then
+		vActionToRemove = note.getitemvalue("ActionLstDsp")(0)
+	Else
+		vActionToRemove = note.getitemvalue("ActionListDisplay")(0)
+	End If
+	
+	vActionList = note.getitemvalue("ActionList")
+	vTokActionList = note.getitemvalue("tokactionList")
+	For  x = 0 To Ubound(vactionlist)
+		If x=0  And x <> Ubound(vactionlist) And  vactionlist(x) = vactiontoremove Then
+			vactionlist(1)=Right$(vactionlist(1), Len(vactionlist(1))-Instr(vactionlist(1)," "))
+		End If
+		If vactionlist(x) = vactiontoremove Then
+			vactionlist(x) = ""
+			Call note.replaceitemvalue("actionlist",vactionlist)
+			vtokactionlist(x)=""
+			Call note.replaceitemvalue("tokactionlist",vtokactionlist)
+			Goto done
+		End If
+	Next
+	
+	Goto Done
+TrapInvalidExecution:
+	nErrors = nErrors + 1
+	If Err = 5 And nErrors = 1 Then
+		Resume 0
+	Else
+		Print(Err & ": " & Error$)
+		Exit Sub
+	End If
+	
+Done:
+	Call ResetActions
+End Sub
+
+'++LotusScript Development Environment:2:2:ButtonRemoveAllActions:1:8
+Sub ButtonRemoveAllActions()
+	Dim vactionlist As Variant
+	Dim vtokactionlist As Variant
+	
+	vactionlist = note.getitemvalue("actionlist")
+	vtokactionlist = note.getitemvalue("tokactionlist")
+	For  x = 0 To Ubound(vactionlist)
+		vactionlist(x) = ""
+		vtokactionlist(x)=""
+	Next
+	Call note.replaceitemvalue("action", "1")
+	Call note.replaceitemvalue("actionlist",vactionlist)
+	Call note.replaceitemvalue("tokactionlist", vtokactionlist)
+	Call ResetActions
+End Sub
+
+'++LotusScript Development Environment:2:2:ButtonOKClient:1:8
+Sub ButtonOKClient()
+%REM
+				*** There are six potential states a rule can be in ***
+		1 - saving a New Rule Enabled
+		2 - saving a New Rule Disabled
+		3 - saving an edited rule enabled (was enabled)
+		4 - saving an edited rule disabled (was enabled)
+		5 - saving an edited rule enabled (was disabled)
+		6 - saving an edited rule disabled (was disabled
+
+		**odd states are enabled (meaning you must add or update items on the profile)
+		**even states are disabled (meaning nothing needs to be added to the profile)
+%END REM
+	
+	'// This code creates the filter action formula to be used by the mail router and puts it in a field called $FilterFormula
+	
+	On Error 4000 GoTo ErrorCheck
+	
+	Dim uiws As New notesuiworkspace
+	Dim view As notesview
+	Dim profile As notesdocument
+	Dim item As notesitem
+	Dim configview As NotesView
+	Dim bprofilesave As Integer
+	Dim bmovetofolder As Integer
+	Dim nrulenum As Integer
+	Dim strfilteritem As String
+	Dim nstate As Integer
+	
+	Set session = New notessession
+	Set db = session.currentdatabase
+	Set profile= db.GetProfileDocument("CalendarProfile")
+	Set view = db.getview("Rules")
+	Call view.Refresh
+	
+	'// Check for existance of the Cal Profile Note
+	'// In rare case where the dbopen creates the profile
+	If Not(profile.HasItem("Owner")) Then
+		profile.Form = "CalendarProfile"
+		Call profile.ComputeWithForm(False,False)
+	End If
+	
+	'// Assure that there are at least 1 Condition and 1 Action to process
+	If note.conditionlist(0) = "" Then
+		Msgbox getString(SPEC_STR2), 16, GetString(SPEC_STR28)
+		Exit Sub
+	Elseif note.actionlist(0) = "" Then
+		Msgbox getString(SPEC_STR3), 16, GetString(SPEC_STR28)
+		Exit Sub
+	End If
+	
+	'// ****************   Build the rule   ************************
+	
+	'// Start building Conditions - Must have at least one Condition
+	Call ProcessConditions()
+	'// Start building Exceptions, if any
+	Call ProcessExceptions()
+	'// Start building Actions - Must have at least one Action
+	If Not ProcessActions Then Exit Sub
+	'// Enhanced performance to the final Rule formula, if applicable
+	s_MAINFORMULA = FormulaEnhanceFactory + s_MAINFORMULA
+	'// *****************************************************
+	
+	Set item=note.getfirstitem("$FilterFormula")
+	item.values = s_MAINFORMULA
+	Call note.computewithform(False,False)
+	bmovetofolder=True
+	
+	If note.isnewnote Then '// Creating a new rule
+		nrulenum = CompactMailRules(session, db, Profile)
+		Call note.replaceitemvalue("OrderNum", Cstr( nrulenum + 1) )
+		strfilteritem = "$FilterFormula_"+Cstr( nrulenum  +1 )
+		
+		If note.getitemvalue("Enable")(0) = "1" Then
+			Let nstate = 1 '// new rule enabled
+		Else
+			Let nstate = 2 '// new rule disabled
+		End If
+		
+	Else '// Editing an existing rule
+		
+		nrulenum = note.getitemvalue( "ordernum" )(0) '// Pull out the sequence number
+		strfilteritem = "$FilterFormula_"+ Cstr( nrulenum ) '// Build the formula item that is on the profile
+		
+		If profile.hasitem( strfilteritem ) Then
+			If note.getitemvalue("Enable")(0) = "1" Then
+				Let nstate = 3 '// Enabled Rule is being edited and enabled
+			Else
+				Let nstate = 4 '// Enabled Rule is being edited and disabled
+			End If
+		Else
+			If note.getitemvalue("Enable")(0) = "1" Then
+				Let nstate = 5 '// Disabled Rule is being edited and enabled
+			Else
+				Let nstate = 6 '// Disabled Rule is being edited and disabled
+			End If
+		End If
+	End If
+	
+%REM
+					*** Process states ***
+
+		 nstate is either even or odd, the modulo of that is either 1 or 0
+		1 = enabling a rule (we need to update the profile also)
+		0 = disabling a rule (we need to remove item from the profile if it exists)
+
+%END REM
+	
+	If nstate Mod 2 Then '// Enabling the rule - i.e. nstates(1,3,5)
+		If Not(item Is Nothing) Then
+			If profile.hasitem(strfilteritem) Then
+				Call profile.removeitem(strfilteritem)
+			End If
+			
+			Call item.copyitemtodocument(profile,strfilteritem)
+			Let bprofilesave = True
+		End If
+		
+	Else	'// Disabling the rule - i.e. nstates(2,4,6)
+		If profile.hasitem(strfilteritem) Then
+			Call profile.removeitem(strfilteritem)
+			Let bprofilesave = True
+		End If
+	End If
+	
+	'// $FilterFormulaCount is the total number of rules in the rules folder + 1
+	If nstate = 1 Or nstate = 2 Then
+		
+		If Not (profile.hasitem("$FilterFormulaCount")) Then
+			Call profile.replaceitemvalue("$FilterFormulaCount","2")
+		Else
+			If Cstr(nRuleNum) = "" Then
+				nRuleNum = CompactMailRules(session, db, Profile)
+			End If
+			
+			Call profile.replaceitemvalue("$FilterFormulaCount", Cstr( nRuleNum + 2 ) )
+		End If
+	End If
+	
+	Call note.save(True,False,True)									'// save the rule
+	
+	If bmovetofolder Then Call note.putinfolder("Rules")				'// move the rule to the rules folder
+	
+	If bprofilesave Then 													'// save the profile if the rule is enabled
+		Call profile.save(True, True,True)
+		Call db.enabledboptions(1,True)
+	End If
+	
+	uidoc.close
+	uiws.viewrefresh
+	
+errorCheck:
+	MsgBox maxMsg1 + Chr(13)  +  Chr(13) + maxMsg2  + Chr(13)  + MaxA + Chr(13)  + MaxB + Chr(13)  + MaxC, 16, "Error"	
+	Exit Sub
+	
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionNewRule:1:8
+Sub ActionNewRule
+	' Pass TRUE if Server Rule, False if Mail Rule
+	' This is a Server Mail Rule -  New Rule action on Server Config doc
+	Dim newdoc As notesdocument
+	Dim maildb As notesdatabase
+	Dim session As New notessession
+	Dim ws As New notesuiworkspace
+	Dim uidoc As NotesUIDocument
+	Dim functionname As String
+	
+	On Error Goto TrapError
+	functionName = "Server Rules - Function ActionNewRule"
+	
+	Set uidoc = ws.CurrentDocument
+	'// Trap if user is manipulating the document from
+	'// the view instead of the Config Doc.
+	If (uidoc Is Nothing) Then
+		Messagebox GetString(SPEC_STR27), 48, GetString(SPEC_STR10)
+		Exit Sub
+	End If
+	
+	If uidoc.IsNewDoc Then
+		Messagebox GetString(SPEC_STR29), 48, GetString(SPEC_STR10)
+		Call uidoc.gotofield("ServerName")
+		continue = False
+		Exit Sub
+	End If
+	
+	If IsDocBeingModified(uidoc) Then
+		Set maildb = session.currentdatabase
+		Set newdoc = New notesdocument(maildb)
+		'// Store the common key in the rule
+		Call newdoc.ReplaceItemValue("CfgDocUNID",uidoc.FieldGetText("CfgDocUNID"))
+		Call ws.dialogbox("Mailrule", True, True,True,False,False, False, "Server Mail Rule - New Rule", newdoc, True, True)
+		Call GatherAllRules(uidoc.FieldGetText("CfgDocUNID"), uidoc.Document)
+		Call ws.viewrefresh
+	Else
+		Messagebox  GetString(SPEC_STR17), 48, GetString(SPEC_STR10)
+	End If
+	
+	Exit Sub
+	
+TrapError:
+	Msgbox "Error on " & functionName & "  --> " & (Err & ": " & Error$)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionEditRule:1:8
+Sub ActionEditRule
+	' pass TRUE for SERVER MAIL RULE, false for Mail Rule
+	Dim maildb As notesdatabase
+	Dim session As New notessession
+	Dim ruledocs As notesdocumentcollection
+	Dim oldrule As notesdocument
+	Dim ws As New notesuiworkspace
+	Dim uidoc As NotesUIDocument
+	Dim functionname As String
+	
+	On Error Goto TrapError
+	functionName = "Server Rules - Function ActionEditRule"
+	
+	Set maildb = session.currentdatabase
+	Set ruledocs = maildb.unprocesseddocuments
+	Set uidoc = ws.currentDocument
+	'// Trap if user is manipulating the document from
+	'// the view instead of the Config Doc.
+	If (uidoc Is Nothing) Then
+		Messagebox GetString(SPEC_STR27), 48, GetString(SPEC_STR10)
+		Exit Sub
+	End If
+	
+	If IsDocBeingModified(uidoc) Then
+		If (ruledocs.count = 1) Then
+			Set oldrule = ruledocs.getfirstdocument
+			Call ws.dialogbox("Mailrule", True, True,True,False,False, False, "Server Mail Rule - Edit Rule", oldrule, True, True)
+			Call GatherAllRules(uidoc.FieldGetText("CfgDocUNID"), uidoc.Document)
+			ws.ViewRefresh
+		Else
+	  		'// More than one document is selected
+			Messagebox GetString(SPEC_STR9),16, GetString(SPEC_STR10)
+		End If
+	Else
+		Messagebox GetString(SPEC_STR19), 48, GetString(SPEC_STR20)
+	End If
+	Exit Sub
+	
+TrapError:
+	Msgbox "Error on " & functionName & "  --> " & (Err & ": " & Error$)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionMoveUp:1:8
+Sub ActionMoveUp()
+	
+	Dim note As NotesDocument
+	Dim othernote As NotesDocument
+	Dim ws As New NotesUIWorkspace
+	Dim uidoc As NotesUIDocument
+	Dim functionname As String
+	On Error Goto TrapError
+	functionName = "Server Rules - Function ActionMoveUp"
+	
+	Set uidoc = ws.currentdocument
+	Set uiview=ws.currentview
+	
+	'// Trap if user is manipulating the document from
+	'// the view instead of the Config Doc.
+	If (uidoc Is Nothing) Then
+		Messagebox GetString(SPEC_STR27), 48, GetString(SPEC_STR28)
+		Exit Sub
+	End If
+	
+	If IsDocBeingModified(uidoc) Then
+		Set docselected = db.UnprocessedDocuments
+		If (docselected.Count <> 1) Then
+			Messagebox GetString(SPEC_STR9) ,16, GetString(SPEC_STR28)
+			Exit Sub
+		End If
+		
+		Set note = docselected.GetFirstDocument()
+		Set othernote = view.GetPrevDocument(note)
+		Err =  0
+		If (othernote Is Nothing) Then  '//Check if ther next Note exists...
+			Err = 1
+		Else	'// Are we grabbing documents from another Config Doc?
+			If (Strcompare(othernote.getitemvalue("CFGDOCUNID")(0), note.getitemvalue("CFGDOCUNID")(0),0) <> 0) Then
+				Err = 1
+			End If
+		End If
+		If Err = 1 Then
+			Messagebox GetString(SPEC_STR24), 32, GetString(SPEC_STR28)
+			Exit Sub
+		End If
+		Call SwapDocuments(othernote,note)
+		Call GatherAllRules(uidoc.FieldGetText("CfgDocUNID"), uidoc.Document)
+		ws.ViewRefresh
+		Call uiview.SelectDocument(note)
+	Else
+		Messagebox  GetString(SPEC_STR21), 48, GetString(SPEC_STR28)
+	End If
+	Exit Sub
+	
+TrapError:
+	Msgbox "Error on " & functionName & "  --> " & (Err & ": " & Error$)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionMoveDown:1:8
+Sub ActionMoveDown()
+	Dim note As NotesDocument
+	Dim othernote As NotesDocument
+	Dim ws As New NotesUIWorkspace
+	Dim uidoc As NotesUIDocument
+	Dim functionname As String
+	
+	On Error Goto TrapError
+	functionName = "Server Rules - Function ActionMoveDown"
+	Set uidoc = ws.currentdocument
+	Set uiview=ws.currentview
+	'// Trap if user is manipulating the document from
+	'// the view instead of the Config Doc.
+	If (uidoc Is Nothing) Then
+		Messagebox GetString(SPEC_STR27), 48, GetString(SPEC_STR28)
+		Exit Sub
+	End If
+	
+	If IsDocBeingModified(uidoc) Then
+		Set docselected = db.UnprocessedDocuments
+		If (docselected.Count <> 1) Then
+			Messagebox GetString(SPEC_STR9),16,GetString(SPEC_STR28)
+			Exit Sub
+		End If
+		
+		Set note = docselected.GetFirstDocument()
+		Set othernote = view.GetNextDocument(note)
+		Err = 0
+		'//Check if ther next Note exists...
+		If (othernote Is Nothing) Then
+			Err = 1
+		Else	'// Are grabbing documents from another Config Doc?
+			If (Strcompare(othernote.getitemvalue("CFGDOCUNID")(0), note.getitemvalue("CFGDOCUNID")(0),0) <> 0) Then
+				Err = 1
+			End If
+		End If
+		If Err = 1 Then
+			Messagebox GetString(SPEC_STR23), 32, GetString(SPEC_STR28)
+			Exit Sub
+		End If
+		
+		Call SwapDocuments(othernote,note)
+		Call GatherAllRules(uidoc.FieldGetText("CfgDocUNID"), uidoc.Document)
+		ws.ViewRefresh
+		uiview.SelectDocument(note)
+	Else
+		Messagebox GetString(SPEC_STR21), 48, GetString(SPEC_STR28)
+	End If
+	Exit Sub
+	
+TrapError:
+	Msgbox "Error on " & functionName & "  --> " & (Err & ": " & Error$)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionEnableRule:1:8
+Sub ActionEnableRule
+	Dim note As NotesDocument
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim docselected As NotesDocumentCollection
+	Dim ws As New NotesUIWorkspace
+	Dim uidoc As NotesUIDocument
+	Dim functionname As String
+	Dim x As Integer
+	
+	On Error Goto TrapError
+	functionName = "Server Rules - Function ActionEnableRule"
+	Set uidoc = ws.currentdocument
+	'// Trap if user is manipulating the document from
+	'// the view instead of the Config Doc.
+	If (uidoc Is Nothing) Then
+		Messagebox GetString(SPEC_STR27), 48, GetString(SPEC_STR10)
+		Exit Sub
+	End If
+	Set db = session.currentdatabase
+	
+	If IsDocBeingModified(uidoc) Then
+		Set docselected = db.UnprocessedDocuments
+		If docselected.count <>0 Then
+			Set note = docselected.GetFirstDocument()
+			For x=1 To docselected.count
+				Call note.replaceitemvalue("Enable","1")
+				' save the note
+				Call note.save(True,False,True)
+				Set note = docselected.GetNextDocument(note)
+			Next
+			Call GatherAllRules(uidoc.FieldGetText("CfgDocUNID"), uidoc.Document)
+			ws.ViewRefresh
+		End If
+	Else
+		Messagebox  GetString(SPEC_STR15), 48, GetString(SPEC_STR16)
+	End If
+	Exit Sub
+	
+TrapError:
+	Msgbox "Error on " & functionName & "  --> " & (Err & ": " & Error$)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionDisableRule:1:8
+Sub ActionDisableRule
+	Dim note As NotesDocument
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim docselected As NotesDocumentCollection
+	Dim ws As New NotesUIWorkspace
+	Dim uidoc As NotesUIDocument
+	Dim functionname As String
+	Dim x As Integer
+	
+	On Error Goto TrapError
+	functionName = "Server Rules - Function ActionDisableRule"
+	Set uidoc = ws.currentdocument
+	'// Trap if user is manipulating the document from
+	'// the view instead of the Config Doc.
+	If (uidoc Is Nothing) Then
+		Messagebox GetString(SPEC_STR27), 48, GetString(SPEC_STR10)
+		Exit Sub
+	End If
+	
+	Set db = session.currentdatabase
+	If IsDocBeingModified(uidoc) Then
+		Set docselected = db.UnprocessedDocuments
+		If docselected.count <>0 Then
+			Set note = docselected.GetFirstDocument()
+			For x=1 To docselected.count
+				Call note.replaceitemvalue("Enable","0")
+				' save the note
+				Call note.save(True,False,True)
+				Set note = docselected.GetNextDocument(note)
+			Next
+			Call GatherAllRules(uidoc.FieldGetText("CfgDocUNID"), uidoc.Document)
+			ws.ViewRefresh
+		End If
+	Else
+		Messagebox GetString(SPEC_STR13), 48, GetString(SPEC_STR14)
+	End If
+	Exit Sub
+	
+TrapError:
+	Msgbox "Error on " & functionName & "  --> " & (Err & ": " & Error$)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:SwapDocuments:1:8
+Sub SwapDocuments(SourceDoc As NotesDocument,DestDoc As NotesDocument)
+	Dim ssort As Integer
+	Dim dsort As Integer
+	
+	ssort = Cint(sourcedoc.OrderNum(0))
+	dsort = Cint(destdoc.OrderNum(0))
+	
+	If ssort=dsort Then dsort=dsort+1
+	
+	Call SourceDoc.replaceitemvalue("OrderNum", Cstr(dsort))
+	Call  DestDoc.replaceitemvalue("OrderNum", Cstr(ssort))
+	Call SourceDoc.Save(True,False,True)
+	Call DestDoc.Save(True,False,True)
+End Sub
+
+'++LotusScript Development Environment:2:2:SwitchFormula:1:8
+Sub SwitchFormula(SourceDoc As notesdocument, DestDoc As notesdocument, dsort As Integer, ssort As Integer, bserver As Integer)
+ 'need to modify the formula_# item number on the profile note if the rule is enabled
+	Dim item1 As notesitem
+	Dim item2 As notesitem
+	Dim bprofilesave As Integer
+	' Server support
+	Dim session As NotesSession
+	Dim db As NotesDatabase
+	Dim view As NotesView
+	Dim doc As NotesDocument
+	
+	If bserver Then
+		Set profile = GetConfigDoc( SourceDoc.GetItemValue("CfgDocUNID")(0) )
+	Else
+		Set profile= db.GetProfileDocument("CalendarProfile")
+	End If
+	If SourceDoc.getitemvalue("Enable")(0) = "1" And DestDoc.getitemvalue("Enable")(0) = "1" Then
+		Set item1=sourcedoc.getfirstitem("$FilterFormula")
+		Set item2 = destdoc.getfirstitem("$FilterFormula")
+		If Not(item1 Is Nothing) Then Call item1.copyitemtodocument(profile,"$FilterFormula_"+Cstr(dsort))
+		If Not(item2 Is Nothing) Then Call item2.copyitemtodocument(profile,"$FilterFormula_"+Cstr(ssort))
+		bprofilesave = True
+	Elseif SourceDoc.getitemvalue("Enable")(0)="1" And DestDoc.getitemvalue("Enable")(0) = "0" Then
+		Set item1=sourcedoc.getfirstitem("$FilterFormula")
+		If Not(item1 Is Nothing) Then Call item1.copyitemtodocument(profile,"$FilterFormula_"+Cstr(dsort))
+		Call profile.removeitem("$FilterFormula_"+Cstr(ssort))
+		bprofilesave = True
+	Elseif SourceDoc.getitemvalue("Enable")(0)="0" And DestDoc.getitemvalue("Enable")(0) = "1" Then
+		Set item2 = destdoc.getfirstitem("$FilterFormula")
+		If Not(item2 Is Nothing) Then Call item2.copyitemtodocument(profile,"$FilterFormula_"+Cstr(ssort))
+		Call profile.removeitem("$FilterFormula_"+Cstr(dsort))
+		bprofilesave = True
+	Else
+		bprofilesave = False
+	End If
+	
+	If bprofilesave Then Call profile.save(True, True,True)
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:ArrayToString:1:8
+Function ArrayToString(vInput As Variant, mySep As String) As String
+	
+	'// This function is part of LogToFile Function
+	Dim i As Integer
+	Dim sep As String
+	
+	If Isempty(mySep) Then
+		Let sep = ", "
+	Else
+		Let sep = mySep
+	End If
+	
+	Let ArrayToString = ""
+	If Isarray(vInput) Then
+		For i = 0 To Ubound(vInput)
+			If Not i= 0 Then
+				ArrayToString = ArrayToString + sep + vInput(i)
+			Else
+				ArrayToString = ArrayToString + vInput(i)
+			End If
+		Next
+	Else
+		Let sep = ""
+	End If
+End Function
+
+'++LotusScript Development Environment:2:1:BehaviorString:1:8
+Function BehaviorString(vbehavior As String)
+	
+	Select Case vbehavior
+	Case "1"
+		BehaviorString = GetString(ACT_MARKHELD)
+	Case "2"
+		BehaviorString = GetString(ACT_MARKDEAD)
+	Case "3"
+		BehaviorString = GetString(ACT_SILENTLYDELETE)
+	Case "4"
+		BehaviorString = GetString(ACT_SENDNDRFULL)
+	Case "5"
+		BehaviorString = GetString( ACT_SENDNDRHEADER)
+	Case "D"
+		BehaviorString = GetString( ACT_DAY)
+	Case "W"
+		BehaviorString = GetString( ACT_WEEK)
+	Case "M"
+		BehaviorString = GetString( ACT_MONTH)
+	Case "Y"
+		BehaviorString = GetString( ACT_YEAR)
+	End Select
+End Function
+
+'++LotusScript Development Environment:2:2:ButtonOKSRV:1:8
+Sub ButtonOKSRV()
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim view As notesview
+	Dim collection As NotesDocumentCollection
+	Dim entry As NotesViewEntry
+	Dim item As notesitem
+	Dim nrulenum As Integer
+	Dim ruledoc As notesdocument
+	Dim i As Integer
+	Dim sConfigRule As String
+	
+	Set db = session.currentdatabase
+	
+	If note.conditionlist(0) = "" Then
+		Msgbox getString(SPEC_STR2), 16
+		Exit Sub
+	Elseif note.actionlist(0) = "" Then
+		Msgbox getString(SPEC_STR3), 16
+		Exit Sub
+	End If
+	
+	'//First give the rule a sequence number if it's a new rule
+	If note.isnewnote Then
+		Set view = db.GetView("Rules")
+		Set collection = view.GetAllDocumentsByKey( Lcase( note.GetItemValue("CfgDocUNID")(0) ), True )
+		If collection.Count > 0 Then
+			Set ruledoc = collection.GetFirstDocument()
+			For i = 1 To collection.count
+				sConfigRule = ruledoc.getitemvalue("Ordernum")(0)
+				If nrulenum < Cint( sConfigRule ) Then
+					nrulenum = Cint( sConfigRule )
+				End If
+				Set ruledoc = collection.GetNextDocument(ruledoc)
+			Next
+			nrulenum = ( nrulenum + 1)
+		Else
+			nrulenum = 0
+		End If
+		Call note.ReplaceItemValue("OrderNum", nrulenum)
+	End If
+	'// Start building Conditions - Must have at least one Condition
+	Call ProcessConditions()
+	'// Start building Exceptions, if any
+	Call ProcessExceptions()
+	'// Start building Actions - Must have at least one Action
+	If Not ProcessActions Then Exit Sub
+	'// Enhanced performance to the final Rule formula, if applicable
+	s_MAINFORMULA = FormulaEnhanceFactory + s_MAINFORMULA
+	'// *****************************************************
+	
+	Set item = note.getfirstitem("$FilterFormula")
+	item.values = s_MAINFORMULA
+	Call note.computewithform(False,False)
+	Call note.save(True, True,True)
+	uidoc.close
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:IsDocBeingModified:1:8
+Function IsDocBeingModified(source As NotesUIDocument)
+	
+	'// Function used to check if a doc is new or being edited - so a save call can be made
+	IsDocBeingModified = False
+	If source.IsNewDoc Or source.EditMode Then
+		IsDocBeingModified = True
+	End If
+End Function
+
+'++LotusScript Development Environment:2:2:GatherRules:1:8
+Sub GatherRules(ConfigDocUNID As String, Doc As NotesDocument)
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim view As NotesView
+	Dim collection As NotesDocumentCollection
+	Dim note As NotesDocument
+	Dim item As NotesItem
+	Dim strfilteritem As String
+	Dim nrulenum As Integer
+	Dim nfiltercount As Integer
+	Dim i As Integer
+	
+	Set db = session.CurrentDatabase
+	Set view = db.GetView("Rules")
+	Call view.refresh
+	Set collection = view.GetAllDocumentsByKey(ConfigDocUNID, True)
+	'// Remove all $Filter items
+	Forall items In doc.items
+		If items.type = 1536 Then
+			If Lcase(Left(items.name,7)) = "$filter" Then
+				Call items.remove()
+			End If
+		End If
+	End Forall
+	
+	If collection.count > 0 Then
+		Set note = collection.GetFirstDocument
+		For i = 1 To collection.count
+			If Not doc Is Nothing Then
+				If nfiltercount < Cstr(note.getitemvalue("ordernum")(0)) Then
+					nfiltercount = Cstr(note.getitemvalue("ordernum")(0))
+				End If
+				nrulenum = note.getitemvalue("ordernum")(0)
+				strfilteritem = "$FilterFormula_"+Cstr(nrulenum)
+				If note.getitemvalue("Enable")(0)="1" Then
+					Set item = note.GetFirstItem("$FilterFormula")
+					If doc.hasitem(strfilteritem) Then doc.removeitem(strfilteritem)
+					If Not(item Is Nothing) Then Call item.copyitemtodocument(doc,strfilteritem)
+				End If
+			End If
+			Set note = collection.GetNextDocument(note)
+		Next
+		'// Enable rules checking in NSF
+		Call db.enabledboptions(1,True)
+		Call doc.replaceitemvalue("$FilterFormulaCount", Cstr(nfiltercount+1))
+		If Not (doc.hasitem("$FiltersSeqNo")) Then
+			Call doc.replaceitemvalue("$FiltersSeqNo", "1")
+		Else
+			Call doc.replaceitemvalue("$FiltersSeqNo", Cstr( Cint( doc.getitemvalue( "$FiltersSeqNo" )(0) )+1 ))
+			
+		End If
+		'// The server config doc is saved in the query save
+	End If
+End Sub
+
+'++LotusScript Development Environment:2:1:GetConfigDoc:1:8
+Function GetConfigDoc(Key As String) As NotesDocument
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim view As NotesView
+	Dim doc As NotesDocument
+	If Trim(Key) = "" Then
+		Exit Function
+	End If
+	
+	Set db = session.CurrentDatabase
+	Set view = db.GetView("($ServerConfig)")
+	Set doc = view.GetDocumentByKey(Key, True)
+	If doc Is Nothing Then
+		Exit Function
+	End If
+	Set GetConfigDoc = doc
+End Function
+
+'++LotusScript Development Environment:2:2:ActionDeleteRule:1:8
+Sub ActionDeleteRule()
+	Dim note As NotesDocument
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim docselected As NotesDocumentCollection
+	Dim ws As New NotesUIWorkspace
+	Dim uidoc As NotesUIDocument
+	Dim functionname As String
+	
+	On Error Goto TrapError
+	functionName = "Server Rules - Function ActionDeleteRule"
+	Set uidoc = ws.currentdocument
+	'// Trap if user is manipulating the document from
+	'// the view instead of the Config Doc.
+	If (uidoc Is Nothing) Then
+		Messagebox GetString(SPEC_STR27), 48, GetString(SPEC_STR10)
+		Exit Sub
+	End If
+	Set db = session.currentdatabase
+	
+	If IsDocBeingModified(uidoc) Then
+		Set docselected = db.UnprocessedDocuments
+		If docselected.count <>0 Then
+			answer = Msgbox (GetString(SPEC_STR30), 4 + 32, GetString(SPEC_STR12))
+			If answer = 7 Then
+				continue = False
+				Exit Sub
+			End If
+			Set note = docselected.GetFirstDocument()
+			'//Deleting the Rule now
+			note.remove( True)
+			Call GatherAllRules(uidoc.FieldGetText("CfgDocUNID"), uidoc.Document)
+			ws.ViewRefresh
+		End If
+	Else
+		Messagebox  GetString(SPEC_STR11), 48, GetString(SPEC_STR12)
+	End If
+	Exit Sub
+	
+TrapError:
+	Msgbox "Error on " & functionName & "  --> " & (Err & ": " & Error$)
+	Exit Sub
+End Sub
+
+'++LotusScript Development Environment:2:2:ResetCondition:1:8
+Sub ResetCondition()
+	'//Reset all Condition fields to initial values
+	Call note.replaceitemvalue("type", "0")
+	Call note.replaceitemvalue("Operator", "0")
+	Call note.replaceitemvalue("Condition", "1")
+	Call note.replaceitemvalue("Logic","1")
+	Call note.replaceitemvalue("String", "")
+	Call note.replaceitemvalue("domainlist", "")
+	uidoc.refresh
+End Sub
+
+'++LotusScript Development Environment:2:2:ResetActions:1:8
+Sub ResetActions()
+	
+	'// This Sub will work for Client or Server
+	If note.hasitem("CfgDocUNID") Then
+		'//Only server rules form has this item
+		Call note.replaceitemvalue("action", "5")
+	Else
+		'//Only mail rules form has these items
+		Call note.replaceitemvalue("action", "1")
+		Call note.replaceitemvalue("CopyTo_Address","")
+	End If
+	
+	Call note.replaceitemvalue("folder","")
+	Call note.replaceitemvalue("importancecond","1")
+	Call note.replaceitemvalue("behavior", "1")
+	uidoc.refresh
+End Sub
+
+'++LotusScript Development Environment:2:2:ActionDeleteServerConfig:1:8
+Sub ActionDeleteServerConfig()
+	Dim session As New NotesSession
+	Dim workspace As New NotesUIWorkspace
+	Dim db As NotesDatabase
+	Dim view As NotesView
+	Dim collection As NotesDocumentCollection
+	Dim docselected As NotesDocumentCollection
+	Dim note As NotesDocument
+	Dim boxType As Long
+	Dim answer As Integer
+	Dim ws As New NotesUIWorkspace
+	Dim uidoc As NotesUIDocument
+	Dim DocId As Variant
+	
+	Set uidoc = ws.currentdocument
+	Set db = session.currentdatabase
+	Set docselected = db.UnprocessedDocuments
+	Set note = docselected.GetFirstDocument
+	DocId = note.GetItemValue("ConfigDocUNID")
+	
+	'//Check if no/more doc has been selected
+	If (docselected.Count <> 1) Then
+		Messagebox GetString(SPEC_STR9) ,16, GetString(SPEC_STR10)
+		Exit Sub
+	End If
+	'//Delete children documents
+	Set view = db.GetView("Rules")
+	Call view.refresh
+	Set collection = view.GetAllDocumentsByKey(DocId, True)
+	'//Deletion Warning
+	If (collection.count >= 0) Then
+		boxType = MB_YESNO+ MB_ICONQUESTION
+		answer = Messagebox(GetString(SPEC_STR7), boxType&, GetString(SPEC_STR8))
+		If answer = MB_NO Then
+			Exit Sub
+		Else
+			Call collection.RemoveAll(True)
+			'//Delete Main document
+			Call note.Remove(True)
+			Call workspace.ViewRefresh
+		End If
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:ValidateAction:1:8
+Function ValidateAction(ACT_sActionValue) As Integer
+	
+	ValidateAction = True
+	
+	If ACT_sActionValue <> "" Then
+		
+		Select Case ACT_sActionValue
+			
+		Case "1","4","6"
+			If ACT_sFolder = "" Then
+				Msgbox getString(SPEC_STR3), 16, GetString(SPEC_STR28)
+				ValidateAction = False
+				Goto done
+			End If
+		Case  "2", "3", "5", "7", "C"
+			Goto done
+		Case "8", "9"
+			If ACT_sBehavior = "" Then
+				Msgbox getString(SPEC_STR3), 16
+				ValidateAction = False
+			End If
+		Case "A"	'//Set Expire
+			If (ACT_sExpNumber) = "" Or Cint(ACT_sExpNumber) < 1 Or Cint(ACT_sExpNumber > 999) Then
+				Msgbox getString(SPEC_STR5),16, GetString(SPEC_STR28)
+				ValidateAction = False
+				Goto done
+			End If
+		Case "B" 	'//Copy To
+			If (ACT_vAddress(0) = "" ) Then
+				Msgbox getString(SPEC_STR6),16, GetString(SPEC_STR28)
+				validateAction = True
+				Goto done
+			End If
+			
+			If Isarray(ACT_vAddress) Then	'//Clean up forwarding addresses
+				Dim SizeOfArray As Long
+				SizeOfArray = 0
+				For i = 0 To Ubound(ACT_vAddress)
+					Set xname = New notesname(ACT_vAddress(i))
+					If xname.Ishierarchical Then
+						ACT_vAddress(i) = xname.Abbreviated
+					End If
+					SizeOfArray = SizeofArray + Len(ACT_vAddress(i))
+				Next
+				If (SizeOfArray > 13000) Then	'//Prevent list of addresses greater than 13K
+					Msgbox getString(SPEC_STR25),16, GetString(SPEC_STR28)
+					ValidateAction = False
+					Goto done
+				End If
+			End If
+		End Select
+	End If
+Done:
+	
+End Function
+
+'++LotusScript Development Environment:2:1:ValidateCondition:1:8
+Function ValidateCondition()
+	
+	Call GetGlobalCondValues()
+	ValidateCondition = True
+	
+	Select Case COND_sCondition
+		
+	Case "B"
+		If Trim(note.getitemvalue("domainlist")(0)) = "" Then
+			Msgbox getString(SPEC_STR2), 16, GetString(SPEC_STR28)
+			ValidateCondition = False
+		End If
+		
+	Case "1","2","3","6","7","8","9","A","C","E","F","G","H","I"
+		If Trim(note.getitemvalue("string")(0)) = "" Then
+			Msgbox getString(SPEC_STR2), 16, GetString(SPEC_STR28)
+			ValidateCondition = False
+			'//Not allowed characteres - These would break the final formula
+			Elseif (uidoc.fieldcontains(Trim("string"), |"|))_   'Quotes
+			Or (uidoc.fieldcontains(Trim("string"), |;|))_       'Semicolon
+			Or (uidoc.fieldcontains(Trim("string"), |,|))_     'Comma
+			Or (uidoc.fieldcontains(Trim("string"), |\|))_     'Backslash
+		Or (uidoc.fieldcontains(Trim("string"), "*"))Then		'Asterisk
+			Msgbox getString(SPEC_STR26), 16, GetString(SPEC_STR28)
+			ValidateCondition = False
+		End If
+		
+	Case "4","5"
+		If Trim(note.getitemvalue("importance")(0)) = "" Then
+			Msgbox getString(SPEC_STR2), 16, GetString(SPEC_STR28)
+			ValidateCondition = False
+		End If
+		
+	End Select
+End Function
+
+'++LotusScript Development Environment:2:2:ButtonOKWeb:1:8
+Sub ButtonOKWeb(Note As Notesdocument)
+	'//This Sub is used for the Web Mail client.
+	'//This code creates the filter action formula to be
+	'//used by the mail router and stores the compiled formula
+	'//in field $FilterFormula
+%REM
+There are six potential states a rule can be in
+1 - saving a New Rule Enabled
+2 - saving a New Rule Disabled
+3 - saving an edited rule enabled (was enabled)
+4 - saving an edited rule disabled (was enabled)
+5 - saving an edited rule enabled (was disabled)
+6 - saving an edited rule disabled (was disabled
+odd states are enabled (meaning you must add or update items on the profile)
+even states are disabled (meaning nothing needs to be added to the profile)
+%END REM
+	
+	Dim viewcollection As notesviewentrycollection
+	Dim view As notesview
+	Dim profile As notesdocument
+	Dim item As notesitem
+	Dim configview As NotesView
+	Dim bprofilesave As Integer
+	Dim bmovetofolder As Integer
+	Dim nrulenum As Integer
+	Dim strfilteritem As String
+	Dim nstate As Integer
+	
+	Set session = New notessession
+	Set db = session.currentdatabase
+	'Call wInstantiateObjectVariables
+	Set profile= db.GetProfileDocument("CalendarProfile")
+	Set view = db.getview("Rules")
+	Call view.Refresh
+	
+	'// Check for existance of the Cal Profile Note
+	'// In rare case where the dbopen creates the profile
+	If Not(profile.HasItem("Owner")) Then
+		profile.Form = "CalendarProfile"
+		Call profile.ComputeWithForm(False,False)
+	End If
+	
+	'// ****************   Build the rule   ************************
+	
+	'// Start building Conditions - Must have at least one Condition
+	Call ProcessConditions()
+	'// Start building Exceptions, if any
+	Call ProcessExceptions()
+	'// Start building Actions - Must have at least one Action
+	If Not ProcessActions Then Exit Sub
+	'// Enhanced performance to the final Rule formula, if applicable
+	s_MAINFORMULA = FormulaEnhanceFactory + s_MAINFORMULA
+	'// *****************************************************
+	
+	Set item=note.getfirstitem("$FilterFormula")
+	item.values = s_MAINFORMULA
+	Call note.computewithform(False,False)
+	bmovetofolder=True
+	
+	If note.isnewnote Then '// Creating a new rule
+		nrulenum = CompactMailRules(session, db, Profile)
+		Call note.replaceitemvalue("OrderNum", Cstr( nrulenum + 1) )
+		strfilteritem = "$FilterFormula_"+Cstr( nrulenum  +1 )
+		
+		If note.getitemvalue("Enable")(0) = "1" Then
+			Let nstate = 1 '// new rule enabled
+		Else
+			Let nstate = 2 '// new rule disabled
+		End If
+		
+	Else '// Editing an existing rule
+		
+		nrulenum = note.getitemvalue( "ordernum" )(0) '// Pull out the sequence number
+		strfilteritem = "$FilterFormula_"+ Cstr( nrulenum ) '// Build the formula item that is on the profile
+		
+		If profile.hasitem( strfilteritem ) Then
+			If note.getitemvalue("Enable")(0) = "1" Then
+				Let nstate = 3 '// Enabled Rule is being edited and enabled
+			Else
+				Let nstate = 4 '// Enabled Rule is being edited and disabled
+			End If
+		Else
+			If note.getitemvalue("Enable")(0) = "1" Then
+				Let nstate = 5 '// Disabled Rule is being edited and enabled
+			Else
+				Let nstate = 6 '// Disabled Rule is being edited and disabled
+			End If
+		End If
+	End If
+	
+%REM
+					*** Process states ***
+
+		 nstate is either even or odd, the modulo of that is either 1 or 0
+		1 = enabling a rule (we need to update the profile also)
+		0 = disabling a rule (we need to remove item from the profile if it exists)
+
+%END REM
+	
+	If nstate Mod 2 Then '// Enabling the rule - i.e. nstates(1,3,5)
+		If Not(item Is Nothing) Then
+			If profile.hasitem(strfilteritem) Then
+				Call profile.removeitem(strfilteritem)
+			End If
+			
+			Call item.copyitemtodocument(profile,strfilteritem)
+			Let bprofilesave = True
+		End If
+		
+	Else	'// Disabling the rule - i.e. nstates(2,4,6)
+		If profile.hasitem(strfilteritem) Then
+			Call profile.removeitem(strfilteritem)
+			Let bprofilesave = True
+		End If
+	End If
+	
+	'// $FilterFormulaCount is the total number of rules in the rules folder + 1
+	If nstate = 1 Or nstate = 2 Then
+		
+		If Not (profile.hasitem("$FilterFormulaCount")) Then
+			Call profile.replaceitemvalue("$FilterFormulaCount","2")
+		Else
+			If Cstr(nRuleNum) = "" Then
+				nRuleNum = CompactMailRules(session, db, Profile)
+			End If
+			Call profile.replaceitemvalue("$FilterFormulaCount", Cstr( nRuleNum + 2 ) )
+		End If
+	End If
+	
+	Call note.save(True,False,True)									'// save the rule
+	
+	If bmovetofolder Then Call note.putinfolder("Rules")				'// move the rule to the rules folder
+	
+	If bprofilesave Then 													'// save the profile if the rule is enabled
+		Call profile.save(True, True,True)
+		Call db.enabledboptions(1,True)
+	End If
+	
+	'Call agentlog.logaction("success!!")
+	' Provisional URL
+	tmp1$ = note.getitemvalue("path")(0)
+	Print "["+tmp1$+"/MailFS?OpenFrameSet&Frame=NotesView&src=%2F" & tmp1$ & "%2FRules%3FOpenView]"
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:ValidateSystemFolder:1:8
+Function ValidateSystemFolder(NameFolder As String)
+	
+	'//This validates and excludes system's folders
+	
+	Let validateSystemFolder = False
+	If  ( Left(NameFolder, 1) = "(" And Right( NameFolder, 1) = ")")  Or ( Left( NameFolder, 1 ) = "$") Or (NameFolder = "Rules")  Then
+		Let validateSystemFolder = True
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:1:CompactMailRules:1:8
+Function CompactMailRules (tmpSession As NotesSession, tmpdb As NotesDatabase, CalProfile As NotesDocument) As Integer
+	
+	Static nErrors As Integer
+	
+	Dim tmpRuleDoc As NotesDocument
+	Dim tmpView As NotesView
+	Dim tmpViewCollection As NotesViewEntryCollection
+	Dim tmpViewEntry As NotesViewEntry
+	Dim tmpNotesItem As notesitem
+	Dim strFilterItem As String
+	Dim nTotalEnableRules As Integer
+	
+	On Error Goto Errhandle
+	
+	Set tmpView = tmpdb.GetView("(Rules)")
+	Call tmpView.Refresh
+	Set tmpViewCollection = tmpView.AllEntries
+	
+	'// Delete all $FilterFormula_x items off the Calendar Profile
+	'// $filterformula_0 is reserve to MiniView - leave it alone
+	If Not(CalProfile Is Nothing) Then
+		'//Clean Profile from all $FilterFormula_x
+		Forall items In CalProfile.items
+			If items.type = 1536 Then
+				If Lcase(Left(items.name,15)) = "$filterformula_" Then
+					If Not ( Lcase( Left( items.name,16 ) ) = "$filterformula_0" ) Then '//Reseved for MiniView
+						Call items.remove()
+					End If
+				End If
+			End If
+		End Forall
+		
+		'//Reset counter
+		nTotalEnableRules = 0
+		
+		'//Synch Rule OrderNum with Profile $FilterFormula
+		If tmpViewCollection.count > 0 Then
+			Set tmpViewEntry = tmpViewCollection.getfirstentry()
+			While Not( tmpViewEntry Is Nothing )
+				nTotalEnableRules = nTotalEnableRules + 1
+				Set tmpRuleDoc = tmpViewEntry.Document
+				'// Make sure Enabled Rules have a reference in the Calendar Profile
+				'// Disable Rules don't have a reference. Howerver, we need to reserve it's location in CalProfile
+				'// in case the user enables it again.
+				If tmpRuleDoc.GetItemValue("Enable")(0) = "1" Then
+					Set tmpNotesItem = tmpRuleDoc.GetFirstItem("$FilterFormula")
+					strfilteritem = "$FilterFormula_"+Cstr(nTotalEnableRules)
+					Call tmpNotesItem.copyitemtodocument(CalProfile,strfilteritem)
+				End If
+				
+				'// if the Rule in scope is out of sync, fix it!
+				If (tmpRuleDoc.GetItemValue("OrderNum")(0) <>  Cstr(nTotalEnableRules)) Then
+					Call tmpRuleDoc.replaceitemvalue("OrderNum", Cstr( nTotalEnableRules ) )
+					Call tmpRuleDoc.Save(True,True)
+				End If
+				
+				'// Get next Rule
+				Set tmpViewEntry = tmpViewCollection.GetNextEntry( tmpViewEntry )
+			Wend
+		End If
+	End If
+	
+	If nTotalEnableRules < 1 Then
+		CompactMailRules = 1
+	Else
+		CompactMailRules = nTotalEnableRules
+	End If
+	
+	Exit Function
+	
+Errhandle:
+	' Use the Err function to return the error number and
+   	' the Error$ function to return the error message.
+	
+	Messagebox "Error in CompactMailRules function " & Str(Err) & ": " & Error$
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:2:ButtonOKQuick:1:8
+Sub ButtonOKQuick()
+	
+	'This code creates the filter action formula to be used by the mail router and puts it in a field called $FilterFormula
+	Dim session As notessession
+	Dim uiws As New notesuiworkspace
+	Dim viewcollection As NotesViewEntryCollection
+	Dim db As NotesDatabase
+	Dim view As NotesView
+	Dim profile As NotesDocument
+	Dim item As NotesItem
+	Dim configview As NotesView
+	
+	
+	Dim strFilterItem As String
+	Dim functionName As String
+	Dim strDSPCond As String
+	Dim ConditionOK As Integer
+	Dim ActionOK As Integer
+	Dim nstate As Integer
+	Dim bProfileSave As Integer
+	Dim bMoveToFolder As Integer
+	Dim nRuleNum As Integer
+	Dim iInvalidChar As Integer
+	
+	On Error Goto TrapError
+	functionName = "Rules Lib - Function ButtonOKQuick"
+	
+	Set session = New notessession
+	Set db = session.currentdatabase
+	Set profile= db.GetProfileDocument("CalendarProfile")
+	Set view = db.getview("Rules")
+	nrulenum = CompactMailRules(session, db, profile)
+	Call view.Refresh
+	
+	'// Check to see if the profile already existed - rare case where the dbopen creates the profile
+	If Not(profile.HasItem("Owner")) Then
+		profile.Form = "CalendarProfile"
+		Call profile.ComputeWithForm(False,False)
+	End If
+	
+	Set note = uiDoc.document
+	
+	'============HANDLING CONDITION =====================
+	Dim strCondList List As String
+	strCondList(1) = note.GetitemValue("Condition_1")(0)
+	strCondList(2) = note.GetitemValue("Condition_2")(0)
+	strCondList(3) = note.GetitemValue("Condition_B")(0)
+	ConditionOK = False
+	Set COND_it_ConditionlLst = note.getfirstitem("ConditionList")
+	Set COND_it_TokConditionList = note.getfirstitem("tokConditionList")
+	
+	Forall x In strCondList
+		If Not (x = "") Then
+			ConditionOK = False '// Always reset flag
+			iInvalidChar = False
+			
+			COND_sOperator = note.getitemValue("Operator")(0)
+			COND_sCondition = note.getitemValue("Condition_"+x)(0)
+			COND_sLogic = note.getItemValue("Logic_"+x)(0)
+			COND_sString = note.getItemValue("Entry_"+x)(0)
+			
+			'// Validating now
+			If COND_sString = "" Then
+				Goto ValidateRule		'// Validating user entry values
+				Elseif Instr(1,COND_sString, |"|) <> 0_
+				Or Instr(1,COND_sString, |;|) <> 0_
+				Or Instr(1,COND_sString, |,|) <> 0_
+				Or Instr(1,COND_sString, |\|) <> 0_
+			Or Instr(1,COND_sString, "*") <> 0 Then
+				iInvalidChar = True
+				Goto ValidateRule		'// Validating user entry values
+			End If
+			
+			ConditionOK = True 					'// We have at least one Condition
+			
+			If COND_it_ConditionlLst.values(0) = "" Then
+				strDSPCond = "  "+ FieldString( COND_sCondition ) + LogicString( COND_sLogic , COND_sCondition ) + COND_sString
+			Else
+				strDSPCond = Trim(OperatorString( COND_sOperator )) + FieldString( COND_sCondition ) + LogicString( COND_sLogic, COND_sCondition ) + COND_sString
+			End If
+			
+			'//Store UI phrase
+			Call COND_it_ConditionlLst.AppendToTextList( strDSPCond )
+			
+			'//Build Condition Token phrase ======= Condition | Logic | StringValue | Operator
+			'// Store Token phrase
+			Call COND_it_TokConditionList.AppendToTextList( COND_sCondition + STR_TOKENSEPARATOR +_
+			COND_sLogic + STR_TOKENSEPARATOR+ COND_sString + STR_TOKENSEPARATOR + COND_sOperator )
+			
+			'//Reset Variables
+			COND_sOperator = ""
+			COND_sCondition = ""
+			COND_sLogic = ""
+			COND_sString = ""
+		End If
+	End Forall
+	
+	If Not (ConditionOK) Then Goto ValidateRule
+	
+	'============ HANDLING ACTION =====================
+	Call GetGlobalActionValues()
+	ActionOK = False
+	If (ACT_sAction = "1" ) Then
+		If ACT_sFolder = "" Then Goto ValidateRule
+		ACT_sString = note.folder(0)		'//Hold Folder name for display purposes
+		ACT_sFolder = ValidateFolder(ACT_sString)
+		If ACT_sFolder = "" Then Goto ValidateRule
+	End If
+	'//Build Action Token phrase with this format =======>> Action | Logic | StringValue | Operator
+	'//Able to hard code the logic ( 1 ) because we only handle single Actions in Quick Rules
+	Select Case ACT_sAction
+	Case 1			'MovetoFolder
+		note.tokactionlist = Cstr(ACT_sAction + STR_TOKENSEPARATOR + "1" + STR_TOKENSEPARATOR + ACT_sString )
+		note.actionlist = GetString(ACT_MOVETOFOLDER) + ACT_sString
+		ActionOK = True
+	Case 2			'Importance
+		note.tokactionlist = Cstr(ACT_sAction + STR_TOKENSEPARATOR + "1" + STR_TOKENSEPARATOR + ACT_sImportance )
+		note.actionlist = GetString(ACT_CHANGEIMP) + GetString(ACT_HIGH)
+		ActionOK = True
+	Case 3			'Delete
+		note.tokactionlist = Cstr(ACT_sAction + STR_TOKENSEPARATOR + "1" + STR_TOKENSEPARATOR)
+		note.actionlist = GetString(ACT_DELETE)
+		ActionOK = True
+	Case Else
+		Exit Sub
+	End Select
+	
+ValidateRule:
+	ResetRule = False
+	If Not (ConditionOK) Then		'// Validate Condition
+		If (iInvalidChar) Then
+			Msgbox getString(SPEC_STR26), 16, GetString(SPEC_STR28)
+		Else
+			Msgbox getString(SPEC_STR2), 16, GetString(SPEC_STR28)
+			
+		End If
+		ResetRule = True
+	Elseif Not (ActionOK) Then
+		Msgbox getstring(SPEC_STR4), 16, GetString(SPEC_STR28)
+		ResetRule = True
+	End If
+	
+	If ResetRule Then
+		'// Reset Condition values
+		Set COND_it_ConditionlLst = note.replaceItemvalue("ConditionList", "")
+		Set COND_it_TokConditionList = note.replaceitemvalue("tokConditionList", "")
+		
+		'// Reset Action values
+		Set tokactionlist = note.replaceItemValue("tokActionList","")
+		note.actionlist = ""
+		note.ACT_sAction = ""
+		Exit Sub
+	End If
+	
+	'*************    Build the rule    *************
+	
+	'// Start building Conditions - Must have at least one Condition
+	Call ProcessConditions()
+	'// Start building Exceptions, if any
+	Call ProcessExceptions()
+	'// Start building Actions - Must have at least one Action
+	If Not ProcessActions Then Exit Sub
+	'// Add additional enhanced variables to the final formula
+	s_MAINFORMULA = FormulaEnhanceFactory + s_MAINFORMULA
+	
+	Set item=note.getfirstitem("$FilterFormula")
+	item.values=s_MAINFORMULA
+	Call note.computewithform(False,False)
+	bmovetofolder=True
+	
+	'//Getting Sequence Number ===  total count of Rules
+	Call note.replaceitemvalue("OrderNum", Cstr( nrulenum ) )
+	strfilteritem = "$FilterFormula_"+Cstr( nrulenum  )
+	
+	'//Writting the Rule referrence to the Profile
+	If Not(item Is Nothing) Then
+		If profile.hasitem(strfilteritem) Then
+			Call profile.removeitem(strfilteritem)
+		End If
+		Call item.copyitemtodocument(profile,strfilteritem)
+		Let bprofilesave = True
+	End If
+	
+	If Not (profile.hasitem("$FilterFormulaCount")) Then
+		Call profile.replaceitemvalue("$FilterFormulaCount","2")
+	Else
+		Call profile.replaceitemvalue("$FilterFormulaCount", Cstr(Cint(nRuleNum) + 2 ))
+	End If
+	
+	'// save the rule
+	Call note.save(True,False,True)
+	'// move the rule to the rules folder
+	If bmovetofolder Then Call note.putinfolder("Rules")
+	'// save the profile if the rule is enabled
+	If bprofilesave Then
+		Call profile.save(True, True,True)
+		Call db.enabledboptions(1,True)
+	End If
+	
+	uidoc.close
+	uiws.viewrefresh
+	Exit Sub
+	
+TrapError:
+	Msgbox "Error on " & functionName & "  --> " & (Err & ": " & Error$)
+End Sub
+
+'++LotusScript Development Environment:2:1:ValidateFolder:1:8
+Function ValidateFolder(FolderName As String) As String
+	
+	If FolderName = "" Then Exit Function
+	
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim thisFolder As NotesView
+	Dim NewFolderName As String
+	
+	Set db = session.CurrentDatabase
+	'//Get the UNID for the folder
+	Set thisFolder = db.getview(FolderName)
+	If (thisfolder Is Nothing) Then
+		ValidateFolder = ""
+		Exit Function
+	End If
+	'//Rare case where user select one of the reserved folder names like Meetings, Tasks. etc...
+	If Not (thisfolder.IsFolder) Then
+		Set view = db.GetView("($FolderInfo)")
+		view.refresh
+		Set vc = view.AllEntries										'//build collection of folders
+		Set entry = vc.GetFirstEntry()
+		While Not (entry Is Nothing)
+			Set tempNote = entry.document
+			Set tempItem = tempnote.GetFirstItem("$TITLE")
+			tempFolderName = tempItem.values
+			'//We need the folder name and not the alias
+			If Not (Strleftback(tempFolderName(0), "|")) = "" Then
+				NewFolderName = Strleftback(tempFolderName(0), "|")
+			Else
+				NewFolderName = tempFolderName(0)
+			End If
+			If Not ValidateSystemFolder(NewFolderName) Then
+				If (ACT_sFolder = NewFolderName) Then
+					Set thisFolder = TempNote
+					strUNID = thisFolder.Universalid
+					Exit Function
+				End If
+			End If
+			Set entry = vc.Getnextentry(entry)
+		Wend
+		'//if we got to this point is because we can't find the folder
+		'//user probably mispelled the folder name
+		If (thisfolder Is Nothing) Then
+			Exit Function
+		End If
+		
+	End If
+	
+	ValidateFolder = thisFolder.Universalid
+End Function
+
+'++LotusScript Development Environment:2:1:UtilReplaceString:1:8
+Function UtilReplaceString(strSource As String, strSearch As String, strReplace As String) As String
+	
+	'//This routine replaces one substring by another substring within a string
+	
+	Dim lngPos As Long
+	Dim strTarget As String
+	Dim strLeftStr As String
+	Dim strRightStr As String
+	Dim strLenght As String
+	
+	If strSource <> "" And strSearch <> "" Then
+		strTarget = strSource
+		strSource = ""
+		Do
+			lngPos = Instr(strTarget, strSearch)
+			If lngPos <= 0 Then
+				strSource = strSource & strRightStr
+				Exit Do
+			End If
+			StrLenght = Len(strTarget)
+			strLeftStr = Left$(strTarget, lngPos - 1)
+			strRightStr = Trim$(Mid$(strTarget, lngPos + 1 , StrLenght))
+			strSource = strSource & strLeftStr & strReplace
+			strTarget = strRightStr
+		Loop
+	End If
+	ACT_sFolderName = strSource
+	UtilReplaceString = strSource
+End Function
+
+'++LotusScript Development Environment:2:2:GatherAllRules:1:8
+Sub GatherAllRules(CfgDocUnid As String, Doc As NotesDocument)
+	Dim session As New NotesSession
+	Dim db As NotesDatabase
+	Dim view As NotesView
+	Dim collection As NotesDocumentCollection
+	Dim note As NotesDocument
+	Dim item As NotesItem
+	Dim strfilteritem As String
+	Dim nrulenum As Integer
+	Dim nfiltercount As Integer
+	Dim I As Integer
+	
+	Set db = session.CurrentDatabase
+	Set view = db.GetView("Rules")
+	Call view.refresh
+	Set collection = view.GetAllDocumentsByKey(CfgDocUnid, True)
+	'// Remove all $Filter items
+	Forall items In doc.items
+		If items.type = 1536 Then
+			If Lcase(Left(items.name,7)) = "$filter" Then
+				Call items.remove()
+			End If
+		End If
+	End Forall
+	
+	If collection.count > 0 Then
+		Set note = collection.GetFirstDocument
+		For i = 1 To collection.count
+			If Not doc Is Nothing Then
+				If nfiltercount < Cstr(note.getitemvalue("ordernum")(0)) Then
+					nfiltercount = Cstr(note.getitemvalue("ordernum")(0))
+				End If
+				nrulenum = note.getitemvalue("ordernum")(0)
+				strfilteritem = "$FilterFormula_"+Cstr(nrulenum)
+				If note.getitemvalue("Enable")(0)="1" Then
+					Set item = note.GetFirstItem("$FilterFormula")
+					If doc.hasitem(strfilteritem) Then doc.removeitem(strfilteritem)
+					If Not(item Is Nothing) Then Call item.copyitemtodocument(doc,strfilteritem)
+				End If
+			End If
+			Set note = collection.GetNextDocument(note)
+		Next
+		'//Enable rules checking in NSF
+		Call db.enabledboptions(1,True)
+		Call doc.replaceitemvalue("$FilterFormulaCount", Cstr(nfiltercount+1))
+		If Not (doc.hasitem("$FiltersSeqNo")) Then
+			Call doc.replaceitemvalue("$FiltersSeqNo", "1")
+		Else
+			Call doc.replaceitemvalue("$FiltersSeqNo", Cstr( Cint( doc.getitemvalue( "$FiltersSeqNo" )(0) )+1 ))
+		End If
+		
+		Call doc.Save(True,False)
+	End If
+End Sub
+
+'++LotusScript Development Environment:2:2:GetGlobalCondValues:1:8
+Sub GetGlobalCondValues()
+	Dim xname As New notesname("")
+	
+	'//Reset vars
+	COND_sCondition = ""
+	COND_sLogic = ""
+	COND_sOperator = ""
+	COND_sString = ""
+	
+	'//Set vars
+	COND_sCondition = note.getitemvalue("condition")(0)
+	COND_sLogic = note.getitemvalue("logic")(0)
+	COND_sOperator = note.getitemvalue("Operator")(0)
+	
+	Select Case COND_sCondition
+	Case "4","5"
+		COND_sString = note.getitemvalue("importance")(0)
+		Select Case COND_sString
+		Case "1"
+			COND_sString ="High"  'High
+		Case "2"
+			COND_sString ="Normal"		'Normal
+		Case "3"
+			COND_sString ="Low"		'Low
+		End Select
+		
+	Case "B"
+		COND_sString = note.getitemvalue("domainlist")(0)
+		
+	Case "C"
+		COND_sString = note.getitemvalue("string")(0) + GetString(SPEC_STR31)
+		
+	Case "D"
+		COND_sLogic = ""
+		COND_sString = ""
+		
+	Case "1","6","7","8","A"
+		COND_sString = note.GetItemValue("string")(0)
+		'We are doing this because @Contains does not support slashes
+		Set xname = New notesname(COND_sString)
+		If xname.Ishierarchical Then
+			COND_sString=xname.Abbreviated
+		End If
+		
+	Case "K","L"
+		COND_sString = note.getitemvalue("string")(0)
+		
+	Case Else
+		COND_sString = note.getitemvalue("String")(0)
+		
+	End Select
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:FormulaEnhanceFactory:1:8
+Function FormulaEnhanceFactory() As String
+	
+	On Error Goto TrapError
+	
+	Dim tmpStr_CVar As String
+	Dim tmpStr_IVar As String
+	Dim vC_UniqueList As Variant
+	Dim vI_UniqueList As Variant
+	
+	
+	'//initialize var
+	tmpStr_CVar = ""
+	tmpStr_IVar = ""
+	FormulaEnhanceFactory = ""
+	
+	 '// Merging Condition and Exception lists, and eliminate duplicates
+	If EXC_FLAG Then
+		vC_UniqueList = Arrayunique(  Fulltrim ( Arrayappend( COND_LsLogicContainsLIst , EXC_LsLogicContainsLIst ) ) )
+		vI_UniqueList = Arrayunique(  Fulltrim ( Arrayappend( COND_LsLogicISList , EXC_LsLogicISList ) ) )
+	Else
+		vC_UniqueList = Arrayunique( Fulltrim ( COND_LsLogicContainsLIst ) )
+		vI_UniqueList = Arrayunique(  Fulltrim ( COND_LsLogicISList ) )
+	End If
+	
+	'// Build, little worker...  Do it!
+	If Isarray(vC_UniqueList) Then
+		tmpStr_CVar = BuildCVarBlock(vC_UniqueList)
+	End If
+	
+	If Isarray(vI_UniqueList) Then
+		tmpStr_IVar = BuildIVarBlock(vI_UniqueList)
+	End If
+	
+	'//Final Variable disposition
+	If tmpStr_IVar <> "" Then
+		FormulaEnhanceFactory = tmpStr_CVar + tmpStr_IVar
+	Else
+		FormulaEnhanceFactory = tmpStr_CVar
+	End If
+	
+	Exit Function
+	
+TrapError:
+	
+	If Err = 200 Then
+		Resume Next
+	Else
+		Print(Err & ": " & Error$)
+		Exit Function
+	End If
+	
+End Function
+
+'++LotusScript Development Environment:2:2:TokenParserCond:1:8
+Sub TokenParserCond( strTmp As String)
+	
+	Dim sTokSeparator As String
+	
+	On Error Goto Errhandle
+	
+	'// Reset Token variables
+	COND_sCondition = ""
+	COND_sLogic = ""
+	COND_sString = ""
+	COND_sOperator = ""
+	
+	If  strTmp <> "" Then
+		
+		'//Get Token Character
+		sTokSeparator = DefineTokenChar(strTmp)
+		
+		'// Start parsing Token
+		iLength = Len(strTmp)
+		iTokenSepAt = Instr(1, strTmp, sTokSeparator)
+		
+		'//Get Condition Token
+		If iLength > 0 Then
+			If iTokenSepAt <> 0 Then
+				COND_sCondition = Left(strTmp, iTokenSepAt - 1)
+				strTmp = Right(strTmp, iLength - iTokenSepAt )
+				iTokenSepAt = 	Instr(Len(COND_sCondition), strTmp, sTokSeparator )
+			Else
+				COND_sCondition = strTmp
+				strTmp = "" 		'//Clear variable
+			End If
+		Else				'// If we can't resolve Token, implicitly force it to 1 (Sender)
+			If COND_sCondition = "" Then COND_sCondition = "1"
+		End If
+		iLength = Len(strTmp)
+		
+		'// If Condition is 'All Documents', there's nothing else to process, so bail....
+		If COND_sCondition = "D" Then
+			COND_sOperator = Right( strTmp , 1 ) 'Last byte
+			COND_sLogic = "0"
+			COND_sString = ""
+			Exit Sub
+		End If
+		
+		'//Get Logic Token
+		If iLength > 0 Then
+			sTokSeparator = DefineTokenChar(strTmp)
+			iTokenSepAt = Instr(1, strTmp, sTokSeparator)
+			If iTokenSepAt <> 0 Then
+				COND_sLogic = Left(strTmp, iTokenSepAt - 1)
+				strTmp = Right(strTmp, iLength - iTokenSepAt )
+				iTokenSepAt = 	Instr(Len(COND_sLogic), strTmp, sTokSeparator)
+			Else
+				COND_sLogic = strTmp
+				strTmp = "" 		'//Clear variable
+			End If
+		Else 			'// If we can't resolve Token, implicitly force it to 1 (Contains)
+			If COND_sLogic = "" Then COND_sLogic = "1"
+		End If
+		iLength = Len(strTmp)
+		
+		'//Get String Token
+		If iLength > 0 Then
+			sTokSeparator = DefineTokenChar(strTmp)
+			iTokenSepAt = Instr(1, strTmp, sTokSeparator)
+			If iTokenSepAt <> 0 Then
+				COND_sString = Left(strTmp, iTokenSepAt - 1)
+				strTmp = Right(strTmp, iLength - iTokenSepAt )
+				iTokenSepAt = 	Instr(Len(COND_sString), strTmp, sTokSeparator)
+			Else
+				COND_sString = strTmp
+				strTmp = "" 		'//Clear variable
+			End If
+		Else 			'// If we can't resolve Token, implicitly force it to empty string
+			If COND_sString = "" Then COND_sString = ""
+		End If
+		iLength = Len(strTmp)
+		
+		'//Get Operator Token
+		If iLength > 0 Then
+			sTokSeparator = DefineTokenChar(strTmp)
+			iTokenSepAt = Instr(1, strTmp, sTokSeparator)
+			If iTokenSepAt <> 0 Then
+				COND_sOperator = Left(strTmp, iTokenSepAt - 1)
+			Else
+				COND_sOperator = strTmp
+				strTmp = "" 		'//Clear variable
+			End If
+		Else	 			'// If we can't resolve Token, implicitly force it to 1 (OR)
+			If COND_sOperator = "" Then COND_sOperator = "1"
+		End If
+		
+	End If
+	
+	Exit Sub
+	
+Errhandle:
+	' Use the Err function to return the error number and
+   	' the Error$ function to return the error message.
+	
+	Messagebox "Error" & Str(Err) & ": " & Error$
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:TokenParserAction:1:8
+Sub TokenParserAction( strTmp As String)
+	
+	Dim sTokSeparator As String
+	
+	On Error Goto Errhandle
+	
+	'// Reset Global Token variables
+	ACT_sAction = ""
+	ACT_sBehavior = ""
+	ACT_sString = ""
+	sTokSeparator = ""
+	
+	If  strTmp <> "" Then
+		
+		'//Get Token Character
+		sTokSeparator = DefineTokenChar(strTmp)
+		
+		'// Start parsing Token
+		iLength = Len(strTmp)
+		iTokenSepAt = Instr(1, strTmp, sTokSeparator)
+		
+		'//Get Action Token
+		If iLength > 0 Then
+			If iTokenSepAt <> 0 Then
+				ACT_sAction = Left(strTmp, iTokenSepAt - 1)
+				strTmp = Right( strTmp, iLength - iTokenSepAt )
+				iTokenSepAt = 	Instr(Len( ACT_sAction ), strTmp, sTokSeparator)
+			Else
+				ACT_sAction = strTmp
+				strTmp = "" 		'//Clear variable
+			End If
+		Else				'// If we can't resolve Token, implicitly force it to 1
+			If ACT_sAction = "" Then ACT_sAction = "1"
+		End If
+		iLength = Len(strTmp)
+		
+		'// If Condition is 'Delete', there's nothing else to process, so bail....
+		If ACT_sAction = "3" Then
+			COND_sOperator = Right( strTmp , 1 ) 'Last byte
+			COND_sLogic = "0"
+			ACT_sString = " "
+			Exit Sub
+		End If
+		
+		'//Get Behavior Token
+		If iLength > 0 Then
+			sTokSeparator = DefineTokenChar(strTmp)
+			iTokenSepAt = Instr(1, strTmp, sTokSeparator)
+			If iTokenSepAt <> 0 Then
+				ACT_sBehavior = Left(strTmp, iTokenSepAt - 1)
+				strTmp = Right(strTmp, iLength - iTokenSepAt )
+				iTokenSepAt = 	Instr(Len( ACT_sBehavior ), strTmp, sTokSeparator)
+			Else
+				ACT_sBehavior = strTmp
+				strTmp = "" 		'//Clear variable
+			End If
+		Else 			'// If we can't resolve Token, implicitly force it to blank
+			If ACT_sBehavior = "" Then ACT_sBehavior = ""
+		End If
+		iLength = Len(strTmp)
+		
+		'//Get String Token
+		If iLength > 0 Then
+			'// If ForwardTo action, exclude this last portion of the token
+			'// as addresses are stored with pre-defined characteres ( "Add1:Add2:Add3" etc ) and we
+			'// don't want to confuse the defined token - Besides, there's nothing else to process!
+			If ACT_sAction <> "B" Then
+				sTokSeparator = DefineTokenChar(strTmp)
+			End If
+			iTokenSepAt = Instr(1, strTmp, sTokSeparator)
+			If iTokenSepAt <> 0 Then
+				ACT_sString = Left(strTmp, iTokenSepAt - 1)
+				strTmp = Right( strTmp, iLength - iTokenSepAt )
+				iTokenSepAt = 	Instr(Len( ACT_sString ), strTmp, sTokSeparator)
+			Else
+				ACT_sString = strTmp
+				strTmp = "" 		'//Clear variable
+			End If
+		Else 			'// If we can't resolve Token, implicitly force it to empty string
+			If ACT_sString = "" Then ACT_sString = ""
+		End If
+		iLength = Len(strTmp)
+		
+	End If
+	Exit Sub
+	
+Errhandle:
+	' Use the Err function to return the error number and
+   	' the Error$ function to return the error message.
+	
+	Messagebox "Error" & Str(Err) & ": " & Error$
+	Exit Sub
+	
+End Sub
+
+'++LotusScript Development Environment:2:1:DefineTokenChar:1:8
+Function DefineTokenChar(strTmp As String) As String
+	
+	Dim sToken As String
+	
+	On Error Goto Errhandle
+	
+	If  strTmp <> "" Then
+		
+		'// Define Token Separator based on characters
+		If Instr(1, strTmp, STR_TOKENSEPARATOR) <> 0 Then
+			sToken = STR_TOKENSEPARATOR
+		Elseif Instr(1, strTmp, STR_ALTTOKENSEPARATOR) <> 0 Then
+			sToken = STR_ALTTOKENSEPARATOR
+		Elseif Instr(1, strTmp, STR_OLDTOKENSEPARATOR) <> 0 Then
+			sToken = STR_OLDTOKENSEPARATOR
+		Else
+			sToken = STR_TOKENSEPARATOR
+		End If
+	End If
+	
+	DefineTokenChar = sToken
+	Exit Function
+	
+Errhandle:
+	' Use the Err function to return the error number and
+   	' the Error$ function to return the error message.
+	
+	Messagebox "Error" & Str(Err) & ": " & Error$
+	Exit Function
+	
+End Function
+
+'++LotusScript Development Environment:2:1:BuildCVarBlock:1:8
+Function BuildCVarBlock(vCUniqueList As Variant) As String
+	
+	Dim iCustomizeCounter As Integer
+	Dim FlagSentTo As Integer
+	Dim FlagCopyTo As Integer
+	Dim FlagBody As Integer
+	Dim FlagSubject As Integer
+	
+	FlagSentTo = False
+	FlagCopyTo = False
+	FlagBody = False
+	FlagSubject = False
+	iCustomizeCounter = 0
+	
+	If (vCUniqueList(0) <> "") Then
+		For i=0 To Ubound(vCUniqueList)
+			
+			Select Case vCUniqueList(i)
+			Case "1"
+				tmpStrFormula = tmpStrFormula + "CondSender_C := @LowerCase( @Name([ABBREVIATE]; @Unique( From:Principal:SMTPOriginator ) ) ) ; "
+			Case "2"
+				tmpStrFormula = tmpStrFormula + "CondSubject_C := @LowerCase(Subject); "
+				FlagSubject = True
+			Case "3"
+				tmpStrFormula = tmpStrFormula + "CondBody_C := @LowerCase( @Abstract([TextOnly];64994;"""";""Body"") ); "
+				FlagBody = True
+			Case "6"
+				tmpStrFormula = tmpStrFormula + "CondSendTo_C := @LowerCase( @Name([ABBREVIATE]; SendTo )) ; "
+				FlagSentTo = True
+			Case "7"
+				tmpStrFormula = tmpStrFormula + "CondCopyTo_C := @LowerCase( @Name([ABBREVIATE];CopyTo ) ) ; "
+				FlagCopyTo = True
+			Case "8"
+				If Not FlagSentTo Then
+					tmpStrFormula = tmpStrFormula + "CondSendTo_C := @LowerCase( @Name([ABBREVIATE];SendTo ) ) ; "
+					FlagSentTo = True
+				End If
+				If Not FlagCopyTo Then
+					tmpStrFormula = tmpStrFormula + "CondCopyTo_C := @LowerCase( @Name([ABBREVIATE]; CopyTo ) ) ; "
+					FlagCopyTo = True
+				End If
+			Case "9"
+				If Not FlagSubject Then
+					tmpStrFormula = tmpStrFormula + "CondSubject_C := @LowerCase(Subject); "
+					FlagSubject = True
+				End If
+				If Not FlagBody Then
+					tmpStrFormula = tmpStrFormula + "CondBody_C := @LowerCase( @Abstract( [TextOnly];64994;"""";""Body"" ) ); "
+					FlagBody = True
+				End If
+			Case "A"
+				tmpStrFormula = tmpStrFormula + "CondBlindCopyTo_C := @LowerCase( @Name([ABBREVIATE]; BlindCopyTo )) ; "
+			Case "B"
+				tmpStrFormula = tmpStrFormula + "CondInternetDomain_C := @LowerCase(@If( @IsAvailable( SMTPOriginator ); @If( @ValidateInternetAddress([ADDRESS821]; SMTPOriginator ) = """";@Right( SMTPOriginator; ""@"" ); @False ); @False )); "
+			Case "C"
+				tmpStrFormula = tmpStrFormula + "CondDocLength_C := @DocLength ; "
+			Case "D"
+				tmpStrFormula = tmpStrFormula + "CondAllDocs_C := @All ; "
+			Case "E"
+				tmpStrFormula = tmpStrFormula + "CondAttachName_C := @LowerCase( @AttachmentNames ) ; "
+			Case "F"
+				tmpStrFormula = tmpStrFormula + "CondAttachNumber_C := @Attachments ; "
+			Case "G"
+				tmpStrFormula = tmpStrFormula + "CondForm_C := @LowerCase( Form ); "
+			Case "H"
+				tmpStrFormula = tmpStrFormula + "CondRecipientCount_C := @Elements( Recipients ); "
+			Case "I"
+				tmpStrFormula = tmpStrFormula + "CondAnyRecipient_C := @Lowercase(@Name([Abbreviate];Recipients)) ; "
+			Case "K"
+				tmpStrFormula = tmpStrFormula + |CondBlackList_C := @If( @IsAvailable( $DNSBLSite ); @LowerCase( $DNSBLSite ); "" ); |
+			Case "L"
+				tmpStrFormula = tmpStrFormula + |CondWhiteList_C := @If( @IsAvailable( $DNSWLSite ); @LowerCase( $DNSWLSite ); "" ); |
+			End Select
+		Next
+	End If
+	
+	BuildCVarBlock = tmpStrFormula
+	
+End Function
+
+'++LotusScript Development Environment:2:1:BuildIVarBlock:1:8
+Function BuildIVarBlock(vIUniqueList As Variant) As String
+	Dim iCustomizeCounter As Integer
+	Dim FlagSentTo As Integer
+	Dim FlagCopyTo As Integer
+	Dim FlagBody As Integer
+	Dim FlagSubject As Integer
+	
+	FlagSentTo = False
+	FlagCopyTo = False
+	FlagBody = False
+	FlagSubject = False
+	iCustomizeCounter = 0
+	
+	If (vIUniqueList(0) <> "") Then
+		For i=0 To Ubound(vIUniqueList)
+			
+			Select Case vIUniqueList(i)
+			Case "1"
+				tmpStrFormula = tmpStrFormula + "CondSender_I := @Name([ABBREVIATE];@Trim(@Unique( From:Principal:SMTPOriginator ) ) )  ; "
+			Case "2"
+				tmpStrFormula = tmpStrFormula + "CondSubject_I := Subject ; "
+				FlagSubject = True
+			Case "3"
+				tmpStrFormula = tmpStrFormula + "CondBody_I := @Abstract([TextOnly];64994;"""";""Body""); "
+				FlagBody = True
+			Case "4"
+				tmpStrFormula = tmpStrFormula + "CondImportance_I := Importance ; "
+			Case "5"
+				tmpStrFormula = tmpStrFormula + "CondDeliveryPriority_I :=  DeliveryPriority ; "
+			Case "6"
+				tmpStrFormula = tmpStrFormula + "CondSendTo_I := @Name([ABBREVIATE]; SendTo ) ; "
+				FlagSentTo = True
+			Case "7"
+				tmpStrFormula = tmpStrFormula + "CondCopyTo_I := @Name([ABBREVIATE]; CopyTo ) ; "
+				FlagCopyTo = True
+			Case "8"
+				If Not FlagSentTo Then
+					tmpStrFormula = tmpStrFormula + "CondSendTo_I := @Name([ABBREVIATE]; SendTo ) ; "
+					FlagSentTo = True
+				End If
+				If Not FlagCopyTo Then
+					tmpStrFormula = tmpStrFormula + "CondCopyTo_I := @Name([ABBREVIATE]; CopyTo ) ; "
+					FlagCopyTo = True
+				End If
+			Case "9"
+				If Not FlagSubject Then
+					tmpStrFormula = tmpStrFormula + "CondSubject_I := Subject; "
+					FlagSubject = True
+				End If
+				If Not FlagBody Then
+					tmpStrFormula = tmpStrFormula + "CondBody_I := @Abstract( [TextOnly];64994;"""";""Body"" ) ; "
+					FlagBody = True
+				End If
+			Case "A"
+				tmpStrFormula = tmpStrFormula + "CondBlindCopyTo_I := @Name([ABBREVIATE]; BlindCopyTo ) ; "
+			Case "B"
+				tmpStrFormula = tmpStrFormula + "CondInternetDomain_I := @If( @IsAvailable( SMTPOriginator ); @If(@ValidateInternetAddress([ADDRESS821];SMTPOriginator) = """";@Right(SMTPOriginator;""@"");@False);@False); "
+			Case "C"
+				tmpStrFormula = tmpStrFormula + "CondDocLength_I := @DocLength ; "
+			Case "D"
+				tmpStrFormula = tmpStrFormula + "CondAllDocs_I := @All ; "
+			Case "E"
+				tmpStrFormula = tmpStrFormula + "CondAttachName_I := @AttachmentNames ; "
+			Case "F"
+				tmpStrFormula = tmpStrFormula + "CondAttachNumber_I := @Attachments ; "
+			Case "G"
+				tmpStrFormula = tmpStrFormula + "CondForm_I :=  Form ; "
+			Case "H"
+				tmpStrFormula = tmpStrFormula + "CondRecipientCount_I := @Elements( Recipients ); "
+			Case "I"
+				tmpStrFormula = tmpStrFormula + "CondAnyRecipient_I := @Name([Abbreviate];Recipients) ; "
+			Case "K"
+				tmpStrFormula = tmpStrFormula + |CondBlackList_I := @If( @IsAvailable( $DNSBLSite ); $DNSBLSite ; "" ); |
+			Case "L"
+				tmpStrFormula = tmpStrFormula + |CondWhiteList_I := @If( @IsAvailable( $DNSWLSite ); $DNSWLSite ; "" ); |
+			End Select
+		Next
+	End If
+	
+	BuildIVarBlock = tmpStrFormula
+	
+End Function
+
+'++LotusScript Development Environment:2:2:GetGlobalActionValues:1:8
+Sub GetGlobalActionValues()
+	
+	'//Reset vars
+	ACT_sAction = ""
+	ACT_sFolder = ""
+	ACT_sChoice = ""
+	ACT_sExpNumber = ""
+	ACT_sExpDate = ""
+	ACT_sImportance = ""
+	ACT_sBehavior = ""
+	
+	'//Action
+	ACT_sAction = Note.GetItemValue("action")(0)
+	
+	'// Folder
+	ACT_sFolder = Note.GetItemValue("Folder")(0)
+	
+	'//CopyTo
+	ACT_sChoice = Note.GetItemValue("CopyTo_Choices")(0)
+	
+	'//Expire Values
+	ACT_sExpNumber = Note.GetItemValue("ExpireNumber")(0)
+	ACT_sExpDate = Note.GetItemValue("ExpireDates")(0)
+	
+	'//CopyTo Address
+	ACT_vAddress = Note.GetItemValue("CopyTo_Address")
+	
+	'// Importance and Behavior
+	If i_IsServerRules Then
+		ACT_sImportance = Note.GetItemValue("Impcond")(0)
+		'//Behavior field is unique for Server Rules
+		ACT_sBehavior = Note.GetItemValue("Behavior")(0)
+	Else
+		ACT_sImportance = Note.GetItemValue("ImportanceCond")(0)
+	End If
+	
+End Sub

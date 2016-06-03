@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='32a' unid='3FC085EEC22826AE852561C20060141E' sequence='5039'>
+<created><datetime dst='true'>19950520T132926,06-04</datetime></created>
+<modified><datetime dst='true'>20150507T110151,89+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095402,82-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150915T202529,06+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110151,88+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T144046,19-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>($ServerConfig)</text></item>
+<item name='$Index' sign='true'><text>/O</text></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+KgECAA4AAwAkMTAApAADAAIAXAADACQxMQAFAAoAU2VydmVyTmFtZQEAAQAqAAoCBQAMAFVzZUFz
+RGVmYXVsdFkBHAKvACQADAABAAEAMQCuABgABQAMAFVzZUFzRGVmYXVsdK4ABAC1AwMAAgAYAAUA
+RENMb2MABQAFAERDTG9jAAMABQA2ADIABgAKAAMAAwAFAAkABABTZXJ2ZXJOYW1lJDEwJDExRENM
+b2MkQ29uZmxpY3QkUkVGBAAEAAAAbAAFAAQAVHlwZQEADABTZXJ2ZXJDb25maWcKAgUABABGb3Jt
+AQAMAFNlcnZlckNvbmZpZwoCBQAEAEZvcm0BAAwARG9tYWluQ29uZmlnCgIdAgQAHAIFAAkAJENv
+bmZsaWN0AFkBHAIDAA==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+FwABAABEAGYAAAAKAFNlcnZlck5hbWU=
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAEAA0ACAQAAFZDAQAKAAsAAAAAAG0AAQEECQAAAAAIAAAAAAICAAAAVkMAAAMADQAQAAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAABWQwAAAwAMAGoAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAFAAsA
+GgAAAFAAAQAACgAAAAAAAAAAAAICAAAAU2VydmVyTmFtZVNlcnZlciBOYW1lJDEwTW9kaWZpZWQg
+RGF0ZRAAAgAOAAMAJDEwAKQAAwAkMTFVc2VBc0RlZmF1bHRqAAIAXAADACQxMQAFAAoAU2VydmVy
+TmFtZQEAAQAqAAoCBQAMAFVzZUFzRGVmYXVsdFkBHAKvACQADAABAAEAMQCuABgABQAMAFVzZUFz
+RGVmYXVsdK4ABAC1AwMABwAMAAUACTVTNlMARENMb2NGUiBEYXRhYmFzZRoAAgAYAAUARENMb2MA
+BQAFAERDTG9jAAMAJgABAAAAAQEACQEAAAoBAQ8KAAABAK0rAQABAAEAAAAAAAAAAABXQwEAAAkA
+AAAAAAAAAAAAAAAAAAAAAQDAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAA
+AAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABALGx0gAAAAEAAAAA
+AAEAwMDAAAAAAAAAAAAACAAAAAAAAQBYQwAMgAIAAAAAAAECAgIBAQEBAQAEAAAAAAAAAAAgLy86
+WUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAC4sJAA=
+</rawitemdata></item>
+<item name='$FormFormula' summary='true' sign='true'><formula>REM { Used by webadmin.ntf to override the default form with another form };
+REM { The alternative formname is passed in via a URL command like &amp;form=formname };
+
+@If(	@TextToNumber(@Version) &gt; 184;
+	@Return(@UrlQueryString("form"));
+	"")</formula></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>7</text></item></note>
+

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+
+	<xp:repeat id="repeat1" rows="30"
+		value="#{javascript:FNPeople.loadPersons;}" var="persons">
+		<xp:panel>1</xp:panel>
+	</xp:repeat></xp:view>

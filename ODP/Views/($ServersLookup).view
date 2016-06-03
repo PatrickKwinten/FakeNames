@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='362' unid='792A23AF15F101FD852563160079BDEF' sequence='5031'>
+<created><datetime dst='true'>19960424T180944,79-04</datetime></created>
+<modified><datetime dst='true'>20150507T110152,17+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095402,88-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150915T202529,55+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110152,16+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T144046,81-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$TYPE'><text>$SUBVIEW</text></item>
+<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item>
+<item name='$Author' sign='true'><text>Greg Pflaum</text></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$TITLE' sign='true'><text>($ServersLookup)</text></item>
+<item name='$Index' sign='true'><text>/O</text></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+RAECAFIAAwAkMTQAAgAFAAAAAAAAAAUACgBTZXJ2ZXJOYW1ltAICAAYAAAAAAAAABQAKAFNlcnZl
+ck5hbWW0Ah8CBQAKAFNlcnZlck5hbWUfAgMABwAMAAUACTBTMEUABQAqACYABAADAAoACQAEACQx
+NFNlcnZlck5hbWUkQ29uZmxpY3QkUkVGBAAEAAAAkgAFAAQAVHlwZQEABgBTZXJ2ZXIBAAoAWDQw
+MFNlcnZlch8CAQAIAFBPU2VydmVyHwIKAgQABQAEAEZvcm0BAAYAU2VydmVyAQAKAFg0MDBTZXJ2
+ZXIfAgEAGgBjYzpNYWlsIFBvc3QgT2ZmaWNlIFNlcnZlch8CCgIcAgUACQAkQ29uZmxpY3QAWQEc
+AgMABwAkAB4ACUwxUzJTNFM1UzZTN1M4UzlTMTBTMTFTMThTMTlT
+</formula></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+EAABAABECGYAAAADACQxNA==
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACAA8ACAQAAFZDAQADAAYAYAAAAEAAAQAACgABAAAIAAAAAAACAAAAVkMAAAoACgAAAAAAUAAB
+AAAKAAAAAAAAAAAAAgIAAAAkMTRTZXJ2ZXJgAAIAUgADACQxNAACAAUAAAAAAAAABQAKAFNlcnZl
+ck5hbWW0AgIABgAAAAAAAAAFAAoAU2VydmVyTmFtZbQCHwIFAAoAU2VydmVyTmFtZR8CAwAHAAwA
+BQAJMFMwRQBTZXJ2ZXJOYW1lU2VydmVyTmFtZSYAAQAAAAEBAAkBAAAKAQEECgAAAACtKwEAAQAB
+AAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAEAwAAAAAAA//8AAAAAAAAAAAAAAAAAAFdD
+AQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAF
+AAAAAAABAAAAAAAAAAAAAAAAAAEA////AAEAsbHSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAA
+AAABAFhDAAiAAgAAAAAAAQICAgEBAQEBAAQAAAAAAAAAACAvLzpZQwAACAAAAAEAAAABAAAAAAAA
+AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAALiwkAA==
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+

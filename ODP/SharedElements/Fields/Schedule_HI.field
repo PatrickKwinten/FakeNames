@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='142' unid='15339EC7D08C421E052569650062ABE2' sequence='5016'>
+<created><datetime>20000925T125745,30-05</datetime></created>
+<modified><datetime dst='true'>20150507T110149,77+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095402,30-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110149,76+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110149,76+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$TITLE'><text>Schedule_HI</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item>
+<item name='Schedule_HI' summary='false' sign='true'>
+<rawitemdata type='400'>
+AAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$FIELDS'><text>Schedule_HI</text></item>
+<item name='$BODY' summary='true' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9UAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIACAAEAAAABAQICAQEBAQYFAgAA
+AAAAAAAAAAAAAAAgLy86iv9yAYIAAQQOIAIACAACAQABAQAACRoAJgAGAMoACwA4AAAAGgAAABgA
+BgAA8isA/////4DZeAD/////AwAmAAAAGAAFAAsAU2NoZWR1bGVfSEkATAEDAAcADAAFAAkwUzBF
+AMoAAACkAAUACgBFbmFibGVkX0hJAQABADEACgIFAAsASW50ZXJ2YWxfSEkAAAAAAAAAAAAAAAoC
+HAIFAAsAU2NoZWR1bGVfSEkAAQAAAAoCHAIBAEcAWW91IG11c3QgZW50ZXIgYW4gSW50ZXJ2YWwg
+YW5kL29yIGEgU2NoZWR1bGUsIG9yIGVsc2Ugc3BlY2lmeSBESVNBQkxFRC4AewF6AEoDAwAHACQA
+HgAJM1M0UzVTNlM3UzhTOVMxMFMxMVMxMlMxNFMxOVNTY2hlZHVsZV9ISVRpbWVzIHRvIGNhbGwg
+dGhlIHNlcnZlciAtIGUuZy4gODowMCBBTSwxMDowMCBBTS02OjAwIFBNAHr/JAAKAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAU2NoZWR1bGVfMd4GAACK/4X/CAABAAAK
+</rawitemdata></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item></note>
+

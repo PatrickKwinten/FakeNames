@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+<xp:this.resources>
+		<xp:script src="/facetSearch.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	<xp:scriptBlock id="scriptBlock1">
+		<xp:this.value><![CDATA[//*  Script name:   facetSearch.js
+//*  Created on:    2015-05-26
+//*  Author:        Patrick Kwinten
+//*  Purpose:       Collect person related information and display to the user.
+//*                 Uses Domino Access Services and a Notes View for person data in JSON 
+//*                 format.
+//*					Also utilizes jQuery.
+//*  History:       Patrick Kwinten 2015-05-26
+//*                 Cleanup.
+var APP = APP || {};
+APP.restURL = "./fakeNamesREST.xsp/peopleView";
+APP.regKey = "FakeNames";
+APP.regKeyLength = APP.regKey.length;
+APP.jsonScopeData = new Array();
+$(document).ready(function () {
+		
+	eraseCookies();
+	var jsonData;	
+	$.getJSON( APP.restURL, function( data ) 
+	{
+		APP.jsonData = data;
+		data = collectData();
+		collectFacetData(data);
+//		writeCookiesValues("cookies");
+//		writeQuery(true);	
+//		writeQuerySortOptions();
+//		writeResultList(data);	
+	
+	});
+});
+]]></xp:this.value>
+	</xp:scriptBlock>
+	<xc:ccLayoutFacet><xp:this.facets>
+	<xp:panel xp:key="facet_1">
+	<xp:panel>
+		<div id="facetsContainer">
+			<div id="facets"></div>
+		</div>
+	</xp:panel>
+	</xp:panel>
+	<xp:panel xp:key="facet_2">
+	<div id="query"></div>
+    <div id="querysort"></div>
+    <div id="listResult"></div>
+	
+		</xp:panel></xp:this.facets></xc:ccLayoutFacet></xp:view>

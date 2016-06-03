@@ -1,0 +1,76 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+Option Public
+Option Declare
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Class cServerList
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Private Const VIEW_DOLLAR_SERVERS			= "($Servers)"
+
+Private Const STRING_SEPARATOR		= ";"
+
+Public Class cServerList
+	
+	m_oSession 	As NotesSession
+	m_oDb		As NotesDatabase
+	
+	'----------
+	Public Sub New()
+	'----------
+		
+		On Error Goto ERROR_HANDLER
+		
+		Set m_oSession = New NotesSession
+		Set m_oDb		= m_oSession.CurrentDatabase
+		
+		Exit Sub
+		
+ERROR_HANDLER:	
+		Msgbox("Error " + Cstr(Err()) + ": " + |"| & Error() & |"| + " occurred on line " + Cstr(Erl())),4+32,"lsClassServerList::New"
+		Exit Sub		
+		
+	End Sub
+	
+	'----------
+	Public Function GetServerList() As Variant
+	'----------
+		
+		On Error Goto ERROR_HANDLER
+		
+		Dim oDb As NotesDatabase		
+		Dim view As NotesView
+		Dim viewentrycoll As NotesViewEntryCollection
+		Dim viewentry As NotesViewEntry
+		
+		Dim vServers 		As Variant
+		
+		vServers = ""
+		
+		Set oDb = m_oSession.CurrentDatabase
+		
+		Set view = oDb.GetView(VIEW_DOLLAR_SERVERS)
+		
+		Set viewentrycoll = view.AllEntries
+		Set viewentry = viewentrycoll.GetFirstEntry
+		
+		While Not viewentry Is Nothing
+			Dim sDollarServer As New NotesName(viewentry.ColumnValues(0))
+			vServers = vServers + sDollarServer.Abbreviated + STRING_SEPARATOR	
+			Set viewentry = viewentrycoll.GetNextEntry(viewentry)
+		Wend
+		
+		GetServerList = Fulltrim(Split(vServers,";"))
+		
+		Exit Function
+		
+ERROR_HANDLER:
+		
+		Msgbox("Error " + Cstr(Err()) + ": " + |"| & Error() & |"| + " occurred on line " + Cstr(Erl())),4+32,"lsClassServerList::GetServerList"
+		Exit Function
+		
+	End Function
+	
+	
+End Class

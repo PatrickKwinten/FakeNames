@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='346' unid='5BA33D62AC72EFF6852569C800567A11' sequence='5014'>
+<created><datetime>20010102T104433,45-05</datetime></created>
+<modified><datetime dst='true'>20150507T110152,03+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095402,70-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110152,02+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110152,02+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime dst='true'>20090514T140229,75-04</datetime><datetime
+>20100304T144042,20-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$FormatNote' summary='true' sign='true'>
+<rawitemdata type='4'>
+AQCoVhMAAV4lhQYxdQDCVCWF
+</rawitemdata></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$TITLE' sign='true'><text>($ACPEmbedded)</text></item>
+<item name='$Index' sign='true'><text/></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+uAACABgABgBVc2VkQnkFAAYAVXNlZEJ5AwACABwACABGdWxsTmFtZQUACABGdWxsTmFtZQMABQAs
+ACcABAAGAAgACQAEAFVzZWRCeUZ1bGxOYW1lJENvbmZsaWN0JFJFRgAEAAQAAABSAAUABABUeXBl
+AQAVAFBvbGljeUFyY2hpdmVDcml0ZXJpYQAKAgQABQAGAFVzZWRCeQEAAAALAgQAHAIFAAkAJENv
+bmZsaWN0AFkBHAIDAA==
+</formula></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+IgACAABEiGYHAAAGAIBmAAYACABVc2VkQnlGdWxsTmFtZQ==
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQACABQAiEwAAFZDAwAGAAAAGgAAABQAAQAACQABAAAAAAAAAAICAABAVkMBAAgAAAAeAAAAUAAB
+AAAJAAAAAAAAAAAAAgIAAABVc2VkQnkaAAIAGAAGAFVzZWRCeQUABgBVc2VkQnkDAEZ1bGxOYW1l
+HgACABwACABGdWxsTmFtZQUACABGdWxsTmFtZQMAJgABAAAAAQEACQEAAAoBAQQKAAAvAK0rAgEB
+AAEAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAD//wAAAAAAAAAAAAAAAAAA
+V0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////
+AAEA+Pj8AAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAABAAAAAAABAAAA/wAAAAAAAAAAAAgA
+AAAAAAEA
+</rawitemdata></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$WebFlags' sign='true'><text>YB</text></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+

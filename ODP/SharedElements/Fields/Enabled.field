@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='1d6' unid='D32E9B25F7B312460525696500629CA5' sequence='5016'>
+<created><datetime>20000925T125706,29-05</datetime></created>
+<modified><datetime dst='true'>20150507T110150,54+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095402,04-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110150,53+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110150,53+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$TITLE'><text>Enabled</text></item>
+<item name='$INFO' sign='true'>
+<rawitemdata type='1'>
+hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
+</rawitemdata></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>6</text></item>
+<item name='Enabled' placeholder='true'>
+<rawitemdata type='0'>
+</rawitemdata></item>
+<item name='$FIELDS'><text>Enabled</text></item>
+<item name='$BODY' summary='true' sign='true'>
+<rawitemdata type='1'>
+gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAACw/xQAAAAGIAAAAAAAAAAAAAAAAIr/JgGCQgEFAiACAAgAAAAAAgEBAQkOAGwA
+AQAAAAcAZwAaAA4AAAAMAAEAAQAwAAMAbAADAEQABwBFbmFibGVkAAUABwBFbmFibGVkAAEAAAAK
+Aq8AIAAMAAEAAQAwAK4AFAAFAAcARW5hYmxlZACuAAQAtQMDAAcACgADAAkxUwAAABIABQAHAEVu
+YWJsZWQAAwAHAAoAAwAJMFIARW5hYmxlZENob29zZSBFbmFibGUgaWYgeW91IHdhbnQgdGhlIFJl
+cGxpY2F0b3IgdG8gYmUgZW5hYmxlZCBhbmQgdXNlIHRoZSBzcGVjaWZpZWQgc2NoZWR1bGUgYXQg
+dGhpcyBsb2NhdGlvbi4BABYAUmVwbGljYXRpb24gSW50ZXJ2YWx8MXr/IgAHAAAAAAAAAAAAAAAA
+AAAAAAAAAAAARW5hYmxlZADeBgAAiv+F/wgAAQAACg==
+</rawitemdata></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item></note>
+

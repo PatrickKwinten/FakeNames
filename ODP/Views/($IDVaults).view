@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='942' unid='25B9529898E2D65385257385004F8B76' sequence='65'>
+<created><datetime>20071031T092850,46-05</datetime></created>
+<modified><datetime dst='true'>20150507T110159,40+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095406,80-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150507T110159,39+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110159,39+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T144043,52-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$FormatNote' summary='true' sign='true'>
+<rawitemdata type='4'>
+AQCoVhMAAV4lhQYxdQDCVCWF
+</rawitemdata></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>($IDVaults)</text></item>
+<item name='$Index' sign='true'><text>/C</text></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+UgECACAACQBWYXVsdE5hbWUABQAJAFZhdWx0TmFtZQADAAIALAAQAFZhdWx0QWRtaW5TZXJ2ZXIF
+ABAAVmF1bHRBZG1pblNlcnZlcgMAAgAsABAAVmF1bHREZXNjcmlwdGlvbgUAEABWYXVsdERlc2Ny
+aXB0aW9uAwACACwADwBWYXVsdFNlcnZlckxpc3QABQAPAFZhdWx0U2VydmVyTGlzdAADAAUAWgBV
+AAYACQAQABAADwAJAAQAVmF1bHROYW1lVmF1bHRBZG1pblNlcnZlclZhdWx0RGVzY3JpcHRpb25W
+YXVsdFNlcnZlckxpc3QkQ29uZmxpY3QkUkVGAAQABAAAADYABQAEAFR5cGUBAAUAVmF1bHQACgIE
+AAUABABUeXBlAQAHAElEVmF1bHQACgIEAB0CAwAHABgAEQAJTDFTM1M0UzZTN1M5UzEwUwA=
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+FgABAABEgGYAAAAJAFZhdWx0TmFtZQ==
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQAEABsAiEgAAFZDAQAJAAoAIgAAAKAAAQAACQAgAAAAAAAAAAICAAAAVkMAABAAFQAuAAAAbQAB
+AAAJACAAAAAAAAAAAgIAAABWQwAAEAALAC4AAABQAAEAAAkAIAAAAAAAAAACAgAAAFZDAAAPAA8A
+LgAAAFAAAQAACgAAAAAAAAAAAAICAAAAVmF1bHROYW1lVmF1bHQgTmFtZSIAAgAgAAkAVmF1bHRO
+YW1lAAUACQBWYXVsdE5hbWUAAwBWYXVsdEFkbWluU2VydmVyQWRtaW5pc3RyYXRpb24gU2VydmVy
+LgACACwAEABWYXVsdEFkbWluU2VydmVyBQAQAFZhdWx0QWRtaW5TZXJ2ZXIDAFZhdWx0RGVzY3Jp
+cHRpb25EZXNjcmlwdGlvbi4AAgAsABAAVmF1bHREZXNjcmlwdGlvbgUAEABWYXVsdERlc2NyaXB0
+aW9uAwBWYXVsdFNlcnZlckxpc3RWYXVsdFNlcnZlckxpc3QuAAIALAAPAFZhdWx0U2VydmVyTGlz
+dAAFAA8AVmF1bHRTZXJ2ZXJMaXN0AAMAJgABAAAAAQEACQEAAAoBAQQKAAA/AK0rAgABAAEBAAAA
+AAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJ
+AAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAA
+AAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAA
+AAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8AAQDv7+8AAQAAAAAAAAAAAAAAAAABAP///wAB
+ALGx0gAAAAEAAAAAAAEAAAD/AAEAAAAAAAAACAAAAAAAAQA=
+</rawitemdata></item>
+<item name='$FormFormula' summary='true' sign='true'><formula>@If(@TextToNumber(@Version) &lt; 159; "(46Person)";Form)</formula></item>
+<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_People")</formula></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text>Y</text></item>
+<item name='$WebFlags' sign='true'><text>S</text></item>
+<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
+<item name='$V5ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRzYAAAAAwABAAAAhSAAAAAAAAAAAAAACAAGAHn/bAABALGx0gABAAAAAAABAAAAAAABALGx0gAA
+AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
+</rawitemdata></item>
+<item name='$ACTIONS' sign='true'>
+<rawitemdata type='1'>
+vRzYAAAAAwABAAAAhSAAAAAAAAAAAAAACAAGAA==
+</rawitemdata></item></note>
+

@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core">
+	<xp:this.resources>
+		<xp:styleSheet href="/livesearch/token-input.css"></xp:styleSheet>
+		<xp:script src="/livesearch/jquery.tokeninput.js" clientSide="true"></xp:script>
+	</xp:this.resources>
+	<xp:scriptBlock id="scriptBlock1">
+		<xp:this.value><![CDATA[function getObjType(){
+var val =  $( "#search_param" ).val();
+//alert(val);
+	return val;
+}
+
+//var restUrl = "livesearchREST.xsp/People?option=";
+
+var restPrefix = "./api/data/collections/name/"
+var hintText = "Enter text, use asterix(*) for Fulltext wildcards";
+var searchingText = "Searching...";
+var queryParam = "search";
+var propertyToSearch = "name";
+var searchDelay = 2000;
+var minChars = 2;
+var resultsLimit = 5; //not working??
+var noResultsText = "No matches";
+var tokenLimit = 1;
+var preventDuplicates = true;
+var onAdd = function (item) {
+	var objType = getObjType();	
+	var docID = item['@unid'];
+	var URL = "";
+	switch(objType) {
+    case "Groups":
+        URL = "Group.xsp?unid=" + docID;
+        break;
+    case "Holidays":
+        URL = "Holiday.xsp?unid=" + docID;
+        break;
+    default:
+       URL = "Person.xsp?unid=" + docID;
+	}
+	window.location = URL;              
+};
+var resultsFormatter = function (item){ 
+	var objType = getObjType();
+	switch(objType) {
+    case "Group":
+        sub = "dummy group sub";
+        break;
+    case "Holiday":
+        sub = "dummy Holiday sub";
+        break;
+    default:
+       sub = "" + item.job;
+	}
+	if (sub == ""){
+		sub = "<i>No title available</i>";
+	}
+	if(sub.length > 30) sub = sub.substring(0,30) + "...";
+	var name = item.name;
+	if(name.length > 30) name = name.substring(0,30) + "...";
+	var img = '<span class="pull-left" style="margin-right:10px;"><img class="img-circle" height="40px" width="40px" src="./photo.png" title="' + item.name + '" width="66px" /></span>';        
+	var text = '<div><div><h5 class="user">' + name + '</h5></div><p>' + sub + '</p></div>'        
+	return '<li class="list-group-item">' + '<div style="display:block">' + img + text + '</div></li>' ;
+};
+
+function setPlaceHolder() {
+	$("#token-input-livesearch-input").attr("placeholder", "Enter text");
+}
+
+function init(){
+	$("#livesearch-input").tokenInput(restPrefix + getObjType(), {
+		hintText: hintText,
+		searchingText: searchingText,
+		queryParam: queryParam, 
+		propertyToSearch: propertyToSearch,
+  		searchDelay: searchDelay,
+		minChars: minChars,
+		resultsLimit:  resultsLimit,
+		noResultsText: noResultsText,
+		tokenLimit: tokenLimit,
+		onAdd: onAdd,
+		preventDuplicates: preventDuplicates,
+		resultsFormatter: resultsFormatter    
+		}
+	);  
+	setPlaceHolder();	
+}
+
+function re_init(objType){
+	$("#token-input-livesearch-input").remove();
+	$(".token-input-list").remove();
+	$("#livesearch-input").tokenInput(restPrefix + getObjType(), {
+		hintText: hintText,
+		searchingText: searchingText,
+		queryParam: queryParam, 
+		propertyToSearch: propertyToSearch,
+		searchDelay: searchDelay,
+		minChars: minChars,
+		resultsLimit: resultsLimit,
+		noResultsText: noResultsText,
+		tokenLimit: tokenLimit,
+		onAdd: onAdd,
+		preventDuplicates: preventDuplicates,
+        resultsFormatter: resultsFormatter
+        }
+	);            
+	setPlaceHolder();	
+}
+
+function submitSearch(){
+	//not required, overwritten by onAdd function.	
+}]]></xp:this.value>
+	</xp:scriptBlock>
+	
+	
+	<xp:eventHandler event="onClientLoad" submit="false">
+		<xp:this.script><![CDATA[$(document).ready(function() {
+
+	$( "#search_param" ).change(function() {
+	alert("change")
+		var reach =  $( "#search_param" ).val();
+		alert(reach)
+		re_init(reach);			           
+	});
+
+	
+	$('.search-panel .dropdown-menu').find('a').click(function(e) {
+		e.preventDefault();
+		var param = $(this).attr("href").replace("#","");
+		var concept = $(this).text();
+		$('.search-panel span#search_concept').text(concept);
+		$('.input-group #search_param').val(param);
+		re_init();
+	}); 	  
+	
+	init(); 
+});]]></xp:this.script>
+	</xp:eventHandler>
+<div class="row">
+    <div class="pull-right col-md-pull-1">
+        <div class="input-group" style="margin:0 3%;">
+            <div class="input-group-btn search-panel">
+                <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">
+                    <span id="search_concept">People</span>
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu">
+                    <li><a href="#People">People</a></li>
+                    <li><a href="#Groups">Groups</a></li>
+                    <li><a href="#Holidays">Holiday</a></li>
+                </ul>
+            </div>
+            <input name="search_param" value="People" type="hidden" id="search_param" />
+            <div class="form-control" style="min-width:220px;">
+                <input id="livesearch-input" type="text" name="x" />
+            </div>
+            
+
+        </div>
+    </div>
+</div>
+
+	
+</xp:view>
+

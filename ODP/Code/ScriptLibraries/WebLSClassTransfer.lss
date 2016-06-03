@@ -1,0 +1,164 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+'
+'	library:		WebLSClassTransfer
+'
+'	description:	base class to transfer data between server and browser
+'
+
+Option Public
+Option Declare
+Option Base 0
+
+Use "WebLSUtils"
+
+
+
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Class cTransfer
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Class cTransfer
+	
+	Public	m_ses		As NotesSession
+	Public	m_ndb		As NotesDatabase
+	Public	m_docCtx		As NotesDocument
+	Public	m_sQueryString	As String
+	Private	m_sError		As String
+	Private	m_sType		As String
+	
+	'-------------
+	Public Sub New(sType As String) 'class constructor
+	'-------------	
+		
+		On Error Goto ERROR_HANDLER
+		
+		m_sType		= sType
+		
+		'set common vars
+		Set m_ses		= New NotesSession
+		Set m_ndb		= m_ses.CurrentDatabase
+		Set m_docCtx 	= m_ses.DocumentContext
+		
+		m_sQueryString = m_docCtx.Query_String_Decoded(0)
+		
+		Select Case m_sType
+		Case "get":	Call GetResponseBegin
+		End Select
+		
+		Exit Sub
+		
+ERROR_HANDLER:
+		
+		m_sError = Getthreadinfo(LSI_THREAD_PROC) & " (" & Cstr(Erl) & ") " & Error
+		Exit Sub
+		
+	End Sub
+	
+	'----------------
+	Public Sub Delete 	'class destructor
+	'----------------
+		
+		On Error Goto ERROR_HANDLER
+		
+		Select Case m_sType
+		Case "get":	Call GetResponseEnd
+		End Select
+		
+		Exit Sub
+		
+ERROR_HANDLER:
+		
+		Msgbox Getthreadinfo(LSI_THREAD_PROC) & " (" & Cstr(Erl) & ") " & Error
+		Exit Sub
+		
+	End Sub
+	
+	'----------------
+	Sub GetResponseBegin
+	'----------------
+		
+		'write beginning HTML code for a GET request response
+		
+		On Error Goto ERROR_HANDLER
+		
+		Dim sJsRef	As String
+		
+		sJsRef		= UtilGetQueryParameter(m_sQueryString, "&JsRef=")
+		
+		'remarks to: content-type:text/html;charset=UTF-8
+		'setting content-type without charset causes NN4 to display a black square 
+		'between each character. We always set the charset to UTF-8
+		
+		Print "content-type: text/html; charset=UTF-8"
+		
+		Print _
+		|		
+		</body></html>
+		<html>
+		<head>
+		<meta http-equiv="content-type"	content="text/html">
+		<meta http-equiv="expires"		content="0">
+		<meta http-equiv="pragma"		content="no-cache">
+		<meta http-equiv="cache-control"	content="no-cache">
+
+		<script language="JavaScript">
+
+			function onLoadData() {
+
+				var isNN4 = document.layers
+				var hWin	= isNN4 ? window : parent.window
+
+				if (sError == '') {
+					hWin.| + sJsRef + |.transOnLoad(window)
+				} else {
+					if (hWin.| + sJsRef + |.transOnError) {
+						hWin.| + sJsRef + |.transOnError(sError)
+					} else {
+						alert(sError)
+					}
+				}
+			}
+		|
+		
+		Exit Sub
+		
+ERROR_HANDLER:
+		Msgbox Getthreadinfo(LSI_THREAD_PROC) & " (" & Cstr(Erl) & ") " & Error
+		Exit Sub
+	End Sub
+	
+	'--------------
+	Sub GetResponseEnd
+	'--------------
+		
+		'write closing HTML code for a GET request response
+		
+		On Error Goto ERROR_HANDLER
+		
+		'display on server console
+		If m_sError <> "" Then
+			Msgbox m_sError		
+		End If
+		
+		Print _
+		|
+			var sError	= '| + UtilEscapeJS(m_sError) + |'
+
+			onLoadData()
+
+		</script>
+		<head>
+		<body></body>
+		<html>
+		|
+		
+		Exit Sub
+		
+ERROR_HANDLER:		
+		Msgbox Getthreadinfo(LSI_THREAD_PROC) & " (" & Cstr(Erl) & ") " & Error
+		Exit Sub
+	End Sub
+	
+End Class

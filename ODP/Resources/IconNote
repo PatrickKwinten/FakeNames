@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E3E003196C7'>
+<noteinfo noteid='116' unid='85255E01001356A8852555E800620F3C' sequence='22'>
+<created><datetime>19870128T125104,28-05</datetime></created>
+<modified><datetime dst='true'>20150511T121133,13+02</datetime></modified>
+<revised><datetime dst='true'>20150511T121133,11+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20150511T121133,12+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110149,58+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/OU=Duesseldorf/O=IBV/C=DE</name><name
+>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<revisions><datetime dst='true'>20030724T160903,39-04</datetime><datetime
+ dst='true'>20030808T074301,77-04</datetime></revisions>
+<item name='IconBitmap' summary='true'>
+<rawitemdata type='6'>
+AiAgAgEA//wf///wB///wAH//wAAf/gAAA/AAAABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA
+AAOAAYAHwAPAH/AH4H/8D/H//x8AAAAAAAAA7u7gAAAAAAAAAAAAAAAA5KSk7uAAAAAAAAAAAAAA
+6k/+/0ru4AAAAAAAAAAA5K///+//pO7gAAAAAAAO6k//8f7x//9K7u4AAADupK///x/v7x///6Su
+7uAKSv//8fH+Hh7x8f//+kruTv//Hx8e4R8R7v8fH//+rk/h8fH+4REeERHu8fHx705P/h8e4RER
+HxEREe7/Hv+uTx/u4RERER4RERER7u8fTk/x8REREfEfEfERERHx/65PH/HvEfcRHhEX8R/h7x9O
+T/HxEfcR8R8R8RfxEfH/rk8f8RcR9xEeERfxFxHvH05P8fER9xHxHxHxF/ER8f+uTx/xFxH3ER4R
+F/EXEe8fTk/x8RH3EfEfEfEX8RHx/65PH/EXEfcRHhEX8RcR7x9OT/HxEfcR8R8R8RfxEfH/rk8f
+8RcR9xEeERfxFxHvH05P8fER9xHxHxHxF/ER8f+uTx/xFxH3ER4RF/EXEe8fTk/x8RH3EfEfEfEX
+8RHx/65PH/EXEfcRHhEX8RcR7x9OT/HxEfcRER8RERfxEfH/rk8f8RcR8RHw8RHxFxHvH05P8fER
+/REfAA8RHfER8f+gDx/xHREf8AAA/xEdEe8eAADx8REf8AAAAAD/ERHx4AAAD/Ef8AAAAAAAAP8R
+7gAAAAD/8AAAAAAAAAAA//AAAA==
+</rawitemdata></item>
+<item name='$DefaultFrameset'><text>MainFrameset</text></item>
+<item name='$LANGUAGE'><textlist><text>en</text></textlist></item>
+<item name='$DefaultWebFrameset'><text>wMainFrameset</text></item>
+<item name='$UpdatedByLimit'><number>2</number></item>
+<item name='$RevisionsLimit'><number>2</number></item>
+<item name='$TemplateServerName'><text>CN=IBVDNO03/O=IBV/C=DE</text></item>
+<item name='$TemplateFileName'><text>C:\IBM\Domino\data\pubnames.ntf</text></item>
+<item name='$PIRCRefreshModTime'><datetime dst='true'>20150501T010051,05+02</datetime></item>
+<item name='$TemplateModTime'><datetime dst='true'>20150507T010013,79+02</datetime></item>
+<item name='$Daos'><text>0</text></item>
+<item name='$Flags'><text>tbJz27FS</text></item>
+<item name='$LaunchXPageRunOnServer'><text>0</text></item>
+<item name='$FlagsNoRefresh'><text/></item>
+<item name='$AllowRESTDbAPI'><number>2</number></item>
+<item name='$TITLE'><text>Fake Names 40K
+</text></item></note>
+

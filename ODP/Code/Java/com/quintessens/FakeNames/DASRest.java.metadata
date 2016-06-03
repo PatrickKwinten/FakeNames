@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="9ca" sequence="70" unid="0B500023CDEE2B90C1257E4200380F35">
+<created><datetime dst="true">20150511T121219,09+02</datetime></created>
+<modified><datetime dst="true">20150513T090017,83+02</datetime></modified>
+<revised><datetime dst="true">20150513T090017,82+02</datetime></revised>
+<lastaccessed><datetime dst="true">20150513T090017,82+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150511T121219,10+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>com/quintessens/FakeNames/DASRest.java</text></item>
+
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>com/quintessens/FakeNames/DASRest.java</text></item>
+
+</note>

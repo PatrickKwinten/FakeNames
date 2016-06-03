@@ -1,0 +1,54 @@
+<?xml version='1.0' encoding='utf-8'?>
+<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E3E003196C7'>
+<noteinfo noteid='956' unid='E8923AD4EBEB088F85256EA000442029' sequence='115'>
+<created><datetime dst='true'>20040526T082406,81-04</datetime></created>
+<modified><datetime dst='true'>20150507T110159,50+02</datetime></modified>
+<revised><datetime dst='true'>20130909T095405,82-04</datetime></revised>
+<lastaccessed><datetime dst='true'>20150915T202622,70+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150507T110159,49+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime>20100304T144046,94-05</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name='$TYPE'><text>$SUBVIEW</text></item>
+<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item>
+<item name='$Author' sign='true'><text>Greg Pflaum</text></item>
+<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<item name='$FormulaClass' sign='true'><text>1</text></item>
+<item name='$TITLE' sign='true'><text>($vwServersByMajVer)|$vwServersByMajVer</text></item>
+<item name='$Index' sign='true'><text>/O</text></item>
+<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
+1gAFAD4AOgAFAAYACgAPAAkABABNYWpWZXJTZXJ2ZXJOYW1lREIyQWNjZXNzU2VydmVyJENvbmZs
+aWN0JFJFRgQABAAAAJIABQAEAFR5cGUBAAYAU2VydmVyAQAKAFg0MDBTZXJ2ZXIfAgEACABQT1Nl
+cnZlch8CCgIEAAUABABGb3JtAQAGAFNlcnZlcgEACgBYNDAwU2VydmVyHwIBABoAY2M6TWFpbCBQ
+b3N0IE9mZmljZSBTZXJ2ZXIfAgoCHAIFAAkAJENvbmZsaWN0AFkBHAIDAA==
+</formula></item>
+<item name='$Collation' summary='true'>
+<rawitemdata type='2'>
+JAACAABEgGYAAAAGAABmAAYACgBNYWpWZXJTZXJ2ZXJOYW1l
+</rawitemdata></item>
+<item name='$VIEWFORMAT' summary='true' sign='true'>
+<rawitemdata type='5'>
+AQADAA8ACAQAAFZDAQAGAAAAAAAAABYAAQAACgAAAAAAAAAAAAICAAAAVkMBAAoABgAAAAAAQgAB
+AAAKAAAAAAgAAAAAAAIAAABWQwAADwAPAAAAAABQAAEAAAkAAAAAAAAAAAACAgAAAE1halZlclNl
+cnZlck5hbWVTZXJ2ZXJEQjJBY2Nlc3NTZXJ2ZXJEQjJBY2Nlc3NTZXJ2ZXImAAEAAAABAQAJAQAA
+CgEBBAoAAAAArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAP//
+AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAQDAAAAAAAD//wAAAAAAAAAAAAAA
+AAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA
+////AAUAAAAAAAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAABAAAAAAABAAAA/wABAAAAAAAA
+AAgAAAAAAAEAWEMACIACAAAAAAABAgICAQEBAQEABAAAAAAAAAAAIC8vOllDAAAIAAAAAQAAAAEA
+AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAuLCQA
+</rawitemdata></item>
+<item name='$FormFormula' summary='true' sign='true'><formula>REM { Used by webadmin.ntf to override the default form with another form };
+REM { The alternative formname is passed in via a URL command like &amp;form=formname };
+
+@If(	@TextToNumber(@Version) &gt; 184;
+	@Return(@UrlQueryString("form"));
+	"");
+
+
+""</formula></item>
+<item name='$Comment' sign='true'><text/></item>
+<item name='$Flags'><text/></item>
+<item name='$DesignerVersion' sign='true'><text>8</text></item></note>
+

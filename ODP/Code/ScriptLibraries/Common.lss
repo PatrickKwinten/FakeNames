@@ -1,0 +1,171 @@
+'++LotusScript Development Environment:2:5:(Options):0:66
+Option Public
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Class cPickList
+Declare Sub DoQS( sA() As String, bottom As Long, top As Long )
+Declare Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )	
+Declare Public Function QuickSort(sArray As Variant) As Variant
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Private Const FORM_DLGSERVERMULTI	= "dlgServerMulti"
+Const TITLE_DLGSERVERMULTI		= "Choose Servers, Server Groups or Clusters"
+Private Const ITEM_SERVERS		= "Servers"
+Private Const ITEM_SAVEOPTIONS	= "SaveOptions"
+
+Class cPickList
+	
+	m_oSession					As NotesSession
+	m_oUIWS						As NotesUIWorkspace
+	m_oDoc 						As NotesDocument
+	
+	'----------
+	Public Sub New(hDoc As NotesDocument)	' class constructor
+	'----------
+		
+		Set m_oSession	= New NotesSession
+		Set m_oUIWS	= New NotesUIWorkspace
+		Set m_oDoc 	= hDoc
+		
+	End Sub
+	
+	
+	'---------
+	Public Sub SetPickListValues(sItemName As String)
+	'---------
+		
+		On Error Goto ERROR_HANDLER
+		
+		Dim oDoc 		As NotesDocument
+		Dim oItem 	As NotesItem
+		Dim tmpItem 	As NotesItem
+		Dim oDb		As NotesDatabase
+		Dim oView 	As NotesView
+		
+		Dim iLevel	As Integer
+		Dim vContinue	As Variant
+		
+		Set oDb = m_oSession.CurrentDatabase
+		
+		Set oDoc = m_oUIWS.CurrentDocument.Document
+		
+		vContinue = m_oUIWS.DialogBox(FORM_DLGSERVERMULTI,True,True,False,False,False,False,TITLE_DLGSERVERMULTI,,True,False,True)
+		
+		If vContinue Then
+			
+			Set oItem = oDoc.GetFirstItem(ITEM_SERVERS)
+			
+			Call m_oDoc.ReplaceItemValue(sItemName,"")			
+			Set tmpItem = m_oDoc.GetFirstItem(sItemName)
+			
+			Forall v In oItem.Values
+				Call tmpItem.AppendToTextList(v)
+			End Forall
+			
+		End If
+		
+		Call m_oDoc.RemoveItem(ITEM_SAVEOPTIONS)
+		
+ROUTINE_EXIT:
+		Exit Sub
+		
+ERROR_HANDLER:	
+		Msgbox("Error " + Cstr(Err()) + ": " + |"| & Error() & |"| + " occurred on line " + Cstr(Erl())),4+32,"cPickList::SetServerValues"
+		Exit Sub
+		
+	End Sub
+End Class
+'++LotusScript Development Environment:2:2:DoQS:1:8
+Sub DoQS( sA() As String, bottom As Long, top As Long )
+     ' Called by QuickSort
+     ' Uses Public variable sA  (array of string)
+	Dim length As Long
+	Dim i As Long
+	Dim j As Long
+	Dim Pivot As Long
+	Dim PivotValue As String
+	Dim t As String
+	Dim LastSmall As Long
+	length = top - bottom + 1
+	
+     ' Only do the QuickSort if the sublist is at least 10 items long
+	If length > 10 Then
+          ' Pivot is chosen approx. halfway through sublist.
+          ' This gives us best speed if list is almost sorted already, and is no worse than any
+          ' other choice if the list is in random order.
+		Pivot = bottom + (length \ 2)   
+		
+          ' Move PivotValue out of the way
+		PivotValue = sA( Pivot )
+		sA ( Pivot ) = sA ( bottom )
+		sA ( bottom ) = PivotValue
+		
+          ' LastSmall is the location of the last value smaller than PivotValue
+		LastSmall = bottom
+		For i = bottom + 1 To top 
+			If sA ( i ) < PivotValue Then 
+				LastSmall = LastSmall + 1
+				t = sA ( i )
+				sA ( i ) = sA ( LastSmall )
+				sA ( LastSmall ) = t
+			End If
+		Next
+		
+          ' Move the PivotValue back
+		t = sA ( LastSmall )
+		sA ( LastSmall ) = sA ( bottom )
+		sA ( bottom ) = t
+		Pivot = LastSmall
+		
+          ' Now sort each side
+		Call DoQS ( sA, bottom, Pivot - 1 )
+		Call DoQS ( sA, Pivot + 1, top )
+	End If
+	
+End Sub
+
+'++LotusScript Development Environment:2:2:DoInsertSort:1:8
+Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )	
+	Dim i As Long
+	Dim x As Long
+	Dim v As String
+	Dim Found As Integer
+	For i = bottom+1 To top
+		x = i
+		v = sA (i )
+		Do While (sA(x-1) > v)
+			sA ( x ) = sA ( x-1 )
+			x = x - 1
+			If x=0 Then
+				Exit Do
+			End If
+		Loop
+		sA (x) = v
+	Next
+End Sub
+'++LotusScript Development Environment:2:1:QuickSort:1:8
+Public Function QuickSort(sArray As Variant) As Variant
+	Dim sA() As String    
+	Dim j As Long
+	Dim bottom As Long
+	Dim top As Long
+	Dim vA As Variant
+	
+	bottom = Lbound ( sArray )
+	top = Ubound ( sArray )
+	Redim sA( bottom To top ) As String     
+	For j = bottom To top
+		sA ( j ) = sArray ( j )
+	Next
+     ' DoQS does a QuickSort if the Sublist is longer than 10 elements
+     ' Thus, when DoQS finishes, all elements are within 10 spots of their correct location.
+     ' For lists that are close to being in order, an Insertion Sort is much faster than a QuickSort, so we
+     ' run through the whole thing once doing an Insertion Sort to finish tidying up the order.
+	Call DoQS( sA, bottom, top )
+	Call DoInsertSort ( sA, bottom, top )
+	Redim vA(bottom To top) As Variant
+	For j = bottom To top
+		vA ( j ) = sA ( j )
+	Next	
+	QuickSort = vA
+End Function

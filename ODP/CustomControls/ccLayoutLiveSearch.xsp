@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex"
+	xmlns:xc="http://www.ibm.com/xsp/custom">
+
+	<xe:applicationLayout id="applicationLayout1">
+		<xp:panel>
+			<xc:ccLiveSearch></xc:ccLiveSearch>
+			<xp:callback facetName="facet_1" id="callback1"></xp:callback></xp:panel>
+		<xp:br></xp:br>
+		
+		<xp:this.facets>
+			
+		</xp:this.facets>
+		<xe:this.configuration>
+			<xe:simpleResponsiveConfiguration navbarText="Fake Names">
+
+				<xe:this.navbarUtilityLinks>
+					<xe:basicLeafNode
+						href="http://quintessens.wordpress.com" label="Blog">
+					</xe:basicLeafNode>
+					<xe:pageTreeNode page="/post.xsp"
+						label="Register a Person">
+					</xe:pageTreeNode>
+				</xe:this.navbarUtilityLinks>
+			</xe:simpleResponsiveConfiguration>
+		</xe:this.configuration>
+	</xe:applicationLayout>
+</xp:view>

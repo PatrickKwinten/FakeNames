@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="7b2" sequence="9" unid="2303324843093175C1257E3500308F92">
+<created><datetime dst="true">20150428T105024,82+02</datetime></created>
+<modified><datetime dst="true">20150527T144130,74+02</datetime></modified>
+<revised><datetime dst="true">20150527T144130,73+02</datetime></revised>
+<lastaccessed><datetime dst="true">20150527T144130,73+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150507T110157,83+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/OU=Duesseldorf/O=IBV/C=DE</name><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
+<item name="$TITLE" sign="true"><text>restPerson</text></item>
+<item name="$Flags"><text>h534QP</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+<item name="$Comment"><text>PK - for my DAS approach</text></item></note>

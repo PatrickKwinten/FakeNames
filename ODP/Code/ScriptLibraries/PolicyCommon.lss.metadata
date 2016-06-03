@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="83e" sequence="61" unid="5E778455A21F45BB852575CB006BD0E3">
+<created><datetime dst="true">20090604T153738,27-04</datetime></created>
+<modified><datetime dst="true">20150507T110158,48+02</datetime></modified>
+<revised><datetime dst="true">20130909T095410,30-04</datetime></revised>
+<lastaccessed><datetime dst="true">20150507T110158,47+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150507T110158,47+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
+<revisions><datetime dst="true">20090604T153835,00-04</datetime><datetime dst="true">20090604T160012,52-04</datetime><datetime dst="true">20090804T143647,21-04</datetime><datetime dst="true">20090804T143655,13-04</datetime><datetime dst="true">20090813T091539,59-04</datetime><datetime dst="true">20121022T144320,49-04</datetime></revisions>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<item name="$TITLE" sign="true"><text>PolicyCommon</text></item>
+<item name="$Flags"><text>s34Q</text></item>
+<item name="$PublicAccess" sign="true"><text>1</text></item>
+
+
+<item name="$POID"><datetime dst="true">20130909T095410,30-04</datetime></item></note>

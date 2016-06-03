@@ -1,0 +1,102 @@
+'++LotusScript Development Environment:2:5:(Options):0:74
+%REM
+	Library lsXML
+	Created Oct 26, 2011 by Ana Kapetanakis/Westford/IBM
+	Description: Comments for Library
+%END REM
+Option Public
+Option Declare
+
+
+
+Use "lsCommon"
+
+
+
+'++LotusScript Development Environment:2:5:(Forward):0:1
+Declare Public Function ExportButton As String
+
+'++LotusScript Development Environment:2:5:(Declarations):0:10
+Const ERR_CREATE_STREAM			= "Unable to create stream '%s1'"
+
+'++LotusScript Development Environment:2:1:ExportButton:2:8
+
+Public Function ExportButton As String
+	
+	Const ATT_SIGNING	= "signing"
+	Const ATT_ENTITYID	= "entityID"
+	Const ATT_PROTOCOLSUPENUM = "protocolSupportEnumeration"
+	
+	Const ITEM_SERVER	= "ServerName"
+	Const PUBNAMES		= "names.nsf"
+	Const FILE_CONFIG_XML = "config.xml"
+	Const TAG_KEYDESCRIPTOR = "md:KeyDescriptor"
+	Const TAG_ENTITYDESCRIPTOR = "md:EntityDescriptor"
+	Const TAG_IDPSSODESCRIPTOR = "md:IDPSSODescriptor"
+	
+	Dim oUIWS 		As New NotesUIWorkspace
+	Dim oSession 		As New NotesSession
+	Dim oUIDoc		As NotesUIDocument
+	Dim oDoc			As NotesDocument
+	
+	Dim oDOMParser 	As NotesDOMParser
+	Dim oDOMNodeList 	As NotesDOMNodeList
+	Dim oDOMElementNode As NotesDOMElementNode
+	Dim oDOMFileNode As NotesDOMElementNode
+	Dim oDb As NotesDatabase
+	Dim oIDPDb As NotesDatabase
+	
+	Dim sFilePath As String
+	Dim sServer As String
+	
+	Dim stream 		As NotesStream
+	
+	Dim iTagIndex		As Integer
+	
+	
+	
+	Set oUIDoc		= oUIWS.CurrentDocument
+	Set oDoc			= oUIDoc.Document
+	Set oIDPDb = oSession.currentdatabase
+	sServer = oIDPDB.Server
+	Set oDb		= oSession.getDatabase(sServer, PUBNAMES)
+	
+	sFilePath			= NormalizeOSPath("c:\temp\" + FILE_CONFIG_XML)
+	Set stream = oSession.CreateStream()
+	If Not stream.Open(sFilePath) Then
+		Error 5000, "Unable to create stream"
+	End If
+	
+	Set oDOMParser		= oSession.CreateDOMParser(stream)
+	Call oDOMParser.Process()
+	
+	'get the <KeyDescriptor> tag
+	Set oDOMNodeList = oDOMParser.Document.GetElementsByTagName(TAG_ENTITYDESCRIPTOR)
+	If oDOMNodeList.NumberOfEntries > 0 Then
+		
+		For iTagIndex = 1 To oDOMNodeList.NumberOfEntries
+			
+			Set oDOMFileNode = oDOMNodeList.GetItem(iTagIndex)
+			
+			'return the value contained in the signing attribute
+			ExportButton = oDOMFileNode.GetAttribute(ATT_ENTITYID)
+			MsgBox ExportButton
+		Next
+		
+	End If
+	Set oDOMNodeList = oDOMParser.Document.GetElementsByTagName(TAG_IDPSSODESCRIPTOR)
+	If oDOMNodeList.NumberOfEntries > 0 Then
+		
+		For iTagIndex = 1 To oDOMNodeList.NumberOfEntries
+			
+			Set oDOMFileNode = oDOMNodeList.GetItem(iTagIndex)
+			
+			'return the value contained in the signing attribute
+			ExportButton = oDOMFileNode.GetAttribute(ATT_PROTOCOLSUPENUM)
+			MsgBox ExportButton
+		Next
+		
+	End If
+	Call stream.Close()
+	
+End Function

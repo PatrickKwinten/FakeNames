@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core" xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:applicationLayout id="applicationLayout1">
+		<xp:callback facetName="facet_1" id="callback1"></xp:callback>
+		<xe:this.configuration>
+			<xe:simpleResponsiveConfiguration navbarText="Fake Names"
+				fixedNavbar="fixed-top" navbar="true">
+				<xe:this.navbarUtilityLinks>
+					<xe:basicLeafNode label="Codestore"
+						href="http://www.codestore.org">
+					</xe:basicLeafNode>
+
+					<xe:pageTreeNode page="/index_1.xsp" label="Home"></xe:pageTreeNode>
+					<xe:pageTreeNode page="/post.xsp"
+						label="Register Person">
+					</xe:pageTreeNode>
+				</xe:this.navbarUtilityLinks>
+				<xe:this.searchBar>
+					<xe:appSearchBar
+						inactiveText="enter name or keyword ..." rendered="true"
+						queryParam="search" loaded="true" inputTitle="your query"
+						pageName="search.xsp">
+					</xe:appSearchBar>
+				</xe:this.searchBar>
+			</xe:simpleResponsiveConfiguration>
+		</xe:this.configuration>
+	</xe:applicationLayout></xp:view>
