@@ -1,73 +1,75 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='936' unid='40466FB36760E5928525798A00641277' sequence='55'>
+<view name='($AccountsByType)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false'
+ designerversion='8.5.3' language='en' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='simple' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='false' extendlastcolumn='false' showhierarchies='false'
+ unreadcolor='red' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
+ totalscolor='blue' headerbgcolor='#a0a0c5' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' indexrefresh='automatic'
+ initialbuildrestricted='false' noemptycategories='false'>
+<noteinfo noteid='926' unid='40466FB36760E5928525798A00641277' sequence='55'>
 <created><datetime>20120119T131303,27-05</datetime></created>
-<modified><datetime dst='true'>20150507T110159,34+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114104,48+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095410,28-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202350,17+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110159,33+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,53+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114104,48+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($AccountsByType)</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-rAECAEIAEAAlQWNjb3VudEZpbGVMaXN0BQAPAEFjY291bnRGaWxlTmFtZQAFAA8AQWNjb3VudFJl
-cGxpY2FzAB8CAwACACgADQBBY2NvdW50U2VydmVyAAUADQBBY2NvdW50U2VydmVyAAMAAgAcAAgA
-JCROb3RlSUQFAAgAJCROb3RlSUQDAAIAHAAIACQkREJOYW1lBQAIACQkREJOYW1lAwACACgAAgAk
-MwUACwBBY2NvdW50TmFtZQABAAEAfAAiApAAVgEiAgMABQCyAK4ADQALAAsAEQAPABAADQAPAAgA
-CAACAA8ACQAEAEFjY291bnRUeXBlQWNjb3VudE5hbWVBY2NvdW50UG9ydE51bWJlckFjY291bnRM
-b2NhdGlvbiVBY2NvdW50RmlsZUxpc3RBY2NvdW50U2VydmVyQWNjb3VudFByb3RvY29sJCROb3Rl
-SUQkJERCTmFtZSQzU1NPQ3JlZGVudGlhbElEJENvbmZsaWN0JFJFRgQABAAAABwABQAEAFR5cGUB
-AAcAQWNjb3VudAAKAgMABwAOAAgACUwxUzJTM1M=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-MAACAABEAGYAAAALAAFmAAsAEQBBY2NvdW50VHlwZUFjY291bnRQb3J0TnVtYmVy
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQALAAcACAQAAFZDAQALAAQAAAAAADcAAQAACQAAAAAIAAAAAAACAAAAVkMAAAsABAAAAAAAUAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwUAEQAEAAAAAAAyAAEAAAkAAAAAAAAAAAAAAgAAAFZDAAAPAA8A
-AAAAAJkAAQAACQAAAAAAAAAAAAICAAAAVkMAABAAAABQAAAAUAABAAAJAAAAAAAAAAAAAgIAAABW
-QwAADQANACoAAABmAAEAAAkAAAAAAAAAAAACAgAAAFZDAAAPAA8AAAAAAGYAAQAACQAAAAAAAAAA
-AAICAAAAVkMAAAgACAAeAAAAgAABAAAJAAAAAAAAAAAAAgIAAABWQwAACAAIAB4AAACIAAEAAAkA
-AAAAAAAAAAACAgAAAFZDAAACAAQAOAAAANoAAQAACgAAAAAAAAAAAAICAAAAVkMAAA8AEQAAAAAA
-YAABAAAKAAAAAAAAAAAAAgIAAABBY2NvdW50VHlwZVR5cGVBY2NvdW50TmFtZU5hbWVBY2NvdW50
-UG9ydE51bWJlclBvcnRBY2NvdW50TG9jYXRpb25BY2NvdW50TG9jYXRpb24lQWNjb3VudEZpbGVM
-aXN0UAACAEIAEAAlQWNjb3VudEZpbGVMaXN0BQAPAEFjY291bnRGaWxlTmFtZQAFAA8AQWNjb3Vu
-dFJlcGxpY2FzAB8CAwAHAAwABQAJMFMwRQBBY2NvdW50U2VydmVyQWNjb3VudFNlcnZlcioAAgAo
-AA0AQWNjb3VudFNlcnZlcgAFAA0AQWNjb3VudFNlcnZlcgADAEFjY291bnRQcm90b2NvbEFjY291
-bnRQcm90b2NvbCQkTm90ZUlEJCROb3RlSUQeAAIAHAAIACQkTm90ZUlEBQAIACQkTm90ZUlEAwAk
-JERCTmFtZSQkREJOYW1lHgACABwACAAkJERCTmFtZQUACAAkJERCTmFtZQMAJDNVTklEOAACACgA
-AgAkMwUACwBBY2NvdW50TmFtZQABAAEAfAAiApAAVgEiAgMABwAOAAcACTFTMlMzUwBTU09DcmVk
-ZW50aWFsSURTU09fQ1JFREVOVElBTF9JRCYAAQAAAAEBAAkBAAIKAQEECgAAAACtKwEAAQABAAAA
-AAAAAAAAV0MCAAAJAAAAAAAAAAAAAAAAAAAAAAEAwAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAA
-CQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwIAAAkAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MCAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAA//8AAAAAAAAAAAAAAAAAAFdDAgAACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAA
-AAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MB
-AAAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAA
-AAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAE
-AAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAA
-AAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABC
-AAAAAAABAP///wAFAAAAAAABAAAAAAAAAAAAAAAAAAEA////AAEAoKDFAAAAAQD/AAAAAQAAAP8A
-AQAAAAAAAAAIAAAAAAABAFhDAAiAAgAAAAAAAQICAgEBAQEHAAMAAAAAAAAAACAvLzpZQwAACAAA
-AAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAALiwkAA==
-</rawitemdata></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzpAAAAAQABAAAAQRgAAAAAAAAAAAAACAAGAHn/bAABAGBgmAABAAAAAAABAAAAAAABANbX7wAD
-ACQAAAABAZAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUz
-AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/yIAAAAFAAAAnQEA
-AAgAAAAAAAAAX0ZvcndhcmQDAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIHRvIEZvbGRl
-ci4uLgQAPXy+/zAAAAAFAAAAnQEAABYAAAAAAAAAX1JlbW92ZSBmcm9tIEZvbGRlci4uLgUAPnw=
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Account"</formula></code>
+<actionbar bgcolor='#606098' bordercolor='black'>
+<actionbuttonstyle margintype='fixed' margin='6' bgcolor='#d6d7ef' displayborder='notesstyle'
+ widthtype='background' textalign='center'/><border width='0px 0px 1px'/>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move to Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove from Folder...' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='AccountType' width='6.8750'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt'/><columnheader title='Type'><font size='9pt'
+ name='multilingual'/></columnheader><datetimeformat show='date' date='yearmonthday'
+ time='hourminutesecond' zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday'
+ monthformat='twodigitmonth' yearformat='fourdigityear' weekdayformat='shortname'
+ dateseparator1=' ' dateseparator2='/' dateseparator3='/' timeseparator=':'
+ preference='usersetting'/><numberformat format='general' varying='true' punctuated='false'
+ parens='false' percent='false' bytes='false' decimalsym='.' thousandssep=','
+ currencysymtype='custom' currencysym='$' usecustomsym='false'/></column>
+<column hidedetailrows='false' itemname='AccountName' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Name'><font size='9pt'/></columnheader></column>
+<column sort='descending' hidedetailrows='false' itemname='AccountPortNumber'
+ width='6.2500' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false'><font size='9pt'/><columnheader title='Port'><font
+ size='9pt' name='multilingual'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='AccountLocation' width='19.1250'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt'/><columnheader title='AccountLocation'><font
+ size='9pt' name='multilingual'/></columnheader></column>
+<column hidedetailrows='false' itemname='%AccountFileList' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader><font size='9pt' name='multilingual'/></columnheader><code
+ event='value'><formula>AccountFileName:AccountReplicas</formula></code></column>
+<column hidedetailrows='false' itemname='AccountServer' width='12.7500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='AccountServer'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='AccountProtocol' width='12.7500'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><font size='9pt'/><columnheader title='AccountProtocol'><font
+ size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='$$NoteID' width='16' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='$$NoteID'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='$$DBName' width='17' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='$$DBName'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='$3' width='27.2500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='UNID'><font size='9pt'/></columnheader><code event='value'><formula
+>AccountName + "|" +@Text(@DocumentUniqueID)</formula></code></column>
+<column hidedetailrows='false' itemname='SSOCredentialID' width='12' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='SSO_CREDENTIAL_ID'><font size='9pt'/></columnheader></column></view>
 

@@ -1,21 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="4b2" sequence="5005" unid="7979D1B905B63FD1C1256BAB00408FA5">
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="6" maintenanceversion="1.5" name="btnNaviUp.gif" publicaccess="false" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="4ae" sequence="5005" unid="7979D1B905B63FD1C1256BAB00408FA5">
 <created><datetime dst="true">20020430T134510,77+02</datetime></created>
-<modified><datetime dst="true">20150507T110153,97+02</datetime></modified>
+<modified><datetime dst="true">20150512T114059,26+02</datetime></modified>
 <revised><datetime dst="true">20130909T095406,16-04</datetime></revised>
-<lastaccessed><datetime dst="true">20150507T110153,96+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150507T110153,96+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20150512T114059,26+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150512T114059,26+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name="$TITLE"><text>btnNaviUp.gif</text></item>
-<item name="$Flags"><text>34CiQ</text></item>
-<item name="$FlagsExt" sign="true"><text>D</text></item>
-<item name="$ImagesWide" sign="true"><number>1</number></item>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-<item name="$ImagesColorize" sign="true"><number>0</number></item>
-
 
 <item name="$MimeType" sign="true"><text>image/gif</text></item>
-<item name="$FileModDT" sign="true"><datetime dst="true">20020430T134138,00+02</datetime></item>
-<item name="$ImageNames" sign="true"><text>btnNaviUp.gif</text></item>
-<item name="$DesignerVersion" sign="true"><text>6</text></item></note>
+<item name="$FileModDT" sign="true"><datetime dst="true">20020430T134138,00+02</datetime></item></imageresource>

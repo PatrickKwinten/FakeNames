@@ -1,57 +1,58 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='536' unid='4754A4DC2C976638C1256BD60048E63F' sequence='5006'>
+<page name='WebJSViewTemplate5' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' treatashtml='true'
+ publicaccess='false' designerversion='6' renderpassthrough='true'>
+<noteinfo noteid='532' unid='4754A4DC2C976638C1256BD60048E63F' sequence='5006'>
 <created><datetime dst='true'>20020612T151615,35+02</datetime></created>
-<modified><datetime dst='true'>20150507T110154,71+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114059,92+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095407,40-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110154,70+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110154,70+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114059,92+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114059,92+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140229,42-04</datetime><datetime
 >20100304T144041,96-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>WebJSViewTemplate5</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>C34WQ</text></item>
-<item name='$WebFlags' sign='true'><text>H</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>WebJSViewTemplate5</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQEoAUKAKAFCgAAAGQAgwQBAN0GAACF/4X/CgAEAAkJLyrSCAEAAIAAAN4G
-AACF/4ECgwQBAN0GAACF/4X/NgAEAAkJCWpzIHVzZWQgaW4gJCRWaWV3VGVtcGxhdGVEZWZhdWx0
-IGZvciBEb21pbm8gNdIIAQAAgAAA3gYAAIX/gQKDBAEA3QYAAIX/hf8KAAQACQkqL9IIAQAAgAAA
-3gYAAIX/gQKDBAEAhf8IAAQAAAmBAoMEAQCF/yMABAAACWZ1bmN0aW9uIGdldFNlbGVjdGVkRG9j
-cygpewCBAoMEAQCF/wsABAAACQkvKgCBAoMEAQCF/1IABAAACQlUaGlzIGZ1bmN0aW9uIHJldHVy
-bnMgc2VsZWN0ZWQgZG9jdW1lbnQgVU5JRHMgZnJvbSBhbiBIVE1MLXN0eWxlIHdlYiB2aWV3gQKD
-BAEAhf8LAAQAAAkJKi8AgQKDBAEAhf8TAAQAAAkJdmFyIGlYCT0gMACBAoMEAQCF/xcABAAACQl2
-YXIgYVVOSUQgPSBbXQCBAoMEAQCF/y0ABAAACQl2YXIgaEZvcm0gPSB3aW5kb3cuZG9jdW1lbnQu
-Zm9ybXNbMF0AgQKDBAEAhf8JAAQAAAkJAIECgwQBAIX/HQAEAAAJCWlmIChoRm9ybSAhPSBudWxs
-KSB7AIECgwQBAIX/PgAEAAAJCQlmb3IgKHZhciBpWSA9IDA7IGlZIDwgaEZvcm0uZWxlbWVudHMu
-bGVuZ3RoOyBpWSsrKSB7gQKDBAEAhf+CAAQAAAkgCQkJaWYgKGhGb3JtLmVsZW1lbnRzW2lZXS50
-eXBlID09ICJjaGVja2JveCIgJiYgaEZvcm0uZWxlbWVudHNbaVldLm5hbWUgPT0gIiQkU2VsZWN0
-RG9jIiAmJiBoRm9ybS5lbGVtZW50c1tpWV0uY2hlY2tlZCkge4ECgwQBAIX/MAAEAAAJCQkJCWFV
-TklEW2lYXSA9IGhGb3JtLmVsZW1lbnRzW2lZXS52YWx1ZYECgwQBAIX/EAAEAAAJCQkJCWlYKyuB
-AoMEAQCF/w0ABAAACSAJCQl9AIECgwQBAIX/DAAEAAAJIAkJfYECgwQBAIX/CwAEAAAJIAl9AIEC
-gwQBAIX/FgAEAAAJIAlyZXR1cm4gYVVOSUSBAoMEAQCF/wkABAAACX0AgQKDBAEAhf8IAAQAAAmB
-AoMEAQCF/y0ABAAACWZ1bmN0aW9uIG9uU2VsZWN0U3RhcnRLZXkoaEVsZW1lbnQpIHsAgQKDBAEA
-hf8IAAQAAAmBAoMEAQCF/0EABAAACQl2YXIgc0tleSA9IGhFbGVtZW50Lm9wdGlvbnNbaEVsZW1l
-bnQuc2VsZWN0ZWRJbmRleF0udGV4dACBAoMEAQCF/wkABAAACQkAgQKDBAEAhf8fAAQAAAkJaWYg
-KHNLZXkgPT0gJycpIHJldHVybgCBAoMEAQCF/wgABAAACYECgwQBAIX/NwAEAAAJCXZhciBpUG9z
-ID0gbG9jYXRpb24uaHJlZi5pbmRleE9mKCcmU3RhcnRLZXk9JykAgQKDBAEAhf8IAAQAAAmBAoME
-AQCF/xkABAAACQlpZiAoaVBvcyA+IC0xKSB7AIECgwQBAIX/NQAEAAAJCQl2YXIgc1VybCA9IGxv
-Y2F0aW9uLmhyZWYuc3Vic3RyaW5nKDAsIGlQb3MpAIECgwQBAIX/EQAEAAAJCX0gZWxzZSB7AIEC
-gwQBAIX/IgAEAAAJCQl2YXIgc1VybCA9IGxvY2F0aW9uLmhyZWaBAoMEAQCF/woABAAACQl9gQKD
-BAEAhf8JAAQAAAkJAIECgwQBAIX/MwAEAAAJCWxvY2F0aW9uLmhyZWYgPSBzVXJsICsgJyZTdGFy
-dEtleT0nICsgc0tleQCBAoMEAQCF/wkABAAACX0AgQKDBAEAhf8IAAQAAAk=
-</rawitemdata></item></note>
+<body><richtext>
+<pardef id='1' leftmargin='1in' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='1'><run><font size='9pt' name='monospace' color='green'/>/*</run></par>
+<par def='1'><run><font size='9pt' name='monospace' color='green'/>	js used in $$ViewTemplateDefault for Domino 5</run></par>
+<par def='1'><run><font size='9pt' name='monospace' color='green'/>*/</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>function getSelectedDocs(){</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	/*</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	This function returns selected document UNIDs from an HTML-style web view</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	*/</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	var iX	= 0</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	var aUNID = []</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	var hForm = window.document.forms[0]</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	if (hForm != null) {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>		for (var iY = 0; iY &lt; hForm.elements.length; iY++) {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/> 			if (hForm.elements[iY].type == "checkbox" &amp;&amp; hForm.elements[iY].name == "$$SelectDoc" &amp;&amp; hForm.elements[iY].checked) {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>				aUNID[iX] = hForm.elements[iY].value</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>				iX++</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/> 			}</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/> 		}</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/> 	}</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/> 	return aUNID</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>}</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>function onSelectStartKey(hElement) {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	var sKey = hElement.options[hElement.selectedIndex].text</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	if (sKey == '') return</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	var iPos = location.href.indexOf('&amp;StartKey=')</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	if (iPos &gt; -1) {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>		var sUrl = location.href.substring(0, iPos)</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	} else {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>		var sUrl = location.href</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	}</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>	location.href = sUrl + '&amp;StartKey=' + sKey</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>}</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>WebJSViewTemplate5</text></item></page>
 

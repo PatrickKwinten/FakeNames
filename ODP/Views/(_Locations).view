@@ -1,93 +1,59 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='2da' unid='114201ED3C708FB38525613B004FB2E0' sequence='5069'>
+<view name='(_Locations)' alias='Locations' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
+ allowdocselection='true' publicaccess='false' designerversion='6' language='en'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='false' showresponsehierarchy='true' showmargin='true' shrinkrows='false'
+ extendlastcolumn='true' showhierarchies='false' unreadcolor='black' rowlinecount='1'
+ headerlinecount='1' rowspacing='1' haslinkcolumn='true' bgcolor='white' altrowcolor='#f8f8fc'
+ totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' initialbuildrestricted='false'
+ noemptycategories='true'>
+<noteinfo noteid='2d6' unid='114201ED3C708FB38525613B004FB2E0' sequence='5069'>
 <created><datetime>19950105T093031,36-05</datetime></created>
-<modified><datetime dst='true'>20150507T110151,49+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114056,90+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,26-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,48+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,48+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114056,90+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114056,90+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140236,44-04</datetime><datetime
 >20100304T144047,29-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>(_Locations)|Locations</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-0AACAHgAAwAkMjAAAgAFAAAAAAAAAAUABABOYW1ltAIFAAYAU291cmNlAQABACoACgKvAEIACgAB
-AAAArgA4AAEACAAgIC0gZm9yIAIABQAAAAAAAAAFAAYAU291cmNltAIiAgEABQAgb25seQAiAq4A
-BAC1AyICAwAFAB4AGgADAAMACQAEACQyMCRDb25mbGljdCRSRUYEAAQAAAA0AAUABABUeXBlAQAI
-AExvY2F0aW9uCgIFAAQARm9ybQEACABMb2NhdGlvbgoCHAIDAA==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-EAABAABEAGYAAAADACQyMA==
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQABABUAiEAAAFZDAQADAAgAjAAAANgAAQAACQAgAAAAAAAAAAICAAAAJDIwTG9jYXRpb26MAAIA
-eAADACQyMAACAAUAAAAAAAAABQAEAE5hbWW0AgUABgBTb3VyY2UBAAEAKgAKAq8AQgAKAAEAAACu
-ADgAAQAIACAgLSBmb3IgAgAFAAAAAAAAAAUABgBTb3VyY2W0AiICAQAFACBvbmx5ACICrgAEALUD
-IgIDAAcAEgALAAk2UzdTMjNTMjRTACYAAQAAAAEBAAkBAAAKAQEECgAALwCtKwEAAQABAQAAAAAA
-AAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAEAQAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA
-////AAEA+Pj8AAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAABAAAAAAABAAAA/wAAAAAAAAAA
-AAgAAAAAAAEAWEMATIADAAAAAAABAgICAQEBAQcEAwAAAAAAAAAAIC4uOg==
-</rawitemdata></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Locations")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-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
-DAA+fA==
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAL7/RgEAAAEAAACeQRAADAAAAAAAAABBZGQgTG9j
-YXRpb24kAQEAJAANAEN1cnJlbnRTZXJ2ZXIAiwAAAAAAAAAAAPA/awIDAAcADAAFAAkwUzBFAAAA
-4AAFAA0AQ3VycmVudFNlcnZlcgABAAAACgKvAMAAHgACAOgDAAAAAAAAAQAIAExvY2F0aW9usQKu
-AKIAAQAMAFtOZXRDcmVhdG9yXecAdAKvAIoAHgACAOgDAAAAAAAAAQAIAExvY2F0aW9usQKuAGwA
-AgANAAAAAAAAAAEADgBOb3QgQXV0aG9yaXplZAEAQgBZb3UgYXJlIG5vdCBhdXRob3JpemVkIHRv
-IGFkZCBMb2NhdGlvbiBkb2N1bWVudHMgdG8gdGhpcyBkYXRhYmFzZS6wA64ABAC1BQMABwASAAsA
-CTBSNlIxMFMxM1IAvv8iAAAABwAAAJ4hEAAMAAAAAAAAAEFkZCBMb2NhdGlvbr7/RAAAAAEAAACe
-QBAADQAAAAAAAABFZGl0IExvY2F0aW9u3SAAAAASAAIA6AcAAAAAAADtAQMABwAMAAUACTBTMEUA
-vv9GAAAAAQAAAJ4BEAAPAAAAAAAAAERlbGV0ZSBMb2NhdGlvbksgAAAAEgACAEwdAAAAAAAAsQED
-AAcADAAFAAkwUzBFAL7/QgAAAAEAAACeIRAACwAAAB0AAABFbXB0eSBUcmFzaEsgAAAAEgACAP0H
-AAAAAAAA7QEDAAcADAAFAAkwUzBFAL7/YgAAAAEAAACeIRAABgAAACEAAABTZWFyY2hGAAcAHgAY
-AFdlYiBvbmx5IC0gdXNlZCBpbiBWaWV3cwcACgADAAkxUwAAABIAAgCQFwAAAAAAAO0BAwAHAAoA
-AwAJMFIAvv8mAAAABQAAAJwBAAALAAAAAAAAAENhdGVnb3JpX3plSwcATny+/ygAAAAFAAAAnQEA
-AA4AAAAAAAAAX0VkaXQgRG9jdW1lbnQIAAIKvv8oAAAABQAAAJ0BAAAOAAAAAAAAAFNlbmQgRG9j
-dV9tZW50CQADCr7/IgAAAAUAAACdAQAACAAAAAAAAABfRm9yd2FyZAoABAq+/ywAAAAFAAAAnQEA
-ABIAAAAAAAAAX01vdmUgVG8gRm9sZGVyLi4uCwA9fL7/LgAAAAUAAACdAQAAEwAAAAAAAABfUmVt
-b3ZlIEZyb20gRm9sZGVySwwAPnw=
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Location" &amp; Form = "Location"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Locations")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Add Location' showinmenu='false' hide='web'><imageref name='btnNewDoc.gif'/><code
+ event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+@If(CurrentServer="";
+@PostedCommand([Compose]; "Location");
+@IsMember("[NetCreator]";@UserRoles);@PostedCommand([Compose];"Location");@Prompt([Ok];"Not Authorized";"You are not authorized to add Location documents to this database."))</formula></code></action>
+<action title='Add Location' showinmenu='false' hide='notes'><imageref name='btnNewDoc.gif'/><code
+ event='onClick' for='web'><javascript>ntNewDoc('Location', '[NetCreator]')</javascript></code></action>
+<action title='Edit Location' showinmenu='false' hide='previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Delete Location' showinmenu='false'><imageref name='btnDelete.gif'/><code
+ event='click'><formula>@PostedCommand([MoveToTrash])</formula></code></action>
+<action title='Empty Trash' showinmenu='false' hide='notes'><imageref name='btnEmpty.gif'/><code
+ event='click'><formula>@Command([EmptyTrash])</formula></code></action>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action>
+<action title='Categori_ze' showinmenu='false' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$20' width='27'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Location'><font
+ size='9pt'/></columnheader><datetimeformat show='datetime' date='yearmonthday'
+ fourdigityearfor21stcentury='true' time='hourminutesecond' zone='never' dateformat='weekdaydaymonthyear'
+ dayformat='twodigitday' monthformat='twodigitmonth' yearformat='fourdigityear'
+ weekdayformat='shortname' dateseparator1=' ' dateseparator2='.' dateseparator3='.'
+ timeseparator=':' timeformat24='true' preference='usersetting'/><code event='value'><formula
+>@Name([Abbreviate];Name) + @If(Source="*";"";"  - for "+@Name([Abbreviate];Source) + " only")</formula></code></column></view>
 

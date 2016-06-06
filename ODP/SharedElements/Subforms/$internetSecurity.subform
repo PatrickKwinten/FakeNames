@@ -1,395 +1,359 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='59e' unid='69CA5F53CE0C4AA1052569FA006F4101' sequence='5048'>
+<subform name='$internetSecurity' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='8'
+ language='en'>
+<noteinfo noteid='59a' unid='69CA5F53CE0C4AA1052569FA006F4101' sequence='5048'>
 <created><datetime>20010221T151511,37-05</datetime></created>
-<modified><datetime dst='true'>20150507T110155,24+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114100,44+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095405,28-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110155,23+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110155,23+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114100,44+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114100,44+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143928,54-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>$internetSecurity</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUAx3</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$Script' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:74
-Option Public
+<globals><code event='options'><lotusscript>Option Public
 
-'++LotusScript Development Environment:2:5:(Forward):0:1
+</lotusscript></code></globals>
+<body><richtext>
+<pardef id='1' hide='notes web'/>
+<par def='1'><run><font size='9pt'/></run></par>
+<table cellbordercolor='silver' htmlclass='TableSpacing' widthtype='fixedleft'
+ rowspacing='0.0201in' refwidth='5.7500in'><tablecolumn width='1.7500in'/><tablecolumn
+ width='4in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='3' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt' style='bold' color='white'/>TCP Authentication</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='4' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='5' leftmargin='0.0597in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>Type="IMAPSite" | Type="POP3Site"</formula></code></pardef>
+<par def='5'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>This Internet site will accept anonymous requests (requests sent from a browser without a name and password). If set to 'No', anonymous requests will be rejected immediately. Note that even if this option is set to 'Yes', an anonymous request will be rejected if the operation or resource identified by the request requires authentication.</popuptext><run
+><font size='9pt'/>Anonymous:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='6' leftmargin='0.0597in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>Type="IMAPSite" | Type="POP3Site"</formula></code></pardef>
+<par def='6'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='TCPAnonymous' description='Anonymous requests are allowed.' htmlid='TCPAnonymous'><keywords
+ helperbutton='false' columns='2' ui='radiobutton'><textlist><text>Yes|1</text><text
+>No|0</text></textlist></keywords><code event='defaultvalue'><formula>"1"</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='7' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='7'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>The Internet site will accept requests that contain a name and password (known as 'Basic HTTP authentication').</popuptext><run
+><font size='9pt'/>Name &amp; password:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='8' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='8'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='TCPNameAndPwd' description='HTTP basic authentication is allowed.'
+ htmlid='TCPNameAndPwd'><keywords helperbutton='false' columns='2' ui='radiobutton'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='9' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>Type!="WebSite"</formula></code></pardef>
+<par def='9'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>If this option is set to 'Yes', then all non-SSL requests received by this Web site will be redirected to the SSL port. The server will generate a new URL replacing 'http:' with 'https:', and return the new URL to the browser. Most browsers will then automatically resubmit the new URL.</popuptext><run
+><font size='9pt'/>Redirect TCP to SSL:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='10' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>Type!="WebSite"</formula></code></pardef>
+<par def='10'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='HTTP_TCP_Redirect' description='If "Yes&apos;, all non-SSL requests received by this Web site will be redirected to the SSL port.'><keywords
+ helperbutton='false' columns='2' ui='radiobutton'><textlist><text>Yes|1</text><text
+>No|0</text></textlist></keywords><code event='defaultvalue'><formula>"0"</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='11'/>
+<par def='11'><run><font size='9pt'/></run></par>
+<pardef id='12' leftmargin='1in' hide='notes'/>
+<par def='12'><run html='true'><font size='9pt'/>&lt;/ul&gt;</run></par>
+<table cellbordercolor='silver' htmlclass='TableSpacing' widthtype='fixedleft'
+ rowspacing='0.0201in' refwidth='5.7500in'><tablecolumn width='1.7500in'/><tablecolumn
+ width='4in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='14' leftmargin='0.0597in' rightmargin='1.7500in' keepwithnext='true'
+ keeptogether='true'/>
+<par def='14'><run><font size='9pt' style='bold' color='white'/>SSL Authentication</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='15' leftmargin='0.0597in' rightmargin='4in' keepwithnext='true'
+ keeptogether='true'/>
+<par def='15'><run><font size='9pt' color='#f7f7f7'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='5'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes if you want to allow anonymous connections over SSL.  </popuptext><run
+><font size='9pt'/>Anonymous:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='6'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='SSLAnonymous' description='Choose Yes if you want to allow anonymous connections over SSL.  '
+ htmlid='SSLAnonymous'><keywords helperbutton='false' columns='2' ui='radiobutton'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes if you want to allow the use of Name and Password for authentication.  
 
-'++LotusScript Development Environment:2:5:(Declarations):0:2
+For protocol specific information see the Administrator's Guide.</popuptext><run
+><font size='9pt'/>Name &amp; password:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='SSLNameAndPwd' description='Choose Yes if you want to allow the use of Name and Password for authentication.  '
+ htmlid='SSLNameAndPwd'><keywords helperbutton='false' columns='2' ui='radiobutton'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='16' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>Type="SMTPInboundSite" | Type="IIOPSite"</formula></code></pardef>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes if you want to allow the use of X.509 client certificates for authentication.  Choose No if you do not want to allow X.509 client certificates. 
 
-<break/></text></item>
-<item name='TCPAnonymous' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='TCPNameAndPwd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='HTTP_TCP_Redirect' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLAnonymous' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLNameAndPwd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLCert' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLKeyFile' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLProtocolVersion' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLSiteCerts' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLExpiredCerts' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLUseCRLs' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLAlwExpCRLs' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLAlwCRLSrchToFail' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLCipherList' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLStrongEncryption' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLV2Enabled' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>SSLV2Enabled</text><text>SSLStrongEncryption</text><text
->SSLCipherList</text><text>SSLAlwCRLSrchToFail</text><text>SSLAlwExpCRLs</text><text
->SSLUseCRLs</text><text>SSLExpiredCerts</text><text>SSLSiteCerts</text><text
->SSLProtocolVersion</text><text>SSLKeyFile</text><text>SSLCert</text><text
->SSLNameAndPwd</text><text>SSLAnonymous</text><text>HTTP_TCP_Redirect</text><text
->TCPNameAndPwd</text><text>TCPAnonymous</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$internetSecurity</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAmBAoL/WgACAAAA
-AAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA
-AAAAlISgBQAAoAUAAAAAAAABAAAABAAAAIMEAgDdBgEA+//7/ywAIAAAAAQCAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAEAwMDAAAAAAAAAAFz/PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAOAAAAAAAAAAEAAAoAAAAAAQAAAAAAev8mAAAADAAAAAAAAAAAAAAAAAAAAAAAAABUYWJs
-ZVNwYWNpbmfeBgEA+/+jDqAFKAA8AAAAHQACAKQSAACgBXgPAAAAAwAAAQHYAIECgv9aAAMAAAAA
-AAAAAAD2BXgP9gUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAA
-AABUhFYAAABWAAAAAAAAAAEAAAAEAAAAgwQDAN0GAACF/4X/GgABAQEJVENQIEF1dGhlbnRpY2F0
-aW9u0ggBAP///wDeBgAAhf/TCAEAsbHSAKQSAAF4D/glAAAAAwAAAQHYAIECgv9aAAQAAAAAAAAA
-AADOD/glzg8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAABU
-hFYAAABWAAAAAAAAAAEAAAAEAAAAgwQEAIX/CAABAAAJ0wgBALGx0gCkEgEAoAV4DwAAQAIAEAEB
-AACBAoL/WgAFAAAAAAABAAAA9gV4D/YFAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMhgkAAAAAVIRWAAAAVgAAAAAAAAABAAAABAAAALv/UAAFABMAojH8YXAfQgAAADQA
-BQAEAFR5cGUBAAgASU1BUFNpdGUKAgUABABUeXBlAQAIAFBPUDNTaXRlCgIdAgMABwAMAAUACTNT
-NFMAgwQFAIX/CAABAAAJ3QYAAK3/qf9gAQEADAAAAFQBVGhpcyBJbnRlcm5ldCBzaXRlIHdpbGwg
-YWNjZXB0IGFub255bW91cyByZXF1ZXN0cyAocmVxdWVzdHMgc2VudCBmcm9tIGEgYnJvd3NlciB3
-aXRob3V0IGEgbmFtZSBhbmQgcGFzc3dvcmQpLiBJZiBzZXQgdG8gJ05vJywgYW5vbnltb3VzIHJl
-cXVlc3RzIHdpbGwgYmUgcmVqZWN0ZWQgaW1tZWRpYXRlbHkuIE5vdGUgdGhhdCBldmVuIGlmIHRo
-aXMgb3B0aW9uIGlzIHNldCB0byAnWWVzJywgYW4gYW5vbnltb3VzIHJlcXVlc3Qgd2lsbCBiZSBy
-ZWplY3RlZCBpZiB0aGUgb3BlcmF0aW9uIG9yIHJlc291cmNlIGlkZW50aWZpZWQgYnkgdGhlIHJl
-cXVlc3QgcmVxdWlyZXMgYXV0aGVudGljYXRpb24uAIX/EgABAAAJQW5vbnltb3VzOqoC3gYAAK4A
-hf8IAAEAAAmkEgEBeA/4JQAAQAIAEAEBAACBAoL/WgAGAAAAAAABAAAAzg/4Jc4PAADMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMhgkAAAAAVIRWAAAAVgAAAAAAAAABAAAA
-BAAAALv/UAAGABMAojH8YXAfQgAAADQABQAEAFR5cGUBAAgASU1BUFNpdGUKAgUABABUeXBlAQAI
-AFBPUDNTaXRlCgIdAgMABwAMAAUACTNTNFMAgwQGAIX/CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACw/xQAAAAEIgAAAAAAAAAAAAAAAIr/bACKggAFACAAAAgAAAAAAgEAAAkOAAAA
-AAAAAAwAHwAPAA4AAAAMAAEAAQAxAAMAVENQQW5vbnltb3VzQW5vbnltb3VzIHJlcXVlc3RzIGFy
-ZSBhbGxvd2VkLgIABQAEAFllc3wxTm98MHr/JgAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAVENQQW5v
-bnltb3Vz3gYAAIr/hf8IAAEAAAmkEgIAoAV4DwAAUAIAEQEBAACBAoL/WgAHAAAAAAAAAAAA9gV4
-D/YFAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMhgEAAAAAVIRWAAAA
-VgAAAAAAAAABAAAABAAAAIMEBwCF/wgAAQAACd0GAACt/6n/fAABAAwAAABwAFRoZSBJbnRlcm5l
-dCBzaXRlIHdpbGwgYWNjZXB0IHJlcXVlc3RzIHRoYXQgY29udGFpbiBhIG5hbWUgYW5kIHBhc3N3
-b3JkIChrbm93biBhcyAnQmFzaWMgSFRUUCBhdXRoZW50aWNhdGlvbicpLgCF/xgAAQAACU5hbWUg
-JiBwYXNzd29yZDqqAt4GAACuAIX/CAABAAAJpBICAXgP+CUAAFACABEBAQAAgQKC/1oACAAAAAAA
-AAAAAM4P+CXODwAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYBAAAA
-AFSEVgAAAFYAAAAAAAAAAQAAAAQAAACDBAgAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAALD/FAAAAAQiAAAAAAAAAAAAAAAAiv90AIqCAAUAIAAACAAAAAACAQAACQ4AAAAAAAAA
-DQAlAA8ADgAAAAwAAQABADEAAwBUQ1BOYW1lQW5kUHdkSFRUUCBiYXNpYyBhdXRoZW50aWNhdGlv
-biBpcyBhbGxvd2VkLgIABQAEAFllc3wxTm98MAB6/ygADQAAAAAAAAAAAAAAAAAAAAAAAAAAAFRD
-UE5hbWVBbmRQd2QA3gYAAIr/hf8IAAEAAAmkEgMAoAV4DwAAUAIAEQEBAACBAoL/WgAJAAAAAAAA
-AAAA9gV4D/YFAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMhgkAAAAA
-VIRWAAAAVgAAAAAAAAABAAAABAAAALv/OAAJABMAojH8YXAfKgAAABwABQAEAFR5cGUBAAcAV2Vi
-U2l0ZQALAgMABwAMAAUACTBTMEUAgwQJAIX/CAABAAAJ3QYAAK3/qf8rAQEADAAAAB8BSWYgdGhp
-cyBvcHRpb24gaXMgc2V0IHRvICdZZXMnLCB0aGVuIGFsbCBub24tU1NMIHJlcXVlc3RzIHJlY2Vp
-dmVkIGJ5IHRoaXMgV2ViIHNpdGUgd2lsbCBiZSByZWRpcmVjdGVkIHRvIHRoZSBTU0wgcG9ydC4g
-VGhlIHNlcnZlciB3aWxsIGdlbmVyYXRlIGEgbmV3IFVSTCByZXBsYWNpbmcgJ2h0dHA6JyB3aXRo
-ICdodHRwczonLCBhbmQgcmV0dXJuIHRoZSBuZXcgVVJMIHRvIHRoZSBicm93c2VyLiBNb3N0IGJy
-b3dzZXJzIHdpbGwgdGhlbiBhdXRvbWF0aWNhbGx5IHJlc3VibWl0IHRoZSBuZXcgVVJMLgAAhf8c
-AAEAAAlSZWRpcmVjdCBUQ1AgdG8gU1NMOqoC3gYAAK4Ahf8IAAEAAAmkEgMBeA/4JQAAUAIAEQEB
-AACBAoL/WgAKAAAAAAAAAAAAzg/4Jc4PAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMhgkAAAAAVIRWAAAAVgAAAAAAAAABAAAABAAAALv/OAAKABMAojH8YXAfKgAAABwA
-BQAEAFR5cGUBAAcAV2ViU2l0ZQALAgMABwAMAAUACTBTMEUAgwQKAIX/CAABAAAJ3QYAAIr//v9Q
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAACw/xQAAAAEIgAAAAAAAAAAAAAAAIr/rgCKggAFACAAAAgAAAAA
-AgEAAAkOAAAAAAAAABEAXAAPAA4AAAAMAAEAAQAwAAMASFRUUF9UQ1BfUmVkaXJlY3RJZiAiWWVz
-JywgYWxsIG5vbi1TU0wgcmVxdWVzdHMgcmVjZWl2ZWQgYnkgdGhpcyBXZWIgc2l0ZSB3aWxsIGJl
-IHJlZGlyZWN0ZWQgdG8gdGhlIFNTTCBwb3J0LgIABQAEAFllc3wxTm98MN4GAACK/4X/CAABAAAJ
-pQYAAAAAgQKC/1oACwAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAsAhf8IAAEAAAmBAoL/
-WgAMAAAAAAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAIEAAAAAlISgBQAAoAUAAAAAAAABAAAABAAAAIMEDADM/wgAAAAAAIX/DQABAAAJPC91bD4A
-zf8IAAAAAACBAoL/WgANAAAAAAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAEAAAAAFISgBQAAoAUAAAAAZAABAAAABAAAAIMEDQDdBgEA+//7/ywA
-IAAAAAQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAwMDAAAAAAAAAAFz/PgAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAAEAAAoAAAAAAQAAAAAAev8mAAAADAAAAAAA
-AAAAAAAAAAAAAAAAAABUYWJsZVNwYWNpbmfeBgEA+/+jDqAFKAA8AAAAHQACAKQSAACgBXgPAAAA
-AwAAAQHYAIECgv9aAA4AAAAAAAAAAAD2BXgP9gUAAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMyGAQAAAABUgFYABQBWAAYA2AlkAAEAAAAEAAAAgwQOAN0GAACF/4X/GgAB
-AQEJU1NMIEF1dGhlbnRpY2F0aW9u0ggBAP///wDeBgAAhf/TCAEAsbHSAKQSAAF4D/glAAAAAwAA
-AQHYAIECgv9aAA8AAAAAAAAAAADOD/glzg8AAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMyGAQAAAABUgFYABQBWAAUAgBZkAAEAAAAEAAAAgwQPAN0GAACF/4X/CAABAC8J
-0ggBAPf39wDeBgAAhf/TCAEAsbHSAKQSAQCgBXgPAABAAgAQAQEAAIECgwQFAIX/CAABAAAJ3QYA
-AK3/qf9OAAEACAAAAEIAQ2hvb3NlIFllcyBpZiB5b3Ugd2FudCB0byBhbGxvdyBhbm9ueW1vdXMg
-Y29ubmVjdGlvbnMgb3ZlciBTU0wuICAAhf8SAAEAAAlBbm9ueW1vdXM6qgLeBgAArgCF/wgAAQAA
-CaQSAQF4D/glAABAAgAQAQEAAIECgwQGAIX/CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAACw/xQAAAAEIgAAAAAAAAAAAAAAAIr/jgCKggAFACAAAAgAAAAAAgEAAAkOAAAAAAAAAAwA
-QQAPAA4AAAAMAAEAAQAxAAMAU1NMQW5vbnltb3VzQ2hvb3NlIFllcyBpZiB5b3Ugd2FudCB0byBh
-bGxvdyBhbm9ueW1vdXMgY29ubmVjdGlvbnMgb3ZlciBTU0wuICACAAUABABZZXN8MU5vfDB6/yYA
-DAAAAAAAAAAAAAAAAAAAAAAAAAAAAFNTTEFub255bW91c94GAACK/4X/CAABAAAJpBICAKAFeA8A
-AFACABEBAQAAgQKDBAcAhf8IAAEAAAndBgAArf+p/6MAAQAIAAAAlwBDaG9vc2UgWWVzIGlmIHlv
-dSB3YW50IHRvIGFsbG93IHRoZSB1c2Ugb2YgTmFtZSBhbmQgUGFzc3dvcmQgZm9yIGF1dGhlbnRp
-Y2F0aW9uLiAgDQoNCkZvciBwcm90b2NvbCBzcGVjaWZpYyBpbmZvcm1hdGlvbiBzZWUgdGhlIEFk
-bWluaXN0cmF0b3IncyBHdWlkZS4AAIX/GAABAAAJTmFtZSAmIHBhc3N3b3JkOqoC3gYAAK4Ahf8I
-AAEAAAmkEgIBeA/4JQAAUAIAEQEBAACBAoMECACF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAsP8UAAAABCIAAAAAAAAAAAAAAACK/6AAioIABQAgAAAIAAAAAAIBAAAJDgAAAAAA
-AAANAFIADwAOAAAADAABAAEAMQADAFNTTE5hbWVBbmRQd2RDaG9vc2UgWWVzIGlmIHlvdSB3YW50
-IHRvIGFsbG93IHRoZSB1c2Ugb2YgTmFtZSBhbmQgUGFzc3dvcmQgZm9yIGF1dGhlbnRpY2F0aW9u
-LiAgAgAFAAQAWWVzfDFOb3wwev8oAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABTU0xOYW1lQW5kUHdk
-AN4GAACK/4X/CAABAAAJpBIDAKAFeA8AAFACABEBAQAAgQKC/1oAEAAAAAAAAAAAAPYFeA/2BQAA
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYJAAAAAFSEVgAAAFYAAAAA
-AAAAAQAAAAQAAAC7/1gAEAATAKIx/GFwH0oAAAA8AAUABABUeXBlAQAPAFNNVFBJbmJvdW5kU2l0
-ZQAKAgUABABUeXBlAQAIAElJT1BTaXRlCgIdAgMABwAMAAUACTNTNFMAgwQQAIX/CAABAAAJ3QYA
-AK3/qf/sAAEACAAAAOAAQ2hvb3NlIFllcyBpZiB5b3Ugd2FudCB0byBhbGxvdyB0aGUgdXNlIG9m
-IFguNTA5IGNsaWVudCBjZXJ0aWZpY2F0ZXMgZm9yIGF1dGhlbnRpY2F0aW9uLiAgQ2hvb3NlIE5v
-IGlmIHlvdSBkbyBub3Qgd2FudCB0byBhbGxvdyBYLjUwOSBjbGllbnQgY2VydGlmaWNhdGVzLiAN
-Cg0KRm9yIHByb3RvY29sIHNwZWNpZmljIGluZm9ybWF0aW9uIHNlZSB0aGUgQWRtaW5pc3RyYXRv
-cidzIEd1aWRlLgCF/xsAAQAACUNsaWVudCBjZXJ0aWZpY2F0ZToAqgLeBgAArgCF/wgAAQAACaQS
-AwF4D/glAABQAgARAQEAAIECgv9aABEAAAAAAAAAAADOD/glzg8AAMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyGCQAAAABUhFYAAABWAAAAAAAAAAEAAAAEAAAAu/9YABEA
-EwCiMfxhcB9KAAAAPAAFAAQAVHlwZQEADwBTTVRQSW5ib3VuZFNpdGUACgIFAAQAVHlwZQEACABJ
-SU9QU2l0ZQoCHQIDAAcADAAFAAkzUzRTAIMEEQCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAsP8UAAAABCIAAAAAAAAAAAAAAACK/6AAioIABQAgAAAIAAAAAAIBAAAJDgAAAAAA
-AAAHAFgADwAOAAAADAABAAEAMAADAFNTTENlcnRDaG9vc2UgWWVzIGlmIHlvdSB3YW50IHRvIGFs
-bG93IHRoZSB1c2Ugb2YgWC41MDkgY2xpZW50IGNlcnRpZmljYXRlcyBmb3IgYXV0aGVudGljYXRp
-b24uAgAFAAQAWWVzfDFOb3wwev8iAAcAAAAAAAAAAAAAAAAAAAAAAAAAAABTU0xDZXJ0AN4GAACK
-/4X/CAABAAAJpQYAAAAAgQKDBAIAhf8IAAEAAAmBAoMEDADM/wgAAAAAAIX/DQABAAAJPC91bD4A
-zf8IAAAAAACBAoMEAgDdBgEA+//7/ywAIAAAAAgCAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAwMDA
-AAAAAAAAAFz/PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAAEA
-AAoAAAAAAQAAAAAAev8mAAAADAAAAAAAAAAAAAAAAAAAAAAAAABUYWJsZVNwYWNpbmfeBgEA+/+j
-DqAFKAA8AAAAHQACAKQSAACgBXgPAAAAAwAAAQHYAIECgwQOAN0GAACF/4X/EwABAQEJU1NMIE9w
-dGlvbnMA0ggBAP///wDeBgAAhf/TCAEAsbHSAKQSAAF4D/glAAAAAwAAAQHYAIECgwQPAN0GAACF
-/4X/CAABAC8J0ggBAPf39wDeBgAAhf/TCAEAsbHSAKQSAQCgBXgPAABAAgAQAQEAAIECgv9aABIA
-AAAAAAEAAAD2BXgP9gUAAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyG
-AQAAAABUhFYAAABWAAAAAAAAAAEAAAAEAAAAgwQSAIX/CAABAAAJ3QYAAK3/qf8pAQEADAAAAB0B
-RW50ZXIgdGhlIG5hbWUgb2YgdGhlIFNTTCAoU2VjdXJlIFNvY2tldHMgTGF5ZXIpIGtleSByaW5n
-IHRoZSBEb21pbm8gV2ViIHNpdGUgdXNlcyBmb3IgZW5jcnlwdGlvbiBhY3Rpdml0aWVzLiAgRGVm
-YXVsdCBpcyBrZXlmaWxlLmt5ci4gIFR3byBmaWxlcyBzaG91bGQgZXhpc3QgZm9yIHlvdXIga2V5
-IHJpbmcgaW4gdGhlIGRhdGEgZGlyZWN0b3J5LCBib3RoIGtleWZpbGUua3lyIGFuZCBrZXlmaWxl
-LnN0aC4gIA0KDQpZb3UgbWF5IGVudGVyIGEgZmlsZSBuYW1lIG9yIGEgY29tcGxldGUgcGF0aC4A
-AIX/FgABAAAJS2V5IGZpbGUgbmFtZTqqAt4GAACuAIX/CAABAAAJpBIBAXgP+CUAAEACABABAQAA
-gQKC/1oAEwAAAAAAAQAAAM4P+CXODwAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzIYBAAAAAFSEVgAAAFYAAAAAAAAAAQAAAAQAAACDBBMAhf8IAAEAAAndBgAAiv/+/1AA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAALD/LgAAAAAAAgAAAAAAAAAAAAAAFgAAABYAAAAUAAUACgBodG1s
-SW5wdXRMAwCK/8IAigAABQAwAgAAAAAAAAIBAAAJGAAkAAAAAAAKAFcAAAAYAAAAFgABAAsAa2V5
-ZmlsZS5reXIAAwAkAAAAFgAFAAoAU1NMS2V5RmlsZV4BAwAHAAwABQAJMFMwRQBTU0xLZXlGaWxl
-RW50ZXIgdGhlIG5hbWUgb2YgdGhlIFNTTCBrZXkgcmluZyB0aGUgRG9taW5vIFdlYiBzaXRlIHVz
-ZXMgZm9yIGVuY3J5cHRpb24gYWN0aXZpdGllcy4gAHr/JAAKAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-U1NMS2V5RmlsZWIOAQCEAAAAAAAAAAAA3gYAAIr/hf8IAAEAAAmkEgIAoAV4DwAAUAIAEQEBAACB
-AoMEBwCF/wgAAQAACd0GAACt/6n/yAEBAAwAAAC8AUNob29zZSB0aGUgU1NMIHByb3RvY29sIHZl
-cnNpb24gdGhhdCB5b3Ugd2FudCB0byBjb25uZWN0IHdpdGguICANCg0KVjIuMCBvbmx5IC0gVXNl
-cyBTU0wgVjIuMCBoYW5kc2hha2UgYW5kIHByb3RvY29sIG9ubHkNCg0KVjMuMCBoYW5kc2hha2Ug
-LSBVc2VzIFNTTCBWMy4wIGhhbmRzaGFrZSBhbmQgbmVnb3RpYXRlZCBwcm90b2NvbA0KDQpWMy4w
-IG9ubHkgLSBVc2VzIFNTTCBWMy4wIGhhbmRzaGFrZSBhbmQgcHJvdG9jb2wgb25seQ0KDQpWMy4w
-IHdpdGggVjIuMCBoYW5kc2hha2UgLSBVc2VzIFNTTCBWMi4wIGhhbmRzaGFrZSB3aXRoIG5lZ290
-aWF0ZWQgcHJvdG9jb2wNCg0KTmVnb3RpYXRlZCAtIGFsbG93IFNTTCB0byBkZXRlcm1pbmUgaGFu
-ZHNoYWtlIGFuZCBwcm90b2NvbA0KDQpOT1RFOiAgVGhpcyBvcHRpb24gZG9lcyBub3QgYXBwbHkg
-dG8gdGhlIEhUVFAgc2VydmVyAIX/GQABAAAJUHJvdG9jb2wgdmVyc2lvbjoAqgLeBgAArgCF/wgA
-AQAACaQSAgF4D/glAABQAgARAQEAAIECgv9aABQAAAAAAAAAAADOD/glzg8AAMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyGCQAAAABUhFYAAABWAAAAAAAAAAEAAAAEAAAA
-u/84ABQAEwCiMfxhcB8qAAAAHAAFAAQAVHlwZQEACABJSU9QU2l0ZQoCAwAHAAwABQAJMFMwRQCD
-BBQAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/3ACKAgAFACACAAgAAAAA
-AgEAAAkOAAAAAAAAABIAQABYAA4AAAAMAAEAAQAwAAMAU1NMUHJvdG9jb2xWZXJzaW9uQ2hvb3Nl
-IHRoZSBTU0wgcHJvdG9jb2wgdmVyc2lvbiB0aGF0IHlvdSB3YW50IHRvIGNvbm5lY3Qgd2l0aC4g
-IAUACwAQAAsAGgAMAFYyLjAgb25seXwxVjMuMCBoYW5kc2hha2V8MlYzLjAgb25seXwzVjMuMCB3
-aXRoIFYyLjAgaGFuZHNoYWtlfDROZWdvdGlhdGVkfDB6/ywAEgAAAAAAAAAAAAAAAAAAAAAAAAAA
-AFNTTFByb3RvY29sVmVyc2lvbt4GAACK/4X/CAABAAAJpBIDAKAFeA8AAFACABEBAQAAgQKC/1oA
-FQAAAAAAAAAAAPYFeA/2BQAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zIYJAAAAAFSEVgAFAFYABgAAAGQAAQAAAAQAAACDBBUAvAYUABUAhf8IAAEAAAndBgAArf+p/xMC
-AQAMAAAABwJDaG9vc2UgWWVzIHRvIGFsbG93IHVzZXJzIHRvIGFjY2VzcyBJbnRlcm5ldCBzZXJ2
-ZXJzIHRoYXQgZG8gbm90IHNoYXJlIGEgY2VydGlmaWNhdGUgd2l0aCB5b3UgYW5kIHRoYXQgdXNl
-IFNTTCAoU2VjdXJlIFNvY2tldHMgTGF5ZXIpLiBEZWZhdWx0IGlzIE5vLCBkbyBub3QgYWNjZXB0
-IFNTTCBzaXRlIGNlcnRpZmljYXRlcy4gSWYgeW91IHNlbGVjdCBZZXMgKGFuZCB5b3UndmUgYWRk
-ZWQgYSBjZXJ0aWZpY2F0ZSBmcm9tIGEgQ2VydGlmaWNhdGUgQXV0aG9yaXR5IHRvIHRoZSBEb21p
-bm8gRGlyZWN0b3J5KSwgdGhlbiB3aGVuIHlvdSBvcGVuIHNlY3VyZSBwYWdlcywgdGhlc2Ugc2Vy
-dmVycyBzZW5kIGEgY2VydGlmaWNhdGUuIFRoaXMgY2VydGlmaWNhdGUgaXMgc3RvcmVkIGluIHRo
-ZSBEb21pbm8gRGlyZWN0b3J5IG9mIHRoZSBJbnRlck5vdGVzIHNlcnZlciB1bmRlciB0aGUgSW50
-ZXJuZXQgQ3Jvc3MgQ2VydGlmaWNhdGVzIGNhdGVnb3J5IG9mIHRoZSBTZXJ2ZXIgLSBDZXJ0aWZp
-Y2F0ZXMgdmlldy4gIAAAhf8lAAEAAAlBY2NlcHQgU1NMIHNpdGUgY2VydGlmaWNhdGVzOgCqAt4G
-AACuAIX/CAABAAAJpBIDAXgP+CUAAFACABEBAQAAgQKDBBQAhf8IAAEAAAndBgAAiv/+/1AAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAALD/FAAAAAAiAAAAAAAAAAAAAAAAiv94AIqCAAUAIAAACAAAAAACAQAA
-CQ4AAAAAAAAADAArAA8ADgAAAAwAAQABADAAAwBTU0xTaXRlQ2VydHNDaG9vc2UgWWVzIHRvIGFj
-Y2VwdCBTU0wgc2l0ZSBjZXJ0aWZpY2F0ZXMuAgAFAAQAWWVzfDFOb3wwev8mAAwAAAAAAAAAAAAA
-AAAAAAAAAAAAAABTU0xTaXRlQ2VydHPeBgAAiv+F/wgAAQAACaQSBACgBXgPAABQAgARAQEAAIEC
-gwQHAIX/CAABAAAJ3QYAAK3/qf+MAAEADAAAAIAAQ2hvb3NlIFllcyB0byBmb3JjZSBTU0wgdG8g
-YWNjZXB0IHJlbW90ZSBjZXJ0aWZpY2F0ZXMgd2hpY2ggaGF2ZSBleHBpcmVkLg0KDQpDaG9vc2Ug
-Tm8gdG8gZW5mb3JjZSBjZXJ0aWZpY2F0ZSBleHBpcmF0aW9uIGRhdGVzLgCF/ygAAQAACUFjY2Vw
-dCBleHBpcmVkIFNTTCBjZXJ0aWZpY2F0ZXM6qgLeBgAArgCF/wgAAQAACaQSBAF4D/glAABQAgAR
-AQEAAIECgwQUAIX/CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw/xQAAAAEIgAA
-AAAAAAAAAAAAAIr/jACKggAFACAAAAgAAAAAAgEAAAkOAAAAAAAAAA8AOwAPAA4AAAAMAAEAAQAx
-AAMAU1NMRXhwaXJlZENlcnRzQ2hvb3NlIFllcyB0byBmb3JjZSBTU0wgdG8gYWNjZXB0IGV4cGly
-ZWQgU1NMIGNlcnRpZmljYXRlcy4CAAUABABZZXN8MU5vfDAAev8qAA8AAAAAAAAAAAAAAAAAAAAA
-AAAAAABTU0xFeHBpcmVkQ2VydHMA3gYAAIr/hf8IAAEAAAmkEgUAoAV4DwAAUAIAEQEBAACBAoME
-BwCF/wgAAQAACd0GAACt/6n/vgABAAwAAACyAENob29zZSBZZXMgdG8gY2F1c2UgdGhlIHdlYiBz
-aXRlIHRvIGNoZWNrIGZvciBhIENlcnRpZmljYXRlIFJldm9jYXRpb24gTGlzdCAoQ1JMKSB0byBi
-ZSB1c2VkIGluIGV2YWx1YXRpbmcgdHJ1c3QgaW4gY2VydGlmaWNhdGUgY2hhaW5zLiAgQ2hvb3Nl
-IG5vIHRvIHR1cm4gb2ZmIGNoZWNraW5nIGZvciBDUkxzLgCF/xcAAQAACUNoZWNrIGZvciBDUkxz
-OgCqAt4GAACuAIX/CAABAAAJpBIFAXgP+CUAAFACABEBAQAAgQKDBBQAhf8IAAEAAAndBgAAiv/+
-/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/FAAAAAQiAAAAAAAAAAAAAAAAiv+cAIqCAAUAIAAACAAA
-AAACAQAACQ4AAAAAAAAACgBRAA8ADgAAAAwAAQABADAAAwBTU0xVc2VDUkxzQ2hvb3NlIFllcyB0
-byBjYXVzZSB0aGUgd2ViIHNpdGUgdG8gY2hlY2sgZm9yIENlcnRpZmljYXRlIFJldm9jYXRpb24g
-TGlzdHMgKENSTCkuAgAFAAQAWWVzfDFOb3wwev8sABEAAAAAAAAAAAAAAAAAAAAAAAAAAABTU0xF
-eHBpcmVkQ2VydHNfMQDeBgAAiv+F/wgAAQAACaQSBgCgBXgPAABQAgARAQEAAIECgwQHAIX/CAAB
-AAAJ3QYAAK3/qf92AAEADAAAAGoAQ2hvb3NlIFllcyB0byBjYXVzZSBTU0wgdG8gYWNjZXB0IENS
-THMgdGhhdCBoYXZlIGV4cGlyZWQNCg0KQ2hvb3NlIE5vIHRvIGNhdXNlIFNTTCB0byByZWplY3Qg
-ZXhwaXJlZCBDUkxzAIX/GwABAAAJVHJ1c3QgZXhwaXJlZCBDUkxzOgCqAt4GAACuAIX/CAABAAAJ
-pBIGAXgP+CUAAFACABEBAQAAgQKDBBQAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAALD/FAAAAAQiAAAAAAAAAAAAAAAAiv+IAIqCAAUAIAAACAAAAAACAQAACQ4AAAAAAAAADQA5
-AA8ADgAAAAwAAQABADEAAwBTU0xBbHdFeHBDUkxzQ2hvb3NlIFllcyB0byBjYXVzZSBTU0wgdG8g
-YWNjZXB0IENSTHMgdGhhdCBoYXZlIGV4cGlyZWQuAgAFAAQAWWVzfDFOb3wwAHr/LAARAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAU1NMRXhwaXJlZENlcnRzXzIA3gYAAIr/hf8IAAEAAAmkEgcAoAV4DwAA
-UAIAEQEBAACBAoMEBwCF/wgAAQAACd0GAACt/6n/2wABAAwAAADPAENob29zZSBZZXMgdG8gYWxs
-b3cgU1NMIHRvIGF1dGhlbnRpY2F0ZSByZW1vdGUgdXNlcnMgZXZlbiBpZiBhIENSTCBzZWFyY2gg
-ZmluZHMgbm8gYXBwcm9wcmlhdGUgQ1JMLg0KDQpDaG9vc2UgTm8gdG8gZm9yY2UgU1NMIHRvIHJl
-amVjdCBhdXRoZW50aWNhdGlvbiBvZiByZW1vdGUgdXNlcnMgdW5sZXNzIGFuIGFwcHJvcHJpYXRl
-IENSTCBpcyBhdmFpbGFibGUuAACF/yEAAQAACUFsbG93IENSTCBzZWFyY2ggdG8gZmFpbDoAqgLe
-BgAArgCF/wgAAQAACaQSBwF4D/glAABQAgARAQEAAIECgwQUAIX/CAABAAAJ3QYAAIr//v9QAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAACw/xQAAAAEIgAAAAAAAAAAAAAAAIr/ugCKggAFACAAAAgAAAAAAgEA
-AAkOAAAAAAAAABMAZgAPAA4AAAAMAAEAAQAxAAMAU1NMQWx3Q1JMU3JjaFRvRmFpbENob29zZSBZ
-ZXMgdG8gYWxsb3cgU1NMIHRvIHRvIGF1dGhlbnRpY2F0ZSByZW1vdGUgdXNlcnMgZXZlbiBpZiBh
-IENSTCBzZWFyY2ggZmluZHMgbm8gYXBwcm9wcmlhdGUgQ1JMLgIABQAEAFllc3wxTm98MHr/LAAR
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAU1NMRXhwaXJlZENlcnRzXzMA3gYAAIr/hf8IAAEAAAmlBgAA
-AACBAoMEAgCF/wgAAQAACYECgwQCAN0GAQD7//v/LAAgAAAAAwIAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAQDAwMAAAAAAAAAAXP8+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4A
-AAAAAAAAAQAACgAAAAABAAAAAAB6/yYAAAAMAAAAAAAAAAAAAAAAAAAAAAAAAFRhYmxlU3BhY2lu
-Z94GAQD7/6MOoAUoADwAAAAdAAIApBIAAKAFeA8AAAADAAABAdgAgQKC/1oAFgAAAAAAAAAAAPYF
-Rg/2BQAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYBAAAAAJSAVgAA
-AFYAAAAsBmIAAQAAAAQAAACDBBYA3QYAAIX/hf8UAAEBAQlTU0wgU2VjdXJpdHnSCAEA////AN4G
-AACF/9MIAQCxsdIApBIAAXgP+CUAAAADAAABAdgAgQKC/1oAFwAAAAAAAAAAAF4QviVeEAAAzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYBAAAAAKiAVgAEAFYABACwCWMA
-AQAAAAQAAACDBBcA3QYAAIX/hf8IAAEALwnSCAEA9/f3AN4GAACF/9MIAQCxsdIApBIBAKAFeA8A
-AEACABABAQAAgQKC/1oAGAAAAAAAAQAAAPYFRg/2BQAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzIYBAAAAAJSAVgAAAFYAAAAsBmIAAQAAAAQAAACDBBgAhf8IAAEAAAnd
-BgAArf+p/1oAAQAMAAAATgBDbGljayB0aGUgTW9kaWZ5IGJ1dHRvbiB0byBjaG9vc2UgdGhlIEhU
-VFAgQ2lwaGVyIFNldHRpbmdzIHlvdSB3aXNoIHRvIGFsbG93LgCF/xQAAQAACVNTTCBjaXBoZXJz
-OqoC3gYAAK4Ahf8IAAEAAAmBAoL/WgAZAAAAAAABAAAA9gVGD/YFAADMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMhgEAAAAAlYBWAAAAVgAAACwGYgABAAAABAAAAIMEGQCF
-/wgAAQAACd0GAACt/6n/sAADABgAAACkAKQACAAYAAIA6AcAAAAAAAABAAEAMQDtAgMABwAMAAUA
-CTBTMEUACABYAAEAEQAoU1NMQ2lwaGVyRGlhbG9nKQACAHkAAAAAAAAAAgB4AAAAAAAAAB8CAgC5
-AAAAAAAAAB8CAQATAFNTTCBDaXBoZXIgU2V0dGluZ3MA3wMDAAcACgADAAkwUgAAABIAAgCLEwAA
-AAAAAO0BAwAHAAoAAwAJMFIAq/8WAAAAQAuJBQEAAQAACU1vZGlmeXIICQDAwMAAYg4BAIIAAAAA
-AAAAAACqAt4GAACuAIX/CAABAAAJpBIBAXgP+CUAAEACABABAQAAgQKC/1oAGgAAAAAAAAAAAM4P
-viXODwAA4BBwCNgJQAuoDBAOeA/gEEgSsBMYFYAWAAAAAAAAAAAAAAAAAAAAALZjAAAAAJSAVgAC
-AFYAAgCwCWMAAQAAAAQAAACDBBoAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-ALD/FAAAAAYgAAAAAAAAAAAAAAAAiv80AopCAQUCIAAACAAAAAACAQAACToAAAAAAAAADQAAAMkB
-OgAAACwAAQACADAzAQACADA0HwIBAAIAMDUfAgEAAgAwOR8CAQACADBBHwIDAAcADAAFAAkwUzBF
-AFNTTENpcGhlckxpc3QJAD8AQQBIAEAALQAiACIAHQAfAFJDNCBlbmNyeXB0aW9uIHdpdGggMTI4
-LWJpdCBrZXkgYW5kIE1ENSBNQUMgKFdoZW4gcGVybWl0dGVkKXwwNFJDNCBlbmNyeXB0aW9uIHdp
-dGggMTI4LWJpdCBrZXkgYW5kIFNIQS0xIE1BQyAoV2hlbiBwZXJtaXR0ZWQpfDA1VHJpcGxlIERF
-UyBlbmNyeXB0aW9uIHdpdGggMTY4LWJpdCBrZXkgYW5kIFNIQS0xIE1BQyAoV2hlbiBwZXJtaXR0
-ZWQpfDBBREVTIGVuY3J5cHRpb24gd2l0aCA1Ni1iaXQga2V5IGFuZCBTSEEtMSBNQUMgKFdoZW4g
-cGVybWl0dGVkKXwwOVJDNCBlbmNyeXB0aW9uIHdpdGggNDAtYml0IGtleSBhbmQgTUQ1IE1BQ3ww
-M0FFUyBlbmNyeXB0aW9uIHdpdGggMTI4LWJpdCBrZXl8MkZBRVMgZW5jcnlwdGlvbiB3aXRoIDI1
-Ni1iaXQga2V5fDM1Tm8gZW5jcnlwdGlvbiB3aXRoIE1ENSBNQUN8MDFObyBlbmNyeXB0aW9uIHdp
-dGggU0hBLTEgTUFDfDAy3gYAAIr/hf8IAAEAAAmBAoMEGgCF/wgAAQAACd0GAACK//7/UAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAiv+YAIgBAAUAIAAACAAAAAACAQAACWAAAAAAAAAAEwAAAAAAYAACACwA
-EwBTU0xTdHJvbmdFbmNyeXB0aW9uAAEADAAwMzA0MDUwNjA5MEEDAAcACgADAAkxUwAAAB4ABQAT
-AFNTTFN0cm9uZ0VuY3J5cHRpb24AAwAHAAoAAwAJMFIAU1NMU3Ryb25nRW5jcnlwdGlvbgBiDgEA
-hAAAAAAAAAAAAN4GAACK/4X/CAABAAAJgQKC/1oAGwAAAAAAAQAAAM4PviXODwAAzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYBAAAAAJSAVgACAFYAAgCwCWMAAQAAAAQA
-AACDBBsAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/RAKAAQEFCkAAAAgA
-AAAAAgEAAAkMAgAAAAAAABQAAAAAAAwCAADuAQUADQBTU0xDaXBoZXJMaXN0AAEAAgAwNAEAAgAw
-NR8CAQACADBBHwIBAAIAMDkfAgEAAgAwMx8CAQACADJGHwIBAAIAMzUfAgEAAgAwMR8CAQACADAy
-HwIBACsAUkM0IGVuY3J5cHRpb24gd2l0aCAxMjgtYml0IGtleSBhbmQgTUQ1IE1BQwABAC0AUkM0
-IGVuY3J5cHRpb24gd2l0aCAxMjgtYml0IGtleSBhbmQgU0hBLTEgTUFDAB8CAQA0AFRyaXBsZSBE
-RVMgZW5jcnlwdGlvbiB3aXRoIDE2OC1iaXQga2V5IGFuZCBTSEEtMSBNQUMfAgEALABERVMgZW5j
-cnlwdGlvbiB3aXRoIDU2LWJpdCBrZXkgYW5kIFNIQS0xIE1BQx8CAQAqAFJDNCBlbmNyeXB0aW9u
-IHdpdGggNDAtYml0IGtleSBhbmQgTUQ1IE1BQx8CAQAfAEFFUyBlbmNyeXB0aW9uIHdpdGggMTI4
-LWJpdCBrZXkAHwIBAB8AQUVTIGVuY3J5cHRpb24gd2l0aCAyNTYtYml0IGtleQAfAgEAGgBObyBl
-bmNyeXB0aW9uIHdpdGggTUQ1IE1BQx8CAQAcAE5vIGVuY3J5cHRpb24gd2l0aCBTSEEtMSBNQUMf
-Ao0DAwAHABwAFgAJMjZSMjhSMzBSMzJSMzRSMzZSMzhSU1NMQ2lwaGVyTGlzdERpc3BsYXliDgEA
-hAAAAAAAAAAAAN4GAACK/4X/CAABAAAJpBICAKAFeA8AAFACABEBAQAAgQKC/1oAHAAAAAAAAAAA
-APYFeA/2BQAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYBAAAAAJSE
-VgAAAFYAAAAAAAAAAQAAAAQAAACDBBwAhf8WAAEAAAlFbmFibGUgU1NMIFYyOoECgwQcAIX/IgAB
-AAAJKFNTTCBWMyBpcyBhbHdheXMgZW5hYmxlZCmkEgIBeA/4JQAAUAIAEQEBAACBAoL/WgAdAAAA
-AAABAAAAzg/4Jc4PAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMhgEA
-AAAAlIRWAAAAVgAAAAAAAAABAAAABAAAAIMEHQCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAsP8UAAAABiAAAAAAAAAAAAAAAACK/1wAikIBBQIgAAAIAAAAAAIBAAAJAAAAAAAA
-AAAMABcAFABTU0xWMkVuYWJsZWRDaGVjayB0byBlbmFibGUgU1NMIFYyLgAAEgAAABAAAQAFAFll
-c3wxAAMAAN4GAACK/4X/CAABAAAJgQKC/1oAHgAAAAAAAQAAAM4P+CXODwAAzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYJAAAAAJSEVgAAAFYAAAAAAAAAAQAAAAQAAAC7
-/zoAHgATAKIx/GFwHywAAAAeAAUADABTU0xWMkVuYWJsZWQBAAEAMQALAgMABwAMAAUACTBTMEUA
-gwQeAIX/LQABAAAJVGhlIGZvbGxvd2luZyBhcmUgdGhlIFNTTCBWMiBjaXBoZXJzOgCBAoMEHgCF
-/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv8SAYABAQUOQAAACAAAAAACAQAA
-Cd4AAAAAAAAAEAAAAAAA3gAAAM4AAQArAFJDNCBlbmNyeXB0aW9uIHdpdGggMTI4LWJpdCBrZXkg
-YW5kIE1ENSBNQUMAAQAyAFRyaXBsZSBERVMgZW5jcnlwdGlvbiB3aXRoIDE2OC1iaXQga2V5IGFu
-ZCBNRDUgTUFDHwIBACoAREVTIGVuY3J5cHRpb24gd2l0aCA1Ni1iaXQga2V5IGFuZCBNRDUgTUFD
-HwIBACoAUkM0IGVuY3J5cHRpb24gd2l0aCA0MC1iaXQga2V5IGFuZCBNRDUgTUFDHwIDAAcADgAH
-AAkyUjRSNlIAU1NMVjJEaXNwbGF5TGlzdGIOAQCEAAAAAAAAAAAA3gYAAIr/hf8IAAEAAAmlBgAA
-AACBAoMECwCF/wgAAQAACQ==
-</rawitemdata></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAKwAAAAAAAAAAAAAAAAAAABIAP//PABcAP////8A
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAArAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAMAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCwAAAAAAB4ABoAKABHAEwATwBCAEEATABTACkAJABJAE4AVABFAFIATgBFAFQAUwBFAEMA
-VQBSAEkAVABZAAAAAACQAAMATgBFAFcAAACkAAYARABFAEwARQBUAEUAAAAAAP//CgBJAE4ASQBU
-AEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBUAEUAAAD//wYATwBCAEoARQBDAFQA
-AAAAAP//AAAAAAAABQAIAAAAAABzdH7DBAAHAAAAAAAdAAACAAAAEQAQAAAAAAD//wEAAwAEAAAA
-BgAKAAAA6w==
-</rawitemdata></item></note>
+For protocol specific information see the Administrator's Guide.</popuptext><run
+><font size='9pt'/>Client certificate:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='17' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>Type="SMTPInboundSite" | Type="IIOPSite"</formula></code></pardef>
+<par def='17'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='SSLCert' description='Choose Yes if you want to allow the use of X.509 client certificates for authentication.'
+ htmlid='SSLCert'><keywords helperbutton='false' columns='2' ui='radiobutton'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"0"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='2' leftmargin='1in'/>
+<par def='2'><run><font size='9pt'/></run></par>
+<par def='12'><run html='true'><font size='9pt'/>&lt;/ul&gt;</run></par>
+<table cellbordercolor='silver' htmlclass='TableSpacing' widthtype='fixedleft'
+ rowspacing='0.0201in' refwidth='5.7500in'><tablecolumn width='1.7500in'/><tablecolumn
+ width='4in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='14'><run><font size='9pt' style='bold' color='white'/>SSL Options</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='15'><run><font size='9pt' color='#f7f7f7'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='18' leftmargin='0.0597in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='18'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the name of the SSL (Secure Sockets Layer) key ring the Domino Web site uses for encryption activities.  Default is keyfile.kyr.  Two files should exist for your key ring in the data directory, both keyfile.kyr and keyfile.sth.  
+
+You may enter a file name or a complete path.</popuptext><run><font size='9pt'/>Key file name:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='19' leftmargin='0.0597in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='19'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='SSLKeyFile' description='Enter the name of the SSL key ring the Domino Web site uses for encryption activities. '
+ htmlid='SSLKeyFile'><code event='htmlattributes'><formula>htmlInputL</formula></code><code
+ event='defaultvalue'><formula>"keyfile.kyr"</formula></code><code event='inputtranslation'><formula
+>@Trim(SSLKeyFile)</formula></code></field></run><compositedata type='98'
+ prevtype='65402' nexttype='222' afterparcount='9' containertype='65418' aftercontainercount='2'
+ afterbegincount='5'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose the SSL protocol version that you want to connect with.  
+
+V2.0 only - Uses SSL V2.0 handshake and protocol only
+
+V3.0 handshake - Uses SSL V3.0 handshake and negotiated protocol
+
+V3.0 only - Uses SSL V3.0 handshake and protocol only
+
+V3.0 with V2.0 handshake - Uses SSL V2.0 handshake with negotiated protocol
+
+Negotiated - allow SSL to determine handshake and protocol
+
+NOTE:  This option does not apply to the HTTP server</popuptext><run><font
+ size='9pt'/>Protocol version:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='20' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>Type="IIOPSite"</formula></code></pardef>
+<par def='20'><run><font size='9pt'/></run><run><font size='9pt'/><field type='keyword'
+ kind='editable' name='SSLProtocolVersion' description='Choose the SSL protocol version that you want to connect with.  '
+ htmlid='SSLProtocolVersion'><keywords ui='dialoglist'><textlist><text>V2.0 only|1</text><text
+>V3.0 handshake|2</text><text>V3.0 only|3</text><text>V3.0 with V2.0 handshake|4</text><text
+>Negotiated|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"0"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='21' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>Type="IIOPSite"</formula></code></pardef>
+<par def='21'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes to allow users to access Internet servers that do not share a certificate with you and that use SSL (Secure Sockets Layer). Default is No, do not accept SSL site certificates. If you select Yes (and you've added a certificate from a Certificate Authority to the Domino Directory), then when you open secure pages, these servers send a certificate. This certificate is stored in the Domino Directory of the InterNotes server under the Internet Cross Certificates category of the Server - Certificates view.  </popuptext><run
+><font size='9pt'/>Accept SSL site certificates:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='20'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='SSLSiteCerts' description='Choose Yes to accept SSL site certificates.'
+ htmlid='SSLSiteCerts'><keywords columns='2' ui='radiobutton'><textlist><text
+>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"0"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes to force SSL to accept remote certificates which have expired.
+
+Choose No to enforce certificate expiration dates.</popuptext><run><font size='9pt'/>Accept expired SSL certificates:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='20'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='SSLExpiredCerts' description='Choose Yes to force SSL to accept expired SSL certificates.'
+ htmlid='SSLExpiredCerts'><keywords helperbutton='false' columns='2' ui='radiobutton'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes to cause the web site to check for a Certificate Revocation List (CRL) to be used in evaluating trust in certificate chains.  Choose no to turn off checking for CRLs.</popuptext><run
+><font size='9pt'/>Check for CRLs:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='20'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='SSLUseCRLs' description='Choose Yes to cause the web site to check for Certificate Revocation Lists (CRL).'
+ htmlid='SSLExpiredCerts_1'><keywords helperbutton='false' columns='2' ui='radiobutton'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"0"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes to cause SSL to accept CRLs that have expired
+
+Choose No to cause SSL to reject expired CRLs</popuptext><run><font size='9pt'/>Trust expired CRLs:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='20'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='SSLAlwExpCRLs' description='Choose Yes to cause SSL to accept CRLs that have expired.'
+ htmlid='SSLExpiredCerts_2'><keywords helperbutton='false' columns='2' ui='radiobutton'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes to allow SSL to authenticate remote users even if a CRL search finds no appropriate CRL.
+
+Choose No to force SSL to reject authentication of remote users unless an appropriate CRL is available.</popuptext><run
+><font size='9pt'/>Allow CRL search to fail:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='20'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='SSLAlwCRLSrchToFail' description='Choose Yes to allow SSL to to authenticate remote users even if a CRL search finds no appropriate CRL.'
+ htmlid='SSLExpiredCerts_3'><keywords helperbutton='false' columns='2' ui='radiobutton'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='2'><run><font size='9pt'/></run></par>
+<table cellbordercolor='silver' htmlclass='TableSpacing' widthtype='fixedleft'
+ rowspacing='0.0201in' refwidth='5.7500in'><tablecolumn width='1.7500in'/><tablecolumn
+ width='4in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='22' leftmargin='0.0597in' rightmargin='98%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='22'><run><font size='9pt' style='bold' color='white'/>SSL Security</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='23' leftmargin='4%' rightmargin='99%' keepwithnext='true' keeptogether='true'/>
+<par def='23'><run><font size='9pt' color='#f7f7f7'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='24' leftmargin='0.0597in' rightmargin='98%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='24'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Click the Modify button to choose the HTTP Cipher Settings you wish to allow.</popuptext><run
+><font size='9pt'/>SSL ciphers:</run></popup><run><font size='9pt'/></run></par>
+<pardef id='25' leftmargin='0.0597in' rightmargin='98%' spacebefore='1.5'
+ hide='web' keepwithnext='true' keeptogether='true'/>
+<par def='25'><run><font size='9pt'/></run><button width='2in' widthtype='maximum'
+ maxlines='1' wraptext='true' bgcolor='system'><code event='click'><formula
+>@Command([EditDocument];"1");
+@DialogBox("(SSLCipherDialog)";[AutoHorzFit]:[AutoVertFit]:[SizeToTable];"SSL Cipher Settings");
+@Command([ViewRefreshFields])</formula></code><font size='9pt'/>Modify</button><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='26' leftmargin='0.0597in' rightmargin='99%' hide='read edit copy preview previewedit'
+ keepwithnext='true' keeptogether='true'/>
+<par def='26'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' allowmultivalues='true'
+ kind='editable' name='SSLCipherList' listinputseparators='comma' listdisplayseparator='comma'><keywords
+ helperbutton='false' recalconchange='true' columns='1' ui='checkbox'><textlist
+><text>RC4 encryption with 128-bit key and MD5 MAC (When permitted)|04</text><text
+>RC4 encryption with 128-bit key and SHA-1 MAC (When permitted)|05</text><text
+>Triple DES encryption with 168-bit key and SHA-1 MAC (When permitted)|0A</text><text
+>DES encryption with 56-bit key and SHA-1 MAC (When permitted)|09</text><text
+>RC4 encryption with 40-bit key and MD5 MAC|03</text><text>AES encryption with 128-bit key|2F</text><text
+>AES encryption with 256-bit key|35</text><text>No encryption with MD5 MAC|01</text><text
+>No encryption with SHA-1 MAC|02</text></textlist></keywords><code event='defaultvalue'><formula
+>"03":"04":"05":"09":"0A"</formula></code></field></run><run><font size='9pt'/></run></par>
+<par def='26'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='computed' name='SSLStrongEncryption'><code event='defaultvalue'><formula
+>DEFAULT SSLStrongEncryption:="03040506090A";
+SSLStrongEncryption</formula></code></field></run><compositedata type='98'
+ prevtype='65418' nexttype='222' afterparcount='6' containertype='65418' aftercontainercount='1'
+ afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par>
+<pardef id='27' leftmargin='0.0597in' rightmargin='99%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='27'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='computedfordisplay' name='SSLCipherListDisplay'
+ listinputseparators='comma newline' listdisplayseparator='newline'><code
+ event='defaultvalue'><formula>@Replace(SSLCipherList;"04":"05":"0A":"09":"03":"2F":"35":"01":"02";"RC4 encryption with 128-bit key and MD5 MAC":"RC4 encryption with 128-bit key and SHA-1 MAC":
+"Triple DES encryption with 168-bit key and SHA-1 MAC":
+"DES encryption with 56-bit key and SHA-1 MAC":
+"RC4 encryption with 40-bit key and MD5 MAC":
+"AES encryption with 128-bit key":
+"AES encryption with 256-bit key":
+"No encryption with MD5 MAC":
+"No encryption with SHA-1 MAC")</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='28' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='28'><run><font size='9pt'/>Enable SSL V2:</run></par>
+<par def='28'><run><font size='9pt'/>(SSL V3 is always enabled)</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='29' leftmargin='0.0597in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='29'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' allowmultivalues='true'
+ kind='editable' name='SSLV2Enabled' description='Check to enable SSL V2.'
+ listinputseparators='comma' listdisplayseparator='comma'><keywords helperbutton='false'
+ recalconchange='true' columns='1' ui='checkbox'><formula>"Yes|1"</formula></keywords></field></run><run
+><font size='9pt'/></run></par>
+<pardef id='30' leftmargin='0.0597in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>SSLV2Enabled!="1"</formula></code></pardef>
+<par def='30'><run><font size='9pt'/>The following are the SSL V2 ciphers:</run></par>
+<par def='30'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='computedfordisplay' name='SSLV2DisplayList'
+ listinputseparators='comma semicolon newline' listdisplayseparator='newline'><code
+ event='defaultvalue'><formula>"RC4 encryption with 128-bit key and MD5 MAC":
+"Triple DES encryption with 168-bit key and MD5 MAC":
+"DES encryption with 56-bit key and MD5 MAC":
+"RC4 encryption with 40-bit key and MD5 MAC"</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='11'><run><font size='9pt'/></run></par></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>$internetSecurity</text></item></subform>
 

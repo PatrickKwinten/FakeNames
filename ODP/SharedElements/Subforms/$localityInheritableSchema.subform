@@ -1,194 +1,191 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='44e' unid='0BF3DB8388BF1C5F852569B900511FC2' sequence='5018'>
+<subform name='$localityInheritableSchema' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='44a' unid='0BF3DB8388BF1C5F852569B900511FC2' sequence='5018'>
 <created><datetime>20001218T094605,46-05</datetime></created>
-<modified><datetime dst='true'>20150507T110153,35+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,76+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095404,18-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110153,34+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110153,34+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,76+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,76+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140117,47-04</datetime><datetime
 >20100304T143929,40-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'><run><font size='2pt' name='Small Fonts' pitch='variable' truetype='false'
+ familyid='20'/></run></par>
+<table widthtype='fitwindow' rowdisplay='tabs' leftmargin='0.7500in' refwidth='10.2799in'><tablecolumn
+ width='100%'/>
+<tablerow tablabel='Mandatory'>
+<tablecell borderwidth='1px 1px 0px'>
+<pardef id='3' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' leftmargin='0.1500in' refwidth='5.0750in'><tablecolumn
+ width='0.1500in'/><tablecolumn width='1.5000in'/><tablecolumn width='3.4250in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<pardef id='5' keepwithnext='true' keeptogether='true'/>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<pardef id='6' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='6'><run><font size='9pt' style='bold' color='white'/>Mandatory Attributes</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<pardef id='7' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='7'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='8' leftmargin='0.1000in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='8'><run><font size='9pt'/>Object Class:</run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='9' leftmargin='0.0743in' keepwithnext='true' keeptogether='true'/>
+<par def='9'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='$dspType'><code event='defaultvalue'><formula>Type</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='3'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow tablabel='Optional'>
+<tablecell borderwidth='0px 1px'>
+<par def='3'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' leftmargin='0.1500in' refwidth='5.0750in'><tablecolumn
+ width='0.1500in'/><tablecolumn width='1.5000in'/><tablecolumn width='3.4250in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<pardef id='10' leftmargin='0.1000in' firstlineleftmargin='0.1104in' keepwithnext='true'
+ keeptogether='true'/>
+<par def='10'><run><font size='9pt' style='bold' color='white'/>Optional Attributes</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<par def='7'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='11' leftmargin='0.0750in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='11'><run><font size='9pt'/>Street:</run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='12' leftmargin='0.0750in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='12'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='editable' name='Street' listinputseparators='comma semicolon'
+ listdisplayseparator='semicolon'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='13' leftmargin='0.0750in' keepwithnext='true' keeptogether='true'/>
+<par def='13'><run><font size='9pt'/>See Also:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='14' leftmargin='0.0750in' keepwithnext='true' keeptogether='true'/>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='names'
+ allowmultivalues='true' kind='editable' name='seeAlso' listinputseparators='comma'
+ listdisplayseparator='comma'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Search Guide:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='editable' name='searchGuide' listinputseparators='comma semicolon'
+ listdisplayseparator='semicolon'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>State or Province Name:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='editable' name='OfficeState' listinputseparators='comma semicolon'
+ listdisplayseparator='semicolon'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Locality Name:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='editable' name='OfficeCity' listinputseparators='comma semicolon'
+ listdisplayseparator='semicolon'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Description:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='editable' name='Comment' description='Short comment about locality.'
+ listinputseparators='semicolon newline blankline' listdisplayseparator='newline'
+ htmlid='Comment'/></run><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='3'><run><font size='9pt'/></run></par>
+<par def='3'/>
+<par def='3'/></tablecell></tablerow>
+<tablerow tablabel='Operational'>
+<tablecell borderwidth='0px 1px'>
+<par def='3'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' leftmargin='0.1500in' refwidth='5.0750in'><tablecolumn
+ width='0.1500in'/><tablecolumn width='1.5000in'/><tablecolumn width='3.4250in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<par def='6'><run><font size='9pt' style='bold' color='white'/>Administration</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<pardef id='15' keepwithnext='true' keeptogether='true'/>
+<par def='15'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px' bgcolor='white'>
+<pardef id='16' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Hierarchical name of user who created this document. The user can modify this document if he or she has Author access to this database.</popuptext><run
+><font size='9pt'/>Owner:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px' bgcolor='white'>
+<pardef id='17' keepwithnext='true' keeptogether='true'/>
+<par def='17'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='computedfordisplay' name='$dspOwner'><code event='defaultvalue'><formula
+>Owner</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='white'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px' bgcolor='white'>
+<par def='6'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the names or group names which you want to give edit capabilities to for this group record.</popuptext><run
+><font size='9pt'/>Administrators:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px' bgcolor='white'>
+<pardef id='18' keepwithnext='true' keeptogether='true'/>
+<par def='18'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='computedfordisplay' name='$dspLocalAdmin'><code event='defaultvalue'><formula
+>LocalAdmin</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='19' leftmargin='0.0104in' hide='read edit copy preview previewedit'
+ keepwithnext='true' keeptogether='true'/>
+<par def='19'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow tablabel='Inheritable'>
+<tablecell borderwidth='0px 1px'>
+<par def='3'/></tablecell></tablerow>
+<tablerow tablabel='Extensible'>
+<tablecell borderwidth='0px 1px'>
+<par def='3'/><subformref name='$localityExtensibleSchema'/>
+<par def='3'/>
+<par def='19'/>
+<par def='19'/></tablecell></tablerow>
+<tablerow tablabel='Comments'>
+<tablecell borderwidth='0px 1px'>
+<pardef id='20' keepwithnext='true' keeptogether='true'/>
+<par def='20'><run><font size='9pt'/></run></par>
+<pardef id='21' leftmargin='0.0500in' keepwithnext='true' keeptogether='true'/>
+<par def='21'><popup show='onclick' hotspotstyle='none'><popuptext>Enter any comments about the connection description.</popuptext><run
+><font size='9pt'/></run></popup><run><font size='9pt'/></run><run><font size='9pt'/><field
+ showdelimiters='false' type='richtext' kind='editable' name='Comments' description='Comments about the connection description'/></run></par></tablecell></tablerow></table>
+<pardef id='2' leftmargin='0.7500in'/>
+<par def='2'/></richtext></body>
 <item name='$SignatureStatus'><text>1</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>$localityInheritableSchema</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$SubForms' sign='true'><text>$localityExtensibleSchema</text></item>
 <item name='$SubForm_RepIDs' sign='true'><text>0000000000000000</text></item>
-<item name='$Flags'><text>CUAx3</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSJTbWFsbCBGb250cwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$dspType' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Street' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='seeAlso' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='searchGuide' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='OfficeState' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='OfficeCity' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Comment' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Comments' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>Comments</text><text>Comment</text><text
->OfficeCity</text><text>OfficeState</text><text>searchGuide</text><text>seeAlso</text><text
->Street</text><text>$dspType</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$localityInheritableSchema</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-AAIApQYAAAAAgQKDBAIAhf8IAAEAAAo=
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>$localityInheritableSchema</text></item></subform>
 

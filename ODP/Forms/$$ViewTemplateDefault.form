@@ -1,32 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='57a' unid='74EEB4310586C7D885256A7D00693F10' sequence='5211'>
+<form name='$$ViewTemplateDefault' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' nocompose='true' noquery='true'
+ htmlallfields='true' publicaccess='false' designerversion='8.5.3' language='en'>
+<noteinfo noteid='576' unid='74EEB4310586C7D885256A7D00693F10' sequence='5211'>
 <created><datetime dst='true'>20010702T150934,24-04</datetime></created>
-<modified><datetime dst='true'>20150507T110155,05+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114100,26+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095405,24-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110155,04+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110155,04+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114100,26+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114100,26+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20110912T094722,73-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABTVDb3VyaWVyIE5ldwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>SaveOptions</text><text>Query_String_Decoded</text></textlist></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-+f8gAAAAAAANAAQAHgAAAAAAAAAAAAAAAAAAAAAAAADc/zAA+f8eACBOAAAAAAAAAABpZiAoaXNE
-b202KSB7DQlvbkxvYWRCb2R5KCkNfQBf/xAAAgAPAAcAAAAAAAAAX/8QAAIADQAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>$$ViewTemplateDefault</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$HTMLHeadTag' sign='true'><formula>_tDb		:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='htmlbody'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></code><code
+ event='htmlhead'><formula>_tDb		:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
 _is6 	:= @TextToNumber(@Version) &gt; 171;
 
 "&lt;meta http-equiv='expires' content='0'&gt;
@@ -49,205 +35,176 @@ _is6 	:= @TextToNumber(@Version) &gt; 171;
 
 	"&lt;script src='/" + _tDb + "/WebJSNavigationTools5?OpenPage'&gt;&lt;/script&gt;
 	 &lt;script src='/" + _tDb + "/WebJSViewTemplate5?OpenPage'&gt;&lt;/script&gt;"
-)</formula></item>
-<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></item>
-<item name='$Flags'><text>CD</text></item>
-<item name='$WebFlags' sign='true'><text>F</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP////8A
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAABUAAgAKgA3ADUARgBCAEUAMABDAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAAC1Gx7SBAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$$ViewTemplateDefault</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-/wgAAQAACQ==
-</rawitemdata></item></note>
+)</formula></code><code event='onLoad' for='web'><javascript>if (isDom6) {
+	onLoadBody()
+}</javascript></code>
+<body><richtext>
+<pardef id='1' hide='web'/>
+<par def='1'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' refwidth='7.5208in'><tablecolumn width='0.1250in'/><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='3' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='4' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font style='bold'/><computedtext><code event='value'><formula
+>FullTitle:=@Subset(@ViewTitle; 1);
+ShowTitle:=@Right(FullTitle;"\\");
+
+@If(ShowTitle = "";
+	FullTitle;
+	ShowTitle)</formula></code></computedtext></run><run><font style='bold'/> in </run><run
+><font style='bold'/><computedtext><code event='value'><formula>@DbTitle</formula></code></computedtext></run><run
+><font style='bold'/></run></par>
+<par def='4'><run html='true'>&lt;div class='PaddingTop10'&gt;&lt;/div&gt;</run></par></tablecell></tablerow></table>
+<pardef id='2' firstlineleftmargin='1in'/>
+<par def='2'/>
+<table widthtype='fitmargins' extrahtmlattrs='border=0' refwidth='7.5208in'><tablecolumn
+ width='0.7500in'/><tablecolumn width='0.7500in'/><tablecolumn width='100%'/><tablecolumn
+ width='2.0250in'/>
+<tablerow>
+<tablecell valign='center' borderwidth='0px' extrahtmlattrs='valign=middle'>
+<pardef id='6' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='6'><actionhotspot extrahtmlattrs='border=0'><code event='click'><formula
+>@Command([EditSelectAll])</formula></code><picture width='23px' height='23px'
+ alttext='Select All' extrahtmlattrs='border=0'><imageref name='btnVwSelectAll.gif'/></picture></actionhotspot> <actionhotspot
+><code event='click'><formula>@Command([EditDeselectAll])</formula></code><picture
+ width='23px' height='23px' alttext='Deselect All' extrahtmlattrs='border=0'><imageref
+ name='btnVwDeselectAll.gif'/></picture></actionhotspot></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='7' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='7'><actionhotspot><code event='click'><formula>@Command([ViewExpandAll])</formula></code><picture
+ width='23px' height='23px' extrahtmlattrs='border=0'><imageref name='btnVwExpandAll.gif'/></picture></actionhotspot> <actionhotspot
+><code event='click'><formula>@Command([ViewCollapseAll])</formula></code><picture
+ width='23px' height='23px' extrahtmlattrs='border=0'><imageref name='btnVwCollapseAll.gif'/></picture></actionhotspot></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='8' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='8'/>
+<table leftmargin='0' widthtype='fixedcenter' refwidth='1.6000in'><tablecolumn
+ width='0.4000in'/><tablecolumn width='0.4000in'/><tablecolumn width='0.4000in'/><tablecolumn
+ width='0.4000in'/>
+<tablerow>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='10' align='center' leftmargin='0.0104in' hide='notes' keepwithnext='true'
+ keeptogether='true'/>
+<par def='10'><actionhotspot><code event='click'><formula>@Command([OpenView]; @ViewTitle)</formula></code><picture
+ width='23px' height='23px' alttext='First Page' extrahtmlattrs='border=0'><imageref
+ name='btnVwFirst.gif'/></picture></actionhotspot></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='11' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='11'><actionhotspot><code event='click'><formula>@DbCommand("Domino"; "ViewPreviousPage")</formula></code><picture
+ width='23px' height='23px' alttext='Previous Page' extrahtmlattrs='border=0'><imageref
+ name='btnVwPrevious.gif'/></picture></actionhotspot></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='12' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='12'><actionhotspot><code event='click'><formula>@DbCommand("Domino"; "ViewNextPage")</formula></code><picture
+ width='23px' height='23px' alttext='Next Page' extrahtmlattrs='border=0'><imageref
+ name='btnVwNext.gif'/></picture></actionhotspot></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='13' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='13'><actionhotspot><code event='click'><formula>@DbCommand("Domino"; "EndView")</formula></code><picture
+ width='23px' height='23px' alttext='Last Page' extrahtmlattrs='border=0'><imageref
+ name='btnVwLast.gif'/></picture></actionhotspot></par></tablecell></tablerow></table></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='14' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='14'/>
+<table extrahtmlattrs='border=0' leftmargin='0' widthtype='fixedright' refwidth='1.8292in'><tablecolumn
+ width='0.9208in'/><tablecolumn width='0.3000in'/><tablecolumn width='0.1833in'/><tablecolumn
+ width='0.3000in'/><tablecolumn width='0.1250in'/>
+<tablerow>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='16' align='right' leftmargin='0' hide='notes' keepwithnext='true'
+ keeptogether='true'/>
+<par def='16'><run html='true'><computedtext><code event='value'><formula
+>_is6		:= @TextToNumber(@Version) &gt; 171;
+_isNN4	:= (@BrowserInfo("BrowserType") = "Netscape") &amp; (@BrowserInfo("Version") &lt; 5);
+
+tempVal :=@TextToNumber(@UrlQueryString("StartKey"));
+tempVal :=@If(tempVal="@Error";"";tempVal);
+
+_tValue	:= @If(_is6; @Text(tempVal); "");
+
+
+_tWidth	:= @If(_isNN4; "size=10 ";"style='width:100px; '");
+
+"&lt;input name='inpSearch' type='text' value='" + _tValue + "' " + _tWidth + "&gt;&amp;nbsp;"</formula></code></computedtext></run></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='17' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='17'><actionhotspot><code event='onClick' for='web'><javascript>onClickSearch()</javascript></code><picture
+ width='23px' height='23px' alttext='Search' extrahtmlattrs='border=0'><imageref
+ name='btnVwSearchFT.gif'/></picture></actionhotspot></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='18' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='18'><run html='true'>&amp;nbsp;</run></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='19' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='19'> <actionhotspot><code event='onClick' for='web'><javascript
+>onClickStartWith()</javascript></code><picture width='23px' height='23px'
+ alttext='Start with' extrahtmlattrs='border=0'><imageref name='btnVwSearch.gif'/></picture></actionhotspot></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='20' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='20'/></tablecell></tablerow></table></tablecell></tablerow></table>
+<pardef id='21' firstlineleftmargin='1in' hide='web'/>
+<par def='21'/>
+<pardef id='22'/>
+<par def='22'><run><font size='9pt'/></run><embeddedview name='People' displayusing='html'
+ widthtype='fitwindow' heighttype='fitwindow' height='2.8229in'/><run html='true'><font
+ size='9pt'/></run></par>
+<table widthtype='fitmargins' extrahtmlattrs='border=0' refwidth='7.5208in'><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='23' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='23'><run><font size='9pt'/></run></par>
+<table leftmargin='0' widthtype='fixedcenter' refwidth='1.6000in'><tablecolumn
+ width='0.4000in'/><tablecolumn width='0.4000in'/><tablecolumn width='0.4000in'/><tablecolumn
+ width='0.4000in'/>
+<tablerow>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='25' align='center' leftmargin='0.0104in' hide='notes' keepwithnext='true'
+ keeptogether='true'/>
+<par def='25'><run><font size='9pt'/></run><actionhotspot><code event='click'><formula
+>@Command([OpenView]; @ViewTitle)</formula></code><run><font size='9pt'/></run><picture
+ width='23px' height='23px' alttext='First Page' extrahtmlattrs='border=0'><imageref
+ name='btnVwFirst.gif'/></picture><run><font size='9pt'/></run></actionhotspot><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='26' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='26'><run><font size='9pt'/></run><actionhotspot><code event='click'><formula
+>@DbCommand("Domino"; "ViewPreviousPage")</formula></code><run><font size='9pt'/></run><picture
+ width='23px' height='23px' alttext='Previous Page' extrahtmlattrs='border=0'><imageref
+ name='btnVwPrevious.gif'/></picture><run><font size='9pt'/></run></actionhotspot><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='27' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='27'><run><font size='9pt'/></run><actionhotspot><code event='click'><formula
+>@DbCommand("Domino"; "ViewNextPage")</formula></code><run><font size='9pt'/></run><picture
+ width='23px' height='23px' alttext='Next Page' extrahtmlattrs='border=0'><imageref
+ name='btnVwNext.gif'/></picture><run><font size='9pt'/></run></actionhotspot><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='28' align='center' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='28'><run><font size='9pt'/></run><actionhotspot><code event='click'><formula
+>@DbCommand("Domino"; "EndView")</formula></code><run><font size='9pt'/></run><picture
+ width='23px' height='23px' alttext='Last Page' extrahtmlattrs='border=0'><imageref
+ name='btnVwLast.gif'/></picture><run><font size='9pt'/></run></actionhotspot><run
+><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='2'/>
+<pardef id='29' leftmargin='1in' hide='notes web mobile' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='29'><run><font size='9pt' color='blue'/>// iframe for data transfer</run></par>
+<pardef id='30' leftmargin='1in' hide='notes' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='30'><run html='true'><font size='9pt'/></run><run html='true'><font
+ size='9pt'/><computedtext><code event='value'><formula>_isNN	:= @BrowserInfo("BrowserType") = "Netscape";
+_isNN4	:= _isNN &amp; @BrowserInfo("Version") &lt; 5;
+
+@If(_isNN4; "";
+"&lt;style&gt;
+	.HiddenIFrame { visibility:hidden; display:none;}
+&lt;/style&gt;
+&lt;iframe id='frTransfer' class='HiddenIFrame' src='pgEmpty?OpenPage'&gt;&lt;/iframe&gt;")</formula></code></computedtext></run><run
+><font size='9pt'/></run></par></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>$$ViewTemplateDefault</text></item></form>
 

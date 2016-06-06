@@ -1,129 +1,86 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='3a2' unid='B0C5C9205051DC35052569FB0052700D' sequence='5028'>
+<view name='($InternetSites)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='false'
+ useapplet='true' publicaccess='false' designerversion='6' language='en' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='simple' opencollapsed='true'
+ showresponsehierarchy='true' showmargin='true' shrinkrows='true' extendlastcolumn='true'
+ showhierarchies='false' unreadcolor='black' rowlinecount='5' headerlinecount='1'
+ rowspacing='1' bgcolor='white' altrowcolor='#f8f8fc' totalscolor='gray' headerbgcolor='#b1b1d2'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' formatnoteid='0F467C6B92A7431A852569BB0066C9DB'>
+<noteinfo noteid='39e' unid='B0C5C9205051DC35052569FB0052700D' sequence='5028'>
 <created><datetime>20010222T100026,37-05</datetime></created>
-<modified><datetime dst='true'>20150507T110152,49+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,90+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,60-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,48+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,48+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,90+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,90+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144043,63-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$FormatNote' summary='true' sign='true'>
-<rawitemdata type='4'>
-AQAaQ6eSa3xGD9vJZgC7aSWF
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>($InternetSites)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' sign='true'><formula compiled='true'>
-CgcCABwACABJU2l0ZU9yZwUACABJU2l0ZU9yZwMAAgAwAgIAJDUFAAQAVHlwZQEAEQBXZWJGaWxl
-UHJvdGVjdGlvbgAKAq8ABAIsAAEAFABGaWxlIHByb3RlY3Rpb24gZm9yIAUABwBGUF9QYXRoACIC
-rgDYAQUABABUeXBlAQAHAFdlYlJ1bGUACgKvAL4B6gAFAAsATWFwcGluZ1R5cGUAWAEBABYAUnVs
-ZSAoc3Vic3RpdHV0aW9uKTogIAEAFQBSdWxlIChkaXJlY3Rvcnkgd2l0aCAABQAOAFJNX0FjY2Vz
-c0xldmVsAQAEAEV4ZWMKAq8AOAAcAAEAEgBFeGVjdXRlIGFjY2Vzcyk6ICCuABwAAQAPAFJlYWQg
-YWNjZXNzKTogIACuAAQAtQMiAgEAFQBSdWxlIChyZWRpcmVjdGlvbik6ICAAdwQFAAoAUk1fTWFw
-RnJvbSICAQAFACAtLT4gACICBQAIAFJNX01hcFRvIgKuANQABQAEAFR5cGUBAAgAV2ViUmVhbG0K
-Aq8AugBIAAEAGQBBdXRoZW50aWNhdGlvbiBSZWFsbSBmb3IgAAUABwBGUF9QYXRoACICAQACADog
-IgIFAAgARlBfUmVhbG0iAq4AcgAFAAQAVHlwZQEADgBXZWJBcHBsaWNhdGlvbgoCrwBSAEYAAQAV
-AEphdmEgQXBwbGljYXRpb24gZm9yIAAFAAoAUk1fTWFwRnJvbSICAQACADogIgIFAAgAUk1fTWFw
-VG8iAq4ADAABAAAArgAEALUJAwAHAEYAPwAJOFMxMFIyNFMyNVMzOFMzOVM0MFM0MVM0M1M0NVI1
-MlM1M1M1NFM1NVM1N1I2MlM2M1M2NFM2NVM2N1M2OVIAAgCoAg4AVHlwZU9mSW5ldFNpdGUFAAQA
-VHlwZQEABwBXZWJTaXRlAAoCrwB6AkwAAQAKAFdlYiBTaXRlOiAFAAkASVNpdGVOYW1lACICAQAC
-ACAoIgIFAAkASVNpdGVBZHJzAAEAAgA7IIUCIgIBAAEAKQAiAq4ALgIFAAQAVHlwZQEACABJTUFQ
-U2l0ZQoCrwAUAk4AAQALAElNQVAgU2l0ZTogAAUACQBJU2l0ZU5hbWUAIgIBAAIAICgiAgUACQBJ
-U2l0ZUFkcnMAAQACADsghQIiAgEAAQApACICrgDGAQUABABUeXBlAQAIAFBPUDNTaXRlCgKvAKwB
-TgABAAsAUE9QMyBTaXRlOiAABQAJAElTaXRlTmFtZQAiAgEAAgAgKCICBQAJAElTaXRlQWRycwAB
-AAIAOyCFAiICAQABACkAIgKuAF4BBQAEAFR5cGUBAA0ARGlyZWN0b3J5U2l0ZQAKAq8APgFSAAEA
-EABEaXJlY3RvcnkgU2l0ZTogBQAJAElTaXRlTmFtZQAiAgEAAgAgKCICBQAJAElTaXRlQWRycwAB
-AAIAOyCFAiICAQABACkAIgKuAOwABQAEAFR5cGUBAA8AU01UUEluYm91bmRTaXRlAAoCrwDKAFYA
-AQATAFNNVFAgSW5ib3VuZCBTaXRlOiAABQAJAElTaXRlTmFtZQAiAgEAAgAgKCICBQAJAElTaXRl
-QWRycwABAAIAOyCFAiICAQABACkAIgKuAHQABQAEAFR5cGUBAAgASUlPUFNpdGUKAq8AWgBOAAEA
-CwBJSU9QIFNpdGU6IAAFAAkASVNpdGVOYW1lACICAQACACAoIgIFAAkASVNpdGVBZHJzAAEAAgA7
-IIUCIgIBAAEAKQAiAq4ADAABAAAArgAEALUNAwAHAEYAQAAJMTFTMTJTMjFSMjVTMzBTMzFTNDBS
-NDRTNDlTNTBTNTlSNjhTNjlTNzhSODdTODhTOTdSMTA2UzEwN1MxMTZSAgAgAAkASVNpdGVBZHJz
-AAUACQBJU2l0ZUFkcnMAAwACACIABwBTZXJ2ZXJzAAUADgBXU0hvc3RpbmdTcnZycwMABQBMAEcA
-BwAIAAIADgAJAAcACQAEAElTaXRlT3JnJDVUeXBlT2ZJbmV0U2l0ZUlTaXRlQWRyc1NlcnZlcnMk
-Q29uZmxpY3QkUkVGAAQABAAAAN4ABQAEAEZvcm0BAAgASU1BUFNpdGUBAAgAUE9QM1NpdGUfAgEA
-DQBEaXJlY3RvcnlTaXRlAB8CAQAPAFNNVFBJbmJvdW5kU2l0ZQAfAgEACABJSU9QU2l0ZR8CAQAH
-AFdlYlNpdGUAHwIBABIAV2ViSmF2YUFwcGxpY2F0aW9uHwIBABEAV2ViRmlsZVByb3RlY3Rpb24A
-HwIBAAcAV2ViUnVsZQAfAgEACABXZWJSZWFsbR8CAQAJAEdsb2JhbFdlYgAfAgoCBQAJACRDb25m
-bGljdABZARwCAwAHABgAEgAJTDFTMlMxMVIxOVIyNFMyNVM=
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-MwADAABEiGYHAAAIAAhmAAgAAgAIZgAKAA4ASVNpdGVPcmckNVR5cGVPZkluZXRTaXRl
-</rawitemdata></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAFAAYAiUwAAFZDAwAIAAAAHgAAAA0AAQELDAABAAAIAAAAAAICAAAAVkMRBAIAAAB4AgAACAAF
-AAAKAAEAAAgAAAAAAgIAAEBWQwEEDgAAAPACAAAHAQYBAAoAAQAAAAAAAAACAgAAAFZDCAAJABMA
-IgAAAFAAAQAACgAAAAAIAAAAAAICAAAAVkMAAAcABwAkAAAAUAABAAAKAAAAAAAAAAAAAgIAAABJ
-U2l0ZU9yZx4AAgAcAAgASVNpdGVPcmcFAAgASVNpdGVPcmcDACQ1eAICADACAgAkNQUABABUeXBl
-AQARAFdlYkZpbGVQcm90ZWN0aW9uAAoCrwAEAiwAAQAUAEZpbGUgcHJvdGVjdGlvbiBmb3IgBQAH
-AEZQX1BhdGgAIgKuANgBBQAEAFR5cGUBAAcAV2ViUnVsZQAKAq8AvgHqAAUACwBNYXBwaW5nVHlw
-ZQBYAQEAFgBSdWxlIChzdWJzdGl0dXRpb24pOiAgAQAVAFJ1bGUgKGRpcmVjdG9yeSB3aXRoIAAF
-AA4AUk1fQWNjZXNzTGV2ZWwBAAQARXhlYwoCrwA4ABwAAQASAEV4ZWN1dGUgYWNjZXNzKTogIK4A
-HAABAA8AUmVhZCBhY2Nlc3MpOiAgAK4ABAC1AyICAQAVAFJ1bGUgKHJlZGlyZWN0aW9uKTogIAB3
-BAUACgBSTV9NYXBGcm9tIgIBAAUAIC0tPiAAIgIFAAgAUk1fTWFwVG8iAq4A1AAFAAQAVHlwZQEA
-CABXZWJSZWFsbQoCrwC6AEgAAQAZAEF1dGhlbnRpY2F0aW9uIFJlYWxtIGZvciAABQAHAEZQX1Bh
-dGgAIgIBAAIAOiAiAgUACABGUF9SZWFsbSICrgByAAUABABUeXBlAQAOAFdlYkFwcGxpY2F0aW9u
-CgKvAFIARgABABUASmF2YSBBcHBsaWNhdGlvbiBmb3IgAAUACgBSTV9NYXBGcm9tIgIBAAIAOiAi
-AgUACABSTV9NYXBUbyICrgAMAAEAAACuAAQAtQkDAAcARgA/AAk4UzEwUjI0UzI1UzM4UzM5UzQw
-UzQxUzQzUzQ1UjUyUzUzUzU0UzU1UzU3UjYyUzYzUzY0UzY1UzY3UzY5UgBUeXBlT2ZJbmV0U2l0
-ZfACAgCoAg4AVHlwZU9mSW5ldFNpdGUFAAQAVHlwZQEABwBXZWJTaXRlAAoCrwB6AkwAAQAKAFdl
-YiBTaXRlOiAFAAkASVNpdGVOYW1lACICAQACACAoIgIFAAkASVNpdGVBZHJzAAEAAgA7IIUCIgIB
-AAEAKQAiAq4ALgIFAAQAVHlwZQEACABJTUFQU2l0ZQoCrwAUAk4AAQALAElNQVAgU2l0ZTogAAUA
-CQBJU2l0ZU5hbWUAIgIBAAIAICgiAgUACQBJU2l0ZUFkcnMAAQACADsghQIiAgEAAQApACICrgDG
-AQUABABUeXBlAQAIAFBPUDNTaXRlCgKvAKwBTgABAAsAUE9QMyBTaXRlOiAABQAJAElTaXRlTmFt
-ZQAiAgEAAgAgKCICBQAJAElTaXRlQWRycwABAAIAOyCFAiICAQABACkAIgKuAF4BBQAEAFR5cGUB
-AA0ARGlyZWN0b3J5U2l0ZQAKAq8APgFSAAEAEABEaXJlY3RvcnkgU2l0ZTogBQAJAElTaXRlTmFt
-ZQAiAgEAAgAgKCICBQAJAElTaXRlQWRycwABAAIAOyCFAiICAQABACkAIgKuAOwABQAEAFR5cGUB
-AA8AU01UUEluYm91bmRTaXRlAAoCrwDKAFYAAQATAFNNVFAgSW5ib3VuZCBTaXRlOiAABQAJAElT
-aXRlTmFtZQAiAgEAAgAgKCICBQAJAElTaXRlQWRycwABAAIAOyCFAiICAQABACkAIgKuAHQABQAE
-AFR5cGUBAAgASUlPUFNpdGUKAq8AWgBOAAEACwBJSU9QIFNpdGU6IAAFAAkASVNpdGVOYW1lACIC
-AQACACAoIgIFAAkASVNpdGVBZHJzAAEAAgA7IIUCIgIBAAEAKQAiAq4ADAABAAAArgAEALUNAwAH
-AEYAQAAJMTFTMTJTMjFSMjVTMzBTMzFTNDBSNDRTNDlTNTBTNTlSNjhTNjlTNzhSODdTODhTOTdS
-MTA2UzEwN1MxMTZSSVNpdGVBZHJzSW5ldCBTaXRlIEFkZHJlc3NlcyIAAgAgAAkASVNpdGVBZHJz
-AAUACQBJU2l0ZUFkcnMAAwBTZXJ2ZXJzU2VydmVycyQAAgAiAAcAU2VydmVycwAFAA4AV1NIb3N0
-aW5nU3J2cnMDACYAAQAAAAEBAAkBAAAKAQEOCgAALwCtKwUAAQABAAAAAAAAAAAAV0MBAAAJAAAA
-AAAAAAAAAAAAAAAAAAEA5AAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAA
-AAAAAMAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/
-/wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAxAAAAAAA//8AAAAAAAAAAAAA
-AAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAAB
-AP///wABAPj4/AABAAAAAAAAAAAAAAAAAAEA////AAEAsbHSAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAIAAAAAAABAFhDAAyAAgAAAAAAAQECAgEBAQEBAAQAAAAAAAAAACAvLzpYQwAMgAIAAAAAAAEB
-AgIBAQEBAQAEAAAAAAAAAAAgLy86WEMADIACAAAAAAABAQICAQEBAQEABAAAAAAAAAAAIC8vOllD
-AAAIAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAuLCRZQwAA
-CAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAALiwkWUMAAAgA
-AAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAC4sJAAAAA==
-</rawitemdata></item>
-<item name='$Fonts'><textlist><text>5</text><text>34</text><text>MS Sans Serif</text><text
->6</text><text>34</text><text>MS Sans Serif</text></textlist></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Web_Configurations")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$WebFlags' sign='true'><text>YB</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAAGAHn/bAABALGx0gABAAAAAAABAAAAAAABALGx0gAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAUA////AAAAAAAAAAAAAAC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemVL
-AQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQEA
-AA4AAAAAAAAAU2VuZCBEb2N1X21lbnQDAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
-BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4FAD18vv8uAAAABQAA
-AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXJLBgA+fA==
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAAGAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
-aV96ZUsBAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
-AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
-cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
-AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcksGAD58
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Form ="IMAPSite":"POP3Site":"DirectorySite":"SMTPInboundSite":
+"IIOPSite":"WebSite":"WebJavaApplication":"WebFileProtection":
+"WebRule":"WebRealm":"GlobalWeb" &amp; @IsUnavailable($Conflict)</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Web_Configurations")</formula></code>
+<actionbar useappletinbrowser='true' bgcolor='#b1b1d2' bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'
+ color='none'/>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='ISiteOrg' width='1.6250'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='false' sortnocase='true'
+ showaslinks='false' showascolor='true' categorized='true'><font size='12pt'
+ color='purple' style='bold'/><columnheader><font size='9pt'/></columnheader><datetimeformat
+ show='datetime' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='twodigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column sort='ascending' hidedetailrows='false' listseparator='newline' itemname='$5'
+ width='1' resizable='true' separatemultiplevalues='true' sortnoaccent='true'
+ sortnocase='true' showaslinks='false' responsesonly='true' twisties='true'><font
+ name='MS Sans Serif' pitch='variable' truetype='false' familyid='20'/><columnheader
+><font size='9pt'/></columnheader><datetimeformat show='datetime' date='weekdaymonthdayyear'
+ time='hourminutesecondhundredths' zone='never' dateformat='weekdaymonthdayyear'
+ dayformat='twodigitday' monthformat='twodigitmonth' yearformat='twodigityear'
+ weekdayformat='shortname' dateseparator1=' ' dateseparator2='/' dateseparator3='/'
+ timeseparator=':' preference='usersetting'/><numberformat format='general'
+ varying='true' punctuated='false' parens='false' percent='false' bytes='false'
+ decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/><code event='value'><formula>@If(Type="WebFileProtection";"File protection for "+ FP_Path;
+Type="WebRule";@Select(@TextToNumber(MappingType);"Rule (substitution):  ";"Rule (directory with " + @If(RM_AccessLevel="Exec";"Execute access):  ";"Read access):  ");"Rule (redirection):  ") + RM_MapFrom + " --&gt; "+ RM_MapTo;
+Type="WebRealm";"Authentication Realm for "+FP_Path + ": " + FP_Realm;
+Type="WebApplication";"Java Application for " + RM_MapFrom + ": "+ RM_MapTo;
+"")</formula></code></column>
+<column sort='ascending' hidedetailrows='false' itemname='TypeOfInetSite'
+ width='32.8750' resizable='true' separatemultiplevalues='true' sortnoaccent='true'
+ sortnocase='true' showaslinks='false' twisties='true'><font style='bold'
+ name='MS Sans Serif' pitch='variable' truetype='false' familyid='20'/><columnheader
+><font size='9pt'/></columnheader><code event='value'><formula>@If(Type="WebSite";"Web Site: "+ISiteName+" (" + @Implode(ISiteAdrs;"; ")+")";
+Type="IMAPSite"; "IMAP Site: "+ISiteName+" (" + @Implode(ISiteAdrs;"; ")+")";
+Type="POP3Site"; "POP3 Site: "+ISiteName+" (" + @Implode(ISiteAdrs;"; ")+")";
+Type="DirectorySite";"Directory Site: "+ISiteName+" (" + @Implode(ISiteAdrs;"; ")+")";
+Type="SMTPInboundSite";"SMTP Inbound Site: "+ISiteName+" (" + @Implode(ISiteAdrs;"; ")+")";
+Type="IIOPSite";"IIOP Site: "+ISiteName+" (" + @Implode(ISiteAdrs;"; ")+")";
+"")</formula></code></column>
+<column hidedetailrows='false' itemname='ISiteAdrs' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'
+ hidden='true'><columnheader title='Inet Site Addresses'><font size='9pt'/></columnheader><datetimeformat
+ show='datetime' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='twodigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column hidedetailrows='false' itemname='Servers' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Servers'><font size='9pt'/></columnheader><code event='value'><formula
+>WSHostingSrvrs</formula></code></column></view>
 

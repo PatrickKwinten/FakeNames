@@ -1,37 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='952' unid='2D1AEB10265D0F58852571950072B47B' sequence='65'>
+<view name='($RAEnableCertifiers)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='false'
+ publicaccess='false' designerversion='8' language='en' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='simple' opencollapsed='false'
+ showresponsehierarchy='true' showmargin='true' shrinkrows='false' extendlastcolumn='false'
+ showhierarchies='false' unreadcolor='black' rowlinecount='1' headerlinecount='1'
+ rowspacing='1' bgcolor='white' totalscolor='gray' headerbgcolor='#b1b1d2'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='942' unid='2D1AEB10265D0F58852571950072B47B' sequence='65'>
 <created><datetime dst='true'>20060622T165253,07-04</datetime></created>
-<modified><datetime dst='true'>20150507T110159,48+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114104,62+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095407,06-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110159,47+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110159,47+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114104,62+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114104,62+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144045,72-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($RAEnableCertifiers)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-qgACABwACABJc3N1ZWRUbwUACABJc3N1ZWRUbwMABQAkAB8AAwAIAAkABABJc3N1ZWRUbyRDb25m
-bGljdCRSRUYABAAEAAAATAAFAAQARm9ybQEACQBDZXJ0aWZpZXIACgIFAAoAUkFBRW5hYmxlZAAA
-AAAAAAAA8D8KAhwCBQAJACRDb25mbGljdABZARwCAwAHABgAEgAJTDFTMlMzUzRTNVM2UzhTOVM=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-BgAAAABE
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQABAAQACAQAAFZDAAAIAAYAHgAAAMgAAQAACgAAAAAAAAAAAAICAAAASXNzdWVkVG9DQU5hbWUe
-AAIAHAAIAElzc3VlZFRvBQAIAElzc3VlZFRvAwAmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEA
-AQAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAAAABC
-AAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEAsbHSAAAAAQAAAAAAAQCAgIAA
-AQAAAAAAAAAIAAAAAAABAA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Form = "Certifier" &amp; RAAEnabled =1 &amp; @IsUnavailable($Conflict)</formula></code>
+<column hidedetailrows='false' itemname='IssuedTo' width='25' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='CAName'><font size='9pt'/></columnheader></column></view>
 

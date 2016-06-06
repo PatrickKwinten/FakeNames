@@ -1,111 +1,69 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='306' unid='3D82F25209F16199852565A4006D43DE' sequence='5050'>
+<view name='Server\External Domain Network Information' alias='ExternalDomainNetworkInformation'
+ xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F'
+ showinmenu='true' allowdocselection='true' publicaccess='false' designerversion='7'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='beveled' opencollapsed='true' showresponsehierarchy='true' showmargin='true'
+ shrinkrows='false' extendlastcolumn='true' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' haslinkcolumn='true'
+ bgcolor='white' altrowcolor='#f8f8fc' totalscolor='gray' headerbgcolor='#b1b1d2'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' initialbuildrestricted='false' noemptycategories='true'>
+<noteinfo noteid='302' unid='3D82F25209F16199852565A4006D43DE' sequence='5050'>
 <created><datetime>19980207T145327,98-05</datetime></created>
-<modified><datetime dst='true'>20150507T110151,71+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,12+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,78-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,70+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,70+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,12+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,12+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140242,02-04</datetime><datetime
 >20100304T144051,99-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>Server\External Domain Network Information|ExternalDomainNetworkInformation</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-3gEBADAAEABfcmVzdWx0ALEjXwAFcCUABQAPAFNlcnZlckFkZHJlc3NlcwBqAVYBAwACAE4AAgAk
-NgUAEABfcmVzdWx0ALEjXwAFcCUAAQABACAAIgIFAAgAUHJvdG9jb2wiAgEAFAAgYWRkcmVzc2Vz
-IGF2YWlsYWJsZSICAwACAKIAAgAkNAEAEwBDb25maWd1cmF0aW9uIGZvciAnAAIABQAAAAAAAAAF
-ABAAUmVxdWVzdGluZ1NlcnZlcrQCIgIBAAwAJyB0byBxdWVyeSAnIgICAAUAAAAAAAAABQARAElu
-Zm9ybWF0aW9uU2VydmVyALQCIgIBACEAJyBmb3IgbmV0d29yayBhZGRyZXNzIGluZm9ybWF0aW9u
-ACICAwAFAC4AKQAFAAoAAgACAAkABABEb21haW5OYW1lJDYkNCRDb25mbGljdCRSRUYABAAEAAAA
-igAFAAQAVHlwZQEAIABFeHRlcm5hbERvbWFpbk5ldHdvcmtJbmZvcm1hdGlvbgoCBQAEAEZvcm0B
-ACAARXh0ZXJuYWxEb21haW5OZXR3b3JrSW5mb3JtYXRpb24BACAAKEV4dGVybmFsRG9tYWluTmV0
-d29ya0FkZHJlc3NlcykfAgoCHAIDAA==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-FwABAABECGYHAAAKAERvbWFpbk5hbWU=
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQADAAcAiUAAAFZDgwQKAAAAAAAAAAgAAQAKCQABAAAAAAAAAAICAAAAVkOQBAIAAACiAAAACAAB
-AAAJAAAAAAAAAAAAAgIAAABWQ4AEAgATAMAAAABCAgEAAAkAIAAAAAAAAAACAgAAAERvbWFpbk5h
-bWUkNqIAAQAwABAAX3Jlc3VsdACxI18ABXAlAAUADwBTZXJ2ZXJBZGRyZXNzZXMAagFWAQMABwAM
-AAUACTFUMlMAAgBOAAIAJDYFABAAX3Jlc3VsdACxI18ABXAlAAEAAQAgACICBQAIAFByb3RvY29s
-IgIBABQAIGFkZHJlc3NlcyBhdmFpbGFibGUiAgMABwAWABAACTBSUjFTMlMzUzRTNVM2UyQ0RURO
-SSBDb25maWd1cmF0aW9uc8AAAgCiAAIAJDQBABMAQ29uZmlndXJhdGlvbiBmb3IgJwACAAUAAAAA
-AAAABQAQAFJlcXVlc3RpbmdTZXJ2ZXK0AiICAQAMACcgdG8gcXVlcnkgJyICAgAFAAAAAAAAAAUA
-EQBJbmZvcm1hdGlvblNlcnZlcgC0AiICAQAhACcgZm9yIG5ldHdvcmsgYWRkcmVzcyBpbmZvcm1h
-dGlvbgAiAgMABwAcABUACTFTMlM4UzlTMTBTMTFTMTdTMThTACYAAQAAAAEBAAkBAAAKAQEOCgAA
-LwCtKwEAAQABAQAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAEAEAAAACwA//8AAAAAAAAA
-AAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAABAAAAAsAP//AAAAAAAAAAAAAAAAAABXQwEA
-AAkAAAAAAAAAAAAAAAAAAAAAAAAQAAAALAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8AAQD4
-+PwAAQAAAAAAAAAAAAAAAAABAP///wABALGx0gAAAAEAAAAAAAEAgICAAAEAAAAAAAAA9v8sAAAA
-AAADABMACgAAAAAAAAAAAAAAAAAAAAAAAAAAAHR3aXN0eS5naWb2/ywAAAAAAAMAEwAKAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAdHdpc3R5LmdpZvb/LAAAAAAAAwATAAoAAAAAAAAAAAAAAAAAAAAAAAAA
-AAB0d2lzdHkuZ2lmCAAAAAAAAQA=
-</rawitemdata></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_External_Domain_Network_Information")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>7</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAHn/bAABALGx0gABAAAAAAABAAAAAAABALGx0gAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/6QBAAABAAAAnkEQABcAAAAAAAAAQWRkIEV4dCBEb21h
-aW4gTmV0IEluZm8GdgEBACQADQBDdXJyZW50U2VydmVyAIsAAAAAAAAAAADwP2sCAwAHAAwABQAJ
-MFMwRQAAACwBBQANAEN1cnJlbnRTZXJ2ZXIAAQAAAAoCrwAMATYAAgDoAwAAAAAAAAEAIABFeHRl
-cm5hbERvbWFpbk5ldHdvcmtJbmZvcm1hdGlvbrECrgDWAAEADABbTmV0Q3JlYXRvcl3nAHQCrwC+
-ADYAAgDoAwAAAAAAAAEAIABFeHRlcm5hbERvbWFpbk5ldHdvcmtJbmZvcm1hdGlvbrECrgCIAAIA
-DQAAAAAAAAABAA4ATm90IEF1dGhvcml6ZWQBAF0AWW91IGFyZSBub3QgYXV0aG9yaXplZCB0byBh
-ZGQgRXh0ZXJuYWwgRG9tYWluIE5ldHdvcmsgSW5mb3JtYXRpb24gZG9jdW1lbnRzIHRvIHRoaXMg
-ZGF0YWJhc2UuALADrgAEALUFAwAHABgAEQAJMFI2UjEwUzEzUjIwUjI3UgD2/y8AAAAAAAMAEwAN
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAYnRuTmV3RG9jLmdpZj++/y4AAAAHAAAAniEQABcAAAAAAAAA
-QWRkIEV4dCBEb21haW4gTmV0IEluZm8N9v8vAAAAAAADABMADQAAAAAAAAAAAAAAAAAAAAAAAAAA
-AGJ0bk5ld0RvYy5naWY/+f8gAAAAAAABAAQAPQAAAAAAAAAAAAAAAAAAAAAAAADc/1AA+f8+ACBO
-AAAAAAAAAABudE5ld0RvYygnRXh0ZXJuYWxEb21haW5OZXR3b3JrSW5mb3JtYXRpb24nLCAnW05l
-dENyZWF0b3JdJykAeF//EAACAAEABwAAAAAAAAC+/1AAAAABAAAAnkEQABkAAAAAAAAAX0VkaXQg
-RXh0IERvbWFpbiBOZXQgSW5mbwAgAAAAEgACAOgHAAAAAAAA7QEDAAcADAAFAAkwUzBFAPb/LQAA
-AAAAAwATAAsAAAAAAAAAAAAAAAAAAAAAAAAAAABidG5FZGl0LmdpZj++/1AAAAABAAAAngEQABoA
-AAAAAAAARGVsZXRlIEV4dCBEb21haW4gTmV0IEluZm8gAAAAEgACAEwdAAAAAAAAsQEDAAcADAAF
-AAkwUzBFAPb/LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABidG5EZWxldGUuZ2lmP77/
-QgAAAAEAAACeIRAACwAAAB0AAABFbXB0eSBUcmFzaAYgAAAAEgACAP0HAAAAAAAA7QEDAAcADAAF
-AAkwUzBFAPb/LgAAAAAAAwATAAwAAAAAAAAAAAAAAAAAAAAAAAAAAABidG5FbXB0eS5naWa+/2IA
-AAABAAAAniEQAAYAAAAhAAAAU2VhcmNoRgAHAB4AGABXZWIgb25seSAtIHVzZWQgaW4gVmlld3MH
-AAoAAwAJMVMAAAASAAIAkBcAAAAAAADtAQMABwAKAAMACTBSAPb/LwAAAAAAAwATAA0AAAAAAAAA
-AAAAAAAAAAAAAAAAAABidG5TZWFyY2guZ2lmP77/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
-aV96ZQAHAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50CAACCr7/KAAAAAUA
-AACdAQAADQAAAAAAAABTZW5kIERvY3VtZW50AAkAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
-cndhcmQKAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgsAPXy+/y4A
-AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlclIMAD58
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAL7/pAEAAAEAAACeQRAAFwAAAAAAAABBZGQgRXh0
-IERvbWFpbiBOZXQgSW5mb3Z2AQEAJAANAEN1cnJlbnRTZXJ2ZXIAiwAAAAAAAAAAAPA/awIDAAcA
-DAAFAAkwUzBFAAAALAEFAA0AQ3VycmVudFNlcnZlcgABAAAACgKvAAwBNgACAOgDAAAAAAAAAQAg
-AEV4dGVybmFsRG9tYWluTmV0d29ya0luZm9ybWF0aW9usQKuANYAAQAMAFtOZXRDcmVhdG9yXecA
-dAKvAL4ANgACAOgDAAAAAAAAAQAgAEV4dGVybmFsRG9tYWluTmV0d29ya0luZm9ybWF0aW9usQKu
-AIgAAgANAAAAAAAAAAEADgBOb3QgQXV0aG9yaXplZAEAXQBZb3UgYXJlIG5vdCBhdXRob3JpemVk
-IHRvIGFkZCBFeHRlcm5hbCBEb21haW4gTmV0d29yayBJbmZvcm1hdGlvbiBkb2N1bWVudHMgdG8g
-dGhpcyBkYXRhYmFzZS4AsAOuAAQAtQUDAAcAGAARAAkwUjZSMTBTMTNSMjBSMjdSAL7/LgAAAAcA
-AACeIRAAFwAAAAAAAABBZGQgRXh0IERvbWFpbiBOZXQgSW5mbyS+/1AAAAABAAAAnkEQABkAAAAA
-AAAAX0VkaXQgRXh0IERvbWFpbiBOZXQgSW5mb28gAAAAEgACAOgHAAAAAAAA7QEDAAcADAAFAAkw
-UzBFAL7/UAAAAAEAAACeARAAGgAAAAAAAABEZWxldGUgRXh0IERvbWFpbiBOZXQgSW5mbyAAAAAS
-AAIATB0AAAAAAACxAQMABwAMAAUACTBTMEUAvv9CAAAAAQAAAJ4hEAALAAAAHQAAAEVtcHR5IFRy
-YXNoICAAAAASAAIA/QcAAAAAAADtAQMABwAMAAUACTBTMEUAvv9iAAAAAQAAAJ4hEAAGAAAAIQAA
-AFNlYXJjaEYABwAeABgAV2ViIG9ubHkgLSB1c2VkIGluIFZpZXdzBwAKAAMACTFTAAAAEgACAJAX
-AAAAAAAA7QEDAAcACgADAAkwUgC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUnBwBO
-fL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAgAAgq+/ygAAAAFAAAAnQEAAA0A
-AAAAAAAAU2VuZCBEb2N1bWVudAAJAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJkCgAE
-Cr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4LAD18vv8uAAAABQAAAJ0B
-AAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXJuDAA+fA==
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "ExternalDomainNetworkInformation" &amp; Form = "ExternalDomainNetworkInformation" : "(ExternalDomainNetworkAddresses)"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_External_Domain_Network_Information")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Add Ext Domain Net Info' showinmenu='false' hide='web'><imageref
+ name='btnNewDoc.gif'/><code event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+@If(CurrentServer="";
+@PostedCommand([Compose]; "ExternalDomainNetworkInformation");
+@IsMember("[NetCreator]";@UserRoles);
+@PostedCommand([Compose];"ExternalDomainNetworkInformation");
+@Prompt([Ok];"Not Authorized";"You are not authorized to add External Domain Network Information documents to this database."))</formula></code></action>
+<action title='Add Ext Domain Net Info' showinmenu='false' hide='notes'><imageref
+ name='btnNewDoc.gif'/><code event='onClick' for='web'><javascript>ntNewDoc('ExternalDomainNetworkInformation', '[NetCreator]')</javascript></code></action>
+<action title='_Edit Ext Domain Net Info' showinmenu='false' hide='web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Delete Ext Domain Net Info' showinmenu='false'><imageref name='btnDelete.gif'/><code
+ event='click'><formula>@PostedCommand([MoveToTrash])</formula></code></action>
+<action title='Empty Trash' showinmenu='false' hide='notes'><imageref name='btnEmpty.gif'/><code
+ event='click'><formula>@Command([EmptyTrash])</formula></code></action>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Document' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='DomainName' width='1'
+ resizable='false' separatemultiplevalues='true' sortnoaccent='true' sortnocase='true'
+ showaslinks='false' categorized='true' twisties='true'><font size='9pt' color='navy'/><columnheader
+><font size='9pt'/></columnheader><twistieimage><imageref database='0000000000000000'
+ name='twisty.gif'/></twistieimage></column>
+<column hidedetailrows='false' itemname='$6' width='1' resizable='false' separatemultiplevalues='false'
+ sortnoaccent='true' sortnocase='true' showaslinks='false' responsesonly='true'
+ twisties='true'><font size='9pt'/><columnheader><font size='9pt'/></columnheader><code
+ event='value'><formula>_result	:= @Text(@Elements(ServerAddresses));
+
+_result + " " + Protocol + " addresses available"</formula></code><twistieimage
+><imageref database='0000000000000000' name='twisty.gif'/></twistieimage></column>
+<column hidedetailrows='false' itemname='$4' width='72.2500' resizable='false'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='true'
+ twisties='true'><font size='9pt'/><columnheader title='EDNI Configurations'><font
+ size='9pt'/></columnheader><code event='value'><formula>"Configuration for '" + @Name([Abbreviate];RequestingServer) + "' to query '" + @Name([Abbreviate];InformationServer) + "' for network address information"</formula></code><twistieimage
+><imageref database='0000000000000000' name='twisty.gif'/></twistieimage></column></view>
 

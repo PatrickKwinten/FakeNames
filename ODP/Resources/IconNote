@@ -1,12 +1,12 @@
 <?xml version='1.0' encoding='utf-8'?>
 <note default='true' class='icon' xmlns='http://www.lotus.com/dxl' version='9.0'
- maintenanceversion='1.5' replicaid='C1257E3E003196C7'>
-<noteinfo noteid='116' unid='85255E01001356A8852555E800620F3C' sequence='22'>
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F'>
+<noteinfo noteid='112' unid='85255E01001356A8852555E800620F3C' sequence='24'>
 <created><datetime>19870128T125104,28-05</datetime></created>
-<modified><datetime dst='true'>20150511T121133,13+02</datetime></modified>
-<revised><datetime dst='true'>20150511T121133,11+02</datetime></revised>
-<lastaccessed><datetime dst='true'>20150511T121133,12+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110149,58+02</datetime></addedtofile></noteinfo>
+<modified><datetime dst='true'>20150512T114105,26+02</datetime></modified>
+<revised><datetime dst='true'>20150512T114105,25+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20150512T114105,26+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,16+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Patrick Kwinten/OU=Duesseldorf/O=IBV/C=DE</name><name
 >CN=Patrick Kwinten/O=quintessens</name></updatedby>
 <revisions><datetime dst='true'>20030724T160903,39-04</datetime><datetime
@@ -35,11 +35,10 @@ F/EXEe8fTk/x8RH3EfEfEfEX8RHx/65PH/EXEfcRHhEX8RcR7x9OT/HxEfcR8R8R8RfxEfH/rk8f
 <item name='$TemplateFileName'><text>C:\IBM\Domino\data\pubnames.ntf</text></item>
 <item name='$PIRCRefreshModTime'><datetime dst='true'>20150501T010051,05+02</datetime></item>
 <item name='$TemplateModTime'><datetime dst='true'>20150507T010013,79+02</datetime></item>
-<item name='$Daos'><text>0</text></item>
 <item name='$Flags'><text>tbJz27FS</text></item>
 <item name='$LaunchXPageRunOnServer'><text>0</text></item>
 <item name='$FlagsNoRefresh'><text/></item>
 <item name='$AllowRESTDbAPI'><number>2</number></item>
-<item name='$TITLE'><text>Fake Names 40K
-</text></item></note>
+<item name='$Daos'><text>0</text></item>
+<item name='$TITLE'><text>Fake Names 40K</text></item></note>
 

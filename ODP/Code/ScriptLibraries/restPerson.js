@@ -440,9 +440,5 @@ function sortResults(facet) {
     writeResultList(data);	
 }
 
-function init(){
-
-}
-
 
 

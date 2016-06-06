@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="80a" sequence="59" unid="991CA8423B658B938525796B0068A304">
+<?xml version="1.0" encoding="UTF-8"?><note class="filter" maintenanceversion="1.5" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="802" sequence="59" unid="991CA8423B658B938525796B0068A304">
 <created><datetime>20111219T140254,76-05</datetime></created>
-<modified><datetime dst="true">20150507T110158,22+02</datetime></modified>
+<modified><datetime dst="true">20150512T114103,40+02</datetime></modified>
 <revised><datetime dst="true">20130909T095409,20-04</datetime></revised>
-<lastaccessed><datetime dst="true">20150507T110158,21+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150507T110158,21+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20150512T114103,40+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150512T114103,40+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst="true">20120724T104405,16-04</datetime><datetime dst="true">20120726T105730,88-04</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>

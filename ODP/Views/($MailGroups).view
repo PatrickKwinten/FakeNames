@@ -1,71 +1,48 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='766' unid='7036B88E2E2F2D898525664F00684D8E' sequence='5005'>
+<view name='($MailGroups)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false'
+ designerversion='8' language='en' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='simple' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='false' extendlastcolumn='false' showhierarchies='false'
+ unreadcolor='black' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
+ totalscolor='blue' headerbgcolor='#a0a0c5' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' indexrefresh='automatic'
+ initialbuildrestricted='false' noemptycategories='false'>
+<noteinfo noteid='762' unid='7036B88E2E2F2D898525664F00684D8E' sequence='5005'>
 <created><datetime dst='true'>19980728T145915,98-04</datetime></created>
-<modified><datetime dst='true'>20150507T110157,52+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,72+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,68-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202354,68+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,51+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,75+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,72+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20050824T134849,46-04</datetime><datetime
  dst='true'>20060426T134249,24-04</datetime><datetime dst='true'>20060427T135423,55-04</datetime><datetime
  dst='true'>20081007T114831,46-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($MailGroups)</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-3AEBADIAGQBDYW5vbmljYWxNZW1iZXJzAFYuWABVYSUAUAUABwBNZW1iZXJzAF4BYQEDAAEAbAAN
-AE1hc2sAVy5YAFVhJQAIBQAZAENhbm9uaWNhbE1lbWJlcnMAVi5YAFVhJQAFAQABAEAAXwIBAAEA
-QAAiAgUAGQBDYW5vbmljYWxNZW1iZXJzAFYuWABVYSUABQEAAQBAAGACIgIDAAIAQgACACQxBQAZ
-AENhbm9uaWNhbE1lbWJlcnMAVi5YAFVhJQAFBQANAE1hc2sAVy5YAFVhJQBPAQAAAI0DXgEDAAUA
-KAAjAAQAAgAIAAkABAAkMUxpc3ROYW1lJENvbmZsaWN0JFJFRgAEAAQAAACcAAUABABUeXBlAQAF
-AEdyb3VwAAoCBQAJAEdyb3VwVHlwZQABAAEAMQAKAhwCBAAFAAQARm9ybQEABQBHcm91cAAKAhwC
-BQAJACRDb25mbGljdABZARwCBQAQACRBdXRvQ3JlYXRlZExpc3RoAR4BBQAQACRBdXRvQ3JlYXRl
-ZExpc3RiAQEAAwBESVAACgIeAR0CBAAcAgMABwAyACwACUwxUzNTNFM1UzZTMTBTMTFTMTRTMTVT
-MTlTMjBTMjZTMjdTMzJTMkUzM1M=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYHAAACACQx
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQACAAMACAQAAFZDAwACAAQAJAEAACoAAQEACQAAAAAAAAAAAAACAAAAVkMAAAgACAAAAAAA4QAB
-AAAJAAAAAAAAAAAAAAIAAAAkMU5hbWUkAQcAQgA8AFJlbW92ZSBhbGwgbWVtYmVycyB0aGF0IGNv
-bnRhaW4gZG9tYWluIG5hbWVzIChlLmcuIEAgRG9tYWluKQEAMgAZAENhbm9uaWNhbE1lbWJlcnMA
-Vi5YAFVhJQBQBQAHAE1lbWJlcnMAXgFhAQMAAQBsAA0ATWFzawBXLlgAVWElAAgFABkAQ2Fub25p
-Y2FsTWVtYmVycwBWLlgAVWElAAUBAAEAQABfAgEAAQBAACICBQAZAENhbm9uaWNhbE1lbWJlcnMA
-Vi5YAFVhJQAFAQABAEAAYAIiAgMAAgBCAAIAJDEFABkAQ2Fub25pY2FsTWVtYmVycwBWLlgAVWEl
-AAUFAA0ATWFzawBXLlgAVWElAE8BAAAAjQNeAQMATGlzdE5hbWVMaXN0TmFtZSYAAQAAAAEBAAkB
-AAAKAQEECgAAAACtKwEAAQABAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA
-//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAA
-AAAAAABCAAAAAAABAP///wAFAAAAAAABAAAAAAAAAAAAAAAAAAEA////AAEAoKDFAAAAAQAAAAAA
-AQAAAP8AAQAAAAAAAAAIAAAAAAABAA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzpAAAAAQABAAAAVR0AAAAAAAABAAEJCAAGAHn/bAABAGBgmAABAAAAAAABAP///wABAMDAwAAC
-ACAAAAABAQAAAwADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPb/MgAAAAAAAwATABAAAAAAAAAAAAAAAAAAAAAAAAAAAABB
-Y3Rpb25CdXR0b24uZ2lm/P86AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AQAAAAAAAAAAAAAAAAAAAL7/JgAAAAUAAACdAAAACwAAAAAAAABDYXRlZ29yaV96ZUsBAE58vv8o
-AAAABQAAAJ0AAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUAAACdAAAADgAAAAAA
-AABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQAAAAgAAAAAAAAAX0ZvcndhcmQEAAQKvv8s
-AAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIHRvIEZvbGRlci4uLgUAPXy+/y4AAAAFAAAAnQEAABMA
-AAAAAAAAX1JlbW92ZSBmcm9tIEZvbGRlcksGAD58
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzpAAAAAQABAAAAVR0AAAAAAAABAAEJCAAGAL7/JgAAAAUAAACdAAAACwAAAAAAAABDYXRlZ29y
-aV96ZUsBAE58vv8oAAAABQAAAJ0AAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
-AACdAAAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQAAAAgAAAAAAAAAX0Zv
-cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIHRvIEZvbGRlci4uLgUAPXy+/y4A
-AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBmcm9tIEZvbGRlcksGAD58
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT (Type = "Group" &amp; GroupType="1") &amp; Form="Group" &amp; @IsUnavailable($Conflict) &amp; (!@IsAvailable($AutoCreatedList) | !@UpperCase($AutoCreatedList)  = "DIP")</formula></code>
+<actionbar bgcolor='#606098' bordercolor='black'>
+<actionbuttonstyle heighttype='background' margintype='fixed' margin='6' bgcolor='none'
+ displayborder='never' widthtype='background' textalign='center' internalmargin='3px'><imageref
+ name='ActionButton.gif'/></actionbuttonstyle><font size='9pt' color='white'/><border
+ width='0px 0px 1px'/>
+<action title='Categori_ze' showinbar='false' hide='previewedit' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' hide='previewedit' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' hide='previewedit' systemcommand='send'/>
+<action title='_Forward' showinbar='false' hide='previewedit' systemcommand='forward'/>
+<action title='_Move to Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove from Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$1' width='5.2500'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='true' sortnocase='true'
+ showaslinks='false' categorized='true'><font size='9pt' style='bold'/><columnheader
+ title='Name'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/><code
+ event='value'><formula>REM {Remove all members that contain domain names (e.g. @ Domain)};
+CanonicalMembers := @LowerCase(@Trim(Members));
+Mask := @Left(CanonicalMembers; "@") + "@" + @Right(CanonicalMembers; "@");
+@Trim(@Replace(CanonicalMembers; Mask; ""))</formula></code></column>
+<column hidedetailrows='false' itemname='ListName' width='28.1250' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='ListName'><font size='9pt'/></columnheader><datetimeformat
+ legacy='true' show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column></view>
 

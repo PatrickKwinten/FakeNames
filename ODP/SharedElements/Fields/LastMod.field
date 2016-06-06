@@ -1,34 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='1be' unid='89E329607A794B9585256B71001ABCCF' sequence='5036'>
+<sharedfield name='LastMod' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'>
+<noteinfo noteid='1ba' unid='89E329607A794B9585256B71001ABCCF' sequence='5036'>
 <created><datetime>20020302T235202,71-05</datetime></created>
-<modified><datetime dst='true'>20150507T110150,42+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114055,90+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095401,98-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110150,41+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110150,41+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114055,90+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,90+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20020303T233532,43-05</datetime><datetime dst='true'>20020606T091110,79-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ type='text' allowmultivalues='true' kind='computedfordisplay' name='LastMod'
+ listinputseparators='comma semicolon newline' listdisplayseparator='newline'><code
+ event='defaultvalue'><formula>When := @Text(@Modified);
+Who	:= @Name([Abbreviate];@Subset($UpdatedBy; -1));
+
+When + " " + Who</formula></code></field>
 <item name='$SignatureStatus'><text>1</text></item>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>
-</rawitemdata></item>
-<item name='$TITLE'><text>LastMod</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9UAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIACAAAAAAABAgICAQEBAQcEAAAA
-AAAAAAAAAAAAAAAgLy86iv/AAIABAQUOQAAACAAAAAAAAQAACpQAAAAAAAAABwAAAAAAlAABABAA
-BABXaGVupABWAQMABwAMAAUACTFTMlMAAQA0AAMAV2hvAAIABQAAAAAAAAAFAAoAJFVwZGF0ZWRC
-eQAAAAAAAAAA8D8QAWsCtAIDAAcAEAAKAAkwUjFUMlMxMFMAACAABQAEAFdoZW4BAAEAIAAiAgUA
-AwBXaG8AIgIDAAcAEgAMAAkwUlIxUzJTM1M0U0xhc3RNb2QA3gYAAIr/hf8IAAEAAAo=
-</rawitemdata></item></note>
+</rawitemdata></item></sharedfield>
 

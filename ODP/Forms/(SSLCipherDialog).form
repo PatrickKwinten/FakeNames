@@ -1,153 +1,129 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='492' unid='8401D37918B0D25E852566D0007AEF63' sequence='5062'>
+<form name='(SSLCipherDialog)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' nocompose='true' noquery='true'
+ htmlallfields='true' publicaccess='false' designerversion='8' language='en'
+ bgcolor='system'>
+<noteinfo noteid='48e' unid='8401D37918B0D25E852566D0007AEF63' sequence='5062'>
 <created><datetime>19981204T172246,75-05</datetime></created>
-<modified><datetime dst='true'>20150507T110153,78+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114059,10+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,50-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110153,77+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110153,77+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114059,10+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114059,10+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143952,16-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-+f8gAAAAAAANAAQADQAAAAAAAAAAAAAAAAAAAAAAAADc/yAA+f8OACBOAAAAAAAAAABvbkxvYWRC
-b2R5KCkA//n/IAAAAAAADwAEAL4CAAAAAAAAAAAAAAAAAAAAAAAA3P/QAvn/vgIgTgAAAAAAAAAA
-ZnVuY3Rpb24gb25Mb2FkQm9keSgpIHsNDQkvLyBzZWxlY3QgU1NMIGNpcGhlciBmcm9tIHZpcnR1
-YWwgc2VydmVyIGRvYw0JY2JveFNldENoZWNrZWRGcm9tQXJyYXkoZG9jdW1lbnQuZm9ybXNbMF0u
-U1NMQ2lwaGVyTGlzdCwgDQkJCQkJCXdpbmRvdy5vcGVuZXIuZG9jdW1lbnQuZm9ybXNbMF0uU1NM
-Q2lwaGVyTGlzdC52YWx1ZS5zcGxpdCgnLCAnKSkNfQ0NDWZ1bmN0aW9uIG9uQ2xpY2tPSygpIHsN
-DQkvLyBjYWxsZWQgd2hlbiBjbGlja2VkIG9uIG9rIGJ1dHRvbg0JDQkvLyB3cml0ZSB2YWx1ZXMg
-YmFjayBpbnRvIG9wZW5lciBkb2MNCXZhciBoRm9ybU9wZW5lciA9IHdpbmRvdy5vcGVuZXIuZG9j
-dW1lbnQuZm9ybXNbMF0NDQl2YXIgYU5ld0NpcGhlciA9IGNib3hHZXRDaGVja2VkVmFsdWVzKGRv
-Y3VtZW50LmZvcm1zWzBdLlNTTENpcGhlckxpc3QpDQkNCWhGb3JtT3BlbmVyLlNTTENpcGhlckxp
-c3QudmFsdWUJCT0gYU5ld0NpcGhlci5qb2luKCcsICcpDQloRm9ybU9wZW5lci5TU0xTdHJvbmdF
-bmNyeXB0aW9uLnZhbHVlCT0gYU5ld0NpcGhlci5qb2luKCcnKQ0JDQkvLyB1cGRhdGUgb3BlbmVy
-IGRvYw0Jd2luZG93Lm9wZW5lci5fZG9DbGljaygnJFJlZnJlc2gnLCB3aW5kb3cub3BlbmVyLCBu
-dWxsKQ0JDQkvLyBkaWFsb2dib3ggaXMgY2xvc2VkIGJ5IGRsZ0F1dG9DbG9zZSgpIGluIG9wZW5l
-ciB1bmxvYWQgZXZlbnQNfQ0AX/8QAAIADwAHAAAAAAAAAF//EAACAA0ABwAAAAAAAAA=
-</rawitemdata></item>
-<item name='$TITLE'><text>(SSLCipherDialog)</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAADwAJAMDAwAAAAAAA
-</rawitemdata></item>
-<item name='$WINDOWTITLE' sign='true'><formula>"HTTP Cipher Settings"</formula></item>
-<item name='$HTMLHeadTag' sign='true'><formula>"&lt;meta http-equiv='expires' content='0'&gt;
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='windowtitle'><formula>"HTTP Cipher Settings"</formula></code><code
+ event='htmlbody'><formula>"class='DialogBox' topmargin=10 leftmargin=10 marginheight=10 marginwidth=10"</formula></code><code
+ event='htmlhead'><formula>"&lt;meta http-equiv='expires' content='0'&gt;
 &lt;link rel=stylesheet type='text/css' href='/" + @WebDbName + "/cssForm?ReadForm'&gt;
 &lt;script&gt;
 	var sWebDbName		= '/" + @WebDbName + "/';
 &lt;/script&gt;
-&lt;script src='/" + @WebDbName + "/WebJSTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;"</formula></item>
-<item name='$HTMLBodyTag' sign='true'><formula>"class='DialogBox' topmargin=10 leftmargin=10 marginheight=10 marginwidth=10"</formula></item>
-<item name='$Flags'><text>CD</text></item>
-<item name='$WebFlags' sign='true'><text>F</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAABExTT0IDABQAZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP//AABU
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAADAIwAAAAAAP//CAAqADQAMQBEADgAMABGADgAAAAAAGwAAwBOAEUAVwAAAIAABgBEAEUATABF
-AFQARQAAAAAA//8KAEkATgBJAFQASQBBAEwASQBaAEUAAAAAAP//CQBUAEUAUgBNAEkATgBBAFQA
-RQAAAP//BgBPAEIASgBFAEMAVAAAAAAA//8AAAAAAAAFAAgAAAAAAMtWo/sEAAcAAAAAAB0AAAIA
-AAA=
-</rawitemdata></item>
-<item name='SSLCipherList' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SSLStrongEncryption' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>SSLStrongEncryption</text><text>SSLCipherList</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>(SSLCipherDialog)</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAADBjAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAMAAAmBAoL/WgACAAAA
-AAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA
-AAAAlISgBQAAoAUKAAAAAAABAAAABAAAAIMEAgDdBgEA+//7/ywAAAAAAAQBAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAEAAAAAAAAAAAAAAFz/PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAOAAAAAAAAAAEAAAoAAAAAAQAAAAAA3gYBAPv/ow6gBSgAPAAAAAAAAgCkEgAAoAVlIgAA
-AAIAAAEBAACBAoL/WgADAAAAAAABAAAA6gVlIuoFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAhgEAAAAAqIQAAAEAAAABAAAAAAABAAAABAAAAIMEAwCF/zkAAwAACUNo
-b29zZSB0aGUgU1NMIENpcGhlciBTZXR0aW5ncyB5b3Ugd2lzaCB0byBhbGxvdzoAgQKC/1oABAAA
-AAAAAQAAAOoFZSLqBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIaB
-AAAAAKiEAAABAAAAAQAAAAAAAQAAAAQAAACDBAQAzP8IAAAAAACF/ygAAwAACTxkaXYgY2xhc3M9
-IlBhZGRpbmdUb3AxMCI+PC9kaXY+zf8IAAAAAACkEgEAoAVlIgAAAAIAAAEBAACBAoL/WgAFAAAA
-AAAAAAAA6gVlIuoFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEA
-AAAAqIQAAAEAAAABAAAAAAABAAAABAAAAIMEBQCF/wgAAwAACYECgwQFAIX/CAADAAAJ3QYAAIr/
-/v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw/xQAAAAGIAAAAAAAAAAAAAAAAIr/DAKKQgEFAiAAAAgA
-AAAAAgMAAAk6AAAAAAAAAA0AAAChAToAAAAsAAEAAgAwMwEAAgAwNB8CAQACADA1HwIBAAIAMDkf
-AgEAAgAwQR8CAwAHAAwABQAJMFMwRQBTU0xDaXBoZXJMaXN0CQAwADAALgAwADcALwAtAB0AHwBB
-RVMgZW5jcnlwdGlvbiB3aXRoIDEyOC1iaXQga2V5IGFuZCBTSEEtMSBNQUN8MkZBRVMgZW5jcnlw
-dGlvbiB3aXRoIDI1Ni1iaXQga2V5IGFuZCBTSEEtMSBNQUN8MzVSQzQgZW5jcnlwdGlvbiB3aXRo
-IDEyOC1iaXQga2V5IGFuZCBNRDUgTUFDfDA0UkM0IGVuY3J5cHRpb24gd2l0aCAxMjgtYml0IGtl
-eSBhbmQgU0hBLTEgTUFDfDA1VHJpcGxlIERFUyBlbmNyeXB0aW9uIHdpdGggMTY4LWJpdCBrZXkg
-YW5kIFNIQS0xIE1BQ3wwQURFUyBlbmNyeXB0aW9uIHdpdGggNTYtYml0IGtleSBhbmQgU0hBLTEg
-TUFDfDA5UkM0IGVuY3J5cHRpb24gd2l0aCA0MC1iaXQga2V5IGFuZCBNRDUgTUFDfDAzTm8gZW5j
-cnlwdGlvbiB3aXRoIE1ENSBNQUN8MDFObyBlbmNyeXB0aW9uIHdpdGggU0hBLTEgTUFDfDAy+f8g
-AAAAAAABAAQAOAAAAAAAAAAAAAAAAAAAAAAAAADc/0oA+f84ACBOAAAAAAAAAAAvLyBvdmVyd3Jp
-dGUgTm90ZXMgY2xpZW50IHJlZnJlc2ggYmVoYXZpb3INcmV0dXJuIHRydWU7AN4GAACK/4X/CAAD
-AAAJgQKDBAQAzP8IAAAAAACF/ygAAwAACTxkaXYgY2xhc3M9IlBhZGRpbmdUb3AxMCI+PC9kaXY+
-zf8IAAAAAACkEgIAoAVlIgAAAAIAAAEBAACBAoMEAwCF/wgAAwAACYECgv9aAAYAAAAAAAEAAAAw
-BtIhMAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAACUgJAA
-AQCQAAAAxRxiAAEAAAAEAAAAgwQGAN0GAQD7//v/LAABAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAQAAAAAAAAAAAAAAXP8+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4A
-AAAAAAAAAQAACgAAAAABAAAAAAB6/zAAAAAJAAAAAAANAAAAAAAAAAAAAAAAAEdyb3VwSW5mb2Nl
-bGxwYWRkaW5nPTPeBgEA+//PDjAGKAA8AAAAAAADANASAAAwBtIhgHAAAgAAAQEAAIECgv9aAAcA
-AAAAAAEAAADABtIhwAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACG
-AQAAAABUhJAAAACQAAAAAAAAAAEAAAAEAAAAgwQHAIX/TwADAAAJTk9URTogVGhlc2Ugb25seSBh
-cHBseSB0byBTU0x2My4gKFlvdSBjYW5ub3QgYWRqdXN0IHRoZSBTU0x2MiBjaXBoZXJzLikAgQKC
-/1oACAAAAAAAAAAAAMAG0iHABgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAIYBAAAAAFSEkAAAAJAAAAAAAAAAAQAAAAQAAACDBAgAhf9nAAMAAAlBIE1BQyBpcyBhIE1l
-c3NhZ2UgQXV0aGVudGljYXRpb24gQ29kZSB3aGljaCBhc3N1cmVzIHRoYXQgYSBtZXNzYWdlIGhh
-cyBub3QgYmVlbiB0YW1wZXJlZCB3aXRoLgB4/zQAAAAAAAMAEwASAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAbGl0ZUJhY2tncm91bmQuZ2lm0QYAAAAAgQKDBAUAhf8IAAMAAAmkEgMAoAVlIgAAAAIAAAEB
-AACBAoL/WgAJAAEAAAAAAAAAoAVlIqAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAhoEAAAAAVIcAAAAAAAAAAAAAAAABAAAABAAAAIMECQDM/wgAAAAAAIX/KAADAAAK
-PGRpdiBjbGFzcz0iUGFkZGluZ1RvcDEwIj48L2Rpdj7N/wgAAAAAAIECgv9aAAoAAQAAAAAAAACg
-BWUioAUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGgQAAAABVhwAA
-AAAAAAAAAAAAAAEAAAAEAAAAgwQKAN0GAACF/4X/FgABAAQKLy8gT2sgKyBDYW5jZWzSCAEAAAD/
-AN4GAACF/4ECgwQJAMz/CAAAAAAA3QYAAIX/hf8IAAEABgrSCAEA//8AAN4GAACF/90GAACt/6n/
-GAMBABgABAAMAwwDCgAEAAcAHAAWACBPSyBhbmQgQ0FOQ0VMIGJ1dHRvbiAHAAoAAwAJMVMAAQAY
-AAkAX3RMYWJlbE9rAAEAAgBPSwMABwAQAAkACTBSUjFUVDJTAAEAIAANAF90TGFiZWxDYW5jZWwA
-AQAGAENhbmNlbAMABwAOAAcACTBSMVQyUwABAC4ACgBfdEFjdGlvbk9rAQAXAHdpbmRvdy5oRGxn
-Lm9uQ2xpY2tPSygpAAMABwAOAAgACTBSUjFUMlMBACgADgBfdEFjdGlvbkNhbmNlbAEADgB3aW5k
-b3cuY2xvc2UoKQMABwAOAAcACTBSMVMyUwABAFIABgBfaXNOTjQBAAsAQnJvd3NlclR5cGUA+wEQ
-AQEACABOZXRzY2FwZQoCBAABAAcAVmVyc2lvbgD7ARABAAAAAAAAAAAUQA4CBAAcAgMABwAgABkA
-CTBSUlIxUzJTN1M4UzEwUzExUzE2UzE3UwABAGQABwBfdFdpZHRoAAUABgBfaXNOTjSvAEgAHAAB
-ABIAd2lkdGg9NzAgaGVpZ2h0PTIyrgAsAAEAIABzdHlsZT0nd2lkdGg6NzBweDsgaGVpZ2h0PTIy
-cHg7J64ABAC1AwMABwAWAA8ACTBSUjFTMlM2UzhSVFRUAAAA7gABABwAPGlucHV0IHR5cGU9J2J1
-dHRvbicgdmFsdWU9JwUACQBfdExhYmVsT2sAIgIBAAIAJyAiAgUABwBfdFdpZHRoACICAQAeACBv
-bmNsaWNrPSd3aW5kb3cub25DbGlja09LKCknPiICAQAMACZuYnNwOyZuYnNwOyICAQAcADxpbnB1
-dCB0eXBlPSdidXR0b24nIHZhbHVlPSciAgUADQBfdExhYmVsQ2FuY2VsACICAQACACcgIgIFAAcA
-X3RXaWR0aAAiAgEAGgAgb25jbGljaz0nd2luZG93LmNsb3NlKCknPiICAwAHAD4AOAAJMFJSUjFT
-MlMzUzRTNVM2UzdTOFI5UzEwUjExUzEyUjEzUzE0UzE1UzE2UzE3UzE4UzE5UzIwUoX/CAABAAAK
-qgLeBgAArgDN/wgAAAAAAIX/CAADAAAKe/8mAAAAAAAAAAAACwAAAAAAAAAAAAAAAABhbGlnbj1y
-aWdodAClBgAAAACBAoMEAQCF/wgAAwAACYECgv9aAAsAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwYwAAAACUhwAAAAAAAAAAAAAAAAEAAAAE
-AAAAgwQLAIX/CAADAAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/2QAiAEABQAwAgAI
-AAAAAAIDAAAJLAAAAAAAAAATAAAAAAAsAAAAHgAFAA0AU1NMQ2lwaGVyTGlzdAABAAAAhQIDAAcA
-DAAFAAkwUzBFAFNTTFN0cm9uZ0VuY3J5cHRpb24A3gYAAIr/hf8IAAMAAAk=
-</rawitemdata></item></note>
+&lt;script src='/" + @WebDbName + "/WebJSTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;"</formula></code><code
+ event='onLoad' for='web'><javascript>onLoadBody()</javascript></code><code
+ event='jsheader' for='web'><javascript>function onLoadBody() {
+
+	// select SSL cipher from virtual server doc
+	cboxSetCheckedFromArray(document.forms[0].SSLCipherList, 
+						window.opener.document.forms[0].SSLCipherList.value.split(', '))
+}
+
+
+function onClickOK() {
+
+	// called when clicked on ok button
+	
+	// write values back into opener doc
+	var hFormOpener = window.opener.document.forms[0]
+
+	var aNewCipher = cboxGetCheckedValues(document.forms[0].SSLCipherList)
+	
+	hFormOpener.SSLCipherList.value		= aNewCipher.join(', ')
+	hFormOpener.SSLStrongEncryption.value	= aNewCipher.join('')
+	
+	// update opener doc
+	window.opener._doClick('$Refresh', window.opener, null)
+	
+	// dialogbox is closed by dlgAutoClose() in opener unload event
+}
+</javascript></code>
+<body><richtext>
+<pardef id='1' hide='read edit copy preview previewedit'/>
+<par def='1'><run><font size='9pt' name='user-interface'/></run></par>
+<table widthtype='fixedleft' refwidth='5.1146in'><tablecolumn width='5.1146in'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='3' leftmargin='1%' spacebefore='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt' name='user-interface'/>Choose the SSL Cipher Settings you wish to allow:</run></par>
+<pardef id='4' leftmargin='1%' spacebefore='1.5' hide='notes' keepwithnext='true'
+ keeptogether='true'/>
+<par def='4'><run html='true'><font size='9pt' name='user-interface'/>&lt;div class="PaddingTop10"&gt;&lt;/div&gt;</run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='5' leftmargin='1%' keepwithnext='true' keeptogether='true'/>
+<par def='5'><run><font size='9pt' name='user-interface'/></run></par>
+<par def='5'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field borderstyle='none' lookupeachchar='false'
+ lookupaddressonrefresh='false' type='keyword' allowmultivalues='true' kind='editable'
+ name='SSLCipherList' listinputseparators='comma' listdisplayseparator='comma'><keywords
+ helperbutton='false' recalconchange='true' columns='1' ui='checkbox'><textlist
+><text>AES encryption with 128-bit key and SHA-1 MAC|2F</text><text>AES encryption with 256-bit key and SHA-1 MAC|35</text><text
+>RC4 encryption with 128-bit key and MD5 MAC|04</text><text>RC4 encryption with 128-bit key and SHA-1 MAC|05</text><text
+>Triple DES encryption with 168-bit key and SHA-1 MAC|0A</text><text>DES encryption with 56-bit key and SHA-1 MAC|09</text><text
+>RC4 encryption with 40-bit key and MD5 MAC|03</text><text>No encryption with MD5 MAC|01</text><text
+>No encryption with SHA-1 MAC|02</text></textlist></keywords><code event='defaultvalue'><formula
+>"03":"04":"05":"09":"0A"</formula></code><code event='onClick' for='web'><javascript
+>// overwrite Notes client refresh behavior
+return true;</javascript></code></field></run><run><font size='9pt' name='user-interface'/></run></par>
+<par def='4'><run html='true'><font size='9pt' name='user-interface'/>&lt;div class="PaddingTop10"&gt;&lt;/div&gt;</run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='3'><run><font size='9pt' name='user-interface'/></run></par>
+<table widthtype='fitmargins' htmlclass='GroupInfo' extrahtmlattrs='cellpadding=3'
+ leftmargin='0.1000in' rightmargin='98%' refwidth='4.9125in'><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<cellbackground><imageref name='liteBackground.gif'/></cellbackground>
+<pardef id='7' leftmargin='0.1000in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='7'><run><font size='9pt' name='user-interface'/>NOTE: These only apply to SSLv3. (You cannot adjust the SSLv2 ciphers.)</run></par>
+<pardef id='8' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='8'><run><font size='9pt' name='user-interface'/>A MAC is a Message Authentication Code which assures that a message has not been tampered with.</run></par></tablecell></tablerow></table>
+<par def='5'><run><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' extrahtmlattrs='align=right'>
+<pardef id='9' align='right' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='9'><run html='true'><font name='user-interface'/>&lt;div class="PaddingTop10"&gt;&lt;/div&gt;</run></par>
+<pardef id='10' align='right' hide='notes web' keepwithnext='true' keeptogether='true'/>
+<par def='10'><run><font color='blue'/>// Ok + Cancel</run></par>
+<par def='9'><run html='true'><font color='yellow'/></run><run html='true'><computedtext
+><code event='value'><formula>REM { OK and CANCEL button };
+
+_tLabelOk		:= "OK";
+_tLabelCancel	:= "Cancel";
+
+_tActionOk	:= "window.hDlg.onClickOK()";
+_tActionCancel := "window.close()";
+
+
+_isNN4 := (@BrowserInfo("BrowserType") = "Netscape") &amp; (@BrowserInfo("Version") &lt; 5);
+
+_tWidth := @If(_isNN4; "width=70 height=22";
+			"style='width:70px; height=22px;'");
+
+
+"&lt;input type='button' value='" + _tLabelOk + "' " + _tWidth +
+" onclick='window.onClickOK()'&gt;" +
+"&amp;nbsp;&amp;nbsp;" +
+"&lt;input type='button' value='" + _tLabelCancel + "' " + _tWidth +
+" onclick='window.close()'&gt;"</formula></code></computedtext></run><run
+><font name='user-interface'/></run></par></tablecell></tablerow></table>
+<par def='1'><run><font size='9pt' name='user-interface'/></run></par>
+<pardef id='11' hide='read edit print copy preview previewedit'/>
+<par def='11'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='text' kind='computed' name='SSLStrongEncryption'><code
+ event='defaultvalue'><formula>@Implode(SSLCipherList;"")</formula></code></field></run><run
+><font size='9pt' name='user-interface'/></run></par></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>(SSLCipherDialog)</text></item></form>
 

@@ -1,34 +1,17 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='86e' unid='BE015C5CA53C952285256E71005114AB' sequence='107'>
+<sharedfield name='$DPLocked' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6.5'>
+<noteinfo noteid='85e' unid='BE015C5CA53C952285256E71005114AB' sequence='107'>
 <created><datetime dst='true'>20040409T104537,07-04</datetime></created>
-<modified><datetime dst='true'>20150507T110158,70+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114103,84+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095405,02-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110158,69+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110158,69+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114103,84+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114103,84+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ type='text' allowmultivalues='true' kind='editable' name='$DPLocked' listinputseparators='comma semicolon'
+ listdisplayseparator='semicolon'/>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>
-</rawitemdata></item>
-<item name='$TITLE'><text>$DPLocked</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6.5</text></item>
-<item name='$DPLocked' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><text>$DPLocked</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAIr/LgCKAAEFBjACAAAAAAAAAgEAAAoAAAAAAAAAAAkAAAAAACRE
-UExvY2tlZADeBgAAiv+F/wgAAQAACg==
-</rawitemdata></item></note>
+</rawitemdata></item></sharedfield>
 

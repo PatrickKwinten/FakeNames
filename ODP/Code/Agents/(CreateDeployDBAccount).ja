@@ -1,188 +1,263 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='896' unid='0CC4C29016E04997052576D2005760B9' sequence='55'>
+<agent name='(CreateDeployDBAccount)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' hide='v3' publicaccess='false'
+ designerversion='8' restrictions='unrestricted'>
+<noteinfo noteid='886' unid='0CC4C29016E04997052576D2005760B9' sequence='55'>
 <created><datetime>20100222T105423,93-05</datetime></created>
-<modified><datetime dst='true'>20150507T110158,84+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114103,98+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095408,92-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110158,83+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110158,83+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114103,98+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114103,98+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<designchange><datetime dst='true'>20130909T095359,33-04</datetime></designchange>
+<trigger type='agentlist'/>
+<documentset type='selected'/><code event='action'><javaproject class='JavaAgent.class'
+ codepath='C:\Program Files\IBM\Lotus\Notes\Data'><java name='JavaAgent.java'>import java.io.File;
+import java.io.FileFilter;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.security.KeyStore;
+import java.security.KeyStoreException;
+import java.security.cert.CertificateException;
+import java.security.cert.CertificateFactory;
+import java.security.cert.X509Certificate;
+import java.util.Date;
+import java.util.Vector;
+
+import lotus.domino.ACL;
+import lotus.domino.AgentBase;
+import lotus.domino.AgentContext;
+import lotus.domino.Database;
+import lotus.domino.DateTime;
+import lotus.domino.DbDirectory;  
+import lotus.domino.Document;
+import lotus.domino.DocumentCollection;
+import lotus.domino.Item;
+import lotus.domino.NoteCollection;
+import lotus.domino.NotesError;
+import lotus.domino.NotesException;
+import lotus.domino.Session;
+
+public class JavaAgent extends AgentBase {
+
+	public static final String LOCAL = "";
+	public static final String DEPLOY = "deploy.nsf";
+	public static final String EXTRAS_DIR = "extras";
+	public static final String PERNAMES = "pernames.ntf";
+	public static final String FORM = "Form";
+	public static final String ACCOUNT = "Account";
+	public static final String DEPLOY_TITLE = "Deploy DB";
+	public static final String DEPLOY_PROFILE_NOTE = "deployProfileNote";
+	public static final String ACCOUNT_LINK_IDS = "$AccountLinkIds";
+	public static final String TMP_DEPLOY_DB_DIR = "TempDeployDBDir";
+	public static final String TMP_DEPLOY_DB_DELETES = "TempDeployDelete";
+	public static final String FORCE_DELETES = "ForceDeletes";
+	public static final String DT_ACCOUNT_UPDATE = "$dtAccountUpdate";
+	public static final String SERVER_COPY_MOD_TIME = "ServerCopyModTime";
+	public static final String SERVER_COPY_UNID = "ServerCopyUnid";
+	public static final String DEFAULT_ACL = "-Default-";
+	public static final String ACCOUNTS_VIEW = "Accounts";
+	public static final String COMP_APP_FIELD = "$TITLE";
+	public static final String COMP_APP_XML = "Notes Contacts Application.xml";
+	public static final String TYPE = "Type";
+	public static final String FD_TRUE = "1";
+	public static final String FD_FALSE = "0";
+	public static final String LS = System.getProperty("line.separator");
+
+	private Vector uidList;
+	private String directory;
+	private String forceDeletes;
+	private boolean acctsCopied = false;
+	private StringBuffer logBuffer;
+
+	/**
+	 * This agent is designed to be run by the Export Accounts to Deploy
+	 * Database view action. This should not be run on its own, as it depends on
+	 * a Notes.ini setting set by the view action. This agent creates the
+	 * deploy.nsf database which contains a list of accounts that are added
+	 * to the user's PNAB at install time. 
+	 */
+	public void NotesMain() {
+
+		logBuffer = new StringBuffer();
+		try {
+			
+			
+			Session session = getSession();
+
+			// Get the Force Deletes setting from notes.ini
+			forceDeletes = session.getEnvironmentString(TMP_DEPLOY_DB_DELETES);
+			if (forceDeletes == null
+					|| (!forceDeletes.equals(FD_FALSE) &amp;&amp; !forceDeletes.equals(FD_TRUE))) {
+				forceDeletes = FD_FALSE;
+				session.setEnvironmentVar(TMP_DEPLOY_DB_DELETES, LOCAL);
+			}
+
+			// Get the directory that contains the deploy.nsf
+			// file from notes.ini
+			// If it does not exist, a new one will be created.
+			directory = session.getEnvironmentString(TMP_DEPLOY_DB_DIR);
+			if (directory == null || !(new File(directory)).canWrite()) {
+				logBuffer.append("Working directory either does not exist or is not writeable." + LS);
+				throw new NotesException(NotesError.NOTES_ERR_SYS_FILE_NOT_FOUND, logBuffer.toString());
+			} else {
+				session.setEnvironmentVar(TMP_DEPLOY_DB_DIR, LOCAL);
+			}
+			
+			AgentContext agentContext = session.getAgentContext();
+
+			DocumentCollection docs = agentContext.getUnprocessedDocuments();
+			if(docs != null &amp;&amp; docs.getCount()==0) {
+				logBuffer.append("No documents selected, or only categories selected." + LS);
+				throw new NotesException(NotesError.NOTES_ERR_DOCUMENTCOLLECTION_MISSING, logBuffer.toString());
+			}
+			Document doc = null;
+			String form = null;
+			String certType = null;
+			String type = null;
+
+			// Ensure each document is an account
+			// and if not delete them from the collection
+			for (int i = 1; i &lt;= docs.getCount(); i++) {
+				doc = docs.getNthDocument(i);
+				form = doc.getItemValueString(FORM);
+					if (form.equals(ACCOUNT))
+			 {
+						acctsCopied = true;
+				} else {
+					docs.deleteDocument(doc);
+					i--;
+				}
+			}
+
+			// The docs document collection contains at least one valid document
+			if (acctsCopied) {
+
+				// Get the existing deploy.nsf database, or create one if
+				// it does not already exist
+				DbDirectory localDbDirectory = session.getDbDirectory(LOCAL);
+				Database deploy = null;
+				boolean newDatabase = false;
+				try {
+					deploy = localDbDirectory.openDatabase(directory
+							+ EXTRAS_DIR + File.separator + DEPLOY);
+				} catch (NotesException ne) {
+					// Deploy database does not exist, create it.
+					newDatabase = true;
+					Database pernames = localDbDirectory.openDatabase(PERNAMES,
+							false);
+					deploy = pernames.createFromTemplate(LOCAL, directory
+							+ EXTRAS_DIR + File.separator + DEPLOY, false);
+					deploy.setTitle(DEPLOY_TITLE);
+					deploy.grantAccess(DEFAULT_ACL, ACL.LEVEL_READER);
+				}
+
+				if (newDatabase) {
+					removeCompApp(deploy);
+				}
+
+				// Remove all accounts from the database
+				deploy.getView(ACCOUNTS_VIEW).getAllEntries().removeAll(
+						true);
+
+				uidList = new Vector();
+				
+				for (int i = 1; i &lt;= docs.getCount(); i++) {
+					if(docs.getNthDocument(i)!= null) {
+						copyToDatabase(deploy, docs.getNthDocument(i));
+					}
+				}
+
+				// Create a profile document that will contain a list
+				// of unids for all the account documents, the time
+				// the database was last updated and the force deletes setting
+				Document profile = deploy.getProfileDocument(
+						DEPLOY_PROFILE_NOTE, null);
+				
+
+				// Add the UNID of each document
+				Item trustLinkIds = profile.replaceItemValue(ACCOUNT_LINK_IDS,
+						null);
+				trustLinkIds.setValues(uidList);
+				// Add today's time/date so we know when this was last modified.
+				Item dateTimeItem = profile.replaceItemValue(DT_ACCOUNT_UPDATE,
+						null);
+				dateTimeItem.setDateTimeValue(session
+						.createDateTime(new Date()));
+				// Add the forcedeletes value
+				profile.replaceItemValue(FORCE_DELETES, (new Integer(forceDeletes)));
+				profile.save(true);
+
+						} else {
+				// No valid accounts were selected in the view
+				logBuffer.append("No valid accounts were selected.  Deploy.nsf not created or modified." + LS);
+			}
+
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			System.err.println(logBuffer.toString());
+		}
+	}
+
+	/**
+	 * Copies the document to the deploy database. Adds the copied documents
+	 * UNID to the list of UNIDS Writes the server copy UNID and Modified Date
+	 * to the copied document.
+	 * 
+	 * @param database
+	 *            The deploy database
+	 * @param doc
+	 *            The document to copy
+	 * @throws NotesException
+	 */
+	private void copyToDatabase(Database database, Document doc)
+			throws NotesException {
+		String unid = doc.getUniversalID();
+		DateTime date = doc.getLastModified();
+		Document newDoc = doc.copyToDatabase(database);
+		uidList.add(newDoc.getUniversalID());
+		newDoc.replaceItemValue(SERVER_COPY_UNID, unid);
+		newDoc.replaceItemValue(SERVER_COPY_MOD_TIME, date);
+		newDoc.save();
+	}
+
+	
+	private void removeCompApp(Database db) {
+		try {
+			NoteCollection nc = db.createNoteCollection(false);
+			nc.setSelectMiscFormatElements(true);
+			nc.buildCollection();
+			String noteId = nc.getFirstNoteID();
+			Document colDoc = null;
+			while (noteId.length() &gt; 0) {
+				colDoc = db.getDocumentByID(noteId);
+				if (colDoc.getItemValueString(COMP_APP_FIELD).equals(
+						COMP_APP_XML)) {
+					colDoc.remove(true);
+					break;
+				}
+				noteId = nc.getNextNoteID(noteId);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+
+}</java></javaproject></code>
+<rundata processeddocs='0' exitcode='0' agentdata='FB29240746200864852576C10074089E'>
+<agentmodified><datetime>20100205T160630,06-05</datetime></agentmodified>
+<agentrun><datetime>20100209T115334,18-05</datetime></agentrun>
+<runlog>Started running agent 'CreateDeployDBAccount' on 02/09/2010 11:53:33 AM
+Running on selected documents: 1 total
+Found 1 document(s) that match search criteria
+Ran Java Agent Class
+Done running agent 'CreateDeployDBAccount' on 02/09/2010 11:53:34 AM
+</runlog></rundata>
 <item name='JavaCompilerSource' sign='true'><text>1.3</text></item>
 <item name='JavaCompilerTarget' sign='true'><text>1.2</text></item>
-<item name='$FILE' summary='true' sign='true' seal='true'><object><file hosttype='msdos'
- compression='none' flags='sign' encoding='none' name='%%source%%.jar' size='2740'>
-<created><datetime dst='true'>20090609T132840,55-04</datetime></created>
-<modified><datetime>20100205T160630,04-05</datetime></modified><filedata>
-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
-AAAAAA==
-</filedata></file></object></item>
-<item name='$FILE' summary='true' sign='true' seal='true'><object><file hosttype='msdos'
- compression='none' flags='sign' encoding='none' name='%%object%%.jar' size='3391'>
-<created><datetime>20100205T160630,04-05</datetime></created>
-<modified><datetime>20100205T160630,04-05</datetime></modified><filedata>
-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
-LmNsYXNzUEsFBgAAAAABAAEAPQAAAOwMAAAAAA==
-</filedata></file></object></item>
-<item name='$TITLE' sign='true'><text>(CreateDeployDBAccount)</text></item>
-<item name='$AssistType' sign='true'><number>65427</number></item>
-<item name='$AssistLastRun' sign='true'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$AssistDocCount' sign='true'><number>0</number></item>
-<item name='$FlagsExt' sign='true'><text/></item>
-<item name='$AssistFlags' sign='true'><text>EHs</text></item>
-<item name='$AssistTrigger' sign='true'><text>4</text></item>
-<item name='$AssistInfo' sign='true'>
-<rawitemdata type='11'>
-AQAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</rawitemdata></item>
-<item name='$AssistQuery' sign='true'>
-<rawitemdata type='f'>
-gQYAAAAA
-</rawitemdata></item>
-<item name='$AssistAction' sign='true'>
-<rawitemdata type='10'>
-gQKT/2YADwAlAB8AAQAAAAAAAABKYXZhQWdlbnQuY2xhc3NDOlxQcm9ncmFtIEZpbGVzXElCTVxM
-b3R1c1xOb3Rlc1xEYXRhJSVzb3VyY2UlJS5qYXIAJSVvYmplY3QlJS5qYXIAAAA=
-</rawitemdata></item>
-<item name='$AssistAction_Ex' sign='true'>
-<rawitemdata type='14'>
-gQI=
-</rawitemdata></item>
-<item name='$Restricted' sign='true'><number>0</number></item>
-<item name='$Flags'><text>fJj3</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$AssistRunInfo' summary='true'>
-<rawitemdata type='3'>
-BgAAAgAACACSCAAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAABAAAAAA
-AAAAistcAMV2JYUAAAAAnvNzAMF2JYW+cGkAwHYlhQAAAAAAAAAAAAAAAAAAAAAAAAAAU3RhcnRl
-ZCBydW5uaW5nIGFnZW50ICdDcmVhdGVEZXBsb3lEQkFjY291bnQnIG9uIDAyLzA5LzIwMTAgMTE6
-NTM6MzMgQU0NClJ1bm5pbmcgb24gc2VsZWN0ZWQgZG9jdW1lbnRzOiAxIHRvdGFsDQpGb3VuZCAx
-IGRvY3VtZW50KHMpIHRoYXQgbWF0Y2ggc2VhcmNoIGNyaXRlcmlhDQpSYW4gSmF2YSBBZ2VudCBD
-bGFzcw0KRG9uZSBydW5uaW5nIGFnZW50ICdDcmVhdGVEZXBsb3lEQkFjY291bnQnIG9uIDAyLzA5
-LzIwMTAgMTE6NTM6MzQgQU0NCgANCmQIIEYHJCn7ngh0AMF2JYWqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqq
-</rawitemdata></item>
-<item name='$AssistVersion'><datetime dst='true'>20130909T095359,33-04</datetime></item>
-<item name='$POID'><datetime dst='true'>20130909T095408,92-04</datetime></item></note>
+<item name='$POID'><datetime dst='true'>20130909T095408,92-04</datetime></item></agent>
 

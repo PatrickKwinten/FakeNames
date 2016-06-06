@@ -1,49 +1,42 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='3ba' unid='C3C0EDA73A97561D852566DB00660444' sequence='5017'>
+<view name='($FileIdentifications)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false'
+ designerversion='6' language='en' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='simple' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='false' extendlastcolumn='true' showhierarchies='false'
+ unreadcolor='black' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
+ totalscolor='gray' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
+<noteinfo noteid='3b6' unid='C3C0EDA73A97561D852566DB00660444' sequence='5017'>
 <created><datetime>19981215T133417,64-05</datetime></created>
-<modified><datetime dst='true'>20150507T110152,61+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,02+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,96-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,60+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,60+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,02+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,02+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144043,30-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>($FileIdentifications)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-SgECABwACABNSU1FVHlwZQUACABNSU1FVHlwZQMAAgAkAAsATUlNRVN1YnR5cGUABQALAE1JTUVT
-dWJ0eXBlAAMAAgAoAA0ARmlsZUV4dGVuc2lvbgAFAA0ARmlsZUV4dGVuc2lvbgADAAIAJAALAERl
-c2NyaXB0aW9uAAUACwBEZXNjcmlwdGlvbgADAAUATABIAAYACAALAA0ACwAJAAQATUlNRVR5cGVN
-SU1FU3VidHlwZUZpbGVFeHRlbnNpb25EZXNjcmlwdGlvbiRDb25mbGljdCRSRUYEAAQAAABaAAUA
-BABUeXBlAQASAEZpbGVJZGVudGlmaWNhdGlvbgoCBQAEAEZvcm0BABIARmlsZUlkZW50aWZpY2F0
-aW9uCgIcAgUACQAkQ29uZmxpY3QAWQEcAgMABwASAAwACUwxUzRTNVM4UzlT
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-JwACAABEAGYAAAAIAABmAAgACwBNSU1FVHlwZU1JTUVTdWJ0eXBl
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQAEAAIACEQAAFZDAQAIAAgAHgAAAHAAAQAKCQAAAAAIAAAAAAICAAAAVkMBAAsACwAmAAAAegAB
-AAAJAAAAAAAAAAAAAgIAAABWQwAADQANACoAAACAAAEAAAkAAAAAAAAAAAACAgAAAFZDAAALAAsA
-JgAAAFAAAQAACQAAAAAAAAAAAAICAAAATUlNRVR5cGVNSU1FVHlwZR4AAgAcAAgATUlNRVR5cGUF
-AAgATUlNRVR5cGUDAE1JTUVTdWJ0eXBlTUlNRVN1YnR5cGUmAAIAJAALAE1JTUVTdWJ0eXBlAAUA
-CwBNSU1FU3VidHlwZQADAEZpbGVFeHRlbnNpb25GaWxlRXh0ZW5zaW9uKgACACgADQBGaWxlRXh0
-ZW5zaW9uAAUADQBGaWxlRXh0ZW5zaW9uAAMARGVzY3JpcHRpb25EZXNjcmlwdGlvbiYAAgAkAAsA
-RGVzY3JpcHRpb24ABQALAERlc2NyaXB0aW9uAAMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0rAQAB
-AAEAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAQDAAAAAAAD//wAAAAAAAAAAAAAAAAAA
-V0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAA
-AAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAAB
-AP///wABALGx0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAQBYQwAMgAIAAAAAAAECAgIB
-AQEBAQAEAAAAAAAAAAAgLy86WUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA
-AAAAAAAAAAAAAAAAAC4sJAA=
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type="FileIdentification" &amp; Form="FileIdentification" &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='MIMEType' width='14'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt' color='navy'/><columnheader title='MIMEType'><font
+ size='9pt'/></columnheader><datetimeformat show='datetime' date='weekdaymonthdayyear'
+ time='hourminutesecondhundredths' zone='never' dateformat='weekdaymonthdayyear'
+ dayformat='twodigitday' monthformat='twodigitmonth' yearformat='fourdigityear'
+ weekdayformat='shortname' dateseparator1=' ' dateseparator2='/' dateseparator3='/'
+ timeseparator=':' preference='usersetting'/><numberformat format='general'
+ varying='true' punctuated='false' parens='false' percent='false' bytes='false'
+ decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column sort='ascending' hidedetailrows='false' itemname='MIMESubtype' width='15.2500'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt'/><columnheader title='MIMESubtype'><font
+ size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='FileExtension' width='16' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='FileExtension'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Description' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='Description'><font size='9pt'/></columnheader></column></view>
 

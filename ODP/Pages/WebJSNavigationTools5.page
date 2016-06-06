@@ -1,47 +1,48 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='5d6' unid='D6F018AB9F2830D7C1256BD50051E880' sequence='5011'>
+<page name='WebJSNavigationTools5' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' treatashtml='true'
+ publicaccess='false' designerversion='6'>
+<noteinfo noteid='5d2' unid='D6F018AB9F2830D7C1256BD50051E880' sequence='5011'>
 <created><datetime dst='true'>20020611T165439,36+02</datetime></created>
-<modified><datetime dst='true'>20150507T110155,52+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114100,72+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095406,54-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110155,51+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110155,51+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114100,72+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114100,72+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140229,27-04</datetime><datetime
 >20100304T144041,85-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<body><richtext>
+<pardef id='1' leftmargin='1in' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='1'><run><font size='9pt' name='monospace'/>/*</run></par>
+<pardef id='2' leftmargin='1.2500in' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='2'><run><font size='9pt' name='monospace'/>Navigation tools which provide Notes 5 compatibility </run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>*/</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>var sMsgNotSupported = 'This action requires a Domino 6 server'</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>function ntEditDoc() {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='2'><run><font size='9pt' name='monospace'/>alert(sMsgNotSupported)</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>}</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>function ntNewDoc() {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='2'><run><font size='9pt' name='monospace'/>alert(sMsgNotSupported)</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>}</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>function ntCancel() {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='2'><run><font size='9pt' name='monospace'/>history.back()</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>}</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>function </run><run><font
+ size='9pt' name='monospace'/>ntGeneralError(sError) {</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/></run></par>
+<par def='2'><run><font size='9pt' name='monospace'/>alert(sError)</run></par>
+<par def='1'><run><font size='9pt' name='monospace'/>}</run></par></richtext></body>
 <item name='$SignatureStatus'><text>1</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>WebJSNavigationTools5</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>C34WQ</text></item>
-<item name='$WebFlags' sign='true'><text>H</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>WebJSNavigationTools5</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQEoAUKAKAFCgAAAGQAgwQBAIX/CgAEAAAJLyqBAoL/UgACAAAAAAAAAAAA
-CAcAAAgHCADQAqAFcAhACxAO4BCwE4AWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAlAQI
-BwoACAcKAAAAZACDBAIAhf89AAQAAAlOYXZpZ2F0aW9uIHRvb2xzIHdoaWNoIHByb3ZpZGUgTm90
-ZXMgNSBjb21wYXRpYmlsaXR5IACBAoMEAQCF/woABAAACSovgQKDBAEAhf8IAAQAAAmBAoMEAQCF
-/0cABAAACXZhciBzTXNnTm90U3VwcG9ydGVkID0gJ1RoaXMgYWN0aW9uIHJlcXVpcmVzIGEgRG9t
-aW5vIDYgc2VydmVyJwCBAoMEAQCF/wgABAAACYECgwQBAIX/HgAEAAAJZnVuY3Rpb24gbnRFZGl0
-RG9jKCkge4ECgwQBAIX/CAAEAAAJgQKDBAIAhf8fAAQAAAlhbGVydChzTXNnTm90U3VwcG9ydGVk
-KQCBAoMEAQCF/wkABAAACX0AgQKDBAEAhf8IAAQAAAmBAoMEAQCF/wgABAAACYECgwQBAIX/HQAE
-AAAJZnVuY3Rpb24gbnROZXdEb2MoKSB7AIECgwQBAIX/CAAEAAAJgQKDBAIAhf8fAAQAAAlhbGVy
-dChzTXNnTm90U3VwcG9ydGVkKQCBAoMEAQCF/wkABAAACX0AgQKDBAEAhf8IAAQAAAmBAoMEAQCF
-/wgABAAACYECgwQBAIX/HQAEAAAJZnVuY3Rpb24gbnRDYW5jZWwoKSB7AIECgwQBAIX/CAAEAAAJ
-gQKDBAIAhf8WAAQAAAloaXN0b3J5LmJhY2soKYECgwQBAIX/CQAEAAAJfQCBAoMEAQCF/wgABAAA
-CYECgwQBAIX/EQAEAAAJZnVuY3Rpb24gAIX/IAAEAAAJbnRHZW5lcmFsRXJyb3Ioc0Vycm9yKSB7
-gQKDBAEAhf8IAAQAAAmBAoMEAgCF/xUABAAACWFsZXJ0KHNFcnJvcikAgQKDBAEAhf8JAAQAAAl9
-AA==
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>WebJSNavigationTools5</text></item></page>
 

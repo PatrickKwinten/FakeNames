@@ -1,58 +1,73 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='80e' unid='9D2C751023BB5542852571C6006FE38B' sequence='70'>
+<view name='People\By Client Version ' alias='PeopClver' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='false'
+ allowdocselection='true' publicaccess='false' designerversion='8.5.3' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='beveled' opencollapsed='false'
+ showresponsehierarchy='true' showmargin='true' shrinkrows='true' extendlastcolumn='true'
+ showhierarchies='false' unreadcolor='black' rowlinecount='2' headerlinecount='1'
+ rowspacing='1' haslinkcolumn='true' bgcolor='white' altrowcolor='#efefef'
+ totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' initialbuildrestricted='false'
+ noemptycategories='true' formatnoteid='85255E01001356A8852554C200753106'>
+<noteinfo noteid='806' unid='9D2C751023BB5542852571C6006FE38B' sequence='70'>
 <created><datetime dst='true'>20060810T162207,47-04</datetime></created>
-<modified><datetime dst='true'>20150507T110158,24+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114103,42+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095407,12-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110158,23+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110158,23+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114103,42+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114103,42+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144049,58-05</datetime><datetime dst='true'>20110912T094720,69-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$FormatNote' summary='true' sign='true'>
-<rawitemdata type='4'>
-AQCoVhMAAV4lhQYxdQDCVCWF
-</rawitemdata></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>People\By Client Version |PeopClver</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' sign='true'><formula compiled='true'>
-YAQCABwABwBDbG50QmxkAAUABwBDbG50QmxkAAMAAgDMAAMAJDE3AAUACABMYXN0TmFtZQAAAAAA
-AAAA8D9rAl4BBQAJAEZpcnN0bmFtZQABAAAACwKvADgALAABAAMAICwgAAUACQBGaXJzdE5hbWUA
-AAAAAAAAAADwP2sCXgEiAq4ADAABAAAArgAEALUDIgIFAA0ATWlkZGxlSW5pdGlhbAABAAAACwKv
-ADoALgABAAEAIAAFAA0ATWlkZGxlSW5pdGlhbAAAAAAAAAAAAPA/awJeASICrgAMAAEAAACuAAQA
-tQMiAgMAAQAkAA0AT3R4dAC2PmIAxnElAFABAAoAKG9mZmljZSkgIAMAAQAiAA0ASHR4dAC3PmIA
-xnElAFABAAgAKGhvbWUpICADAAEAegAPAE9QaG9uZQC4PmIAxnElAAkFABEAT2ZmaWNlUGhvbmVO
-dW1iZXIAAQAAAAoCrwBEAAoAAQAAAK4AOgAFAA0AT3R4dAC2PmIAxnElAOoFABEAT2ZmaWNlUGhv
-bmVOdW1iZXIAIgIBAAEALAAiAq4ABAC1AwMAAQBmAA8ASFBob25lALk+YgDGcSUACQUACwBQaG9u
-ZU51bWJlcgABAAAACgKvADYACgABAAAArgAsAAUADQBIdHh0ALc+YgDGcSUA6gUACwBQaG9uZU51
-bWJlcgAiAq4ABAC1AwMAAQBKABAAUFN0cmluZwC6PmIAxnElAAUADwBPUGhvbmUAuD5iAMZxJQAC
-AQABACwAIgIFAA8ASFBob25lALk+YgDGcSUAACICAwACACgAAwAkMjUABQAQAFBTdHJpbmcAuj5i
-AMZxJQABAAEALACGAgMAAQA6AA0AbmFtZQC2PmIAxnElAFACAAUAAAAAAAAABQAIAEZ1bGxOYW1l
-AAAAAAAAAADwP2sCtAIDAAIAEgEDACQyNgAFAAoATWFpbERvbWFpbgEAAAALAgUACwBNYWlsQWRk
-cmVzcwABAAAACwIcAq8A2AA6AAIABQAAAAAAAAAFAAsATWFpbEFkZHJlc3MAtAIBAAEAQAAiAgUA
-CgBNYWlsRG9tYWluIgKuAJ4ABQALAE1haWxBZGRyZXNzAAEAAAALAq8AhAAiAAIABQAAAAAAAAAF
-AAsATWFpbEFkZHJlc3MAtAKuAGIABQAKAE1haWxEb21haW4BAAAACwKvAEoAMAAFAA0AbmFtZQC2
-PmIAxnElAAABAAEAQAAiAgUACgBNYWlsRG9tYWluIgKuABoABQANAG5hbWUAtj5iAMZxJQAArgAE
-ALUHAwAFADIALQAGAAcAAwADAAMACQAEAENsbnRCbGQkMTckMjUkMjYkQ29uZmxpY3QkUkVGAAQA
-BAAAAD4ABQAEAFR5cGUBAAYAUGVyc29uCgIFAAcAQ2xudEJsZABoARwCBQAHAENsbnRCbGQAAQAA
-AAsCHAIDAAcAHgAXAAlMMVMyUzNTNFM1UzlTMTBTMTFTMTJTAA==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-HgACAABEiGYHAAAHABhmAAcAAwBDbG50QmxkJDE3
-</rawitemdata></item>
-<item name='$Collation1' summary='true'>
-<rawitemdata type='2'>
-HgACAABECGYAAAADAIhmBwMABwAkMTdDbG50Qmxk
-</rawitemdata></item>
-<item name='$FormFormula' summary='true' sign='true'><formula>@If(@TextToNumber(@Version) &lt; 159; "(46Person)";Form)</formula></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_People")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Person" &amp; @IsAvailable(ClntBld) &amp; ClntBld != ""</formula></code><code
+ event='form'><formula>@If(@TextToNumber(@Version) &lt; 159; "(46Person)";Form)</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_People")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle showdropdown='true' bgcolor='none'/><border style='solid'
+ width='0px 0px 3px'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='ClntBld' width='20'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='false' sortnocase='true'
+ showaslinks='false' categorized='true' twisties='true'><font size='9pt'/><columnheader
+ title='Client Version'><font size='9pt'/></columnheader><datetimeformat show='datetime'
+ date='yearmonthday' time='hourminutesecond' zone='never' dateformat='weekdaymonthdayyear'
+ dayformat='twodigitday' monthformat='twodigitmonth' yearformat='fourdigityear'
+ weekdayformat='shortname' dateseparator1=' ' dateseparator2='/' dateseparator3='/'
+ timeseparator=':' preference='usersetting'/><numberformat format='general'
+ varying='true' punctuated='false' parens='false' percent='false' bytes='false'
+ decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/><twistieimage><imageref database='0000000000000000'
+ name='twisty.gif'/></twistieimage></column>
+<column resort='ascending' resort2='ascending' resort2column='0' hidedetailrows='false'
+ itemname='$17' width='19.1250' resizable='true' separatemultiplevalues='true'
+ sortnoaccent='true' sortnocase='true' showaslinks='true' extattrs='$LastNameSorted=4'><font
+ size='9pt'/><columnheader title='Name'><font size='9pt'/></columnheader><datetimeformat
+ show='datetime' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/><columnnamesformat showonline='true' columncontainsname='true'
+ columnname='SametimeInfo' verticalorientation='top'/><code event='value'><formula
+>@Trim(@Subset(LastName;1))+@If(Firstname !="";" , "+@Trim(@Subset(FirstName;1));"")+@If(MiddleInitial !="";" "+@Trim(@Subset(MiddleInitial;1));"")</formula></code></column>
+<column hidedetailrows='false' itemname='$25' width='16' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Telephone'><font size='9pt'/></columnheader><code event='value'><formula
+>REM {variables to translate};
+Otxt := "(office)  ";
+Htxt := "(home)  ";
+REM {END variables to translate};
+OPhone:=@If(OfficePhoneNumber="";"";Otxt + OfficePhoneNumber + ",");
+HPhone:=@If(PhoneNumber="";"";Htxt + PhoneNumber);
+
+PString := OPhone + "," +HPhone;
+@Explode(PString; ",")</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$26' width='30'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='E-Mail'><font size='9pt'/></columnheader><code
+ event='value'><formula>name := @Name([Abbreviate]; @Subset(FullName;1));
+@If(MailDomain != "" &amp; MailAddress != ""; @Name([Abbreviate];MailAddress) + "@" + MailDomain; MailAddress != ""; @Name([Abbreviate];MailAddress);MailDomain != ""; name + "@" + MailDomain;  name)</formula></code></column>
 <item name='$SCRIPTOBJ_12' sign='true'>
 <rawitemdata type='14'>
 AQAAAkxTT0IDABQIZW4AAAQAJAD/AAQAAACkB0wFAAAAAAAAAAIkBQAAAAAoAKAAHAA8AJABvAAA
@@ -128,53 +143,5 @@ BkosBptYAxgAlUocBpsGK6UaIgBKTAaOB7g4CgAaIwAcGiQAOoMAGiUAXqADS8wCLVwGI6YaJgBe
 QARLoAMtgAYjphonAF4UBUtABCykBiOmGigAYgIUAIZLQAQt1AYjlZWNAl6UBzQ9ABopAF7sBUsU
 BSz4Bn3wBH0UBSOmGioASxQFLCwHhISLAiMxGisAXhQFS0AELGAHShQFI6YaLABelAc2w/8aLQAa
 LgAdAgAAABEAGAAAAAAA//8BAAMAAwAAAAYApAAIAAQBDwAKAAAAAA==
-</rawitemdata></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-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
-AAA=
-</rawitemdata></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhSAAAAAAAAAAAAAACAAGAHn/bAABALGx0gABAAAAAAABAAAAAAABALGx0gAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAA=
-</rawitemdata></item></note>
+</rawitemdata></item></view>
 

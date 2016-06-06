@@ -1,122 +1,41 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='8f2' unid='BAD5FC0BDD7FCC548525719A0071F168' sequence='65'>
+<agent name='(wDontChangeItems) ' alias=' wDontChangeItems' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' hide='v3'
+ runaswebuser='true' publicaccess='false' designerversion='8' restrictions='unrestricted'>
+<noteinfo noteid='8e2' unid='BAD5FC0BDD7FCC548525719A0071F168' sequence='65'>
 <created><datetime dst='true'>20060627T164433,68-04</datetime></created>
-<modified><datetime dst='true'>20150507T110159,16+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114104,30+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095407,00-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110159,15+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110159,15+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114104,30+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114104,30+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143917,70-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE' sign='true'><text>(wDontChangeItems) | wDontChangeItems</text></item>
-<item name='$AssistType' sign='true'><number>65413</number></item>
-<item name='$AssistLastRun' sign='true'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$AssistDocCount' sign='true'><number>0</number></item>
-<item name='$FlagsExt' sign='true'><text/></item>
-<item name='$AssistFlags' sign='true'><text>Eu</text></item>
-<item name='$AssistTrigger' sign='true'><text>4</text></item>
-<item name='$AssistInfo' sign='true'>
-<rawitemdata type='11'>
-AQAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</rawitemdata></item>
-<item name='$AssistQuery' sign='true'>
-<rawitemdata type='f'>
-gQYAAAAA
-</rawitemdata></item>
-<item name='$AssistAction' sign='true'>
-<rawitemdata type='10'>
-gQKF/7QCAAAAAKgCAAAnKytMb3R1c1NjcmlwdCBEZXZlbG9wbWVudCBFbnZpcm9ubWVudDoyOjU6
-KE9wdGlvbnMpOjA6NzQKT3B0aW9uIFB1YmxpYwpVc2UgIlBvbGljeU1hbmFnZW1lbnQiCicrK0xv
-dHVzU2NyaXB0IERldmVsb3BtZW50IEVudmlyb25tZW50OjI6NTooRm9yd2FyZCk6MDoxCkRlY2xh
-cmUgU3ViIEluaXRpYWxpemUKCicrK0xvdHVzU2NyaXB0IERldmVsb3BtZW50IEVudmlyb25tZW50
-OjI6NTooRGVjbGFyYXRpb25zKTowOjIKCicrK0xvdHVzU2NyaXB0IERldmVsb3BtZW50IEVudmly
-b25tZW50OjI6MjpJbml0aWFsaXplOjE6MTAKU3ViIEluaXRpYWxpemUKCScgVGhpcyBhZ2VudCBz
-aWducyBwb2xpY3kgZG9jdW1lbnRzIHdoaWNoIGFyZSBzYXZlZCBvbiB0aGUgV2ViCgkKCURpbSBo
-U2Vzc2lvbiBBcyBOZXcgTm90ZXNTZXNzaW9uCglEaW0gaERvY0NvbnRleHQgQXMgTm90ZXNEb2N1
-bWVudAoJCglPbiBFcnJvciBHb3RvIEVSUk9SX0hBTkRMRVIKCQoJU2V0IGhEb2NDb250ZXh0ID0g
-aFNlc3Npb24uRG9jdW1lbnRDb250ZXh0CglDYWxsIERvbnRDaGFuZ2VJdGVtcyhoRG9jQ29udGV4
-dCkKCQoJClJPVVRJTkVfRVhJVDoKCUV4aXQgU3ViCgkKRVJST1JfSEFORExFUjoKCVByaW50ICJ3
-RG9udENoYW5nZUl0ZW1zIGVycm9yICIgKyBFcnJvciArICIgbGluZSAiIEVybAoJRXhpdCBTdWIK
-CQpFbmQgU3ViAA==
-</rawitemdata></item>
-<item name='$Restricted' sign='true'><number>0</number></item>
-<item name='$Flags'><text>fLu3</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$AssistRunInfo' summary='true'>
-<rawitemdata type='3'>
-BgAAAgAACADuCAAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAfwVyAJpxJYUt1G4AlXElhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqq
-</rawitemdata></item>
-<item name='$AssistAction_Ex' sign='true'>
-<rawitemdata type='14'>
-gQKF/64JAAAAAKIJAAABAAACTFNPQgMAFAhlbgAABAARAF0AAAAAAJgEcAIYAAAABACwANADAAAA
-ACwARAIgAEAAAACQAFwAAAAAAAAAAQAAABgAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-GAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAHADcAMAAAAAAAAAAAAAAAAAAAAAcANwAwAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAALwA0AOMAYwBAAAAAAAAAAAAAAAAUAJQAgAA
-AAAAAAAAAAAAAAAAAAAAAAAAvAC8ANAD0AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAFAExvdHVzIFByb2R1Y3QAAABWMC4w
-AAAAAAAAAAAAAAAAAAAAAAAAAABdAAAAAAAAAJgEAABwAgAAAAAAAAAAAAABAAAAAAAAAAAAAAAA
-AAAAAQAAAAAAAAAAAAAABAAAAFczMkklAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAADAHQCAAAAAP//DQAkAEEAUwBTAEkAUwBUAEEAQwBUAEkATwBOAAAA
-dAADAE4ARQBXAAAAiAAGAEQARQBMAEUAVABFAAAAAAAYAQoASQBOAEkAVABJAEEATABJAFoARQAA
-AAAALAEJAFQARQBSAE0ASQBOAEEAVABFAAAAuAAGAE8AQgBKAEUAQwBUAAAAAADgAAAAAAAAAPgA
-EABQAG8AbABpAGMAeQBNAGEAbgBhAGcAZQBtAGUAbgB0AAAAAAAQAhAAUABPAEwASQBDAFkATQBB
-AE4AQQBHAEUATQBFAE4AVAAAAAAA//8IAEgAUwBFAFMAUwBJAE8ATgAAAAAAzAEMAE4ATwBUAEUA
-UwBTAEUAUwBTAEkATwBOAAAAAAD//wYAJQBMAFMAWABCAEUAAAAAAEgBCwBIAEQATwBDAEMATwBO
-AFQARQBYAFQAAABoAQ0ATgBPAFQARQBTAEQATwBDAFUATQBFAE4AVAAAAIgBDQBOAE8AVABFAFMA
-RABBAFQAQQBCAEEAUwBFAAAAqAENAEUAUgBSAE8AUgBfAEgAQQBOAEQATABFAFIAAAD//w8ARABP
-AEMAVQBNAEUATgBUAEMATwBOAFQARQBYAFQAAADwAQ8ARABPAE4AVABDAEgAQQBOAEcARQBJAFQA
-RQBNAFMAAABYAgwAUgBPAFUAVABJAE4ARQBfAEUAWABJAFQAAAAAAP//FwB3AEQAbwBuAHQAQwBo
-AGEAbgBnAGUASQB0AGUAbQBzACAAZQByAHIAbwByACAAAAD//wYAIABsAGkAbgBlACAAAAAAAP//
-CQBOAE8AVABFAFMASQBUAEUATQAAAAUAnAQAAAAAgyQpUhgAAAAAALwAwMM+FAAAAAAAAAAACAAA
-AAAAAABEAAAAAAAAAAIAAAB8ARQDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHwBfAEAAAAA
-AAAAAAAAAAAUAxQDAAAAAAAAAAAKAAAADAAAABgAAAACAAAAJAM0AwAAAAAkAyQDAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAADQDNAMAAAAAAAAAAAAAAAAaAAAAHAH//wAAAAAQAAAAjAEAAPwA
-AAAAAAAAAQAAAEQDRAMAAAAAAAAAAEQDRAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAARQTKe0uaRC/XQDdARGGtwAAAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAAAAAAA
-AgCwAEwBAAAAAAAAAgABAP//AAASABQAAAAAAP//CQIAAAAAsgQAAAAAvACwAP//AAAAAAQAAQAA
-AAkCvAAJArwAGQADAAIAFAMAAOQACQIAALwAEAAEAFACAABMAQAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQUEyntLmkQv10A
-3QERhrcuFBMp7S5pEL9dAN0BEYa3ZAAAAAAAAAAAAAAAAAAAAAIAsAAcAgAAUAIAAAIAAQD//wAA
-EgAUAAAAAAD//wkCAAAAAI0EAAAAAIwBsAD//wAAAAAGAAIAAAAJAowBCQKMAQkCUAIZABAAAADQ
-AwAAbAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAACFBMp7S5pEL9dAN0BEYa3AAAAAAAAAAAAAAAAAAAAAGQAAAAAAAAAAAAA
-AAAAAAACALAA4AIAALwAAAACAAEA//8AABIAFAAAAAAA//8JAgAAAAASBAAAAABQArAA//8AAAAA
-BgADAAAACQJQAgkCUAIGCAYIGQADAAIAAAAAADABCQIEAIwBDQAIADQDAAD0AQAAOwAZAA0ACAAA
-AAAAjAEAAEIAGQARABAFAAAAAKwBCQLABAAAAAAAAAAAAAAAAAAAAAAAAAAAjAEhAAQALEgAAAgA
-QAAAAAAA0AEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAABAAcACQKMAQkC0AMJAtADAAAZABAAAAAAAAAAXAIAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAF
-FBMp7S5pEL9dAN0BEYa3LhQTKe0uaRC/XQDdARGGt2QAAAAAAAAAAAAAAAAAAAACALAAYAQAAIwB
-AAACAAEA//8AABIAFAAAAAAA//8JAgAAAAAoBAAAAADQA7AA//8AAAAACQAFAAAACQLQAwkC0AMJ
-CowBBggAAIEIBABhAAAAAAA6AAAaAwDSlAAdAAAaDQBefAErvAAkphoQAAsAAAgACTofABoSAF4U
-A0t8AS1EAyOmGhMAKXADXhQDIxoWABoXABwaGQAaGgB9FAIWk6x9SAKsFT8CGhsAHBodAB0CAAAA
-EQAUAAAAAAD//wEAAwAEAAAABwBEAAkACgAAAEs=
-</rawitemdata></item>
-<item name='$AssistVersion'><datetime dst='true'>20130909T095358,27-04</datetime></item>
-<item name='$POID'><datetime dst='true'>20130909T095407,00-04</datetime></item></note>
+<designchange><datetime dst='true'>20130909T095358,27-04</datetime></designchange>
+<trigger type='actionsmenu'/>
+<documentset type='runonce'/><code event='options'><lotusscript>Option Public
+Use "PolicyManagement"
+</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+	' This agent signs policy documents which are saved on the Web
+	
+	Dim hSession As New NotesSession
+	Dim hDocContext As NotesDocument
+	
+	On Error Goto ERROR_HANDLER
+	
+	Set hDocContext = hSession.DocumentContext
+	Call DontChangeItems(hDocContext)
+	
+	
+ROUTINE_EXIT:
+	Exit Sub
+	
+ERROR_HANDLER:
+	Print "wDontChangeItems error " + Error + " line " Erl
+	Exit Sub
+	
+End Sub</lotusscript></code>
+<rundata processeddocs='0' exitcode='0'>
+<agentmodified><datetime dst='true'>20060627T164525,11-04</datetime></agentmodified></rundata>
+<item name='$POID'><datetime dst='true'>20130909T095407,00-04</datetime></item></agent>
 

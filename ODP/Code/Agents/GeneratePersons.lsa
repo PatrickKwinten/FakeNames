@@ -1,0 +1,256 @@
+<?xml version='1.0' encoding='utf-8'?>
+<agent name='GeneratePersons' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' hide='v3' publicaccess='false'
+ designerversion='8.5.3'>
+<noteinfo noteid='b82' unid='557BB8453C7DF85CC1257FCA002E5AF9' sequence='3'>
+<created><datetime dst='true'>20160606T102619,45+02</datetime></created>
+<modified><datetime dst='true'>20160606T102639,07+02</datetime></modified>
+<revised><datetime dst='true'>20160606T102639,06+02</datetime></revised>
+<lastaccessed><datetime dst='true'>20160606T102639,07+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20160606T102619,77+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
+<designchange><datetime dst='true'>20160606T102639,08+02</datetime></designchange>
+<trigger type='actionsmenu'/>
+<documentset type='selected'/><code event='options'><lotusscript>%REM
+	Agent GenerateRandomPersons
+	Created Apr 4, 2016 by Patrick Kwinten/quintessens
+	Description: Comments for Agent
+%END REM
+Option Public
+Option Declare
+
+</lotusscript></code><code event='declarations'><lotusscript>	
+	
+
+	Dim db As NotesDatabase
+	Dim uiview As NotesUIView
+  	Dim view As NotesView
+	Dim doc As NotesDocument
+	Dim arr_fname(0 To 25) As String
+	Dim arr_lname(0 To 25) As String
+	Dim arr_organization(0 To 10) As String
+	Dim arr_company(0 To 10) As String
+	Dim arr_department(0 To 10) As String
+	Dim arr_jobtitle(0 To 10) As String	
+	Dim arr_level(0 To 6) As String
+	Dim arr_country(0 To 23) As String
+
+</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+	
+	Dim session As New NotesSession	
+	Dim ws As New NotesUIWorkspace
+	
+	Set db = session.CurrentDatabase
+	Set uiview = ws.CurrentView
+	
+	Set view = uiview.View	
+	view.Autoupdate = False
+	
+	'List of first names
+	arr_fname(0) = "Adam"
+	arr_fname(1) = "Bianca"
+	arr_fname(2) = "Cris"
+	arr_fname(3) = "Diana"
+	arr_fname(4) = "Eric"
+	arr_fname(5) = "Felicia"
+	arr_fname(6) = "Gerard"	
+	arr_fname(7) = "Hannah"
+	arr_fname(8) = "Isaac"
+	arr_fname(9) = "Jessica"
+	arr_fname(10) = "Kane"
+	arr_fname(11) = "Liv"
+	arr_fname(12) = "Mick"
+	arr_fname(13) = "Nancy"
+	arr_fname(14) = "Otto"
+	arr_fname(15) = "Peaches"
+	arr_fname(16) = "Quintijn"
+	arr_fname(17) = "Renate"
+	arr_fname(18) = "Stijn"
+	arr_fname(19) = "Theodor"
+	arr_fname(20) = "Ulla"
+	arr_fname(21) = "Vince"
+	arr_fname(22) = "Wanda"
+	arr_fname(23) = "Xander"
+	arr_fname(24) = "Yvonne"
+	arr_fname(25) = "Zander"																
+
+	'List of last names
+	arr_lname(0) = "Abrahams"
+	arr_lname(1) = "Bach"
+	arr_lname(2) = "Christiansen"
+	arr_lname(3) = "DeVries"
+	arr_lname(4) = "Eno"
+	arr_lname(5) = "Ferry"
+	arr_lname(6) = "Gibb"
+	arr_lname(7) = "Henrikson"
+	arr_lname(8) = "Isaac"
+	arr_lname(9) = "Janssen"
+	arr_lname(10) = "Kwinten"	
+	arr_lname(11) = "Last"
+	arr_lname(12) = "Moroder"
+	arr_lname(13) = "Nuland"
+	arr_lname(14) = "Oreiley"
+	arr_lname(15) = "Porsche"
+	arr_lname(16) = "Quinten"
+	arr_lname(17) = "Rhodes"
+	arr_lname(18) = "Sijbrands"
+	arr_lname(19) = "Tielemans"
+	arr_lname(20) = "Uyl"
+	arr_lname(21) = "VanGogh"
+	arr_lname(22) = "Winter"
+	arr_lname(23) = "Xiang"
+	arr_lname(24) = "Yamamoto"
+	arr_lname(25) = "Zabel"
+	
+	'List of organizations
+	arr_organization(0) = "Acme"
+	arr_organization(2) = "Beta"
+	arr_organization(3) = "City"
+	arr_organization(4) = "Delta"
+	arr_organization(5) = "EO"
+	arr_organization(6) = "Final"
+	arr_organization(7) = "Help"
+	arr_organization(8) = "Independent"
+	arr_organization(9) = "Jazz"
+	arr_organization(10) = "King"
+	
+	'List of companies
+	arr_company(0) = "Allied Forces"
+	arr_company(1) = "BootCamp"
+	arr_company(2) = "Clear Waters Inc"
+	arr_company(3) = "Data Company"
+	arr_company(4) = "Enterprise Ltd"
+	arr_company(5) = "Firm Corp"
+	arr_company(6) = "Geselschaft AB"
+	arr_company(7) = "Hello World Online"
+	arr_company(8) = "Inc Gmhb"
+	arr_company(9) = "Joenaited AB"
+	arr_company(10) = "Koninklijke Schippers"	
+	
+	arr_department(0) = "Administration"
+	arr_department(2) = "BioBank"
+	arr_department(3) = "Cultural and Media Science"
+	arr_department(4) = "Datacenter"
+	arr_department(5) = "Education"
+	arr_department(6) = "Finance"
+	arr_department(7) = "Healthcare"
+	arr_department(8) = "IT"
+	arr_department(9) = "Juniors Support"
+	arr_department(10) = "Knowledge Centre"
+	
+	'List of job titles
+	arr_jobtitle(0) = "Accountant"
+	arr_jobtitle(2) = "Business Developer"
+	arr_jobtitle(3) = "Chef"
+	arr_jobtitle(4) = "Data engineer"
+	arr_jobtitle(5) = "Event planner"
+	arr_jobtitle(6) = "Fundraiser"
+	arr_jobtitle(7) = "Host"
+	arr_jobtitle(8) = "Insurance officer"
+	arr_jobtitle(9) = "Junior Chef"
+	arr_jobtitle(10) = "Kindergarten Teacher"
+	
+	'List of toplevel domains
+	arr_level(0) = "com"
+	arr_level(2) = "net"
+	arr_level(3) = "info"
+	arr_level(4) = "org"
+	arr_level(5) = "gov"
+	arr_level(6) = "edu"
+	
+	'List of countries
+	arr_country(0) = "Argentina"
+	arr_country(1) = "Belgium"
+	arr_country(2) = "Chili"
+	arr_country(3) = "Denmark"
+	arr_country(4) = "Estland"
+	arr_country(5) = "France"
+	arr_country(6) = "Germany"
+	arr_country(7) = "Honduras"
+	arr_country(8) = "Italy"
+	arr_country(9) = "Jamaica"
+	arr_country(10) = "Kenya"
+	arr_country(11) = "Luxemburg"
+	arr_country(12) = "Mozambique"
+	arr_country(13) = "Netherlands"
+	arr_country(14) = "Oman"
+	arr_country(15) = "Portugal"
+	arr_country(16) = "Qatar"
+	arr_country(17) = "Russia"
+	arr_country(18) = "Sweden"
+	arr_country(19) = "Tasmania"
+	arr_country(20) = "United States of America"
+	arr_country(21) = "Venuzuala"
+	arr_country(22) = "Waterworld"
+	arr_country(23) = "Zambia"
+		
+	Print "asking for number of new persons"	
+	Dim persons As Integer
+	persons% = CInt(InputBox$("How many persons do you want to create? (5,10 or 25"))
+	
+	Dim vc As NotesViewEntryCollection
+	Set vc = view.AllEntries
+	Print "removing current person entries"
+	vc.Removeall(True)
+	
+	Dim num As Integer
+	Dim i As Integer
+	
+	Dim firstname As String
+	Dim lastname As String
+	Dim organization As String
+	Dim company As String
+	Dim department As String
+	Dim country As String
+	Dim title As String
+	
+	Dim fullname As String
+	Dim shortname As String	
+	
+	Print "creating new person entries"
+	For i = 1 To persons
+		 
+		firstname = arr_fname( Round(Rnd()* UBound(arr_fname) ,0) )
+		lastname = arr_lname( Round(Rnd()* UBound(arr_lname) ,0) )
+		organization = arr_organization( Round(Rnd()* UBound(arr_organization) ,0) )
+		company = arr_company( Round(Rnd()* UBound(arr_company) ,0) )
+		department = arr_department( Round(Rnd()* UBound(arr_department) ,0) )
+		company = arr_company( Round(Rnd()* UBound(arr_company) ,0) )
+		country = arr_country( Round(Rnd()* UBound(arr_country) ,0) )
+		title = arr_jobtitle( Round(Rnd()* UBound(arr_jobtitle) ,0) )
+		
+		fullname = "CN=" + firstname + " " + lastname + "/O=" + organization
+		shortname = Left$(firstname, 1) + lastname
+		
+		Set doc = db.CreateDocument
+		doc.Form = "Person"
+		doc.Type = "Person"
+		doc.FirstName = firstname
+		doc.LastName = lastname
+		doc.ShortName = shortname
+		Dim namesItem As New NotesItem(doc, "FullName", fullname, NAMES) 
+		namesItem.Isnames = True
+		doc.CompanyName = company
+		doc.JobTitle = title
+		doc.Department = department
+		doc.OfficeCountry = country
+		'set roaming user for view appearance
+		doc.RoamingUser = "0"
+		Call doc.Save( True, True )
+
+	Next
+	
+	view.Autoupdate = True	
+	
+End Sub</lotusscript></code>
+<rundata processeddocs='0' exitcode='0' agentdata='96FFA204D1AB3BD5C1257FCA002E6554'>
+<agentmodified><datetime dst='true'>20160606T102639,07+02</datetime></agentmodified>
+<agentrun><datetime dst='true'>20160606T102702,87+02</datetime></agentrun>
+<runlog>Started running agent 'GeneratePersons' on 2016-06-06 10:26:46
+Running on selected documents: 1 total
+Found 1 document(s) that match search criteria
+Ran LotusScript code
+Done running agent 'GeneratePersons' on 2016-06-06 10:27:02
+</runlog></rundata></agent>
+

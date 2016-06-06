@@ -1,41 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='3b6' unid='C4AFEEFFBCB2D3A185256655007A2B64' sequence='5017'>
+<view name='($LDAPG)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='false' publicaccess='false' designerversion='6'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='false' showmargin='true'
+ shrinkrows='true' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='2' headerlinecount='1' rowspacing='1.25' bgcolor='white' altrowcolor='#efefef'
+ totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
+<noteinfo noteid='3b2' unid='C4AFEEFFBCB2D3A185256655007A2B64' sequence='5017'>
 <created><datetime dst='true'>19980803T181425,00-04</datetime></created>
-<modified><datetime dst='true'>20150507T110152,59+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,00+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,64-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,58+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,58+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,00+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,00+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144044,02-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$VIEWCOLLATION' sign='true'><text>x-UNICODE</text></item>
-<item name='$TITLE' sign='true'><text>($LDAPG)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-rAACACAACQBGaXJzdE5hbWUABQAJAEZpcnN0TmFtZQADAAIAJAALAEFsdExhbmd1YWdlAAUACwBB
-bHRMYW5ndWFnZQADAAUALAAnAAMACQALAAkARmlyc3ROYW1lQWx0TGFuZ3VhZ2UkQ29uZmxpY3QA
-BAAEAAAAKAAFAAkARmlyc3ROYW1lAGgBBQAJACRDb25mbGljdABZARwCAwAHAA4ACAAJTDFTNVM2
-Uw==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-FgABAABEiGYAAAAJAEZpcnN0TmFtZQ==
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQACABQAigwAAFZDAQAJAAkAIgAAAFAAAQAACgABAAAAAAAAAAICAAAAVkMAAAsACwAmAAAAUAAB
-AAAKAAAAAAAAAAAAAgIAAABGaXJzdE5hbWVGaXJzdE5hbWUiAAIAIAAJAEZpcnN0TmFtZQAFAAkA
-Rmlyc3ROYW1lAAMAQWx0TGFuZ3VhZ2VBbHRMYW5ndWFnZSYAAgAkAAsAQWx0TGFuZ3VhZ2UABQAL
-AEFsdExhbmd1YWdlAAMAJgABAAAAAQEACQEAAAoBAQQKAAA/AK0rAgEBAAEAAAAAAAAAAABXQwEA
-AAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAEA7+/vAAEAAAAAAAAA
-AAAAAAAAAQD///8AAQCxsdIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEA
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT @IsAvailable(FirstName) &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='FirstName' width='10'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='FirstName'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='AltLanguage' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='AltLanguage'><font size='9pt'/></columnheader></column>
+<item name='$VIEWCOLLATION' sign='true'><text>x-UNICODE</text></item></view>
 

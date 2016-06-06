@@ -1,18 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="66a" sequence="5008" unid="B022461DD59E8F3985256A7D0077548B">
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="6" imagename="new.gif" language="en" maintenanceversion="1.5" name="btnNew.gif" publicaccess="false" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="666" sequence="5008" unid="B022461DD59E8F3985256A7D0077548B">
 <created><datetime dst="true">20010702T174324,27-04</datetime></created>
-<modified><datetime dst="true">20150507T110156,26+02</datetime></modified>
+<modified><datetime dst="true">20150512T114101,46+02</datetime></modified>
 <revised><datetime dst="true">20130909T095401,68-04</datetime></revised>
-<lastaccessed><datetime dst="true">20150507T110156,25+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150507T110156,25+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20150512T114101,46+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150512T114101,46+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name="$ImagesWide" sign="true"><number>1</number></item>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-<item name="$ImagesColorize" sign="true"><number>0</number></item>
-
-<item name="$ImageNames" sign="true"><text>new.gif</text></item>
-<item name="$Flags"><text>34Ci</text></item>
-<item name="$TITLE" sign="true"><text>btnNew.gif</text></item>
-<item name="$DesignerVersion" sign="true"><text>6</text></item>
-<item name="$LANGUAGE" sign="true"><text>en</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby></imageresource>

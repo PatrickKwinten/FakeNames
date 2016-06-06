@@ -1,145 +1,84 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='296' unid='0090003800BF00ED85255E0F0068B2C0' sequence='5085'>
+<view name='Server\Mail-In Databases and Resources' alias='Mail-In Databases'
+ xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F'
+ showinmenu='true' allowdocselection='true' publicaccess='false' designerversion='6'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='beveled' opencollapsed='true' showresponsehierarchy='true' showmargin='true'
+ shrinkrows='false' extendlastcolumn='true' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' haslinkcolumn='true'
+ bgcolor='white' altrowcolor='#f8f8fc' totalscolor='blue' headerbgcolor='#b1b1d2'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' initialbuildrestricted='false' noemptycategories='true'>
+<noteinfo noteid='292' unid='0090003800BF00ED85255E0F0068B2C0' sequence='5085'>
 <created><datetime dst='true'>19921015T150335,04-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,22+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114056,68+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,90-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,21+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,21+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114056,68+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114056,68+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140243,33-04</datetime><datetime
 >20100304T144052,95-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>Server\Mail-In Databases and Resources|Mail-In Databases</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-1AICAN4AAgAkNgUADABSZXNvdXJjZVR5cGVoAa8AwACqAAUADABSZXNvdXJjZVR5cGUBAAEAMQAK
-Aq8AigAQAAEABQBSb29tcwCuAHoABQAMAFJlc291cmNlVHlwZQEAAQAyAAoCrwBeABQAAQAJAFJl
-c291cmNlcwCuAEoABQAMAFJlc291cmNlVHlwZQEAAQAzAAoCrwAuABoAAQAPAE9ubGluZSBNZWV0
-aW5ncwCuABQAAQAHAFVua25vd24ArgAEALUHrgAWAAEACQBEYXRhYmFzZXMArgAEALUDAwACACgB
-AgAkOAUADABSZXNvdXJjZUZsYWdoAQUADABSZXNvdXJjZVR5cGUBAAEAMQAKAhwCBQAMAFJlc291
-cmNlRmxhZwEAAQAxAAoCHAKvANYAEAAAAAAAAAAAQFFArgDGAAUADABSZXNvdXJjZUZsYWdoAQUA
-DABSZXNvdXJjZVR5cGUBAAEAMgAKAhwCBQAMAFJlc291cmNlRmxhZwEAAQAxAAoCHAKvAHwAEAAA
-AAAAAAAAgEpArgBsAAUADABSZXNvdXJjZUZsYWdoAQUADABSZXNvdXJjZVR5cGUBAAEAMwAKAhwC
-BQAMAFJlc291cmNlRmxhZwEAAQAxAAoCHAKvACIAEAAAAAAAAAAAgFFArgASAAAAAAAAAAAAAECu
-AAQAtQcDAAIALgACACQyAgAFAAAAAAAAAAUACABGdWxsTmFtZQAAAAAAAAAA8D9rArQCAwACACQA
-AgAkNQIABQAAAAAAAAAFAAoATWFpbFNlcnZlcrQCAwAFADQALwAHAAIAAgACAAIACAAJAAQAJDYk
-OCQyJDVNYWlsRmlsZSRDb25mbGljdCRSRUYABAAEAAAAQgAFAAQAVHlwZQEACABEYXRhYmFzZQoC
-BQAEAEZvcm0BAAgARGF0YWJhc2UBAAgAUmVzb3VyY2UfAgoCHAIDAA==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-GAACAABECGYHAAACAABmAAIAAgAkNiQy
-</rawitemdata></item>
-<item name='$Collation1' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYAAAACACQy
-</rawitemdata></item>
-<item name='$Collation2' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYAAAACACQ1
-</rawitemdata></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAFAAoAiUAAAFZDgwQCAAAA7gAAAAgAAQAKCQABAAAAAAAAAAICAAAAVkPAAAIAAABMAQAAEAAB
-AAAJAAAAAAAAAAAAAgIAAABWQwEBAgAEAGoAAADYAAEAAAkAIAAAAAAAAAACAgAAIFZDAAECAAYA
-MgAAAGoAAQAACQAgAAAAAAAAAAICAAAgVkMAAAgACAAAAAAAoAABAAAJACAAAAAAAAAAAgIAACAk
-Nu4AAgDeAAIAJDYFAAwAUmVzb3VyY2VUeXBlaAGvAMAAqgAFAAwAUmVzb3VyY2VUeXBlAQABADEA
-CgKvAIoAEAABAAUAUm9vbXMArgB6AAUADABSZXNvdXJjZVR5cGUBAAEAMgAKAq8AXgAUAAEACQBS
-ZXNvdXJjZXMArgBKAAUADABSZXNvdXJjZVR5cGUBAAEAMwAKAq8ALgAaAAEADwBPbmxpbmUgTWVl
-dGluZ3MArgAUAAEABwBVbmtub3duAK4ABAC1B64AFgABAAkARGF0YWJhc2VzAK4ABAC1AwMABwAO
-AAcACTIxUjI3UgAkOEwBAgAoAQIAJDgFAAwAUmVzb3VyY2VGbGFnaAEFAAwAUmVzb3VyY2VUeXBl
-AQABADEACgIcAgUADABSZXNvdXJjZUZsYWcBAAEAMQAKAhwCrwDWABAAAAAAAAAAAEBRQK4AxgAF
-AAwAUmVzb3VyY2VGbGFnaAEFAAwAUmVzb3VyY2VUeXBlAQABADIACgIcAgUADABSZXNvdXJjZUZs
-YWcBAAEAMQAKAhwCrwB8ABAAAAAAAAAAAIBKQK4AbAAFAAwAUmVzb3VyY2VGbGFnaAEFAAwAUmVz
-b3VyY2VUeXBlAQABADMACgIcAgUADABSZXNvdXJjZUZsYWcBAAEAMQAKAhwCrwAiABAAAAAAAAAA
-AIBRQK4AEgAAAAAAAAAAAABArgAEALUHAwAHACIAGwAJOFMyMVMyMlMyNlMzMlIzNlMzN1M0MFM0
-MVMAJDJOYW1lagAHACQAHQBATmFtZShbQWJicmV2aWF0ZV07IEZ1bGxOYW1lKQAHAAoAAwAJMVMA
-AgAuAAIAJDICAAUAAAAAAAAABQAIAEZ1bGxOYW1lAAAAAAAAAADwP2sCtAIDAAcADAAFAAkwUjhT
-ACQ1U2VydmVyMgACACQAAgAkNQIABQAAAAAAAAAFAAoATWFpbFNlcnZlcrQCAwAHAAwABQAJMFMw
-RQBNYWlsRmlsZURhdGFiYXNlJgABAAAAAQEACQEAAAoBAQQKAAAvAK0rAQABAAEBAAAAAAAAAABX
-QwEAAAkAAAAAAAAAAAAAAAAAAAAAAQAQAAAALAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA
-AAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAA
-AEIAAAAAAAEA////AAEA+Pj8AAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAABAAAAAAABAAAA
-/wAAAAAAAAAAAPb/LAAAAAAAAwATAAoAAAAAAAAAAAAAAAAAAAAAAAAAAAB0d2lzdHkuZ2lmCAAA
-AAAAAQA=
-</rawitemdata></item>
-<item name='$FormFormula' summary='true' sign='true'><formula>@If(@IsNewDoc;Form;@If(@IsAvailable(ResourceFlag) &amp; ResourceFlag="1";"Resource";"Database"))</formula></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Mail_In_Databases")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-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
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAL7/VgEAAAEAAACeQRAAFAAAAAAAAABBZGQgTWFp
-bC1JbiBEYXRhYmFzZSwBAQAkAA0AQ3VycmVudFNlcnZlcgCLAAAAAAAAAAAA8D9rAgMABwAMAAUA
-CTBTMEUAAADoAAUADQBDdXJyZW50U2VydmVyAAEAAAAKAq8AyAAeAAIA6AMAAAAAAAABAAgARGF0
-YWJhc2WxAq4AqgABAAwAW05ldENyZWF0b3Jd5wB0Aq8AkgAeAAIA6AMAAAAAAAABAAgARGF0YWJh
-c2WxAq4AdAACAA0AAAAAAAAAAQAOAE5vdCBBdXRob3JpemVkAQBKAFlvdSBhcmUgbm90IGF1dGhv
-cml6ZWQgdG8gYWRkIE1haWwtSW4gRGF0YWJhc2UgZG9jdW1lbnRzIHRvIHRoaXMgZGF0YWJhc2Uu
-sAOuAAQAtQUDAAcAEgALAAkwUjZSMTBTMTNSAL7/KgAAAAcAAACeIRAAFAAAAAAAAABBZGQgTWFp
-bC1JbiBEYXRhYmFzZb7/RgEAAAEAAACeQRAADAAAAAAAAABBZGQgUmVzb3VyY2UkAQEAJAANAEN1
-cnJlbnRTZXJ2ZXIAiwAAAAAAAAAAAPA/awIDAAcADAAFAAkwUzBFAAAA4AAFAA0AQ3VycmVudFNl
-cnZlcgABAAAACgKvAMAAHgACAOgDAAAAAAAAAQAIAFJlc291cmNlsQKuAKIAAQAMAFtOZXRDcmVh
-dG9yXecAdAKvAIoAHgACAOgDAAAAAAAAAQAIAFJlc291cmNlsQKuAGwAAgANAAAAAAAAAAEADgBO
-b3QgQXV0aG9yaXplZAEAQgBZb3UgYXJlIG5vdCBhdXRob3JpemVkIHRvIGFkZCBSZXNvdXJjZSBk
-b2N1bWVudHMgdG8gdGhpcyBkYXRhYmFzZS6wA64ABAC1BQMABwASAAsACTBSNlIxMFMxM1IAvv8i
-AAAABwAAAJ4hEAAMAAAAAAAAAEFkZCBSZXNvdXJjZb7/VAAAAAEAAACeQBAAHgAAAAAAAABFZGl0
-IE1haWwtSW4gRGF0YWJhc2UvUmVzb3VyY2UgAAAAEgACAOgHAAAAAAAA7QEDAAcADAAFAAkwUzBF
-AL7/VgAAAAEAAACeARAAIAAAAAAAAABEZWxldGUgTWFpbC1JbiBEYXRhYmFzZS9SZXNvdXJjZSAA
-AAASAAIATB0AAAAAAACxAQMABwAMAAUACTBTMEUAvv9CAAAAAQAAAJ4hEAALAAAAHQAAAEVtcHR5
-IFRyYXNoSyAAAAASAAIA/QcAAAAAAADtAQMABwAMAAUACTBTMEUAvv9iAAAAAQAAAJ4hEAAGAAAA
-IQAAAFNlYXJjaEYABwAeABgAV2ViIG9ubHkgLSB1c2VkIGluIFZpZXdzBwAKAAMACTFTAAAAEgAC
-AJAXAAAAAAAA7QEDAAcACgADAAkwUgC+/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemVL
-CQBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAoAAgq+/ygAAAAFAAAAnQEA
-AA0AAAAAAAAAU2VuZCBEb2N1bWVudN0LAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJk
-DAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4NAD18vv8uAAAABQAA
-AJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXJLDgA+fA==
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Database" &amp; Form = "Database" : "Resource"</formula></code><code
+ event='form'><formula>@If(@IsNewDoc;Form;@If(@IsAvailable(ResourceFlag) &amp; ResourceFlag="1";"Resource";"Database"))</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Mail_In_Databases")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Add Mail-In Database' showinmenu='false' hide='web'><imageref
+ name='btnNewDoc.gif'/><code event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+@If(CurrentServer="";
+@PostedCommand([Compose]; "Database");
+@IsMember("[NetCreator]";@UserRoles);@PostedCommand([Compose];"Database");@Prompt([Ok];"Not Authorized";"You are not authorized to add Mail-In Database documents to this database."))</formula></code></action>
+<action title='Add Mail-In Database' showinmenu='false' hide='notes'><imageref
+ name='btnNewDoc.gif'/><code event='onClick' for='web'><javascript>ntNewDoc('Database', '[NetCreator]')</javascript></code></action>
+<action title='Add Resource' showinmenu='false' hide='web'><imageref name='btnNewDoc.gif'/><code
+ event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+@If(CurrentServer="";
+@PostedCommand([Compose]; "Resource");
+@IsMember("[NetCreator]";@UserRoles);@PostedCommand([Compose];"Resource");@Prompt([Ok];"Not Authorized";"You are not authorized to add Resource documents to this database."))</formula></code></action>
+<action title='Add Resource' showinmenu='false' hide='notes'><imageref name='btnNewDoc.gif'/><code
+ event='onClick' for='web'><javascript>ntNewDoc('Resource', '[NetCreator]')</javascript></code></action>
+<action title='Edit Mail-In Database/Resource' showinmenu='false' hide='previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Delete Mail-In Database/Resource' showinmenu='false'><imageref
+ name='btnDelete.gif'/><code event='click'><formula>@PostedCommand([MoveToTrash])</formula></code></action>
+<action title='Empty Trash' showinmenu='false' hide='notes'><imageref name='btnEmpty.gif'/><code
+ event='click'><formula>@Command([EmptyTrash])</formula></code></action>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Document' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$6' width='1' resizable='false'
+ separatemultiplevalues='true' sortnoaccent='true' sortnocase='true' showaslinks='false'
+ categorized='true' twisties='true'><font size='9pt' color='navy'/><columnheader
+><font size='9pt'/></columnheader><code event='value'><formula>@If(@IsAvailable(ResourceType);@If(ResourceType="1";"Rooms";ResourceType="2";"Resources";
+ResourceType="3";"Online Meetings";
+"Unknown");"Databases")</formula></code><twistieimage><imageref database='0000000000000000'
+ name='twisty.gif'/></twistieimage></column>
+<column hidedetailrows='false' itemname='$8' width='2' resizable='false' separatemultiplevalues='false'
+ sortnoaccent='true' sortnocase='true' showaslinks='false' showasicons='true'><font
+ size='9pt'/><columnheader><font size='9pt'/></columnheader><code event='value'><formula
+>@If(@IsAvailable(ResourceFlag)&amp;ResourceType ="1"&amp;ResourceFlag="1";69;@IsAvailable(ResourceFlag) &amp; ResourceType="2"&amp; ResourceFlag="1";53;
+@IsAvailable(ResourceFlag) &amp; ResourceType="3" &amp; ResourceFlag="1";70;2)</formula></code></column>
+<column sort='ascending' resort='ascending' hidedetailrows='false' listseparator='comma'
+ itemname='$2' width='27' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='true' sortnocase='true' showaslinks='true'><font size='9pt'/><columnheader
+ title='Name'><font size='9pt'/></columnheader><code event='value'><formula
+>REM {@Name([Abbreviate]; FullName)};
+@Name([Abbreviate];@Subset(FullName; 1))</formula></code></column>
+<column resort='ascending' hidedetailrows='false' listseparator='comma' itemname='$5'
+ width='13.2500' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='true'><font size='9pt'/><columnheader title='Server'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate];MailServer)</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='MailFile' width='20'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Database'><font
+ size='9pt'/></columnheader></column></view>
 

@@ -1,45 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='956' unid='E8923AD4EBEB088F85256EA000442029' sequence='115'>
+<view name='($vwServersByMajVer)' alias='$vwServersByMajVer' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
+ publicaccess='false' designerversion='8' language='en' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='simple' opencollapsed='false'
+ showresponsehierarchy='true' showmargin='true' shrinkrows='false' extendlastcolumn='false'
+ showhierarchies='false' unreadcolor='black' rowlinecount='1' headerlinecount='1'
+ rowspacing='1' bgcolor='white' totalscolor='blue' headerbgcolor='#b1b1d2'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' indexrefresh='automatic' initialbuildrestricted='false'
+ noemptycategories='false'>
+<noteinfo noteid='946' unid='E8923AD4EBEB088F85256EA000442029' sequence='115'>
 <created><datetime dst='true'>20040526T082406,81-04</datetime></created>
-<modified><datetime dst='true'>20150507T110159,50+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114104,64+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095405,82-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202622,70+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110159,49+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,95+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114104,64+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144046,94-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TYPE'><text>$SUBVIEW</text></item>
-<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item>
-<item name='$Author' sign='true'><text>Greg Pflaum</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($vwServersByMajVer)|$vwServersByMajVer</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-1gAFAD4AOgAFAAYACgAPAAkABABNYWpWZXJTZXJ2ZXJOYW1lREIyQWNjZXNzU2VydmVyJENvbmZs
-aWN0JFJFRgQABAAAAJIABQAEAFR5cGUBAAYAU2VydmVyAQAKAFg0MDBTZXJ2ZXIfAgEACABQT1Nl
-cnZlch8CCgIEAAUABABGb3JtAQAGAFNlcnZlcgEACgBYNDAwU2VydmVyHwIBABoAY2M6TWFpbCBQ
-b3N0IE9mZmljZSBTZXJ2ZXIfAgoCHAIFAAkAJENvbmZsaWN0AFkBHAIDAA==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-JAACAABEgGYAAAAGAABmAAYACgBNYWpWZXJTZXJ2ZXJOYW1l
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQADAA8ACAQAAFZDAQAGAAAAAAAAABYAAQAACgAAAAAAAAAAAAICAAAAVkMBAAoABgAAAAAAQgAB
-AAAKAAAAAAgAAAAAAAIAAABWQwAADwAPAAAAAABQAAEAAAkAAAAAAAAAAAACAgAAAE1halZlclNl
-cnZlck5hbWVTZXJ2ZXJEQjJBY2Nlc3NTZXJ2ZXJEQjJBY2Nlc3NTZXJ2ZXImAAEAAAABAQAJAQAA
-CgEBBAoAAAAArSsBAAEAAQAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAP//
-AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAQDAAAAAAAD//wAAAAAAAAAAAAAA
-AAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA
-////AAUAAAAAAAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAABAAAAAAABAAAA/wABAAAAAAAA
-AAgAAAAAAAEAWEMACIACAAAAAAABAgICAQEBAQEABAAAAAAAAAAAIC8vOllDAAAIAAAAAQAAAAEA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAuLCQA
-</rawitemdata></item>
-<item name='$FormFormula' summary='true' sign='true'><formula>REM { Used by webadmin.ntf to override the default form with another form };
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT (Type = "Server" : "X400Server" : "POServer") &amp; Form = "Server" : "X400Server" : "cc:Mail Post Office Server" &amp; @IsUnavailable($Conflict)</formula></code><code
+ event='form'><formula>REM { Used by webadmin.ntf to override the default form with another form };
 REM { The alternative formname is passed in via a URL command like &amp;form=formname };
 
 @If(	@TextToNumber(@Version) &gt; 184;
@@ -47,8 +28,24 @@ REM { The alternative formname is passed in via a URL command like &amp;form=for
 	"");
 
 
-""</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item></note>
+""</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='MajVer' width='2.7500'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader><font size='9pt' style='bold'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='ServerName' width='8.2500'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='Server'><font size='9pt'/></columnheader><datetimeformat
+ show='date' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column hidedetailrows='false' itemname='DB2AccessServer' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='DB2AccessServer'><font size='9pt'/></columnheader></column>
+<item name='$TYPE'><text>$SUBVIEW</text></item>
+<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item>
+<item name='$Author' sign='true'><text>Greg Pflaum</text></item></view>
 

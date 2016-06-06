@@ -1,33 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='65a' unid='BE1AD96356FBC04985256B99003A1FA8' sequence='5011'>
+<form name='$$ReturnGeneralError' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' nocompose='true' noquery='true'
+ publicaccess='false' designerversion='6' language='en'>
+<noteinfo noteid='656' unid='BE1AD96356FBC04985256B99003A1FA8' sequence='5011'>
 <created><datetime dst='true'>20020412T063451,92-04</datetime></created>
-<modified><datetime dst='true'>20150507T110156,18+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114101,38+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095406,26-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110156,17+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110156,17+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114101,38+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114101,38+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140109,03-04</datetime><datetime
 >20100304T143921,52-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$SignatureStatus'><text>1</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-+f8gAAAAAAANAAQAHgAAAAAAAAAAAAAAAAAAAAAAAADc/zAA+f8eACBOAAAAAAAAAABudEdlbmVy
-YWxFcnJvcih3aW5kb3cuc0Vycm9yKQBf/xAAAgAPAAcAAAAAAAAAX/8QAAIADQAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>$$ReturnGeneralError</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$HTMLHeadTag' sign='true'><formula>_tDb	:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='htmlbody'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></code><code
+ event='htmlhead'><formula>_tDb	:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
 _is6	:= @TextToNumber(@Version) &gt; 171;
 
 "&lt;meta http-equiv='expires' content='0'&gt;
@@ -39,46 +25,23 @@ _is6	:= @TextToNumber(@Version) &gt; 171;
 	"&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
 
 	"&lt;script src='/" + _tDb + "/WebJSNavigationTools5?OpenPage'&gt;&lt;/script&gt;"
-)</formula></item>
-<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></item>
-<item name='$Flags'><text>CD</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//AAA4AP////9U
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAAAYAAgAKgAzADkANAAwADEAQQBDAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAABCiulWBAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='MessageString' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><text>MessageString</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$$ReturnGeneralError</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQEoAUMAKAFDAAAAAAAu/8yAAEA+AYBAAAAhH0kAAAAFgC/AFgBAAAAAAAA
-AKBhQA4CAwAHAAwABQAJMFMwRQCDBAEAzP8IAAAAAACF/xAAAQAACjxzY3JpcHQ+gQKC/1IAAgAA
-AAAAAAAAAAgHAAAIBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB
-AAAAAJQECAcMAAgHDAAAAAAAgwQCALwGAQACAIX/FgABAAAKdmFyIHNFcnJvciA9ICfdBgAArf+p
-/0AAAQAYAAQANAA0AAAAJgAFAA0ATWVzc2FnZVN0cmluZwABAAEAJwABAAIAXCeEAwMABwAMAAUA
-CTRTNlMAhf8IAAEAAAqqAt4GAACuAIX/CgABAAAKJzuBAoMEAQCF/xEAAQAACjwvc2NyaXB0PgCB
-AoMEAQCF/wwAAQAACjxCUj7dBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/TACIAQAFADAC
-AAAAAAAAAgEAAAoaAAAAAAAAAA0AAAAAABoAAAAYAAUADQBNZXNzYWdlU3RyaW5nAAMATWVzc2Fn
-ZVN0cmluZwB6/ygADQAAAAAAAAAAAAAAAAAAAAAAAAAAAE1lc3NhZ2VTdHJpbmcA3gYAAIr/hf8M
-AAEAAAo8SFI+zf8IAAAAAACBAoL/UgADAAQAAAAAAAAAoAUAAKAFCADQAqAFcAhACxAO4BCwE4AW
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAlASgBQoAoAUKAAAAZACDBAMAhf8IAAEAAAqB
-AoMEAQDdBgAAhf+F/wgAAQQECtIIAQAAAP8A3gYAAIX/
-</rawitemdata></item></note>
+)</formula></code><code event='onLoad' for='web'><javascript>ntGeneralError(window.sError)</javascript></code>
+<body><richtext>
+<pardef id='1' leftmargin='1in'><code event='hidewhen' enabled='false'><formula
+>@TextToNumber(@Version)&lt;141</formula></code></pardef>
+<par def='1'><run html='true'>&lt;script&gt;</run></par>
+<pardef id='2' leftmargin='1.2500in'><code event='hidewhen' enabled='false'><formula
+>@TextToNumber(@Version)&lt;141</formula></code></pardef>
+<par def='2'><run html='true'>var sError = '</run><run html='true'><computedtext
+><code event='value'><formula>@ReplaceSubstring(MessageString; "'"; "\\'")</formula></code></computedtext></run><run
+ html='true'>';</run></par>
+<par def='1'><run html='true'>&lt;/script&gt;</run></par>
+<par def='1'><run html='true'>&lt;BR&gt;</run><run html='true'><field type='text'
+ kind='computed' name='MessageString' htmlid='MessageString'><code event='defaultvalue'><formula
+>MessageString</formula></code></field></run><run html='true'>&lt;HR&gt;</run></par>
+<pardef id='3' align='none' leftmargin='1in' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='3'/>
+<par def='1'><run><font style='underline' color='blue'/></run></par></richtext></body>
+<item name='$SignatureStatus'><text>1</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>$$ReturnGeneralError</text></item></form>
 

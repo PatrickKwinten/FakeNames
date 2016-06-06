@@ -1,38 +1,30 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='31a' unid='50458575F2AA5F918525690D004F0AB5' sequence='5008'>
+<view name='($DircatConfig)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='false'
+ publicaccess='false' designerversion='6' language='en' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='simple' opencollapsed='false'
+ showresponsehierarchy='true' showmargin='true' shrinkrows='false' extendlastcolumn='false'
+ showhierarchies='false' unreadcolor='black' rowlinecount='1' headerlinecount='1'
+ rowspacing='1' bgcolor='white' totalscolor='gray' headerbgcolor='#b1b1d2'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='316' unid='50458575F2AA5F918525690D004F0AB5' sequence='5008'>
 <created><datetime dst='true'>20000629T102320,85-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,81+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,22+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,34-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,80+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,80+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,22+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,22+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144042,63-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>($DircatConfig)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-oAACACQACwBEaXJlY3RvcmllcwAFAAsARGlyZWN0b3JpZXMAAwAFACYAIgADAAsACQAEAERpcmVj
-dG9yaWVzJENvbmZsaWN0JFJFRgQABAAAAEAABQAEAEZvcm0BABkAQWdncmVnYXRpb24gQ29uZmln
-dXJhdGlvbgAKAgUACQAkQ29uZmxpY3QAWQEcAgMABwAQAAoACUwxUzNTNFM1Uw==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-GAABAABEAGYAAAALAERpcmVjdG9yaWVz
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQABAAUACAQAAFZDAQALABYAJgAAAMABAQAACgAAAAAAAAAAAAICAAAgRGlyZWN0b3JpZXNBZ2dy
-ZWdhdGVkIERpcmVjdG9yaWVzJgACACQACwBEaXJlY3RvcmllcwAFAAsARGlyZWN0b3JpZXMAAwAm
-AAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAA
-AAABAEAAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAA
-AAEA////AAEAsbHSAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAABAFhDAAyAAgAAAAAAAQIC
-AgEBAQEBAAQAAAAAAAAAACAvLzo=
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Form= "Aggregation Configuration" &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='Directories'
+ width='56' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false'><columnheader title='Aggregated Directories'><font
+ size='9pt'/></columnheader><datetimeformat show='datetime' date='weekdaymonthdayyear'
+ time='hourminutesecondhundredths' zone='never' dateformat='weekdaymonthdayyear'
+ dayformat='twodigitday' monthformat='twodigitmonth' yearformat='fourdigityear'
+ weekdayformat='shortname' dateseparator1=' ' dateseparator2='/' dateseparator3='/'
+ timeseparator=':' preference='usersetting'/></column></view>
 

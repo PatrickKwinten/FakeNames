@@ -1,113 +1,108 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='34a' unid='82CDF2EB5E6B26A5852566550079AFDC' sequence='5029'>
+<view name='($LDAPCN)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='false' publicaccess='false' designerversion='7'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='false' showmargin='true'
+ shrinkrows='true' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='2' headerlinecount='1' rowspacing='1.25' bgcolor='white' altrowcolor='#efefef'
+ totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
+<noteinfo noteid='346' unid='82CDF2EB5E6B26A5852566550079AFDC' sequence='5029'>
 <created><datetime dst='true'>19980803T180908,76-04</datetime></created>
-<modified><datetime dst='true'>20150507T110152,05+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,46+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,22-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,04+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,04+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,46+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,46+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144043,88-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT (
+    @Length(
+        @Trim(
+                   @If( @TextToNumber(@Version)&gt;=187;
+                            @If( Type = "Person":"AltLanguagePersonalInfo"; @Unique(@Name([LDAPCN];FullName):CommonName:@Name([LDAPCN];AltFullName));
+                                     Type = "Group";@Name([LDAPCN];ListName);
+                                     Type="Server";@Name([LDAPCN];ServerName);
+                                     @Unique(@Name([LDAPCN];FullName):CommonName)
+                             );
+                            @If( Type = "Person":"AltLanguagePersonalInfo";
+                                     @Unique(@Name([CN];FullName):CommonName:@Name([CN];AltFullName));
+                                     Type="Group";@Name([CN];ListName);
+                                     Type="Server";@Name([CN];ServerName);
+                                     @Unique(@Name([CN];FullName):CommonName)
+                             )
+                     )
+        )
+    ) &gt;0
+)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='$18' width='10'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='CommonName'><font size='9pt'/></columnheader><datetimeformat
+ show='datetime' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/><code event='value'><formula>@Trim(
+@If(@TextToNumber(@Version)&gt;=187;
+@If(Type = "Person":"AltLanguagePersonalInfo";
+
+       @Unique(@Name([LDAPCN];FullName):CommonName:@Name([LDAPCN];AltFullName));
+
+      Type="Group";@Name([LDAPCN];ListName);
+
+      Type="Server";@Name([LDAPCN];ServerName);
+
+      @Unique(@Name([LDAPCN];FullName):CommonName));
+
+@If(Type = "Person":"AltLanguagePersonalInfo";
+
+       @Unique(@Name([CN];FullName):CommonName:@Name([CN];AltFullName));
+
+      Type="Group";@Name([CN];ListName);
+
+      Type="Server";@Name([CN];ServerName);
+
+      @Unique(@Name([CN];FullName):CommonName))
+))</formula></code></column>
+<column hidedetailrows='false' itemname='%DN' width='19' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='%DN'><font size='9pt'/></columnheader><code event='value'><formula
+>@Trim(
+@If(Type="Group";@Subset(ListName;1);
+
+      Type="Server";ServerName;
+
+      @Subset(FullName;1)))</formula></code></column>
+<column hidedetailrows='false' itemname='AltFullName' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='AltFullName'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='AltLanguage' width='9.3750' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='AltLanguage'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='%LDAPType' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Type'><font size='9pt'/></columnheader><code event='value'><formula
+>@If(Type ="Person":"AltLanguagePersonalInfo";"";Type)</formula></code></column>
+<column hidedetailrows='false' itemname='HTTPPassword' width='12.2500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='HTTPPassword'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='$ObjectClass' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='$ObjectClass'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='AltFullNameLanguage' width='12' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='AltFullNameLanguage'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='$AdminpOldWebName' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='$AdminpOldWebName'><font size='9pt'/></columnheader></column>
 <item name='$HTMLDocumentStyles' summary='true' sign='true'>
 <rawitemdata type='1'>
 0ggBAAAA/wDSCAEA/wAAANIIAQCAAIAA
 </rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
 <item name='$VIEWCOLLATION' sign='true'><text>x-UNICODE</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
 <item name='TmpViewDesignCollation' sign='true'><text>x-UNICODE@UCA</text></item>
-<item name='$TITLE' sign='true'><text>($LDAPCN)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' sign='true'><formula compiled='true'>
-zgcCAHICAwAkMTgAvwBYAQAAAAAAAABgZ0ANAq8AUgIoAQUABABUeXBlAQAGAFBlcnNvbgEAFwBB
-bHRMYW5ndWFnZVBlcnNvbmFsSW5mbwAfAgoCrwDuAE4AAgA6AQAAAAAAAAUACABGdWxsTmFtZbQC
-BQAKAENvbW1vbk5hbWUfAgIAOgEAAAAAAAAFAAsAQWx0RnVsbE5hbWUAtAIfAqsBrgCgAAUABABU
-eXBlAQAFAEdyb3VwAAoCrwCIAB4AAgA6AQAAAAAAAAUACABMaXN0TmFtZbQCrgBqAAUABABUeXBl
-AQAGAFNlcnZlcgoCrwBSACAAAgA6AQAAAAAAAAUACgBTZXJ2ZXJOYW1ltAKuADIAAgA6AQAAAAAA
-AAUACABGdWxsTmFtZbQCBQAKAENvbW1vbk5hbWUfAqsBrgAEALUHrgAqAQUABABUeXBlAQAGAFBl
-cnNvbgEAFwBBbHRMYW5ndWFnZVBlcnNvbmFsSW5mbwAfAgoCrwDuAE4AAgAGAAAAAAAAAAUACABG
-dWxsTmFtZbQCBQAKAENvbW1vbk5hbWUfAgIABgAAAAAAAAAFAAsAQWx0RnVsbE5hbWUAtAIfAqsB
-rgCgAAUABABUeXBlAQAFAEdyb3VwAAoCrwCIAB4AAgAGAAAAAAAAAAUACABMaXN0TmFtZbQCrgBq
-AAUABABUeXBlAQAGAFNlcnZlcgoCrwBSACAAAgAGAAAAAAAAAAUACgBTZXJ2ZXJOYW1ltAKuADIA
-AgAGAAAAAAAAAAUACABGdWxsTmFtZbQCBQAKAENvbW1vbk5hbWUfAqsBrgAEALUHrgAEALUDXgED
-AAIAjgADACVETgAFAAQAVHlwZQEABQBHcm91cAAKAq8AagAeAAUACABMaXN0TmFtZQAAAAAAAAAA
-8D9rAq4ATAAFAAQAVHlwZQEABgBTZXJ2ZXIKAq8ANAAUAAUACgBTZXJ2ZXJOYW1lrgAgAAUACABG
-dWxsTmFtZQAAAAAAAAAA8D9rAq4ABAC1BV4BAwACACQACwBBbHRGdWxsTmFtZQAFAAsAQWx0RnVs
-bE5hbWUAAwACACQACwBBbHRMYW5ndWFnZQAFAAsAQWx0TGFuZ3VhZ2UAAwACAGAACQAlTERBUFR5
-cGUABQAEAFR5cGUBAAYAUGVyc29uAQAXAEFsdExhbmd1YWdlUGVyc29uYWxJbmZvAB8CCgKvABoA
-CgABAAAArgAQAAUABABUeXBlrgAEALUDAwACACQADABIVFRQUGFzc3dvcmQFAAwASFRUUFBhc3N3
-b3JkAwACACQADAAkT2JqZWN0Q2xhc3MFAAwAJE9iamVjdENsYXNzAwACADAAEQAkQWRtaW5wT2xk
-V2ViTmFtZQAFABEAJEFkbWlucE9sZFdlYk5hbWUAAwAFAIYAggAKAAMAAwALAAsACQAMAAwAEwAR
-AAkAJDE4JUROQWx0RnVsbE5hbWVBbHRMYW5ndWFnZSVMREFQVHlwZUhUVFBQYXNzd29yZCRPYmpl
-Y3RDbGFzc0FsdEZ1bGxOYW1lTGFuZ3VhZ2UkQWRtaW5wT2xkV2ViTmFtZSRDb25mbGljdAQABAAA
-AHwCvwBYAQAAAAAAAABgZ0ANAq8AUgIoAQUABABUeXBlAQAGAFBlcnNvbgEAFwBBbHRMYW5ndWFn
-ZVBlcnNvbmFsSW5mbwAfAgoCrwDuAE4AAgA6AQAAAAAAAAUACABGdWxsTmFtZbQCBQAKAENvbW1v
-bk5hbWUfAgIAOgEAAAAAAAAFAAsAQWx0RnVsbE5hbWUAtAIfAqsBrgCgAAUABABUeXBlAQAFAEdy
-b3VwAAoCrwCIAB4AAgA6AQAAAAAAAAUACABMaXN0TmFtZbQCrgBqAAUABABUeXBlAQAGAFNlcnZl
-cgoCrwBSACAAAgA6AQAAAAAAAAUACgBTZXJ2ZXJOYW1ltAKuADIAAgA6AQAAAAAAAAUACABGdWxs
-TmFtZbQCBQAKAENvbW1vbk5hbWUfAqsBrgAEALUHrgAqAQUABABUeXBlAQAGAFBlcnNvbgEAFwBB
-bHRMYW5ndWFnZVBlcnNvbmFsSW5mbwAfAgoCrwDuAE4AAgAGAAAAAAAAAAUACABGdWxsTmFtZbQC
-BQAKAENvbW1vbk5hbWUfAgIABgAAAAAAAAAFAAsAQWx0RnVsbE5hbWUAtAIfAqsBrgCgAAUABABU
-eXBlAQAFAEdyb3VwAAoCrwCIAB4AAgAGAAAAAAAAAAUACABMaXN0TmFtZbQCrgBqAAUABABUeXBl
-AQAGAFNlcnZlcgoCrwBSACAAAgAGAAAAAAAAAAUACgBTZXJ2ZXJOYW1ltAKuADIAAgAGAAAAAAAA
-AAUACABGdWxsTmFtZbQCBQAKAENvbW1vbk5hbWUfAqsBrgAEALUHrgAEALUDXgGmAQAAAAAAAAAA
-AAAPAgQAAwAHAKYAoAAJTDFTMlJTNEU0UlM4RTZSUzE5RThTMTVSUzI4RTE3UzE4UzE5UzIzUzQy
-UlMzN0U0M1M0NFM1M1JTMzdFNjRSUzM3RTc1UlMyOUU3N1JTMjhFNzlTODBTODFTODVSUzM3RTEw
-NFJTMzdFMTE1UlMzN0UxMjZSUzM3RTEzN1JTMjlFMTM4UlMyMUUxMzlSUzhFMTQwUlM0RTE0MVMx
-NDNS
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-EAABAABEiGYAAAADACQxOA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$DesignerVersion' sign='true'><text>7</text></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAJABQAigwAAFZDAQADAAoA0AIAAFAAAQAACgABAAAIAAAAAAICAAAAVkMAAAMAAwCoAAAAmAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwAACwALACYAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAALAAsA
-JgAAAEsAAQAACgAAAAAAAAAAAAICAAAAVkMAAAkABABsAAAAUAABAAAKAAAAAAAAAAAAAgIAAABW
-QwAADAAMACYAAABiAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAMAAwAJgAAAFAAAQAACgAAAAAAAAAA
-AAICAAAAVkMAABMAEwAAAAAAYAABAAAKAAAAAAAAAAAAAgIAAABWQwAAEQARADIAAABQAAEAAAoA
-AAAAAAAAAAACAgAAACQxOENvbW1vbk5hbWXQAgIAcgIDACQxOAC/AFgBAAAAAAAAAGBnQA0CrwBS
-AigBBQAEAFR5cGUBAAYAUGVyc29uAQAXAEFsdExhbmd1YWdlUGVyc29uYWxJbmZvAB8CCgKvAO4A
-TgACADoBAAAAAAAABQAIAEZ1bGxOYW1ltAIFAAoAQ29tbW9uTmFtZR8CAgA6AQAAAAAAAAUACwBB
-bHRGdWxsTmFtZQC0Ah8CqwGuAKAABQAEAFR5cGUBAAUAR3JvdXAACgKvAIgAHgACADoBAAAAAAAA
-BQAIAExpc3ROYW1ltAKuAGoABQAEAFR5cGUBAAYAU2VydmVyCgKvAFIAIAACADoBAAAAAAAABQAK
-AFNlcnZlck5hbWW0Aq4AMgACADoBAAAAAAAABQAIAEZ1bGxOYW1ltAIFAAoAQ29tbW9uTmFtZR8C
-qwGuAAQAtQeuACoBBQAEAFR5cGUBAAYAUGVyc29uAQAXAEFsdExhbmd1YWdlUGVyc29uYWxJbmZv
-AB8CCgKvAO4ATgACAAYAAAAAAAAABQAIAEZ1bGxOYW1ltAIFAAoAQ29tbW9uTmFtZR8CAgAGAAAA
-AAAAAAUACwBBbHRGdWxsTmFtZQC0Ah8CqwGuAKAABQAEAFR5cGUBAAUAR3JvdXAACgKvAIgAHgAC
-AAYAAAAAAAAABQAIAExpc3ROYW1ltAKuAGoABQAEAFR5cGUBAAYAU2VydmVyCgKvAFIAIAACAAYA
-AAAAAAAABQAKAFNlcnZlck5hbWW0Aq4AMgACAAYAAAAAAAAABQAIAEZ1bGxOYW1ltAIFAAoAQ29t
-bW9uTmFtZR8CqwGuAAQAtQeuAAQAtQNeAQMABwBcAFUACTJSMTFSMTRTMTVTMTlSUlM3RTM4UlJT
-NkU0OVJSUzZFNjBSUlM2RTczUlI3NlM3N1M4MVJSUzdFMTAwUlJTNkUxMTFSUlM2RTEyMlJSUzZF
-MTM0UgAlRE4lRE6oAAIAjgADACVETgAFAAQAVHlwZQEABQBHcm91cAAKAq8AagAeAAUACABMaXN0
-TmFtZQAAAAAAAAAA8D9rAq4ATAAFAAQAVHlwZQEABgBTZXJ2ZXIKAq8ANAAUAAUACgBTZXJ2ZXJO
-YW1lrgAgAAUACABGdWxsTmFtZQAAAAAAAAAA8D9rAq4ABAC1BV4BAwAHABgAEQAJMlIxNVJSUzZF
-MjFSUlM2RQBBbHRGdWxsTmFtZUFsdEZ1bGxOYW1lJgACACQACwBBbHRGdWxsTmFtZQAFAAsAQWx0
-RnVsbE5hbWUAAwBBbHRMYW5ndWFnZUFsdExhbmd1YWdlJgACACQACwBBbHRMYW5ndWFnZQAFAAsA
-QWx0TGFuZ3VhZ2UAAwAlTERBUFR5cGVUeXBlbAACAGAACQAlTERBUFR5cGUABQAEAFR5cGUBAAYA
-UGVyc29uAQAXAEFsdExhbmd1YWdlUGVyc29uYWxJbmZvAB8CCgKvABoACgABAAAArgAQAAUABABU
-eXBlrgAEALUDAwAHAAoAAwAJM1MASFRUUFBhc3N3b3JkSFRUUFBhc3N3b3JkJgACACQADABIVFRQ
-UGFzc3dvcmQFAAwASFRUUFBhc3N3b3JkAwAkT2JqZWN0Q2xhc3MkT2JqZWN0Q2xhc3MmAAIAJAAM
-ACRPYmplY3RDbGFzcwUADAAkT2JqZWN0Q2xhc3MDAEFsdEZ1bGxOYW1lTGFuZ3VhZ2VBbHRGdWxs
-TmFtZUxhbmd1YWdlJEFkbWlucE9sZFdlYk5hbWUkQWRtaW5wT2xkV2ViTmFtZTIAAgAwABEAJEFk
-bWlucE9sZFdlYk5hbWUABQARACRBZG1pbnBPbGRXZWJOYW1lAAMAJgABAAAAAQEACQEAAAoBAQQK
-AAA/AK0rAgEBAAEAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAQDEAAAAAAD//wAAAAAA
-AAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdD
-AQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA
-AAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA
-V0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAA
-AAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wABAO/v7wABAAAA
-AAAAAAAAAAAAAAEA////AAEAsbHSAAAAAQAAAAAAAQAAAP8AAQAAAAAAAAAIAAAAAAABAFhDAAyA
-AgAAAAAAAQICAgEBAQEBAAQAAAAAAAAAACAvLzpZQwAACAAAAAEAAAABAAAAAAAAAAAAAAAAAAAA
-AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAALiwkAA==
-</rawitemdata></item>
-<item name='$CollationType' sign='true'><text>@UCA</text></item></note>
+<item name='$CollationType' sign='true'><text>@UCA</text></item></view>
 

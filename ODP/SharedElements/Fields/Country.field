@@ -1,35 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='126' unid='1EDDACD94F6D758B852561C60006338C' sequence='5027'>
+<sharedfield name='Country' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='8'
+ language='en'>
+<noteinfo noteid='122' unid='1EDDACD94F6D758B852561C60006338C' sequence='5027'>
 <created><datetime dst='true'>19950523T210744,12-04</datetime></created>
-<modified><datetime dst='true'>20150507T110149,65+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114055,22+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095401,76-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110149,64+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110149,64+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114055,22+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,22+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20071106T120650,29-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ type='number' kind='editable' name='Country' description='Enter Country Code.'><keywords
+ columns='1' ui='dialoglist' allownew='true'/><numberformat format='fixed'
+ punctuated='false' parens='false' percent='false' bytes='false'/><code event='htmlattributes'><formula
+>htmlInputS</formula></code></field>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>
 </rawitemdata></item>
-<item name='$TITLE'><text>Country</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='country' summary='false' sign='true'><number>0</number></item>
-<item name='$FIELDS'><text>Country</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAALD/LgAAAAAAAgAAAAAAAAAAAAAAFgAAABYAAAAUAAUACgBodG1s
-SW5wdXRTAwCK/z4AgsAAAwAgAAEAAAAAAAMBAAoIAAAAAAAAAAAHABMAAABDb3VudHJ5RW50ZXIg
-Q291bnRyeSBDb2RlLt4GAACK/4X/CAABAAAK
-</rawitemdata></item></note>
+<item name='country' summary='false' sign='true'><number>0</number></item></sharedfield>
 

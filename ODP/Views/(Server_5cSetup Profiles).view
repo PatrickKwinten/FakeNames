@@ -1,94 +1,58 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='322' unid='4A0BE515C627AAE1852561050058D9C5' sequence='5064'>
+<view name='(Server\Setup Profiles)' alias='Profiles' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
+ allowdocselection='true' publicaccess='false' designerversion='6' language='en'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='false' showresponsehierarchy='false' showmargin='true' shrinkrows='false'
+ extendlastcolumn='true' showhierarchies='false' unreadcolor='black' rowlinecount='1'
+ headerlinecount='1' rowspacing='1' haslinkcolumn='true' bgcolor='white' altrowcolor='#f8f8fc'
+ totalscolor='silver' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' initialbuildrestricted='false'
+ noemptycategories='true'>
+<noteinfo noteid='31e' unid='4A0BE515C627AAE1852561050058D9C5' sequence='5064'>
 <created><datetime>19941112T111029,17-05</datetime></created>
-<modified><datetime dst='true'>20150507T110151,85+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,26+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,24-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,84+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,84+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,26+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,26+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140236,91-04</datetime><datetime
 >20100304T144047,78-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>(Server\Setup Profiles)|Profiles</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-wgACABwAAgAkMAUACwBQcm9maWxlTmFtZQBeAQMAAgBQAAIAJDYCAAUAAAAAAAAABQATAERlZmF1
-bHRQYXNzdGhydU5hbWUABQAKAEludGVyTm90ZXMfAgUACwBTZXJ2ZXJOYW1lcwAfArQCAwAFABwA
-FwADAAIAAgAJACQwJDYkQ29uZmxpY3QABAAEAAAANAAFAAQAVHlwZQEABwBQcm9maWxlAAoCBQAE
-AEZvcm0BAAcAUHJvZmlsZQAKAhwCAwA=
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYAAAACACQw
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQACAAcAikAAAFZDAQACAAwAKgAAAH4AAQAACQAgAAAAAAAAAAICAAAAVkMAAAIABwBeAAAA3wEB
-AAAJACAAAAAAAAAAAgIAACAkMFByb2ZpbGUgTmFtZSoAAgAcAAIAJDAFAAsAUHJvZmlsZU5hbWUA
-XgEDAAcADAAFAAkwUzBFACQ2U2VydmVyc14AAgBQAAIAJDYCAAUAAAAAAAAABQATAERlZmF1bHRQ
-YXNzdGhydU5hbWUABQAKAEludGVyTm90ZXMfAgUACwBTZXJ2ZXJOYW1lcwAfArQCAwAHAAwABQAJ
-MFMwRQAmAAEAAAABAQAJAQAACgEBDwoAAC8ArSsBAAEAAQEAAAAAAAAAAFdDAQAACQAAAAAAAAAA
-AAAAAAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8AAQD4+PwAAQAAAAAAAAAAAAAAAAABAP//
-/wABALGx0gAAAAEAAAAAAAEAwMDAAAAAAAAAAAAACAAAAAAAAQA=
-</rawitemdata></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Profiles")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-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
-AAAAAF9SZW1vdmUgRnJvbSBGb2xkZXJLDAA+fA==
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAL7/UgEAAAEAAACeQRAAEQAAAAAAAABBZGQgU2V0
-dXAgUHJvZmlsZd0qAQEAJAANAEN1cnJlbnRTZXJ2ZXIAiwAAAAAAAAAAAPA/awIDAAcADAAFAAkw
-UzBFAAAA5gAFAA0AQ3VycmVudFNlcnZlcgABAAAACgKvAMYAHgACAOgDAAAAAAAAAQAHAFByb2Zp
-bGUAsQKuAKgAAQAMAFtOZXRDcmVhdG9yXecAdAKvAJAAHgACAOgDAAAAAAAAAQAHAFByb2ZpbGUA
-sQKuAHIAAgANAAAAAAAAAAEADgBOb3QgQXV0aG9yaXplZAEARwBZb3UgYXJlIG5vdCBhdXRob3Jp
-emVkIHRvIGFkZCBTZXR1cCBQcm9maWxlIGRvY3VtZW50cyB0byB0aGlzIGRhdGFiYXNlLgCwA64A
-BAC1BQMABwASAAsACTBSNlIxMFMxM1IAvv8oAAAABwAAAJ4hEAARAAAAAAAAAEFkZCBTZXR1cCBQ
-cm9maWxl3b7/SAAAAAEAAACeQBAAEgAAAAAAAABFZGl0IFNldHVwIFByb2ZpbGUgAAAAEgACAOgH
-AAAAAAAA7QEDAAcADAAFAAkwUzBFAL7/SgAAAAEAAACeARAAFAAAAAAAAABEZWxldGUgU2V0dXAg
-UHJvZmlsZSAAAAASAAIATB0AAAAAAADtAQMABwAMAAUACTBTMEUAvv9CAAAAAQAAAJ4hEAALAAAA
-HQAAAEVtcHR5IFRyYXNoSyAAAAASAAIA/QcAAAAAAADtAQMABwAMAAUACTBTMEUAvv9iAAAAAQAA
-AJ4hEAAGAAAAIQAAAFNlYXJjaEYABwAeABgAV2ViIG9ubHkgLSB1c2VkIGluIFZpZXdzBwAKAAMA
-CTFTAAAAEgACAJAXAAAAAAAA7QEDAAcACgADAAkwUgC+/yYAAAAFAAAAnAEAAAsAAAAAAAAAQ2F0
-ZWdvcmlfemVLBwBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAgAAgq+/ygA
-AAAFAAAAnQEAAA0AAAAAAAAAU2VuZCBEb2N1bWVudN0JAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAA
-AF9Gb3J3YXJkCgAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4LAD18
-vv8uAAAABQAAAJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXJLDAA+fA==
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Profile" &amp; Form = "Profile"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Profiles")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Add Setup Profile' showinmenu='false' hide='web'><imageref
+ name='btnNewDoc.gif'/><code event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+@If(CurrentServer="";
+@PostedCommand([Compose]; "Profile");
+@IsMember("[NetCreator]";@UserRoles);@PostedCommand([Compose];"Profile");@Prompt([Ok];"Not Authorized";"You are not authorized to add Setup Profile documents to this database."))</formula></code></action>
+<action title='Add Setup Profile' showinmenu='false' hide='notes'><imageref
+ name='btnNewDoc.gif'/><code event='onClick' for='web'><javascript>ntNewDoc('Profile', '[NetCreator]')</javascript></code></action>
+<action title='Edit Setup Profile' showinmenu='false' hide='previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Delete Setup Profile' showinmenu='false'><imageref name='btnDelete.gif'/><code
+ event='click'><formula>@Command([MoveToTrash])</formula></code></action>
+<action title='Empty Trash' showinmenu='false' hide='notes'><imageref name='btnEmpty.gif'/><code
+ event='click'><formula>@Command([EmptyTrash])</formula></code></action>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action>
+<action title='Categori_ze' showinmenu='false' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Document' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$0' width='15.7500'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Profile Name'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Trim(ProfileName)</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$6' width='59.8750'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Servers'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate];DefaultPassthruName:InterNotes:ServerNames)</formula></code></column></view>
 

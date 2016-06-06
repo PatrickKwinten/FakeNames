@@ -1,69 +1,63 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='30e' unid='302C2A7AA5F44CF585256335000502E1' sequence='5052'>
+<view name='($Resources)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false' designerversion='8'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='true' showmargin='false'
+ shrinkrows='true' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='3' headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='blue'
+ headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='30a' unid='302C2A7AA5F44CF585256335000502E1' sequence='5052'>
 <created><datetime dst='true'>19960524T205444,17-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,75+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,16+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,04-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,74+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,74+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,16+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,16+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144045,96-05</datetime><datetime>20100304T144337,61-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($Resources)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-wAICAD4AAgAkOAIAHgAAAAAAAAAFAAgARnVsbE5hbWW0AgEAAQBcAIYCAAAAAAAAAAAAQGsCAQAB
-AFwAhQIDAAIAIgACACQ3AgALAAAAAAAAAAUACABGdWxsTmFtZbQCAwACAC4AAgAkOQIABQAAAAAA
-AAAFAAgARnVsbE5hbWUAAAAAAAAAAPA/awK0AgMAAgAkAAIAJDUCAAUAAAAAAAAABQAKAE1haWxT
-ZXJ2ZXK0AgMAAgAcAAgATWFpbEZpbGUFAAgATWFpbEZpbGUDAAIAZAADACQxMAAFAA8AQXV0b1By
-b2Nlc3NUeXBlAGgBBQAPAEF1dG9Qcm9jZXNzVHlwZQABAAEAMAALAhwCrwAiABAAAAAAAAAAAABU
-QK4AEgAAAAAAAAAAAAAArgAEALUDAwACAC4AAgAkNAIABQAAAAAAAAAFAAgARnVsbE5hbWUAAAAA
-AAAAAPA/awK0AgMAAgAkAAsARGVzY3JpcHRpb24ABQALAERlc2NyaXB0aW9uAAMABQBWAFIACwAC
-AAIAAgALAAIACAADAAIACwAJAAQAJDgkNyQ5RGVzY3JpcHRpb24kNU1haWxGaWxlJDEwJDREZXNj
-cmlwdGlvbiRDb25mbGljdCRSRUYEAAQAAACyAAUABABUeXBlAQAIAERhdGFiYXNlCgIEAAUADABS
-ZXNvdXJjZUZsYWcBAAEAMQAKAgQAHAIFAAwAUmVzb3VyY2VUeXBlAQABADIACgIEABwCBAAFAA8A
-QXV0b1Byb2Nlc3NUeXBlAAEAAQBEAAsCBAAcAgUABABGb3JtAQAIAFJlc291cmNlAQAIAERhdGFi
-YXNlHwIKAgQAHAIFAAkAJENvbmZsaWN0AFkBHAIDAAcALgAoAAlMMVM0UzVTN1MxM1MxNFMyMFMy
-MVMyM1MyNFMyNlMyN1MzNFMzNVM=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-NAAFAABEAGYAAAACAABmBwIAAgAAZgAEAAIAgGYABgADAABmAAkAAgAkOCQ3JDkkMTAkNA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAJAAsACA4AAFZDCQACAAAATAAAABIAAQAACgAAAAAIAAAAAAICAAAAVkMDBAIABAAwAAAAGAAB
-AQ0JAAAAAAAAAAAAAgIAAABWQwkAAgANADoAAAAIAAEAAAkAAAAAAAAAAAACAgAAIFZDCAALAAsA
-AAAAAAgAAQAACQAAAAAAAAAAAAICAAAAVkMIAAIACgAwAAAACAABAAAJAAAAAAAAAAAAAgIAACBW
-QwgACAAIAB4AAAAIAAEAAAkAAAAAAAAAAAACAgAAIFZDQQADAAAAdAAAAAgAAQAACgAAAAAAAAAA
-AAICAAAAVkMBAAIADQA6AAAAoAABAAAJAAAAAAAAAAAAAgIAACBWQwAACwALACYAAAA6AQEAAAkA
-AAAAAAAAAAACAgAAACQ4TAACAD4AAgAkOAIAHgAAAAAAAAAFAAgARnVsbE5hbWW0AgEAAQBcAIYC
-AAAAAAAAAAAAQGsCAQABAFwAhQIDAAcADAAFAAkwUzBFACQ3U2l0ZTAAAgAiAAIAJDcCAAsAAAAA
-AAAABQAIAEZ1bGxOYW1ltAIDAAcADAAFAAkwUzBFACQ5UmVzb3VyY2UgTmFtZToAAgAuAAIAJDkC
-AAUAAAAAAAAABQAIAEZ1bGxOYW1lAAAAAAAAAADwP2sCtAIDAAcACgADAAk4UwBEZXNjcmlwdGlv
-bkRlc2NyaXB0aW9uJDVNYWlsU2VydmVyMAACACQAAgAkNQIABQAAAAAAAAAFAAoATWFpbFNlcnZl
-crQCAwAHAAoAAwAJNFMATWFpbEZpbGVNYWlsRmlsZR4AAgAcAAgATWFpbEZpbGUFAAgATWFpbEZp
-bGUDACQxMHQAAgBkAAMAJDEwAAUADwBBdXRvUHJvY2Vzc1R5cGUAaAEFAA8AQXV0b1Byb2Nlc3NU
-eXBlAAEAAQAwAAsCHAKvACIAEAAAAAAAAAAAAFRArgASAAAAAAAAAAAAAACuAAQAtQMDAAcADgAH
-AAk2UzdTOFMAJDRSZXNvdXJjZSBOYW1lOgACAC4AAgAkNAIABQAAAAAAAAAFAAgARnVsbE5hbWUA
-AAAAAAAAAPA/awK0AgMABwAKAAMACThTAERlc2NyaXB0aW9uRGVzY3JpcHRpb24mAAIAJAALAERl
-c2NyaXB0aW9uAAUACwBEZXNjcmlwdGlvbgADACYAAQAAAAEBAAkBAAAKAQEECgAAAQCtKwMAAQAB
-AAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAEAwAAAAAAA//8AAAAAAAAAAAAAAAAAAFdD
-AQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAA
-AAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA
-V0MBAQAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAAB
-AP///wABALGx0gAAAAEAAAAAAAEAAAD/AAEAAAAAAAAACAAAAAAAAQBYQwAMgAIAAAAAAAECAgIB
-AQEBAQAEAAAAAAAAAAAgLy86WUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA
-AAAAAAAAAAAAAAAAAC4sJAA=
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT ((Type = "Database") &amp;(ResourceFlag="1") &amp; (ResourceType="2")) &amp; (AutoProcessType != "D") &amp; (Form="Resource":"Database") &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='$8' width='2.2500'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false' hidden='true'><columnheader><font size='9pt'/></columnheader><datetimeformat
+ show='datetime' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/><code event='value'><formula>@Implode(@Subset(@Explode(@Name([ToKeyword];FullName);"\\");2);"\\")</formula></code></column>
+<column sort='ascending' hidedetailrows='false' itemname='$7' width='3' resizable='true'
+ separatemultiplevalues='true' sortnoaccent='true' sortnocase='true' showaslinks='false'
+ categorized='true' twisties='true'><font size='9pt' color='teal' style='bold'/><columnheader
+ title='Site'><font size='9pt'/></columnheader><code event='value'><formula
+>@Name([O];FullName)</formula></code></column>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='$9'
+ width='1' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false' hidden='true'><font size='9pt'/><columnheader
+ title='Resource Name'><font size='9pt'/></columnheader><code event='value'><formula
+>@Name([Abbreviate];@Subset(FullName; 1))</formula></code></column>
+<column hidedetailrows='false' itemname='Description' width='1' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'
+ hidden='true'><font size='9pt'/><columnheader title='Description'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$5' width='1'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false' hidden='true'><font size='9pt'/><columnheader title='MailServer'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate]; MailServer)</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='MailFile' width='1'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false' hidden='true'><font size='9pt'/><columnheader title='MailFile'><font
+ size='9pt'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='$10' width='1' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'
+ showasicons='true'><columnheader><font size='9pt' style='bold'/></columnheader><code
+ event='value'><formula>@If(@IsAvailable(AutoProcessType) &amp; AutoProcessType !="0";80;0)</formula></code></column>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='$4'
+ width='20' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false'><font size='9pt'/><columnheader title='Resource Name'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate];@Subset(FullName; 1))</formula></code></column>
+<column hidedetailrows='false' itemname='Description' width='39.2500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='Description'><font size='9pt'/></columnheader></column></view>
 

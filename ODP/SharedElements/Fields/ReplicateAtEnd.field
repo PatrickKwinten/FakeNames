@@ -1,43 +1,27 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='1c6' unid='A5838D4B7905F7DE052569650062B04B' sequence='5020'>
+<sharedfield name='ReplicateAtEnd' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='1c2' unid='A5838D4B7905F7DE052569650062B04B' sequence='5020'>
 <created><datetime>20000925T125756,59-05</datetime></created>
-<modified><datetime dst='true'>20150507T110150,46+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114055,94+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,56-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110150,45+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110150,45+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114055,94+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,94+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' allowmultivalues='true' kind='editable' name='ReplicateAtEnd'
+ description='Choose Enable if you want the Replicator to be enabled and use the specified schedule at this location.'
+ listinputseparators='comma' listdisplayseparator='comma' htmlid='Enabled_2_1_1'><keywords
+ helperbutton='false' recalconchange='true' columns='1' ui='checkbox'><textlist
+><text>Prompt to replicate when Notes shuts down|1</text></textlist></keywords><code
+ event='defaultvalue'><formula>"0"</formula></code><code event='inputtranslation'><formula
+>FIELD ReplicateAtEnd:=@If(ReplicateAtEnd="";"0";ReplicateAtEnd);
+FIELD PrmptAtEnd:=ReplicateAtEnd;
+ReplicateAtEnd</formula></code></field>
 <item name='$SignatureStatus'><text>1</text></item>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>
-</rawitemdata></item>
-<item name='$TITLE'><text>ReplicateAtEnd</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='ReplicateAtEnd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><text>ReplicateAtEnd</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACw/xQAAAAGIAAAAAAAAAAAAAAAAIr/igGCQgEFAiACAAgAAAAAAgEBAQkOALQA
-AAAAAA4AZwAvAA4AAAAMAAEAAQAwAAMAtAADAFYADgBSZXBsaWNhdGVBdEVuZAUADgBSZXBsaWNh
-dGVBdEVuZAEAAAAKAq8AJgAMAAEAAQAwAK4AGgAFAA4AUmVwbGljYXRlQXRFbmSuAAQAtQMDAAcA
-CgADAAkxUwADACQACgBQcm1wdEF0RW5kBQAOAFJlcGxpY2F0ZUF0RW5kAwAHAAwABQAJMFIxUwAA
-ABgABQAOAFJlcGxpY2F0ZUF0RW5kAwAHAAoAAwAJMFIAUmVwbGljYXRlQXRFbmRDaG9vc2UgRW5h
-YmxlIGlmIHlvdSB3YW50IHRoZSBSZXBsaWNhdG9yIHRvIGJlIGVuYWJsZWQgYW5kIHVzZSB0aGUg
-c3BlY2lmaWVkIHNjaGVkdWxlIGF0IHRoaXMgbG9jYXRpb24uAQArAFByb21wdCB0byByZXBsaWNh
-dGUgd2hlbiBOb3RlcyBzaHV0cyBkb3dufDF6/ygADQAAAAAAAAAAAAAAAAAAAAAAAAAAAEVuYWJs
-ZWRfMl8xXzEA3gYAAIr/hf8IAAEAAAo=
-</rawitemdata></item></note>
+</rawitemdata></item></sharedfield>
 

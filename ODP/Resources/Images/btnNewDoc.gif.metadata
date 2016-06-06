@@ -1,18 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="3fa" sequence="5008" unid="30CB8DFD85862F7685256A950017D972">
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="6" imagename="new document.gif" language="en" maintenanceversion="1.5" name="btnNewDoc.gif" publicaccess="false" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="3f6" sequence="5008" unid="30CB8DFD85862F7685256A950017D972">
 <created><datetime dst="true">20010726T002029,94-04</datetime></created>
-<modified><datetime dst="true">20150507T110152,93+02</datetime></modified>
+<modified><datetime dst="true">20150512T114058,34+02</datetime></modified>
 <revised><datetime dst="true">20130909T095401,80-04</datetime></revised>
-<lastaccessed><datetime dst="true">20150507T110152,92+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150507T110152,92+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20150512T114058,34+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150512T114058,34+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name="$Flags"><text>34Ci</text></item>
-<item name="$ImagesWide" sign="true"><number>1</number></item>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-<item name="$ImagesColorize" sign="true"><number>0</number></item>
-
-<item name="$ImageNames" sign="true"><text>new document.gif</text></item>
-<item name="$TITLE" sign="true"><text>btnNewDoc.gif</text></item>
-<item name="$DesignerVersion" sign="true"><text>6</text></item>
-<item name="$LANGUAGE" sign="true"><text>en</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby></imageresource>

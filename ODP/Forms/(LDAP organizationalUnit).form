@@ -1,202 +1,59 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='56a' unid='78C408A9AF6119BA85256A02004DB1F4' sequence='5025'>
+<form name='(LDAP organizationalUnit)' alias='organizationalUnit' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' nocompose='true'
+ publicaccess='false' designerversion='6' language='en' comment='LDAP Object Class'>
+<noteinfo noteid='566' unid='78C408A9AF6119BA85256A02004DB1F4' sequence='5025'>
 <created><datetime>20010301T090838,28-05</datetime></created>
-<modified><datetime dst='true'>20150507T110154,97+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114100,18+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,62-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110154,96+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110154,96+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114100,18+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114100,18+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140136,30-04</datetime><datetime
 >20100304T143947,20-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$SignatureStatus'><text>1</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>(LDAP organizationalUnit)</text><text
->organizationalUnit</text></textlist></item>
-<item name='$Comment' sign='true'><text>LDAP Object Class</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$SubForms' sign='true'><text>$organizationalUnitInheritableSchema</text></item>
-<item name='$SubForm_RepIDs' sign='true'><text>0000000000000000</text></item>
-<item name='$HTMLHeadTag' sign='true'><formula>"&lt;meta http-equiv='expires' content='0'&gt;" +
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='htmlbody'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></code><code
+ event='htmlhead'><formula>"&lt;meta http-equiv='expires' content='0'&gt;" +
 "&lt;link rel=stylesheet type='text/css' href='/" + @Subset(@DbName;-1) + "/cssForm?ReadForm'&gt;" +
-"&lt;style type='text/css'&gt; .TableImage {background-image:url(/" + @Subset(@DbName;-1) + "/servers.gif?OpenImageResource);} &lt;/style&gt;"</formula></item>
-<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></item>
-<item name='$Flags'><text>C</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='DocumentAccess' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Type' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LocalAdmin' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Owner' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$dspType' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='OU' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='userPassword' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='searchGuide' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='seeAlso' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='businessCategory' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='x121Address' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='registeredAddress' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='destinationIndicator' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='preferredDeliveryMethod' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='telexNumber' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='telexTerminalIdentifier' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='telephoneNumber' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='internationaliSDNNumber' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='facsimileTelephoneNumber' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Street' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='postOfficeBox' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='postalCode' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='PostalAddress' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='physicalDeliveryOfficeName' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='st' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='I' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Description' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Comments' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>Comments</text><text>description</text><text
->I</text><text>st</text><text>physicalDeliveryOfficeName</text><text>postalAddress</text><text
->postalCode</text><text>postOfficeBox</text><text>street</text><text>facsimileTelephoneNumber</text><text
->internationaliSDNNumber</text><text>telephoneNumber</text><text>telexTerminalIdentifier</text><text
->telexNumber</text><text>preferredDeliveryMethod</text><text>destinationIndicator</text><text
->registeredAddress</text><text>x121Address</text><text>businessCategory</text><text
->seeAlso</text><text>searchGuide</text><text>userPassword</text><text>ou</text><text
->$dspType</text><text>Owner</text><text>LocalAdmin</text><text>Type</text><text
->DocumentAccess</text></textlist></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAACAHn/bAABALGx0gABAAAAAAABAAAAAAABAMDAwAAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/7oAAAABAAAAHiERAAYAFgAYAAAAQ2FuY2VsiAAHABIA
-DAB3ZWIgbmV3IGRvY3MHAAoAAwAJMVMAAQAsAAsAQ3VycmVudFZpZXcAAQAGAFJldHVybgEACABW
-aWV3TmFtZfcCAwAHABAACQAJMFIxUzJTNlMAAAAiAAIAWRsAAAAAAAAFAAsAQ3VycmVudFZpZXcA
-7QIDAAcADAAFAAkwUjRTABYAAAAKAIkAHgEDAAcACgADAAkwUwD2/y8AAAAAAAMAEwANAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAYnRuQ2FuY2VsLmdpZj++/14AAAABAAAAHiERAAYACgAZAAAAQ2FuY2Vs
-OAAHABAACgBzYXZlZCBkb2NzBwAKAAMACTFTAAAAEgACAPwRAAAAAAAA7QEDAAcACgADAAkwUgAK
-AAAACACJAAMA9v8vAAAAAAADABMADQAAAAAAAAAAAAAAAAAAAAAAAAAAAGJ0bkNhbmNlbC5naWY/
-vv+CAAAAAQAAAJpAEQAGAAAAGgAAAENhbmNlbGYABwAQAAoATm90ZXMgb25seQcACgADAAkxUwAD
-AB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHABAACQAJMFIxUzJTM1MAAAASAAIA/BEAAAAA
-AADtAQMABwAKAAMACTBSAPb/LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABidG5DYW5j
-ZWwuZ2lmPw==
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAACAL7/ugAAAAEAAAAeIREABgAWABgAAABDYW5jZWyI
-AAcAEgAMAHdlYiBuZXcgZG9jcwcACgADAAkxUwABACwACwBDdXJyZW50VmlldwABAAYAUmV0dXJu
-AQAIAFZpZXdOYW1l9wIDAAcAEAAJAAkwUjFTMlM2UwAAACIAAgBZGwAAAAAAAAUACwBDdXJyZW50
-VmlldwDtAgMABwAMAAUACTBSNFMAFgAAAAoAiQAeAQMABwAKAAMACTBTAL7/XgAAAAEAAAAeIREA
-BgAKABkAAABDYW5jZWw4AAcAEAAKAHNhdmVkIGRvY3MHAAoAAwAJMVMAAAASAAIA/BEAAAAAAADt
-AQMABwAKAAMACTBSAAoAAAAIAIkAAwC+/4IAAAABAAAAmkARAAYAAAAaAAAAQ2FuY2VsZgAHABAA
-CgBOb3RlcyBvbmx5BwAKAAMACTFTAAMAHgALAFNhdmVPcHRpb25zAAAAAAAAAAAAAAADAAcAEAAJ
-AAkwUjFTMlMzUwAAABIAAgD8EQAAAAAAAO0BAwAHAAoAAwAJMFIA
-</rawitemdata></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>organizationalUnit</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAEAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAACBAAAAAJUEoAUKAKAFCgAAAGQAgwQBAMz/CAAAAAAAhf8IAAEAAAnN/wgAAAAAAIEC
-gv9SAAIAAAAAAAAAAAA4BAAAOAQDAEIYQhicGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAQAAAACUBDgEDQA4BA0AAAAAAIMEAgDdBgEA+//7/ywAAAAAAAEBAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAEAAAAAAAAAAAAAAFz/OAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAIAAAAAAAAAAEAAAoAAAAAev8kAAAACgAAAAAAAAAAAAAAAAAAAAAAAABUYWJsZUltYWdl
-3gYBAPv/ow44BCgAPAAAAAAAAgCkEgAAOAQJQgAAVQIREQEBAACBAoL/UgADAAAAAAAAAAAARwQJ
-QkcEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVAQPAAAA
-DwAAAAAAAACDBAMAhf8JAAEAAAkgAIECgwQDAN0GAACF/4X/JAABAegOICBMREFQIE9yZ2FuaXph
-dGlvbmFsIFVuaXQgINIIAQBCQoIA3gYAAIX/gQKC/1IABAAAAAAAAAAAAEcECUJHBAAAzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMz6/93dLoYBAAAAAFQEDwAAAA8AAAAAAAAAgwQE
-AIX/CgABAAAJ/yB4/ykAAAAAAAMAEwAHAAAAAAAAAAAAAAAAAAAAAAAAAAAAc2VydmVycwClBgAA
-AACBAoL/UgAFAAAAAAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAEAAAAAlAcAAAAAAAAAAAAAAACDBAUAhf8IAAEBAAndBgAArf9x/0YAAAAAAAMA
-GAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAJG9yZ2FuaXphdGlvbmFsVW5pdEluaGVyaXRhYmxlU2No
-ZW1hrf8xAA4ACAAAACUAJG9yZ2FuaXphdGlvbmFsVW5pdEluaGVyaXRhYmxlU2NoZW1hAACuAt4G
-AACuAIX/CAABAAAKgQKC/1IABgAAAAAAAAAAAKAFAACgBQAAew9PGV4gAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAHBjAAAAAJQEoAUKAKAFCgAAAAAAgwQGAIX/CAABAAAK3QYAAIr/
-/v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK//IBhAwABwAwAgAAAAAAAAIBAAAKwAEAAAAAAAAOAAAA
-AADAAQAAigEFAAQAVHlwZQEABgBQZXJzb24BABcAQWx0TGFuZ3VhZ2VQZXJzb25hbEluZm8AHwIK
-Aq8AUAEYAAEADgBbVXNlck1vZGlmaWVyXa4AOAEFAAQAVHlwZQEABQBHcm91cAAKAq8AIAEaAAEA
-DwBbR3JvdXBNb2RpZmllcl0ArgAGAQUABABUeXBlAQAGAFNlcnZlcgoCrwDuABoAAQAQAFtTZXJ2
-ZXJNb2RpZmllcl2uANQABQAEAFR5cGUBAAwAUG9saWN5TWFzdGVyAQANAFBvbGljeUFyY2hpdmUA
-HwIBABUAUG9saWN5QXJjaGl2ZUNyaXRlcmlhAB8CAQANAFBvbGljeURlc2t0b3AAHwIBABIAUG9s
-aWN5UmVnaXN0cmF0aW9uHwIBAA4AUG9saWN5U2VjdXJpdHkfAgEACwBQb2xpY3lTZXR1cAAfAgoC
-rwA0ABoAAQAQAFtQb2xpY3lNb2RpZmllcl2uABoAAQANAFtOZXRNb2RpZmllcl0ArgAEALUJAwAH
-ADQALgAJM1M0UzhTMTBTMTFTMTJTMTRTMTZTMTdTMThTMjBTMjJTMjNTMjRTMzhTNDBTRG9jdW1l
-bnRBY2Nlc3PeBgAAiv+F/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv9GAIgE
-AAUAMAIACAAAAAACAQAACR4AAAAAAAAABAAAAAAAHgAAABwAAQASAG9yZ2FuaXphdGlvbmFsVW5p
-dAMAVHlwZXr/HgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAVHlwZd4GAACK/4X/CAABAAAK3QYAAIr/
-/v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw/zQAAAAAAAIAAAABAAAAAAAAABwAAAAcAAAAGgAFAA8A
-aHRtbFRleHRBcmVhNVhMAAMAiv+CAI/MAQUOQAAACAAAAAACAQAACgAAAAAAAAAACgBTAAAATG9j
-YWxBZG1pbkVudGVyIHRoZSBuYW1lcyBvciBncm91cCBuYW1lcyB3aGljaCBzaG91bGQgaGF2ZSBl
-ZGl0IGNhcGFiaWxpdGllcyBmb3IgdGhpcyByZWNvcmQuAN4GAACK/4X/CAABAAAK3QYAAIr//v9Q
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAACw/zQAAAAAAAIAAAABAAAAAAAAABwAAAAcAAAAGgAFAA8AaHRt
-bFRleHRBcmVhNVhMAAMAiv9eAIfMAQUOQAIAAAAAAAACAQAACgAAAAAAAAAABQA0AAAAT3duZXJG
-dWxsIG5hbWUgb2YgcGVyc29uIGFsbG93ZWQgdG8gbW9kaWZ5IHRoaXMgZG9jdW1lbnQuAN4GAACK
-/90GAACF/4X/CAABAAoJ0ggBAAAAgADeBgAAhf8=
-</rawitemdata></item></note>
+"&lt;style type='text/css'&gt; .TableImage {background-image:url(/" + @Subset(@DbName;-1) + "/servers.gif?OpenImageResource);} &lt;/style&gt;"</formula></code>
+<actionbar useappletinbrowser='true' bgcolor='#b1b1d2' bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<sharedactionref id='24'>
+<action title='Cancel' showinmenu='false' hide='notes'><imageref name='btnCancel.gif'/><code
+ event='click'><formula>REM {web new docs};
+CurrentView := @GetProfileField("Return"; "ViewName");
+@Command([OpenView]; CurrentView)</formula></code><code event='hidewhen'><formula
+> !@IsNewDoc</formula></code></action></sharedactionref>
+<sharedactionref id='25'>
+<action title='Cancel' showinmenu='false' hide='notes'><imageref name='btnCancel.gif'/><code
+ event='click'><formula>REM {saved docs};
+@Command([FileCloseWindow])</formula></code><code event='hidewhen'><formula
+>@IsNewDoc</formula></code></action></sharedactionref>
+<sharedactionref id='26'>
+<action title='Cancel' showinmenu='false' hide='preview previewedit web'><imageref
+ name='btnCancel.gif'/><code event='click'><formula>REM {Notes only};
+FIELD SaveOptions := 0;
+@Command([FileCloseWindow])</formula></code></action></sharedactionref></actionbar>
+<body><richtext>
+<pardef id='1' align='none' leftmargin='1in' hide='notes web' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='1'><run html='true'><font size='9pt'/></run></par>
+<table htmlclass='TableImage' leftmargin='0.7500in' widthtype='fixedleft'
+ refwidth='10.9896in'><tablecolumn width='10.9896in'/>
+<tablerow>
+<tablecell>
+<cellbackground><imageref name='servers'/></cellbackground>
+<pardef id='3' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt'/> </run></par>
+<par def='3'><run><font size='14pt' style='bold' color='#424282'/>  LDAP Organizational Unit  </run></par>
+<pardef id='4' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font size='9pt'/>  </run></par></tablecell></tablerow></table>
+<pardef id='5'/><subformref name='$organizationalUnitInheritableSchema'/>
+<pardef id='6' leftmargin='1in' hide='read edit print copy preview previewedit'/>
+<par def='6'><sharedfieldref name='DocumentAccess'/><run><font size='9pt'/></run><run
+><font size='9pt'/><field type='text' protected='true' name='Type' htmlid='Type'><code
+ event='defaultvalue'><formula>"organizationalUnit"</formula></code></field></run><sharedfieldref
+ name='LocalAdmin'/><sharedfieldref name='Owner'/><run><font size='9pt' color='navy'/></run></par></richtext></body>
+<item name='$SignatureStatus'><text>1</text></item>
+<item name='$SubForm_RepIDs' sign='true'><text>0000000000000000</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>organizationalUnit</text></item></form>
 

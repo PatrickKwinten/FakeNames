@@ -1,61 +1,40 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='6ee' unid='77EEC164A51F6B9485256A0E0068568F' sequence='5009'>
+<view name='($ServerGroups)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false'
+ designerversion='7' language='en' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='simple' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='false' extendlastcolumn='false' showhierarchies='false'
+ unreadcolor='black' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
+ totalscolor='blue' headerbgcolor='#97b4e8' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
+<noteinfo noteid='6ea' unid='77EEC164A51F6B9485256A0E0068568F' sequence='5009'>
 <created><datetime>20010313T135939,03-05</datetime></created>
-<modified><datetime dst='true'>20150507T110156,92+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,12+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,56-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110156,91+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110156,91+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114102,12+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,12+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20050824T134849,54-04</datetime><datetime
  dst='true'>20060426T134550,05-04</datetime><datetime dst='true'>20081007T114831,45-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($ServerGroups)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-0AACACIAAgAkOAIABQAAAAAAAAAFAAgATGlzdE5hbWW0AgMABQAoACMABAACAAgACQAEACQ4TGlz
-dE5hbWUkQ29uZmxpY3QkUkVGAAQABAAAAF4ABQAEAFR5cGUBAAUAR3JvdXAACgIFAAkAR3JvdXBU
-eXBlAAEAAQA0AAoCBAAcAgQABQAEAEZvcm0BAAUAR3JvdXAACgIcAgUACQAkQ29uZmxpY3QAWQEc
-AgMABwAiABwACUwxUzNTNFM1UzZTOFM5UzEyUzEzUzE2UzE3Uw==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-HgACAABEAGYAAAACAABmAAIACAAkOExpc3ROYW1l
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQACAAkACAQAAFZDAQACAAgAMAAAAIkAAQAACQAAAAAAAAAAAAICAAAAVkMBAAgACAAAAAAArQAB
-AAAKAAAAAAAAAAAAAAIAAAAkOExpc3ROYW1lMAACACIAAgAkOAIABQAAAAAAAAAFAAgATGlzdE5h
-bWW0AgMABwAMAAUACTBTMEUATGlzdE5hbWVMaXN0TmFtZSYAAQAAAAEBAAkBAAAKAQEECgAAAACt
-KwEAAQABAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAA
-AAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAAB
-AP///wAFAAAAAAABAAAAAAAAAAAAAAAAAAEA////AAEAl7ToAAAAAQAAAAAAAQAAAP8AAQAAAAAA
-AAAIAAAAAAABAA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>7</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRxIAAAAAQABAAAAVR0AAAAAAAAAAAAACAAGAHn/bAABAFuE2QABAAAAAAABAAAAAAABAMDAwAAC
-ACAAAAABAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPb/MgAAAAAAAwATABAAAAAAAAAAAAAAAAAAAAAAAAAAAABB
-Y3Rpb25CdXR0b24uZ2lm/P86AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AQAAAAAAAAAAAAAAAAAAAL7/JgAAAAUAAACdAAAACwAAAAAAAABDYXRlZ29yaV96ZUsBAE58vv8o
-AAAABQAAAJ0AAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUAAACdAAAADgAAAAAA
-AABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQAAAAgAAAAAAAAAX0ZvcndhcmQEAAQKvv8s
-AAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4AAAAFAAAAnQEAABMA
-AAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcksGAD58
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRxIAAAAAQABAAAAVR0AAAAAAAAAAAAACAAGAL7/JgAAAAUAAACdAAAACwAAAAAAAABDYXRlZ29y
-aV96ZUsBAE58vv8oAAAABQAAAJ0AAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
-AACdAAAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQAAAAgAAAAAAAAAX0Zv
-cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
-AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcksGAD58
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT (Type = "Group" &amp; (GroupType = "4")) &amp; Form="Group" &amp; @IsUnavailable($Conflict)</formula></code>
+<actionbar bgcolor='#5b84d9' bordercolor='black'>
+<actionbuttonstyle heighttype='background' margintype='fixed' margin='6' bgcolor='none'
+ displayborder='never' widthtype='background'><imageref name='ActionButton.gif'/></actionbuttonstyle><border
+ width='0px 0px 1px'/>
+<action title='Categori_ze' showinbar='false' hide='previewedit' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' hide='previewedit' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' hide='previewedit' systemcommand='send'/>
+<action title='_Forward' showinbar='false' hide='previewedit' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$8' width='17.1250'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt'/><columnheader title='ListName'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate];ListName)</formula></code></column>
+<column sort='ascending' hidedetailrows='false' itemname='ListName' width='21.6250'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='ListName'><font size='9pt'/></columnheader><datetimeformat
+ legacy='true' show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column></view>
 

@@ -1,100 +1,105 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='316' unid='36F9D5A2F3D90AD1852561C200602267' sequence='5033'>
+<view name='($Domains)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false' designerversion='6'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='true' showmargin='true'
+ shrinkrows='false' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='blue'
+ headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' indexrefresh='automatic' initialbuildrestricted='false'
+ noemptycategories='false'>
+<noteinfo noteid='312' unid='36F9D5A2F3D90AD1852561C200602267' sequence='5033'>
 <created><datetime dst='true'>19950520T133002,63-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,79+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,20+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,72-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202353,43+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,78+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,69+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,20+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144042,95-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>($Domains)</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-EAICAEAAGgBMb2NhbFByaW1hcnlJbnRlcm5ldERvbWFpbgUAGgBMb2NhbFByaW1hcnlJbnRlcm5l
-dERvbWFpbgMAAgBAABoATG9jYWxJbnRlcm5ldERvbWFpbkFsaWFzZXMFABoATG9jYWxJbnRlcm5l
-dERvbWFpbkFsaWFzZXMDAAUAMgEuARcACgAKAAoACAAQAA8ABwAEAAQAAwAIAAgACAAIAAoACwAO
-AA4AEwAaABoACQAEAERvbWFpbk5hbWVOZXh0RG9tYWluTWFpbFNlcnZlck1haWxGaWxlQWxsb3dG
-cm9tRG9tYWluc0RlbnlGcm9tRG9tYWluc0NvdW50cnlBRE1EUFJNRE9yZ09yZ1VuaXQxT3JnVW5p
-dDJPcmdVbml0M09yZ1VuaXQ0RG9tYWluVHlwZURlc2NyaXB0aW9uQ2FsZW5kYXJTZXJ2ZXJDYWxl
-bmRhclN5c3RlbURlZmF1bHRHbG9iYWxEb21haW5Mb2NhbFByaW1hcnlJbnRlcm5ldERvbWFpbkxv
-Y2FsSW50ZXJuZXREb21haW5BbGlhc2VzJENvbmZsaWN0JFJFRgQABAAAAEIABQAEAFR5cGUBAAYA
-RG9tYWluCgIFAAQARm9ybQEABgBEb21haW4KAhwCBQAJACRDb25mbGljdABZARwCAwAHABYAEAAJ
-TDFTMlMzUzRTNVM4UzlT
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-FwABAABEAGYAAAAKAERvbWFpbk5hbWU=
-</rawitemdata></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAVAAAACAQAAFZDAQAKAAYAAAAAACgAAQAACgAAAAAAAAAAAAAAAAAAVkMAAAoACgAAAAAAPgAB
-AAAKAAAAAAAAAAAAAAIAAABWQwAACgALAAAAAABCAAEAAAoAAAAAAAAAAAAAAgAAAFZDAAAIAAkA
-AAAAAC0AAQAACgAAAAAAAAAAAAACAAAAVkMAABAABQAAAAAAHQABAAAKAAAAAAAAAAAAAgIAAABW
-QwAADwAEAAAAAAAcAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAHAAcAAAAAACgAAQAACgAAAAAAAAAA
-AAICAAAAVkMAAAQABAAAAAAAJwABAAAKAAAAAAAAAAAAAgIAAABWQwAABAAEAAAAAAAoAAEAAAoA
-AAAACAAAAAACAgAAAFZDAAADAAMAAAAAABQAAQAACgAAAAAAAAAAAAICAAAAVkMAAAgACAAAAAAA
-MAABAAAKAAAAAAAAAAAAAgIAAABWQwAACAAIAAAAAAAoAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAI
-AAgAAAAAACgAAQAACgAAAAAAAAAAAAICAAAAVkMAAAgACAAAAAAAKAABAAAKAAAAAAAAAAAAAgIA
-AABWQwAACgAEAAAAAAAoAAEAAAoAAAAAAAAAAAACAgAAAFZDAAALAAsAAAAAAEAAAQAACgAAAAAA
-AAAAAAICAAAAVkMAAA4ADgAAAAAAUAABAAAKAAAAAAAAAAAAAgIAAABWQwAADgAOAAAAAABQAAEA
-AAoAAAAAAAAAAAACAgAAAFZDAAATABMAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAABoAEgBC
-AAAAYAABAAAKAAAAAAAAAAAAAgIAAABWQwAAGgASAEIAAABgAAEAAAoAAAAAAAAAAAACAgAAAERv
-bWFpbk5hbWVEb21haW5OZXh0RG9tYWluTmV4dERvbWFpbk1haWxTZXJ2ZXJNYWlsIFNlcnZlck1h
-aWxGaWxlTWFpbCBGaWxlQWxsb3dGcm9tRG9tYWluc0FsbG93RGVueUZyb21Eb21haW5zRGVueUNv
-dW50cnlDb3VudHJ5QURNREFETURQUk1EUFJNRE9yZ09yZ09yZ1VuaXQxT3JnVW5pdDFPcmdVbml0
-Mk9yZ1VuaXQyT3JnVW5pdDNPcmdVbml0M09yZ1VuaXQ0T3JnVW5pdDREb21haW5UeXBlVHlwZURl
-c2NyaXB0aW9uRGVzY3JpcHRpb25DYWxlbmRhclNlcnZlckNhbGVuZGFyU2VydmVyQ2FsZW5kYXJT
-eXN0ZW1DYWxlbmRhclN5c3RlbURlZmF1bHRHbG9iYWxEb21haW5EZWZhdWx0R2xvYmFsRG9tYWlu
-TG9jYWxQcmltYXJ5SW50ZXJuZXREb21haW5Mb2NhbFByaW1hcnlEb21haW5CAAIAQAAaAExvY2Fs
-UHJpbWFyeUludGVybmV0RG9tYWluBQAaAExvY2FsUHJpbWFyeUludGVybmV0RG9tYWluAwBMb2Nh
-bEludGVybmV0RG9tYWluQWxpYXNlc0xvY2FsRG9tYWluQWxpYXNlc0IAAgBAABoATG9jYWxJbnRl
-cm5ldERvbWFpbkFsaWFzZXMFABoATG9jYWxJbnRlcm5ldERvbWFpbkFsaWFzZXMDACYAAQAAAAEB
-AAkBAAAKAQEECgAAAACtKwEAAQABAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAA
-AAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MB
-AAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAA
-AAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABX
-QwEAAAkAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA
-AAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAA
-AFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
-AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAA
-AAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAA
-AAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAA
-AAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQAAAAAAAQAAAAAAAAAAAAAA
-AAABAP///wABALGx0gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAQBYQwAMgAIAAAAAAAEB
-AgIBAQEBAQAEAAAAAAAAAAAgLy86WUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA
-AAAAAAAAAAAAAAAAAAAAAC4sJAA=
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRwAAAAAAQABAAAAAAAAAAAAAAAAAAAACAAAAHn/bAABAAAAAAABAAAAAAABAAAAAAABAMDAwAAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29yaV96ZUsB
-AE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUAAACdAQAA
-DgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0ZvcndhcmQE
-AAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIHRvIEZvbGRlci4uLgUAPXy+/y4AAAAFAAAA
-nQEAABMAAAAAAAAAX1JlbW92ZSBmcm9tIEZvbGRlcksGAD58
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRwAAAAAAQABAAAAAAAAAAAAAAAAAAAACAAAAL7/JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29y
-aV96ZUsBAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
-AACdAQAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0Zv
-cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIHRvIEZvbGRlci4uLgUAPXy+/y4A
-AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBmcm9tIEZvbGRlcksGAD58
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Domain" &amp; Form="Domain" &amp; @IsUnavailable($Conflict)</formula></code>
+<actionbar bordercolor='black'>
+<actionbuttonstyle bgcolor='silver'/>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move to Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove from Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='DomainName' width='5'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false' formatdatatype='number'><columnheader title='Domain'><font
+ size='9pt'/></columnheader><datetimeformat legacy='true' show='date' date='yearmonthday'
+ time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='NextDomain' width='7.7500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='NextDomain'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='MailServer' width='8.2500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Mail Server'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='MailFile' width='5.6250' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Mail File'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='AllowFromDomains' width='3.6250'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='Allow'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='DenyFromDomains' width='3.5000' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Deny'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Country' width='5' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Country'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='ADMD' width='4.8750' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='ADMD'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='PRMD' width='5' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='PRMD'><font size='9pt'/></columnheader><datetimeformat show='datetime'
+ date='weekdaymonthdayyear' time='hourminutesecondhundredths' zone='never'
+ dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='twodigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column hidedetailrows='false' itemname='Org' width='2.5000' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Org'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='OrgUnit1' width='6' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='OrgUnit1'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='OrgUnit2' width='5' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='OrgUnit2'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='OrgUnit3' width='5' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='OrgUnit3'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='OrgUnit4' width='5' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='OrgUnit4'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='DomainType' width='5' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Type'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Description' width='8' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Description'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='CalendarServer' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='CalendarServer'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='CalendarSystem' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='CalendarSystem'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='DefaultGlobalDomain' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='DefaultGlobalDomain'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='LocalPrimaryInternetDomain' width='12'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='LocalPrimaryDomain'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='LocalInternetDomainAliases' width='12'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='LocalDomainAliases'><font size='9pt'/></columnheader></column></view>
 

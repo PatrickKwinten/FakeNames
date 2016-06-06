@@ -1,34 +1,28 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='3e2' unid='05A41FB293BF585D85256A450071F08D' sequence='5028'>
+<frameset name='MainFrameset' alias='MainFrameset' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' publicaccess='false'
+ designerversion='7' language='en' columns='209px 78%' spacing='0px' borderwidth='3px'
+ bordercolor='black'>
+<noteinfo noteid='3de' unid='05A41FB293BF585D85256A450071F08D' sequence='5028'>
 <created><datetime dst='true'>20010507T164431,49-04</datetime></created>
-<modified><datetime dst='true'>20150507T110152,81+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,22+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,58-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,80+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,80+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,22+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,22+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20080605T100703,50-04</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>MainFrameset|MainFrameset</text></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$FrameSet' sign='true'>
-<rawitemdata type='1'>
-7/8YAAIACAAAAAAAAAAAAAAAAAAAAAAA8P8+AEQAAAABAAAAAAADAAMAAAAAAAUAAAAAAAUAAAAA
-AAEAAgAAAAAAAQAAAAAAAAADAAEAAQDRAAIATgDw/0IAAAAAAAEAAAAAAAMAAwAAAAAABQAAAAAA
-BQAAAAAAAwABAAAAAAAFAAAAAAAAAAEAIAADAFsAAQAUAAMAAQDx/zcAEAAAAABAAQECAAEAAQAA
-AAAAAwAAAAAAAQAAAAAAAABUb3ABAP///x8BAAAKAQAAAAAfP/b/JQAAAAAAAwAHAAMAAAAAAAAA
-AAAAAAAAAAAAAAAAAABUb3A/8f9EABEAAAAAQAABAgABAAEAAAAAAAcAAAAJAAEAAAAAAAAAT3V0
-bGluZU5vdGVzVmlldwEA////HwEAAAoBAAAAAB/2/ykAAAAAAAMABwAHAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAT3V0bGluZT/x/zoAEQAAAABAAAECAAEAAQAAAAAABgAAAAAAAQAAAAAAAABCb3R0b20B
-AP///x8BAAAKAQAAAAAf9v8oAAAAAAADAAcABgAAAAAAAAAAAAAAAAAAAAAAAAAAAEJvdHRvbfD/
-PgAAAAAAAQAAAAAAAwADAAAAAAAFAAAAAAAFAAAAAAACAAEAAAAAAAUAAAAAAAAAAgBkAAMAAQAD
-AAEA8f9JAAAAAAAAQAEAAwABAAEAAAAAAAkAAAAMAAEAAAAAAAAATm90ZXNWaWV3Tm90ZXNQcmV2
-aWV3AQD///8fAQAACgEAAAAAHz/2/ygAAAAAAAMAAgAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAUGVv
-cGxl8f9cAOAAAAAAYAEAAwABAAEAAAAAAAwAAAAAAAEAAAAAAAAATm90ZXNQcmV2aWV3FAAUAAAA
-EgABAAcAUHJldmlldwADAAAAAgAoAAEAsbHSHwEAAAkBAAAAAB8=
-</rawitemdata></item>
-<item name='$Flags'><text>#34CQ</text></item>
-<item name='$DesignerVersion' sign='true'><text>7</text></item></note>
+<frameset rows='32px 91 20px' spacing='0px'>
+<frame name='Top' scrolling='never' noresize='true'><namedelementlink type='page'
+ name='Top'/></frame>
+<frame name='Outline' targetframe='NotesView' border3d='false' scrolling='never'
+ noresize='true'><namedelementlink type='page' name='Outline'/></frame>
+<frame name='Bottom' border3d='false' scrolling='never' noresize='true'><namedelementlink
+ type='page' name='Bottom'/></frame></frameset>
+<frameset rows='100% 1' spacing='0px'>
+<frame name='NotesView' targetframe='NotesPreview'><namedelementlink type='view'
+ name='People'/></frame>
+<frame name='NotesPreview'><bordercaption show='caption arrows' justify='center'
+ open='40%' bgcolor='#b1b1d2'><code event='value'><formula>"Preview"</formula></code><font
+ size='9pt'/></bordercaption></frame></frameset></frameset>
 

@@ -1,44 +1,34 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='382' unid='954CE9325E0E0E24852565A4006F1D07' sequence='5020'>
+<view name='($ExternalDomainNetworkConfigurations)' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
+ publicaccess='false' designerversion='6' language='en' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='simple' opencollapsed='false'
+ showresponsehierarchy='true' showmargin='true' shrinkrows='false' extendlastcolumn='false'
+ showhierarchies='false' unreadcolor='black' rowlinecount='1' headerlinecount='1'
+ rowspacing='1' bgcolor='white' totalscolor='gray' headerbgcolor='#b1b1d2'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='37e' unid='954CE9325E0E0E24852565A4006F1D07' sequence='5020'>
 <created><datetime>19980207T151339,27-05</datetime></created>
-<modified><datetime dst='true'>20150507T110152,33+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,74+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,80-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,32+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,32+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,74+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,74+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144043,17-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>($ExternalDomainNetworkConfigurations)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-DgEFAFYAUQAGABAAEQAKAAkACQAEAFJlcXVlc3RpbmdTZXJ2ZXJJbmZvcm1hdGlvblNlcnZlckRv
-bWFpbk5hbWVQcm90b2NvbHMkQ29uZmxpY3QkUkVGAAQABAAAAJwABQAEAFR5cGUBACAARXh0ZXJu
-YWxEb21haW5OZXR3b3JrSW5mb3JtYXRpb24KAgUABABGb3JtAQAgAEV4dGVybmFsRG9tYWluTmV0
-d29ya0luZm9ybWF0aW9uAQAgAChFeHRlcm5hbERvbWFpbk5ldHdvcmtBZGRyZXNzZXMpHwIKAhwC
-BQAJACRDb25mbGljdABZARwCAwAHABYAEAAJTDFTM1M0UzVTMTBTMTFT
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-JwACAABEAGYAAAAKAABmAAoACQBEb21haW5OYW1lUHJvdG9jb2xz
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQAEAAEACAQAAFZDAAAQABAAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAABEAEQAAAAAAUAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwEACgAKAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAQAJAAkA
-AAAAAFAAAQAACgAAAAAAAAAAAAICAAAAUmVxdWVzdGluZ1NlcnZlclJlcXVlc3RpbmdTZXJ2ZXJJ
-bmZvcm1hdGlvblNlcnZlckluZm9ybWF0aW9uU2VydmVyRG9tYWluTmFtZURvbWFpbk5hbWVQcm90
-b2NvbHNQcm90b2NvbHMmAAEAAAABAQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQAA
-CQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAA
-AAAAAAAAAABCAAAAAAABAP///wAFAP///wABAAAAAAAAAAAAAAAAAAEA////AAEAsbHSAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAIAAAAAAABAA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type= "ExternalDomainNetworkInformation" &amp; Form="ExternalDomainNetworkInformation":"(ExternalDomainNetworkAddresses)" &amp; @IsUnavailable($Conflict)</formula></code>
+<column hidedetailrows='false' itemname='RequestingServer' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='RequestingServer'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='InformationServer' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='InformationServer'><font size='9pt'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='DomainName' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='DomainName'><font size='9pt'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='Protocols' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='Protocols'><font size='9pt'/></columnheader></column></view>
 

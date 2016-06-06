@@ -1,46 +1,36 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='77a' unid='85255E2A007AE74685255E2A000A709D' sequence='5036'>
+<view name='($CrossCertByName)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false'
+ designerversion='8' language='en' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='simple' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='false' extendlastcolumn='false' showhierarchies='false'
+ unreadcolor='black' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
+ totalscolor='blue' headerbgcolor='#a0a0c5' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' indexrefresh='automatic'
+ initialbuildrestricted='false' noemptycategories='false'>
+<noteinfo noteid='776' unid='85255E2A007AE74685255E2A000A709D' sequence='5036'>
 <created><datetime>19921110T205401,89-05</datetime></created>
-<modified><datetime dst='true'>20150507T110157,60+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,80+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,44-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202352,41+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,59+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,65+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,80+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20050824T134849,63-04</datetime><datetime
 >20080129T121344,18-05</datetime><datetime>20080208T080039,89-05</datetime><datetime
  dst='true'>20081007T114831,48-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT (Type = "CrossCertificate" | Type = "VaultTrustCertificate" | Type ="PasswordResetCertificate") &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='NameCombo'
+ width='47.3750' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false'><font color='blue'/><columnheader title='Name Combination'><font
+ size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='PRDisplay' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='PRDisplay'><font size='9pt'/></columnheader><numberformat format='general'
+ varying='true' punctuated='false' parens='false' percent='false' bytes='false'
+ decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
 <item name='$TYPE'><text>$SUBVIEW</text></item>
-<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($CrossCertByName)</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-AAECACAACQBQUkRpc3BsYXkABQAJAFBSRGlzcGxheQADAAUAMAArAAQACQAJAAkABABOYW1lQ29t
-Ym9QUkRpc3BsYXkkQ29uZmxpY3QkUkVGAAQABAAAAIYABQAEAFR5cGUBABAAQ3Jvc3NDZXJ0aWZp
-Y2F0ZQoCBQAEAFR5cGUBABUAVmF1bHRUcnVzdENlcnRpZmljYXRlAAoCHQIFAAQAVHlwZQEAGABQ
-YXNzd29yZFJlc2V0Q2VydGlmaWNhdGUKAh0CBAAFAAkAJENvbmZsaWN0AFkBHAIDAAcAJAAeAAlM
-MVMzUzRTNVM2UzdTOFM5UzEwUzExUzE0UzE1Uw==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-FgABAABEAGYAAAAJAE5hbWVDb21ibw==
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQACAAEACAQAAFZDAQAJABAAAAAAAHsBAQAECgAAAAAAAAAAAAICAAAgVkMAAAkACQAiAAAAUAAB
-AAAKAAAAAAgAAAAAAgIAAABOYW1lQ29tYm9OYW1lIENvbWJpbmF0aW9uUFJEaXNwbGF5UFJEaXNw
-bGF5IgACACAACQBQUkRpc3BsYXkABQAJAFBSRGlzcGxheQADACYAAQAAAAEBAAkBAAAKAQEECgAA
-AACtKwEAAQABAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAA
-AAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAIQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAA
-AAABAP///wAFAAAAAAABAAAAAAAAAAAAAAAAAAEA////AAEAoKDFAAAAAQAAAAAAAQAAAP8AAQAA
-AAAAAAAIAAAAAAABAFlDAAAIAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAAAAAAAuLCQA
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item></note>
+<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item></view>
 

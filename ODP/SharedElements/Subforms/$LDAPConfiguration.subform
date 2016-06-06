@@ -1,54 +1,183 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='40e' unid='30C8F7BC784D36E485256613006EA551' sequence='5100'>
+<subform name='$LDAPConfiguration' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='8'
+ language='en'>
+<noteinfo noteid='40a' unid='30C8F7BC784D36E485256613006EA551' sequence='5100'>
 <created><datetime dst='true'>19980529T160832,81-04</datetime></created>
-<modified><datetime dst='true'>20150507T110153,03+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,44+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095405,90-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110153,02+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110153,02+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,44+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,44+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143929,00-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>$LDAPConfiguration</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUA3x</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSJTbWFsbCBGb250cwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$Script' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:74
+<globals><code event='options'><lotusscript>
 
+</lotusscript></code><code event='declarations'><lotusscript>Dim SortedArray As Variant</lotusscript></code></globals>
+<body><richtext>
+<pardef id='1' leftmargin='1in' hide='read edit copy preview previewedit'/>
+<par def='1'><field type='number' kind='editable' name='LDAPACLVersion'><numberformat
+ format='general' digits='2' punctuated='false' parens='false' percent='false'
+ bytes='false'/><code event='defaultvalue'><formula>0</formula></code><code
+ event='inputtranslation'><formula>FIELD LDAPACLVersion:=LDAPACLVersion;
 
-'++LotusScript Development Environment:2:5:(Forward):0:1
+@SetField("LDAPACLVersion";1)</formula></code></field><run><font size='9pt'/></run></par>
+<pardef id='2'><code event='hidewhen'><formula>ServerName!="*"| @If(@TextToNumber(@Version)&lt;171;@True;!@IsXACLEnabled)</formula></code></pardef>
+<par def='2'><run><font size='9pt' style='bold'/>LDAP attributes that can be anonymously queried cannot be changed since Extended Access Control has been enabled.</run></par>
+<pardef id='3'><code event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='3'><run><font size='2pt' name='Small Fonts' pitch='variable' truetype='false'
+ familyid='20'/></run></par>
+<table cellbordercolor='silver' htmlid='Config_LDAP_subf_1_1' htmlclass='TableSpacing'
+ rightmargin='75%' widthtype='fixedleft' rowspacing='0.0201in' refwidth='8.1000in'><tablecolumn
+ width='2.5000in'/><tablecolumn width='2.8000in'/><tablecolumn width='2.8000in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='5' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='5'><run><font size='9pt' style='bold' color='white'/>LDAP Configuration</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='6' leftmargin='0.0597in' rightmargin='99%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='6'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='7' leftmargin='0.0597in' rightmargin='99%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='7'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='8' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ hide='read preview' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>ServerName!="*"| @If(@TextToNumber(@Version)&lt;171;@False;@IsXACLEnabled)</formula></code></pardef>
+<par def='8'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Click on this button to control the fields that anonymous LDAP users can query.  The LDAP Field list is configured by form.  If you've customized the Domino Directory by adding fields, allow anonymous LDAP users to have access to those new fields by adding them to the LDAP Field List.  Don't select Location, Server\Domain, Server\External Domain Network Information, Server\Holiday, User Setup Profile, Server\Configuration Settings, Server\Connection, or Cross Certificate because LDAP clients can't search information in documents created with these forms.</popuptext><run
+><font size='9pt'/>Choose fields that anonymous users can query via LDAP:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='9' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ hide='read preview web' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>ServerName!="*"| @If(@TextToNumber(@Version)&lt;171;@False;@IsXACLEnabled)</formula></code></pardef>
+<par def='9'><run><font size='9pt'/></run><button width='2in' widthtype='maximum'
+ maxlines='1' wraptext='true' bgcolor='system'><font size='9pt'/>Select Attribute Types<code
+ event='click'><lotusscript>Sub Click(Source As Button)
+	
+	Dim hDoc As NotesDocument
+	Dim hWorkspace As NotesUIWorkspace 
+	Dim hUidoc As NotesUiDocument
+	Dim hItem As NotesItem
+	
+	Dim vVersion As Variant
+	
+	On Error Goto ERROR_HANDLER
+	
+	' if the version is earlier than Rnext, then bail
+	vVersion = Evaluate(|@TextToNumber(@Version)|,doc)
+	If vVersion(0) &lt; 171 Then
+		Messagebox "You must use a Notes 6 client or later to configure LDAP Attribute Types."
+		Exit Sub
+	End If
+	
+	' set the dim'd variables
+	Set hWorkspace = New NotesUIWorkspace 
+	Set hUidoc = hWorkspace.CurrentDocument
+	Set hDoc = hUidoc.Document
+	Set hItem = hDoc.GetFirstItem("LDAPQueriableAttributes")
+	
+		' if the user hits "OK" (domino provided) then set the LDAPATACL field to the LDAPQueriableAttributes values
+	If hWorkspace.Dialogbox( "(LDAPAttributeTypeList)", True, True, False, False, False, False, "LDAP Attribute Type Selection", , True, False, True ) Then
+		If hDoc.LDAPQueriableAttributes(0) = "" Then
+			Msgbox "You must choose at least one queriable LDAP attribute.",MB_OK+MB_ICONSTOP,"LDAP Attribute Selection Error"
+			If hWorkspace.Dialogbox( "(LDAPAttributeTypeList)", True, True, False, False, False, False, "LDAP Attribute Type Selection", , True, False, True ) Then
+				hDoc.LDAPATACL = hDoc.LDAPQueriableAttributes
+				Call hUidoc.Refresh
+			End If
+		Else
+			hDoc.LDAPATACL = hDoc.LDAPQueriableAttributes
+			Call hUidoc.Refresh		
+		End If
+	End If
+	
+ROUTINE_EXIT:
+	Exit Sub
+	
+ERROR_HANDLER:
+	Msgbox "Internal Error - Subform:  Line# " &amp; Format$(Erl) &amp; "   Error: " &amp; Error$
+	Resume ROUTINE_EXIT
+End Sub</lotusscript></code></button><run><font size='9pt'/></run></par>
+<pardef id='10' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ hide='read preview notes' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>ServerName!="*" | @If(@TextToNumber(@Version)&lt;171;@False;@IsXACLEnabled)</formula></code></pardef>
+<par def='10'><run><font size='9pt'/></run><button width='2in' widthtype='maximum'
+ maxlines='1' wraptext='true' bgcolor='system'><code event='onClick' for='web'><javascript
+>if (dlgIsOpen()) return
 
-'++LotusScript Development Environment:2:5:(Declarations):0:10
-Dim SortedArray As Variant<break/></text></item>
-<item name='$$LDAPAllowWriteAccess' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
+var iWidth	= 620
+var iHeight	= (window.isNN4X ? 530 : 390)
+var sUrl		= sWebDbName + 'LDAPAttributeTypeListWeb?OpenForm'
 
-'++LotusScript Development Environment:2:5:(Forward):0:1
-Declare Sub Onchange(Source As Field)
+dlgOpen(sUrl, iWidth, iHeight)</javascript></code><font size='9pt'/>Select Attribute Types</button><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='11' leftmargin='0.0597in' rightmargin='99%' spacebefore='1.5'
+ hide='read edit copy preview previewedit' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ServerName!="*"| @If(@TextToNumber(@Version)&lt;171;@False;@IsXACLEnabled)</formula></code></pardef>
+<par def='11'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='12' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*" | @If(@TextToNumber(@Version)&lt;171;@False;@IsXACLEnabled)</formula></code></pardef>
+<par def='12'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the LDAP Attribute Types and Domino fields that anonymous users can query.</popuptext><run
+><font size='9pt'/>Anonymous users can query:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='13' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*" | @If(@TextToNumber(@Version)&lt;171;@False;@IsXACLEnabled)</formula></code></pardef>
+<par def='13'><run><font size='9pt' style='bold'/>LDAP Attribute Types:</run></par>
+<pardef id='14' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*"| @If(@TextToNumber(@Version)&lt;171;@False;@IsXACLEnabled)</formula></code></pardef>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='computed' name='LDAPATACL' description='The LDAP Attribute Types that anonymous users can query.'
+ listinputseparators='comma semicolon newline' listdisplayseparator='newline'
+ htmlid='LDAPFieldACL'><code event='defaultvalue'><formula>@If(@TextToNumber(@Version)&gt;=171;
+	@If(
+		LDAPATACL = "";
+			@If(
+				LDAPFieldACL="";
+				@Sort(DefaultAttr;[CaseInsensitive]);
+				@Name([ToAT];LDAPFieldACL)
+					);
+		LDAPATACL);
+LDAPATACL)</formula></code></field></run><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='15' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ServerName!="*"| @If(@TextToNumber(@Version)&lt;171;@False;@IsXACLEnabled)</formula></code></pardef>
+<par def='15'><run><font size='9pt' style='bold'/>Domino Fields:</run></par>
+<par def='15'><run><font size='9pt'/><field type='text' allowmultivalues='true'
+ kind='computed' name='LDAPFieldACL' description='The Domino fields that anonymous users can query.'
+ listinputseparators='comma semicolon newline' listdisplayseparator='newline'
+ htmlid='LDAPFieldACL_2'><code event='defaultvalue'><formula>@If(@TextToNumber(@Version)&gt;=171; @Name([ToField];LDAPATACL);LDAPFieldACL)</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='16' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Select Yes to enable authenticated LDAP users to add, delete, or modify entries in the Domino Directory this Domain Configuration record resides in.  Note these LDAP users must have Editor access or Author access with an appropriate role in the Domino Directory ACL. 
 
-'++LotusScript Development Environment:2:5:(Declarations):0:2
+To add entries, LDAP users must have Editor access; to modify entries users must have Editor access or Author access with a modifier role; to delete entries users must have the "Delete documents" privilege. 
 
-'++LotusScript Development Environment:2:2:BindEvents:1:129
-Private Sub BindEvents(Byval Objectname_ As String)
-	Static Source As FIELD
-	Set Source = Bind(Objectname_)
-	On Event Onchange From Source Call Onchange
-End Sub
-
-'++LotusScript Development Environment:2:2:Onchange:1:12
-Sub Onchange(Source As Field)
+If you use Directory Assistance, this option can be set differently for each Domino Directory served up by the LDAP server.
+</popuptext><run><font size='9pt'/>Allow LDAP users write access:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='17' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='17'><run><font size='9pt'/></run><run><font size='9pt'/><field runexitingonchange='true'
+ borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' kind='editable' name='LDAPAllowWriteAccess' description='Select Yes to enable authenticated LDAP users to add, delete, or modify entries in the Domino Directory.'
+ htmlid='LDAPAllowWriteAccess'><keywords helperbutton='false' recalconchange='true'
+ columns='1' ui='radiobutton'><textlist><text>Yes|1</text><text>No|0</text></textlist></keywords><code
+ event='defaultvalue'><formula>"0"</formula></code><code event='onchange'><lotusscript
+>Sub Onchange(Source As Field)
 	
 	Const TITLE = "Warning"
 	Const TEXT_LINE_1 = "LDAP write access is enabled but schema checking is disabled. This is not recommended."
@@ -73,23 +202,179 @@ Sub Onchange(Source As Field)
 		End If
 	End If
 	
-End Sub<break/></text></item>
-<item name='$$LDAPEnfrcSchema' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
+End Sub</lotusscript></code></field></run><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='18' leftmargin='0.0597in' rightmargin='99%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='18'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the maximum number of seconds before a search is terminated (Default is 0  "unlimited").</popuptext><run
+><font size='9pt'/>Timeout:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='17'><run><font size='9pt'/></run><run><font size='9pt'/><field type='number'
+ kind='editable' name='LDAPTimeout' description='Enter the maximum number of seconds before a search is terminated (Default is 0  "unlimited").'
+ htmlid='LDAPTimeout'><numberformat format='fixed' punctuated='false' parens='false'
+ percent='false' bytes='false'/><code event='htmlattributes'><formula>htmlInputS</formula></code><code
+ event='defaultvalue'><formula>0</formula></code><code event='inputvalidation'><formula
+>L_ERR_MSG := "The timeout cannot be less than 0.";
 
-'++LotusScript Development Environment:2:5:(Forward):0:1
-Declare Sub Onchange(Source As Field)
+sMsg := @If(LDAPTimeout&lt;0; L_ERR_MSG;"");
 
-'++LotusScript Development Environment:2:5:(Declarations):0:2
+REM {return error message};
+_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_tMsg  := @ReplaceSubstring(sMsg; "\\":"'":"\""; "%5C":"%27":"%22");
+_tWeb1 := "&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+_tWeb2 := "&lt;script&gt;ntValidationFailure('" + _tMsg + "');&lt;/script&gt;";
+_tWeb  := _tWeb1 + _tWeb2;
 
-'++LotusScript Development Environment:2:2:BindEvents:1:129
-Private Sub BindEvents(Byval Objectname_ As String)
-	Static Source As FIELD
-	Set Source = Bind(Objectname_)
-	On Event Onchange From Source Call Onchange
-End Sub
+@If(sMsg = "";
+	@Success;
+	@Failure(@If(@ClientType = "Notes"; sMsg; _tWeb)))</formula></code></field></run><run
+><font size='9pt'/> seconds</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='19' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='19'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the maximum number of entries a single search can return (Default is 0  "unlimited"). </popuptext><run
+><font size='9pt'/>Maximum number of entries returned:</run></popup><run><font
+ size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='17'><run><font size='9pt'/></run><run><font size='9pt'/><field type='number'
+ kind='editable' name='LDAPMaxEntries' description='Enter the maximum number of entries a single search can return (Default is 0  "unlimited").'
+ htmlid='LDAPMaxEntries'><numberformat format='fixed' punctuated='false' parens='false'
+ percent='false' bytes='false'/><code event='htmlattributes'><formula>htmlInputS</formula></code><code
+ event='defaultvalue'><formula>0</formula></code><code event='inputvalidation'><formula
+>L_ERR_MSG := "The maximum number of entries returned cannot be less than 0..";
 
-'++LotusScript Development Environment:2:2:Onchange:1:12
-Sub Onchange(Source As Field)
+sMsg := @If(LDAPMaxEntries&lt;0; L_ERR_MSG;"");
+
+REM {return error message};
+_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_tMsg  := @ReplaceSubstring(sMsg; "\\":"'":"\""; "%5C":"%27":"%22");
+_tWeb1 := "&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+_tWeb2 := "&lt;script&gt;ntValidationFailure('" + _tMsg + "');&lt;/script&gt;";
+_tWeb  := _tWeb1 + _tWeb2;
+
+@If(sMsg = "";
+	@Success;
+	@Failure(@If(@ClientType = "Notes"; sMsg; _tWeb)))</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='19'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specify the minimum number of characters that users must specify before the first wildcard in a search query.
+
+If performance is slow on the LDAP server, try increasing the minimum characters required for wildcard searches.
+</popuptext><run><font size='9pt'/>Minimum characters for wildcard search:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='17'><run><font size='9pt'/></run><run><font size='9pt'/><field type='number'
+ kind='editable' name='LDAPMinChar' description='Specify the minimum number of characters that users must specify before the first wildcard in a search query.'
+ htmlid='LDAPMinChar'><numberformat format='fixed' punctuated='false' parens='false'
+ percent='false' bytes='false'/><code event='htmlattributes'><formula>htmlInputS</formula></code><code
+ event='defaultvalue'><formula>1</formula></code><code event='inputvalidation'><formula
+>L_ERR_MSG := "The minimum characters for wildcard search cannot be less than 0.";
+
+sMsg := @If(LDAPMinChar&lt;0; L_ERR_MSG;"");
+
+REM {return error message};
+_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_tMsg  := @ReplaceSubstring(sMsg; "\\":"'":"\""; "%5C":"%27":"%22");
+_tWeb1 := "&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+_tWeb2 := "&lt;script&gt;ntValidationFailure('" + _tMsg + "');&lt;/script&gt;";
+_tWeb  := _tWeb1 + _tWeb2;
+
+@If(sMsg = "";
+	@Success;
+	@Failure(@If(@ClientType = "Notes"; sMsg; _tWeb)))</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='19'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Select Yes to enable LDAP client operations (search, add, delete, modify, compare) which specify alternate language information.</popuptext><run
+><font size='9pt'/>Allow Alternate Language Information processing:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='17'><run><font size='9pt' style='bold'/></run><run><font size='9pt'/><field
+ borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' kind='editable' name='LDAPQueryAltLangInfo' description='Select Yes to enable LDAP client operations (search, add, delete, modify, compare) which specify alternate language information.'><keywords
+ helperbutton='false' recalconchange='true' columns='1' ui='radiobutton'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"0"</formula></code></field></run><run><font size='9pt' style='bold'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='20' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='20'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Select one of the following options to determine how the selected LDAP server responds when a duplicate distinguished name is found during delete, modify, or compare operations or when duplicate name hierarchies are found during add operations:
+
+Don't modify any
+       select this to prevent the specified operation from occurring.
+
+Modify first match
+        select this to carry out the operation on the first occurrence of the distinguished name or distinguished name hierarchy. 
+	
+Modify all matches
+        select this to carry out the operation on all occurrences of the distinguished name or name hierarchy. 
+
+
+If you use Directory Assistance to configure searches of secondary Domino directories, this 	option is set on an LDAP server's primary directory, and it applies to the primary LDAP directory and to local secondary Domino Directories served up by the LDAP server.  The LDAP service does not process write operations to a remote Domino Directory or Extended Directory Catalog.
+</popuptext><run><font size='9pt'/>Rules to follow when this directory is the primary directory, and there are multiple matches on the distinguished name being compared/modified:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='17'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='LDAPAmbiguousWrite' description='Select whether to modify all matches, first match, or none when duplicate distinguished name are found.'
+ htmlid='LDAPAmbiguousWrite'><keywords columns='1' ui='radiobutton'><textlist
+><text>Don't modify any|0</text><text>Modify first match|1</text><text>Modify all matches|2</text></textlist></keywords><code
+ event='defaultvalue'><formula>"0"</formula></code></field></run><run><font
+ size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='20'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='21' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='21'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>When set to Yes the LDAP service on startup automatically creates a full text index on all Domino Directories served by the LDAP service.  Full text indexing greatly speeds up certain type of LDAP queries.  When set to No it does not automatically create full text indexes.  Note that setting it to No will NOT cause existing full text indexes to be deleted.  </popuptext><run
+><font size='9pt'/>Automatically Full Text Index Domino Directory?</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='22' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='22'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='LDAPFTI' description='Select Yes to enable automatic full text indexing of the Domino Directory.'><keywords
+ helperbutton='false' columns='1' ui='radiobutton'><textlist><text>Yes | 1</text><text
+>No | 0</text></textlist></keywords><code event='defaultvalue'><formula>"0"</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='23' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='21'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>When set to Yes the LDAP service rejects LDAP write operations which violate the schema rules.  The operations are not performed and an appropriate error is returned to the client.  When set to No the LDAP service does not check to make sure LDAP write operations adhere to the schema.</popuptext><run
+><font size='9pt'/>Enforce schema?</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run><run><font size='9pt'/><field runexitingonchange='true'
+ borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' kind='editable' name='LDAPEnfrcSchema' description='Select Yes to enforce schema rules.'><keywords
+ helperbutton='false' recalconchange='true' columns='1' ui='radiobutton'><textlist
+><text>Yes | 1</text><text>No | 0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code><code event='onchange'><lotusscript>Sub Onchange(Source As Field)
 	
 	Const TITLE = "Warning"
 	Const TEXT_LINE_1 = "LDAP write access is enabled but schema checking is disabled. This is not recommended."
@@ -114,57 +399,112 @@ Sub Onchange(Source As Field)
 		End If
 	End If
 	
-End Sub<break/></text></item>
+End Sub</lotusscript></code></field></run><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='21'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>When set to Yes the LDAP service requires clients that bind using name and password security to use their fully qualified distinguished names as their LDAP client user name.  When set to No, the "Internet authentication" field in the Security tab of the Server document for the server that runs the LDAP service controls which names are acceptable for name-and-password security. </popuptext><run
+><font size='9pt'/>DN Required on Bind</run></popup><run><font size='9pt'/>?</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='LDAPStrictRFC' description='Select Yes to require clients that bind to use their fully qualified distinguished names as their LDAP client user name.'
+ htmlid='LDAPStrictRFC'><keywords helperbutton='false' columns='1' ui='radiobutton'><textlist
+><text>Yes | 1</text><text>No | 0</text></textlist></keywords><code event='defaultvalue'><formula
+>"0"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='21'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>When set to Yes the LDAP service will use the UTF-8 character encoding when returning results to LDAP V2 clients even though RFC 1777 doesn't support the use of UTF-8. Setting this option to Yes is necessary to be compatible with LDAP V2 clients that use UTF-8 such as Netscape Communicator and EudoraPro 4.1.  When set to no the LDAP service will not use the UTF-8 character encoding, and instead will use the IA5 or T61 character encoding specified in RFC 1777.  Beware, when this option is set to No LDAP V2 clients will be unable to receive results which have international characters outside of the IA5 or T61 encodings. </popuptext><run
+><font size='9pt'/>Encode results in UTF8 for LDAPv2 clients?</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' kind='editable'
+ name='LDAPUTF8Res' description='Select Yes for UTF-8 character encoding to be used when returning results to LDAP V2 clients.'
+ htmlid='LDAPUTF8Res'><keywords helperbutton='false' columns='1' ui='radiobutton'><textlist
+><text>Yes | 1</text><text>No | 0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='21'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specify the number of referrals that the LDAP server can return to LDAP clients. A referral is a URL to another LDAP server that may store the information being queried. By default the LDAP server can return only one referral to an LDAP client because Microsoft Internet Explorer clients fail if more than one referral is returned to them.
+Note  Modify this value only if you know that none of the LDAP clients connecting to the LDAP server are Internet Explorer clients. 
+</popuptext><run><font size='9pt'/>Maximum number of referrals:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run><run><font size='9pt'/><field type='number'
+ kind='editable' name='LDAPMaxRefs' description='Specify the maximum number of referrals.  A referral is a URL to another LDAP server that may store the information being queried.'
+ htmlid='LDAPMaxRefs'><numberformat format='fixed' punctuated='false' parens='false'
+ percent='false' bytes='false'/><code event='htmlattributes'><formula>htmlInputS</formula></code><code
+ event='defaultvalue'><formula>1</formula></code></field></run><run><font
+ size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='21'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specify the maximum length (in bytes) of an attribute's value which will be logged by Activity Logging.  The rest of the value is truncated in the activity log.  This setting is only relevant if activity logging for the LDAP service is enabled.</popuptext><run
+><font size='9pt'/>Activity Logging truncation size:</run></popup><run><font
+ size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run><run><font size='9pt'/><field type='number'
+ kind='editable' name='LDAPLogFldSzLim' description='Specify the maximum length (in bytes) of an attribute&apos;s value which will be logged by Activity Logging.'
+ htmlid='LDAPLogFldSzLim'><numberformat format='fixed' punctuated='false'
+ parens='false' percent='false' bytes='false'/><code event='htmlattributes'><formula
+>htmlInputS</formula></code><code event='defaultvalue'><formula>4096</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='24' leftmargin='0.0625in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='24'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Select Yes to enable dereferencing of aliases on search requests, select No (default) to disable dereferencing.</popuptext><run
+><font size='9pt'/>Allow dereferencing of aliases on search requests?</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='25' leftmargin='0.0625in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ServerName!="*"</formula></code></pardef>
+<par def='25'><run><font size='9pt'/><field borderstyle='none' lookupeachchar='false'
+ lookupaddressonrefresh='false' type='keyword' kind='editable' name='LDAPDerefAliasesEnabled'
+ description='Select Yes to enable dereferencing of aliases on search requests, select No (default) to disable dereferencing.'><keywords
+ helperbutton='false' columns='1' ui='radiobutton'><textlist><text>Yes | 1</text><text
+>No | 0</text></textlist></keywords><code event='defaultvalue'><formula>"0"</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='26' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>ServerName!="*"</formula></code></pardef>
+<par def='26'><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='3'><run><font size='2pt' name='Small Fonts' pitch='variable' truetype='false'
+ familyid='20'/></run></par>
+<par def='1'><run><font size='9pt' color='red'/>LDAP Access Control</run></par>
+<par def='1'><run><font size='8pt' style='bold'/></run><run><font size='9pt'/><field
+ type='text' kind='computed' name='LDAPAccessControl' htmlid='LDAPAccessControl'><code
+ event='defaultvalue'><formula>"defaultaccess none"+@NewLine+
+"access  to attr=objectclass by * read"+@NewLine+
+ "access  to attr="+@Implode(LDAPFieldACL;",")+" by * read"+@NewLine+
+ "access  to attr=entry by * read"+@NewLine</formula></code></field></run><run
+><font size='2pt' name='Small Fonts' pitch='variable' truetype='false' familyid='20'/></run><run
+><font size='9pt'/><field type='number' kind='editable' name='$Config_LDAP_subf_1'><numberformat
+ format='general' varying='true' digits='2' punctuated='false' parens='false'
+ percent='false' bytes='false'/><code event='defaultvalue'><formula>0</formula></code></field></run><run
+><font size='2pt' name='Small Fonts' pitch='variable' truetype='false' familyid='20'/></run></par>
+<par def='1'><sharedfieldref name='DefaultAttr'/></par></richtext></body>
 <item name='LDAPACLVersion' summary='false' sign='true'><number>0</number></item>
-<item name='LDAPATACL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LDAPFieldACL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LDAPAllowWriteAccess' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='LDAPTimeout' summary='false' sign='true'><number>0</number></item>
 <item name='LDAPMaxEntries' summary='false' sign='true'><number>0</number></item>
 <item name='LDAPMinChar' summary='false' sign='true'><number>0</number></item>
-<item name='LDAPQueryAltLangInfo' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LDAPAmbiguousWrite' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LDAPFTI' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LDAPEnfrcSchema' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LDAPStrictRFC' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LDAPUTF8Res' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='LDAPMaxRefs' summary='false' sign='true'><number>0</number></item>
 <item name='LDAPLogFldSzLim' summary='false' sign='true'><number>0</number></item>
-<item name='LDAPDerefAliasesEnabled' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LDAPAccessControl' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='$Config_LDAP_subf_1' summary='false' sign='true'><number>0</number></item>
-<item name='DefaultAttr' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>DefaultAttr</text><text>$Config_LDAP_subf_1</text><text
->LDAPAccessControl</text><text>LDAPDerefAliasesEnabled</text><text>LDAPLogFldSzLim</text><text
->LDAPMaxRefs</text><text>LDAPUTF8Res</text><text>LDAPStrictRFC</text><text
->LDAPEnfrcSchema</text><text>LDAPFTI</text><text>LDAPAmbiguousWrite</text><text
->LDAPQueryAltLangInfo</text><text>LDAPMinChar</text><text>LDAPMaxEntries</text><text
->LDAPTimeout</text><text>LDAPAllowWriteAccess</text><text>LDAPFieldACL</text><text
->LDAPATACL</text><text>LDAPACLVersion</text></textlist></item>
 <item name='$LDAPAllowWriteAccess_O' sign='true'>
 <rawitemdata type='14'>
 AQAAAkxTT0IDABQIZW4AAAQAHwDJAAQAAAB8BvQEAAAAAAQABAQQBAAAAABAAKQANAAAAIwBTAFw
@@ -302,529 +642,5 @@ S5gFUwAGhSV9VAS4OGUAGiAAS5gFUwwGhSV9jAS4OFAAGiEAYgIAAH3cAY8NAwZCk799rAK/m44U
 fawBmwYrpwIaIgBYAgAAjgayOCAAGiMAS/QDLBgGfbQEfYwEIxokAEv0AyxIBosAiwCLACMaJQAa
 JgAaJwAaKQAdAgAAABEAGAAAAAAA//8BAAMAAwAAAAYAKAEIAIQBDwAKAAAAOg==
 </rawitemdata></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$LDAPConfiguration</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-AACt/6n/PQIBAAwAAAAxAkNsaWNrIG9uIHRoaXMgYnV0dG9uIHRvIGNvbnRyb2wgdGhlIGZpZWxk
-cyB0aGF0IGFub255bW91cyBMREFQIHVzZXJzIGNhbiBxdWVyeS4gIFRoZSBMREFQIEZpZWxkIGxp
-c3QgaXMgY29uZmlndXJlZCBieSBmb3JtLiAgSWYgeW91J3ZlIGN1c3RvbWl6ZWQgdGhlIERvbWlu
-byBEaXJlY3RvcnkgYnkgYWRkaW5nIGZpZWxkcywgYWxsb3cgYW5vbnltb3VzIExEQVAgdXNlcnMg
-dG8gaGF2ZSBhY2Nlc3MgdG8gdGhvc2UgbmV3IGZpZWxkcyBieSBhZGRpbmcgdGhlbSB0byB0aGUg
-TERBUCBGaWVsZCBMaXN0LiAgRG9uJ3Qgc2VsZWN0IExvY2F0aW9uLCBTZXJ2ZXJcRG9tYWluLCBT
-ZXJ2ZXJcRXh0ZXJuYWwgRG9tYWluIE5ldHdvcmsgSW5mb3JtYXRpb24sIFNlcnZlclxIb2xpZGF5
-LCBVc2VyIFNldHVwIFByb2ZpbGUsIFNlcnZlclxDb25maWd1cmF0aW9uIFNldHRpbmdzLCBTZXJ2
-ZXJcQ29ubmVjdGlvbiwgb3IgQ3Jvc3MgQ2VydGlmaWNhdGUgYmVjYXVzZSBMREFQIGNsaWVudHMg
-Y2FuJ3Qgc2VhcmNoIGluZm9ybWF0aW9uIGluIGRvY3VtZW50cyBjcmVhdGVkIHdpdGggdGhlc2Ug
-Zm9ybXMuAACF/z4AAQAACUNob29zZSBmaWVsZHMgdGhhdCBhbm9ueW1vdXMgdXNlcnMgY2FuIHF1
-ZXJ5IHZpYSBMREFQOqoC3gYAAK4Ahf8IAAEAAAmkEgEBsBNwIwAAQAIAEAEBAACBAoL/WgAJAAAA
-AAABAAAABhRwIwYUAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMlikA
-AAAAlYBWAAAAVgAAAIMXZAABAAAABAAAAIMECQC8BggACQCF/wgAAQAACd0GAACt/63/EQgDAAgB
-AAAFCCcrK0xvdHVzU2NyaXB0IERldmVsb3BtZW50IEVudmlyb25tZW50OjI6NTooT3B0aW9ucyk6
-MDo2NgoKJysrTG90dXNTY3JpcHQgRGV2ZWxvcG1lbnQgRW52aXJvbm1lbnQ6Mjo1OihGb3J3YXJk
-KTowOjEKRGVjbGFyZSBTdWIgQ2xpY2soU291cmNlIEFzIEJ1dHRvbikKCicrK0xvdHVzU2NyaXB0
-IERldmVsb3BtZW50IEVudmlyb25tZW50OjI6NTooRGVjbGFyYXRpb25zKTowOjIKCicrK0xvdHVz
-U2NyaXB0IERldmVsb3BtZW50IEVudmlyb25tZW50OjI6MjpCaW5kRXZlbnRzOjE6MTI5ClByaXZh
-dGUgU3ViIEJpbmRFdmVudHMoQnl2YWwgT2JqZWN0bmFtZV8gQXMgU3RyaW5nKQoJU3RhdGljIFNv
-dXJjZSBBcyBCVVRUT04KCVNldCBTb3VyY2UgPSBCaW5kKE9iamVjdG5hbWVfKQoJT24gRXZlbnQg
-Q2xpY2sgRnJvbSBTb3VyY2UgQ2FsbCBDbGljawpFbmQgU3ViCgonKytMb3R1c1NjcmlwdCBEZXZl
-bG9wbWVudCBFbnZpcm9ubWVudDoyOjI6Q2xpY2s6MToxMgpTdWIgQ2xpY2soU291cmNlIEFzIEJ1
-dHRvbikKCQoJRGltIGhEb2MgQXMgTm90ZXNEb2N1bWVudAoJRGltIGhXb3Jrc3BhY2UgQXMgTm90
-ZXNVSVdvcmtzcGFjZSAKCURpbSBoVWlkb2MgQXMgTm90ZXNVaURvY3VtZW50CglEaW0gaEl0ZW0g
-QXMgTm90ZXNJdGVtCgkKCURpbSB2VmVyc2lvbiBBcyBWYXJpYW50CgkKCU9uIEVycm9yIEdvdG8g
-RVJST1JfSEFORExFUgoJCgknIGlmIHRoZSB2ZXJzaW9uIGlzIGVhcmxpZXIgdGhhbiBSbmV4dCwg
-dGhlbiBiYWlsCgl2VmVyc2lvbiA9IEV2YWx1YXRlKHxAVGV4dFRvTnVtYmVyKEBWZXJzaW9uKXws
-ZG9jKQoJSWYgdlZlcnNpb24oMCkgPCAxNzEgVGhlbgoJCU1lc3NhZ2Vib3ggIllvdSBtdXN0IHVz
-ZSBhIE5vdGVzIDYgY2xpZW50IG9yIGxhdGVyIHRvIGNvbmZpZ3VyZSBMREFQIEF0dHJpYnV0ZSBU
-eXBlcy4iCgkJRXhpdCBTdWIKCUVuZCBJZgoJCgknIHNldCB0aGUgZGltJ2QgdmFyaWFibGVzCglT
-ZXQgaFdvcmtzcGFjZSA9IE5ldyBOb3Rlc1VJV29ya3NwYWNlIAoJU2V0IGhVaWRvYyA9IGhXb3Jr
-c3BhY2UuQ3VycmVudERvY3VtZW50CglTZXQgaERvYyA9IGhVaWRvYy5Eb2N1bWVudAoJU2V0IGhJ
-dGVtID0gaERvYy5HZXRGaXJzdEl0ZW0oIkxEQVBRdWVyaWFibGVBdHRyaWJ1dGVzIikKCQoJCScg
-aWYgdGhlIHVzZXIgaGl0cyAiT0siIChkb21pbm8gcHJvdmlkZWQpIHRoZW4gc2V0IHRoZSBMREFQ
-QVRBQ0wgZmllbGQgdG8gdGhlIExEQVBRdWVyaWFibGVBdHRyaWJ1dGVzIHZhbHVlcwoJSWYgaFdv
-cmtzcGFjZS5EaWFsb2dib3goICIoTERBUEF0dHJpYnV0ZVR5cGVMaXN0KSIsIFRydWUsIFRydWUs
-IEZhbHNlLCBGYWxzZSwgRmFsc2UsIEZhbHNlLCAiTERBUCBBdHRyaWJ1dGUgVHlwZSBTZWxlY3Rp
-b24iLCAsIFRydWUsIEZhbHNlLCBUcnVlICkgVGhlbgoJCUlmIGhEb2MuTERBUFF1ZXJpYWJsZUF0
-dHJpYnV0ZXMoMCkgPSAiIiBUaGVuCgkJCU1zZ2JveCAiWW91IG11c3QgY2hvb3NlIGF0IGxlYXN0
-IG9uZSBxdWVyaWFibGUgTERBUCBhdHRyaWJ1dGUuIixNQl9PSytNQl9JQ09OU1RPUCwiTERBUCBB
-dHRyaWJ1dGUgU2VsZWN0aW9uIEVycm9yIgoJCQlJZiBoV29ya3NwYWNlLkRpYWxvZ2JveCggIihM
-REFQQXR0cmlidXRlVHlwZUxpc3QpIiwgVHJ1ZSwgVHJ1ZSwgRmFsc2UsIEZhbHNlLCBGYWxzZSwg
-RmFsc2UsICJMREFQIEF0dHJpYnV0ZSBUeXBlIFNlbGVjdGlvbiIsICwgVHJ1ZSwgRmFsc2UsIFRy
-dWUgKSBUaGVuCgkJCQloRG9jLkxEQVBBVEFDTCA9IGhEb2MuTERBUFF1ZXJpYWJsZUF0dHJpYnV0
-ZXMKCQkJCUNhbGwgaFVpZG9jLlJlZnJlc2gKCQkJRW5kIElmCgkJRWxzZQoJCQloRG9jLkxEQVBB
-VEFDTCA9IGhEb2MuTERBUFF1ZXJpYWJsZUF0dHJpYnV0ZXMKCQkJQ2FsbCBoVWlkb2MuUmVmcmVz
-aAkJCgkJRW5kIElmCglFbmQgSWYKCQpST1VUSU5FX0VYSVQ6CglFeGl0IFN1YgoJCkVSUk9SX0hB
-TkRMRVI6CglNc2dib3ggIkludGVybmFsIEVycm9yIC0gU3ViZm9ybTogIExpbmUjICIgJiBGb3Jt
-YXQkKEVybCkgJiAiICAgRXJyb3I6ICIgJiBFcnJvciQKCVJlc3VtZSBST1VUSU5FX0VYSVQKRW5k
-IFN1YgAAsf/4EewRAAAAAAAAAQAAAkxTT0IDABQIZW4AAAQAJgBzAQQAGACMB4wGAAAAAAQAuAM0
-BQAAAAAcAIAAEAAwAAAAKAFMAAAAAAAAAAIAAAAYAGwBAAAAAGwBbAEAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAYAAADMADQFIAKUBAAAAADEA8QDAAAAAOQC
-5ALMAMwAAAAAAAAAAAAAAAAAAAAAAAAAAAA0BTQFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAA
-VjAuMAAAAAAAAAAAAAAAAAAAAAAEAAAAcwEAAAAAAACMBwAAjAYAAAAAAAAAAAAAAQAAAAAAAAAB
-AAAAAAAAAAEAAAAAAAAAAAAAAAUAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAwCQBgAAAABwAgUAJABCAE8ARABZAAAAZAADAE4ARQBXAAAA
-eAAGAEQARQBMAEUAVABFAAAAAABsAQoASQBOAEkAVABJAEEATABJAFoARQAAAAAARAEJAFQARQBS
-AE0ASQBOAEEAVABFAAAAvAAGAE8AQgBKAEUAQwBUAAAAAAD4AAAAAAAAAAwBGwAoAEcATABPAEIA
-QQBMAFMAKQAkAEwARABBAFAAQwBPAE4ARgBJAEcAVQBSAEEAVABJAE8ATgAAACQCGwAoAEcAbABv
-AGIAYQBsAHMAKQAkAEwARABBAFAAQwBvAG4AZgBpAGcAdQByAGEAdABpAG8AbgAAADgCBgBTAE8A
-VQBSAEMARQAAAAAAWAEKAEIASQBOAEQARQBWAEUATgBUAFMAAAAAAOABCwBPAEIASgBFAEMAVABO
-AEEATQBFAF8AAAB8AQYAQgBVAFQAVABPAE4AAAAAAOQDBgAlAEwAUwBJAEQARQAAAAAArAEFAEMA
-TABJAEMASwAAAIwBBABIAEQATwBDAAAAAADAAQ0ATgBPAFQARQBTAEQATwBDAFUATQBFAE4AVAAA
-AEwCBgAlAEwAUwBYAEIARQAAAAAAmAINAE4ATwBUAEUAUwBEAEEAVABBAEIAQQBTAEUAAAD8AQoA
-SABXAE8AUgBLAFMAUABBAEMARQAAAAAAgAIQAE4ATwBUAEUAUwBVAEkAVwBPAFIASwBTAFAAQQBD
-AEUAAAAAABADBgAlAEwAUwBYAFUASQAAAAAAOAQGAEgAVQBJAEQATwBDAAAAAACEBA8ATgBPAFQA
-RQBTAFUASQBEAE8AQwBVAE0ARQBOAFQAAAD4BAUASABJAFQARQBNAAAAqAMJAE4ATwBUAEUAUwBJ
-AFQARQBNAAAAsAIIAFYAVgBFAFIAUwBJAE8ATgAAAAAA0AINAEUAUgBSAE8AUgBfAEgAQQBOAEQA
-TABFAFIAAAAEAxcAQABUAGUAeAB0AFQAbwBOAHUAbQBiAGUAcgAoAEAAVgBlAHIAcwBpAG8AbgAp
-AAAABAQDAEQATwBDAAAAxARJAFkAbwB1ACAAbQB1AHMAdAAgAHUAcwBlACAAYQAgAE4AbwB0AGUA
-cwAgADYAIABjAGwAaQBlAG4AdAAgAG8AcgAgAGwAYQB0AGUAcgAgAHQAbwAgAGMAbwBuAGYAaQBn
-AHUAcgBlACAATABEAEEAUAAgAEEAdAB0AHIAaQBiAHUAdABlACAAVAB5AHAAZQBzAC4AAADMAw8A
-QwBVAFIAUgBFAE4AVABEAE8AQwBVAE0ARQBOAFQAAAAIBggARABPAEMAVQBNAEUATgBUAAAAAAD/
-/wwARwBFAFQARgBJAFIAUwBUAEkAVABFAE0AAAAAAHwFFwBMAEQAQQBQAFEAdQBlAHIAaQBhAGIA
-bABlAEEAdAB0AHIAaQBiAHUAdABlAHMAAABQBAkARABJAEEATABPAEcAQgBPAFgAAABsBRcAKABM
-AEQAQQBQAEEAdAB0AHIAaQBiAHUAdABlAFQAeQBwAGUATABpAHMAdAApAAAA9AUdAEwARABBAFAA
-IABBAHQAdAByAGkAYgB1AHQAZQAgAFQAeQBwAGUAIABTAGUAbABlAGMAdABpAG8AbgAAACgGFwBM
-AEQAQQBQAFEAVQBFAFIASQBBAEIATABFAEEAVABUAFIASQBCAFUAVABFAFMAAACYBTYAWQBvAHUA
-IABtAHUAcwB0ACAAYwBoAG8AbwBzAGUAIABhAHQAIABsAGUAYQBzAHQAIABvAG4AZQAgAHEAdQBl
-AHIAaQBhAGIAbABlACAATABEAEEAUAAgAGEAdAB0AHIAaQBiAHUAdABlAC4AAAAAAP//BQBNAEIA
-XwBPAEsAAAD//wsATQBCAF8ASQBDAE8ATgBTAFQATwBQAAAA3AUeAEwARABBAFAAIABBAHQAdABy
-AGkAYgB1AHQAZQAgAFMAZQBsAGUAYwB0AGkAbwBuACAARQByAHIAbwByAAAAAABwBgkATABEAEEA
-UABBAFQAQQBDAEwAAAD//wcAUgBFAEYAUgBFAFMASAAAAP//DABSAE8AVQBUAEkATgBFAF8ARQBY
-AEkAVAAAAAAA//8hAEkAbgB0AGUAcgBuAGEAbAAgAEUAcgByAG8AcgAgAC0AIABTAHUAYgBmAG8A
-cgBtADoAIAAgAEwAaQBuAGUAIwAgAAAA//8KACAAIAAgAEUAcgByAG8AcgA6ACAAAAAAAAUAkAcA
-AAAAoUeRUBgAAAAAAIQA8JNaFAAAAAAAAAAACAAAAGwBAAAQAQAAAAAAAAIAAACwAFwBAAAAAAAA
-AAAAAAAAAAAAALAAsAAAAAAAAAAAAAAAAAAAAAAAAAAAAFwBXAEAAAAAAAAAAAEAAAACAAAABgAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAADAAEAXAEAACwBBggAAAAAGgAAAFwB//8AAAAAEAAAACACAABIAQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEW
-EyntLmkQv10A3QERhrcAAAAAAAAAAAAAAAAAAAAAZAAAAAAAAAAAAAAAAAAAAAIAwAAAADwGAAAA
-AFoEAQD//wAAAwAgAAAAAAD8AAkCAADMAAgAAAAAAAAAcAEAAAAAAAAJAAAABAI0BwAAAAAAAAAA
-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
-IxovABowADojABoxAEuoA1FEB0uoA1AYB6UaMgBLJAUsUAeLAIsAiwAjGjMAGjQAGjYAGjcAHBo5
-ABo6AH0sBhWABkabv310Br8Wv5uAgAYHGjsAD9n/GjwAHQcAHAAAAAAAGAAAAAoAvwBYAQMABwAM
-AAUACTBTMEUAAgAAABEAGAAAAAAA//8BAAMAAwAAAAYAEAEIAHABDwAKAAAAZqv/JgAAAEALiQUB
-AAEAAAlTZWxlY3QgQXR0cmlidXRlIFR5cGVzcggJAMDAwABiDgEAggAAAAAAAAAAAK4CX/8QAAEA
-1QACAAAAAAAAAN4GAACuAIX/CAABAAAJgQKC/1oACgAAAAAAAQAAAAYUcCMGFAAAzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzJapAAAAAJSAVgAAAFYAAACDF2QAAQAAAAQA
-AAC7/2QACgATAMKt92EUAFYACgAEAAAARAAFAAoAU2VydmVyTmFtZQEAAQAqAAsCvwBYAQAAAAAA
-AABgZUAOAq8AFAAIACoArgAMAPsAYwGuAAQAtQMdAgMABwAMAAUACTNTNFMAgwQKAIX/CAABAAAJ
-3QYAAK3/rf8MAAMACAAgAAAA+f8gAAAAAAABAAQAsQAAAAAAAAAAAAAAAAAAAAAAAADc/8QA+f+y
-ACBOAAAAAAAAAABpZiAoZGxnSXNPcGVuKCkpIHJldHVybg0NdmFyIGlXaWR0aAk9IDYyMA12YXIg
-aUhlaWdodAk9ICh3aW5kb3cuaXNOTjRYID8gNTMwIDogMzkwKQ12YXIgc1VybAkJPSBzV2ViRGJO
-YW1lICsgJ0xEQVBBdHRyaWJ1dGVUeXBlTGlzdFdlYj9PcGVuRm9ybScNDWRsZ09wZW4oc1VybCwg
-aVdpZHRoLCBpSGVpZ2h0KQD/q/8mAAAAQAuJBQEAAQAACVNlbGVjdCBBdHRyaWJ1dGUgVHlwZXNy
-CAkAwMDAAGIOAQCCAAAAAAAAAAAArgJf/xAAAQDVAAcAAAAAAAAAX/8QAAIAAQAHAAAAAAAAAN4G
-AACuAIX/CAABAAAJpBIBAnAjMDMAAEACABABAQAAgQKC/1oACwAAAAAAAQAAAMYjCDPGIwAAzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzLZrAAAAAJSAVgAAAFYAAAB+CWMA
-AQAAAAQAAACDBAsAvAYIAAsAhf8IAAEAAAmkEgIAoAWwEwAAUAIAEQEBAACBAoL/WgAMAAAAAAAA
-AAAA9gWwE/YFAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMhgkAAAAA
-lIBWAAAAVgAAAPAMZAABAAAABAAAAIMEDAC8BgoADACF/wgAAQAACd0GAACt/6n/XQABAAwAAABR
-AEVudGVyIHRoZSBMREFQIEF0dHJpYnV0ZSBUeXBlcyBhbmQgRG9taW5vIGZpZWxkcyB0aGF0IGFu
-b255bW91cyB1c2VycyBjYW4gcXVlcnkuAACF/yIAAQAACUFub255bW91cyB1c2VycyBjYW4gcXVl
-cnk6qgLeBgAArgCF/wgAAQAACaQSAgGwE3AjAABQAgARAQEAAIECgv9aAA0AAAAAAAAAAAAGFHAj
-BhQAAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyGCQAAAACUgFYAAABW
-AAAAgxdkAAEAAAAEAAAAgwQNALwGCgANAIX/HQABAQAJTERBUCBBdHRyaWJ1dGUgVHlwZXM6AIEC
-gv9aAA4AAAAAAAAAAAAGFHAjBhQAAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMyGCQAAAACUgFYAAABWAAAAgxdkAAEAAAAEAAAAgwQOALwGCAAOAIX/CAABAAAJ3QYAAIr/
-/v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/3IBiAEBBQ5AAAAIAAAAAAIBAAAJDAEAAAAAAAAJADgA
-AAAMAQoABAAAAMYAvwBYAQAAAAAAAABgZUANAq8ArgCYAAUACQBMREFQQVRBQ0wAAQAAAAoCrwB8
-AGYABQAMAExEQVBGaWVsZEFDTAEAAAAKAq8ASAAkAAUACwBEZWZhdWx0QXR0cgACAAMBAAAAAAAA
-+wI8Aa4AJAACABIBAAAAAAAABQAMAExEQVBGaWVsZEFDTLQCrgAEALUDrgAWAAUACQBMREFQQVRB
-Q0wArgAEALUDrgAWAAUACQBMREFQQVRBQ0wArgAEALUDAwAHAEAAOgAJOVJUMTFSVFQxMlMxM1Mx
-NVJUVFQxN1JUVFRUMjFSVFRUVDI4UlRUVFQzNFJUVFRUVDM2UlRUMzlSTERBUEFUQUNMVGhlIExE
-QVAgQXR0cmlidXRlIFR5cGVzIHRoYXQgYW5vbnltb3VzIHVzZXJzIGNhbiBxdWVyeS4Aev8mAAwA
-AAAAAAAAAAAAAAAAAAAAAAAAAABMREFQRmllbGRBQ0zeBgAAiv+F/wgAAQAACaQSAgJwIzAzAABQ
-AgARAQEAAIECgv9aAA8AAAAAAAAAAADGIzAzxiMAAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMyGCQAAAACUhFYAAABWAAAAAAAAAAEAAAAEAAAAgwQPALwGCAAPAIX/FgAB
-AQAJRG9taW5vIEZpZWxkczqBAoMEDwC8BggADwCF/wgAAQAACt0GAACK//7/UAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAiv++AIgBAQUOQAAACAAAAAACAQAACVwAAAAAAAAADAAxAAAAXAAAAFAAvwBYAQAA
-AAAAAABgZUANAq8AOAAgAAIAFQEAAAAAAAAFAAkATERBUEFUQUNMALQCrgAYAAUADABMREFQRmll
-bGRBQ0yuAAQAtQMDAAcACgADAAk5UwBMREFQRmllbGRBQ0xUaGUgRG9taW5vIGZpZWxkcyB0aGF0
-IGFub255bW91cyB1c2VycyBjYW4gcXVlcnkuAHr/KAAOAAAAAAAAAAAAAAAAAAAAAAAAAAAATERB
-UEZpZWxkQUNMXzLeBgAAiv+F/wgAAQAACaQSAwCgBbATAABQAgARAQEAAIECgv9aABAAAAAAAAAA
-AAD2BbAT9gUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGCQAAAACU
-gFYAAABWAAAA8AxkAAEAAAAEAAAAgwQQALwGAwAQAIX/CAABAAAJ3QYAAK3/qf9sAgEADAAAAGAC
-U2VsZWN0IFllcyB0byBlbmFibGUgYXV0aGVudGljYXRlZCBMREFQIHVzZXJzIHRvIGFkZCwgZGVs
-ZXRlLCBvciBtb2RpZnkgZW50cmllcyBpbiB0aGUgRG9taW5vIERpcmVjdG9yeSB0aGlzIERvbWFp
-biBDb25maWd1cmF0aW9uIHJlY29yZCByZXNpZGVzIGluLiAgTm90ZSB0aGVzZSBMREFQIHVzZXJz
-IG11c3QgaGF2ZSBFZGl0b3IgYWNjZXNzIG9yIEF1dGhvciBhY2Nlc3Mgd2l0aCBhbiBhcHByb3By
-aWF0ZSByb2xlIGluIHRoZSBEb21pbm8gRGlyZWN0b3J5IEFDTC4gDQoNClRvIGFkZCBlbnRyaWVz
-LCBMREFQIHVzZXJzIG11c3QgaGF2ZSBFZGl0b3IgYWNjZXNzOyB0byBtb2RpZnkgZW50cmllcyB1
-c2VycyBtdXN0IGhhdmUgRWRpdG9yIGFjY2VzcyBvciBBdXRob3IgYWNjZXNzIHdpdGggYSBtb2Rp
-ZmllciByb2xlOyB0byBkZWxldGUgZW50cmllcyB1c2VycyBtdXN0IGhhdmUgdGhlICJEZWxldGUg
-ZG9jdW1lbnRzIiBwcml2aWxlZ2UuIA0KDQpJZiB5b3UgdXNlIERpcmVjdG9yeSBBc3Npc3RhbmNl
-LCB0aGlzIG9wdGlvbiBjYW4gYmUgc2V0IGRpZmZlcmVudGx5IGZvciBlYWNoIERvbWlubyBEaXJl
-Y3Rvcnkgc2VydmVkIHVwIGJ5IHRoZSBMREFQIHNlcnZlci4NCgCF/yYAAQAACUFsbG93IExEQVAg
-dXNlcnMgd3JpdGUgYWNjZXNzOqoC3gYAAK4Ahf8IAAEAAAmkEgMBsBNwIwAAUAIAEQEBAACBAoL/
-WgARAAAAAAAAAAAABhRwIwYUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAhgkAAAAAlIBWAAAAVgAAAIMXZAABAAAABAAAAIMEEQC8BgMAEQCF/wgAAQAACd0GAACK//7/
-VAAAAAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAALiwkALD/FAAAAAYgAAQAAAAAAAAAAAAAiv++AIqCAAUAIAAA
-CAAAAAACAQAACQ4AAAAAAAAAFABoAA8ADgAAAAwAAQABADAAAwBMREFQQWxsb3dXcml0ZUFjY2Vz
-c1NlbGVjdCBZZXMgdG8gZW5hYmxlIGF1dGhlbnRpY2F0ZWQgTERBUCB1c2VycyB0byBhZGQsIGRl
-bGV0ZSwgb3IgbW9kaWZ5IGVudHJpZXMgaW4gdGhlIERvbWlubyBEaXJlY3RvcnkuAgAFAAQAWWVz
-fDFOb3wwAHr/LgAUAAAAAAAAAAAAAAAAAAAAAAAAAAAATERBUEFsbG93V3JpdGVBY2Nlc3Nf/xAA
-AQDsAAIAAAAAAAAA3gYAAIr/hf8IAAEAAAmkEgMCcCMwMwAAUAIAEQEBAACBAoL/WgASAAAAAAAA
-AAAAxiMIM8YjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgkAAAAA
-lIBWAAAAVgAAAH4JYwABAAAABAAAAIMEEgC8BgMAEgCF/wgAAQAACaQSBACgBbATAABQAgARAQEA
-AIECgwQQALwGAwAQAIX/CAABAAAJ3QYAAK3/qf9rAAEADAAAAF8ARW50ZXIgdGhlIG1heGltdW0g
-bnVtYmVyIG9mIHNlY29uZHMgYmVmb3JlIGEgc2VhcmNoIGlzIHRlcm1pbmF0ZWQgKERlZmF1bHQg
-aXMgMCAgInVubGltaXRlZCIpLgAAhf8QAAEAAAlUaW1lb3V0OqoC3gYAAK4Ahf8IAAEAAAmkEgQB
-sBNwIwAAUAIAEQEBAACBAoMEEQC8BgMAEQCF/wgAAQAACd0GAACK//7/VAAAAAEAAAABAAAAAAAA
-AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAALiwkALD/LgAAAAAAAgAAAAAAAAAAAAAAFgAAABYAAAAUAAUACgBodG1sSW5wdXRTAwCK
-/64DigAAAwAwAAEAAAAAAAIBAAAJEgAAAAAADgMLAF4AAAASAAAAEAAAAAAAAAAAAAAAAwAOAwoA
-BAABADgACQBMX0VSUl9NU0cAAQAiAFRoZSB0aW1lb3V0IGNhbm5vdCBiZSBsZXNzIHRoYW4gMC4D
-AAcADAAFAAkxUzJTAAEASgAEAHNNc2cFAAsATERBUFRpbWVvdXQAAAAAAAAAAAAAAA4CrwAgABQA
-BQAJAExfRVJSX01TRwCuAAwAAQAAAK4ABAC1AwMABwAQAAoACTBSUjFTMlM4UwcAGgAUAHJldHVy
-biBlcnJvciBtZXNzYWdlBwAMAAYACTBSUjFTAQA6AAQAX3REYosAAAAAAAAAAADwPxABawIBAAEA
-IAABAAEAXAAfAgEAAQArAAEAAQAvAB8ChAMDAAcAGgAUAAkwUjFTM0UyUzhTMTJTMTVTMTZTAQBK
-AAUAX3RNc2cABQAEAHNNc2cBAAEAXAABAAEAJwAfAgEAAQAiAB8CAQADACU1QwABAAMAJTI3AB8C
-AQADACUyMgAfAoQDAwAHABQADgAJMFIxUzJFMlM2UzEyUwEAZgAGAF90V2ViMQEADgA8c2NyaXB0
-IHNyYz0nLwUABABfdERiIgIBADYAL1dlYkpTTmF2aWdhdGlvblRvb2xzP09wZW5KYXZhU2NyaXB0
-TGlicmFyeSc+PC9zY3JpcHQ+IgIDAAcAFgAPAAkwUjFTMlMzUzRTNVM2UwABAE4ABgBfdFdlYjIB
-AB0APHNjcmlwdD5udFZhbGlkYXRpb25GYWlsdXJlKCcABQAFAF90TXNnACICAQAMACcpOzwvc2Ny
-aXB0PiICAwAHABYADwAJMFIxUzJTM1M0UzVTNlMAAQAkAAUAX3RXZWIABQAGAF90V2ViMQUABgBf
-dFdlYjIiAgMABwAUAA0ACTBSMVMyRTJTM1M0UwAAAFoABQAEAHNNc2cBAAAACgKvAEQACAB6AK4A
-PAD7AAUBAQAFAE5vdGVzAAoCrwAgAA4ABQAEAHNNc2euABIABQAFAF90V2ViAK4ABAC1A3sBrgAE
-ALUDAwAHACAAGgAJMFJSM1M0UzZSVDhSVDEzUzE0UzE2UzE4U0xEQVBUaW1lb3V0RW50ZXIgdGhl
-IG1heGltdW0gbnVtYmVyIG9mIHNlY29uZHMgYmVmb3JlIGEgc2VhcmNoIGlzIHRlcm1pbmF0ZWQg
-KERlZmF1bHQgaXMgMCAgInVubGltaXRlZCIpLgB6/yYACwAAAAAAAAAAAAAAAAAAAAAAAAAAAExE
-QVBUaW1lb3V0AN4GAACK/4X/EAABAAAJIHNlY29uZHOkEgQCcCMwMwAAUAIAEQEBAACBAoL/WgAT
-AAAAAAAAAAAAxiMwM8YjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-hgkAAAAAlIBWAAAAVgAAAFYTZAABAAAABAAAAIMEEwC8BgMAEwCF/wgAAQAACaQSBQCgBbATAABQ
-AgARAQEAAIECgwQQALwGAwAQAIX/CAABAAAJ3QYAAK3/qf9pAAEADAAAAF0ARW50ZXIgdGhlIG1h
-eGltdW0gbnVtYmVyIG9mIGVudHJpZXMgYSBzaW5nbGUgc2VhcmNoIGNhbiByZXR1cm4gKERlZmF1
-bHQgaXMgMCAgInVubGltaXRlZCIpLiAAAIX/KwABAAAJTWF4aW11bSBudW1iZXIgb2YgZW50cmll
-cyByZXR1cm5lZDoAqgLeBgAArgCF/wgAAQAACaQSBQGwE3AjAABQAgARAQEAAIECgwQRALwGAwAR
-AIX/CAABAAAJ3QYAAIr//v9UAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuLCQAsP8uAAAAAAACAAAAAAAA
-AAAAAAAWAAAAFgAAABQABQAKAGh0bWxJbnB1dFMDAIr/zAOKAAADADAAAQAAAAAAAgEAAAkSAAAA
-AAAsAw4AWwAAABIAAAAQAAAAAAAAAAAAAAADACwDCgAEAAEAVAAJAExfRVJSX01TRwABAD4AVGhl
-IG1heGltdW0gbnVtYmVyIG9mIGVudHJpZXMgcmV0dXJuZWQgY2Fubm90IGJlIGxlc3MgdGhhbiAw
-Li4DAAcADAAFAAkxUzJTAAEATAAEAHNNc2cFAA4ATERBUE1heEVudHJpZXMAAAAAAAAAAAAADgKv
-ACAAFAAFAAkATF9FUlJfTVNHAK4ADAABAAAArgAEALUDAwAHABAACgAJMFJSMVMyUzhTBwAaABQA
-cmV0dXJuIGVycm9yIG1lc3NhZ2UHAAwABgAJMFJSMVMBADoABABfdERiiwAAAAAAAAAAAPA/EAFr
-AgEAAQAgAAEAAQBcAB8CAQABACsAAQABAC8AHwKEAwMABwAaABQACTBSMVMzRTJTOFMxMlMxNVMx
-NlMBAEoABQBfdE1zZwAFAAQAc01zZwEAAQBcAAEAAQAnAB8CAQABACIAHwIBAAMAJTVDAAEAAwAl
-MjcAHwIBAAMAJTIyAB8ChAMDAAcAFAAOAAkwUjFTMkUyUzZTMTJTAQBmAAYAX3RXZWIxAQAOADxz
-Y3JpcHQgc3JjPScvBQAEAF90RGIiAgEANgAvV2ViSlNOYXZpZ2F0aW9uVG9vbHM/T3BlbkphdmFT
-Y3JpcHRMaWJyYXJ5Jz48L3NjcmlwdD4iAgMABwAWAA8ACTBSMVMyUzNTNFM1UzZTAAEATgAGAF90
-V2ViMgEAHQA8c2NyaXB0Pm50VmFsaWRhdGlvbkZhaWx1cmUoJwAFAAUAX3RNc2cAIgIBAAwAJyk7
-PC9zY3JpcHQ+IgIDAAcAFgAPAAkwUjFTMlMzUzRTNVM2UwABACQABQBfdFdlYgAFAAYAX3RXZWIx
-BQAGAF90V2ViMiICAwAHABQADQAJMFIxUzJFMlMzUzRTAAAAWgAFAAQAc01zZwEAAAAKAq8ARAAI
-AHoArgA8APsABQEBAAUATm90ZXMACgKvACAADgAFAAQAc01zZ64AEgAFAAUAX3RXZWIArgAEALUD
-ewGuAAQAtQMDAAcAIAAaAAkwUlIzUzRTNlJUOFJUMTNTMTRTMTZTMThTTERBUE1heEVudHJpZXNF
-bnRlciB0aGUgbWF4aW11bSBudW1iZXIgb2YgZW50cmllcyBhIHNpbmdsZSBzZWFyY2ggY2FuIHJl
-dHVybiAoRGVmYXVsdCBpcyAwICAidW5saW1pdGVkIikuAHr/KAAOAAAAAAAAAAAAAAAAAAAAAAAA
-AAAATERBUE1heEVudHJpZXPeBgAAiv+F/wgAAQAACaQSBQJwIzAzAABQAgARAQEAAIECgwQTALwG
-AwATAIX/CAABAAAJpBIGAKAFsBMAAFACABEBAQAAgQKDBBAAvAYDABAAhf8IAAEAAAndBgAArf+p
-//AAAQAMAAAA5ABTcGVjaWZ5IHRoZSBtaW5pbXVtIG51bWJlciBvZiBjaGFyYWN0ZXJzIHRoYXQg
-dXNlcnMgbXVzdCBzcGVjaWZ5IGJlZm9yZSB0aGUgZmlyc3Qgd2lsZGNhcmQgaW4gYSBzZWFyY2gg
-cXVlcnkuDQoNCklmIHBlcmZvcm1hbmNlIGlzIHNsb3cgb24gdGhlIExEQVAgc2VydmVyLCB0cnkg
-aW5jcmVhc2luZyB0aGUgbWluaW11bSBjaGFyYWN0ZXJzIHJlcXVpcmVkIGZvciB3aWxkY2FyZCBz
-ZWFyY2hlcy4NCgCF/y8AAQAACU1pbmltdW0gY2hhcmFjdGVycyBmb3Igd2lsZGNhcmQgc2VhcmNo
-OgCqAt4GAACuAIX/CAABAAAJpBIGAbATcCMAAFACABEBAQAAgQKDBBEAvAYDABEAhf8IAAEAAAnd
-BgAAiv/+/1QAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4sJACw/y4AAAAAAAIAAAAAAAAAAAAAABYAAAAW
-AAAAFAAFAAoAaHRtbElucHV0UwMAiv/cA4oAAAMAMAABAAAAAAACAQAACRIAAAAAAC4DCwBtAAAA
-EgAAABAAAAAAAAAAAADwPwMALgMKAAQAAQBYAAkATF9FUlJfTVNHAAEAQQBUaGUgbWluaW11bSBj
-aGFyYWN0ZXJzIGZvciB3aWxkY2FyZCBzZWFyY2ggY2Fubm90IGJlIGxlc3MgdGhhbiAwLgADAAcA
-DAAFAAkxUzJTAAEASgAEAHNNc2cFAAsATERBUE1pbkNoYXIAAAAAAAAAAAAAAA4CrwAgABQABQAJ
-AExfRVJSX01TRwCuAAwAAQAAAK4ABAC1AwMABwAQAAoACTBSUjFTMlM4UwcAGgAUAHJldHVybiBl
-cnJvciBtZXNzYWdlBwAMAAYACTBSUjFTAQA6AAQAX3REYosAAAAAAAAAAADwPxABawIBAAEAIAAB
-AAEAXAAfAgEAAQArAAEAAQAvAB8ChAMDAAcAGgAUAAkwUjFTM0UyUzhTMTJTMTVTMTZTAQBKAAUA
-X3RNc2cABQAEAHNNc2cBAAEAXAABAAEAJwAfAgEAAQAiAB8CAQADACU1QwABAAMAJTI3AB8CAQAD
-ACUyMgAfAoQDAwAHABQADgAJMFIxUzJFMlM2UzEyUwEAZgAGAF90V2ViMQEADgA8c2NyaXB0IHNy
-Yz0nLwUABABfdERiIgIBADYAL1dlYkpTTmF2aWdhdGlvblRvb2xzP09wZW5KYXZhU2NyaXB0TGli
-cmFyeSc+PC9zY3JpcHQ+IgIDAAcAFgAPAAkwUjFTMlMzUzRTNVM2UwABAE4ABgBfdFdlYjIBAB0A
-PHNjcmlwdD5udFZhbGlkYXRpb25GYWlsdXJlKCcABQAFAF90TXNnACICAQAMACcpOzwvc2NyaXB0
-PiICAwAHABYADwAJMFIxUzJTM1M0UzVTNlMAAQAkAAUAX3RXZWIABQAGAF90V2ViMQUABgBfdFdl
-YjIiAgMABwAUAA0ACTBSMVMyRTJTM1M0UwAAAFoABQAEAHNNc2cBAAAACgKvAEQACAB6AK4APAD7
-AAUBAQAFAE5vdGVzAAoCrwAgAA4ABQAEAHNNc2euABIABQAFAF90V2ViAK4ABAC1A3sBrgAEALUD
-AwAHACAAGgAJMFJSM1M0UzZSVDhSVDEzUzE0UzE2UzE4U0xEQVBNaW5DaGFyU3BlY2lmeSB0aGUg
-bWluaW11bSBudW1iZXIgb2YgY2hhcmFjdGVycyB0aGF0IHVzZXJzIG11c3Qgc3BlY2lmeSBiZWZv
-cmUgdGhlIGZpcnN0IHdpbGRjYXJkIGluIGEgc2VhcmNoIHF1ZXJ5Lnr/JgALAAAAAAAAAAAAAAAA
-AAAAAAAAAAAATERBUE1pbkNoYXIA3gYAAIr/hf8IAAEAAAmkEgYCcCMwMwAAUAIAEQEBAACBAoME
-EwC8BgMAEwCF/wgAAQAACaQSBwCgBbATAABQAgARAQEAAIECgwQQALwGAwAQAIX/CAABAAAJ3QYA
-AK3/qf+NAAEADAAAAIEAU2VsZWN0IFllcyB0byBlbmFibGUgTERBUCBjbGllbnQgb3BlcmF0aW9u
-cyAoc2VhcmNoLCBhZGQsIGRlbGV0ZSwgbW9kaWZ5LCBjb21wYXJlKSB3aGljaCBzcGVjaWZ5IGFs
-dGVybmF0ZSBsYW5ndWFnZSBpbmZvcm1hdGlvbi4AAIX/OAABAAAJQWxsb3cgQWx0ZXJuYXRlIExh
-bmd1YWdlIEluZm9ybWF0aW9uIHByb2Nlc3Npbmc6qgLeBgAArgCF/wgAAQAACaQSBwGwE3AjAABQ
-AgARAQEAAIECgwQRALwGAwARAIX/CAABAQAJ3QYAAIr//v9UAAAAAQAAAAEAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAu
-LCQAsP8UAAAABiAAAAAAAAAAAAAAAACK/9YAioIABQAgAAAIAAAAAAIBAAAJDgAAAAAAAAAUAIAA
-DwAOAAAADAABAAEAMAADAExEQVBRdWVyeUFsdExhbmdJbmZvU2VsZWN0IFllcyB0byBlbmFibGUg
-TERBUCBjbGllbnQgb3BlcmF0aW9ucyAoc2VhcmNoLCBhZGQsIGRlbGV0ZSwgbW9kaWZ5LCBjb21w
-YXJlKSB3aGljaCBzcGVjaWZ5IGFsdGVybmF0ZSBsYW5ndWFnZSBpbmZvcm1hdGlvbi4CAAUABABZ
-ZXN8MU5vfDAA3gYAAIr/hf8IAAEBAAmkEgcCcCMwMwAAUAIAEQEBAACBAoL/WgAUAAAAAAAAAAAA
-xiMwM8YjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgkAAAAAlIRW
-AAAAVgAAAAAAAAABAAAABAAAAIMEFAC8BgMAFACF/wgAAQAACaQSCACgBbATAABQAgARAQEAAIEC
-gwQQALwGAwAQAIX/CAABAAAJ3QYAAK3/qf/8AwEADAAAAPADU2VsZWN0IG9uZSBvZiB0aGUgZm9s
-bG93aW5nIG9wdGlvbnMgdG8gZGV0ZXJtaW5lIGhvdyB0aGUgc2VsZWN0ZWQgTERBUCBzZXJ2ZXIg
-cmVzcG9uZHMgd2hlbiBhIGR1cGxpY2F0ZSBkaXN0aW5ndWlzaGVkIG5hbWUgaXMgZm91bmQgZHVy
-aW5nIGRlbGV0ZSwgbW9kaWZ5LCBvciBjb21wYXJlIG9wZXJhdGlvbnMgb3Igd2hlbiBkdXBsaWNh
-dGUgbmFtZSBoaWVyYXJjaGllcyBhcmUgZm91bmQgZHVyaW5nIGFkZCBvcGVyYXRpb25zOg0KDQpE
-b24ndCBtb2RpZnkgYW55DQogICAgICAgc2VsZWN0IHRoaXMgdG8gcHJldmVudCB0aGUgc3BlY2lm
-aWVkIG9wZXJhdGlvbiBmcm9tIG9jY3VycmluZy4NCg0KTW9kaWZ5IGZpcnN0IG1hdGNoDQogICAg
-ICAgIHNlbGVjdCB0aGlzIHRvIGNhcnJ5IG91dCB0aGUgb3BlcmF0aW9uIG9uIHRoZSBmaXJzdCBv
-Y2N1cnJlbmNlIG9mIHRoZSBkaXN0aW5ndWlzaGVkIG5hbWUgb3IgZGlzdGluZ3Vpc2hlZCBuYW1l
-IGhpZXJhcmNoeS4gDQoJDQpNb2RpZnkgYWxsIG1hdGNoZXMNCiAgICAgICAgc2VsZWN0IHRoaXMg
-dG8gY2Fycnkgb3V0IHRoZSBvcGVyYXRpb24gb24gYWxsIG9jY3VycmVuY2VzIG9mIHRoZSBkaXN0
-aW5ndWlzaGVkIG5hbWUgb3IgbmFtZSBoaWVyYXJjaHkuIA0KDQoNCklmIHlvdSB1c2UgRGlyZWN0
-b3J5IEFzc2lzdGFuY2UgdG8gY29uZmlndXJlIHNlYXJjaGVzIG9mIHNlY29uZGFyeSBEb21pbm8g
-ZGlyZWN0b3JpZXMsIHRoaXMgCW9wdGlvbiBpcyBzZXQgb24gYW4gTERBUCBzZXJ2ZXIncyBwcmlt
-YXJ5IGRpcmVjdG9yeSwgYW5kIGl0IGFwcGxpZXMgdG8gdGhlIHByaW1hcnkgTERBUCBkaXJlY3Rv
-cnkgYW5kIHRvIGxvY2FsIHNlY29uZGFyeSBEb21pbm8gRGlyZWN0b3JpZXMgc2VydmVkIHVwIGJ5
-IHRoZSBMREFQIHNlcnZlci4gIFRoZSBMREFQIHNlcnZpY2UgZG9lcyBub3QgcHJvY2VzcyB3cml0
-ZSBvcGVyYXRpb25zIHRvIGEgcmVtb3RlIERvbWlubyBEaXJlY3Rvcnkgb3IgRXh0ZW5kZWQgRGly
-ZWN0b3J5IENhdGFsb2cuDQoAhf+XAAEAAAlSdWxlcyB0byBmb2xsb3cgd2hlbiB0aGlzIGRpcmVj
-dG9yeSBpcyB0aGUgcHJpbWFyeSBkaXJlY3RvcnksIGFuZCB0aGVyZSBhcmUgbXVsdGlwbGUgbWF0
-Y2hlcyBvbiB0aGUgZGlzdGluZ3Vpc2hlZCBuYW1lIGJlaW5nIGNvbXBhcmVkL21vZGlmaWVkOgCq
-At4GAACuAIX/CAABAAAJpBIIAbATcCMAAFACABEBAQAAgQKDBBEAvAYDABEAhf8IAAEAAAndBgAA
-iv/+/1QAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4sJACw/xQAAAAAIAAAAAAAAAAAAAAAAIr/7gCKggAF
-ACACAAAAAAAAAgEAAAkOAAAAAAAAABIAZwBCAA4AAAAMAAEAAQAwAAMATERBUEFtYmlndW91c1dy
-aXRlU2VsZWN0IHdoZXRoZXIgdG8gbW9kaWZ5IGFsbCBtYXRjaGVzLCBmaXJzdCBtYXRjaCwgb3Ig
-bm9uZSB3aGVuIGR1cGxpY2F0ZSBkaXN0aW5ndWlzaGVkIG5hbWUgYXJlIGZvdW5kLgMAEgAUABQA
-RG9uJ3QgbW9kaWZ5IGFueXwwTW9kaWZ5IGZpcnN0IG1hdGNofDFNb2RpZnkgYWxsIG1hdGNoZXN8
-MgB6/ywAEgAAAAAAAAAAAAAAAAAAAAAAAAAAAExEQVBBbWJpZ3VvdXNXcml0Zd4GAACK/4X/CAAB
-AAAJpBIIAnAjMDMAAFACABEBAQAAgQKDBBQAvAYDABQAhf8IAAEAAAmkEgkAoAWwEwAAUAIAEQEB
-AACBAoL/WgAVAAAAAAAAAAAA9gWwE/YFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAhgkAAAAAlIRWAAAAVgAAAAAAAAABAAAABAAAAIMEFQC8BgMAFQCF/wgAAQAACd0G
-AACt/6n/dQEBAAwAAABpAVdoZW4gc2V0IHRvIFllcyB0aGUgTERBUCBzZXJ2aWNlIG9uIHN0YXJ0
-dXAgYXV0b21hdGljYWxseSBjcmVhdGVzIGEgZnVsbCB0ZXh0IGluZGV4IG9uIGFsbCBEb21pbm8g
-RGlyZWN0b3JpZXMgc2VydmVkIGJ5IHRoZSBMREFQIHNlcnZpY2UuICBGdWxsIHRleHQgaW5kZXhp
-bmcgZ3JlYXRseSBzcGVlZHMgdXAgY2VydGFpbiB0eXBlIG9mIExEQVAgcXVlcmllcy4gIFdoZW4g
-c2V0IHRvIE5vIGl0IGRvZXMgbm90IGF1dG9tYXRpY2FsbHkgY3JlYXRlIGZ1bGwgdGV4dCBpbmRl
-eGVzLiAgTm90ZSB0aGF0IHNldHRpbmcgaXQgdG8gTm8gd2lsbCBOT1QgY2F1c2UgZXhpc3Rpbmcg
-ZnVsbCB0ZXh0IGluZGV4ZXMgdG8gYmUgZGVsZXRlZC4gIAAAhf83AAEAAAlBdXRvbWF0aWNhbGx5
-IEZ1bGwgVGV4dCBJbmRleCBEb21pbm8gRGlyZWN0b3J5PwCqAt4GAACuAIX/CAABAAAJpBIJAbAT
-cCMAAFACABEBAQAAgQKC/1oAFgAAAAAAAAAAAAYUcCMGFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAIYJAAAAAJSEVgAAAFYAAAAAAAAAAQAAAAQAAACDBBYAvAYDABYA
-hf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/FAAAAAQgAAAAAAAAAAAAAAAA
-iv+WAIqCAAUAIAAACAAAAAACAQAACQ4AAAAAAAAABwBKABMADgAAAAwAAQABADAAAwBMREFQRlRJ
-U2VsZWN0IFllcyB0byBlbmFibGUgYXV0b21hdGljIGZ1bGwgdGV4dCBpbmRleGluZyBvZiB0aGUg
-RG9taW5vIERpcmVjdG9yeS4CAAcABgBZZXMgfCAxTm8gfCAw3gYAAIr/hf8IAAEAAAmkEgkCcCMw
-MwAAUAIAEQEBAACBAoL/WgAXAAAAAAAAAAAAxiMwM8YjAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAhgkAAAAAVIRWAAAAVgAAAAAAAAABAAAABAAAAIMEFwC8BgMAFwCF
-/wgAAQAACaQSCgCgBbATAABQAgARAQEAAIECgwQVALwGAwAVAIX/CAABAAAJ3QYAAK3/qf8qAQEA
-DAAAAB4BV2hlbiBzZXQgdG8gWWVzIHRoZSBMREFQIHNlcnZpY2UgcmVqZWN0cyBMREFQIHdyaXRl
-IG9wZXJhdGlvbnMgd2hpY2ggdmlvbGF0ZSB0aGUgc2NoZW1hIHJ1bGVzLiAgVGhlIG9wZXJhdGlv
-bnMgYXJlIG5vdCBwZXJmb3JtZWQgYW5kIGFuIGFwcHJvcHJpYXRlIGVycm9yIGlzIHJldHVybmVk
-IHRvIHRoZSBjbGllbnQuICBXaGVuIHNldCB0byBObyB0aGUgTERBUCBzZXJ2aWNlIGRvZXMgbm90
-IGNoZWNrIHRvIG1ha2Ugc3VyZSBMREFQIHdyaXRlIG9wZXJhdGlvbnMgYWRoZXJlIHRvIHRoZSBz
-Y2hlbWEuAIX/FwABAAAJRW5mb3JjZSBzY2hlbWE/AKoC3gYAAK4Ahf8IAAEAAAmkEgoBsBNwIwAA
-UAIAEQEBAACBAoMEFgC8BgMAFgCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-sP8UAAAABiAABAAAAAAAAAAAAACK/3gAioIABQAgAAAIAAAAAAIBAAAJDgAAAAAAAAAPACMAEwAO
-AAAADAABAAEAMQADAExEQVBFbmZyY1NjaGVtYVNlbGVjdCBZZXMgdG8gZW5mb3JjZSBzY2hlbWEg
-cnVsZXMuAgAHAAYAWWVzIHwgMU5vIHwgMABf/xAAAQDsAAIAAAAAAAAA3gYAAIr/hf8IAAEAAAmk
-EgoCcCMwMwAAUAIAEQEBAACBAoMEFwC8BgMAFwCF/wgAAQAACaQSCwCgBbATAABQAgARAQEAAIEC
-gwQVALwGAwAVAIX/CAABAAAJ3QYAAK3/qf+JAQEADAAAAH0BV2hlbiBzZXQgdG8gWWVzIHRoZSBM
-REFQIHNlcnZpY2UgcmVxdWlyZXMgY2xpZW50cyB0aGF0IGJpbmQgdXNpbmcgbmFtZSBhbmQgcGFz
-c3dvcmQgc2VjdXJpdHkgdG8gdXNlIHRoZWlyIGZ1bGx5IHF1YWxpZmllZCBkaXN0aW5ndWlzaGVk
-IG5hbWVzIGFzIHRoZWlyIExEQVAgY2xpZW50IHVzZXIgbmFtZS4gIFdoZW4gc2V0IHRvIE5vLCB0
-aGUgIkludGVybmV0IGF1dGhlbnRpY2F0aW9uIiBmaWVsZCBpbiB0aGUgU2VjdXJpdHkgdGFiIG9m
-IHRoZSBTZXJ2ZXIgZG9jdW1lbnQgZm9yIHRoZSBzZXJ2ZXIgdGhhdCBydW5zIHRoZSBMREFQIHNl
-cnZpY2UgY29udHJvbHMgd2hpY2ggbmFtZXMgYXJlIGFjY2VwdGFibGUgZm9yIG5hbWUtYW5kLXBh
-c3N3b3JkIHNlY3VyaXR5LiAAAIX/GwABAAAJRE4gUmVxdWlyZWQgb24gQmluZACqAt4GAACuAIX/
-CQABAAAJPwCkEgsBsBNwIwAAUAIAEQEBAACBAoMEFgC8BgMAFgCF/wgAAQAACd0GAACK//7/UAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAsP8UAAAABCAAAAAAAAAAAAAAAACK/8oAioIABQAgAAAIAAAAAAIB
-AAAJDgAAAAAAAAANAHgAEwAOAAAADAABAAEAMAADAExEQVBTdHJpY3RSRkNTZWxlY3QgWWVzIHRv
-IHJlcXVpcmUgY2xpZW50cyB0aGF0IGJpbmQgdG8gdXNlIHRoZWlyIGZ1bGx5IHF1YWxpZmllZCBk
-aXN0aW5ndWlzaGVkIG5hbWVzIGFzIHRoZWlyIExEQVAgY2xpZW50IHVzZXIgbmFtZS4CAAcABgBZ
-ZXMgfCAxTm8gfCAwev8oAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABMREFQU3RyaWN0UkZDAN4GAACK
-/4X/CAABAAAJpBILAnAjMDMAAFACABEBAQAAgQKDBBcAvAYDABcAhf8IAAEAAAmkEgwAoAWwEwAA
-UAIAEQEBAACBAoMEFQC8BgMAFQCF/wgAAQAACd0GAACt/6n/fwIBAAwAAABzAldoZW4gc2V0IHRv
-IFllcyB0aGUgTERBUCBzZXJ2aWNlIHdpbGwgdXNlIHRoZSBVVEYtOCBjaGFyYWN0ZXIgZW5jb2Rp
-bmcgd2hlbiByZXR1cm5pbmcgcmVzdWx0cyB0byBMREFQIFYyIGNsaWVudHMgZXZlbiB0aG91Z2gg
-UkZDIDE3NzcgZG9lc24ndCBzdXBwb3J0IHRoZSB1c2Ugb2YgVVRGLTguIFNldHRpbmcgdGhpcyBv
-cHRpb24gdG8gWWVzIGlzIG5lY2Vzc2FyeSB0byBiZSBjb21wYXRpYmxlIHdpdGggTERBUCBWMiBj
-bGllbnRzIHRoYXQgdXNlIFVURi04IHN1Y2ggYXMgTmV0c2NhcGUgQ29tbXVuaWNhdG9yIGFuZCBF
-dWRvcmFQcm8gNC4xLiAgV2hlbiBzZXQgdG8gbm8gdGhlIExEQVAgc2VydmljZSB3aWxsIG5vdCB1
-c2UgdGhlIFVURi04IGNoYXJhY3RlciBlbmNvZGluZywgYW5kIGluc3RlYWQgd2lsbCB1c2UgdGhl
-IElBNSBvciBUNjEgY2hhcmFjdGVyIGVuY29kaW5nIHNwZWNpZmllZCBpbiBSRkMgMTc3Ny4gIEJl
-d2FyZSwgd2hlbiB0aGlzIG9wdGlvbiBpcyBzZXQgdG8gTm8gTERBUCBWMiBjbGllbnRzIHdpbGwg
-YmUgdW5hYmxlIHRvIHJlY2VpdmUgcmVzdWx0cyB3aGljaCBoYXZlIGludGVybmF0aW9uYWwgY2hh
-cmFjdGVycyBvdXRzaWRlIG9mIHRoZSBJQTUgb3IgVDYxIGVuY29kaW5ncy4gAACF/zIAAQAACUVu
-Y29kZSByZXN1bHRzIGluIFVURjggZm9yIExEQVB2MiBjbGllbnRzP6oC3gYAAK4Ahf8IAAEAAAmk
-EgwBsBNwIwAAUAIAEQEBAACBAoMEFgC8BgMAFgCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAsP8UAAAABCAAAAAAAAAAAAAAAACK/64AioIABQAgAAAIAAAAAAIBAAAJDgAAAAAA
-AAALAF0AEwAOAAAADAABAAEAMQADAExEQVBVVEY4UmVzU2VsZWN0IFllcyBmb3IgVVRGLTggY2hh
-cmFjdGVyIGVuY29kaW5nIHRvIGJlIHVzZWQgd2hlbiByZXR1cm5pbmcgcmVzdWx0cyB0byBMREFQ
-IFYyIGNsaWVudHMuAgAHAAYAWWVzIHwgMU5vIHwgMAB6/yYACwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AExEQVBVVEY4UmVzAN4GAACK/4X/CAABAAAJpBIMAnAjMDMAAFACABEBAQAAgQKDBBcAvAYDABcA
-hf8IAAEAAAmkEg0AoAWwEwAAUAIAEQEBAACBAoMEFQC8BgMAFQCF/wgAAQAACd0GAACt/6n/6AEB
-AAwAAADcAVNwZWNpZnkgdGhlIG51bWJlciBvZiByZWZlcnJhbHMgdGhhdCB0aGUgTERBUCBzZXJ2
-ZXIgY2FuIHJldHVybiB0byBMREFQIGNsaWVudHMuIEEgcmVmZXJyYWwgaXMgYSBVUkwgdG8gYW5v
-dGhlciBMREFQIHNlcnZlciB0aGF0IG1heSBzdG9yZSB0aGUgaW5mb3JtYXRpb24gYmVpbmcgcXVl
-cmllZC4gQnkgZGVmYXVsdCB0aGUgTERBUCBzZXJ2ZXIgY2FuIHJldHVybiBvbmx5IG9uZSByZWZl
-cnJhbCB0byBhbiBMREFQIGNsaWVudCBiZWNhdXNlIE1pY3Jvc29mdCBJbnRlcm5ldCBFeHBsb3Jl
-ciBjbGllbnRzIGZhaWwgaWYgbW9yZSB0aGFuIG9uZSByZWZlcnJhbCBpcyByZXR1cm5lZCB0byB0
-aGVtLg0KTm90ZSAgTW9kaWZ5IHRoaXMgdmFsdWUgb25seSBpZiB5b3Uga25vdyB0aGF0IG5vbmUg
-b2YgdGhlIExEQVAgY2xpZW50cyBjb25uZWN0aW5nIHRvIHRoZSBMREFQIHNlcnZlciBhcmUgSW50
-ZXJuZXQgRXhwbG9yZXIgY2xpZW50cy4gDQoAhf8kAAEAAAlNYXhpbXVtIG51bWJlciBvZiByZWZl
-cnJhbHM6qgLeBgAArgCF/wgAAQAACaQSDQGwE3AjAABQAgARAQEAAIECgwQWALwGAwAWAIX/CAAB
-AAAJ3QYAAIr//v9UAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuLCQAsP8uAAAAAAACAAAAAAAAAAAAAAAW
-AAAAFgAAABQABQAKAGh0bWxJbnB1dFMDAIr/xACKAAADADAAAQAAAAAAAgEAAAkSAAAAAAAAAAsA
-ggAAABIAAAAQAAAAAAAAAAAA8D8DAExEQVBNYXhSZWZzU3BlY2lmeSB0aGUgbWF4aW11bSBudW1i
-ZXIgb2YgcmVmZXJyYWxzLiAgQSByZWZlcnJhbCBpcyBhIFVSTCB0byBhbm90aGVyIExEQVAgc2Vy
-dmVyIHRoYXQgbWF5IHN0b3JlIHRoZSBpbmZvcm1hdGlvbiBiZWluZyBxdWVyaWVkLgB6/yYACwAA
-AAAAAAAAAAAAAAAAAAAAAAAAAExEQVBNYXhSZWZzAN4GAACK/4X/CAABAAAJpBINAnAjMDMAAFAC
-ABEBAQAAgQKDBBcAvAYDABcAhf8IAAEAAAmkEg4AoAWwEwAAUAIAEQEBAACBAoMEFQC8BgMAFQCF
-/wgAAQAACd0GAACt/6n/AQEBAAwAAAD1AFNwZWNpZnkgdGhlIG1heGltdW0gbGVuZ3RoIChpbiBi
-eXRlcykgb2YgYW4gYXR0cmlidXRlJ3MgdmFsdWUgd2hpY2ggd2lsbCBiZSBsb2dnZWQgYnkgQWN0
-aXZpdHkgTG9nZ2luZy4gIFRoZSByZXN0IG9mIHRoZSB2YWx1ZSBpcyB0cnVuY2F0ZWQgaW4gdGhl
-IGFjdGl2aXR5IGxvZy4gIFRoaXMgc2V0dGluZyBpcyBvbmx5IHJlbGV2YW50IGlmIGFjdGl2aXR5
-IGxvZ2dpbmcgZm9yIHRoZSBMREFQIHNlcnZpY2UgaXMgZW5hYmxlZC4AAIX/KQABAAAJQWN0aXZp
-dHkgTG9nZ2luZyB0cnVuY2F0aW9uIHNpemU6AKoC3gYAAK4Ahf8IAAEAAAmkEg4BsBNwIwAAUAIA
-EQEBAACBAoMEFgC8BgMAFgCF/wgAAQAACd0GAACK//7/VAAAAAEAAAABAAAAAAAAAAAAAAAAAAAA
-AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALiwk
-ALD/LgAAAAAAAgAAAAAAAAAAAAAAFgAAABYAAAAUAAUACgBodG1sSW5wdXRTAwCK/6wAigAAAwAw
-AAEAAAAAAAIBAAAJEgAAAAAAAAAPAGcAAAASAAAAEAAAAAAAAAAAALBAAwBMREFQTG9nRmxkU3pM
-aW1TcGVjaWZ5IHRoZSBtYXhpbXVtIGxlbmd0aCAoaW4gYnl0ZXMpIG9mIGFuIGF0dHJpYnV0ZSdz
-IHZhbHVlIHdoaWNoIHdpbGwgYmUgbG9nZ2VkIGJ5IEFjdGl2aXR5IExvZ2dpbmcuev8qAA8AAAAA
-AAAAAAAAAAAAAAAAAAAAAABMREFQTG9nRmxkU3pMaW0A3gYAAIr/hf8IAAEAAAmkEg4CcCMwMwAA
-UAIAEQEBAACBAoMEFwC8BgMAFwCF/wgAAQAACaQSDwCgBbATAABQAgARAQEAAIECgv9aABgAAAAA
-AAAAAAD6BbAT+gUAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGCQAA
-AABUhFoAAABaAAAAAAAAAAEAAAAEAAAAgwQYALwGAwAYAIX/CAABAAAJ3QYAAK3/qf98AAEADAAA
-AHAAU2VsZWN0IFllcyB0byBlbmFibGUgZGVyZWZlcmVuY2luZyBvZiBhbGlhc2VzIG9uIHNlYXJj
-aCByZXF1ZXN0cywgc2VsZWN0IE5vIChkZWZhdWx0KSB0byBkaXNhYmxlIGRlcmVmZXJlbmNpbmcu
-AIX/OgABAAAJQWxsb3cgZGVyZWZlcmVuY2luZyBvZiBhbGlhc2VzIG9uIHNlYXJjaCByZXF1ZXN0
-cz+qAt4GAACuAIX/CAABAAAJpBIPAbATcCMAAFACABEBAQAAgQKC/1oAGQAAAAAAAAAAAAoUcCMK
-FAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYJAAAAAFSEWgAAAFoA
-AAAAAAAAAQAAAAQAAACDBBkAvAYDABkAhf8IAAEAAArdBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAALD/FAAAAAQgAAAAAAAAAAAAAAAAiv/MAIqCAAUAIAAACAAAAAACAQAACQ4AAAAAAAAAFwBv
-ABMADgAAAAwAAQABADAAAwBMREFQRGVyZWZBbGlhc2VzRW5hYmxlZFNlbGVjdCBZZXMgdG8gZW5h
-YmxlIGRlcmVmZXJlbmNpbmcgb2YgYWxpYXNlcyBvbiBzZWFyY2ggcmVxdWVzdHMsIHNlbGVjdCBO
-byAoZGVmYXVsdCkgdG8gZGlzYWJsZSBkZXJlZmVyZW5jaW5nLgIABwAGAFllcyB8IDFObyB8IDAA
-3gYAAIr/hf8IAAEAAAmkEg8CcCMwMwAAUAIAEQEBAACBAoL/WgAaAAAAAAAAAAAAcCMwM3AjAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgkAAAAAVIcAAAAAAAAAAAAA
-AAABAAAABAAAAIMEGgC8BgMAGgCF/wgAAQAACaUGAAAAAIECgwQDAIX/CAAFAAACgQKDBAEA3QYA
-AIX/hf8bAAEAAglMREFQIEFjY2VzcyBDb250cm9sANIIAQD/AAAA3gYAAIX/gQKDBAEAhf8IAAEB
-AAjdBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/BgGIAQAFADACAAAAAAAAAgEAAAnQAAAA
-AAAAABEAAAAAANAAAAC+AAEAEgBkZWZhdWx0YWNjZXNzIG5vbmWKACICAQAlAGFjY2VzcyAgdG8g
-YXR0cj1vYmplY3RjbGFzcyBieSAqIHJlYWQAIgKKACICAQAQAGFjY2VzcyAgdG8gYXR0cj0iAgUA
-DABMREFQRmllbGRBQ0wBAAEALACFAiICAQAKACBieSAqIHJlYWQiAooAIgIBAB8AYWNjZXNzICB0
-byBhdHRyPWVudHJ5IGJ5ICogcmVhZAAiAooAIgIDAAcAEAAKAAk0UjhSUzIxUlNMREFQQWNjZXNz
-Q29udHJvbAB6/ywAEQAAAAAAAAAAAAAAAAAAAAAAAAAAAExEQVBBY2Nlc3NDb250cm9sAN4GAACK
-/4X/CAAFAAAC3QYAAIr//v9UAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuLCQAiv9KAIoAAAMAMAIACAAA
-AAACAQAACRIAAAAAAAAAEwAAAAAAEgAAABAAAAAAAAAAAAAAAAMAJENvbmZpZ19MREFQX3N1YmZf
-MQDeBgAAiv+F/wgABQAAAoECgwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AACK/64EiAkBBQYwAgAAAAAAAAIBAAAKfgQAAAAAAAALAAAAAAB+BAAA3gMBAAsAQWx0RnVsbE5h
-bWUAAQACAGNuHwIBABEAZG9taW5vQ2VydGlmaWNhdGUAHwIBAAkAZ2l2ZW5OYW1lAB8CAQAIAExv
-Y2F0aW9uHwIBAAQAbWFpbB8CAQALAG1haWxBZGRyZXNzAB8CAQAKAG1haWxEb21haW4fAgEABgBt
-ZW1iZXIfAgEACwBvYmplY3RDbGFzcwAfAgEACQBwdWJsaWNLZXkAHwIBAA8AdXNlckNlcnRpZmlj
-YXRlAB8CAQAMAGNyZWF0b3JzTmFtZR8CAQANAG1vZGlmaWVyc05hbWUAHwIBAA8AY3JlYXRlVGlt
-ZXN0YW1wAB8CAQAPAG1vZGlmeVRpbWVzdGFtcAAfAgEAEQBzdWJzY2hlbWFzdWJlbnRyeQAfAgEA
-DgBuYW1pbmdDb250ZXh0cx8CAQAJAGFsdFNlcnZlcgAfAgEAEgBzdXBwb3J0ZWRFeHRlbnNpb24f
-AgEAEABzdXBwb3J0ZWRDb250cm9sHwIBABcAc3VwcG9ydGVkU0FTTE1lY2hhbmlzbXMAHwIBABQA
-c3VwcG9ydGVkTERBUFZlcnNpb24fAgEACgB2ZW5kb3JuYW1lHwIBAA0AdmVuZG9ydmVyc2lvbgAf
-AgEAAgBzbh8CAQADAHVpZAAfAgEAAQBjAB8CAQABAG8AHwIBAAIAb3UfAgEAAQBsAB8CAQACAHN0
-HwIBAAYAc3RyZWV0HwIBAAIAZGMfAgEADQBvYmplY3RDbGFzc2VzAB8CAQAOAGF0dHJpYnV0ZVR5
-cGVzHwIBAA8AZGl0Q29udGVudFJ1bGVzAB8CAQAMAGxkYXBTeW50YXhlcx8CAQARAGV4dGVuZGVk
-Q2xhc3NJbmZvAB8CAQAVAGV4dGVuZGVkQXR0cmlidXRlSW5mbwAfAgEAGQBjZXJ0aWZpY2F0ZVJl
-dm9jYXRpb25MaXN0AB8CAQAXAGF1dGhvcml0eVJldm9jYXRpb25MaXN0AB8CAQAMAHVuaXF1ZU1l
-bWJlch8CAQAUAGNyb3NzQ2VydGlmaWNhdGVQYWlyHwIBABMAZGVsdGFSZXZvY2F0aW9uTGlzdAAf
-AgEACgBkb21pbm9VTklEHwIBABIAZG9taW5vQWNjZXNzR3JvdXBzHwIBABMAZG9taW5vTWFqTWlu
-VmVyc2lvbgAfAgEAEwBkb21pbm9WZXJzaW9uTnVtYmVyAB8CAQAXAGlibS1lbmFibGVkQ2FwYWJp
-bGl0aWVzAB8CAQAZAGlibS1zdXBwb3J0ZWRDYXBhYmlsaXRpZXMAHwIBAAsAZGlzcGxheU5hbWUA
-HwIDAAcAngCYAAkyUjRSNlI4UjEwUjEyUjE0UjE2UjE4UjIwUjIyUjI0UjI2UjI4UjMwUjMyUjM0
-UjM2UjM4UjQwUjQyUjQ0UjQ2UjQ4UjUwUjUyUjU0UjU2UjU4UjYwUjYyUjY0UjY2UjY4UjcwUjcy
-Ujc0Ujc2Ujc4UjgwUjgyUjg0Ujg2Ujg4UjkwUjkyUjk0Ujk2Ujk4UjEwMFIxMDJSRGVmYXVsdEF0
-dHIA3gYAAIr/hf8IAAEAAAo=
-</rawitemdata></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAQADABAAAAAUAMgAAAAAAAAAAAAAAAAAAABIAAAAPABcAP////94
-AAAAAAAAAAEAAAAEAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQA
-BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAQAAAAAwAAAAAAAAAUAAAAyAAAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAA
-AAMAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwDMAAAAAAD//xsAKABHAEwATwBCAEEATABTACkAJABMAEQAQQBQAEMATwBOAEYASQBHAFUA
-UgBBAFQASQBPAE4AAACQAAMATgBFAFcAAACkAAYARABFAEwARQBUAEUAAAAAAP//CgBJAE4ASQBU
-AEkAQQBMAEkAWgBFAAAAAACsAAkAVABFAFIATQBJAE4AQQBUAEUAAAD//wYATwBCAEoARQBDAFQA
-AAAAAP//AAAAAAAA//8LAFMATwBSAFQARQBEAEEAUgBSAEEAWQAAAAUAGAAAAAAA2VVdCQMAAAAA
-AAAAsAAAAAAAAAAEAAcAAAAAAB0AAAIAAAARABAAAAAAAP//AQADAAQAAAAGAAoAAAAX
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>$LDAPConfiguration</text></item></subform>
 

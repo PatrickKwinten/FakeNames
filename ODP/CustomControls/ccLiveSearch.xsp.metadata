@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="b46" sequence="275" unid="CF08720AE21B7A93C1257E5E003DC449">
-<created><datetime dst="true">20150608T131439,45+02</datetime></created>
-<modified><datetime dst="true">20150609T120845,26+02</datetime></modified>
-<revised><datetime dst="true">20150609T120845,25+02</datetime></revised>
-<lastaccessed><datetime dst="true">20150609T120845,25+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150608T131439,45+02</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="af2" sequence="11" unid="5DC26089D7390097C1257E5E003C59FB">
+<created><datetime dst="true">20150608T125911,95+02</datetime></created>
+<modified><datetime dst="true">20150608T125938,24+02</datetime></modified>
+<revised><datetime dst="true">20150608T125938,23+02</datetime></revised>
+<lastaccessed><datetime dst="true">20150608T125938,24+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150608T125911,96+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
 <wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
 <item name="$Flags"><text>gC~4;</text></item>
@@ -12,11 +12,11 @@
 
 
 
+<item name="$FileNames" sign="true"><text>ccLiveSearch.xsp</text></item>
 
 
 <item name="$DesignerVersion"><text>8.5.1</text></item>
 
 
-<item name="$FileNames" sign="true"><text>ccLiveSearch.xsp</text></item>
 
 </note>

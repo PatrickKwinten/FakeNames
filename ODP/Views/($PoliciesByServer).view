@@ -1,97 +1,65 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='94a' unid='C31F9443AB2E086E85257353006DBB59' sequence='65'>
+<view name='($PoliciesByServer)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='false'
+ useapplet='true' publicaccess='false' designerversion='8' language='en' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='simple' opencollapsed='false'
+ showresponsehierarchy='true' showmargin='true' shrinkrows='true' extendlastcolumn='true'
+ showhierarchies='false' unreadcolor='black' rowlinecount='1' headerlinecount='1'
+ rowspacing='1' bgcolor='white' altrowcolor='#f8f8fc' totalscolor='silver'
+ headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='93a' unid='C31F9443AB2E086E85257353006DBB59' sequence='65'>
 <created><datetime dst='true'>20070911T155833,85-04</datetime></created>
-<modified><datetime dst='true'>20150507T110159,44+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114104,58+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095406,70-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110159,43+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110159,43+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114104,58+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114104,58+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144045,14-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($PoliciesByServer)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-PAECACoACgBQb2xpY3luYW1lAgAFAAAAAAAAAAUACABGdWxsTmFtZbQCAwACACAACgBQcmVjZWRl
-bmNlBQAKAFByZWNlZGVuY2UDAAUARgBCAAUAEwAKAAoACQAEAEFzc2lnbmVkU2VydmVyTmFtZXNQ
-b2xpY3luYW1lUHJlY2VkZW5jZSRDb25mbGljdCRSRUYEAAQAAACGAAUABABUeXBlAQAMAFBvbGlj
-eU1hc3RlcgoCBQAEAEZvcm0BAAwAUG9saWN5TWFzdGVyCgIcAgUACABQbGN5VHlwZQEAAQAwAAoC
-HAIFABMAQXNzaWduZWRTZXJ2ZXJOYW1lcwABAAAACwIcAgQABQAJACRDb25mbGljdABZARwCAwAH
-ACAAGQAJTDFSNVM2UzlTMTBTMTNTMTRTMThTMTlTAA==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-IAABAABEiGYHAAATAEFzc2lnbmVkU2VydmVyTmFtZXM=
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQADABAAiEwAAFZDAwATAAYAAAAAAHgAAQEACQABAAAIAAAAAAICAAAAVkMAAAoACwA4AAAAoAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwAACgAKACIAAABQAAEAAAkAAAAAAAAAAAACAgAAAEFzc2lnbmVk
-U2VydmVyTmFtZXNTZXJ2ZXJQb2xpY3luYW1lUG9saWN5IE5hbWU4AAIAKgAKAFBvbGljeW5hbWUC
-AAUAAAAAAAAABQAIAEZ1bGxOYW1ltAIDAAcADAAFAAkwUzBFAFByZWNlZGVuY2VQcmVjZWRlbmNl
-IgACACAACgBQcmVjZWRlbmNlBQAKAFByZWNlZGVuY2UDACYAAQAAAAEBAAkBAAAKAQEPCgAALwCt
-KwEAAQABAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAEAxAAAAAAA//8AAAAAAAAAAAAA
-AAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkA
-AAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8AAQD4+PwA
-AQAAAAAAAAAAAAAAAAABAP///wABALGx0gAAAAEAAAAAAAEAwMDAAAEAAAAAAAAACAAAAAAAAQBY
-QwAMgAIAAAAAAAECAgIBAQEBAQAEAAAAAAAAAAAgLy86WUMAAAgAAAABAAAAAQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAC4sJAA=
-</rawitemdata></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Profiles")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$WebFlags' sign='true'><text>YB</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAAGAHn/bAABALGx0gABAAAAAAABAAAAAAABALGx0gAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/1YBAAAHAAAAnkEQAAoAAAAAAAAAQWRkIFBvbGljeTYB
-AQAkAA0AQ3VycmVudFNlcnZlcgCLAAAAAAAAAAAA8D9rAgMABwAMAAUACTBTMEUAAADyAAUADQBD
-dXJyZW50U2VydmVyAAEAAAAKAq8A0gAiAAIA6AMAAAAAAAABAAwAUG9saWN5TWFzdGVysQKuALAA
-AQAPAFtQb2xpY3lDcmVhdG9yXQDnAHQCrwCUACIAAgDoAwAAAAAAAAEADABQb2xpY3lNYXN0ZXKx
-Aq4AcgACAA0AAAAAAAAAAQAOAE5vdCBBdXRob3JpemVkAQBHAFlvdSBhcmUgbm90IGF1dGhvcml6
-ZWQgdG8gYWRkIFBvbGljeSBkb2N1bWVudHMgdG8gdGhlIERvbWlubyBEaXJlY3RvcnkuALADrgAE
-ALUFAwAHABIACwAJMFI2UjEwUzEzUgD2/y8AAAAAAAMAEwANAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-YnRuTmV3RG9jLmdpZj/5/yAAAAAAAAEABABxAAAAAAAAAAAAAAAAAAAAAAAAANz/hAD5/3IAIE4A
-AAAAAAAAAGxhdW5jaEFnZW50KCJ3TmV3RG9jQXV0aGVudGljYXRlIiwgIiZSb2xlPVtQb2xpY3lD
-cmVhdG9yXSZGb3JtPVBvbGljeU1hc3RlciZWaWV3PVBvbGljaWVzIiwgZmFsc2UsIGZhbHNlLCBm
-YWxzZSkA/1//EAACAAEABwAAAAAAAAC+/0IAAAABAAAAnkAQAAsAAAAAAAAARWRpdCBQb2xpY3nd
-IAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQD2/y0AAAAAAAMAEwALAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAYnRuRWRpdC5naWY/vv9EAAAAAQAAAJ4BEAANAAAAAAAAAERlbGV0ZSBQb2xpY3lE
-IAAAABIAAgDaBwAAAAAAAO0BAwAHAAwABQAJMFMwRQD2/y8AAAAAAAMAEwANAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAYnRuRGVsZXRlLmdpZj++/0IAAAABAAAAniEQAAsAAAAdAAAARW1wdHkgVHJhc2j/
-IAAAABIAAgD9BwAAAAAAAO0BAwAHAAwABQAJMFMwRQD2/y4AAAAAAAMAEwAMAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAYnRuRW1wdHkuZ2lmvv9iAAAAAQAAAJ4hEAAGAAAAIQAAAFNlYXJjaEYABwAeABgA
-V2ViIG9ubHkgLSB1c2VkIGluIFZpZXdzBwAKAAMACTFTAAAAEgACAJAXAAAAAAAA7QEDAAcACgAD
-AAkwUgD2/y8AAAAAAAMAEwANAAAAAAAAAAAAAAAAAAAAAAAAAAAAYnRuU2VhcmNoLmdpZj++/yYA
-AAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUABgBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABf
-RWRpdCBEb2N1bWVudAcAAgq+/ygAAAAFAAAAnQEAAA4AAAAAAAAAU2VuZCBEb2N1X21lbnQIAAMK
-vv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJkCQAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABf
-TW92ZSBUbyBGb2xkZXIuLi4KAD18vv8uAAAABQAAAJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBG
-b2xkZXIACwA+fA==
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAAGAL7/VgEAAAcAAACeQRAACgAAAAAAAABBZGQgUG9s
-aWN5NgEBACQADQBDdXJyZW50U2VydmVyAIsAAAAAAAAAAADwP2sCAwAHAAwABQAJMFMwRQAAAPIA
-BQANAEN1cnJlbnRTZXJ2ZXIAAQAAAAoCrwDSACIAAgDoAwAAAAAAAAEADABQb2xpY3lNYXN0ZXKx
-Aq4AsAABAA8AW1BvbGljeUNyZWF0b3JdAOcAdAKvAJQAIgACAOgDAAAAAAAAAQAMAFBvbGljeU1h
-c3RlcrECrgByAAIADQAAAAAAAAABAA4ATm90IEF1dGhvcml6ZWQBAEcAWW91IGFyZSBub3QgYXV0
-aG9yaXplZCB0byBhZGQgUG9saWN5IGRvY3VtZW50cyB0byB0aGUgRG9taW5vIERpcmVjdG9yeS4A
-sAOuAAQAtQUDAAcAEgALAAkwUjZSMTBTMTNSAL7/QgAAAAEAAACeQBAACwAAAAAAAABFZGl0IFBv
-bGljeQAgAAAAEgACAOgHAAAAAAAA7QEDAAcADAAFAAkwUzBFAL7/RAAAAAEAAACeARAADQAAAAAA
-AABEZWxldGUgUG9saWN5CCAAAAASAAIA2gcAAAAAAADtAQMABwAMAAUACTBTMEUAvv9CAAAAAQAA
-AJ4hEAALAAAAHQAAAEVtcHR5IFRyYXNoZSAAAAASAAIA/QcAAAAAAADtAQMABwAMAAUACTBTMEUA
-vv9iAAAAAQAAAJ4hEAAGAAAAIQAAAFNlYXJjaEYABwAeABgAV2ViIG9ubHkgLSB1c2VkIGluIFZp
-ZXdzBwAKAAMACTFTAAAAEgACAJAXAAAAAAAA7QEDAAcACgADAAkwUgC+/yYAAAAFAAAAnQEAAAsA
-AAAAAAAAQ2F0ZWdvcmlfemWFBgBOfL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVu
-dAcAAgq+/ygAAAAFAAAAnQEAAA4AAAAAAAAAU2VuZCBEb2N1X21lbnQIAAMKvv8iAAAABQAAAJ0B
-AAAIAAAAAAAAAF9Gb3J3YXJkCQAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xk
-ZXIuLi4KAD18vv8uAAAABQAAAJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIACwA+fA==
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT
+(Type="PolicyMaster" &amp; Form="PolicyMaster" &amp; PlcyType="0" &amp; AssignedServerNames!="") &amp; @IsUnavailable($Conflict)</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Profiles")</formula></code>
+<actionbar useappletinbrowser='true' bgcolor='#b1b1d2' bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Add Policy' showinmenu='false' hide='web'><imageref name='btnNewDoc.gif'/><code
+ event='onClick' for='web'><javascript>launchAgent("wNewDocAuthenticate", "&amp;Role=[PolicyCreator]&amp;Form=PolicyMaster&amp;View=Policies", false, false, false)</javascript></code><code
+ event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+@If(CurrentServer="";
+@PostedCommand([Compose]; "PolicyMaster");
+@IsMember("[PolicyCreator]";@UserRoles);@PostedCommand([Compose];"PolicyMaster");@Prompt([Ok];"Not Authorized";"You are not authorized to add Policy documents to the Domino Directory."))</formula></code></action>
+<action title='Edit Policy' showinmenu='false' hide='previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Delete Policy' showinmenu='false'><imageref name='btnDelete.gif'/><code
+ event='click'><formula>@Command([EditClear])</formula></code></action>
+<action title='Empty Trash' showinmenu='false' hide='notes'><imageref name='btnEmpty.gif'/><code
+ event='click'><formula>@Command([EmptyTrash])</formula></code></action>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='AssignedServerNames'
+ width='15' resizable='true' separatemultiplevalues='true' sortnoaccent='false'
+ sortnocase='true' showaslinks='false' categorized='true'><font size='9pt'
+ style='bold'/><columnheader title='Server'><font size='9pt'/></columnheader><datetimeformat
+ show='datetime' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column hidedetailrows='false' itemname='Policyname' width='20' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Policy Name'><font size='9pt'/></columnheader><code event='value'><formula
+>@Name([Abbreviate];FullName)</formula></code></column>
+<column hidedetailrows='false' itemname='Precedence' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='Precedence'><font size='9pt'/></columnheader></column></view>
 

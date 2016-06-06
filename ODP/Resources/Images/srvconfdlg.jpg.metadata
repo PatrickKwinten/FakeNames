@@ -1,20 +1,37 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="572" sequence="5007" unid="712C3FF087F1A21285256B030060EF38">
+<?xml version="1.0" encoding="UTF-8"?><imageresource designerversion="6" maintenanceversion="1.5" name="srvconfdlg.jpg" publicaccess="false" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="56e" sequence="5007" unid="712C3FF087F1A21285256B030060EF38">
 <created><datetime>20011113T123846,96-05</datetime></created>
-<modified><datetime dst="true">20150507T110155,01+02</datetime></modified>
+<modified><datetime dst="true">20150512T114100,22+02</datetime></modified>
 <revised><datetime dst="true">20130909T095403,06-04</datetime></revised>
-<lastaccessed><datetime dst="true">20150507T110155,00+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150507T110155,00+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20150512T114100,22+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150512T114100,22+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name="$TITLE"><text>srvconfdlg.jpg</text></item>
-<item name="$Flags"><text>34CiQ</text></item>
-<item name="$FlagsExt" sign="true"><text>D</text></item>
-<item name="$ImagesWide" sign="true"><number>1</number></item>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-<item name="$ImagesColorize" sign="true"><number>0</number></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><jpeg>
+/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAgGBgcGBQgHBwcJCQgKDBQNDAsLDBkSEw8UHRofHh0a
+HBwgJC4nICIsIxwcKDcpLDAxNDQ0Hyc5PTgyPC4zNDL/2wBDAQkJCQwLDBgNDRgyIRwhMjIyMjIy
+MjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjIyMjL/wAARCAArAC4DASIA
+AhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQA
+AAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3
+ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWm
+p6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEA
+AwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSEx
+BhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElK
+U1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3
+uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD0Ciii
+gAqCS4iUsJL+zslU433RIDkDcVUdyAQT/vKOSaqX+pfZbF73zY4rZSFQtEZGncnAWNQQSScAdc54
+7E1reS9bUbd1ivormRZgUs0iaQHbbnB3ZXjg4DNggYI+8VQlGrNxXQ5sZWlQpc67/wBdV+ZenuoY
+beWWPXNLuTGMmO3VnY844G7179OR6jK6Tf8A9qaNY6h5flfareOfy927buUNjPGcZqLVTcvoF286
+36gOiqt4kK7fm52+WPYLzj7gwDjCQeE/+RN0P/sH2/8A6LWtKkVF2QYStKtT55fh/wAOzYqrqH/H
+qF7NLGrD1BdQQfYg4qyzKiF3YKqjJJOABVLzhLewCeORYOZOVKhEUcyOTwADt46jcDgtgDmrzjGN
+n10OpIq+ILaW01my14xNc2VpC8UsKKWaDcR+/VeckDKkDnaxxno1vSC93r6Xdg0MkKxys9wH+SNJ
+I4trkrgkHDFQG5xxt5aqDeLb26llbSdAudQtEcxi4WaOMMw4OA7AnB44yM5BOdwqgl1qupGPRIdE
+m0HT5ZwbponhO7c8atsCsVLkypy3HOTnBVuDBVMVClyRje+z169/+HM8VTpVEvaPRNP7tTUn1iTX
+vBK30qKHDPACse35Y7iSNT0xkqgJwQM5wOPlTwn/AMibof8A2D7f/wBFrWe9va2egwwWn2hI/JDb
+XGFYmO1YsfmPJLlie5kbn10PCf8AyJuh/wDYPt//AEWtes00kmRRkpJtdzSlgMsgeVylsg3M2QAh
+H8Rz1xkHpgYJ5O0Hm4xN4kAsYJp00SCRvPuCxV7uTcSypj7q7s5x93kD59zJ1EkaTRGKVFeNsZVh
+kH8KSGGO3hjhhjSOKNQiIigKqgYAAHQCuN4ZzqOU3ddv8zovpoEMMdvDHDDGkcUahERFAVVAwAAO
+gFchPoviG4u5Lor5M0uC/wBl8Q3MKZGMYVYgB90fl612VFddyHFM4abwzrNxH5VxG88XeKfxJdSI
+wwBgq0JBHA4IxgYrpfD+kNouli2e4aeV3aWV+i72OW2r/Cue3uSckknUop3EopO5/9k=
+</jpeg>
 
-
-<item name="$FileModDT" sign="true"><datetime>20011113T123848,00-05</datetime></item>
-<item name="$ImageNames" sign="true"><text>srvconfdlg.jpg</text></item>
-<item name="$DesignerVersion" sign="true"><text>6</text></item></note>
+<item name="$FileModDT" sign="true"><datetime>20011113T123848,00-05</datetime></item></imageresource>

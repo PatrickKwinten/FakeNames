@@ -1,76 +1,50 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='7ee' unid='ACD706A47BB96EE58525735B005DB7A9' sequence='73'>
+<view name='ID Vaults' alias='IDVaults' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='false'
+ allowdocselection='true' publicaccess='false' designerversion='8.5.3' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='beveled' opencollapsed='false'
+ showresponsehierarchy='true' showmargin='true' shrinkrows='true' extendlastcolumn='true'
+ showhierarchies='false' unreadcolor='black' rowlinecount='2' headerlinecount='1'
+ rowspacing='1' haslinkcolumn='true' bgcolor='white' altrowcolor='#efefef'
+ totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' initialbuildrestricted='false'
+ noemptycategories='true' formatnoteid='85255E01001356A8852554C200753106'>
+<noteinfo noteid='7e6' unid='ACD706A47BB96EE58525735B005DB7A9' sequence='73'>
 <created><datetime dst='true'>20070919T130338,65-04</datetime></created>
-<modified><datetime dst='true'>20150507T110158,08+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114103,26+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095406,74-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110158,07+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110158,07+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114103,26+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114103,26+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144048,86-05</datetime><datetime dst='true'>20110912T094720,97-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$FormatNote' summary='true' sign='true'>
-<rawitemdata type='4'>
-AQCoVhMAAV4lhQYxdQDCVCWF
-</rawitemdata></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>ID Vaults|IDVaults</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-JAECAC4ADABBYmJWYXVsdE5hbWUCAAUAAAAAAAAABQAJAFZhdWx0TmFtZQC0AgMAAgA2AA4AQWJi
-QWRtaW5TZXJ2ZXICAAUAAAAAAAAABQAQAFZhdWx0QWRtaW5TZXJ2ZXK0AgMAAgAoAAsARGVzY3Jp
-cHRpb24ABQAQAFZhdWx0RGVzY3JpcHRpb24DAAUARABAAAUADAAOAAsACQAEAEFiYlZhdWx0TmFt
-ZUFiYkFkbWluU2VydmVyRGVzY3JpcHRpb24kQ29uZmxpY3QkUkVGBAAEAAAANgAFAAQAVHlwZQEA
-BQBWYXVsdAAKAgQABQAEAFR5cGUBAAcASURWYXVsdAAKAgQAHQIDAAcAGAARAAlMMVMzUzRTNlM3
-UzlTMTBTAA==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-GQABAABEgGYAAAAMAEFiYlZhdWx0TmFtZQ==
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQADAB0AiEgAAFZDAQAMAAoAPAAAAKAAAQAACQAgAAAAAAAAAAICAAAAVkMAAA4AFQBEAAAAoAAB
-AAAJACAAAAAAAAAAAgIAAABWQwAACwALACoAAABQAAEAAAkAIAAAAAAAAAACAgAAAEFiYlZhdWx0
-TmFtZVZhdWx0IE5hbWU8AAIALgAMAEFiYlZhdWx0TmFtZQIABQAAAAAAAAAFAAkAVmF1bHROYW1l
-ALQCAwAHAAwABQAJMFMwRQBBYmJBZG1pblNlcnZlckFkbWluaXN0cmF0aW9uIFNlcnZlckQAAgA2
-AA4AQWJiQWRtaW5TZXJ2ZXICAAUAAAAAAAAABQAQAFZhdWx0QWRtaW5TZXJ2ZXK0AgMABwAMAAUA
-CTBTMEUARGVzY3JpcHRpb25EZXNjcmlwdGlvbioAAgAoAAsARGVzY3JpcHRpb24ABQAQAFZhdWx0
-RGVzY3JpcHRpb24DACYAAQAAAAEBAAkBAAAKAQEECgAAPwCtKwIAAQABAQAAAAAAAAAAV0MBAAAJ
-AAAAAAAAAAAAAAAAAAAAAAEABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAA
-AAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAA
-AAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8AAQDv7+8AAQAAAAAAAAAAAAAAAAABAP///wAB
-ALGx0gAAAAEAAAAAAAEAAAD/AAEAAAAAAAAACAAAAAAAAQA=
-</rawitemdata></item>
-<item name='$FormFormula' summary='true' sign='true'><formula>@If(@TextToNumber(@Version) &lt; 159; "(46Person)";Form)</formula></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"idvault_configure")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhSAAAAAAAAAAAAAACAAGAHn/bAABALGx0gABAAAAAAABAAAAAAABALGx0gAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/yYAAAAFAAAAnAEAAAsAAAAAAAAAQ2F0ZWdvcmlfemUA
-AQBOfL7/ZAAAAAEAAACfARAEBAAAAAAAAABIZWxwSgAAADwAAgC9GwAAAAAAAAIAvwAAAAAAAAAB
-AAYAKEhlbHApAQARAGlkdmF1bHRfY29uZmlndXJlAO0EAwAHAAwABQAJMFMwRQD2/y0AAAAAAAMA
-EwALAAAAAAAAAAAAAAAAAAAAAAAAAAAAYnRuSGVscC5naWY/Xv8sAAAAAAAAAAAAEAAAAAAAAAAA
-AAAAAAAAABAAAAAOAAEABABIZWxwAwC+/ygAAAAFAAAAnQEAAA4AAAAAAAAAX0VkaXQgRG9jdW1l
-bnQDAAIKvv8oAAAABQAAAJ0BAAAOAAAAAAAAAFNlbmQgRG9jdV9tZW50BAADCr7/IgAAAAUAAACd
-AQAACAAAAAAAAABfRm9yd2FyZAUABAq+/ywAAAAFAAAAnQEAABIAAAAAAAAAX01vdmUgVG8gRm9s
-ZGVyLi4uBgA9fL7/LgAAAAUAAACdAQAAEwAAAAAAAABfUmVtb3ZlIEZyb20gRm9sZGVyTwcAPnw=
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhSAAAAAAAAAAAAAACAAGAL7/JgAAAAUAAACcAQAACwAAAAAAAABDYXRlZ29y
-aV96ZQABAE58vv9kAAAAAQAAAJ8BEAQEAAAAAAAAAEhlbHBKAAAAPAACAL0bAAAAAAAAAgC/AAAA
-AAAAAAEABgAoSGVscCkBABEAaWR2YXVsdF9jb25maWd1cmUA7QQDAAcADAAFAAkwUzBFAL7/KAAA
-AAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAMAAgq+/ygAAAAFAAAAnQEAAA4AAAAAAAAA
-U2VuZCBEb2N1X21lbnQEAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJkBQAECr7/LAAA
-AAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4GAD18vv8uAAAABQAAAJ0BAAATAAAA
-AAAAAF9SZW1vdmUgRnJvbSBGb2xkZXIABwA+fA==
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT (Type = "Vault") | (Type = "IDVault")</formula></code><code
+ event='form'><formula>@If(@TextToNumber(@Version) &lt; 159; "(46Person)";Form)</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"idvault_configure")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle showdropdown='true' bgcolor='none'/><border style='solid'
+ width='0px 0px 3px'/>
+<action title='Categori_ze' showinmenu='false' showinbar='false' systemcommand='categorize'/>
+<action title='Help' hide='mobile'><imageref name='btnHelp.gif'/><code event='click'><formula
+>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"idvault_configure")</formula></code><code
+ event='label'><formula>"Help"</formula></code></action>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='AbbVaultName' width='20'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Vault Name'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate];VaultName)</formula></code></column>
+<column hidedetailrows='false' itemname='AbbAdminServer' width='20' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='true'><font
+ size='9pt'/><columnheader title='Administration Server'><font size='9pt'/></columnheader><code
+ event='value'><formula>@Name([Abbreviate];VaultAdminServer)</formula></code></column>
+<column hidedetailrows='false' itemname='Description' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='true'><font
+ size='9pt'/><columnheader title='Description'><font size='9pt'/></columnheader><code
+ event='value'><formula>VaultDescription</formula></code></column></view>
 

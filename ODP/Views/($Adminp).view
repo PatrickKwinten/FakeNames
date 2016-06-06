@@ -1,100 +1,41 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='78e' unid='A281EEC748A00EBF852562380069713E' sequence='5036'>
+<view name='($Adminp)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false' designerversion='8'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='true' showmargin='true'
+ shrinkrows='false' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='blue'
+ headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' indexrefresh='automatic' initialbuildrestricted='false'
+ noemptycategories='false'>
+<noteinfo noteid='78a' unid='A281EEC748A00EBF852562380069713E' sequence='5036'>
 <created><datetime dst='true'>19950915T151142,70-04</datetime></created>
-<modified><datetime dst='true'>20150507T110157,68+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,88+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,38-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202350,88+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,67+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,57+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,88+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20020326T142702,09-05</datetime><datetime>20020327T115645,61-05</datetime><datetime
  dst='true'>20020528T093254,63-04</datetime><datetime dst='true'>20050824T134849,62-04</datetime><datetime
  dst='true'>20081007T114831,43-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($Adminp)</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' sign='true'><formula compiled='true'>
-9AQBAFQEDQBMaXN0ADn5TgDNcSUAwAUACgBMb2NhbEFkbWluBQAFAE93bmVyAB8CBQAGAFNvdXJj
-ZR8CBQAKAFNlcnZlck5hbWUfAgUACABMaXN0TmFtZR8CBQALAERlc3RpbmF0aW9uAB8CBQALAEFs
-bG93QWNjZXNzAB8CBQAMAENyZWF0ZUFjY2Vzcx8CBQANAFJlcGxpY2FBY2Nlc3MAHwIFAA0AQWRt
-aW5pc3RyYXRvcgAfAgUACABQVEFjY2Vzcx8CBQAJAFBUQ2xpZW50cwAfAgUACQBQVENhbGxlcnMA
-HwIFAAkAUFRUYXJnZXRzAB8CBQALAFByaXZhdGVMaXN0AB8CBQAOAFJlc3RyaWN0ZWRMaXN0HwIF
-ABAAVW5yZXN0cmljdGVkTGlzdB8CBQAJAExpc3RPd25lcgAfAgUACgBNYWlsU2VydmVyHwIFAA4A
-UGFzc3RocnVTZXJ2ZXIfAgUACABGdWxsTmFtZR8CBQARAFNNVFBBZG1pbmlzdHJhdG9yAB8CBQAI
-AENDTUFkbWluHwIFABAAUmVxdWVzdGluZ1NlcnZlch8CBQAVAERlZmF1bHRQYXNzdGhydVNlcnZl
-cgAfAgUACgBJbnRlck5vdGVzHwIFAAsATWFpbEFkZHJlc3MAHwIFAAkAR3JvdXBUeXBlAAEAAQAx
-AAoCrwAeABIABQAHAE1lbWJlcnMArgAMAAEAAACuAAQAtQMfAgUAEQBBY2Nlc3NTZXJ2ZXJJbnB1
-dAAfAgUADQBBbGxvd01vbml0b3JzAB8CBQAZAEFsbG93Tm90ZXNBZGRyZXNzZXNUb01haWwAHwIF
-ABIAQnJvd3NlckFkbWluQWNjZXNzHwIFABAAQ0FBZG1pbmlzdHJhdG9ycx8CBQAHAERCQWRtaW4A
-HwIFAAwARGVueU1vbml0b3JzHwIFABgARGVueU5vdGVzQWRkcmVzc2VzVG9NYWlsHwIFAAkARnVs
-bEFkbWluAB8CBQAQAElNQVBOU090aGVyc1VucmQfAgUABwBMaWJzTHN0AB8CBQAKAE5OVFBfQWRt
-aW4fAgUAEQBOT0lSZXN0cmljdGVkTGlzdAAfAgUAEwBOT0lVbnJlc3RyaWN0ZWRMaXN0AB8CBQAU
-AE9uQmVoYWxmT2ZJbnZva2VyTHN0HwIFAA0AT25CZWhhbGZPZkxzdAAfAgUAFwBSZWdpc3RyYXRp
-b25BdXRob3JpdGllcwAfAgUACwBSZW1vdGVBZG1pbgAfAgUAEABSZXBvcnRSZWNpcGllbnRzHwIF
-AAsAUmVzU3lzQWRtaW4AHwIFAAgAU3lzQWRtaW4fAgUADgBUZW1wbGF0ZUFjY2Vzcx8CBQAMAFRy
-dXN0ZWRTcnZycx8CBQAHAFZPQWRtaW4AHwIFAAoARGVueUFjY2Vzcx8CBQANAFJlc1N5c3RlbUNt
-ZHMAHwIFAA4ASW5ib3hUcmltVXNlcnMfAgMAAgAgAAMAJDE3AAUADQBMaXN0ADn5TgDNcSUAAl4B
-AwAFAB4AGgADAAMACQAEACQxNyRDb25mbGljdCRSRUYEAAQAAABcAAUABABUeXBlAQAGAFBlcnNv
-bgsCBQAJAEdyb3VwVHlwZQABAAEAMwALAgUABABUeXBlAQAFAEdyb3VwAAoCHAIEAB0CBQAJACRD
-b25mbGljdABZARwCAwA=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-EAABAABEAGYHAAADACQxNw==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQABABIACAQAAFZDAwADAAUAmgQAAKgAAQAACQAAAAAAAAAAAAICAAAAJDE3TmFtZXOaBAEAVAQN
-AExpc3QAOflOAM1xJQDABQAKAExvY2FsQWRtaW4FAAUAT3duZXIAHwIFAAYAU291cmNlHwIFAAoA
-U2VydmVyTmFtZR8CBQAIAExpc3ROYW1lHwIFAAsARGVzdGluYXRpb24AHwIFAAsAQWxsb3dBY2Nl
-c3MAHwIFAAwAQ3JlYXRlQWNjZXNzHwIFAA0AUmVwbGljYUFjY2VzcwAfAgUADQBBZG1pbmlzdHJh
-dG9yAB8CBQAIAFBUQWNjZXNzHwIFAAkAUFRDbGllbnRzAB8CBQAJAFBUQ2FsbGVycwAfAgUACQBQ
-VFRhcmdldHMAHwIFAAsAUHJpdmF0ZUxpc3QAHwIFAA4AUmVzdHJpY3RlZExpc3QfAgUAEABVbnJl
-c3RyaWN0ZWRMaXN0HwIFAAkATGlzdE93bmVyAB8CBQAKAE1haWxTZXJ2ZXIfAgUADgBQYXNzdGhy
-dVNlcnZlch8CBQAIAEZ1bGxOYW1lHwIFABEAU01UUEFkbWluaXN0cmF0b3IAHwIFAAgAQ0NNQWRt
-aW4fAgUAEABSZXF1ZXN0aW5nU2VydmVyHwIFABUARGVmYXVsdFBhc3N0aHJ1U2VydmVyAB8CBQAK
-AEludGVyTm90ZXMfAgUACwBNYWlsQWRkcmVzcwAfAgUACQBHcm91cFR5cGUAAQABADEACgKvAB4A
-EgAFAAcATWVtYmVycwCuAAwAAQAAAK4ABAC1Ax8CBQARAEFjY2Vzc1NlcnZlcklucHV0AB8CBQAN
-AEFsbG93TW9uaXRvcnMAHwIFABkAQWxsb3dOb3Rlc0FkZHJlc3Nlc1RvTWFpbAAfAgUAEgBCcm93
-c2VyQWRtaW5BY2Nlc3MfAgUAEABDQUFkbWluaXN0cmF0b3JzHwIFAAcAREJBZG1pbgAfAgUADABE
-ZW55TW9uaXRvcnMfAgUAGABEZW55Tm90ZXNBZGRyZXNzZXNUb01haWwfAgUACQBGdWxsQWRtaW4A
-HwIFABAASU1BUE5TT3RoZXJzVW5yZB8CBQAHAExpYnNMc3QAHwIFAAoATk5UUF9BZG1pbh8CBQAR
-AE5PSVJlc3RyaWN0ZWRMaXN0AB8CBQATAE5PSVVucmVzdHJpY3RlZExpc3QAHwIFABQAT25CZWhh
-bGZPZkludm9rZXJMc3QfAgUADQBPbkJlaGFsZk9mTHN0AB8CBQAXAFJlZ2lzdHJhdGlvbkF1dGhv
-cml0aWVzAB8CBQALAFJlbW90ZUFkbWluAB8CBQAQAFJlcG9ydFJlY2lwaWVudHMfAgUACwBSZXNT
-eXNBZG1pbgAfAgUACABTeXNBZG1pbh8CBQAOAFRlbXBsYXRlQWNjZXNzHwIFAAwAVHJ1c3RlZFNy
-dnJzHwIFAAcAVk9BZG1pbgAfAgUACgBEZW55QWNjZXNzHwIFAA0AUmVzU3lzdGVtQ21kcwAfAgUA
-DgBJbmJveFRyaW1Vc2Vycx8CAwAHABoAEwAJMTBTMjJTMjhTMzBTMzJTNzFTAAIAIAADACQxNwAF
-AA0ATGlzdAA5+U4AzXElAAJeAQMABwAKAAQACTBSUiYAAQAAAAEBAAkBAAAKAQEECgAAAACtKwEA
-AQABAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAA
-AEIAAAAAAAEA////AAUAAAAAAAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAABAAAAAAABAAAA
-/wABAAAAAAAAAAgAAAAAAAEA
-</rawitemdata></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-i/8oAAEABSZNaWNyb3NvZnQgU2FucyBTZXJpZgAAAAAAAAAAAAAAAL0c6QAAAAEAAQAAAFUdAAAA
-AAAABQABCQgABgB5/2wAAQBgYJgAAQAAAAAAAQD///8AAQDAwMAAAgAgAAAAAQEAAAMAAwAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAD2/zIAAAAAAAMAEwAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAQWN0aW9uQnV0dG9uLmdpZvz/
-OgAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+
-/yYAAAAFAAAAnQAAAAsAAAAAAAAAQ2F0ZWdvcmlfemUAAQBOfL7/KAAAAAUAAACdAAAADgAAAAAA
-AABfRWRpdCBEb2N1bWVudAIAAgq+/ygAAAAFAAAAnQAAAA4AAAAAAAAAU2VuZCBEb2N1X21lbnQD
-AAMKvv8iAAAABQAAAJ0AAAAIAAAAAAAAAF9Gb3J3YXJkBAAECr7/LAAAAAUAAACdAQAAEgAAAAAA
-AABfTW92ZSB0byBGb2xkZXIuLi4FAD18vv8wAAAABQAAAJ0BAAAWAAAAAAAAAF9SZW1vdmUgZnJv
-bSBGb2xkZXIuLi4GAD58
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzpAAAAAQABAAAAVR0AAAAAAAA0AAEJCAAGAL7/JgAAAAUAAACdAAAACwAAAAAAAABDYXRlZ29y
-aV96Zf8BAE58vv8oAAAABQAAAJ0AAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
-AACdAAAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQAAAAgAAAAAAAAAX0Zv
-cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIHRvIEZvbGRlci4uLgUAPXy+/zAA
-AAAFAAAAnQEAABYAAAAAAAAAX1JlbW92ZSBmcm9tIEZvbGRlci4uLgYAPnw=
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type != "Person" | (GroupType != "3" &amp; Type = "Group") &amp; @IsUnavailable($Conflict)</formula></code>
+<actionbar bgcolor='#606098' bordercolor='black'>
+<actionbuttonstyle heighttype='background' margintype='fixed' margin='6' bgcolor='none'
+ displayborder='never' widthtype='background' textalign='center' internalmargin='3px'><imageref
+ name='ActionButton.gif'/></actionbuttonstyle><font size='9pt' name='Microsoft Sans Serif'
+ pitch='variable' truetype='true' familyid='20' color='white'/><border width='0px 0px 1px'/>
+<action title='Categori_ze' showinbar='false' hide='previewedit' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' hide='previewedit' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' hide='previewedit' systemcommand='send'/>
+<action title='_Forward' showinbar='false' hide='previewedit' systemcommand='forward'/>
+<action title='_Move to Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove from Folder...' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$17' width='21'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='true' sortnocase='true'
+ showaslinks='false' categorized='true'><font size='9pt'/><columnheader title='Names'><font
+ size='9pt'/></columnheader><code event='value'><formula>List:=LocalAdmin:Owner:Source:ServerName: ListName:Destination:AllowAccess:CreateAccess:ReplicaAccess:Administrator: PTAccess:PTClients:PTCallers: PTTargets: PrivateList: RestrictedList:UnrestrictedList:ListOwner:MailServer:PassthruServer:FullName:SMTPAdministrator:CCMAdmin:RequestingServer:DefaultPassthruServer:InterNotes:MailAddress:@If(GroupType="1";Members;""):AccessServerInput:AllowMonitors: AllowNotesAddressesToMail:BrowserAdminAccess:CAAdministrators:DBAdmin:DenyMonitors:DenyNotesAddressesToMail:FullAdmin:IMAPNSOthersUnrd:LibsLst:NNTP_Admin:NOIRestrictedList:NOIUnrestrictedList:OnBehalfOfInvokerLst:OnBehalfOfLst:RegistrationAuthorities:RemoteAdmin:ReportRecipients:ResSysAdmin:SysAdmin:TemplateAccess:TrustedSrvrs:VOAdmin:DenyAccess:ResSystemCmds:InboxTrimUsers;
+
+@Trim(List)</formula></code></column></view>
 

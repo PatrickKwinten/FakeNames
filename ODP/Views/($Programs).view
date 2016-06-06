@@ -1,52 +1,63 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='792' unid='58EABD89E122FAB1852561C20060141D' sequence='5046'>
+<view name='($Programs)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false' designerversion='6'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='true' showmargin='true'
+ shrinkrows='false' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='blue'
+ headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' indexrefresh='automatic' initialbuildrestricted='false'
+ noemptycategories='false'>
+<noteinfo noteid='78e' unid='58EABD89E122FAB1852561C20060141D' sequence='5046'>
 <created><datetime dst='true'>19950520T132926,05-04</datetime></created>
-<modified><datetime dst='true'>20150507T110157,70+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,90+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,54-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202408,37+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,69+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,83+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,90+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20081007T114831,47-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$Author' sign='true'><text>Greg Pflaum</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>($Programs)</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-4gACABwACABMb2NhdGlvbgUACABMb2NhdGlvbgMABQBkAGAACgAGAAcABwAIAAgABwAIAAgACQAE
-AFNvdXJjZVByb2dyYW1DbWRMaW5lU2NoZWR1bGVJbnRlcnZhbEVuYWJsZWRXZWVrRGF5c0xvY2F0
-aW9uJENvbmZsaWN0JFJFRgQABAAAAEYABQAEAFR5cGUBAAcAUHJvZ3JhbQAKAgUABABGb3JtAQAH
-AFByb2dyYW0ACgIcAgUACQAkQ29uZmxpY3QAWQEcAgMABwAWABAACUwxUzJTM1M0UzVTOFM5Uw==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-IgACAABEAGYHAAAGAABmAAYACABTb3VyY2VTY2hlZHVsZQ==
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQAIABEACAQAAFZDAwAGAAkAAAAAADUAAQAACgAAAAAIAAAAAAACAAAgVkMAAAcACwAAAAAASAAB
-AAAKAAACAAAAAAAAAAIAACBWQwAABwAMAAAAAABOAAEAAAoAAAAAAAAAAAACAgAAAFZDAQAIAAgA
-AAAAAFEAAQAACgAAAgAAAAIBAAEBAAAgVkMAAAgACAAAAAAAKAABAAAKAAAAAAAAAAAAAAIAAABW
-QwAABwAHAAAAAAAuAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAIAAgAAAAAAFAAAQAACgAAAAAAAAAA
-AAICAAAAVkMAAAgACAAeAAAAUAABAAAKAAAAAAAAAAAAAgIAAABTb3VyY2VPbiBTZXJ2ZXJQcm9n
-cmFtUnVuIFByb2dyYW1DbWRMaW5lQ29tbWFuZCBMaW5lU2NoZWR1bGVTY2hlZHVsZUludGVydmFs
-SW50ZXJ2YWxFbmFibGVkRW5hYmxlZFdlZWtEYXlzV2Vla0RheXNMb2NhdGlvbkxvY2F0aW9uHgAC
-ABwACABMb2NhdGlvbgUACABMb2NhdGlvbgMAJgABAAAAAQEACQEAAAoBAQQKAAAAAK0rAQABAAEA
-AAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAQDAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MB
-AAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAA
-AAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABX
-QwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAA
-AAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAUAAAAAAAEAAAAA
-AAAAAAAAAAAAAQD///8AAQCxsdIAAAABAAAAAAABAAAA/wAAAAAAAAAAAAgAAAAAAAEAWEMACIAC
-AAAAAAABAgICAQEBAQEABAAAAAAAAAAAIC8vOllDAAAIAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAA
-AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAuLCQA
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Program" &amp; Form="Program" &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='Source'
+ width='6.6250' resizable='true' separatemultiplevalues='true' sortnoaccent='true'
+ sortnocase='true' showaslinks='false' categorized='true'><columnheader title='On Server'><font
+ size='9pt'/></columnheader><datetimeformat show='date' date='weekdaymonthdayyear'
+ time='hourminutesecondhundredths' zone='never' dateformat='weekdaymonthdayyear'
+ dayformat='twodigitday' monthformat='twodigitmonth' yearformat='fourdigityear'
+ weekdayformat='shortname' dateseparator1=' ' dateseparator2='/' dateseparator3='/'
+ timeseparator=':' preference='usersetting'/><numberformat format='general'
+ varying='true' punctuated='false' parens='false' percent='false' bytes='false'
+ decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column hidedetailrows='false' listseparator='comma' itemname='Program' width='9'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='Run Program'><font size='9pt'/></columnheader><datetimeformat
+ legacy='true' show='date' date='yearmonthday' time='hourminutesecond' zone='never'/><numberformat
+ legacy='true' format='general' digits='2' punctuated='false' parens='false'
+ percent='false' bytes='false'/></column>
+<column hidedetailrows='false' itemname='CmdLine' width='9.7500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Command Line'><font size='9pt'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='Schedule'
+ width='10.1250' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false' formatdatatype='datetime'><columnheader
+ title='Schedule'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='time' date='monthday' time='hourminute' zone='never'/><numberformat
+ legacy='true' format='general' digits='2' punctuated='false' parens='false'
+ percent='false' bytes='false'/></column>
+<column hidedetailrows='false' itemname='Interval' width='5' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Interval'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='Enabled' width='5.7500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Enabled'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='WeekDays' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='WeekDays'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Location' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Location'><font size='9pt'/></columnheader></column>
+<item name='$Author' sign='true'><text>Greg Pflaum</text></item></view>
 

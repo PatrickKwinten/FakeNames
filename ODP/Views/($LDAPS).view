@@ -1,53 +1,37 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='302' unid='1CFACF213E62C7FF85256655007A0891' sequence='5020'>
+<view name='($LDAPS)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='false' publicaccess='false' designerversion='6'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='false' showmargin='true'
+ shrinkrows='true' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='2' headerlinecount='1' rowspacing='1.25' bgcolor='white' altrowcolor='#efefef'
+ totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
+<noteinfo noteid='2fe' unid='1CFACF213E62C7FF85256655007A0891' sequence='5020'>
 <created><datetime dst='true'>19980803T181255,85-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,69+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,10+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,86-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,68+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,68+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,10+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,10+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140232,69-04</datetime><datetime
 >20100304T144044,37-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT @IsAvailable(LastName) &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='LastName' width='10'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='LastName'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='AltLanguage' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='AltLanguage'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='QualifyForCNSearch' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Qualify'><font size='9pt'/></columnheader><code event='value'><formula
+>@If(@Elements(LastName) = 1 &amp; @Contains(@Trim(@Name([CN];FullName)) ; @Trim(LastName)) ; "" ; "1")</formula></code></column>
 <item name='$HTMLDocumentStyles' summary='true' sign='true'>
 <rawitemdata type='1'>
 0ggBAAAA/wDSCAEA/wAAANIIAQCAAIAA
 </rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$VIEWCOLLATION' sign='true'><text>x-UNICODE</text></item>
-<item name='$TITLE' sign='true'><text>($LDAPS)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-VAECABwACABMYXN0TmFtZQUACABMYXN0TmFtZQMAAgAkAAsAQWx0TGFuZ3VhZ2UABQALAEFsdExh
-bmd1YWdlAAMAAgB6ABIAUXVhbGlmeUZvckNOU2VhcmNoBQAIAExhc3ROYW1lagEAAAAAAAAAAPA/
-CgICAAYAAAAAAAAABQAIAEZ1bGxOYW1ltAJeAQUACABMYXN0TmFtZV4BRwIcAq8AGAAKAAEAAACu
-AA4AAQABADEArgAEALUDAwAHACIAGwAJNlM3UzhTOVMyMFMyMVMyNlMyN1MyOFMyOVMABQA+ADoA
-BAAIAAsAEgAJAExhc3ROYW1lQWx0TGFuZ3VhZ2VRdWFsaWZ5Rm9yQ05TZWFyY2gkQ29uZmxpY3QE
-AAQAAAAmAAUACABMYXN0TmFtZWgBBQAJACRDb25mbGljdABZARwCAwAHAA4ACAAJTDFTNVM2Uw==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-FQABAABEiGYAAAAIAExhc3ROYW1l
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQADABQAigwAAFZDAQAIAAgAHgAAAFAAAQAACgABAAAAAAAAAAICAAAAVkMAAAsACwAmAAAAUAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwAAEgAHAJ4AAABQAAEAAAoAAAAAAAAAAAACAgAAAExhc3ROYW1l
-TGFzdE5hbWUeAAIAHAAIAExhc3ROYW1lBQAIAExhc3ROYW1lAwBBbHRMYW5ndWFnZUFsdExhbmd1
-YWdlJgACACQACwBBbHRMYW5ndWFnZQAFAAsAQWx0TGFuZ3VhZ2UAAwBRdWFsaWZ5Rm9yQ05TZWFy
-Y2hRdWFsaWZ5ngACAHoAEgBRdWFsaWZ5Rm9yQ05TZWFyY2gFAAgATGFzdE5hbWVqAQAAAAAAAAAA
-8D8KAgIABgAAAAAAAAAFAAgARnVsbE5hbWW0Al4BBQAIAExhc3ROYW1lXgFHAhwCrwAYAAoAAQAA
-AK4ADgABAAEAMQCuAAQAtQMDAAcAIgAbAAk2UzdTOFM5UzIwUzIxUzI2UzI3UzI4UzI5UwAmAAEA
-AAABAQAJAQAACgEBBAoAAD8ArSsCAQEAAQAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAA
-AAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA
-AAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAA
-AEIAAAAAAAEA////AAEA7+/vAAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAgAAAAAAAEA
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+<item name='$VIEWCOLLATION' sign='true'><text>x-UNICODE</text></item></view>
 

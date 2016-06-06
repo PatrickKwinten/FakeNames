@@ -1,28 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='4da' unid='A57A396D2617685D852565D300812356' sequence='5052'>
+<form name='(PublicDirectoryProfile)' alias='DirectoryProfile' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' nocompose='true'
+ noquery='true' htmlallfields='true' publicaccess='false' designerversion='8.5.3'
+ language='en' bgcolor='#f7f7f7'>
+<noteinfo noteid='4d6' unid='A57A396D2617685D852565D300812356' sequence='5052'>
 <created><datetime>19980326T183031,90-05</datetime></created>
-<modified><datetime dst='true'>20150507T110154,25+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114059,46+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095404,24-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110154,24+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110154,24+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114059,46+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114059,46+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20121129T111731,58-05</datetime><datetime>20121203T143455,32-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='OriginalModTime' sign='true'><datetime dst='true'>20050901T132058,99-04</datetime></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>(PublicDirectoryProfile)</text><text>DirectoryProfile</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAALwABAPf39wAAAAAA
-</rawitemdata></item>
-<item name='$WINDOWTITLE' sign='true'><formula>"Domino Directory Profile"</formula></item>
-<item name='$HTMLHeadTag' sign='true'><formula>_tDb	:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='windowtitle'><formula>"Domino Directory Profile"</formula></code><code
+ event='htmlbody'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";" pubnames_f_PublicDirectoryProfile")</formula></code><code
+ event='htmlhead'><formula>_tDb	:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
 _is6	:= @TextToNumber(@Version) &gt; 171;
 
 "&lt;meta http-equiv='expires' content='0'&gt;
@@ -35,369 +28,250 @@ _is6	:= @TextToNumber(@Version) &gt; 171;
 	 &lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
 
 	"&lt;script src='/" + _tDb + "/WebJSNavigationTools5?OpenPage'&gt;&lt;/script&gt;"
-)</formula></item>
-<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></item>
-<item name='$Flags'><text>CD</text></item>
-<item name='$WebFlags' sign='true'><text>F</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
-<item name='$AppHelpFormula' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";" pubnames_f_PublicDirectoryProfile")</formula></item>
-<item name='Signature' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Domain' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LEDName' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='GroupSortDefault' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AutoPopulateMembersInterval' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SecureInetPasswords' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AltLanguageInfoAllowed' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='CrossDomainTrustedAdmins' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='ProtectedGroups' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Comments' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>Comments</text><text>ProtectedGroups</text><text
->CrossDomainTrustedAdmins</text><text>AltLanguageInfoAllowed</text><text>SecureInetPasswords</text><text
->AutoPopulateMembersInterval</text><text>GroupSortDefault</text><text>LEDName</text><text
->Domain</text><text>Signature</text></textlist></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAAGAHn/bAABALGx0gABAAAAAAABAAAAAAABAEJCggAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/0IAAAABAAAAjgAQAAwAAAAAAAAARWRpdCBQcm9maWxl
-IAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQD2/y0AAAAAAAMAEwALAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAYnRuRWRpdC5naWY/vv9eAAAAAQAAAJIAEQAMAAAAIAAAAFNhdmUgJiBDbG9zZTwA
-CAASAAIAxgsAAAAAAACxAQMABwAMAAUACTBTMEUAAAASAAIA/BEAAAAAAACxAQMABwAKAAMACTBS
-APb/LQAAAAAAAwATAAsAAAAAAAAAAAAAAAAAAAAAAAAAAABidG5TYXZlLmdpZj++/7oAAAABAAAA
-HiERAAYAFgAYAAAAQ2FuY2VsiAAHABIADAB3ZWIgbmV3IGRvY3MHAAoAAwAJMVMAAQAsAAsAQ3Vy
-cmVudFZpZXcAAQAGAFJldHVybgEACABWaWV3TmFtZfcCAwAHABAACQAJMFIxUzJTNlMAAAAiAAIA
-WRsAAAAAAAAFAAsAQ3VycmVudFZpZXcA7QIDAAcADAAFAAkwUjRTABYAAAAKAIkAHgEDAAcACgAD
-AAkwUwD2/y8AAAAAAAMAEwANAAAAAAAAAAAAAAAAAAAAAAAAAAAAYnRuQ2FuY2VsLmdpZj++/14A
-AAABAAAAHiERAAYACgAZAAAAQ2FuY2VsOAAHABAACgBzYXZlZCBkb2NzBwAKAAMACTFTAAAAEgAC
-APwRAAAAAAAA7QEDAAcACgADAAkwUgAKAAAACACJAAMA9v8vAAAAAAADABMADQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAGJ0bkNhbmNlbC5naWY/vv+CAAAAAQAAAJpAEQAGAAAAGgAAAENhbmNlbGYABwAQ
-AAoATm90ZXMgb25seQcACgADAAkxUwADAB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHABAA
-CQAJMFIxUzJTM1MAAAASAAIA/BEAAAAAAADtAQMABwAKAAMACTBSAPb/LwAAAAAAAwATAA0AAAAA
-AAAAAAAAAAAAAAAAAAAAAABidG5DYW5jZWwuZ2lmPw==
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAAGAL7/QgAAAAEAAACOABAADAAAAAAAAABFZGl0IFBy
-b2ZpbGUgAAAAEgACAOgHAAAAAAAA7QEDAAcADAAFAAkwUzBFAL7/XgAAAAEAAACSABEADAAAACAA
-AABTYXZlICYgQ2xvc2U8AAgAEgACAMYLAAAAAAAAsQEDAAcADAAFAAkwUzBFAAAAEgACAPwRAAAA
-AAAAsQEDAAcACgADAAkwUgC+/7oAAAABAAAAHiERAAYAFgAYAAAAQ2FuY2VsiAAHABIADAB3ZWIg
-bmV3IGRvY3MHAAoAAwAJMVMAAQAsAAsAQ3VycmVudFZpZXcAAQAGAFJldHVybgEACABWaWV3TmFt
-ZfcCAwAHABAACQAJMFIxUzJTNlMAAAAiAAIAWRsAAAAAAAAFAAsAQ3VycmVudFZpZXcA7QIDAAcA
-DAAFAAkwUjRTABYAAAAKAIkAHgEDAAcACgADAAkwUwC+/14AAAABAAAAHiERAAYACgAZAAAAQ2Fu
-Y2VsOAAHABAACgBzYXZlZCBkb2NzBwAKAAMACTFTAAAAEgACAPwRAAAAAAAA7QEDAAcACgADAAkw
-UgAKAAAACACJAAMAvv+CAAAAAQAAAJpAEQAGAAAAGgAAAENhbmNlbGYABwAQAAoATm90ZXMgb25s
-eQcACgADAAkxUwADAB4ACwBTYXZlT3B0aW9ucwAAAAAAAAAAAAAAAwAHABAACQAJMFIxUzJTM1MA
-AAASAAIA/BEAAAAAAADtAQMABwAKAAMACTBSAA==
-</rawitemdata></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>DirectoryProfile</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAEAAAAAAAAAKAFAACgBQgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAQAAACDBAEAzP8IAAAAAACF/wgAAQAACd0G
-AACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv/EFYAJAAUAMAAACAAAAAACAQAACZAVAAAAAAAA
-DwAAAAAAkBUKAAQABwAwACoAIGRlZmluZSBIVE1MIGZpZWxkIGF0dHJpYnV0ZXMgZm9yIHRoZSB3
-ZWIgBwAKAAMACTFTAAgASAD7AAUBAQAFAE5vdGVzAAoCvwBYAQAAAAAAAABgZUAOAh0C4wAeAR0C
-rwAYAAwAAQAAAMIBrgAMAAEAAACuAAQAtQMDAAcAJAAdAAkwUlIzUzRTNVM2UzEwUzExUzEzUzE2
-UlQyMVJUAAEAMAAFAF9pc05OAAEACwBCcm93c2VyVHlwZQD7ARABAQAIAE5ldHNjYXBlCgIDAAcA
-EgAMAAkwUlIxVDJTNlM3UwEANgAGAF9pc05ONAUABQBfaXNOTgABAAcAVmVyc2lvbgD7ARABAAAA
-AAAAAAAUQA4CHAIDAAcAFgAPAAkwUjFUMlMzUzRTOFM5UwABADgABwBfaXNOTjRYAAUABgBfaXNO
-TjQBAAoAdXNlci1hZ2VudPsBLgEBAAMAWDExAEcCHAIDAAcAFAAOAAkwUjFUMlMzUzRTMTFTBwAM
-AAUAIENTUyAABwAMAAYACTBSUjFTAQAqAAkAX3RXaWR0aFhTAAEAEwBzdHlsZT0nd2lkdGg6MjVw
-eDsnAAMABwAOAAgACTBSMVRUMlMBACgACABfdFdpZHRoUwEAEwBzdHlsZT0nd2lkdGg6NTBweDsn
-AAMABwAOAAgACTBSMVRUMlMBACgACABfdFdpZHRoTQEAFABzdHlsZT0nd2lkdGg6MTAwcHg7JwMA
-BwAOAAgACTBSMVRUMlMBACgACABfdFdpZHRoTAEAFABzdHlsZT0nd2lkdGg6MTcwcHg7JwMABwAO
-AAgACTBSMVRUMlMBACoACQBfdFdpZHRoWEwAAQAUAHN0eWxlPSd3aWR0aDoyNTBweDsnAwAHAA4A
-CAAJMFIxVFQyUwEAKgAKAF90V2lkdGhYWEwBABQAc3R5bGU9J3dpZHRoOjQwMHB4OycDAAcADgAH
-AAkwUjFUMlMABwASAAwAIE5FVFNDQVBFIDQgBwAMAAYACTBSUjFTAQBIAAsAX3RTaXplTk40WFMA
-AQAFAHNpemU9AAUABwBfaXNOTjRYAK8AGgAMAAEAAQAzAK4ADgABAAEANgCuAAQAtQMiAgMABwAW
-ABAACTBSMVQyUzNTNFM4UzEwUwEARgAKAF90U2l6ZU5ONFMBAAUAc2l6ZT0ABQAHAF9pc05ONFgA
-rwAaAAwAAQABADYArgAOAAEAAgAxMq4ABAC1AyICAwAHABYAEAAJMFIxVDJTM1M0UzhTMTBTAQBG
-AAoAX3RTaXplTk40TQEABQBzaXplPQAFAAcAX2lzTk40WACvABoADAABAAIAMTWuAA4AAQACADMw
-rgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBAEYACgBfdFNpemVOTjRMAQAFAHNpemU9
-AAUABwBfaXNOTjRYAK8AGgAMAAEAAgAyNa4ADgABAAIANTCuAAQAtQMiAgMABwAWABAACTBSMVQy
-UzNTNFM4UzEwUwEASAALAF90U2l6ZU5ONFhMAAEABQBzaXplPQAFAAcAX2lzTk40WACvABoADAAB
-AAIANDCuAA4AAQACADgwrgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBAEoADABfdFNp
-emVOTjRYWEwBAAUAc2l6ZT0ABQAHAF9pc05ONFgArwAcAAwAAQACADY1rgAQAAEAAwAxMzAArgAE
-ALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBAEYACgBfdENvbHNOTjRTAQAFAGNvbHM9AAUA
-BwBfaXNOTjRYAK8AGgAMAAEAAQA4AK4ADgABAAIAMTWuAAQAtQMiAgMABwAYABEACTBSUjFUMlMz
-UzRTOFMxMFMAAQBGAAoAX3RDb2xzTk40TQEABQBjb2xzPQAFAAcAX2lzTk40WACvABoADAABAAIA
-MTWuAA4AAQACADMwrgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBAEYACgBfdENvbHNO
-TjRMAQAFAGNvbHM9AAUABwBfaXNOTjRYAK8AGgAMAAEAAgAyNa4ADgABAAIANTCuAAQAtQMiAgMA
-BwAWABAACTBSMVQyUzNTNFM4UzEwUwEASAALAF90Q29sc05ONFhMAAEABQBjb2xzPQAFAAcAX2lz
-Tk40WACvABoADAABAAIANDCuAA4AAQACADgwrgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMx
-MFMBAEoADABfdENvbHNOTjRYWEwBAAUAY29scz0ABQAHAF9pc05ONFgArwAcAAwAAQACADY1rgAQ
-AAEAAwAxMzAArgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBACAACwBfdFdpZHRoTk40
-UwABAAgAd2lkdGg9NTADAAcADgAIAAkwUlIxVDJTAQAiAAsAX3RXaWR0aE5ONE0AAQAJAHdpZHRo
-PTEwMAADAAcADgAHAAkwUjFUMlMAAQAiAAsAX3RXaWR0aE5ONEwAAQAJAHdpZHRoPTE2MgADAAcA
-DgAHAAkwUjFUMlMAAQAiAAwAX3RXaWR0aE5ONFhMAQAJAHdpZHRoPTI1MAADAAcADgAHAAkwUjFU
-MlMAAQAkAA0AX3RXaWR0aE5ONFhYTAABAAkAd2lkdGg9NDAwAAMABwAOAAcACTBSMVQyUwAHAEYA
-QAAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gQlJPV1NFUlNOSUZGRVIgLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0gBwAMAAYACTBSUjFTAwBGAAUAaXNOTjQAbwCvADQACAAoAK4ALAAFAAYAX2lzTk40
-rwAYAAwAAQABADEArgAMAAEAAACuAAQAtQOuAAQAtQMDAAcAHAAWAAkwUlIxUzJUVFQzUzdTOVMx
-M1MxNVMHAD4ANwAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gSU5QVVQgLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0gAAcADAAGAAkwUlIxUwMAYAALAGh0bWxJbnB1dFhTAG8ArwBIAAgAKACuAEAABQAG
-AF9pc05ONK8ALAAWAAUACwBfdFNpemVOTjRYUwCuABYABQAJAF90V2lkdGhYUwCuAAQAtQOuAAQA
-tQMDAAcAHAAVAAkwUlIxUzJUVDNTN1M5UzEzUzE1UwADAFoACgBodG1sSW5wdXRTbwCvAEQACAAo
-AK4APAAFAAYAX2lzTk40rwAoABQABQAKAF90U2l6ZU5ONFOuABQABQAIAF90V2lkdGhTrgAEALUD
-rgAEALUDAwAHABoAFAAJMFIxUzJUVDNTN1M5UzEzUzE1UwMAWgAKAGh0bWxJbnB1dE1vAK8ARAAI
-ACgArgA8AAUABgBfaXNOTjSvACgAFAAFAAoAX3RTaXplTk40Ta4AFAAFAAgAX3RXaWR0aE2uAAQA
-tQOuAAQAtQMDAAcAGgAUAAkwUjFTMlRUM1M3UzlTMTNTMTVTAwBaAAoAaHRtbElucHV0TG8ArwBE
-AAgAKACuADwABQAGAF9pc05ONK8AKAAUAAUACgBfdFNpemVOTjRMrgAUAAUACABfdFdpZHRoTK4A
-BAC1A64ABAC1AwMABwAaABQACTBSMVMyVFQzUzdTOVMxM1MxNVMDAGAACwBodG1sSW5wdXRYTABv
-AK8ASAAIACgArgBAAAUABgBfaXNOTjSvACwAFgAFAAsAX3RTaXplTk40WEwArgAWAAUACQBfdFdp
-ZHRoWEwArgAEALUDrgAEALUDAwAHABoAFAAJMFIxUzJUVDNTN1M5UzEzUzE1UwMAYAAMAGh0bWxJ
-bnB1dFhYTG8ArwBIAAgAKACuAEAABQAGAF9pc05ONK8ALAAWAAUADABfdFNpemVOTjRYWEyuABYA
-BQAKAF90V2lkdGhYWEyuAAQAtQOuAAQAtQMDAAcAGgAUAAkwUjFTMlRUM1M3UzlTMTNTMTVTBwBA
-ADoAIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIFRFWFRBUkVBIC0tLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tIAcADAAGAAkwUlIxUwMAbAAOAGh0bWxUZXh0QXJlYTJTbwCvAFIACAAoAK4ASgABAAcAcm93
-cz0yIAAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05ONFOuABQABQAIAF90V2lkdGhTrgAEALUD
-IgKuAAQAtQMDAAcAIgAbAAkwUlIxUzJTVDNTN1M5UzEwUzExUzE1UzE3UwADAGwADgBodG1sVGV4
-dEFyZWEyTW8ArwBSAAgAKACuAEoAAQAHAHJvd3M9MiAABQAGAF9pc05ONK8AKAAUAAUACgBfdENv
-bHNOTjRNrgAUAAUACABfdFdpZHRoTa4ABAC1AyICrgAEALUDAwAHACAAGgAJMFIxUzJTVDNTN1M5
-UzEwUzExUzE1UzE3UwMAbAAOAGh0bWxUZXh0QXJlYTJMbwCvAFIACAAoAK4ASgABAAcAcm93cz0y
-IAAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05ONEyuABQABQAIAF90V2lkdGhMrgAEALUDIgKu
-AAQAtQMDAAcAIAAaAAkwUjFTMlNUM1M3UzlTMTBTMTFTMTVTMTdTAwByAA8AaHRtbFRleHRBcmVh
-MlhMAG8ArwBWAAgAKACuAE4AAQAHAHJvd3M9MiAABQAGAF9pc05ONK8ALAAWAAUACwBfdENvbHNO
-TjRYTACuABYABQAJAF90V2lkdGhYTACuAAQAtQMiAq4ABAC1AwMABwAgABkACTBSMVMyVDNTN1M5
-UzEwUzExUzE1UzE3UwADAGwADgBodG1sVGV4dEFyZWE1U28ArwBSAAgAKACuAEoAAQAHAHJvd3M9
-NSAABQAGAF9pc05ONK8AKAAUAAUACgBfdENvbHNOTjRTrgAUAAUACABfdFdpZHRoU64ABAC1AyIC
-rgAEALUDAwAHACAAGgAJMFIxUzJTVDNTN1M5UzEwUzExUzE1UzE3UwMAbAAOAGh0bWxUZXh0QXJl
-YTVNbwCvAFIACAAoAK4ASgABAAcAcm93cz01IAAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05O
-NE2uABQABQAIAF90V2lkdGhNrgAEALUDIgKuAAQAtQMDAAcAIAAaAAkwUjFTMlNUM1M3UzlTMTBT
-MTFTMTVTMTdTAwBsAA4AaHRtbFRleHRBcmVhNUxvAK8AUgAIACgArgBKAAEABwByb3dzPTUgAAUA
-BgBfaXNOTjSvACgAFAAFAAoAX3RDb2xzTk40TK4AFAAFAAgAX3RXaWR0aEyuAAQAtQMiAq4ABAC1
-AwMABwAgABoACTBSMVMyU1QzUzdTOVMxMFMxMVMxNVMxN1MDAHIADwBodG1sVGV4dEFyZWE1WEwA
-bwCvAFYACAAoAK4ATgABAAcAcm93cz01IAAFAAYAX2lzTk40rwAsABYABQALAF90Q29sc05ONFhM
-AK4AFgAFAAkAX3RXaWR0aFhMAK4ABAC1AyICrgAEALUDAwAHACAAGQAJMFIxUzJUM1M3UzlTMTBT
-MTFTMTVTMTdTAAMAbgAPAGh0bWxUZXh0QXJlYTEwUwBvAK8AUgAIACgArgBKAAEACAByb3dzPTEw
-IAUABgBfaXNOTjSvACgAFAAFAAoAX3RDb2xzTk40U64AFAAFAAgAX3RXaWR0aFOuAAQAtQMiAq4A
-BAC1AwMABwAgABkACTBSMVMyVDNTN1M5UzEwUzExUzE1UzE3UwADAG4ADwBodG1sVGV4dEFyZWEx
-ME0AbwCvAFIACAAoAK4ASgABAAgAcm93cz0xMCAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05O
-NE2uABQABQAIAF90V2lkdGhNrgAEALUDIgKuAAQAtQMDAAcAIAAZAAkwUjFTMlQzUzdTOVMxMFMx
-MVMxNVMxN1MAAwBuAA8AaHRtbFRleHRBcmVhMTBMAG8ArwBSAAgAKACuAEoAAQAIAHJvd3M9MTAg
-BQAGAF9pc05ONK8AKAAUAAUACgBfdENvbHNOTjRMrgAUAAUACABfdFdpZHRoTK4ABAC1AyICrgAE
-ALUDAwAHACAAGQAJMFIxUzJUM1M3UzlTMTBTMTFTMTVTMTdTAAMAcgAQAGh0bWxUZXh0QXJlYTEw
-WExvAK8AVgAIACgArgBOAAEACAByb3dzPTEwIAUABgBfaXNOTjSvACwAFgAFAAsAX3RDb2xzTk40
-WEwArgAWAAUACQBfdFdpZHRoWEwArgAEALUDIgKuAAQAtQMDAAcAIAAZAAkwUjFTMlQzUzdTOVMx
-MFMxMVMxNVMxN1MAAwB0ABEAaHRtbFRleHRBcmVhMTBYWEwAbwCvAFYACAAoAK4ATgABAAgAcm93
-cz0xMCAFAAYAX2lzTk40rwAsABYABQAMAF90Q29sc05ONFhYTK4AFgAFAAoAX3RXaWR0aFhYTK4A
-BAC1AyICrgAEALUDAwAHACAAGQAJMFIxUzJUM1M3UzlTMTBTMTFTMTVTMTdTAAcAPgA3ACAtLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLVNFTEVDVCAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAABwAMAAYA
-CTBSUjFTAwBeAAsAaHRtbFNlbGVjdFMAbwCvAEYACAAoAK4APgAFAAYAX2lzTk40rwAqABYABQAL
-AF90V2lkdGhOTjRTAK4AFAAFAAgAX3RXaWR0aFOuAAQAtQOuAAQAtQMDAAcAHAAVAAkwUlIxUzJU
-VDNTN1M5UzEzUzE1UwADAF4ACwBodG1sU2VsZWN0TQBvAK8ARgAIACgArgA+AAUABgBfaXNOTjSv
-ACoAFgAFAAsAX3RXaWR0aE5ONE0ArgAUAAUACABfdFdpZHRoTa4ABAC1A64ABAC1AwMABwAaABQA
-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
-/S88AAEAAAAEAAAAgwQJAN0GAQD7//v/OgAgAAAACgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQDA
-wMAADgAAAAAAUHVibGljRGlyVGFibGVc/z4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAADgAAAAAAAAABAAAKAAAAAAEAAAAAAN4GAQD7/88OyAQoADwAAAAdAAIA0BIAAMgEGBUA
-AAADAAABAdgAgQKC/1oACgAAAAAAAAAAAB4FGBUeBQAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzIYBAAAAAJSAVgAFAFYABQBgDGQAAQAAAAQAAACDBAoA3QYAAIX/hf8u
-AAEBAQlEb21pbm8gRGlyZWN0b3J5IENvbmZpZ3VyYXRpb24gUHJvZmlsZdIIAQD///8A3gYAAIX/
-0wgBALGx0gB7/yoAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAFB1YmxpY0RpclRhYmxlX2HQEgABGBX4
-JQAAAAMAAAEB2ACBAoL/WgALAAAAAAAAAAAAbhX4JW4VAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMhgEAAAAAlIBWAAUAVgAFAJMJZAABAAAABAAAAIMECwCF/wgAAQAA
-CdMIAQCxsdIAe/8qABAAAAAAAAAAAAAAAAAAAAAAAAAAAABQdWJsaWNEaXJUYWJsZV9i0BIBAMgE
-GBUAAEAiABABAQAAgQKC/1oADAAAAAAAAQAAAB4FGBUeBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAJSAVgAFAFYABQBgDGQAAQAAAAQAAACDBAwAhf8IAAEA
-AAndBgAArf+p/5sAAQAMAAAAjwBUaGUgbmFtZSBvZiB0aGUgTm90ZXMgZG9tYWluIGZvciB0aGlz
-IGRpcmVjdG9yeTsgRG9taW5vIHByb3ZpZGVzIGEgZGVmYXVsdCB2YWx1ZSBmb3IgdGhpcyBmaWVs
-ZCBhdXRvbWF0aWNhbGx5IHdoZW4geW91IHNldCB1cCBhIERvbWlubyBzZXJ2ZXIuAACF/zAAAQAA
-CURvbWFpbiBkZWZpbmVkIGJ5IHRoaXMgRG9taW5vIERpcmVjdG9yeTqqAt4GAACuAIX/CAABAAAJ
-0BIBARgV+CUAAEAiABABAQAAgQKC/1oADQAAAAAAAQAAAG4V+CVuFQAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAJSAVgACAFYAAgCTCWQAAQAAAAQAAACDBA0A
-hf8IAAEAAArdBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/LgAAAAEAAgAAAAAAAAAAAAAA
-FgAAABYAAAAUAAUACgBodG1sSW5wdXRMAwCK/zQAitAABQAwAgAAAAAAAAIBAAAJCgAAAAAAAAAG
-AAAAAAAKAAAACADAAAMARG9tYWluYg4BAIQAAAAAAAAAAADeBgAAiv+F/wgAAQAACdASAgDIBBgV
-AABQIgARAQEAAIECgwQKAN0GAACF/4X/YwABAA4JTm90ZTogVGhpcyBzZXR0aW5nIGlzIG9ic29s
-ZXRlIGFzIG9mIERvbWlubyA4LjUuMS4gIEl0IGlzIHVzZWQgZm9yIGNvbXBhdGliaWxpdHkgd2l0
-aCBwcmlvcgDSCAEAgICAAN4GAACF/90GAACF/4X/CQABAA4KIADSCAEAgICAAN4GAACF/90GAACF
-/4X/FgABAA4JdmVyc2lvbnMgb25seTrSCAEAgICAAN4GAACF/4X/CAABAAAJ3QYAAK3/qf9IAQEA
-DAAAADwBVGhlIGZpbGUgbmFtZSBvZiB0aGUgY29uZGVuc2VkIHNlcnZlciBkaXJlY3RvcnkgY2F0
-YWxvZyBmb3IgdGhlIGRvbWFpbi4gRWFjaCBzZXJ2ZXIgaW4gdGhlIGRvbWFpbiB0aGF0IGhhcyBh
-IHJlcGxpY2Egb2YgdGhlIGNvbmRlbnNlZCBkaXJlY3RvcnkgY2F0YWxvZyBzaG91bGQgdXNlIHRo
-aXMgZmlsZSBuYW1lIGZvciB0aGUgcmVwbGljYS4gU2V0dGluZyB1cCBhIGRpcmVjdG9yeSBjYXRh
-bG9nIGlzIG9wdGlvbmFsLiANCg0KTk9URTogT25seSBvbmUgc2VydmVyIGJhc2VkIERpcmVjdG9y
-eSBDYXRhbG9nIGNhbiBiZSBjcmVhdGVkIHBlciBkb21haW4uAIX/NgABAAAJQ29uZGVuc2VkIHNl
-cnZlciBkaXJlY3RvcnkgY2F0YWxvZyBmb3IgZG9tYWluOqoC3gYAAK4A3QYAAIX/hf8IAAEADgnS
-CAEAgICAAN4GAACF/9ASAgEYFfglAABQIgARAQEAAIECgwQLAIX/CAABAAAJ3QYAAIr//v9QAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAACw/y4AAAAAAAIAAAAAAAAAAAAAABYAAAAWAAAAFAAFAAoAaHRtbElu
-cHV0TAMAiv8sAIoQAAUAMAIAAAAAAAACAQAACQAAAAAAAAAABwAAAAAATEVETmFtZQBiDgEAhAAA
-AAAAAAAAAN4GAACK/4X/CAABAAAJ0BIDAMgEGBUAAFAiABEBAQAAgQKC/1oADgAAAAAAAAAAAB4F
-GBUeBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAJSAVgAF
-AFYABQBgDGQAAQAAAAQAAACDBA4Ahf8IAAEAAAndBgAArf+p/9wAAQAMAAAA0ABDaG9vc2UgWWVz
-IHRvIHNvcnQgYWxsIG5ldyBhbmQgbW9kaWZpZWQgZ3JvdXBzIGJ5IGRlZmF1bHQuIA0KDQpDaG9v
-c2UgTm8gYW5kIHRoZSBtZW1iZXIgbGlzdCB3aWxsIGJlIHNvcnRlZCBpbiB0aGUgb3JkZXIgdGhl
-eSB3ZXJlIGVudGVyZWQuIFlvdSBjYW4gY2hvb3NlIHRvIHNvcnQgdGhlIG1lbWJlcnMgbGlzdCBp
-biBlYWNoIGdyb3VwIGluZGl2aWR1YWxseS4Ahf8nAAEAAAlTb3J0IGFsbCBuZXcgZ3JvdXBzIGJ5
-IGRlZmF1bHQ6AKoC3gYAAK4Ahf8IAAEAAAnQEgMBGBX4JQAAUCIAEQEBAACBAoMECwCF/wgAAQAA
-Cd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv9SAIoSAAUAIAIAAAAAAAACAQAACQ4AAAAA
-AAAAEAAAAA8ADgAAAAwAAQABADEAAwBHcm91cFNvcnREZWZhdWx0AgAFAAQAWWVzfDFOb3wwAN4G
-AACK/4X/CAABAAAJ0BIEAMgEGBUAAFACABEBAQAAgQKC/1oADwAAAAAAAAAAAB4FGBUeBQAAzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYBAAAAAJSEVgAAAFYAAAAAAAAA
-AQAAAAQAAACDBA8Ahf8IAAEAAAndBgAArf+p/2wAAQAMAAAAYABIb3cgb2Z0ZW4sIGluIG1pbnV0
-ZXMsIHRoYXQgdGhlIE1lbWJlcnMgb2YgdGhvc2UgZ3JvdXBzIHRoYXQgYXJlIGF1dG8tcG9wdWxh
-dGUgd2lsbCBiZSB1cGRhdGVkLgCF/zUAAQAACUF1dG8tcG9wdWxhdGVkIGdyb3VwIE1lbWJlcnMg
-dXBkYXRlIGludGVydmFsOgCqAt4GAACuAIX/CAABAAAJ0BIEARgV+CUAAFACABEBAQAAgQKC/1oA
-EAAAAAAAAAAAAG4V+CVuFQAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zIYBAAAAAJSEVgAAAFYAAAAAAAAAAQAAAAQAAACDBBAAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAB4AHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAIr/zgSKAAAFADACAAAAAAAAAgEAAAkOAAAAAACABBsAAAAAAA4AAAAMAAEA
-AgAzMAMAgAQKAAQAAQBkAAoATF9FUlJfTVNHMQEATgBUaGUgQXV0by1wb3B1bGF0ZWQgZ3JvdXAg
-TWVtYmVycyB1cGRhdGUgaW50ZXJ2YWwgbWF5IG5vdCBiZSBhIG5lZ2F0aXZlIG51bWJlci4DAAcA
-DAAFAAkxUzJTAAEAdAAKAExfRVJSX01TRzIBAF4AVGhlIEF1dG8tcG9wdWxhdGVkIGdyb3VwIE1l
-bWJlcnMgdXBkYXRlIGludGVydmFsIG11c3QgaGF2ZSBhIHZhbHVlIGJldHdlZW4gMCBhbmQgMTQ0
-MCAoMSBkYXkpLgMABwAOAAcACTBSMVMyUwABAPIABABzTXNnBQAbAEF1dG9Qb3B1bGF0ZU1lbWJl
-cnNJbnRlcnZhbAABAAAACwIFABsAQXV0b1BvcHVsYXRlTWVtYmVyc0ludGVydmFsAFgBAAAAAAAA
-AAAAAA4CHAKvAI4AFAAFAAoATF9FUlJfTVNHMa4AegAFABsAQXV0b1BvcHVsYXRlTWVtYmVyc0lu
-dGVydmFsAAEAAAALAgUAGwBBdXRvUG9wdWxhdGVNZW1iZXJzSW50ZXJ2YWwAWAEAAAAAAAAAgJZA
-DwIcAq8AIAAUAAUACgBMX0VSUl9NU0cyrgAMAAEAAACuAAQAtQUDAAcALAAlAAkwUlIxUzJTNVM3
-UzhTMTNTMTVTMTdTMkUxOFMyMFMyMVMyOFMABwAaABQAcmV0dXJuIGVycm9yIG1lc3NhZ2UHAAwA
-BgAJMFJSMVMBADoABABfdERiiwAAAAAAAAAAAPA/EAFrAgEAAQAgAAEAAQBcAB8CAQABACsAAQAB
-AC8AHwKEAwMABwAaABQACTBSMVMzRTJTOFMxMlMxNVMxNlMBAEoABQBfdE1zZwAFAAQAc01zZwEA
-AQBcAAEAAQAnAB8CAQABACIAHwIBAAMAJTVDAAEAAwAlMjcAHwIBAAMAJTIyAB8ChAMDAAcAFAAO
-AAkwUjFTMkUyUzZTMTJTAQBmAAYAX3RXZWIxAQAOADxzY3JpcHQgc3JjPScvBQAEAF90RGIiAgEA
-NgAvV2ViSlNOYXZpZ2F0aW9uVG9vbHM/T3BlbkphdmFTY3JpcHRMaWJyYXJ5Jz48L3NjcmlwdD4i
-AgMABwAWAA8ACTBSMVMyUzNTNFM1UzZTAAEATgAGAF90V2ViMgEAHQA8c2NyaXB0Pm50VmFsaWRh
-dGlvbkZhaWx1cmUoJwAFAAUAX3RNc2cAIgIBAAwAJyk7PC9zY3JpcHQ+IgIDAAcAFgAPAAkwUjFT
-MlMzUzRTNVM2UwABACQABQBfdFdlYgAFAAYAX3RXZWIxBQAGAF90V2ViMiICAwAHABQADQAJMFIx
-UzJFMlMzUzRTAAAAWgAFAAQAc01zZwEAAAAKAq8ARAAIAHoArgA8APsABQEBAAUATm90ZXMACgKv
-ACAADgAFAAQAc01zZ64AEgAFAAUAX3RXZWIArgAEALUDewGuAAQAtQMDAAcAIAAaAAkwUlIzUzRT
-NlJUOFJUMTNTMTRTMTZTMThTQXV0b1BvcHVsYXRlTWVtYmVyc0ludGVydmFsAGIOAQCEAAAAAAAA
-AAAA3gYAAIr/hf8JAAEAAAogAIX/DwABAAAJbWludXRlcwDQEgUAyAQYFQAAUCIAEQEBAACBAoME
-CgCF/wgAAQAACd0GAACt/6n/tQABAAwAAACpAENob29zZSBZZXMgdG8gdXNlIGEgc3Ryb25nZXIg
-Zm9ybSBvZiBlbmNyeXB0aW9uIGZvciBJbnRlcm5ldCBwYXNzd29yZHMgbGlzdGVkIGluIFBlcnNv
-biByZWNvcmRzLiBTZWxlY3RpbmcgJ05vJyB3aWxsIHJlc3VsdCBpbiB1c2luZyBhIGxlc3Mgc2Vj
-dXJlIGVuY3J5cHRpb24gYWxnb3JpdGhtLgAAhf8rAAEAAAlVc2UgbW9yZSBzZWN1cmUgSW50ZXJu
-ZXQgUGFzc3dvcmRzOgCqAt4GAACuAIX/CAABAAAJ0BIFARgV+CUAAFAiABEBAQAAgQKDBAsAhf8I
-AAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/9gCKEgAFACACAAAAAAAAAgEAAAkO
-AAAAAAAAABMAAACxAA4AAAAMAAEAAQAxAAMAU2VjdXJlSW5ldFBhc3N3b3JkcwMAUwBSAAQAWWVz
-IC0gUGFzc3dvcmQgdmVyaWZpY2F0aW9uIGNvbXBhdGlibGUgd2l0aCBOb3Rlcy9Eb21pbm8gcmVs
-ZWFzZSA4LjAxIG9yIGdyZWF0ZXIgfDJZZXMgLSBQYXNzd29yZCB2ZXJpZmljYXRpb24gY29tcGF0
-aWJsZSB3aXRoIE5vdGVzL0RvbWlubyByZWxlYXNlIDQuNiBvciBncmVhdGVyIHwxTm98MN4GAACK
-/4X/CAABAAAJ0BIGAMgEGBUAAFAiABEBAQAAgQKDBAoAhf8IAAEAAAndBgAArf+p//kAAQAMAAAA
-7QBDaG9vc2UgWWVzIHRvIGFsbG93IHRoZSBjcmVhdGlvbiBvZiBBbHRlcm5hdGUgTGFuZ3VhZ2Ug
-SW5mb3JtYXRpb24gZG9jdW1lbnRzIHdoaWNoIGVuYWJsZXMgTERBUCBjbGllbnRzIHRvIHNlYXJj
-aCB1c2VyIGluZm9ybWF0aW9uIGluIGFsdGVybmF0ZSBsYW5ndWFnZXMuDQoNCkNob29zZSBObyB0
-byBwcmV2ZW50IHRoZSBjcmVhdGlvbiBvZiBBbHRlcm5hdGUgTGFuZ3VhZ2UgSW5mb3JtYXRpb24g
-ZG9jdW1lbnRzLgAAhf9HAAEAAAlBbGxvdyB0aGUgY3JlYXRpb24gb2YgQWx0ZXJuYXRlIExhbmd1
-YWdlIEluZm9ybWF0aW9uIGRvY3VtZW50czoAqgLeBgAArgCF/wgAAQAACdASBgEYFfglAABQIgAR
-AQEAAIECgwQLAIX/CAABAAAJ3QYAAIr//v9UAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuLCQAiv9YAIoS
-AAUAIAIAAAAAAAACAQAACQ4AAAAAAAAAFgAAAA8ADgAAAAwAAQABADEAAwBBbHRMYW5ndWFnZUlu
-Zm9BbGxvd2VkAgAFAAQAWWVzfDFOb3wwAN4GAACK/4X/CAABAAAJ0BIHAMgEGBUAAFACABEBAQAA
-gQKDBA8Ahf8IAAEAAAndBgAArf+p/0gCAQAMAAAAPAJBbnlvbmUgd2hvIGlzIGxpc3RlZCBpbiB0
-aGlzIGZpZWxkIHdpbGwgYmUgdHJ1c3RlZCB3aGVuIHRoZSBBZG1pbmlzdHJhdGlvbiBQcm9jZXNz
-IHZlcmlmaWVzIHRoZSBpbmZvcm1hdGlvbiBpbiBhIENyb3NzIERvbWFpbiBDb25maWd1cmF0aW9u
-IGRvY3VtZW50IGluIHRoZSBBZG1pbmlzdHJhdGlvbiBSZXF1ZXN0cyBkYXRhYmFzZS4gIFdoZW4g
-bGVmdCBibGFuaywgb25seSBtYW5hZ2VycyBvZiB0aGUgRG9taW5vIERpcmVjdG9yeSBhcmUgY29u
-c2lkZXJlZCB0byBiZSB0cnVzdHdvcnRoeS4gTWFuYWdlcnMgb2YgdGhlIERvbWlubyBEaXJlY3Rv
-cnkgYXJlIGFsd2F5cyBjb25zaWRlcmVkIHRvIGJlIHRydXN0d29ydGh5IGFuZCBkb24ndCBuZWVk
-IHRvIGJlIHNwZWNpZmllZC4NCg0KQSBDcm9zcyBEb21haW4gQ29uZmlndXJhdGlvbiBkb2N1bWVu
-dCBpcyB1c2VkIHRvIHNwZWNpZnkgd2hpY2ggQWRtaW5pc3RyYXRpb24gUHJvY2VzcyByZXF1ZXN0
-cyB3aWxsIGJlIGFsbG93ZWQgZnJvbSBvdGhlciBkb21haW5zLCBhbmQgc3BlY2lmaWVzIHRoZSB0
-cnVzdGVkIHNpZ25lcnMgb2YgdGhvc2UgcmVxdWVzdHMuAIX/jgABAAAJTGlzdCBvZiBhZG1pbmlz
-dHJhdG9ycyB3aG8gYXJlIGFsbG93ZWQgdG8gY3JlYXRlIENyb3NzIERvbWFpbiBDb25maWd1cmF0
-aW9uIGRvY3VtZW50cyBpbiB0aGUgQWRtaW5pc3RyYXRpb24gUHJvY2VzcyBSZXF1ZXN0cyBkYXRh
-YmFzZTqqAt4GAACuAIX/CAABAAAJ0BIHARgV+CUAAFACABEBAQAAgQKDBBAAhf8IAAEAAAndBgAA
-iv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/FAAAAAAAAAAAAAEAAAAAAAAAiv88AI7QAQUCIAIA
-CAAAAAACAQAACQAAAAAAAAAAGAAAAAAAQ3Jvc3NEb21haW5UcnVzdGVkQWRtaW5z3gYAAIr/zP8I
-AAAAAACF/wgAAQAACd0GAACt/6n/wgIBABgABAC2ArYCCgAEAAcAGAASAFdlYiBhZGRyZXNzIHBp
-Y2tlcgcACgADAAkxUwAIADYA+wAFAQEABQBOb3RlcwAKAuMAHgEdAq8AGAAMAAEAAADCAa4ADAAB
-AAAArgAEALUDAwAHABgAEQAJMFJSM1M0UzVTNlM5UzE0UwABAB4ADgBfdExhYmVsT25lSXRlbQEA
-BABuYW1lAwAHABAACQAJMFJSUjFUMlMABwAKAAMARE5UAAcADgAHAAkwUlJSMVMAAQAwAAsAX3RG
-aWVsZE5hbWUAAQAYAENyb3NzRG9tYWluVHJ1c3RlZEFkbWlucwMABwAOAAcACTBSMVQyUwABADoA
-BABfdERiiwAAAAAAAAAAAPA/EAFrAgEAAQAgAAEAAQBcAB8CAQABACsAAQABAC8AHwKEAwMABwAc
-ABYACTBSMVMzRVRUMlM4UzEyUzE1UzE2UwAARAEBAEcAPGEgb25jbGljaz0iAAAJdmFyIGhEbGcg
-PSB3aW5kb3cuaERsZ0FkZHJNdWx0aTsAAAloRGxnLnNNc2dPbmVFbnRyeQk9ICcABQAOAF90TGFi
-ZWxPbmVJdGVtIgIBACgAJzsACWhEbGcuaERlc3RGaWVsZAk9IGRvY3VtZW50LmZvcm1zWzBdLiIC
-BQALAF90RmllbGROYW1lACICAQA4ADsACWhEbGcuZGxPcGVuKCk7AAAJcmV0dXJuIGZhbHNlOwAA
-IiBocmVmPSIiPjxpbWcgc3JjPSIvIgIFAAQAX3REYiICAQBPAC9idG5QaWNrZXIuZ2lmP09wZW5J
-bWFnZVJlc291cmNlIiB3aWR0aD0iMTUiIGhlaWdodD0iMTEiIGJvcmRlcj0iMCIgYWx0PSIiPjwv
-YT4AIgIDAAcAIgAbAAkwUlIyUzNTNVM2UzdTOFM5UzEwUzExUzEyUwCF/wgAAQAACaoC3gYAAK4A
-zf8IAAAAAACF/wgAAQAACdASCADIBBgVAABQAgARAQEAAIECgv9aABEAAAAAAAAAAAAeBRgVHgUA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAACUhFYAAABWAAAA
-AAAAAAEAAAAEAAAAgwQRAIX/KQABAAAJUHJldmVudCBkZWxldGlvbiBvZiB0aGVzZSBncm91cHM6
-ANASCAEYFfglAABQAgARAQEAAIECgwQQAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAeAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAACw/xQAAAAAAAAAAAABAAAAAAAAAIr/jgCOAAEFAiACAAAAAAAAAgEAAAlaAAAAAAAAAA8A
-AAAAAFoAAABMAAEAEQBMb2NhbERvbWFpbkFkbWlucwABABIATG9jYWxEb21haW5TZXJ2ZXJzHwIB
-ABIAT3RoZXJEb21haW5TZXJ2ZXJzHwIDAAcADAAFAAkwUzBFAFByb3RlY3RlZEdyb3VwcwDeBgAA
-iv+F/wgAAQAACdASCQDIBBgVAABQAgARAQEAAIECgv9aABIAAAAAAAAAAAAeBRgVHgUAAMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyGAQAAAABUhFYAAABWAAAAAAAAAAEA
-AAAEAAAAgwQSAIX/EQABAAAJQ29tbWVudHM6ANASCQEYFfglAABQAgARAQEAAIECgv9aABMAAAAA
-AAAAAABuFfglbhUAAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyGAQAA
-AABUhFYAAABWAAAAAAAAAAEAAAAEAAAAgwQTAIX/CAABAAAK3QYAAK3/qf9BAAEADAAAADUARW50
-ZXIgYW55IGNvbW1lbnRzIGFib3V0IHRoZSBjb25uZWN0aW9uIGRlc2NyaXB0aW9uLgAAhf8IAAEA
-AAmqAt4GAACuAIX/CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw/zQAAAAAAAYA
-AAAAAAAAAAAAABwAAAAcAAAAGgAFAA8AaHRtbFRleHRhcmVhNVhMAAMAiv9WAIoAAQAAMAIACAAA
-AAACAQAACQAAAAAAAAAACAApAAAAQ29tbWVudHNDb21tZW50cyBhYm91dCB0aGUgY29ubmVjdGlv
-biBkZXNjcmlwdGlvbgBiDgEAhAAAAAAAAQAAAN4GAACK/4X/CAABAAAJ0QYAAAAAgQKC/1oAFAAA
-AAAAAAAAAMkE0DzJBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYB
-AAAAAKiEAAABAAAAAQAAAAAAAQAAAAQAAACDBBQAhf8IAAEAAAniBKAF4/+MAEJhc2ljcwAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAgDTCAEA9/f3AKUGAAAAAIECgv9aABUAAAAAAAAAAACgBQAAoAUAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAACUhwAAAAAAAAAAAAAAAAEAAAAE
-AAAAgwQVAIX/CAABAAAJrgLeBgAArgCF/wgAAQAACYECgwQVAIX/CAABAAAJ
-</rawitemdata></item></note>
+)</formula></code>
+<actionbar useappletinbrowser='true' bgcolor='#b1b1d2' bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Edit Profile' showinmenu='false' hide='edit previewedit'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<sharedactionref id='32'>
+<action title='Save &amp; Close' showinmenu='false' hide='preview read previewedit'><imageref
+ name='btnSave.gif'/><code event='click'><formula>@PostedCommand([FileSave]);
+@PostedCommand([FileCloseWindow])</formula></code></action></sharedactionref>
+<sharedactionref id='24'>
+<action title='Cancel' showinmenu='false' hide='notes'><imageref name='btnCancel.gif'/><code
+ event='click'><formula>REM {web new docs};
+CurrentView := @GetProfileField("Return"; "ViewName");
+@Command([OpenView]; CurrentView)</formula></code><code event='hidewhen'><formula
+> !@IsNewDoc</formula></code></action></sharedactionref>
+<sharedactionref id='25'>
+<action title='Cancel' showinmenu='false' hide='notes'><imageref name='btnCancel.gif'/><code
+ event='click'><formula>REM {saved docs};
+@Command([FileCloseWindow])</formula></code><code event='hidewhen'><formula
+>@IsNewDoc</formula></code></action></sharedactionref>
+<sharedactionref id='26'>
+<action title='Cancel' showinmenu='false' hide='preview previewedit web'><imageref
+ name='btnCancel.gif'/><code event='click'><formula>REM {Notes only};
+FIELD SaveOptions := 0;
+@Command([FileCloseWindow])</formula></code></action></sharedactionref></actionbar>
+<body><richtext>
+<pardef id='1' align='none' leftmargin='1in' hide='notes web' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='1'><run html='true'><font size='9pt'/></run><run html='true'><font
+ size='9pt'/><sharedfieldref name='$HTMLAttributes'/></run><run html='true'><font
+ size='9pt'/></run></par>
+<table htmlclass='TableImage' extrahtmlattrs='cellpadding=10' leftmargin='0.7500in'
+ widthtype='fixedleft' refwidth='10.9896in'><tablecolumn width='10.9896in'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<cellbackground><imageref name='intl'/></cellbackground>
+<pardef id='3' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt'/> </run></par>
+<par def='3'><run><font size='14pt' style='bold' color='#424282'/>  Domino Directory Profile</run></par>
+<pardef id='4' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font size='9pt'/>  </run></par></tablecell></tablerow></table>
+<pardef id='5' align='none' leftmargin='0.7500in' hide='read edit notes' tabs='L0.5000in'/>
+<section onread='expand' onpreview='expand' onedit='expand' onprint='expand'
+ expanded='true' accessfieldkind='editable' accessfieldname='Signature'><sectiontitle
+ pardef='5' hidewhenexpanded='true' color='black'><font size='9pt'/><text
+/></sectiontitle><compositedata type='98' prevtype='65418' nexttype='222'
+ afterparcount='13' containertype='65418' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata>
+<pardef id='6' align='none' leftmargin='1in' hide='notes web mobile' tabs='L0.5000in'/>
+<par def='6'><run><font size='9pt'/></run></par>
+<table widthtype='fitwindow' minrowheight='1in' cellbordercolor='black' rowdisplay='tabs'
+ extrahtmlattrs='cellpadding=7' leftmargin='0.7500in' refwidth='10.0611in'><tablerowstyle
+><font size='9pt' color='black'/></tablerowstyle><tablecolumn width='100%'/>
+<tablerow tablabel='Basics'>
+<tablecell borderwidth='0px' bgcolor='#f7f7f7'>
+<pardef id='8' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='8'><run><font size='9pt'/></run></par>
+<table cellbordercolor='silver' leftmargin='0.1000in' rightmargin='60%' widthtype='fixedleft'
+ rowspacing='0.0201in' refwidth='5.9000in'><tablecolumn width='2.9000in'/><tablecolumn
+ width='3in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2' htmlid='PublicDirTable_a'>
+<pardef id='10' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='10'><run><font size='9pt' style='bold' color='white'/>Domino Directory Configuration Profile</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2' htmlid='PublicDirTable_b'>
+<pardef id='11' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='11'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='0px 0px 1px'>
+<pardef id='12' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='12'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>The name of the Notes domain for this directory; Domino provides a default value for this field automatically when you set up a Domino server.</popuptext><run
+><font size='9pt'/>Domain defined by this Domino Directory:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell valign='center' borderwidth='0px 0px 1px'>
+<pardef id='13' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='13'><run><font size='9pt'/><field type='text' kind='editable' sign='true'
+ name='Domain'><keywords columns='1' ui='dialoglist' allownew='true'/><code
+ event='htmlattributes'><formula>htmlInputL</formula></code><code event='defaultvalue'><formula
+>@Domain</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='8' containertype='65418' aftercontainercount='1'
+ afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='10'><run><font size='9pt' color='gray'/>Note: This setting is obsolete as of Domino 8.5.1.  It is used for compatibility with prior</run><run
+><font color='gray'/> </run><run><font size='9pt' color='gray'/>versions only:</run><run
+><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>The file name of the condensed server directory catalog for the domain. Each server in the domain that has a replica of the condensed directory catalog should use this file name for the replica. Setting up a directory catalog is optional. 
+
+NOTE: Only one server based Directory Catalog can be created per domain.</popuptext><run
+><font size='9pt'/>Condensed server directory catalog for domain:</run></popup><run
+><font size='9pt' color='gray'/></run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='11'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' sign='true' name='LEDName'><code event='htmlattributes'><formula
+>htmlInputL</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='7' containertype='65418' aftercontainercount='1'
+ afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='1px 0px'>
+<pardef id='14' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='14'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes to sort all new and modified groups by default. 
+
+Choose No and the member list will be sorted in the order they were entered. You can choose to sort the members list in each group individually.</popuptext><run
+><font size='9pt'/>Sort all new groups by default:</run></popup><run><font
+ size='9pt'/></run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='11'><run><font size='9pt'/></run><run><font size='9pt'/><field type='keyword'
+ kind='editable' sign='true' name='GroupSortDefault'><keywords ui='dialoglist'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='15' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='15'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>How often, in minutes, that the Members of those groups that are auto-populate will be updated.</popuptext><run
+><font size='9pt'/>Auto-populated group Members update interval:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='16' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='16'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='AutoPopulateMembersInterval'><code event='defaultvalue'><formula
+>"30"</formula></code><code event='inputvalidation'><formula>L_ERR_MSG1 := "The Auto-populated group Members update interval may not be a negative number.";
+L_ERR_MSG2 := "The Auto-populated group Members update interval must have a value between 0 and 1440 (1 day).";
+
+sMsg := @If(AutoPopulateMembersInterval !="" &amp; @TextToNumber(AutoPopulateMembersInterval)&lt; 0; L_ERR_MSG1;  AutoPopulateMembersInterval !="" &amp; @TextToNumber(AutoPopulateMembersInterval)&gt;1440; L_ERR_MSG2;"");
+
+REM {return error message};
+_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_tMsg  := @ReplaceSubstring(sMsg; "\\":"'":"\""; "%5C":"%27":"%22");
+_tWeb1 := "&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+_tWeb2 := "&lt;script&gt;ntValidationFailure('" + _tMsg + "');&lt;/script&gt;";
+_tWeb  := _tWeb1 + _tWeb2;
+
+@If(sMsg = "";
+	@Success;
+	@Failure(@If(@ClientType = "Notes"; sMsg; _tWeb)))</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata> <run><font size='9pt'/>minutes</run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='10'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes to use a stronger form of encryption for Internet passwords listed in Person records. Selecting 'No' will result in using a less secure encryption algorithm.</popuptext><run
+><font size='9pt'/>Use more secure Internet Passwords:</run></popup><run><font
+ size='9pt'/></run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='11'><run><font size='9pt'/></run><run><font size='9pt'/><field type='keyword'
+ kind='editable' sign='true' name='SecureInetPasswords'><keywords ui='dialoglist'><textlist
+><text>Yes - Password verification compatible with Notes/Domino release 8.01 or greater |2</text><text
+>Yes - Password verification compatible with Notes/Domino release 4.6 or greater |1</text><text
+>No|0</text></textlist></keywords><code event='defaultvalue'><formula>"1"</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='10'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Choose Yes to allow the creation of Alternate Language Information documents which enables LDAP clients to search user information in alternate languages.
+
+Choose No to prevent the creation of Alternate Language Information documents.</popuptext><run
+><font size='9pt'/>Allow the creation of Alternate Language Information documents:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='11'><run><font size='9pt'/></run><run><font size='9pt'/><field type='keyword'
+ kind='editable' sign='true' name='AltLanguageInfoAllowed'><keywords ui='dialoglist'><textlist
+><text>Yes|1</text><text>No|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='15'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Anyone who is listed in this field will be trusted when the Administration Process verifies the information in a Cross Domain Configuration document in the Administration Requests database.  When left blank, only managers of the Domino Directory are considered to be trustworthy. Managers of the Domino Directory are always considered to be trustworthy and don't need to be specified.
+
+A Cross Domain Configuration document is used to specify which Administration Process requests will be allowed from other domains, and specifies the trusted signers of those requests.</popuptext><run
+><font size='9pt'/>List of administrators who are allowed to create Cross Domain Configuration documents in the Administration Process Requests database:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='16'><run><font size='9pt'/></run><run><font size='9pt'/><field choicesdialog='addressbook'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='names' allowmultivalues='true'
+ kind='editable' sign='true' name='CrossDomainTrustedAdmins' listinputseparators='comma'
+ listdisplayseparator='comma'><keywords columns='1' ui='dialoglist' allownew='true'/></field></run><run
+ html='true'><font size='9pt'/></run><run html='true'><font size='9pt'/><computedtext
+><code event='value'><formula>REM {Web address picker};
+
+@If(@ClientType = "Notes" | !@IsDocBeingEdited; @Return(""); "");
+
+
+_tLabelOneItem	:= "name";
+
+
+REM {DNT};
+_tFieldName	:= "CrossDomainTrustedAdmins";
+_tDb   		:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+
+"&lt;a onclick=\"
+
+	var hDlg = window.hDlgAddrMulti;
+
+	hDlg.sMsgOneEntry	= '"+ _tLabelOneItem +"';
+	hDlg.hDestField	= document.forms[0]." + _tFieldName + ";
+	hDlg.dlOpen();
+
+	return false;
+
+\" href=\"\"&gt;&lt;img src=\"/" + _tDb + "/btnPicker.gif?OpenImageResource\" width=\"15\" height=\"11\" border=\"0\" alt=\"\"&gt;&lt;/a&gt;"</formula></code></computedtext></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='17' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='17'><run><font size='9pt'/>Prevent deletion of these groups:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='16'><run><font size='9pt'/><field choicesdialog='addressbook' lookupeachchar='false'
+ lookupaddressonrefresh='false' type='names' allowmultivalues='true' kind='editable'
+ name='ProtectedGroups' listinputseparators='comma' listdisplayseparator='comma'><code
+ event='defaultvalue'><formula>"LocalDomainAdmins":"LocalDomainServers":"OtherDomainServers"</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='18' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='18'><run><font size='9pt'/>Comments:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='19' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='19'><popup show='onclick' hotspotstyle='none'><popuptext>Enter any comments about the connection description.</popuptext><run
+><font size='9pt'/></run></popup><run><font size='9pt'/></run><run><font size='9pt'/><field
+ showdelimiters='false' type='richtext' kind='editable' name='Comments' description='Comments about the connection description'><code
+ event='htmlattributes'><formula>htmlTextarea5XL</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='14' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAEAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='20' leftmargin='1%' keepwithnext='true' keeptogether='true'/>
+<par def='20'><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='21'/>
+<par def='21'><run><font size='9pt'/></run><run><font size='9pt'/></run></par></section>
+<par def='21'><run><font size='9pt'/></run></par></richtext></body>
+<item name='OriginalModTime' sign='true'><datetime dst='true'>20050901T132058,99-04</datetime></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>DirectoryProfile</text></item></form>
 

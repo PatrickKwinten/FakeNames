@@ -1,47 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='3be' unid='ED68E9692ADDAB4F852561C6006A79F1' sequence='5045'>
+<view name='($Servers)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false' designerversion='8.5.3'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='true' showmargin='true'
+ shrinkrows='false' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='blue'
+ headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' indexrefresh='automatic' initialbuildrestricted='false'
+ noemptycategories='false'>
+<noteinfo noteid='3ba' unid='ED68E9692ADDAB4F852561C6006A79F1' sequence='5045'>
 <created><datetime dst='true'>19950524T152300,33-04</datetime></created>
-<modified><datetime dst='true'>20150507T110152,63+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,04+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,80-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202530,14+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,62+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,91+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,04+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20121114T141507,08-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TYPE'><text>$SUBVIEW</text></item>
-<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item>
-<item name='$Author' sign='true'><text>Greg Pflaum</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($Servers)</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-1gMCAA4AAwAkMTEApAADAAIAJAALAEVERmlsZW5hbWVzAAUACwBFREZpbGVuYW1lcwADAAIAHAAH
-AEVuYWJsZWQABQAHAEVuYWJsZWQAAwACABwACABTY2hlZHVsZQUACABTY2hlZHVsZQMAAgAcAAgA
-SW50ZXJ2YWwFAAgASW50ZXJ2YWwDAAIAHAAIAFdlZWtkYXlzBQAIAFdlZWtkYXlzAwACACAACQBQ
-cm90b2NvbHMABQAJAFByb3RvY29scwADAAIAJAALAENhdGFsb2dUeXBlAAUACwBDYXRhbG9nVHlw
-ZQADAAIAMAARAFNlcnZlckJ1aWxkTnVtYmVyAAUAEQBTZXJ2ZXJCdWlsZE51bWJlcgADAAIAKAAO
-AFNlcnZlclBsYXRmb3JtBQAOAFNlcnZlclBsYXRmb3JtAwACABwACABTYW1ldGltZQUACABTYW1l
-dGltZQMAAgAgAAoAU1RMb2dMZXZlbAUACgBTVExvZ0xldmVsAwACACAACQBTVFBvcnRfVlAABQAJ
-AFNUUG9ydF9WUAADAAUApAGfASAACgALAAYABQAHAAwADQALAAUAAwARABMAEgALAAcACAAIAAgA
-CQALABEADgAIAAoACQAHAA0ABwAaABgACQAEAFNlcnZlck5hbWVTZXJ2ZXJUaXRsZURvbWFpblBv
-cnRzTmV0d29ya05ldEFkZHJlc3Nlc0FkbWluaXN0cmF0b3JDbHVzdGVyTmFtZVRhc2tzJDExTWFz
-dGVyQWRkcmVzc0Jvb2tTTVRQTGlzdGVuZXJFbmFibGVkU01UUEZ1bGxIb3N0RG9tYWluRURGaWxl
-bmFtZXNFbmFibGVkU2NoZWR1bGVJbnRlcnZhbFdlZWtkYXlzUHJvdG9jb2xzQ2F0YWxvZ1R5cGVT
-ZXJ2ZXJCdWlsZE51bWJlclNlcnZlclBsYXRmb3JtU2FtZXRpbWVTVExvZ0xldmVsU1RQb3J0X1ZQ
-REIySW5zdERDX0lQX0FkZHJlc3NEQ19Qb3J0aHR0cF9TZXNzaW9uQ29va2llSFRUUE9ubHlodHRw
-X1Nlc3Npb25Db29raWVTZWN1cmUkQ29uZmxpY3QkUkVGAAQABAAAAJIABQAEAFR5cGUBAAYAU2Vy
-dmVyAQAKAFg0MDBTZXJ2ZXIfAgEACABQT1NlcnZlch8CCgIEAAUABABGb3JtAQAGAFNlcnZlcgEA
-CgBYNDAwU2VydmVyHwIBABoAY2M6TWFpbCBQb3N0IE9mZmljZSBTZXJ2ZXIfAgoCHAIFAAkAJENv
-bmZsaWN0AFkBHAIDAA==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-FwABAABEAGYAAAAKAFNlcnZlck5hbWU=
-</rawitemdata></item>
-<item name='$FormFormula' summary='true' sign='true'><formula>REM { Used by webadmin.ntf to override the default form with another form };
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT (Type = "Server" : "X400Server" : "POServer") &amp; Form = "Server" : "X400Server" : "cc:Mail Post Office Server" &amp; @IsUnavailable($Conflict)</formula></code><code
+ event='form'><formula>REM { Used by webadmin.ntf to override the default form with another form };
 REM { The alternative formname is passed in via a URL command like &amp;form=formname };
 
 @If(	@TextToNumber(@Version) &gt; 184;
@@ -49,76 +27,113 @@ REM { The alternative formname is passed in via a URL command like &amp;form=for
 	"");
 
 
-""</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAeABEACAQAAFZDAQAKAAYAAAAAAEAAAQAACgAAAAAIAAAAAAACAAAAVkMAAAsACwAAAAAAaAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwAABgAGAAAAAAA4AAEAAAoAAAAAAAAAAAAAAgAAAFZDAAAFAAUA
-AAAAAC8AAQAACgAAAAAAAAAAAAACAAAAVkMAAAcABwAAAAAAMAABAAAKAAAAAAAAAAAAAAIAAABW
-QwAADAAMAAAAAABKAAEAAAoAAAAAAAAAAAAAAgAAAFZDAAANAA0AAAAAAFcAAQAACgAAAAAAAAAA
-AAACAAAAVkMAAAsADAAAAAAAOwABAAAKAAAAAAAAAAAAAgIAAABWQwAABQAFAAAAAAAoAAEAAAoA
-AAAAAAAAAAACAgAAAFZDAAADAA0AEAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAABEAEQAAAAAA
-UAABAAAKAAAAAAAAAAAAAgIAAABWQwAAEwATAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAS
-ABIAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAsACwAmAAAAUAABAAAKAAAAAAAAAAAAAgIA
-AABWQwAABwAHAB4AAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAIAAgAHgAAAFAAAQAACgAAAAAA
-AAAAAAICAAAAVkMAAAgACAAeAAAAUAABAAAKAAAAAAAAAAAAAgIAAABWQwAACAAIAB4AAABQAAEA
-AAoAAAAAAAAAAAACAgAAAFZDAAAJAAkAIgAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAsACwAm
-AAAAUAABAAAKAAAAAAAAAAAAAgIAAABWQwAAEQARADIAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZD
-AAAOAA4AKgAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAAAgACAAeAAAAUAABAAAKAAAAAAAAAAAA
-AgIAAABWQwAACgAKACIAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAJAAkAIgAAAFAAAQAACgAA
-AAAAAAAAAAICAAAAVkMAAAcABwAAAAAAUAABAAAKAAAAAAAAAAAAAgIAAABWQwAADQANAAAAAABQ
-AAEAAAoAAAAAAAAAAAACAgAAAFZDAAAHAAcAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMAABoA
-GgAAAAAAUAABAAAKAAAAAAAAAAAAAgIAAABWQwAAGAAYAAAAAABQAAEAAAoAAAAAAAAAAAACAgAA
-AFNlcnZlck5hbWVTZXJ2ZXJTZXJ2ZXJUaXRsZVNlcnZlclRpdGxlRG9tYWluRG9tYWluUG9ydHNQ
-b3J0c05ldHdvcmtOZXR3b3JrTmV0QWRkcmVzc2VzTmV0QWRkcmVzc2VzQWRtaW5pc3RyYXRvckFk
-bWluaXN0cmF0b3JDbHVzdGVyTmFtZUNsdXN0ZXIgTmFtZVRhc2tzVGFza3MkMTFMYXN0IG1vZGlm
-aWVkEAACAA4AAwAkMTEApAADAE1hc3RlckFkZHJlc3NCb29rTWFzdGVyQWRkcmVzc0Jvb2tTTVRQ
-TGlzdGVuZXJFbmFibGVkU01UUExpc3RlbmVyRW5hYmxlZFNNVFBGdWxsSG9zdERvbWFpblNNVFBG
-dWxsSG9zdERvbWFpbkVERmlsZW5hbWVzRURGaWxlbmFtZXMmAAIAJAALAEVERmlsZW5hbWVzAAUA
-CwBFREZpbGVuYW1lcwADAEVuYWJsZWRFbmFibGVkHgACABwABwBFbmFibGVkAAUABwBFbmFibGVk
-AAMAU2NoZWR1bGVTY2hlZHVsZR4AAgAcAAgAU2NoZWR1bGUFAAgAU2NoZWR1bGUDAEludGVydmFs
-SW50ZXJ2YWweAAIAHAAIAEludGVydmFsBQAIAEludGVydmFsAwBXZWVrZGF5c1dlZWtkYXlzHgAC
-ABwACABXZWVrZGF5cwUACABXZWVrZGF5cwMAUHJvdG9jb2xzUHJvdG9jb2xzIgACACAACQBQcm90
-b2NvbHMABQAJAFByb3RvY29scwADAENhdGFsb2dUeXBlQ2F0YWxvZ1R5cGUmAAIAJAALAENhdGFs
-b2dUeXBlAAUACwBDYXRhbG9nVHlwZQADAFNlcnZlckJ1aWxkTnVtYmVyU2VydmVyQnVpbGROdW1i
-ZXIyAAIAMAARAFNlcnZlckJ1aWxkTnVtYmVyAAUAEQBTZXJ2ZXJCdWlsZE51bWJlcgADAFNlcnZl
-clBsYXRmb3JtU2VydmVyUGxhdGZvcm0qAAIAKAAOAFNlcnZlclBsYXRmb3JtBQAOAFNlcnZlclBs
-YXRmb3JtAwBTYW1ldGltZVNhbWV0aW1lHgACABwACABTYW1ldGltZQUACABTYW1ldGltZQMAU1RM
-b2dMZXZlbFN0TG9nTGV2ZWwiAAIAIAAKAFNUTG9nTGV2ZWwFAAoAU1RMb2dMZXZlbAMAU1RQb3J0
-X1ZQU3RQb3J0X1ZQIgACACAACQBTVFBvcnRfVlAABQAJAFNUUG9ydF9WUAADAERCMkluc3REQjJJ
-bnN0RENfSVBfQWRkcmVzc0RDX0lQX0FkZHJlc3NEQ19Qb3J0RENfUG9ydGh0dHBfU2Vzc2lvbkNv
-b2tpZUhUVFBPbmx5SFRUUF9TZXNzaW9uQ29va2llSFRUUE9ubHlodHRwX1Nlc3Npb25Db29raWVT
-ZWN1cmVIVFRQX1Nlc3Npb25Db29raWVTZWN1cmUmAAEAAAABAQAJAQAACgEBBAoAAAAArSsBAAEA
-AQAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAABAMAAAAAAAP//AAAAAAAAAAAAAAAAAABX
-QwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA
-AAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAA
-AFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
-AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAA
-AAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAA
-AAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJ
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAA
-AAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEA
-AAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAA
-AAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdD
-AQAACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAA
-AAAAAAAAAAAAAAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAA
-BAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAUAAAAAAAEAAAAAAAAAAAAAAAAAAQD/
-//8AAQCxsdIAAAABAAAAAAABAAAA/wABAAAAAAAAAAgAAAAAAAEAWEMACIACAAAAAAABAgICAQEB
-AQEABAAAAAAAAAAAIC8vOllDAAAIAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA
-AAAAAAAAAAAAAAAuLCQA
-</rawitemdata></item></note>
+""</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='ServerName' width='8'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='Server'><font size='9pt'/></columnheader><datetimeformat
+ show='date' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column hidedetailrows='false' itemname='ServerTitle' width='13' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='ServerTitle'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Domain' width='7' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Domain'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='Ports' width='5.8750' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Ports'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='Network' width='6' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Network'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='NetAddresses' width='9.2500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='NetAddresses'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='Administrator' width='10.8750' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Administrator'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='ClusterName' width='7.3750' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Cluster Name'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Tasks' width='5' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Tasks'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='$11' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Last modified'><font size='9pt'/></columnheader><code event='value'><formula
+>@Modified</formula></code></column>
+<column hidedetailrows='false' itemname='MasterAddressBook' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='MasterAddressBook'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='SMTPListenerEnabled' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='SMTPListenerEnabled'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='SMTPFullHostDomain' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='SMTPFullHostDomain'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='EDFilenames' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='EDFilenames'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Enabled' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Enabled'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Schedule' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Schedule'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Interval' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Interval'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Weekdays' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Weekdays'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Protocols' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Protocols'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='CatalogType' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='CatalogType'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='ServerBuildNumber' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='ServerBuildNumber'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='ServerPlatform' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='ServerPlatform'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='Sametime' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Sametime'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='STLogLevel' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='StLogLevel'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='STPort_VP' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='StPort_VP'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='DB2Inst' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='DB2Inst'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='DC_IP_Address' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='DC_IP_Address'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='DC_Port' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='DC_Port'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='http_SessionCookieHTTPOnly' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='HTTP_SessionCookieHTTPOnly'><font
+ size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='http_SessionCookieSecure' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='HTTP_SessionCookieSecure'><font
+ size='9pt'/></columnheader></column>
+<item name='$TYPE'><text>$SUBVIEW</text></item>
+<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item>
+<item name='$Author' sign='true'><text>Greg Pflaum</text></item></view>
 

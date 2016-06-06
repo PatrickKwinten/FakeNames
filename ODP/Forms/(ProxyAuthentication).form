@@ -1,22 +1,122 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='74a' unid='DFEF9B44ED82C69705256886006A828C' sequence='5021'>
+<form name='(ProxyAuthentication)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' nocompose='true' noquery='true'
+ publicaccess='false' designerversion='8.5.2' language='en'>
+<noteinfo noteid='746' unid='DFEF9B44ED82C69705256886006A828C' sequence='5021'>
 <created><datetime>20000215T142322,36-05</datetime></created>
-<modified><datetime dst='true'>20150507T110157,38+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,58+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095410,10-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110157,37+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,37+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114102,58+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,58+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20011113T093916,52-05</datetime><datetime dst='true'>20020709T121758,29-04</datetime><datetime
  dst='true'>20050824T134849,58-04</datetime><datetime dst='true'>20080507T074514,85-04</datetime><datetime
  dst='true'>20080507T074607,57-04</datetime><datetime dst='true'>20081007T114831,45-04</datetime><datetime
  dst='true'>20090514T140017,74-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='helprequest'><formula>@If(@Subset(@DbName;1)="";@Command([OpenHelpDocument];[ClientHelp];"(Help)";"pernames_f_proxydialog");@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_f_ProxyDialog"))</formula></code><code
+ event='querysave'><lotusscript>Sub Querysave(Source As Notesuidocument, Continue As Variant)
+	
+End Sub
+</lotusscript></code><code event='queryclose'><lotusscript>Sub Queryclose(Source As Notesuidocument, Continue As Variant)
+	Dim w As New NotesUIWorkspace 
+	Dim s As New NotesSession
+	Dim db As NotesDatabase
+	Dim doc As NotesDocument
+	Set db = s.CurrentDatabase
+	Dim uidoc As notesuidocument
+	Set uidoc=w.currentdocument
+	Set doc = uidoc.document
+	
+	If doc.ProxyFlag(0) = "1" Then
+		doc.Proxy_FTPI = doc.Proxy_HTTPI(0)
+		doc.Proxy_GopherI = doc.Proxy_HTTPI(0)
+		doc.Proxy_SSLI = doc.Proxy_HTTPI(0)
+		doc.Proxy_HTTP=doc.Proxy_HTTPI(0)&amp;":"&amp;doc.Port1(0)
+		doc.Proxy_FTP=doc.Proxy_HTTPI(0)&amp;":"&amp;doc.Port1(0)
+		doc.Proxy_Gopher=doc.Proxy_HTTPI(0)&amp;":"&amp;doc.Port1(0)
+		doc.Proxy_SSL=doc.Proxy_HTTPI(0)&amp;":"&amp;doc.Port1(0)
+		doc.Proxy_SOCKs=doc.Proxy_SOCKsI(0)&amp;":"&amp;doc.Port5(0)
+		If doc.Proxy_NotesHTTPI(0) &lt;&gt;"" Then
+			doc.Proxy_NotesHTTP=doc.Proxy_NotesHTTPI(0)&amp;":"&amp;doc.Port6(0)
+		End If
+		Call uidoc.refresh
+	End If
+End Sub</lotusscript></code>
+<body><richtext>
+<pardef id='1' leftmargin='1in' hide='read edit print copy preview previewedit'/>
+<par def='1'><run><font size='9pt'/><field type='authors' kind='computed'
+ name='ProxyAuthor'><code event='defaultvalue'><formula>@UserName</formula></code></field></run></par>
+<table minrowheight='0.7000in' widthtype='fixedleft' refwidth='4.4375in'><tablecolumn
+ width='4.4375in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system'>
+<pardef id='3' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt' name='user-interface'/></run></par>
+<table widthtype='fitmargins' htmlid='proxyAuthTable' leftmargin='0.1000in'
+ rightmargin='97%' cellborderstyle='groove' refwidth='4.2042in'><tablecolumn
+ width='1.0417in' sizetofit='true'/><tablecolumn width='100%'/>
+<tablerow>
+<tablecell valign='center' borderwidth='0px' htmlid='pat1'>
+<pardef id='5' leftmargin='0' spacebefore='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='5'><run><font size='9pt' name='user-interface'/>Password</run></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='6' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='password' usenotesstyle='false'
+ height='0.2299in' width='100%' multiline='true' borderstyle='single' kind='editable'
+ seal='true' name='Proxy_Password' description='Password' taborder='1'><code
+ event='inputvalidation'><formula>@If(@Length(Proxy_Password) &gt; 23;@Failure("Login name cannot be greater than 23 characters");@Success)</formula></code><code
+ event='exiting'><lotusscript>Sub Exiting(Source As Field)
+	'Dim w As New NotesUIWorkspace 
+	'Dim s As New NotesSession
+	'Dim db As NotesDatabase
+	'Dim doc As NotesDocument
+	'Dim uidoc As notesuidocument
+	
+	'Set db = s.CurrentDatabase
+	'Set uidoc=w.currentdocument
+	'Set doc = uidoc.document
+	
+	'doc.Proxy_Password.IsEncrypted = False
+	'Call doc.encrypt
+	'Call doc.save(True, True)
+End Sub</lotusscript></code></field></run><run><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='7' keepwithnext='true' keeptogether='true'/>
+<par def='7'><run><font size='4pt' name='multilingual'/></run></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='8' keepwithnext='true' keeptogether='true'/>
+<par def='8'><run><font size='4pt' name='multilingual'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='0px' htmlid='pat2'>
+<par def='5'><run><font size='9pt' name='user-interface'/>Confirm Password</run></par></tablecell>
+<tablecell valign='center' borderwidth='0px'>
+<par def='6'><run><font name='user-interface'/></run><run><font size='9pt'
+ name='user-interface'/><field type='password' usenotesstyle='false' height='0.2299in'
+ width='100%' multiline='true' borderstyle='single' kind='editable' seal='true'
+ name='Proxy_Password_1' description='Password confirmation' taborder='2'><code
+ event='inputvalidation'><formula>@If(@Length(Proxy_Password_1) &gt; 23;@Failure("Login name cannot be greater than 23 characters");@Success);
+@If(Proxy_Password = Proxy_Password_1;@Success;@Failure("Passwords do not match"))</formula></code><code
+ event='exiting'><lotusscript>Sub Exiting(Source As Field)
+	'Dim w As New NotesUIWorkspace 
+	'Dim s As New NotesSession
+	'Dim db As NotesDatabase
+	'Dim doc As NotesDocument
+	'Dim uidoc As notesuidocument
+	
+	'Set db = s.CurrentDatabase
+	'Set uidoc=w.currentdocument
+	'Set doc = uidoc.document
+	
+	'doc.Proxy_Password.IsEncrypted = False
+	'Call doc.encrypt
+	'Call doc.save(True, True)
+End Sub</lotusscript></code></field></run><run><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow></table>
+<par def='3'><run><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow></table>
+<pardef id='2' leftmargin='1in'/>
+<par def='2'><run><font size='9pt'/></run></par></richtext></body>
 <item name='$$Proxy_HTTPI' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
 
 '++LotusScript Development Environment:2:5:(Forward):0:1
@@ -281,152 +381,6 @@ AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAwABAAAAAACMAAkCAAC4
 ABMAAAD8AAAA1wAAAAAAAAAEACkAAAAAAB0AABoLAFtIAUmcAMq4AKYaDABHSAHL1wAAAFgBGg0A
 HRoeAB0CAAAAEQAYAAAAAAD//wEAAwADAAAABgCgAAgA/AAPAAoAAAA=
 </rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>(ProxyAuthentication)</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CD</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.2</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAAAAP////9U
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJNAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAAA4AAgAKgA0ADMAQgA1ADAAOQA4AAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAACKXHCQBAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='$$FormScript' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
-
-'++LotusScript Development Environment:2:5:(Forward):0:1
-Declare Sub Querysave(Source As Notesuidocument, Continue As Variant)
-Declare Sub Queryclose(Source As Notesuidocument, Continue As Variant)
-
-'++LotusScript Development Environment:2:5:(Declarations):0:2
-
-'++LotusScript Development Environment:2:2:BindEvents:1:129
-Private Sub BindEvents(Byval Objectname_ As String)
-	Static Source As NOTESUIDOCUMENT
-	Set Source = Bind(Objectname_)
-	On Event Querysave From Source Call Querysave
-	On Event Queryclose From Source Call Queryclose
-End Sub
-
-'++LotusScript Development Environment:2:2:Querysave:1:12
-Sub Querysave(Source As Notesuidocument, Continue As Variant)
-	
-End Sub
-'++LotusScript Development Environment:2:2:Queryclose:1:12
-Sub Queryclose(Source As Notesuidocument, Continue As Variant)
-	Dim w As New NotesUIWorkspace 
-	Dim s As New NotesSession
-	Dim db As NotesDatabase
-	Dim doc As NotesDocument
-	Set db = s.CurrentDatabase
-	Dim uidoc As notesuidocument
-	Set uidoc=w.currentdocument
-	Set doc = uidoc.document
-	
-	If doc.ProxyFlag(0) = "1" Then
-		doc.Proxy_FTPI = doc.Proxy_HTTPI(0)
-		doc.Proxy_GopherI = doc.Proxy_HTTPI(0)
-		doc.Proxy_SSLI = doc.Proxy_HTTPI(0)
-		doc.Proxy_HTTP=doc.Proxy_HTTPI(0)&amp;":"&amp;doc.Port1(0)
-		doc.Proxy_FTP=doc.Proxy_HTTPI(0)&amp;":"&amp;doc.Port1(0)
-		doc.Proxy_Gopher=doc.Proxy_HTTPI(0)&amp;":"&amp;doc.Port1(0)
-		doc.Proxy_SSL=doc.Proxy_HTTPI(0)&amp;":"&amp;doc.Port1(0)
-		doc.Proxy_SOCKs=doc.Proxy_SOCKsI(0)&amp;":"&amp;doc.Port5(0)
-		If doc.Proxy_NotesHTTPI(0) &lt;&gt;"" Then
-			doc.Proxy_NotesHTTP=doc.Proxy_NotesHTTPI(0)&amp;":"&amp;doc.Port6(0)
-		End If
-		Call uidoc.refresh
-	End If
-End Sub<break/></text></item>
-<item name='$AppHelpFormula' sign='true'><formula>@If(@Subset(@DbName;1)="";@Command([OpenHelpDocument];[ClientHelp];"(Help)";"pernames_f_proxydialog");@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_f_ProxyDialog"))</formula></item>
-<item name='$$Proxy_Password' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
-
-'++LotusScript Development Environment:2:5:(Forward):0:1
-Declare Sub Exiting(Source As Field)
-
-'++LotusScript Development Environment:2:5:(Declarations):0:2
-
-'++LotusScript Development Environment:2:2:BindEvents:1:129
-Private Sub BindEvents(Byval Objectname_ As String)
-	Static Source As FIELD
-	Set Source = Bind(Objectname_)
-	On Event Exiting From Source Call Exiting
-End Sub
-
-'++LotusScript Development Environment:2:2:Exiting:1:12
-Sub Exiting(Source As Field)
-	'Dim w As New NotesUIWorkspace 
-	'Dim s As New NotesSession
-	'Dim db As NotesDatabase
-	'Dim doc As NotesDocument
-	'Dim uidoc As notesuidocument
-	
-	'Set db = s.CurrentDatabase
-	'Set uidoc=w.currentdocument
-	'Set doc = uidoc.document
-	
-	'doc.Proxy_Password.IsEncrypted = False
-	'Call doc.encrypt
-	'Call doc.save(True, True)
-End Sub<break/></text></item>
-<item name='$$Proxy_Password_1' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
-
-'++LotusScript Development Environment:2:5:(Forward):0:1
-Declare Sub Exiting(Source As Field)
-
-'++LotusScript Development Environment:2:5:(Declarations):0:2
-
-'++LotusScript Development Environment:2:2:BindEvents:1:129
-Private Sub BindEvents(Byval Objectname_ As String)
-	Static Source As FIELD
-	Set Source = Bind(Objectname_)
-	On Event Exiting From Source Call Exiting
-End Sub
-
-'++LotusScript Development Environment:2:2:Exiting:1:12
-Sub Exiting(Source As Field)
-	'Dim w As New NotesUIWorkspace 
-	'Dim s As New NotesSession
-	'Dim db As NotesDatabase
-	'Dim doc As NotesDocument
-	'Dim uidoc As notesuidocument
-	
-	'Set db = s.CurrentDatabase
-	'Set uidoc=w.currentdocument
-	'Set doc = uidoc.document
-	
-	'doc.Proxy_Password.IsEncrypted = False
-	'Call doc.encrypt
-	'Call doc.save(True, True)
-End Sub<break/></text></item>
-<item name='ProxyAuthor' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Proxy_Password' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Proxy_Password_1' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>Proxy_Password_1</text><text>Proxy_Password</text><text
->ProxyAuthor</text></textlist></item>
 <item name='$Proxy_Password_O' sign='true'>
 <rawitemdata type='14'>
 AQAAAkxTT0IDABQIZW4AAAQACAAlAAQAAAAQAhwBAAAAAAAArAC4AAAAAAA0AKwAKABIAP//AABk
@@ -485,127 +439,5 @@ AAAAAAADAAEAAAAAAKAACQIAALgAEwAAABABAADXAAAAAAAAAAQAKQAAAAAAHQAAGgsAW0gBSZwA
 yrgAphoMAEdIAcvXAAAAWAEaDQAdGh4AHQIAAAARABgAAAAAAP//AQADAAMAAAAGALQACAAQAQ8A
 CgAAAEw=
 </rawitemdata></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>(ProxyAuthentication)</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-HgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAcGF0MtASAgEMDNYdgHAAIgAAAQEAAIECgwQGAIX/CAAD
-AAAK3QYAAPf/9/8kAAEAAIAgAFAHSwEAAAAAAAAAAGQAAAAAAAAAAAAAAAAA/v9QAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACw/xQAAAAAAKAAAAAAAAAAAAAAAIr/MgGCIAAFAAACAAgAAAAAAgMAAAkAAAAA
-AgDoABAAFQAAAOgACABwAAUAEABQcm94eV9QYXNzd29yZF8xpgEAAAAAAAAAADdADwKvAEYAPAAB
-AC8ATG9naW4gbmFtZSBjYW5ub3QgYmUgZ3JlYXRlciB0aGFuIDIzIGNoYXJhY3RlcnMAewGuAAoA
-egCuAAQAtQMDAAcADAAFAAk2UzdTAAAAXAAFAA4AUHJveHlfUGFzc3dvcmQFABAAUHJveHlfUGFz
-c3dvcmRfMQoCrwAsAAgAegCuACQAAQAWAFBhc3N3b3JkcyBkbyBub3QgbWF0Y2h7Aa4ABAC1AwMA
-BwAOAAcACTBSM1M0UwBQcm94eV9QYXNzd29yZF8xUGFzc3dvcmQgY29uZmlybWF0aW9uANIIAQAA
-AAAA0ggJAP///wDeBgAA9/+F/wgAAwAACdEGAAAAAIECgwQDAIX/CAADAAAJ4gTwA9MICQD///8A
-pQYAAAAAgQKDBAIAhf8IAAEAAAk=
-</rawitemdata></item>
-<item name='$$$FormScript_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQALwCgAQQAAAC8B2wEAAAAAAAAmANIBQAAAAAwAMAAJABEACgCAABg
-AAAAAAAAAAMAAAAEABACAAAAAAAAAAAAAAAAAAAAAAAAAABYARACAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAABAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAUAAAC4AEgFuABIBQAAAADIAsgCAAAAAHQEdAQAAAAAAAAAAAAAAAAAAAAA
-AAAAAKQDpAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAEAAAAoAEAAAAAAAC8BwAAbAQAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAA
-AAYAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwBwBAAAAADcAA8AJAAkACQARgBPAFIATQBTAEMAUgBJAFAAVABfAE8AAAB4AAMATgBFAFcA
-AACMAAYARABFAEwARQBUAEUAAAAAAKgACgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAACUAQkAVABF
-AFIATQBJAE4AQQBUAEUAAAAcAQYATwBCAEoARQBDAFQAAAAAAJQAAAAAAAAAsAIGAFMATwBVAFIA
-QwBFAAAAAAD4AAgAQwBPAE4AVABJAE4AVQBFAAAAAABIAQoAQgBJAE4ARABFAFYARQBOAFQAUwAA
-AAAAMAELAE8AQgBKAEUAQwBUAE4AQQBNAEUAXwAAAGQBDwBOAE8AVABFAFMAVQBJAEQATwBDAFUA
-TQBFAE4AVAAAAEgDBgAlAEwAUwBYAFUASQAAAAAAbAEJAFEAVQBFAFIAWQBTAEEAVgBFAAAAmAIK
-AFEAVQBFAFIAWQBDAEwATwBTAEUAAAAAALwBAQBXAAAAnAEQAE4ATwBUAEUAUwBVAEkAVwBPAFIA
-SwBTAFAAQQBDAEUAAAAAANABAQBTAAAAXAIMAE4ATwBUAEUAUwBTAEUAUwBTAEkATwBOAAAAAABY
-BAYAJQBMAFMAWABCAEUAAAAAANwBAgBEAEIAAAAAAPwBDQBOAE8AVABFAFMARABBAFQAQQBCAEEA
-UwBFAAAACAIDAEQATwBDAAAATAINAE4ATwBUAEUAUwBEAE8AQwBVAE0ARQBOAFQAAABQAw8AQwBV
-AFIAUgBFAE4AVABEAEEAVABBAEIAQQBTAEUAAAAQAwUAVQBJAEQATwBDAAAAgAIPAEMAVQBSAFIA
-RQBOAFQARABPAEMAVQBNAEUATgBUAAAAuAIIAEQATwBDAFUATQBFAE4AVAAAAAAAYAMJAFAAUgBP
-AFgAWQBGAEwAQQBHAAAALAMBADEAAADUAgoAUABSAE8AWABZAF8ARgBUAFAASQAAAAAA8AILAFAA
-UgBPAFgAWQBfAEgAVABUAFAASQAAALADDQBQAFIATwBYAFkAXwBHAE8AUABIAEUAUgBJAAAAmAMK
-AFAAUgBPAFgAWQBfAFMAUwBMAEkAAAAAAP//CgBQAFIATwBYAFkAXwBIAFQAVABQAAAAAAB4AwEA
-OgAAACQEBQBQAE8AUgBUADEAAADMAwkAUABSAE8AWABZAF8ARgBUAFAAAABIBAwAUABSAE8AWABZ
-AF8ARwBPAFAASABFAFIAAAAAAPwDCQBQAFIATwBYAFkAXwBTAFMATAAAAP//CwBQAFIATwBYAFkA
-XwBTAE8AQwBLAFMAAADsAwwAUABSAE8AWABZAF8AUwBPAEMASwBTAEkAAAAAAP//BQBQAE8AUgBU
-ADUAAAD//xAAUABSAE8AWABZAF8ATgBPAFQARQBTAEgAVABUAFAASQAAAAAA//8PAFAAUgBPAFgA
-WQBfAE4ATwBUAEUAUwBIAFQAVABQAAAA//8FAFAATwBSAFQANgAAAP//BwBSAEUARgBSAEUAUwBI
-AAAABQDABwAAAAAj2Ma4CAAAAFgBAADEAAAAAAAAAAIAAACcAEgBAAAAAAAAAAAAAAAAAAAAAJwA
-nAAAAAAAAAAAAAAAAAAAAAAAAAAAAEgBSAEAAAAAAAAAAAEAAAACAAAAAwAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAEA
-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
-CgAAAA==
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>(ProxyAuthentication)</text></item></form>
 

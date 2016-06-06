@@ -1,33 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='5b6' unid='EAB6234D51C017E58525661E0048470F' sequence='5012'>
+<subform name='$LotusFaxPersonSubform' alias='1.0|$LotusFaxPersonSubform'
+ xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F'
+ designerversion='6' language='en'>
+<noteinfo noteid='5b2' unid='EAB6234D51C017E58525661E0048470F' sequence='5012'>
 <created><datetime dst='true'>19980609T090927,83-04</datetime></created>
-<modified><datetime dst='true'>20150507T110155,36+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114100,56+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095401,58-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110155,35+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110155,35+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114100,56+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114100,56+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143929,56-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE'><textlist><text>$LotusFaxPersonSubform</text><text>1.0</text><text
->$LotusFaxPersonSubform</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUA3x</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSJTbWFsbCBGb250cwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$LotusFaxPersonSubform</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAJAAAAAJQHAAAAAAAAAAAAAAAAu/9CAAEAvwMBAAAAICI0AAAAJgAFABcATkZYX0Zh
-eE91dENvdmVyUGFnZU5hbWUAaAEeAQMABwAMAAUACTBTMEUAgwQBAIX/CAAFAAAC
-</rawitemdata></item></note>
+<body><richtext>
+<pardef id='1'><code event='hidewhen'><formula>!@IsAvailable(NFX_FaxOutCoverPageName)</formula></code></pardef>
+<par def='1'><run><font size='2pt' name='Small Fonts' pitch='variable' truetype='false'
+ familyid='20'/></run></par></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>$LotusFaxPersonSubform</text></item></subform>
 

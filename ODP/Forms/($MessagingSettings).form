@@ -1,40 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='3ea' unid='0331355CD52861398525661600579113' sequence='5053'>
+<form name='($MessagingSettings)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' nocompose='true' noquery='true'
+ htmlallfields='true' publicaccess='false' designerversion='8.5.3' language='en'>
+<noteinfo noteid='3e6' unid='0331355CD52861398525661600579113' sequence='5053'>
 <created><datetime dst='true'>19980601T115627,71-04</datetime></created>
-<modified><datetime dst='true'>20150507T110152,85+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,26+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095405,10-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,84+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,84+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,26+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,26+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20120516T114334,74-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='SMTPMaxInboundMessageSize' summary='false' sign='true'><number
->0</number></item>
-<item name='SMTPMaxOutboundMessageSize' summary='false' sign='true'><number
->0</number></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSJTbWFsbCBGb250cwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='OriginalModTime' sign='true'><datetime dst='true'>20050426T142416,99-04</datetime></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>($MessagingSettings)</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$SubForms' sign='true'><textlist><text>$RouterSMTPSettings</text><text
->$iNotesWebAccess</text><text>$IMAP</text></textlist></item>
-<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
->0000000000000000</text><text>0000000000000000</text></textlist></item>
-<item name='$WINDOWTITLE' sign='true'><formula>"Messaging Settings"</formula></item>
-<item name='$HTMLHeadTag' sign='true'><formula>_tDb	:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='windowtitle'><formula>"Messaging Settings"</formula></code><code event='webquerysave'><formula
+>REM {SPRs TGUZ5L3PGL, ZGSN6BJD3J};
+REM {When running from the web via webadmin.ntf, reset the form field back to 'ServerConfig', 
+	otherwise we'd store the value '($MessagingSettings)' in the config doc};
+
+FIELD Form := "ServerConfig";
+
+""</formula></code><code event='htmlbody'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_f_MessagingSettings")</formula></code><code
+ event='htmlhead'><formula>_tDb	:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
 _is6	:= @TextToNumber(@Version) &gt; 171;
 
 "&lt;meta http-equiv='expires' content='0'&gt;
@@ -48,1105 +34,153 @@ _is6	:= @TextToNumber(@Version) &gt; 171;
 	 &lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
 
 	"&lt;script src='/" + _tDb + "/WebJSNavigationTools5?OpenPage'&gt;&lt;/script&gt;"
-)</formula></item>
-<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></item>
-<item name='$WEBQuerySave' sign='true'><formula>REM {SPRs TGUZ5L3PGL, ZGSN6BJD3J};
-REM {When running from the web via webadmin.ntf, reset the form field back to 'ServerConfig', 
-	otherwise we'd store the value '($MessagingSettings)' in the config doc};
+)</formula></code>
+<actionbar useappletinbrowser='true' bgcolor='#b1b1d2' bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Edit Message Settings' showinmenu='false' hide='edit previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Edit Message Settings' showinmenu='false' hide='edit previewedit notes'><imageref
+ name='btnEdit.gif'/><code event='onClick' for='web'><javascript>ntEditDoc('[NetModifier]', '($ServerConfig)')</javascript></code></action>
+<action title='Save &amp; Close' showinmenu='false' hide='preview read previewedit web'><imageref
+ name='btnSave.gif'/><code event='click'><formula>@PostedCommand([FileSave]);
+@PostedCommand([FileCloseWindow])</formula></code></action>
+<action title='Save &amp; Close' showinmenu='false' hide='preview read previewedit notes'><imageref
+ name='btnSave.gif'/><code event='onClick' for='web'><javascript>ntSaveAndClose()
+</javascript></code></action>
+<action title='Refresh' showinmenu='false' hide='preview read notes'><imageref
+ name='btnRefresh.gif'/><code event='click'><formula>@Command([ViewRefreshFields])</formula></code></action>
+<action title='Cancel' showinmenu='false' hide='preview read previewedit web'
+ graphicalign='right'><imageref name='btnCancel.gif'/><code event='click'><formula
+>REM {Notes only};
+FIELD SaveOptions := 0;
+@Command([FileCloseWindow])</formula></code></action>
+<action title='Cancel' showinmenu='false' hide='read notes' graphicalign='right'><imageref
+ name='btnCancel.gif'/><code event='onClick' for='web'><javascript>ntCancel()</javascript></code></action>
+<action title='Categorize' showinbar='false' systemcommand='categorize'/>
+<action title='Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Document' showinbar='false' systemcommand='send'/>
+<action title='Forward' showinbar='false' systemcommand='forward'/>
+<action title='Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<body><richtext>
+<pardef id='1' align='none' leftmargin='1in' hide='notes web' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='1'><run html='true'><font size='9pt'/></run><run><font size='9pt'/><sharedfieldref
+ name='$HTMLAttributes'/></run><run><font size='9pt'/></run><run><font size='9pt'/><field
+ type='text' kind='computedfordisplay' name='ActForm'><code event='defaultvalue'><formula
+>"MessagingSettings"</formula></code></field></run><compositedata type='98'
+ prevtype='65418' nexttype='222' afterparcount='14' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<table extrahtmlattrs='cellpadding=10' leftmargin='0.7500in' widthtype='fixedleft'
+ refwidth='10.9896in'><tablecolumn width='10.9896in'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<cellbackground><imageref name='gears'/></cellbackground>
+<pardef id='3' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt'/> </run></par>
+<par def='3'><run><font size='14pt' style='bold' color='#424282'/>  </run><run
+><font size='14pt' style='bold' color='#424282'/>Messaging Settings</run><run
+><font size='14pt' style='bold' color='#424282'/> </run><run><font size='12pt'
+ color='#424282' style='bold'/><field type='text' kind='computedfordisplay'
+ name='DisplayName'><code event='defaultvalue'><formula>@If(Fullname = ""; ""; ": " + Fullname)</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='17' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<pardef id='4' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font size='9pt'/>  </run></par></tablecell></tablerow></table>
+<pardef id='5' hide='notes web'/>
+<par def='5'><run><font size='9pt' style='bold' color='#424282'/></run></par>
+<table widthtype='fitwindow' rowdisplay='tabscompute' htmlid='MainTab' extrahtmlattrs='cellpadding=7'
+ leftmargin='0.7500in' refwidth='9.3007in'><tablerowstyle><font size='9pt'
+ color='black'/></tablerowstyle><tablecolumn width='100%'/>
+<tablerow tablabel='Messaging Settings'>
+<tablecell borderwidth='0px'>
+<pardef id='7' leftmargin='0%' keepwithnext='true' keeptogether='true'/>
+<par def='7'><run><font size='9pt'/></run></par>
+<pardef id='8' leftmargin='0%' hide='notes web' keepwithnext='true' keeptogether='true'/><subformref
+ name='$RouterSMTPSettings'/>
+<pardef id='9' leftmargin='1%' hide='notes web' keepwithnext='true' keeptogether='true'/>
+<par def='9'/></tablecell></tablerow>
+<tablerow tablabel='IBM iNotes'>
+<tablecell borderwidth='0px'>
+<pardef id='10' leftmargin='1%' keepwithnext='true' keeptogether='true'/>
+<par def='10'><run><font size='9pt'/></run></par>
+<pardef id='11' leftmargin='1%' hide='read edit print preview previewedit notes web'
+ keepwithnext='true' keeptogether='true'/><subformref name='$iNotesWebAccess'/>
+<par def='10'/></tablecell></tablerow>
+<tablerow tablabel='IMAP'>
+<tablecell borderwidth='0px'>
+<par def='7'><run><font size='9pt'/></run></par><subformref name='$IMAP'/>
+<par def='10'/></tablecell></tablerow>
+<tablerow tablabel='Comments'>
+<tablecell borderwidth='0px'>
+<pardef id='12' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='12'><run><font size='9pt'/></run></par>
+<par def='12'><popup show='onclick' hotspotstyle='none'><popuptext>Enter any comments about the connection description.</popuptext><run
+><font size='9pt'/></run></popup><run><font size='9pt'/></run><run><font size='9pt'/><field
+ showdelimiters='false' type='richtext' kind='editable' name='Comments' description='Comments about the connection description'><code
+ event='htmlattributes'><formula>htmlTextarea10XXL</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='13' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAEAAAA=
+</compositedata><run><font size='9pt'/></run></par>
+<par def='12'><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='13'/>
+<par def='13'/>
+<pardef id='14' hide='read edit copy preview previewedit'/>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='computed' name='Form'><code event='defaultvalue'><formula>REM {DNT};
+"ServerConfig"</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='7' containertype='65418' aftercontainercount='1'
+ afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run><run><font
+ size='9pt'/><field type='text' kind='computedfordisplay' name='$$Return'><code
+ event='defaultvalue'><formula>_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
 
-FIELD Form := "ServerConfig";
-
-""</formula></item>
-<item name='$Flags'><text>CD</text></item>
-<item name='$WebFlags' sign='true'><text>F</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP////8A
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAABUAAgAKgA1ADgAOAA3ADgAQwBDAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAABtfNP2BAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='$AppHelpFormula' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_f_MessagingSettings")</formula></item>
-<item name='Mail_Number_Of_Mailboxes' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailExternalSMTP' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailInternalSMTP' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailSMTPServerReachable' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailAddressLookup' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailLookupExhaustive' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailRelayHost' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailRelaySMTPSenderAuth' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailRelaySMTPSenderAcctName' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailRelaySMTPSenderAcctPW' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailSmartHost' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailSmartHostAll' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailUseDNS' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AllowFromNotesDomains' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DenyFromNotesDomains' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AllowFromHierarchies' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DenyFromHierarchies' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
+"&lt;link rel=stylesheet type='text/css' href='/" + _tDb + "/cssForm?ReadForm'&gt;
+&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;
+&lt;script&gt;
+	sWebDbName = '/" + _tDb + "/';
+	ntReturn();
+&lt;/script&gt;"</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='13' containertype='65418' aftercontainercount='1'
+ afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par>
+<par def='14'><run><font size='9pt' color='blue'/></run><run><font size='9pt'
+ color='blue'/><field type='number' kind='editable' name='$MainTab'><numberformat
+ format='general' digits='2' punctuated='false' parens='false' percent='false'
+ bytes='false'/><code event='defaultvalue'><formula>0</formula></code></field></run><run
+><font size='9pt' color='blue'/></run></par></richtext></body>
+<item name='SMTPMaxInboundMessageSize' summary='false' sign='true'><number
+>0</number></item>
+<item name='SMTPMaxOutboundMessageSize' summary='false' sign='true'><number
+>0</number></item>
+<item name='OriginalModTime' sign='true'><datetime dst='true'>20050426T142416,99-04</datetime></item>
+<item name='$SubForm_RepIDs' sign='true'><textlist><text>0000000000000000</text><text
+>0000000000000000</text><text>0000000000000000</text></textlist></item>
 <item name='RouterMaxMsgSize' summary='false' sign='true'><number>0</number></item>
-<item name='RouterLowPriorityStatus' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='RouterLowPrioritySizeBegin' summary='false' sign='true'><number
 >0</number></item>
-<item name='RouterLowSizeFlag' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPAllowRelayDomains' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPRlyCheck' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPDenyRelayDomains' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPRlyExcpts' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPAllowRelayHosts' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPRlyAlwAuthUsrs' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPDenyRelayHosts' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPRBLSup' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPDNSWLSup' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPRBLSites' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPDNSWLSites' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPRBLAction' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPDNSWLAction' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPRBLReply' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPPrivBLSup' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPPrivWLSup' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPPrivBLHosts' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPPrivWLHosts' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPPrivBLAction' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPPrivWLAction' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPPrivBLReply' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPVerifyRemote' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AllowFromInternetDomains' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DenyFromInternetDomains' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPErrorLimit' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPVerifyMailFrom' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPVrfyRcptTo' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPDnyNtUnqRcpt' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPDenyMailToGroups' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AllowFromInternetAddresses' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AllowMailForInternetAddresses' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DenyFromInternetAddresses' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DenyMailForInternetAddresses' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AllowInternetAddressesToMail' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DenyInternetAddressesToMail' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AllowNotesAddressesToMail' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DenyNotesAddressesToMail' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AllowToInternetAddresses' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DenyToInternetAddresses' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailMaxDeliveryThreads' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailEncryptIncoming' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailAgentEnabled' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailAgentTimeout' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrEnblUsrRuleFwd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrUsrRlFwdRvrsPth' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrQtaWarnNtfy' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='tmpRtrWarnNtfyInt' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrWarnIntUnits' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrQtaErrNtfy' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='tmpRtrErrNtfyInt' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrErrIntUnits' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterObeysQuotas' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrQtaHoldAllMsgsForUsr' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrQtaHoldMaxMsgsPerUsr' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrQtaHoldMaxMsgSz' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MAILMAXTHREADS' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailMaxConcurrentXferThreads' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailMaxHops' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='MailLowPriorityTime' summary='false' sign='true'>
 <rawitemdata type='400'>
 AAAAAAAAAAA=
 </rawitemdata></item>
-<item name='RtrLowPrioDlyNtfy' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Mail_Transfer_Retry_Minutes' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailExpiredPurge' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfy' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfyNumH' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfyTimeH' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfyIntrvlH' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfyNumN' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfyTimeN' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfyIntrvlN' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfyNumL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfyTimeL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrDlyNtfyIntrvlL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterDisclaimersEnabled' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterDisclaimersSMIME' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterDisclaimersLogLevel' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MTEnabled' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='MTInterval' summary='false' sign='true'><number>0</number></item>
-<item name='MTNoTrackingFor' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MTLogSubjects' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MTAllowTracking' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MTNoSubjectsFor' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MTAllowSubjects' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterRecallEnabled' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterRecallCriteria' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='dspMailRcllCritPeriodItem' summary='false' sign='true'><number
 >0</number></item>
-<item name='MailRecallCritUnit' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterRecallCriteriaPeriod' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlEnbld' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlFldEncryptExcl' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlMthd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlDBName' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlDest' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlCert' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JournalRecipients' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlDBMthd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlDBSz' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlDBPurgeInt' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='JrnlDBPrd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPExtensionSize' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterExtensionSize' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPExtensionPipelining' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterExtensionPipelining' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPExtensionDsn' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterExtensionDSN' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPExtension8bitmime' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RouterExtension8bitMIME' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPExtensionHelp' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPExtensionVrfy' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPExtensionExpn' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTPExtensionEtrn' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SMTP_NegotiatedSSL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Log_MailRouting' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailLookupPrimaryNamesOnly' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='OOO_ServiceType' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailClusterFailover' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailHoldUndeliverable' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailDisablePriority' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailFailureMsgInFile' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailDynamicCostReset' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTextFileForTransferErrors' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTextFileForDeliveryErrors' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTextFileForExpirationErrors' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTextForDispatchDomainErrors' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTextForDispatchServerErrors' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTextForDispatchUserErrors' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTextForDispatchSizeErrors' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTextForDispatchPrivErrors' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTxtFileForTxfrDelays' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrQtaWarnAdminTxtFile' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrQtaErrAdminTxtFile' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailTextFileForMsgDelays' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrQtaErrNtfyMins' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RtrQtaWarnNtfyMins' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='$Config_Rout_subf' summary='false' sign='true'><number>0</number></item>
 <item name='$Config_Rout_RestrCon_Tabs' summary='false' sign='true'><number
 >0</number></item>
 <item name='$Config_Rout_Adv_Tabs' summary='false' sign='true'><number>0</number></item>
-<item name='iwaStp' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableCstmPg' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableAlarms' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='iwaAlarmPollInterval' summary='false' sign='true'><number>0</number></item>
 <item name='iwaMinMailInterval' summary='false' sign='true'><number>0</number></item>
-<item name='iwaFmt' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableNmVldtn' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='iwaMAS' summary='false' sign='true'><number>0</number></item>
-<item name='iwaEnableMlThred' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSM' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSD' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSE' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSSL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaJS' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSecMailEncryptUnTrustedEnable' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaChatEntry' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaCHAT' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLVNM' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTPROXY' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTKN' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTSRV' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTCOBS' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTLCAL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTDWACC' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTJCC' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTPROT' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTORG' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTNFMT' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTPROXYURL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTPROXYURLSSL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSTPROXYLOGIN' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableEncrpt' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEncrptLvl' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableEncrptOvrrd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableOffline' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='iwaSFD' summary='false' sign='true'><number>0</number></item>
-<item name='iwaSFDE' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaDAS' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaSyncInternetPassword' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableAltNmPref' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLangPref' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableAltNmUsrCfg' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnAV' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaAV' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableBHO' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaBHOAutoInstall' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaBHOAutoLogout' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaBHOCacheType' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaBHOClearHistory' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaBHODisallowAttachment' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaBHOMaintainArchive' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableArchive' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableFTIndex' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnablePassword' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnablePrint' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaEnableActvXUpld' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaGZIP' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaCnSRoomResource' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaReuseChildWindows' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLocalArchiving' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaDTP' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaDT' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaDefaultPageURL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaDefaultPageName' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLP' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaDPL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaDPF' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLT1' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLN1' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLO1' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLT2' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLN2' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLO2' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLT3' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLN3' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLO3' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLT4' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLN4' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaLO4' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='iwaVersion' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPMaxSess' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPSessTO' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPAutoLgnCnvrt' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPNamespace' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPShowNS' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPShrdRoot' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPNSShrdDbLinks' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPOthersRoot' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPDomainDelimiter' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPNSOthersUnrd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPGreet' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPSSLGreet' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPSSLRedirGreet' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPMaxThrds' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPMaxRespThrdsPerFetch' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPMaxTtlFetchThrds' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPMaxTtlRespThrds' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='$Config_IMAP_Tabs' summary='false' sign='true'><number>0</number></item>
-<item name='Comments' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Form' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='$MainTab' summary='false' sign='true'><number>0</number></item>
-<item name='$FIELDS'><textlist><text>$MainTab</text><text>Form</text><text
->Comments</text><text>$Config_IMAP_Tabs</text><text>IMAPMaxTtlRespThrds</text><text
->IMAPMaxTtlFetchThrds</text><text>IMAPMaxRespThrdsPerFetch</text><text>IMAPMaxThrds</text><text
->IMAPSSLRedirGreet</text><text>IMAPSSLGreet</text><text>IMAPGreet</text><text
->IMAPNSOthersUnrd</text><text>IMAPDomainDelimiter</text><text>IMAPOthersRoot</text><text
->IMAPNSShrdDbLinks</text><text>IMAPShrdRoot</text><text>IMAPShowNS</text><text
->IMAPNamespace</text><text>IMAPAutoLgnCnvrt</text><text>IMAPSessTO</text><text
->IMAPMaxSess</text><text>iwaVersion</text><text>iwaLO4</text><text>iwaLN4</text><text
->iwaLT4</text><text>iwaLO3</text><text>iwaLN3</text><text>iwaLT3</text><text
->iwaLO2</text><text>iwaLN2</text><text>iwaLT2</text><text>iwaLO1</text><text
->iwaLN1</text><text>iwaLT1</text><text>iwaDPF</text><text>iwaDPL</text><text
->iwaLP</text><text>iwaDefaultPageName</text><text>iwaDefaultPageURL</text><text
->iwaDT</text><text>iwaDTP</text><text>iwaLocalArchiving</text><text>iwaReuseChildWindows</text><text
->iwaCnSRoomResource</text><text>iwaGZIP</text><text>iwaEnableActvXUpld</text><text
->iwaEnablePrint</text><text>iwaEnablePassword</text><text>iwaEnableFTIndex</text><text
->iwaEnableArchive</text><text>iwaBHOMaintainArchive</text><text>iwaBHODisallowAttachment</text><text
->iwaBHOClearHistory</text><text>iwaBHOCacheType</text><text>iwaBHOAutoLogout</text><text
->iwaBHOAutoInstall</text><text>iwaEnableBHO</text><text>iwaAV</text><text
->iwaEnAV</text><text>iwaEnableAltNmUsrCfg</text><text>iwaLangPref</text><text
->iwaEnableAltNmPref</text><text>iwaSyncInternetPassword</text><text>iwaDAS</text><text
->iwaSFDE</text><text>iwaSFD</text><text>iwaEnableOffline</text><text>iwaEnableEncrptOvrrd</text><text
->iwaEncrptLvl</text><text>iwaEnableEncrpt</text><text>iwaSTPROXYLOGIN</text><text
->iwaSTPROXYURLSSL</text><text>iwaSTPROXYURL</text><text>iwaSTNFMT</text><text
->iwaSTORG</text><text>iwaSTPROT</text><text>iwaSTJCC</text><text>iwaSTDWACC</text><text
->iwaSTLCAL</text><text>iwaSTCOBS</text><text>iwaSTSRV</text><text>iwaSTKN</text><text
->iwaSTPROXY</text><text>iwaLVNM</text><text>iwaCHAT</text><text>iwaChatEntry</text><text
->iwaSecMailEncryptUnTrustedEnable</text><text>iwaJS</text><text>iwaSSL</text><text
->iwaSE</text><text>iwaSD</text><text>iwaSM</text><text>iwaEnableMlThred</text><text
->iwaMAS</text><text>iwaEnableNmVldtn</text><text>iwaFmt</text><text>iwaMinMailInterval</text><text
->iwaAlarmPollInterval</text><text>iwaEnableAlarms</text><text>iwaEnableCstmPg</text><text
->iwaStp</text><text>$Config_Rout_Adv_Tabs</text><text>$Config_Rout_RestrCon_Tabs</text><text
->$Config_Rout_subf</text><text>RtrQtaWarnNtfyMins</text><text>RtrQtaErrNtfyMins</text><text
->MailTextFileForMsgDelays</text><text>RtrQtaErrAdminTxtFile</text><text>RtrQtaWarnAdminTxtFile</text><text
->MailTxtFileForTxfrDelays</text><text>MailTextForDispatchPrivErrors</text><text
->MailTextForDispatchSizeErrors</text><text>MailTextForDispatchUserErrors</text><text
->MailTextForDispatchServerErrors</text><text>MailTextForDispatchDomainErrors</text><text
->MailTextFileForExpirationErrors</text><text>MailTextFileForDeliveryErrors</text><text
->MailTextFileForTransferErrors</text><text>MailDynamicCostReset</text><text
->MailFailureMsgInFile</text><text>MailDisablePriority</text><text>MailHoldUndeliverable</text><text
->MailClusterFailover</text><text>OOO_ServiceType</text><text>MailLookupPrimaryNamesOnly</text><text
->Log_MailRouting</text><text>SMTP_NegotiatedSSL</text><text>SMTPExtensionEtrn</text><text
->SMTPExtensionExpn</text><text>SMTPExtensionVrfy</text><text>SMTPExtensionHelp</text><text
->RouterExtension8bitMIME</text><text>SMTPExtension8bitmime</text><text>RouterExtensionDSN</text><text
->SMTPExtensionDsn</text><text>RouterExtensionPipelining</text><text>SMTPExtensionPipelining</text><text
->RouterExtensionSize</text><text>SMTPExtensionSize</text><text>JrnlDBPrd</text><text
->JrnlDBPurgeInt</text><text>JrnlDBSz</text><text>JrnlDBMthd</text><text>JournalRecipients</text><text
->JrnlCert</text><text>JrnlDest</text><text>JrnlDBName</text><text>JrnlMthd</text><text
->JrnlFldEncryptExcl</text><text>JrnlEnbld</text><text>RouterRecallCriteriaPeriod</text><text
->MailRecallCritUnit</text><text>dspMailRcllCritPeriodItem</text><text>RouterRecallCriteria</text><text
->RouterRecallEnabled</text><text>MTAllowSubjects</text><text>MTNoSubjectsFor</text><text
->MTAllowTracking</text><text>MTLogSubjects</text><text>MTNoTrackingFor</text><text
->MTInterval</text><text>MTEnabled</text><text>RouterDisclaimersLogLevel</text><text
->RouterDisclaimersSMIME</text><text>RouterDisclaimersEnabled</text><text>RtrDlyNtfyIntrvlL</text><text
->RtrDlyNtfyTimeL</text><text>RtrDlyNtfyNumL</text><text>RtrDlyNtfyIntrvlN</text><text
->RtrDlyNtfyTimeN</text><text>RtrDlyNtfyNumN</text><text>RtrDlyNtfyIntrvlH</text><text
->RtrDlyNtfyTimeH</text><text>RtrDlyNtfyNumH</text><text>RtrDlyNtfy</text><text
->MailExpiredPurge</text><text>Mail_Transfer_Retry_Minutes</text><text>RtrLowPrioDlyNtfy</text><text
->MailLowPriorityTime</text><text>MailMaxHops</text><text>MailMaxConcurrentXferThreads</text><text
->MailMaxThreads</text><text>RtrQtaHoldMaxMsgSz</text><text>RtrQtaHoldMaxMsgsPerUsr</text><text
->RtrQtaHoldAllMsgsForUsr</text><text>RouterObeysQuotas</text><text>RtrErrIntUnits</text><text
->tmpRtrErrNtfyInt</text><text>RtrQtaErrNtfy</text><text>RtrWarnIntUnits</text><text
->tmpRtrWarnNtfyInt</text><text>RtrQtaWarnNtfy</text><text>RtrUsrRlFwdRvrsPth</text><text
->RtrEnblUsrRuleFwd</text><text>MailAgentTimeout</text><text>MailAgentEnabled</text><text
->MailEncryptIncoming</text><text>MailMaxDeliveryThreads</text><text>DenyToInternetAddresses</text><text
->AllowToInternetAddresses</text><text>DenyNotesAddressesToMail</text><text
->AllowNotesAddressesToMail</text><text>DenyInternetAddressesToMail</text><text
->AllowInternetAddressesToMail</text><text>DenyMailForInternetAddresses</text><text
->DenyFromInternetAddresses</text><text>AllowMailForInternetAddresses</text><text
->AllowFromInternetAddresses</text><text>SMTPDenyMailToGroups</text><text>SMTPDnyNtUnqRcpt</text><text
->SMTPVrfyRcptTo</text><text>SMTPVerifyMailFrom</text><text>SMTPErrorLimit</text><text
->DenyFromInternetDomains</text><text>AllowFromInternetDomains</text><text
->SMTPVerifyRemote</text><text>SMTPPrivBLReply</text><text>SMTPPrivWLAction</text><text
->SMTPPrivBLAction</text><text>SMTPPrivWLHosts</text><text>SMTPPrivBLHosts</text><text
->SMTPPrivWLSup</text><text>SMTPPrivBLSup</text><text>SMTPRBLReply</text><text
->SMTPDNSWLAction</text><text>SMTPRBLAction</text><text>SMTPDNSWLSites</text><text
->SMTPRBLSites</text><text>SMTPDNSWLSup</text><text>SMTPRBLSup</text><text
->SMTPDenyRelayHosts</text><text>SMTPRlyAlwAuthUsrs</text><text>SMTPAllowRelayHosts</text><text
->SMTPRlyExcpts</text><text>SMTPDenyRelayDomains</text><text>SMTPRlyCheck</text><text
->SMTPAllowRelayDomains</text><text>RouterLowSizeFlag</text><text>RouterLowPrioritySizeBegin</text><text
->RouterLowPriorityStatus</text><text>RouterMaxMsgSize</text><text>DenyFromHierarchies</text><text
->AllowFromHierarchies</text><text>DenyFromNotesDomains</text><text>AllowFromNotesDomains</text><text
->MailUseDNS</text><text>MailSmartHostAll</text><text>MailSmartHost</text><text
->MailRelaySMTPSenderAcctPW</text><text>MailRelaySMTPSenderAcctName</text><text
->MailRelaySMTPSenderAuth</text><text>MailRelayHost</text><text>MailLookupExhaustive</text><text
->MailAddressLookup</text><text>MailSMTPServerReachable</text><text>MailInternalSMTP</text><text
->MailExternalSMTP</text><text>Mail_Number_Of_Mailboxes</text></textlist></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-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
-bW92ZSBGcm9tIEZvbGRlcg0APnw=
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAAHAL7/TAAAAAEAAACOQBAAFQAAAAAAAABFZGl0IE1l
-c3NhZ2UgU2V0dGluZ3MAIAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQC+/ywAAAAHAAAA
-jiAQABUAAAAAAAAARWRpdCBNZXNzYWdlIFNldHRpbmdzY77/XgAAAAEAAACSQBAADAAAAAAAAABT
-YXZlICYgQ2xvc2U8AAgAEgACAMYLAAAAAAAAsQEDAAcADAAFAAkwUzBFAAAAEgACAPwRAAAAAAAA
-sQEDAAcACgADAAkwUgC+/yIAAAAHAAAAkiAQAAwAAAAAAAAAU2F2ZSAmIENsb3Nlvv8+AAAAAQAA
-AJIhEAAHAAAAAAAAAFJlZnJlc2h0IAAAABIAAgCLEwAAAAAAAO0BAwAHAAwABQAJMFMwRQC+/4IA
-AAABAAAAkkAYAAYAAAAAAAAAQ2FuY2VsZgAHABAACgBOb3RlcyBvbmx5BwAKAAMACTFTAAMAHgAL
-AFNhdmVPcHRpb25zAAAAAAAAAAAAAAADAAcAEAAJAAkwUjFTMlMzUwAAABIAAgD8EQAAAAAAAO0B
-AwAHAAoAAwAJMFIAvv8cAAAABwAAAJYhGAAGAAAAAAAAAENhbmNlbL7/JAAAAAUAAACdAQAACgAA
-AAAAAABDYXRlZ29yaXplCABOfL7/KAAAAAUAAACdAQAADQAAAAAAAABFZGl0IERvY3VtZW50AAkA
-Agq+/ygAAAAFAAAAnQEAAA0AAAAAAAAAU2VuZCBEb2N1bWVudAAKAAMKvv8iAAAABQAAAJ0BAAAH
-AAAAAAAAAEZvcndhcmQACwAECr7/LAAAAAUAAACdAQAAEQAAAAAAAABNb3ZlIFRvIEZvbGRlci4u
-LlAMAD18vv8sAAAABQAAAJ0BAAASAAAAAAAAAFJlbW92ZSBGcm9tIEZvbGRlcg0APnw=
-</rawitemdata></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>($MessagingSettings)</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-BAC1AyICAwAHABYAEAAJMFIxVDJTM1M0UzhTMTBTAQBIAAsAX3RDb2xzTk40WEwAAQAFAGNvbHM9
-AAUABwBfaXNOTjRYAK8AGgAMAAEAAgA0MK4ADgABAAIAODCuAAQAtQMiAgMABwAWABAACTBSMVQy
-UzNTNFM4UzEwUwEASgAMAF90Q29sc05ONFhYTAEABQBjb2xzPQAFAAcAX2lzTk40WACvABwADAAB
-AAIANjWuABAAAQADADEzMACuAAQAtQMiAgMABwAWABAACTBSMVQyUzNTNFM4UzEwUwEAIAALAF90
-V2lkdGhOTjRTAAEACAB3aWR0aD01MAMABwAOAAgACTBSUjFUMlMBACIACwBfdFdpZHRoTk40TQAB
-AAkAd2lkdGg9MTAwAAMABwAOAAcACTBSMVQyUwABACIACwBfdFdpZHRoTk40TAABAAkAd2lkdGg9
-MTYyAAMABwAOAAcACTBSMVQyUwABACIADABfdFdpZHRoTk40WEwBAAkAd2lkdGg9MjUwAAMABwAO
-AAcACTBSMVQyUwABACQADQBfdFdpZHRoTk40WFhMAAEACQB3aWR0aD00MDAAAwAHAA4ABwAJMFIx
-VDJTAAcARgBAACAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBCUk9XU0VSU05JRkZFUiAtLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLSAHAAwABgAJMFJSMVMDAEYABQBpc05ONABvAK8ANAAIACgArgAsAAUA
-BgBfaXNOTjSvABgADAABAAEAMQCuAAwAAQAAAK4ABAC1A64ABAC1AwMABwAcABYACTBSUjFTMlRU
-VDNTN1M5UzEzUzE1UwcAPgA3ACAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSBJTlBVVCAtLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLSAABwAMAAYACTBSUjFTAwBgAAsAaHRtbElucHV0WFMAbwCvAEgACAAo
-AK4AQAAFAAYAX2lzTk40rwAsABYABQALAF90U2l6ZU5ONFhTAK4AFgAFAAkAX3RXaWR0aFhTAK4A
-BAC1A64ABAC1AwMABwAcABUACTBSUjFTMlRUM1M3UzlTMTNTMTVTAAMAWgAKAGh0bWxJbnB1dFNv
-AK8ARAAIACgArgA8AAUABgBfaXNOTjSvACgAFAAFAAoAX3RTaXplTk40U64AFAAFAAgAX3RXaWR0
-aFOuAAQAtQOuAAQAtQMDAAcAGgAUAAkwUjFTMlRUM1M3UzlTMTNTMTVTAwBaAAoAaHRtbElucHV0
-TW8ArwBEAAgAKACuADwABQAGAF9pc05ONK8AKAAUAAUACgBfdFNpemVOTjRNrgAUAAUACABfdFdp
-ZHRoTa4ABAC1A64ABAC1AwMABwAaABQACTBSMVMyVFQzUzdTOVMxM1MxNVMDAFoACgBodG1sSW5w
-dXRMbwCvAEQACAAoAK4APAAFAAYAX2lzTk40rwAoABQABQAKAF90U2l6ZU5ONEyuABQABQAIAF90
-V2lkdGhMrgAEALUDrgAEALUDAwAHABoAFAAJMFIxUzJUVDNTN1M5UzEzUzE1UwMAYAALAGh0bWxJ
-bnB1dFhMAG8ArwBIAAgAKACuAEAABQAGAF9pc05ONK8ALAAWAAUACwBfdFNpemVOTjRYTACuABYA
-BQAJAF90V2lkdGhYTACuAAQAtQOuAAQAtQMDAAcAGgAUAAkwUjFTMlRUM1M3UzlTMTNTMTVTAwBg
-AAwAaHRtbElucHV0WFhMbwCvAEgACAAoAK4AQAAFAAYAX2lzTk40rwAsABYABQAMAF90U2l6ZU5O
-NFhYTK4AFgAFAAoAX3RXaWR0aFhYTK4ABAC1A64ABAC1AwMABwAaABQACTBSMVMyVFQzUzdTOVMx
-M1MxNVMHAEAAOgAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gVEVYVEFSRUEgLS0tLS0tLS0tLS0t
-LS0tLS0tLS0tLS0gBwAMAAYACTBSUjFTAwBsAA4AaHRtbFRleHRBcmVhMlNvAK8AUgAIACgArgBK
-AAEABwByb3dzPTIgAAUABgBfaXNOTjSvACgAFAAFAAoAX3RDb2xzTk40U64AFAAFAAgAX3RXaWR0
-aFOuAAQAtQMiAq4ABAC1AwMABwAiABsACTBSUjFTMlNUM1M3UzlTMTBTMTFTMTVTMTdTAAMAbAAO
-AGh0bWxUZXh0QXJlYTJNbwCvAFIACAAoAK4ASgABAAcAcm93cz0yIAAFAAYAX2lzTk40rwAoABQA
-BQAKAF90Q29sc05ONE2uABQABQAIAF90V2lkdGhNrgAEALUDIgKuAAQAtQMDAAcAIAAaAAkwUjFT
-MlNUM1M3UzlTMTBTMTFTMTVTMTdTAwBsAA4AaHRtbFRleHRBcmVhMkxvAK8AUgAIACgArgBKAAEA
-BwByb3dzPTIgAAUABgBfaXNOTjSvACgAFAAFAAoAX3RDb2xzTk40TK4AFAAFAAgAX3RXaWR0aEyu
-AAQAtQMiAq4ABAC1AwMABwAgABoACTBSMVMyU1QzUzdTOVMxMFMxMVMxNVMxN1MDAHIADwBodG1s
-VGV4dEFyZWEyWEwAbwCvAFYACAAoAK4ATgABAAcAcm93cz0yIAAFAAYAX2lzTk40rwAsABYABQAL
-AF90Q29sc05ONFhMAK4AFgAFAAkAX3RXaWR0aFhMAK4ABAC1AyICrgAEALUDAwAHACAAGQAJMFIx
-UzJUM1M3UzlTMTBTMTFTMTVTMTdTAAMAbAAOAGh0bWxUZXh0QXJlYTVTbwCvAFIACAAoAK4ASgAB
-AAcAcm93cz01IAAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05ONFOuABQABQAIAF90V2lkdGhT
-rgAEALUDIgKuAAQAtQMDAAcAIAAaAAkwUjFTMlNUM1M3UzlTMTBTMTFTMTVTMTdTAwBsAA4AaHRt
-bFRleHRBcmVhNU1vAK8AUgAIACgArgBKAAEABwByb3dzPTUgAAUABgBfaXNOTjSvACgAFAAFAAoA
-X3RDb2xzTk40Ta4AFAAFAAgAX3RXaWR0aE2uAAQAtQMiAq4ABAC1AwMABwAgABoACTBSMVMyU1Qz
-UzdTOVMxMFMxMVMxNVMxN1MDAGwADgBodG1sVGV4dEFyZWE1TG8ArwBSAAgAKACuAEoAAQAHAHJv
-d3M9NSAABQAGAF9pc05ONK8AKAAUAAUACgBfdENvbHNOTjRMrgAUAAUACABfdFdpZHRoTK4ABAC1
-AyICrgAEALUDAwAHACAAGgAJMFIxUzJTVDNTN1M5UzEwUzExUzE1UzE3UwMAcgAPAGh0bWxUZXh0
-QXJlYTVYTABvAK8AVgAIACgArgBOAAEABwByb3dzPTUgAAUABgBfaXNOTjSvACwAFgAFAAsAX3RD
-b2xzTk40WEwArgAWAAUACQBfdFdpZHRoWEwArgAEALUDIgKuAAQAtQMDAAcAIAAZAAkwUjFTMlQz
-UzdTOVMxMFMxMVMxNVMxN1MAAwBuAA8AaHRtbFRleHRBcmVhMTBTAG8ArwBSAAgAKACuAEoAAQAI
-AHJvd3M9MTAgBQAGAF9pc05ONK8AKAAUAAUACgBfdENvbHNOTjRTrgAUAAUACABfdFdpZHRoU64A
-BAC1AyICrgAEALUDAwAHACAAGQAJMFIxUzJUM1M3UzlTMTBTMTFTMTVTMTdTAAMAbgAPAGh0bWxU
-ZXh0QXJlYTEwTQBvAK8AUgAIACgArgBKAAEACAByb3dzPTEwIAUABgBfaXNOTjSvACgAFAAFAAoA
-X3RDb2xzTk40Ta4AFAAFAAgAX3RXaWR0aE2uAAQAtQMiAq4ABAC1AwMABwAgABkACTBSMVMyVDNT
-N1M5UzEwUzExUzE1UzE3UwADAG4ADwBodG1sVGV4dEFyZWExMEwAbwCvAFIACAAoAK4ASgABAAgA
-cm93cz0xMCAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05ONEyuABQABQAIAF90V2lkdGhMrgAE
-ALUDIgKuAAQAtQMDAAcAIAAZAAkwUjFTMlQzUzdTOVMxMFMxMVMxNVMxN1MAAwByABAAaHRtbFRl
-eHRBcmVhMTBYTG8ArwBWAAgAKACuAE4AAQAIAHJvd3M9MTAgBQAGAF9pc05ONK8ALAAWAAUACwBf
-dENvbHNOTjRYTACuABYABQAJAF90V2lkdGhYTACuAAQAtQMiAq4ABAC1AwMABwAgABkACTBSMVMy
-VDNTN1M5UzEwUzExUzE1UzE3UwADAHQAEQBodG1sVGV4dEFyZWExMFhYTABvAK8AVgAIACgArgBO
-AAEACAByb3dzPTEwIAUABgBfaXNOTjSvACwAFgAFAAwAX3RDb2xzTk40WFhMrgAWAAUACgBfdFdp
-ZHRoWFhMrgAEALUDIgKuAAQAtQMDAAcAIAAZAAkwUjFTMlQzUzdTOVMxMFMxMVMxNVMxN1MABwA+
-ADcAIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tU0VMRUNUIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
-IAAHAAwABgAJMFJSMVMDAF4ACwBodG1sU2VsZWN0UwBvAK8ARgAIACgArgA+AAUABgBfaXNOTjSv
-ACoAFgAFAAsAX3RXaWR0aE5ONFMArgAUAAUACABfdFdpZHRoU64ABAC1A64ABAC1AwMABwAcABUA
-CTBSUjFTMlRUM1M3UzlTMTNTMTVTAAMAXgALAGh0bWxTZWxlY3RNAG8ArwBGAAgAKACuAD4ABQAG
-AF9pc05ONK8AKgAWAAUACwBfdFdpZHRoTk40TQCuABQABQAIAF90V2lkdGhNrgAEALUDrgAEALUD
-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
-CdIIAQAAAP8A3gYAAIX/
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>($MessagingSettings)</text></item></form>
 

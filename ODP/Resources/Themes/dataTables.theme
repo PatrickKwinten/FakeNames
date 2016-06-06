@@ -1,0 +1,24 @@
+<!--
+	The default theme contents use theme inheritance.
+
+	Application themes can extend an existing global theme using the
+	extends attribute.  Existing themes include the following options:
+
+	1. webstandard 2. oneui 3. notes
+-->
+<theme extends="Bootstrap3.2.0_flat" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="platform:/plugin/com.ibm.designer.domino.stylekits/schema/stylekit.xsd" >
+	
+	<!-- datatable component -->
+	<resource>
+		<content-type>text/css</content-type>
+		<href>DataTables/DataTables-1.10.12/css/jquery.dataTables.css</href>
+	</resource>
+	<resource>
+		<content-type>text/css</content-type>
+		<href>DataTables/DataTables-1.10.12/css/dataTables.bootstrap.css</href>
+	</resource>	
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>DataTables/DataTables-1.10.12/js/jquery.dataTables.js</href>
+	</resource>
+</theme>

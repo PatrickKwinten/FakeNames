@@ -1,38 +1,22 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='21e' unid='FC67EC7CE6B0122B052569650062937B' sequence='5016'>
+<sharedfield name='ReplicationEnabled' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='21a' unid='FC67EC7CE6B0122B052569650062937B' sequence='5016'>
 <created><datetime>20000925T125642,83-05</datetime></created>
-<modified><datetime dst='true'>20150507T110150,86+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114056,34+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,36-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110150,85+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110150,85+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114056,34+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114056,34+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE'><text>ReplicationEnabled</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='ReplicationEnabled' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><text>ReplicationEnabled</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACw/xQAAAAGIAAAAAAAAAAAAAAAAIr/bgGCQgEFAiACAAgAAAAAAgEBAQkOAJQA
-AAAAABIAZwAuAA4AAAAMAAEAAQAwAAMAlAADAGIAEgBSZXBsaWNhdGlvbkVuYWJsZWQFABIAUmVw
-bGljYXRpb25FbmFibGVkAQAAAAoCrwAqAAwAAQABADAArgAeAAUAEgBSZXBsaWNhdGlvbkVuYWJs
-ZWSuAAQAtQMDAAcACgADAAkxUwAAABwABQASAFJlcGxpY2F0aW9uRW5hYmxlZAMABwAKAAMACTBS
-AFJlcGxpY2F0aW9uRW5hYmxlZENob29zZSBFbmFibGUgaWYgeW91IHdhbnQgdGhlIFJlcGxpY2F0
-b3IgdG8gYmUgZW5hYmxlZCBhbmQgdXNlIHRoZSBzcGVjaWZpZWQgc2NoZWR1bGUgYXQgdGhpcyBs
-b2NhdGlvbi4BACoAUmVwbGljYXRpb24gaXMgZW5hYmxlZCBmb3IgdGhpcyBsb2NhdGlvbnwxAHr/
-JAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAARW5hYmxlZF8yAN4GAACK/4X/CAABAAAK
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' allowmultivalues='true' kind='editable' name='ReplicationEnabled'
+ description='Choose Enable if you want the Replicator to be enabled and use the specified schedule at this location.'
+ listinputseparators='comma' listdisplayseparator='comma' htmlid='Enabled_2'><keywords
+ helperbutton='false' recalconchange='true' columns='1' ui='checkbox'><textlist
+><text>Replication is enabled for this location|1</text></textlist></keywords><code
+ event='defaultvalue'><formula>"0"</formula></code><code event='inputtranslation'><formula
+>FIELD ReplicationEnabled:=@If(ReplicationEnabled="";"0";ReplicationEnabled);
+ReplicationEnabled</formula></code></field></sharedfield>
 

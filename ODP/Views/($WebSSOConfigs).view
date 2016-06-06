@@ -1,46 +1,38 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='326' unid='4F74FDD2C54D01C98525690A006A8717' sequence='5012'>
+<view name='($WebSSOConfigs)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='false'
+ publicaccess='false' designerversion='7' language='en' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='simple' opencollapsed='false'
+ showresponsehierarchy='true' showmargin='true' shrinkrows='false' extendlastcolumn='false'
+ showhierarchies='false' unreadcolor='black' rowlinecount='1' headerlinecount='1'
+ rowspacing='1' bgcolor='white' totalscolor='gray' headerbgcolor='#a0a0c5'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='322' unid='4F74FDD2C54D01C98525690A006A8717' sequence='5012'>
 <created><datetime dst='true'>20000626T152333,99-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,87+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,28+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,84-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,86+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,86+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,28+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,28+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144047,03-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($WebSSOConfigs)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-GAECAGYAAgAkMgUACABJU2l0ZU9yZwEAAAALAq8ASAAuAAUACABJU2l0ZU9yZwEAAQA6ACICBQAO
-AExUUEFfVG9rZW5OYW1lIgKuABoABQAOAExUUEFfVG9rZW5OYW1lrgAEALUDAwACAEgAAgAkMQUA
-DgBMVFBBX1dTRW5hYmxlZAEAAQAxAAoCrwAiABAAAAAAAAAAAADwP64AEgAAAAAAAAAAAAAArgAE
-ALUDAwAFACIAHQAEAAIAAgAJAAQAJDIkMSRDb25mbGljdCRSRUYABAAEAAAAMAAFAAQAVHlwZQEA
-CgBMVFBBQ29uZmlnCgIFAAkAJENvbmZsaWN0AFkBHAIDAAcAEgAMAAlMMVMyUzNTNFM1Uw==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYAAAACACQy
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQACAAMACAQAAFZDgQACABIAiAAAAHgAAQAACgAAAAAIAAAAAAICAAAAVkMAAAIAEQBWAAAAeAAB
-AAAKAAAAAAAAAAAAAgIAAAAkMldlYiBTU08gVG9rZW4gTmFtZYgAAgBmAAIAJDIFAAgASVNpdGVP
-cmcBAAAACwKvAEgALgAFAAgASVNpdGVPcmcBAAEAOgAiAgUADgBMVFBBX1Rva2VuTmFtZSICrgAa
-AAUADgBMVFBBX1Rva2VuTmFtZa4ABAC1AwMABwAgABkACTJUM1M0UzZSVFQ3UzhTOVMxMFMxMlJU
-VAAkMVdlYnNwaGVyZSBFbmFibGVkVgACAEgAAgAkMQUADgBMVFBBX1dTRW5hYmxlZAEAAQAxAAoC
-rwAiABAAAAAAAAAAAADwP64AEgAAAAAAAAAAAAAArgAEALUDAwAHAAwABQAJM1M0UwAmAAEAAAAB
-AQAJAQAACgEBDgoAAAEArSsBAAEAAQAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAABAMAA
-AAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD//wAAAAAA
-AAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABAKCgxQAAAAEA
-AAAAAAEAgICAAAEAAAAAAAAACAAAAAAAAQBYQwAMgAIAAAAAAAECAgIBAQEBAQAEAAAAAAAAAAAg
-Ly86WUMAAAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAC4s
-JAA=
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$DesignerVersion' sign='true'><text>7</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "LTPAConfig" &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='$2' width='15' resizable='false'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='Web SSO Token Name'><font size='9pt'/></columnheader><datetimeformat
+ show='datetime' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/><code event='value'><formula>@If(	ISiteOrg != "";
+		ISiteOrg + ":" + LTPA_TokenName;
+		LTPA_TokenName)</formula></code></column>
+<column hidedetailrows='false' itemname='$1' width='15' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Websphere Enabled'><font size='9pt'/></columnheader><code event='value'><formula
+>@If(LTPA_WSEnabled = "1";1;0)</formula></code></column></view>
 

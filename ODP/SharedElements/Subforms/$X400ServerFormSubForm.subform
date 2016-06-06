@@ -1,15 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='642' unid='BA6848F2F30935A7852561660009B6EB' sequence='5060'>
+<subform name='$X400ServerFormSubForm' alias='1.0|$X400ServerFormSubForm'
+ xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F'
+ designerversion='6' language='en'>
+<noteinfo noteid='63e' unid='BA6848F2F30935A7852561660009B6EB' sequence='5060'>
 <created><datetime>19950216T204606,51-05</datetime></created>
-<modified><datetime dst='true'>20150507T110156,06+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114101,26+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,50-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110156,05+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110156,05+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114101,26+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114101,26+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143939,53-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<body><richtext>
+<pardef id='1' leftmargin='3in' rightmargin='0%' firstlineleftmargin='1.5000in'
+ spaceafter='1.5' list='bullet'><parstyle name='Rob Slapikoff-Rob'/></pardef>
+<pardef id='2'/>
+<par def='2'><run><font size='9pt'/>Feature not installed.</run></par>
+<pardef id='3' leftmargin='1.5000in' hide='read edit print copy preview previewedit'/>
+<par def='3'><run><font size='9pt' style='bold underline' color='navy'/></run></par></richtext></body>
 <item name='X400DeliverContentLength' summary='false' sign='true'><number
 >0</number></item>
 <item name='X400MaximumAssociationCount' summary='false' sign='true'><number
@@ -21,28 +29,5 @@
 <item name='RerouteOverrideTimer' summary='false' sign='true'><number>0</number></item>
 <item name='OSITransportConnectTimer' summary='false' sign='true'><number
 >0</number></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSJBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>$X400ServerFormSubForm</text><text>1.0</text><text
->$X400ServerFormSubForm</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUA3x</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$X400ServerFormSubForm</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gv9GAAEAAAAAAAAAAQDgEKsncAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAADAAAAACUAKYsAAAAAAEAUm9iIFNsYXBpa29mZi1Sb2IAAAAAAAAAAAAAAAAAAAAAAAAA
-gQKC/1IAAgAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQCAIX/HgABAAAJRmVhdHVyZSBub3QgaW5zdGFs
-bGVkLoECgv9SAAMAAAAAAAAAAABwCAAAcAgAAAAATxleIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAABwYwAAAACUBHAIEgBwCBIAAAAAAIMEAwDdBgAAhf+F/wgAAQUKCdIIAQAAAIAA
-3gYAAIX/
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>$X400ServerFormSubForm</text></item></subform>
 

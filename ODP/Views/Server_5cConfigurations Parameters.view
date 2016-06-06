@@ -1,118 +1,63 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='38a' unid='85CAE4691BE6BD78C1256B7D002DC82A' sequence='5032'>
+<view name='Server\Configurations Parameters' alias='Parameters' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
+ allowdocselection='true' publicaccess='false' designerversion='6' language='en'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='false' showresponsehierarchy='false' showmargin='true' shrinkrows='true'
+ extendlastcolumn='true' showhierarchies='false' unreadcolor='black' rowlinecount='5'
+ headerlinecount='1' rowspacing='1.5' haslinkcolumn='true' bgcolor='white'
+ altrowcolor='#f8f8fc' totalscolor='silver' headerbgcolor='#b1b1d2' boldunreadrows='false'
+ evaluateactions='false' allownewdocuments='false' allowcustomizations='true'
+ hidemarginborder='false' marginwidth='0px' marginbgcolor='white' uniquekeys='false'
+ initialbuildrestricted='false' noemptycategories='true'>
+<noteinfo noteid='386' unid='85CAE4691BE6BD78C1256B7D002DC82A' sequence='5032'>
 <created><datetime>20020315T092003,62+01</datetime></created>
-<modified><datetime dst='true'>20150507T110152,37+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,78+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,82-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,36+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,36+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,78+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,78+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140240,78-04</datetime><datetime
 >20100304T144050,98-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>Server\Configurations Parameters|Parameters</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-lAACACAACQBQYXJhbU5hbWUABQAJAFBhcmFtTmFtZQADAAIAIAAJAFBhcmFtSW5mbwAFAAkAUGFy
-YW1JbmZvAAMABQAqACUAAwAJAAkACQBQYXJhbU5hbWVQYXJhbUluZm8kQ29uZmxpY3QABAAEAAAA
-JAAFAAQAVHlwZQEADwBTZXJ2ZXJQYXJhbWV0ZXIACgIDAA==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-FgABAABEAGYAAAAJAFBhcmFtTmFtZQ==
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQACABEAikgAAFZDAQAJAAkAIgAAAMgAAQAACQAgAAAAAAAAAAICAAAAVkMAAAkABAAiAAAAAAEB
-AAAJACAAAAAAAAAAAgIAAEBQYXJhbU5hbWVQYXJhbWV0ZXIiAAIAIAAJAFBhcmFtTmFtZQAFAAkA
-UGFyYW1OYW1lAAMAUGFyYW1JbmZvSW5mbyIAAgAgAAkAUGFyYW1JbmZvAAUACQBQYXJhbUluZm8A
-AwAmAAEAAAABAQAJAQAACgEBDwoAAC8ArSsFAgEAAQEAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAA
-AAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8AAQD4+PwAAQAAAAAAAAAAAAAAAAABAP///wAB
-ALGx0gAAAAEAAAAAAAEAwMDAAAAAAAAAAAAACAAAAAAAAQA=
-</rawitemdata></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Parameters")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAHn/bAABALGx0gABAAAAAAABAAAAAAABALGx0gAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/3YBAAABAAAAnkEQAA0AAAAAAAAAQWRkIFBhcmFtZXRl
-ct1SAQEAJAANAEN1cnJlbnRTZXJ2ZXIAiwAAAAAAAAAAAPA/awIDAAcADAAFAAkxUzJTAAAA8gAF
-AA0AQ3VycmVudFNlcnZlcgABAAAACgKvANIAJgACAOgDAAAAAAAAAQAPAFNlcnZlclBhcmFtZXRl
-cgCxAq4ArAABAAwAW05ldENyZWF0b3Jd5wB0Aq8AlAAmAAIA6AMAAAAAAAABAA8AU2VydmVyUGFy
-YW1ldGVyALECrgBuAAIADQAAAAAAAAABAA4ATm90IEF1dGhvcml6ZWQBAEMAWW91IGFyZSBub3Qg
-YXV0aG9yaXplZCB0byBhZGQgUGFyYW1ldGVyIGRvY3VtZW50cyB0byB0aGlzIGRhdGFiYXNlLgCw
-A64ABAC1BQMABwAuACcACTBSUjZSVDEwUzEzUlQxN1MyMFJUVDI0UzI3UlRUMzFTMzNTMzVSAPb/
-LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABidG5OZXdEb2MuZ2lmP77/JAAAAAcAAACe
-IRAADQAAAAAAAABBZGQgUGFyYW1ldGVy3fb/LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAA
-AABidG5OZXdEb2MuZ2lmP/n/IAAAAAAAAQAEACwAAAAAAAAAAAAAAAAAAAAAAAAA3P8+APn/LAAg
-TgAAAAAAAAAAbnROZXdEb2MoJ1NlcnZlclBhcmFtZXRlcicsICdbTmV0Q3JlYXRvcl0nKQBf/xAA
-AgABAAcAAAAAAAAAvv9EAAAAAQAAAJ5AEAAOAAAAAAAAAEVkaXQgUGFyYW1ldGVyIAAAABIAAgDo
-BwAAAAAAAO0BAwAHAAwABQAJMFMwRQD2/y0AAAAAAAMAEwALAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-YnRuRWRpdC5naWY/vv9GAAAAAQAAAJ4BEAAQAAAAAAAAAERlbGV0ZSBQYXJhbWV0ZXIgAAAAEgAC
-AEwdAAAAAAAA7QEDAAcADAAFAAkwUzBFAPb/LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAA
-AABidG5EZWxldGUuZ2lmP77/QgAAAAEAAACeIRAACwAAAAAAAABFbXB0eSBUcmFzaEsgAAAAEgAC
-AP0HAAAAAAAA7QEDAAcADAAFAAkwUzBFAPb/LgAAAAAAAwATAAwAAAAAAAAAAAAAAAAAAAAAAAAA
-AABidG5FbXB0eS5naWa+/2IAAAABAAAAniEQAAYAAAAhAAAAU2VhcmNoRgAHAB4AGABXZWIgb25s
-eSAtIHVzZWQgaW4gVmlld3MHAAoAAwAJMVMAAAASAAIAkBcAAAAAAADtAQMABwAKAAMACTBSAPb/
-LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABidG5TZWFyY2guZ2lmP77/JgAAAAUAAACd
-AQAACwAAAAAAAABDYXRlZ29yaV96ZUsHAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0IERv
-Y3VtZW50CAACCr7/KAAAAAUAAACdAQAADQAAAAAAAABTZW5kIERvY3VtZW503QkAAwq+/yIAAAAF
-AAAAnQEAAAgAAAAAAAAAX0ZvcndhcmQKAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRv
-IEZvbGRlci4uLgsAPXy+/y4AAAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcksM
-AD58
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAL7/dgEAAAEAAACeQRAADQAAAAAAAABBZGQgUGFy
-YW1ldGVy3VIBAQAkAA0AQ3VycmVudFNlcnZlcgCLAAAAAAAAAAAA8D9rAgMABwAMAAUACTFTMlMA
-AADyAAUADQBDdXJyZW50U2VydmVyAAEAAAAKAq8A0gAmAAIA6AMAAAAAAAABAA8AU2VydmVyUGFy
-YW1ldGVyALECrgCsAAEADABbTmV0Q3JlYXRvcl3nAHQCrwCUACYAAgDoAwAAAAAAAAEADwBTZXJ2
-ZXJQYXJhbWV0ZXIAsQKuAG4AAgANAAAAAAAAAAEADgBOb3QgQXV0aG9yaXplZAEAQwBZb3UgYXJl
-IG5vdCBhdXRob3JpemVkIHRvIGFkZCBQYXJhbWV0ZXIgZG9jdW1lbnRzIHRvIHRoaXMgZGF0YWJh
-c2UuALADrgAEALUFAwAHAC4AJwAJMFJSNlJUMTBTMTNSVDE3UzIwUlRUMjRTMjdSVFQzMVMzM1Mz
-NVIAvv8kAAAABwAAAJ4hEAANAAAAAAAAAEFkZCBQYXJhbWV0ZXLdvv9EAAAAAQAAAJ5AEAAOAAAA
-AAAAAEVkaXQgUGFyYW1ldGVyIAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQC+/0YAAAAB
-AAAAngEQABAAAAAAAAAARGVsZXRlIFBhcmFtZXRlciAAAAASAAIATB0AAAAAAADtAQMABwAMAAUA
-CTBTMEUAvv9CAAAAAQAAAJ4hEAALAAAAAAAAAEVtcHR5IFRyYXNoSyAAAAASAAIA/QcAAAAAAADt
-AQMABwAMAAUACTBTMEUAvv9iAAAAAQAAAJ4hEAAGAAAAIQAAAFNlYXJjaEYABwAeABgAV2ViIG9u
-bHkgLSB1c2VkIGluIFZpZXdzBwAKAAMACTFTAAAAEgACAJAXAAAAAAAA7QEDAAcACgADAAkwUgC+
-/yYAAAAFAAAAnQEAAAsAAAAAAAAAQ2F0ZWdvcmlfemVLBwBOfL7/KAAAAAUAAACdAQAADgAAAAAA
-AABfRWRpdCBEb2N1bWVudAgAAgq+/ygAAAAFAAAAnQEAAA0AAAAAAAAAU2VuZCBEb2N1bWVudN0J
-AAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJkCgAECr7/LAAAAAUAAACdAQAAEgAAAAAA
-AABfTW92ZSBUbyBGb2xkZXIuLi4LAD18vv8uAAAABQAAAJ0BAAATAAAAAAAAAF9SZW1vdmUgRnJv
-bSBGb2xkZXJLDAA+fA==
-</rawitemdata></item>
-<item name='$ViewGlobalScript' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:74
-Option Public
-'++LotusScript Development Environment:2:5:(Forward):0:1
+<globals><code event='options'><lotusscript>Option Public
+</lotusscript></code></globals><code event='selection'><formula>SELECT Type = "ServerParameter"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Parameters")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Add Parameter' showinmenu='false' hide='web'><imageref name='btnNewDoc.gif'/><code
+ event='click'><formula>CurrentServer := @Subset(@DbName;1);
 
-'++LotusScript Development Environment:2:5:(Declarations):0:2
-
-<break/></text></item>
-<item name='$ViewGlobalScript_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAMQAAAAAAAAAAAAAAAAAAABgAP//VAB0AP////8A
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAxAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAMAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwDIAAAAAACQACcAKABHAEwATwBCAEEATABTACkAUwBFAFIAVgBFAFIAXABDAE8ATgBGAEkA
-RwBVAFIAQQBUAEkATwBOAFMAIABQAEEAUgBBAE0ARQBUAEUAAACoAAMATgBFAFcAAAC8AAYARABF
-AEwARQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4A
-QQBUAEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAADXHHgdBAAHAAAAAAAd
-AAACAAAAEQAQAAAAAAD//wEAAwADAAAABQAKAAAAAw==
-</rawitemdata></item></note>
+@If(CurrentServer="";
+	@PostedCommand([Compose]; "ServerParameter");
+	@IsMember("[NetCreator]"; @UserRoles);
+		@PostedCommand([Compose]; "ServerParameter");
+		@Prompt([Ok]; "Not Authorized"; "You are not authorized to add Parameter documents to this database.")
+)</formula></code></action>
+<action title='Add Parameter' showinmenu='false' hide='notes'><imageref name='btnNewDoc.gif'/><code
+ event='onClick' for='web'><javascript>ntNewDoc('ServerParameter', '[NetCreator]')</javascript></code></action>
+<action title='Edit Parameter' showinmenu='false' hide='previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Delete Parameter' showinmenu='false'><imageref name='btnDelete.gif'/><code
+ event='click'><formula>@Command([MoveToTrash])</formula></code></action>
+<action title='Empty Trash' showinmenu='false' hide='notes'><imageref name='btnEmpty.gif'/><code
+ event='click'><formula>@Command([EmptyTrash])</formula></code></action>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Document' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='ParamName' width='25'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Parameter'><font
+ size='9pt'/></columnheader></column>
+<column hidedetailrows='false' listseparator='newline' itemname='ParamInfo'
+ width='32' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='true'><font size='9pt'/><columnheader title='Info'><font
+ size='9pt'/></columnheader></column></view>
 

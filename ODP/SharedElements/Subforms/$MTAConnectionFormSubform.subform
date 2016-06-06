@@ -1,15 +1,23 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='54e' unid='50EABF3CA26D96FA8525649D00689EF2' sequence='5040'>
+<subform name='$MTAConnectionFormSubform' alias='1.0|$MTAConnectionFormSubform'
+ xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F'
+ designerversion='6' language='en'>
+<noteinfo noteid='54a' unid='50EABF3CA26D96FA8525649D00689EF2' sequence='5040'>
 <created><datetime dst='true'>19970520T150244,34-04</datetime></created>
-<modified><datetime dst='true'>20150507T110154,83+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114100,04+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,12-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110154,82+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110154,82+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114100,04+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114100,04+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143930,04-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<body><richtext>
+<pardef id='1' leftmargin='3in' rightmargin='0%' firstlineleftmargin='1.5000in'
+ spaceafter='1.5' list='bullet'><parstyle name='Rob Slapikoff-Rob'/></pardef>
+<pardef id='2' leftmargin='1in'><code event='hidewhen'><formula>@IsNotMember(ConnectionType;"3":"4")</formula></code></pardef>
+<par def='2'><run><font size='9pt'/></run></par>
+<pardef id='3'/>
+<par def='3'/></richtext></body>
 <item name='MTAUrgentHighThreshold' summary='false' sign='true'><number>0</number></item>
 <item name='MTAUrgentLowThreshold' summary='false' sign='true'><number>0</number></item>
 <item name='MTANormalHighThreshold' summary='false' sign='true'><number>0</number></item>
@@ -18,24 +26,5 @@
 >0</number></item>
 <item name='MTANonUrgentLowThreshold' summary='false' sign='true'><number
 >0</number></item>
-<item name='$TITLE'><textlist><text>$MTAConnectionFormSubform</text><text
->1.0</text><text>$MTAConnectionFormSubform</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUA3x</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$MTAConnectionFormSubform</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gv9GAAEAAAAAAAAAAQDgEKsncAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAADAAAAACUAKYsAAAAAAEAUm9iIFNsYXBpa29mZi1Sb2IAAAAAAAAAAAAAAAAAAAAAAAAA
-gQKC/1IAAgAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAJAAAAAJQEoAUMAKAFDAAAAAAAu/9EAAIAvwMBAAAAVCU2AAAAKAAFAA4AQ29ubmVj
-dGlvblR5cGUBAAEAMwABAAEANAAfAnUCAwAHAAwABQAJMFMwRQCDBAIAhf8IAAEAAAmBAoL/UgAD
-AAAAAAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAEAAAAAlAcAAAAAAAAAAAAAAACDBAMAhf8IAAEAAAo=
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>$MTAConnectionFormSubform</text></item></subform>
 

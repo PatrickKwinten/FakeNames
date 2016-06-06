@@ -1,24 +1,12 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="6ea" sequence="5010" unid="343E74EE5A3DF732852569E60044B552">
+<?xml version="1.0" encoding="UTF-8"?><imageresource across="2" alias="ActionButton.gif" browsercompatible="true" designerversion="6" language="en" maintenanceversion="1.5" name="ActionButton.gif" publicaccess="false" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="6e6" sequence="5010" unid="343E74EE5A3DF732852569E60044B552">
 <created><datetime>20010201T073028,66-05</datetime></created>
-<modified><datetime dst="true">20150507T110156,90+02</datetime></modified>
+<modified><datetime dst="true">20150512T114102,10+02</datetime></modified>
 <revised><datetime dst="true">20130909T095409,52-04</datetime></revised>
-<lastaccessed><datetime dst="true">20150507T110156,89+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150507T110156,89+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20150512T114102,10+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150512T114102,10+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-<item name="$ImagesColorize" sign="true"><number>0</number></item>
-<item name="$TITLE" sign="true"><textlist><text>ActionButton.gif</text><text>ActionButton.gif</text></textlist></item>
-<item name="$WebBrowserCompatible" sign="true"><number>1</number></item>
-<item name="$ImagesWide" sign="true"><number>2</number></item>
-<item name="$DesignerVersion" sign="true"><text>6</text></item>
-
-
-
 
 <item name="$MimeType" sign="true"><text>image/gif</text></item>
-<item name="$FileModDT" sign="true"><datetime>20010226T081116,00-05</datetime></item>
-<item name="$Flags"><text>34CiQv</text></item>
-<item name="$ImageNames" sign="true"><text>ActionButton.gif</text></item>
-<item name="$LANGUAGE" sign="true"><text>en</text></item></note>
+<item name="$FileModDT" sign="true"><datetime>20010226T081116,00-05</datetime></item></imageresource>

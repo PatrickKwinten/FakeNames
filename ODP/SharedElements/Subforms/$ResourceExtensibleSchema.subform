@@ -1,27 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='3ee' unid='0549A8B245F591ED852565D7005CD344' sequence='5015'>
+<subform name='$ResourceExtensibleSchema' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='3ea' unid='0549A8B245F591ED852565D7005CD344' sequence='5015'>
 <created><datetime dst='true'>19980330T125353,96-04</datetime></created>
-<modified><datetime dst='true'>20150507T110152,87+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,28+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095401,36-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,86+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,86+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,28+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,28+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143934,45-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE'><text>$ResourceExtensibleSchema</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUA3x</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$ResourceExtensibleSchema</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAJ
-</rawitemdata></item></note>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'><run><font size='9pt'/></run></par></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>$ResourceExtensibleSchema</text></item></subform>
 

@@ -1,35 +1,21 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='62e' unid='F20A87C3DBE3CAC285256C0C006FA9B0' sequence='5007'>
+<page name='pgEmpty' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' publicaccess='false' designerversion='6'>
+<noteinfo noteid='62a' unid='F20A87C3DBE3CAC285256C0C006FA9B0' sequence='5007'>
 <created><datetime dst='true'>20020805T161939,36-04</datetime></created>
-<modified><datetime dst='true'>20150507T110155,96+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114101,16+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095407,70-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110155,95+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110155,95+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114101,16+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114101,16+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144000,95-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'/>
+<pardef id='2' hide='notes web mobile'/>
+<par def='2'><run><font size='9pt'/>(This page is intentionally empty. It is required to initialize iframe src tags for SSL. Do not delete.)</run></par>
+<par def='2'><run><font size='9pt'/></run></par></richtext></body>
 <item name='$SignatureStatus'><text>1</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>pgEmpty</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>C34WQ</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>pgEmpty</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAqBAoL/WgACAAAA
-AAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEA
-AAAAlYcAAAAAAAAAAAAAAAABAAAABgAAAIMEAgCF/3AAAQAACShUaGlzIHBhZ2UgaXMgaW50ZW50
-aW9uYWxseSBlbXB0eS4gSXQgaXMgcmVxdWlyZWQgdG8gaW5pdGlhbGl6ZSBpZnJhbWUgc3JjIHRh
-Z3MgZm9yIFNTTC4gRG8gbm90IGRlbGV0ZS4pgQKDBAIAhf8IAAEAAAk=
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>pgEmpty</text></item></page>
 

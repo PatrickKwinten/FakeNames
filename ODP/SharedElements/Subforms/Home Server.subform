@@ -1,108 +1,76 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='7ea' unid='111B9A7A99AB4AEC852574090068D4F1' sequence='84'>
+<subform name='Home Server' alias='$AutoPopulate1' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='8'
+ renderpassthrough='true'>
+<noteinfo noteid='7e2' unid='111B9A7A99AB4AEC852574090068D4F1' sequence='84'>
 <created><datetime>20080311T140502,57-05</datetime></created>
-<modified><datetime dst='true'>20150507T110158,06+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114103,24+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095408,60-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110158,05+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110158,05+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114103,24+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114103,24+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140148,67-04</datetime><datetime
 >20100304T143958,99-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>Home Server</text><text>$AutoPopulate1</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUAx3</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP//AABU
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJIQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAAD//wkAKgAxADAAQgA5AEYAQQAyADAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAADmHwtqBAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='APServerNamesInput' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SelectionCriteria' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='APHomeServers' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>APHomeServers</text><text>SelectionCriteria</text><text
->APServerNamesInput</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$AutoPopulate1</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-UG9wdWxhdGUBAAEAMAAKAgMABwAMAAUACTBTMEUAgwQGAIX/GwABAAAJU2VsZWN0aW9uIENyaXRl
-cmlhOgCkEgEBwBIgOmBUAAIAAAEBAACBAoL/WgAHAAAAAAAAAAAAFhMgOhYTAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhokAAAAAlYRWAAAAVgAAAAAAAAABAAAABgAA
-ALv/QAAHABMAojH8YUAbMgAAACQABQARAEF1dG9Qb3B1bGF0ZUlucHV0AAEAAQAwAAoCAwAHAAwA
-BQAJMFMwRQCDBAcAhf8IAAEAAArdBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAB4AHgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/6AKIAQAF
-ADACAAAAAAAAAgEAAAmyAgAAAAAAABEAAAAAALICAQAmAAoAbnVtc2VydmVycwUADQBBUEhvbWVT
-ZXJ2ZXJzAGoBAwAHAAwABQAJMFMwRQABAFIAFQBNdWx0aXBsZVNlcnZlcnNQcmVmaXgABQAKAG51
-bXNlcnZlcnMAAAAAAAAAAPA/DwKvABgADAABAAIAKHyuAAwAAQAAAK4ABAC1AwMABwAKAAMACTBS
-AAEAUgAVAE11bHRpcGxlU2VydmVyc1N1ZmZpeAAFAAoAbnVtc2VydmVycwAAAAAAAAAA8D8PAq8A
-GAAMAAEAAQApAK4ADAABAAAArgAEALUDAwAHAAoAAwAJMFIAAQAoABAATWFpbFNlcnZlclByZWZp
-eAEADAAobWFpbHNlcnZlcj0DAAcACgADAAkwUgABADQAEQBMYXRlc3RIb21lU2VydmVycwAFAA0A
-QVBIb21lU2VydmVycwABAAEALACGAgMABwAKAAMACTBSAAEAHgAQAEhvbWVTZXJ2ZXJTdWZmaXgB
-AAEAKQADAAcACgAEAAkwUlIBAEwADwBGdWxsTGlzdFNlcnZlcnMABQAQAE1haWxTZXJ2ZXJQcmVm
-aXgFABEATGF0ZXN0SG9tZVNlcnZlcnMAIgIBAAEAKQCFAgMABwAOAAcACTBSNVM2UwAAAL4ABQAR
-AEF1dG9Qb3B1bGF0ZUlucHV0AAEAAQAxAAoCrwCYAIwAAQAWACgmKE9iamVjdENsYXNzPXBlcnNv
-bikFABUATXVsdGlwbGVTZXJ2ZXJzUHJlZml4ACICBQAPAEZ1bGxMaXN0U2VydmVycwAiAgUAEABI
-b21lU2VydmVyU3VmZml4IgIBAAEAKQAiAgUAFQBNdWx0aXBsZVNlcnZlcnNTdWZmaXgAIgKuAAwA
-AQAAAK4ABAC1AwMABwAWABAACTBSUjRTMTNTMTdTMTlSUlNlbGVjdGlvbkNyaXRlcmlhAGIOAQCE
-AAAAAAAAAAAA3gYAAIr/hf8IAAEAAAqlBgAAAACBAoMEAQCF/wgAAQAACoECgwQBAIX/CAABAAAK
-</rawitemdata></item></note>
+<body><richtext>
+<pardef id='1' hide='notes web mobile'/>
+<par def='1'/>
+<table widthtype='fitmargins' cellbordercolor='silver' refwidth='9.3333in'><tablecolumn
+ width='25%'/><tablecolumn width='75%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='3' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt' name='user-interface'/>Home Server(s):</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='4' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font size='9pt'/><field runexitingonchange='true' lookupeachchar='false'
+ lookupaddressonrefresh='false' type='keyword' allowmultivalues='true' kind='editable'
+ name='APServerNamesInput' listinputseparators='comma' listdisplayseparator='comma'><keywords
+ recalconchange='true' recalcchoices='true' columns='1' ui='dialoglist' allownew='true'><formula
+>class:="Notes";
+nc:="NoCache";
+tmpserver:=@Subset(@DbName;1);
+mailserver:=@Subset(@MailDbName;1);
+server:=@If(tmpserver="";mailserver;tmpserver);
+database:="names.nsf";
+view:="($Servers)";
+colnum:=1;
+List:=@If(server="" &amp; (!@DbExists(server;database));"No such database exists on the server";
+@DbColumn(class:nc;server:database;view;colnum));
+"" :@Name([Abbreviate];List)</formula></keywords></field></run></par>
+<pardef id='5' leftmargin='0.0597in' hide='notes web mobile' keepwithnext='true'
+ keeptogether='true'/>
+<par def='5'><run><font size='9pt' name='user-interface'/><field borderstyle='none'
+ choicesdialog='addressbook' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='names' allowmultivalues='true' kind='computed' name='APHomeServers'
+ listinputseparators='comma' listdisplayseparator='comma'><keywords recalconchange='true'
+ columns='1' ui='checkbox'/><code event='defaultvalue'><formula>@Name([Canonicalize];APServerNamesInput)</formula></code></field></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='6' leftmargin='0.0597in' hide='notes web mobile' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>AutoPopulate="0"</formula></code></pardef>
+<par def='6'><run><font size='9pt'/>Selection Criteria:</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='7' leftmargin='0.0597in' hide='notes web mobile' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>AutoPopulateInput="0"</formula></code></pardef>
+<par def='7'><run><font size='9pt'/><field type='text' kind='computed' name='SelectionCriteria'><code
+ event='defaultvalue'><formula>numservers:=@Elements(APHomeServers);
+MultipleServersPrefix:=@If(numservers&gt;1;"(|";"");
+MultipleServersSuffix:=@If(numservers&gt;1;")";"");
+MailServerPrefix:="(mailserver=";
+LatestHomeServers:=@Explode(APHomeServers;",");
+
+HomeServerSuffix:=")";
+FullListServers:=@Implode(MailServerPrefix + LatestHomeServers;")");
+
+@If(AutoPopulateInput= "1";"(&amp;(ObjectClass=person)"+MultipleServersPrefix+FullListServers+HomeServerSuffix +")"+MultipleServersSuffix ;""
+
+)</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='8' containertype='65418' aftercontainercount='1'
+ afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par></tablecell></tablerow></table>
+<par def='1'/>
+<par def='1'/></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>$AutoPopulate1</text></item></subform>
 

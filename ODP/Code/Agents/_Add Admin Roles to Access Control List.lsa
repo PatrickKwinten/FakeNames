@@ -1,167 +1,76 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='12e' unid='5A9523746B6F6D1585256B7C00791BE1' sequence='5010'>
+<agent name='_Add Admin Roles to Access Control List' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' hide='v3'
+ publicaccess='false' designerversion='6' language='en' comment='Run when upgrading to Notes 6'>
+<noteinfo noteid='12a' unid='5A9523746B6F6D1585256B7C00791BE1' sequence='5010'>
 <created><datetime>20020314T170249,93-05</datetime></created>
-<modified><datetime dst='true'>20150507T110149,67+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114055,24+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095404,10-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110149,66+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110149,66+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114055,24+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,24+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140107,55-04</datetime><datetime
 >20100304T143920,29-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>_Add Admin Roles to Access Control List</text></item>
-<item name='$AssistType' sign='true'><number>65413</number></item>
-<item name='$AssistLastRun' sign='true'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$AssistDocCount' sign='true'><number>0</number></item>
-<item name='$Comment' sign='true'><text>Run when upgrading to Notes 6</text></item>
-<item name='$FlagsExt' sign='true'><text/></item>
-<item name='$AssistFlags' sign='true'><text>Es</text></item>
-<item name='$AssistTrigger' sign='true'><text>4</text></item>
-<item name='$AssistInfo' sign='true'>
-<rawitemdata type='11'>
-AQAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</rawitemdata></item>
-<item name='$AssistQuery' sign='true'>
-<rawitemdata type='f'>
-gQYAAAAA
-</rawitemdata></item>
-<item name='$AssistAction' sign='true'>
-<rawitemdata type='10'>
-gQKF/2gGAAAAAFwGAAAnKytMb3R1c1NjcmlwdCBEZXZlbG9wbWVudCBFbnZpcm9ubWVudDoyOjU6
-KE9wdGlvbnMpOjA6NjYKT3B0aW9uIFB1YmxpYwoKJysrTG90dXNTY3JpcHQgRGV2ZWxvcG1lbnQg
-RW52aXJvbm1lbnQ6Mjo1OihGb3J3YXJkKTowOjEKRGVjbGFyZSBTdWIgSW5pdGlhbGl6ZQpEZWNs
-YXJlIFN1YiBGb28oeCBBcyBWYXJpYW50KQoKJysrTG90dXNTY3JpcHQgRGV2ZWxvcG1lbnQgRW52
-aXJvbm1lbnQ6Mjo1OihEZWNsYXJhdGlvbnMpOjA6MgoKJysrTG90dXNTY3JpcHQgRGV2ZWxvcG1l
-bnQgRW52aXJvbm1lbnQ6MjoyOkluaXRpYWxpemU6MToxMApTdWIgSW5pdGlhbGl6ZQoJRGltIFMg
-QXMgTmV3IE5PVEVTU0VTU0lPTgoJRGltIERiIEFzIE5vdGVzRGF0YWJhc2UKCURpbSBBQ0wgQXMg
-Tk9URVNBQ0wKCURpbSBFbnRyeSBBcyBOT1RFU0FDTEVudHJ5CglEaW0gVG90YWxFZGl0b3JzIEFz
-IEludGVnZXIKCURpbSBUb3RhbEF1dGhvcnMgQXMgSW50ZWdlcgoJRGltIFJvbGVzICgxKSBBcyBT
-dHJpbmcKCVJvbGVzKDApID0gIlBvbGljeUNyZWF0b3IiIAoJUm9sZXMoMSkgPSAiUG9saWN5TW9k
-aWZpZXIiCgkKCVNldCBEQiA9IFMuQ3VycmVudERhdGFiYXNlCglJZiBOb3QgREIuSXNPcGVuIFRo
-ZW4KCQlQcmludCAiRXJyb3IgTm90IG9wZW4iICAgICAgICAgIAoJCUdvdG8gZW5kaXQKCUVuZCBJ
-ZgoJCglTZXQgQUNMPURCLkFDTAoJRm9yYWxsIGkgSW4gUm9sZXMKCQlBQ0wuQWRkUm9sZShpKQoJ
-RW5kIEZvcmFsbAoJQUNMLlNhdmUKCQoJU2V0IEVudHJ5PUFDTC5HZXRGaXJzdEVudHJ5CglUb3Rh
-bEVkaXRvcnMgPSAwCglUb3RhbEF1dGhvcnMgPSAwCglEbyBVbnRpbCBFbnRyeSBJcyBOb3RoaW5n
-ICAKCQlJZiAoRW50cnkubGV2ZWwgPiAzKSBUaGVuCgkJCVRvdGFsRWRpdG9ycyA9IFRvdGFsRWRp
-dG9ycyArIDEKCQkJRm9yYWxsIGkgSW4gUm9sZXMKCQkJCUVudHJ5LkVuYWJsZVJvbGUoaSkKCQkJ
-RW5kIEZvcmFsbAoJCUVsc2VpZiggRW50cnkubGV2ZWwgPSAzKSBUaGVuCgkJCUlmIEVudHJ5LkNB
-TkNSRUFURURPQ1VNRU5UUyBUaGVuCgkJCQlUb3RhbEF1dGhvcnMgPSBUb3RhbEF1dGhvcnMgKyAx
-CgkJCQlFbnRyeS5FbmFibGVSb2xlKCJQb2xpY3lDcmVhdG9yIikKCQkJRW5kIElmCgkJRW5kIElm
-CgkJQUNMLlNhdmUKCQlTZXQgRW50cnkgPSBBQ0wuR2V0TmV4dEVudHJ5KEVudHJ5KQoJTG9vcAoJ
-QUNMLlNhdmUgCglEaW0gTWVzc2FnZSBBcyBTdHJpbmcKCURpbSBCb3hUeXBlIEFzIExvbmcKCUJv
-eFR5cGU9TUJfT0sgKyBNQl9JQ09OSU5GT1JNQVRJT04KCU1lc3NhZ2UgPSAgIkdhdmUgYWxsIG5l
-dyByb2xlcyB0byAiICArIENzdHIoVG90YWxFZGl0b3JzKSArICAgIiBlbnRyeShzKSB3aG8gaGF2
-ZSBFZGl0b3IgYWNjZXNzIG9yIGFib3ZlLiBHYXZlIGNyZWF0ZS1vbmx5IHJvbGVzIHRvICIgKyBD
-c3RyKFRvdGFsQXV0aG9ycykgKyAiIGVudHJ5KHMpIHdobyBoYXZlIEF1dGhvciB3aXRoIENyZWF0
-ZSBhY2Nlc3MuIgoJTWVzc2FnZWJveCBNZXNzYWdlLCBCb3hUeXBlLCAiQXBwbGllZCBSb2xlcyIK
-CQplbmRpdDoKCQpFbmQgU3ViCicrK0xvdHVzU2NyaXB0IERldmVsb3BtZW50IEVudmlyb25tZW50
-OjI6MjpGb286MTo4ClN1YiBGb28oeCBBcyBWYXJpYW50KQoJCkVuZCBTdWIA3Q==
-</rawitemdata></item>
-<item name='$Restricted' sign='true'><number>1</number></item>
-<item name='$Flags'><text>fL3</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$AssistRunInfo' summary='true'>
-<rawitemdata type='3'>
-BgAAAgAACAAqAQAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAaqtTANVrJYXP1SsAiWslhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqq
-</rawitemdata></item>
-<item name='$AssistAction_Ex' sign='true'>
-<rawitemdata type='14'>
-gQKF/4APAAAAAHQPAAABAAACTFNPQgMAFAhlbgAABAAjALABAAAAALgGzAQEAAAAAACcAOwCAAAA
-ACwAJAEgAEAAAACgAFwAAAAAAAAAAgAAAAQAKAQAAAAAAAAAACgEKAQAAAAAAAAAAAAAAAAAAAAA
-BAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAKgA7AIAAAAAAAAAAAAAAADsAuwCeAF4AQAA
-AAAAAAAAAAAAAAAAAAAAAAAAqACoAEwCTAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAFAExvdHVzIFByb2R1Y3QAAABWMC4w
-AAAAAAAAAAAAAAAAAAAAAAAAAACwAQAAAAAAALgGAADMBAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA
-AAAAAQAAAAAAAAAAAAAABQAAAFczMkklAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAADANAEAAAAAJAADQAkAEEAUwBTAEkAUwBUAEEAQwBUAEkATwBOAAAA
-dAADAE4ARQBXAAAAiAAGAEQARQBMAEUAVABFAAAAAADAAAoASQBOAEkAVABJAEEATABJAFoARQAA
-AAAAmAAJAFQARQBSAE0ASQBOAEEAVABFAAAApAEGAE8AQgBKAEUAQwBUAAAAAAAAAQAAAAAAAAwB
-AQBYAAAA1AABAFMAAACUAQwATgBPAFQARQBTAFMARQBTAFMASQBPAE4AAAAAADQBBgAlAEwAUwBY
-AEIARQAAAAAA4AACAEQAQgAAAAAAdAENAE4ATwBUAEUAUwBEAEEAVABBAEIAQQBTAEUAAABUAQMA
-QQBDAEwAAADoAQgATgBPAFQARQBTAEEAQwBMAAAAAABEAgUARQBOAFQAUgBZAAAAVAINAE4ATwBU
-AEUAUwBBAEMATABFAE4AVABSAFkAAAAgAgwAVABPAFQAQQBMAEUARABJAFQATwBSAFMAAAAAAMQB
-DABUAE8AVABBAEwAQQBVAFQASABPAFIAUwAAAAAAUAMFAFIATwBMAEUAUwAAAAwCDQBQAG8AbABp
-AGMAeQBDAHIAZQBhAHQAbwByAAAAoAIOAFAAbwBsAGkAYwB5AE0AbwBkAGkAZgBpAGUAcgAAAAAA
-oAQPAEMAVQBSAFIARQBOAFQARABBAFQAQQBCAEEAUwBFAAAAzAIGAEkAUwBPAFAARQBOAAAAAABA
-Aw4ARQByAHIAbwByACAATgBvAHQAIABvAHAAZQBuAAAAAABcAgUARQBOAEQASQBUAAAAcAIBAEkA
-AAD4AgcAQQBEAEQAUgBPAEwARQAAAIACBABTAEEAVgBFAAAAAACwAw0ARwBFAFQARgBJAFIAUwBU
-AEUATgBUAFIAWQAAALACBQBMAEUAVgBFAEwAAAAYAwoARQBOAEEAQgBMAEUAUgBPAEwARQAAAAAA
-LAMSAEMAQQBOAEMAUgBFAEEAVABFAEQATwBDAFUATQBFAE4AVABTAAAAAAD//wwARwBFAFQATgBF
-AFgAVABFAE4AVABSAFkAAAAAAEAEBwBNAEUAUwBTAEEARwBFAAAAfAMHAEIATwBYAFQAWQBQAEUA
-AAD//wUATQBCAF8ATwBLAAAA//8SAE0AQgBfAEkAQwBPAE4ASQBOAEYATwBSAE0AQQBUAEkATwBO
-AAAAAADABBYARwBhAHYAZQAgAGEAbABsACAAbgBlAHcAIAByAG8AbABlAHMAIAB0AG8AIAAAAAAA
-//9FACAAZQBuAHQAcgB5ACgAcwApACAAdwBoAG8AIABoAGEAdgBlACAARQBkAGkAdABvAHIAIABh
-AGMAYwBlAHMAcwAgAG8AcgAgAGEAYgBvAHYAZQAuACAARwBhAHYAZQAgAGMAcgBlAGEAdABlAC0A
-bwBuAGwAeQAgAHIAbwBsAGUAcwAgAHQAbwAgAAAA//8tACAAZQBuAHQAcgB5ACgAcwApACAAdwBo
-AG8AIABoAGEAdgBlACAAQQB1AHQAaABvAHIAIAB3AGkAdABoACAAQwByAGUAYQB0AGUAIABhAGMA
-YwBlAHMAcwAuAAAA//8NAEEAcABwAGwAaQBlAGQAIABSAG8AbABlAHMAAAD//wMARgBPAE8AAAAF
-ALwGAAAAAIjDbesIAAAAKAQAAEQAAAAAAAAADAAAAGgBqAYAAAAAAAAAAAAAAACoBqgGCAQIBGgB
-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
-</rawitemdata></item>
-<item name='$AssistVersion'><datetime dst='true'>20130909T095355,22-04</datetime></item>
-<item name='$POID'><datetime dst='true'>20130909T095404,10-04</datetime></item></note>
+<designchange><datetime dst='true'>20130909T095355,22-04</datetime></designchange>
+<trigger type='actionsmenu'/>
+<documentset type='runonce'/><code event='options'><lotusscript>Option Public
+
+</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+	Dim S As New NOTESSESSION
+	Dim Db As NotesDatabase
+	Dim ACL As NOTESACL
+	Dim Entry As NOTESACLEntry
+	Dim TotalEditors As Integer
+	Dim TotalAuthors As Integer
+	Dim Roles (1) As String
+	Roles(0) = "PolicyCreator" 
+	Roles(1) = "PolicyModifier"
+	
+	Set DB = S.CurrentDatabase
+	If Not DB.IsOpen Then
+		Print "Error Not open"          
+		Goto endit
+	End If
+	
+	Set ACL=DB.ACL
+	Forall i In Roles
+		ACL.AddRole(i)
+	End Forall
+	ACL.Save
+	
+	Set Entry=ACL.GetFirstEntry
+	TotalEditors = 0
+	TotalAuthors = 0
+	Do Until Entry Is Nothing  
+		If (Entry.level &gt; 3) Then
+			TotalEditors = TotalEditors + 1
+			Forall i In Roles
+				Entry.EnableRole(i)
+			End Forall
+		Elseif( Entry.level = 3) Then
+			If Entry.CANCREATEDOCUMENTS Then
+				TotalAuthors = TotalAuthors + 1
+				Entry.EnableRole("PolicyCreator")
+			End If
+		End If
+		ACL.Save
+		Set Entry = ACL.GetNextEntry(Entry)
+	Loop
+	ACL.Save 
+	Dim Message As String
+	Dim BoxType As Long
+	BoxType=MB_OK + MB_ICONINFORMATION
+	Message =  "Gave all new roles to "  + Cstr(TotalEditors) +   " entry(s) who have Editor access or above. Gave create-only roles to " + Cstr(TotalAuthors) + " entry(s) who have Author with Create access."
+	Messagebox Message, BoxType, "Applied Roles"
+	
+endit:
+	
+End Sub
+</lotusscript></code><code event='Foo'><lotusscript>Sub Foo(x As Variant)
+	
+End Sub</lotusscript></code>
+<rundata processeddocs='0' exitcode='0'>
+<agentmodified><datetime dst='true'>20020611T111353,70-04</datetime></agentmodified></rundata>
+<item name='$POID'><datetime dst='true'>20130909T095404,10-04</datetime></item></agent>
 

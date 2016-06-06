@@ -1,43 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='39e' unid='99F655762329D6A1852565A4006ED77A' sequence='5020'>
+<view name='($ExternalDomainNetworkAddresses)' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
+ publicaccess='false' designerversion='6' language='en' unreadmarks='none'
+ onopengoto='lastopened' onrefresh='displayindicator' headers='simple' opencollapsed='false'
+ showresponsehierarchy='false' showmargin='true' shrinkrows='false' extendlastcolumn='false'
+ showhierarchies='false' unreadcolor='black' rowlinecount='1' headerlinecount='1'
+ rowspacing='1' bgcolor='white' totalscolor='gray' headerbgcolor='#b1b1d2'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='39a' unid='99F655762329D6A1852565A4006ED77A' sequence='5020'>
 <created><datetime>19980207T151041,22-05</datetime></created>
-<modified><datetime dst='true'>20150507T110152,47+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,88+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,76-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,46+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,46+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,88+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,88+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144043,08-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>($ExternalDomainNetworkAddresses)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-0gAFADoANgAEAAoACAAPAAkARG9tYWluTmFtZVByb3RvY29sU2VydmVyQWRkcmVzc2VzJENvbmZs
-aWN0BAAEAAAAegBsAAUABABUeXBlAQAgAEV4dGVybmFsRG9tYWluTmV0d29ya0luZm9ybWF0aW9u
-CgIcAgUABABGb3JtAQAgAChFeHRlcm5hbERvbWFpbk5ldHdvcmtBZGRyZXNzZXMpCgIcAgUACQAk
-Q29uZmxpY3QAWQEcAgMABwAYABIACUwxUzJTM1M2UzdTMTBTMTFT
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-JgACAABEAGYAAAAKAABmAAoACABEb21haW5OYW1lUHJvdG9jb2w=
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQAEAAEACgQAAFZDAQAKAAoAAAAAAFAAAQAACgAAAAAAAAAAAAICAAAAVkMBAAgACAAAAAAAUAAB
-AAAKAAAAAAAAAAAAAgIAAABWQwAADwAPAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAIFZDAAAAAAsA
-CgAKAFAAAQAACgAAAAAAAAAAAAICAAAARG9tYWluTmFtZURvbWFpbk5hbWVQcm90b2NvbFByb3Rv
-Y29sU2VydmVyQWRkcmVzc2VzU2VydmVyQWRkcmVzc2VzU2VydmVyTmFtZXMKAAAACACSAAMAAQUB
-AAQAf0Ew/yYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAAAAAAAAAAAAV0MBAAAJAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAA
-AAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAA
-AEIAAAAAAAEA////AAUA////AAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAgAAAAAAAEA
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT @IsResponseDoc &amp; Type="ExternalDomainNetworkInformation" &amp; Form="(ExternalDomainNetworkAddresses)" &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='DomainName' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='DomainName'><font size='9pt'/></columnheader></column>
+<column sort='ascending' hidedetailrows='false' itemname='Protocol' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='Protocol'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' listseparator='comma' itemname='ServerAddresses'
+ width='10' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false'><columnheader title='ServerAddresses'><font
+ size='9pt'/></columnheader></column>
+<column hidedetailrows='false' width='10' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader title='ServerNames'><font
+ size='9pt'/></columnheader><code event='value'><formula>@DocNumber</formula></code></column></view>
 

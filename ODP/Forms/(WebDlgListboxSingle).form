@@ -1,57 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='5a6' unid='E3ABE6350E54C75EC1256BCD002A0B1E' sequence='5019'>
+<form name='(WebDlgListboxSingle)' alias='WebDlgListboxSingle' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' nocompose='true'
+ noquery='true' htmlallfields='true' publicaccess='false' designerversion='7'
+ language='en' bgcolor='system'>
+<noteinfo noteid='5a2' unid='E3ABE6350E54C75EC1256BCD002A0B1E' sequence='5019'>
 <created><datetime dst='true'>20020603T093913,58+02</datetime></created>
-<modified><datetime dst='true'>20150507T110155,28+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114100,48+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095407,64-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110155,27+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110155,27+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114100,48+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114100,48+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143955,94-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='OriginalModTime' sign='true'><datetime>20041217T023714,80-05</datetime></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-+f8gAAAAAAANAAQADQAAAAAAAAAAAAAAAAAAAAAAAADc/yAA+f8OACBOAAAAAAAAAABvbkxvYWRC
-b2R5KCkAAF//EAACAA8ABwAAAAAAAABf/xAAAgANAAcAAAAAAAAA
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>(WebDlgListboxSingle)</text><text>WebDlgListboxSingle</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAADwAJAMDAwAAAAAAA
-</rawitemdata></item>
-<item name='$WINDOWTITLE' sign='true'><formula>@UrlQueryString("WindowCaption")</formula></item>
-<item name='$HTMLHeadTag' sign='true'><formula>"&lt;meta http-equiv='expires' content='0'&gt;
-&lt;link rel=stylesheet type='text/css' href='/" + @WebDbName + "/cssForm?ReadForm'&gt;
-&lt;script&gt;
-	var sWebDbName		= '/" + @WebDbName + "/';
-&lt;/script&gt;
-&lt;script src='/" + @WebDbName + "/WebJSTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;
-&lt;script src='/" + @WebDbName + "/WebJSClassTransfer?OpenJavaScriptLibrary'&gt;&lt;/script&gt;
-&lt;script src='/" + @WebDbName + "/WebJSDlgListbox?OpenJavaScriptLibrary'&gt;&lt;/script&gt;"</formula></item>
-<item name='$HTMLBodyTag' sign='true'><formula>"class='DialogBox'"</formula></item>
-<item name='$Flags'><text>CD</text></item>
-<item name='$MimeCharSet' sign='true'><text>UTF-8</text></item>
-<item name='$WebFlags' sign='true'><text>F</text></item>
-<item name='$DesignerVersion' sign='true'><text>7</text></item>
-<item name='$Script' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:74
-Option Public
+<globals><code event='options'><lotusscript>Option Public
 Option Base 0
 Option Compare Nocase
 Option Explicit
 
 
-'++LotusScript Development Environment:2:5:(Forward):0:1
-Declare Public Function QuickSort(sArray As Variant) As Variant
-Declare Sub DoQS( sA() As String, bottom As Long, top As Long )
-Declare Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )	
-Declare Function DuplicateCheck(vArrayIn As Variant) As Variant
-Declare Function ParseLine(sArrayString As String) As Variant
-
-'++LotusScript Development Environment:2:5:(Declarations):0:10
-Public hDB As NotesDatabase
+</lotusscript></code><code event='declarations'><lotusscript>Public hDB As NotesDatabase
 Public hDBRef As NotesDatabase
 Public hDoc As NotesDocument
 Public hSession As NotesSession
@@ -67,8 +34,7 @@ Public vArray As Variant
 Public vArrayAdd As Variant
 
 
-'++LotusScript Development Environment:2:1:QuickSort:1:8
-Public Function QuickSort(sArray As Variant) As Variant
+</lotusscript></code><code event='QuickSort'><lotusscript>Public Function QuickSort(sArray As Variant) As Variant
 	Dim sA() As String    
 	Dim j As Long
 	Dim bottom As Long
@@ -94,8 +60,7 @@ Public Function QuickSort(sArray As Variant) As Variant
 	QuickSort = vA
 End Function
 
-'++LotusScript Development Environment:2:2:DoQS:1:8
-Sub DoQS( sA() As String, bottom As Long, top As Long )
+</lotusscript></code><code event='DoQS'><lotusscript>Sub DoQS( sA() As String, bottom As Long, top As Long )
      ' Called by QuickSort
      ' Uses Public variable sA  (array of string)
 	Dim length As Long
@@ -143,8 +108,7 @@ Sub DoQS( sA() As String, bottom As Long, top As Long )
 	
 End Sub
 
-'++LotusScript Development Environment:2:2:DoInsertSort:1:8
-Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )	
+</lotusscript></code><code event='DoInsertSort'><lotusscript>Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )	
 	Dim i As Long
 	Dim x As Long
 	Dim v As String
@@ -162,8 +126,7 @@ Sub DoInsertSort ( sA() As String, Byval bottom As Long, Byval top As Long )
 		sA (x) = v
 	Next
 End Sub
-'++LotusScript Development Environment:2:1:DuplicateCheck:1:8
-Function DuplicateCheck(vArrayIn As Variant) As Variant
+</lotusscript></code><code event='DuplicateCheck'><lotusscript>Function DuplicateCheck(vArrayIn As Variant) As Variant
 	Dim iMove As Integer
 	Dim iX As Integer
 	Dim iY As Integer
@@ -201,8 +164,7 @@ Function DuplicateCheck(vArrayIn As Variant) As Variant
 	End If
 	DuplicateCheck = vArrayOut
 End Function
-'++LotusScript Development Environment:2:1:ParseLine:1:8
-Function ParseLine(sArrayString As String) As Variant
+</lotusscript></code><code event='ParseLine'><lotusscript>Function ParseLine(sArrayString As String) As Variant
 	Dim iBegin As Integer
 	Dim iEnd As Integer
 	Dim iIndex As Integer
@@ -231,304 +193,187 @@ Function ParseLine(sArrayString As String) As Variant
 		iBegin = iEnd + 1
 	Loop Until iBegin &gt; Len(sLine)
 	ParseLine = vArrayOut
-End Function<break/></text></item>
-<item name='SaveOptions' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='HTTP_User_Agent' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>HTTP_User_Agent</text><text>SaveOptions</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>WebDlgListboxSingle</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-X3RXaWR0aAAiAgEAJwAgb25kYmxjbGljaz0nd2luZG93LmhEbGcub25DbGlja09LKCknID4AIgIB
-AAkAPC9zZWxlY3Q+ACICAwAHACAAGQAJMFJSMVMyUzNTNFM1UzZTN1M4UjlTMTBSAIX/CAABAAAK
-qgLeBgAArgDN/wgAAAAAAIX/CAABAAAK0QYAAAAAgQKDBA0A3QYAAIX/hf8IAAEABgrSCAEA//8A
-AN4GAACF/6QSAwBEB8QUAAAAAgAAAQEAAIECgwQNAMz/CAAAAAAA3QYAAIX/hf8oAAEABgo8ZGl2
-IGNsYXNzPSJQYWRkaW5nVG9wMTAiPjwvZGl2PtIIAQD//wAA3gYAAIX/gQKDBA0A3QYAAIX/hf8n
-AAEABgo8ZGl2IGNsYXNzPSJQYWRkaW5nVG9wNSI+PC9kaXY+ANIIAQD//wAA3gYAAIX/zf8IAAAA
-AACkEgQARAfEFAAAAAIAAAEBAACBAoL/WgARAAEAAAAAAAAARAfEFEQHAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVIcAAAAAAAAAAAAAAAABAAAABAAAAIME
-EQDM/wgAAAAAAIX/CAABAAAK3QYAAK3/qf/kAQEAGAAEANgB2AEHACAAGgAgAAAJT0sgYW5kIENB
-TkNFTCBidXR0b24AAAcACgADAAkxUwABAIwABwBfdFdpZHRoAAUABQBpc05ONAABAAEAMQAKAq8A
-aAAcAAEAEgB3aWR0aD03MCBoZWlnaHQ9MjKuAEwABQAFAGlzRE9NAAEAAQAxAAoCrwA2ACoAAQAg
-AHN0eWxlPSd3aWR0aDo3MHB4OyBoZWlnaHQ9MjJweDsnrgAMAAEAAACuAAQAtQUDAAcAJgAgAAkw
-UlIxUzJTNVM2UzhTMTBSVFRUMTFTMTJTMTRTMTZTAADUAAEAIAA8aW5wdXQgdHlwZT0nYnV0dG9u
-JyB2YWx1ZT0nT0snIAUABwBfdFdpZHRoACICAQAkACBvbmNsaWNrPSd3aW5kb3cuaERsZy5vbkNs
-aWNrT0soKScgPiICAQASACZuYnNwOyZuYnNwOyZuYnNwOyICAQAkADxpbnB1dCB0eXBlPSdidXR0
-b24nIHZhbHVlPSdDYW5jZWwnICICBQAHAF90V2lkdGgAIgIBABsAIG9uY2xpY2s9J3dpbmRvdy5j
-bG9zZSgpJyA+ACICAwAHACYAHwAJMFJSMVMyUzNTNFM1UzZSN1M4UjlTMTBTMTFTMTJTAIX/CAAB
-AAAKqgLeBgAArgDN/wgAAAAAAIX/CAABAAAKe/8mAAAAAAAAAAAACwAAAAAAAAAAAAAAAABhbGln
-bj1yaWdodAClBgAAAACBAoMECADM/wgAAAAAAIX/CAABAAAKgQKDBAkA3QYAAIX/hf8PAAEABgo8
-L2Zvcm0+ANIIAQD//wAA3gYAAIX/gQKDBAkA3QYAAIX/hf8OAAEABgo8L2Rpdj7SCAEA//8AAN4G
-AACF/83/CAAAAAAAgQKDBAkA3QYAAIX/hf8IAAEABgrSCAEA//8AAN4GAACF/4ECgv9aABIAAAAA
-AAAAAACgBQAAoAUIANACoAVwCEALEA7gELATgBYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA
-AACVhKAFCgCgBQoAAABkAAEAAAAEAAAAgwQSAN0GAACF/4X/IwABAAQKLy8gaWZyYW1lIGZvciBk
-YXRhIHRyYW5zZmVyANIIAQAAAP8A3gYAAIX/gQKC/1oAEwAAAAAAAAAAAKAFAACgBQgA0AKgBXAI
-QAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAJSEoAUKAKAFCgAAAGQAAQAA
-AAQAAACDBBMAzP8IAAAAAACF/wgAAQAACt0GAACt/6n/wgABABgABAC2ALYAAACkAAUABQBpc05O
-NAABAAEAMQAKAq8AigAKAAEAAACuAIAAAQBzADxzdHlsZT4ACQkuSGlkZGVuSUZyYW1lIHsgdmlz
-aWJpbGl0eTogaGlkZGVuOyB9AAk8L3N0eWxlPgAJAAk8aWZyYW1lIGlkPSdmclRyYW5zZmVyJyBj
-bGFzcz0nSGlkZGVuSUZyYW1lJz48L2lmcmFtZT4ArgAEALUDAwAHABAACgAJM1M0UzZTOFJUhf8I
-AAEAAAqqAt4GAACuAM3/CAAAAAAA3QYAAIX/hf8IAAEABgrSCAEA//8AAN4GAACF/4ECgwQTAN0G
-AACF/4X/CAABAAYK0ggBAP//AADeBgAAhf+BAoMECQDM/wgAAAAAAN0GAACF/4X/IgABAAYKPGZv
-cm0gbmFtZT0iRG9taW5vRmllbGRzIj7SCAEA//8AAN4GAACF/83/CAAAAAAA
-</rawitemdata></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQATQBIBVAAAAB0CwgFAAAAAAAAmAKEBAAAAAAAAOQAQABgANAACAF8
-AAAAAQAAABIAAADUAMAJ5ADACQAAAAB0BHQEFAVUBdQDgAYAAAAAJAUkBYgCvAfICMgI1ADUADQD
-NAM0BXQFuAG4AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAcAAAAQAIQE9ACkAgAAAADkA+QDhASEBBAAEAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAMgBRAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AABQAAAASAUAAAAAAAB0CwAACAUAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAA
-AAgAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwAMBQAAAABMABwAKABHAEwATwBCAEEATABTACkAVwBFAEIARABMAEcATABJAFMAVABCAE8A
-WABTAEkATgBHAEwARQAAAAAAlAADAE4ARQBXAAAAqAAGAEQARQBMAEUAVABFAAAAAABUAQoASQBO
-AEkAVABJAEEATABJAFoARQAAAAAAsAAJAFQARQBSAE0ASQBOAEEAVABFAAAAaAEGAE8AQgBKAEUA
-QwBUAAAAAADEAAAAAAAAADQBBgBTAEEAUgBSAEEAWQAAAAAA8AACAFMAQQAAAAAABAMGAEIATwBU
-AFQATwBNAAAAAACgAwMAVABPAFAAAAAoAQgAVgBBAFIAUgBBAFkASQBOAAAAAADEAQwAUwBBAFIA
-UgBBAFkAUwBUAFIASQBOAEcAAAAAAKwBAwBIAEQAQgAAAHwBDQBOAE8AVABFAFMARABBAFQAQQBC
-AEEAUwBFAAAA+AEGACUATABTAFgAQgBFAAAAAAAcAgYASABEAEIAUgBFAEYAAAAAAIwBBABIAEQA
-TwBDAAAAAABAAg0ATgBPAFQARQBTAEQATwBDAFUATQBFAE4AVAAAAOQBCABIAFMARQBTAFMASQBP
-AE4AAAAAADACDABOAE8AVABFAFMAUwBFAFMAUwBJAE8ATgAAAAAA8AIGAEgAVQBJAEQATwBDAAAA
-AACYAg8ATgBPAFQARQBTAFUASQBEAE8AQwBVAE0ARQBOAFQAAACwAgYAJQBMAFMAWABVAEkAAAAA
-AHQCBQBIAFYASQBFAFcAAABYAgkATgBPAFQARQBTAFYASQBFAFcAAADcAgoASABWAEkARQBXAEUA
-TgBUAFIAWQAAAAAAKAQOAE4ATwBUAEUAUwBWAEkARQBXAEUATgBUAFIAWQAAAAAAtAMIAEgAVgBJ
-AEUAVwBOAEEAVgAAAAAAEAQSAE4ATwBUAEUAUwBWAEkARQBXAE4AQQBWAEkARwBBAFQATwBSAAAA
-AAAsAwYASQBDAE8AVQBOAFQAAAAAAEQDBgBTAEMATABBAFMAUwAAAAAAGAMGAFMAVgBBAEwAVQBF
-AAAAAABcAwYAVgBBAFIAUgBBAFkAAAAAAGQDCQBWAEEAUgBSAEEAWQBBAEQARAAAAIADCQBRAFUA
-SQBDAEsAUwBPAFIAVAAAAHADAQBKAAAAXAQCAFYAQQAAAAAAvAMEAEQATwBRAFMAAAAAAOgDDABE
-AE8ASQBOAFMARQBSAFQAUwBPAFIAVAAAAAAAGAQGAEwARQBOAEcAVABIAAAAAABMBAEASQAAAMwD
-BQBQAEkAVgBPAFQAAADwAwoAUABJAFYATwBUAFYAQQBMAFUARQAAAAAAaAQBAFQAAAAIBAkATABB
-AFMAVABTAE0AQQBMAEwAAAC4BAEAWAAAAHQEAQBWAAAApAQFAEYATwBVAE4ARAAAAIwEDgBEAFUA
-UABMAEkAQwBBAFQARQBDAEgARQBDAEsAAAAAAAAFBQBJAE0ATwBWAEUAAAD//wIASQBYAAAAAADs
-BAIASQBZAAAAAADIBAkAVgBBAFIAUgBBAFkATwBVAFQAAAD//wkAUABBAFIAUwBFAEwASQBOAEUA
-AADcBAYASQBCAEUARwBJAE4AAAAAAP//BABJAEUATgBEAAAAAAD//wYASQBJAE4ARABFAFgAAAAA
-AP//BQBTAEwASQBOAEUAAAD//wYAUwBUAE8ASwBFAE4AAAAAAP//AQA7AAAABQB4CwAAAACb1dtU
-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
-AAAAAAwLGQADAAEAPAdsB9QAAgABAAAAAwABAEwHrAfoAAIAAgAAAAMAAgBcBwAApAMCAAAAAAAD
-AAIAbAcAALgDAgAEAAAAAwACAHwHAABgAwIACAAAAAMAAgCMBwAAwAMCAAwAAAADAAIAnAcAANAD
-BgAQAAAAAwACAKwHAADsAwYAFAAAAAMAAgAAAAAA9AMCABgAAAAIABAAyAgAAIQDAAAAAAAABwAA
-AFQIuAgAAAAAAAAAAAAAAAC4CLgIAAAAAAAAAAAAAAAAAAAAAIgIqAhoCGgIVAiYCHgIeAgAAAAA
-AwAAAAUAAABCAgAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAMAAQBoCJgIyAAGIAAAAAAwCxkAAwABAHgIAADUAAIIAQAAAAMA
-AQCICAAA6AACCAIAAAADAAIAmAioCLgDAgAAAAAAAwACAKgIAAAMBAIABAAAAAMAAgC4CAAAFAQG
-AAgAAAADAAIAAAAAABwEAQAMAAAABwAQAMAJAAAsBAAAAAAAAAYAAABgCbAJAAAAAAAAAABwCXAJ
-AAAAAIAJgAkAAAAAAAAAAJAJkAlgCaAJAAAAALAJsAkAAAAAAAAAAAEAAAAFAAAA5gIAAHgAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAADAAEAcAmgCSwEAAAAAAAAAwABAIAJAAD0AAAAAQAAAAMAAgCQCQAAUAQBAAAAAAADAAIAoAkA
-AGAEAQACAAAAAwACALAJAABsBAEABAAAAAMAAgAAAAAAeAQAAAgAAAAHABAAAAAAAJAEAAAAAAAA
-CAAAAFgKyApYClgKAAAAAGgKaAqICogKAAAAAAAAAACoCqgKeAp4CgAAAAAAAAAAyArICpgKuAoA
-AAAAAQAAAAUAAAA8BAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMAAQBoCgAAkAQAAAAAAAADAAEAeAoAAAwBBgABAAAAAwAC
-AIgKAACoBAEAAAAAAAMAAgCYCgAAvAQBAAIAAAADAAIAqAq4CswEAQAEAAAAAwACALgKAADgBAYA
-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
-CgAAAA==
-</rawitemdata></item></note>
+End Function</lotusscript></code></globals><code event='windowtitle'><formula
+>@UrlQueryString("WindowCaption")</formula></code><code event='htmlbody'><formula
+>"class='DialogBox'"</formula></code><code event='htmlhead'><formula>"&lt;meta http-equiv='expires' content='0'&gt;
+&lt;link rel=stylesheet type='text/css' href='/" + @WebDbName + "/cssForm?ReadForm'&gt;
+&lt;script&gt;
+	var sWebDbName		= '/" + @WebDbName + "/';
+&lt;/script&gt;
+&lt;script src='/" + @WebDbName + "/WebJSTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;
+&lt;script src='/" + @WebDbName + "/WebJSClassTransfer?OpenJavaScriptLibrary'&gt;&lt;/script&gt;
+&lt;script src='/" + @WebDbName + "/WebJSDlgListbox?OpenJavaScriptLibrary'&gt;&lt;/script&gt;"</formula></code><code
+ event='onLoad' for='web'><javascript>onLoadBody()</javascript></code>
+<body><richtext>
+<pardef id='1' hide='notes web' tabs='L4in'/>
+<par def='1'><run><font color='blue'/>// generic web single select listbox</run></par>
+<par def='1'><run><font color='blue'/></run></par>
+<pardef id='2' leftmargin='0.7500in' hide='notes web' tabs='L3.9375in'/>
+<section><sectiontitle pardef='2' color='blue'><font color='blue'/><text>// sniffer fields</text></sectiontitle>
+<par def='1'><run><font color='blue'/>// never save this form	</run><field
+ type='text' kind='computed' name='SaveOptions'><code event='defaultvalue'><formula
+>"0"</formula></code></field><run><font style='bold' color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// cgi useragent	</run><field type='text'
+ kind='editable' name='HTTP_User_Agent'/></par>
+<par def='1'><run><font color='blue'/>// useragent	</run><field type='text'
+ kind='computedfordisplay' name='tUserAgent'><code event='defaultvalue'><formula
+>@LowerCase(HTTP_User_Agent)</formula></code></field><run><font color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// TUMIRNIX	</run><field type='text'
+ kind='computedfordisplay' name='isX'><code event='defaultvalue'><formula
+>REM { unix, linux };
+
+@If(@Contains(tUserAgent; "linux"); "1"; "")</formula></code></field><run
+><font color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// Windows	</run><field type='text'
+ kind='computedfordisplay' name='isWIN'><code event='defaultvalue'><formula
+>@If(@Contains(tUserAgent; "win"); "1"; "")</formula></code></field><run><font
+ color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// Macintosh	</run><field type='text'
+ kind='computedfordisplay' name='isMAC'><code event='defaultvalue'><formula
+>@If(@Contains(tUserAgent; "mac"); "1"; "")</formula></code></field><run><font
+ color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// Netscape	</run><field type='text'
+ kind='computedfordisplay' name='isNN'><code event='defaultvalue'><formula
+>@If( @Contains(tUserAgent; "mozilla") &amp;
+	!@Contains(tUserAgent; "msie"); "1"; "")</formula></code></field><run><font
+ color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// Netscape 4	</run><field type='text'
+ kind='computedfordisplay' name='isNN4'><code event='defaultvalue'><formula
+>_nVersion := @TextToNumber(@Left(@Right(tUserAgent; "mozilla/"); " "));
+
+@If(isNN = "1" &amp; _nVersion &gt;= 4 &amp; _nVersion &lt; 5; "1"; "")</formula></code></field><run
+><font color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// Netscape 4 and UNIX	</run><field
+ type='text' kind='computedfordisplay' name='isNN4X'><code event='defaultvalue'><formula
+>@If(isX = "1" &amp; isNN4 = "1"; "1"; "")</formula></code></field><run><font
+ color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// Netscape 4 and Windows	</run><field
+ type='text' kind='computedfordisplay' name='isNN4W'><code event='defaultvalue'><formula
+>@If(isWIN = "1" &amp; isNN4 = "1"; "1"; "")</formula></code></field><run
+><font color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// Netscape 6	</run><field type='text'
+ kind='computedfordisplay' name='isNN6'><code event='defaultvalue'><formula
+>_nVersion := @TextToNumber(@Left(@Right(tUserAgent; "mozilla/"); " "));
+
+@If(isNN = "1" &amp; _nVersion &gt;= 5; "1"; "")</formula></code></field><run
+><font color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// IE	</run><field type='text' kind='computedfordisplay'
+ name='isIE'><code event='defaultvalue'><formula>@If(@Contains(tUserAgent; "msie"); "1"; "")</formula></code></field><run
+><font color='blue'/></run></par>
+<par def='1'><run><font color='blue'/>// DOM	</run><field type='text' kind='computedfordisplay'
+ name='isDOM'><code event='defaultvalue'><formula>@If(isNN6 = "1" | isIE = "1"; "1"; "")</formula></code></field></par>
+<pardef id='3' tabs='L4in'/>
+<par def='3'><run html='true'><font color='blue'/></run></par></section>
+<par def='3'/>
+<pardef id='4' tabs='L2in L4in'/>
+<par def='4'><run html='true'><font color='yellow'/>&lt;/form&gt;</run></par>
+<par def='4'><run html='true'><font color='yellow'/></run></par>
+<pardef id='5' tabs='L2.5000in'/>
+<par def='5'><run html='true'><font color='yellow'/>&lt;style&gt;</run></par>
+<pardef id='6' leftmargin='1.2500in' tabs='L2.5000in'/>
+<par def='6'><run html='true'><font color='yellow'/>.LyrWaitMessage {</run></par>
+<pardef id='7' leftmargin='1.5000in' tabs='L2.5000in'/>
+<par def='7'><run html='true'><font color='yellow'/>position:	absolute;</run></par>
+<par def='7'><run html='true'><font color='yellow'/>visibility:	inherit;</run></par>
+<par def='7'><run html='true'><font color='yellow'/>top:	10px;</run></par>
+<par def='7'><run html='true'><font color='yellow'/>left:	10px;</run></par>
+<par def='6'><run html='true'><font color='yellow'/>}</run></par>
+<par def='6'><run html='true'><font color='yellow'/>.LyrDialogbox {</run></par>
+<par def='7'><run html='true'><font color='yellow'/>position:	absolute;</run></par>
+<par def='7'><run html='true'><font color='yellow'/>visibility:	hidden;</run></par>
+<par def='7'><run html='true'><font color='yellow'/>top:	10px;</run></par>
+<par def='7'><run html='true'><font color='yellow'/>left:	10px;</run></par>
+<par def='6'><run html='true'><font color='yellow'/>}</run></par>
+<par def='5'><run html='true'><font color='yellow'/>&lt;/style&gt;</run></par>
+<par def='4'/>
+<pardef id='8'/>
+<par def='8'><run html='true'><font color='yellow'/>&lt;div id="lyrWaitMessage" class="LyrWaitMessage"&gt;</run></par>
+<table minrowheight='0.2500in' htmlclass='PageTblLayout' widthtype='fixedleft'
+ refwidth='3in'><tablecolumn width='3in'/>
+<tablerow>
+<tablecell valign='center' borderwidth='0px'>
+<pardef id='10' keepwithnext='true' keeptogether='true'/>
+<par def='10'>Loading, please wait...</par></tablecell></tablerow></table>
+<pardef id='11' leftmargin='1in'/>
+<par def='11'><run html='true'><font color='yellow'/>&lt;/div&gt;</run></par>
+<par def='11'><run><font color='yellow'/></run></par>
+<par def='11'><run html='true'><font color='yellow'/>&lt;div id="lyrDialogbox" class="LyrDialogbox"&gt;</run></par>
+<par def='11'><run html='true'><font color='yellow'/>&lt;form name="Dialogbox"&gt;</run></par>
+<table leftmargin='1.2917in' widthtype='fixedleft' refwidth='2.4000in'><tablecolumn
+ width='2.4000in'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='13' keepwithnext='true' keeptogether='true'/>
+<par def='13'><run html='true'><computedtext><code event='value'><formula
+>"&lt;script&gt;
+	document.write(window.hDlgCtx.sTitleTop)
+&lt;/script&gt;"</formula></code></computedtext></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='13'><run html='true'><font color='yellow'/>&lt;div class="PaddingTop10"&gt;&lt;/div&gt;</run></par>
+<par def='13'><run html='true'><font color='yellow'/>&lt;div class="PaddingTopIE5"&gt;&lt;/div&gt;</run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='13'/>
+<table htmlclass='DlgSubLayout' extrahtmlattrs='border=0' leftmargin='0' widthtype='fixedleft'
+ refwidth='2.4000in'><tablecolumn width='2.4000in'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='15' hide='web' keepwithnext='true' keeptogether='true'/>
+<par def='15'><run><font color='blue'/>// selListSrc</run></par>
+<pardef id='16' keepwithnext='true' keeptogether='true'/>
+<par def='16'><run html='true'><computedtext><code event='value'><formula
+>_tSizeUrl	:= @UrlQueryString("SrcListRows")[1];
+_tSize	:= @If(_tSizeUrl = ""; "15"; _tSizeUrl);
+_tWidth	:= "230";
+
+_tWidth   := @If(isNN4 = "1";
+				"width=" + _tWidth;
+				"style='width:" + _tWidth + "px;'");
+
+"&lt;select name='selListSrc' size=" + _tSize + " " + _tWidth +
+" ondblclick='window.hDlg.onClickOK()' &gt;" +
+"&lt;/select&gt;"</formula></code></computedtext></run></par></tablecell></tablerow></table>
+<par def='13'><run><font color='yellow'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='13'><run html='true'><font color='yellow'/>&lt;div class="PaddingTop10"&gt;&lt;/div&gt;</run></par>
+<par def='13'><run html='true'><font color='yellow'/>&lt;div class="PaddingTop5"&gt;&lt;/div&gt;</run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' extrahtmlattrs='align=right'>
+<pardef id='17' align='right' keepwithnext='true' keeptogether='true'/>
+<par def='17'><run html='true'><computedtext><code event='value'><formula
+>REM { 
+
+	OK and CANCEL button
+
+};
+
+_tWidth := @If(isNN4 = "1"; "width=70 height=22";
+			isDOM = "1"; "style='width:70px; height=22px;'"; "");
+
+"&lt;input type='button' value='OK' " + _tWidth + " onclick='window.hDlg.onClickOK()' &gt;" +
+"&amp;nbsp;&amp;nbsp;&amp;nbsp;" +
+"&lt;input type='button' value='Cancel' " + _tWidth + " onclick='window.close()' &gt;"</formula></code></computedtext></run></par></tablecell></tablerow></table>
+<par def='8'/>
+<pardef id='9' leftmargin='1in'/>
+<par def='9'><run html='true'><font color='yellow'/>&lt;/form&gt;</run></par>
+<par def='9'><run html='true'><font color='yellow'/>&lt;/div&gt;</run></par>
+<par def='9'><run><font color='yellow'/></run></par>
+<pardef id='18' leftmargin='1in' hide='web' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='18'><run><font color='blue'/>// iframe for data transfer</run></par>
+<pardef id='19' leftmargin='1in' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'/>
+<par def='19'><run html='true'><computedtext><code event='value'><formula
+>@If(isNN4 = "1"; "";
+	"&lt;style&gt;
+		.HiddenIFrame { visibility: hidden; }
+	&lt;/style&gt;
+	
+	&lt;iframe id='frTransfer' class='HiddenIFrame'&gt;&lt;/iframe&gt;")</formula></code></computedtext></run><run
+><font color='yellow'/></run></par>
+<par def='19'><run><font color='yellow'/></run></par>
+<par def='9'><run html='true'><font color='yellow'/>&lt;form name="DominoFields"&gt;</run></par></richtext></body>
+<item name='OriginalModTime' sign='true'><datetime>20041217T023714,80-05</datetime></item>
+<item name='$MimeCharSet' sign='true'><text>UTF-8</text></item>
+<item name='$$ScriptName' summary='false' sign='true'><text>WebDlgListboxSingle</text></item></form>
 

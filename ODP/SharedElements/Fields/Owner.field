@@ -1,40 +1,24 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='13e' unid='16E5F2CEFD5AB1AB852562510064AE3A' sequence='5027'>
+<sharedfield name='Owner' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' designerversion='6.5' language='en'>
+<noteinfo noteid='13a' unid='16E5F2CEFD5AB1AB852562510064AE3A' sequence='5027'>
 <created><datetime dst='true'>19951010T141942,02-04</datetime></created>
-<modified><datetime dst='true'>20150507T110149,75+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114055,32+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,24-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110149,74+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110149,74+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114055,32+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,32+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20020326T142542,50-05</datetime><datetime dst='true'>20020503T221205,09+02</datetime><datetime
  dst='true'>20020505T113315,08+02</datetime><datetime dst='true'>20020505T115339,50+02</datetime><datetime
  dst='true'>20020604T144712,87-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ choicesdialog='addressbook' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='authors' allowmultivalues='true' kind='editable' protected='true' name='Owner'
+ description='Enter the user or group name allowed to modify this document.'
+ listinputseparators='comma semicolon newline' listdisplayseparator='newline'><keywords
+ columns='1' ui='dialoglist' allownew='true'/><code event='htmlattributes'><formula
+>htmlTextArea5XL</formula></code></field>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>
-</rawitemdata></item>
-<item name='$TITLE'><text>Owner</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6.5</text></item>
-<item name='Owner' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><text>Owner</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAALD/NAAAAAAAAgAAAgEAAAAAAAAAHAAAABwAAAAaAAUADwBodG1s
-VGV4dEFyZWE1WEwAAwCK/2YAh8QBBQ5AAAAIAAAAAAIBAAAJAAAAAAAAAAAFAD0AAABPd25lckVu
-dGVyIHRoZSB1c2VyIG9yIGdyb3VwIG5hbWUgYWxsb3dlZCB0byBtb2RpZnkgdGhpcyBkb2N1bWVu
-dC7eBgAAiv+F/wgAAQAACg==
-</rawitemdata></item></note>
+</rawitemdata></item></sharedfield>
 

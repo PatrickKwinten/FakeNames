@@ -1,66 +1,54 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='33e' unid='5F493AEF92F7CF4D852569510052C706' sequence='5029'>
+<view name='($OnlineMeetingPlaces)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false'
+ designerversion='6' language='en' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='simple' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='false' shrinkrows='true' extendlastcolumn='false' showhierarchies='false'
+ unreadcolor='black' rowlinecount='3' headerlinecount='1' rowspacing='1' bgcolor='white'
+ totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='false' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
+<noteinfo noteid='33a' unid='5F493AEF92F7CF4D852569510052C706' sequence='5029'>
 <created><datetime dst='true'>20000905T110409,02-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,99+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,40+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,36-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,98+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,98+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,40+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,40+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144044,70-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($OnlineMeetingPlaces)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-4gECACIAAgAkNwIACwAAAAAAAAAFAAgARnVsbE5hbWW0AgMAAgAuAAIAJDQCAAUAAAAAAAAABQAI
-AEZ1bGxOYW1lAAAAAAAAAADwP2sCtAIDAAIAdAACACQ4BQAFAEFWRmxnAAEAAQAxAAoCrwBWABwA
-AAAAAAAAAAAwQAAAAAAAAABgYUAfAq4AOgAFAAgAQXVkaW9GbGcBAAEAMQAKAq8AIgAQAAAAAAAA
-AAAAMECuABIAAAAAAAAAAAAAAK4ABAC1BQMAAgAkAAIAJDUCAAUAAAAAAAAABQAKAE1haWxTZXJ2
-ZXK0AgMABQBAADwACAACAAIAAgALAAIACAAJAAQAJDckNCQ4RGVzY3JpcHRpb24kNU1haWxGaWxl
-JENvbmZsaWN0JFJFRgQABAAAAJIABQAEAFR5cGUBAAgARGF0YWJhc2UKAgQABQAMAFJlc291cmNl
-RmxhZwEAAQAxAAoCBAAcAgUADABSZXNvdXJjZVR5cGUBAAEAMwAKAgQAHAIEAAUABABGb3JtAQAI
-AFJlc291cmNlAQAIAERhdGFiYXNlHwIKAgQAHAIFAAkAJENvbmZsaWN0AFkBHAIDAAcAIgAcAAlM
-MVM0UzVTN1MxM1MxNFMyMFMyMVMyOFMyOVM=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-GAACAABEAGYHAAACAABmAAIAAgAkNyQ0
-</rawitemdata></item>
-<item name='$Collation1' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYAAAACACQ0
-</rawitemdata></item>
-<item name='$Collation2' summary='true'>
-<rawitemdata type='2'>
-GAACAABEgGYAAAACAABmBwIAAgAkOCQ3
-</rawitemdata></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAGAAgACA4AAFZDgwQCAAQAMAAAABgAAQENCQAAAAAIAAAAAAICAAAAVkMBAQIAGQA6AAAAoAAB
-AAAJAAAAAAAAAAAAAgIAACBWQ0ARAgAAAIoAAAAdAAEAAAoAAAAAAAAAAAACAgAAAFZDAAALAAsA
-AAAAACkBAQAACQAAAAAAAAAAAAICAAAAVkOIAAIACgAwAAAAggABAAAJAAAAAAAAAAAAAgIAACBW
-Q4gACAAIAAAAAACgAAEAAAkAAAAAAAAAAAACAgAAICQ3U2l0ZTAAAgAiAAIAJDcCAAsAAAAAAAAA
-BQAIAEZ1bGxOYW1ltAIDAAcADAAFAAkwUzBFACQ0T25saW5lIE1lZXRpbmcgUGxhY2UgTmFtZToA
-AgAuAAIAJDQCAAUAAAAAAAAABQAIAEZ1bGxOYW1lAAAAAAAAAADwP2sCtAIDAAcACgADAAk4UwAk
-OIoAAgB0AAIAJDgFAAUAQVZGbGcAAQABADEACgKvAFYAHAAAAAAAAAAAADBAAAAAAAAAAGBhQB8C
-rgA6AAUACABBdWRpb0ZsZwEAAQAxAAoCrwAiABAAAAAAAAAAAAAwQK4AEgAAAAAAAAAAAAAArgAE
-ALUFAwAHABQADQAJMlM3UzhTMTBTMTZTAERlc2NyaXB0aW9uRGVzY3JpcHRpb24kNU1haWxTZXJ2
-ZXIwAAIAJAACACQ1AgAFAAAAAAAAAAUACgBNYWlsU2VydmVytAIDAAcACgADAAk0UwBNYWlsRmls
-ZU1haWxGaWxlJgABAAAAAQEACQEAAAoBAQQKAAABAK0rAwABAAEAAAAAAAAAAABXQwEAAAkAAAAA
-AAAAAAAAAAAAAAAAAQDAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQEACQAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAP//
-AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAA
-AAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABCABAAAAABAP///wAFAP///wAB
-AAAAAAAAAAAAAAAAAAEA////AAEAsbHSAAAAAQAAAAAAAQAAAP8AAAAAAAAAAAAIAAAAAAABAFhD
-AAyAAgAAAAAAAQICAgEBAQEBAAQAAAAAAAAAACAvLzpZQwAACAAAAAEAAAABAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAALiwkAA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$DesignerBuild' sign='true'><text>Build V603_05112003</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT ((Type = "Database") &amp;(ResourceFlag="1") &amp; (ResourceType="3")) &amp; (Form="Resource":"Database") &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='$7' width='3' resizable='false'
+ separatemultiplevalues='true' sortnoaccent='true' sortnocase='true' showaslinks='false'
+ categorized='true' twisties='true'><font size='9pt' color='teal' style='bold'/><columnheader
+ title='Site'><font size='9pt'/></columnheader><datetimeformat show='datetime'
+ date='weekdaymonthdayyear' time='hourminutesecondhundredths' zone='never'
+ dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/><code event='value'><formula>@Name([O];FullName)</formula></code></column>
+<column sort='ascending' resort='ascending' hidedetailrows='false' listseparator='comma'
+ itemname='$4' width='20' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='true' sortnocase='true' showaslinks='false'><font size='9pt'/><columnheader
+ title='Online Meeting Place Name'><font size='9pt'/></columnheader><code
+ event='value'><formula>@Name([Abbreviate];@Subset(FullName; 1))</formula></code></column>
+<column resort='ascending' resort2='ascending' resort2column='0' hidedetailrows='false'
+ itemname='$8' width='3.6250' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='false' sortnocase='true' showaslinks='false' showasicons='true'><columnheader
+><font size='9pt' style='bold'/></columnheader><code event='value'><formula
+>@If( AVFlg="1";16 : 139; AudioFlg="1";16; 0)</formula></code></column>
+<column hidedetailrows='false' itemname='Description' width='37.1250' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='Description'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$5' width='16.2500'
+ resizable='false' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false' hidden='true'><font size='9pt'/><columnheader title='MailServer'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate]; MailServer)</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='MailFile' width='20'
+ resizable='false' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false' hidden='true'><font size='9pt'/><columnheader title='MailFile'><font
+ size='9pt'/></columnheader></column>
+<item name='$DesignerBuild' sign='true'><text>Build V603_05112003</text></item></view>
 

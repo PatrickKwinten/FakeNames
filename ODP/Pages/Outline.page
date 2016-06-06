@@ -1,46 +1,29 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='69a' unid='D4C618E68469C90E85256A450071F7DC' sequence='5049'>
+<page name='Outline' alias='Outline' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' publicaccess='false'
+ designerversion='7' language='en'>
+<noteinfo noteid='696' unid='D4C618E68469C90E85256A450071F7DC' sequence='5049'>
 <created><datetime dst='true'>20010507T164450,20-04</datetime></created>
-<modified><datetime dst='true'>20150507T110156,50+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114101,70+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,28-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110156,49+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110156,49+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114101,70+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114101,70+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144000,59-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='onClick' for='web'><javascript>_doClick('$Refresh', this, '_self')</javascript></code>
+<body><richtext>
+<pardef id='1' leftmargin='0.7500in'/>
+<par def='1'><embeddedoutline outline='AllViews' useappletinbrowser='true'
+ showtwistie='true' osstyletwistie='true' widthtype='fitwindow' heighttype='fitwindow'
+ height='3.8958in'><title><layout labelalign='topleft' labelhoffset='0' labelvoffset='0'/></title><toplevel
+><font size='9pt'/><eoutlinebackground selectedcolor='#b1b1d2' mouseovercolor='#d7d7e8'/><layout
+ labelalign='middleleft' heighttype='fixed' height='0.1972in' entryhoffset='0.0403in'
+ entryvoffset='0.0403in' imagealign='middleleft' labelhoffset='0.2563in' labelvoffset='0'/></toplevel><sublevel
+><font size='9pt'/><eoutlinebackground selectedcolor='#b1b1d2' mouseovercolor='#d7d7e8'/><layout
+ labelalign='middleleft' heighttype='fixed' height='0.1972in' entryhoffset='0.2000in'
+ entryvoffset='0.0403in' imagealign='middleleft' labelhoffset='0.2403in' labelvoffset='0'/></sublevel><border
+ outsidewidth='10px 10px 0px 0px'/></embeddedoutline></par></richtext></body>
 <item name='OriginalModTime' sign='true'><datetime dst='true'>20050601T120222,37-04</datetime></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-+f8gAAAAAAABAAQAJAAAAAAAAAAAAAAAAAAAAAAAAADc/zYA+f8kACBOAAAAAAAAAABfZG9DbGlj
-aygnJFJlZnJlc2gnLCB0aGlzLCAnX3NlbGYnKQBf/xAAAgAPAAcAAAAAAAAA
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>Outline</text><text>Outline</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>C34WQ</text></item>
-<item name='$DesignerVersion' sign='true'><text>7</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>Outline</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAADgEAAA4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJSEOAQNADgEDQAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAArf9x/ysA
-AAAAAAMAFgAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAQWxsVmlld3MAAK3/FQAbAAgAAAAJAEFsbFZp
-ZXdzAADq/z4AGwCJBAAAZADqFQEAAAkAAAAAAAAAAAEAAAoBAAAJAAAFAP///wABAAAAAAAAAAAA
-AAAAAAAAAAAAAOz/DgGoA4IAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA6ADoAHAE6ACABHAEA
-AAAAAQAACgEAAAoBAAAKAQAACgEAAAoBAAAKAAAAAAAAAABxAVoBAAADAAMABQD///8ABQD///8A
-BQD///8ABQD///8ABQD///8AAQCxsdIAAQDX1+gABQD///8AAQCxsdIAAQDX1+gAAQAAAAAAAQAA
-AAAAAQAAAAAAAAAAAAAAAAAAAAAAAwADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAEA
-AAAAAAEAAAAAAAEAAAAAAAEAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAKAAAAAAAKAAEAAAAAAAAAAAAAAAAAAACuAt4G
-AACuAIX/CAABAAAK
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>Outline</text></item></page>
 

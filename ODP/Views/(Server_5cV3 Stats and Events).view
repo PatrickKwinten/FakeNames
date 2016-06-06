@@ -1,93 +1,47 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='312' unid='3AEC40050B7202DD852562360064F1EA' sequence='5042'>
+<view name='(Server\V3 Stats and Events)' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
+ publicaccess='false' designerversion='6.5' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='beveled' opencollapsed='true' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='false' extendlastcolumn='true' showhierarchies='false'
+ unreadcolor='black' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
+ altrowcolor='#f8f8fc' totalscolor='blue' headerbgcolor='white' boldunreadrows='false'
+ evaluateactions='false' allownewdocuments='false' allowcustomizations='true'
+ hidemarginborder='false' marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
+<noteinfo noteid='30e' unid='3AEC40050B7202DD852562360064F1EA' sequence='5042'>
 <created><datetime dst='true'>19950913T142235,30-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,77+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,18+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095407,90-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,76+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,76+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,18+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,18+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144047,88-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>(Server\V3 Stats and Events)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' sign='true'><formula compiled='true'>
-SgQBAGgAEQBGb3JtTmFtZQCeW2sANmIlAPMBAAsAQUNMIE1vbml0b3IAAQATAFJlcGxpY2F0aW9u
-IE1vbml0b3IAHwIBAAUARXZlbnQAHwIBABEAU3RhdGlzdGljIE1vbml0b3IAHwIDAAIAdgADACQx
-MQAFAAQARm9ybQUAEQBGb3JtTmFtZQCeW2sANmIlAPN2AgEADABBQ0wgTW9uaXRvcnMBABQAUmVw
-bGljYXRpb24gTW9uaXRvcnMBAAYARXZlbnRzAQASAFN0YXRpc3RpYyBNb25pdG9yc3cFAwACACQA
-AgAkNQIABQAAAAAAAAAFAAoAU2VydmVyTmFtZbQCAwACAEoCAwAkMTAABQAEAEZvcm0BABEAU3Rh
-dGlzdGljIE1vbml0b3IACwKvABwCUAAFAAcARW5hYmxlZAABAAEAMAAKAq8AIgAWAAEACwBESVNB
-QkxFRCAtIACuAAwAAQAAAK4ABAC1AwUACwBEZXNjcmlwdGlvbgAiAq4AzAEFAAcARW5hYmxlZAAB
-AAEAMAALAq8ArgF0AQUACABTdGF0TmFtZQEAAQAgACICBQAIAE9wZXJhdG9yAQABAD4ACgIFAAgA
-T3BlcmF0b3IBAAwAR3JlYXRlciB0aGFuCgIdAq8AigAUAAEACQBleGNlZWRpbmcArgB2AAUACABP
-cGVyYXRvcgEAAQA8AAoCBQAIAE9wZXJhdG9yAQAJAGxlc3MgdGhhbgAKAh0CrwA6ABgAAQANAGZh
-bGxpbmcgYmVsb3cArgAiAAEAFgBiZWNvbWluZyBhIG11bHRpcGxlIG9mrgAEALUDrgAEALUDIgIB
-AAEAIAAiAgUABQBWYWx1ZQBWASICAQANACBnZW5lcmF0ZXMgYSAAIgIFAAgAc2V2ZXJpdHlYAQEA
-BQBGYXRhbAABAAcARmFpbHVyZQABAA4AV2FybmluZyAoaGlnaCkBAA0AV2FybmluZyAobG93KQAB
-AAYATm9ybWFsdwYiAgEAEQAgc3RhdGlzdGljIGV2ZW50LgAiAq4AOgAFAAgAU3RhdE5hbWUBAB8A
-IHN0YXRpc3RpYyBtb25pdG9yIGlzIERJU0FCTEVELgAiAq4ABAC1A64ABAC1AwMABQAoACMABQAD
-AAIAAwAJAAQAJDExJDUkMTAkQ29uZmxpY3QkUkVGAAQABAAAALgABQAEAEZvcm0BAAsAQUNMIE1v
-bml0b3IAAQATAFJlcGxpY2F0aW9uIE1vbml0b3IAHwIBAAUARXZlbnQAHwIBABEAU3RhdGlzdGlj
-IE1vbml0b3IAHwIKAgUABABGb3JtAQAMACBBQ0wgTW9uaXRvcgEAEQBTdGF0aXN0aWMgTW9uaXRv
-cgAfAgEAEwBSZXBsaWNhdGlvbiBNb25pdG9yAB8CAQAFAEV2ZW50AB8CCgIcAgMABwAYABIACUwx
-UzJTM1M0UzdTMTBTMTFT
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-GQACAABEAGYHAAADAABmAAMAAgAkMTEkNQ==
-</rawitemdata></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQADAAwAiUAAAFZDgwQDAAAA+AAAABAAAQAKCQAAAAAAAAAAAAICAAAAVkMBAAIABgAwAAAAhwAB
-AAAJAAAAAAAAAAAAAAIAACBWQwAAAwALAOACAAC6AQEAAAkAAAAAAAAAAAACAgAAACQxMfgAAQBo
-ABEARm9ybU5hbWUAnltrADZiJQDzAQALAEFDTCBNb25pdG9yAAEAEwBSZXBsaWNhdGlvbiBNb25p
-dG9yAB8CAQAFAEV2ZW50AB8CAQARAFN0YXRpc3RpYyBNb25pdG9yAB8CAwAHAA4ABwAJMlMzUzZT
-AAIAdgADACQxMQAFAAQARm9ybQUAEQBGb3JtTmFtZQCeW2sANmIlAPN2AgEADABBQ0wgTW9uaXRv
-cnMBABQAUmVwbGljYXRpb24gTW9uaXRvcnMBAAYARXZlbnRzAQASAFN0YXRpc3RpYyBNb25pdG9y
-c3cFAwAHAAoAAwAJMFIAJDVTZXJ2ZXIwAAIAJAACACQ1AgAFAAAAAAAAAAUACgBTZXJ2ZXJOYW1l
-tAIDAAcACgADAAk0UwAkMTBEZXNjcmlwdGlvbuACAgBKAgMAJDEwAAUABABGb3JtAQARAFN0YXRp
-c3RpYyBNb25pdG9yAAsCrwAcAlAABQAHAEVuYWJsZWQAAQABADAACgKvACIAFgABAAsARElTQUJM
-RUQgLSAArgAMAAEAAACuAAQAtQMFAAsARGVzY3JpcHRpb24AIgKuAMwBBQAHAEVuYWJsZWQAAQAB
-ADAACwKvAK4BdAEFAAgAU3RhdE5hbWUBAAEAIAAiAgUACABPcGVyYXRvcgEAAQA+AAoCBQAIAE9w
-ZXJhdG9yAQAMAEdyZWF0ZXIgdGhhbgoCHQKvAIoAFAABAAkAZXhjZWVkaW5nAK4AdgAFAAgAT3Bl
-cmF0b3IBAAEAPAAKAgUACABPcGVyYXRvcgEACQBsZXNzIHRoYW4ACgIdAq8AOgAYAAEADQBmYWxs
-aW5nIGJlbG93AK4AIgABABYAYmVjb21pbmcgYSBtdWx0aXBsZSBvZq4ABAC1A64ABAC1AyICAQAB
-ACAAIgIFAAUAVmFsdWUAVgEiAgEADQAgZ2VuZXJhdGVzIGEgACICBQAIAHNldmVyaXR5WAEBAAUA
-RmF0YWwAAQAHAEZhaWx1cmUAAQAOAFdhcm5pbmcgKGhpZ2gpAQANAFdhcm5pbmcgKGxvdykAAQAG
-AE5vcm1hbHcGIgIBABEAIHN0YXRpc3RpYyBldmVudC4AIgKuADoABQAIAFN0YXROYW1lAQAfACBz
-dGF0aXN0aWMgbW9uaXRvciBpcyBESVNBQkxFRC4AIgKuAAQAtQOuAAQAtQMDAAcAlACNAAk5UzEw
-UzEyUzE0UzE2UzE3UzIyUzIzUzI1UzI2UzI3UzI4UzI5UzMyUzMzUzM0UzM1UzM2UzM3UzM5UzQx
-UzQ0UzQ1UzQ2UzQ3UzQ4UzQ5UzUxUzUzUzU2UzU3UzU4UzU5UzYzUzY0UzY1UzY2UzczUzc1Uzc3
-Uzc5UzgxUzgzUzg0Uzg2Uzg3Uzg4UwAmAAEAAAABAQAJAQAACgEBBAoAAC8ArSsBAAEAAQAAAAAA
-AAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA////AAEA+Pj8AAEAAAAAAAAAAAAA
-AAAAAQD///8AAQD///8AAAABAAAAAAABAAAA/wAAAAAAAAAAAAgAAAAAAAEA
-</rawitemdata></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_V3_Stats_and_Events")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6.5</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQAAAAAAAQAAAAAAAAAAAAAACAAAAHn/bAABALGx0gABAAAAAAABAAAAAAABALGx0gAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/ygAAAAFAAUAnwAAAA0AAAAAAAAAX0VkaXQgTW9uaXRv
-ct0BAAIKvv8oAAAABQAAAJwAAAAOAAAAAAAAAFNlbmQgRG9jdV9tZW50AgADCr7/JgAAAAUAAACc
-AAAACwAAAAAAAABDYXRlZ29yaV96ZUsDAE58vv8iAAAABQAAAJwAAAAIAAAAAAAAAF9Gb3J3YXJk
-BAAECr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSB0byBGb2xkZXIuLi4FAD18vv8wAAAABQAA
-AJ0BAAAWAAAAAAAAAF9SZW1vdmUgZnJvbSBGb2xkZXIuLi4GAD58
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQAAAAAAAQAAAAAAAAAAAAAACAAAAL7/KAAAAAUABQCfAAAADQAAAAAAAABfRWRpdCBN
-b25pdG9y3QEAAgq+/ygAAAAFAAAAnAAAAA4AAAAAAAAAU2VuZCBEb2N1X21lbnQCAAMKvv8mAAAA
-BQAAAJwAAAALAAAAAAAAAENhdGVnb3JpX3plSwMATny+/yIAAAAFAAAAnAAAAAgAAAAAAAAAX0Zv
-cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIHRvIEZvbGRlci4uLgUAPXy+/zAA
-AAAFAAAAnQEAABYAAAAAAAAAX1JlbW92ZSBmcm9tIEZvbGRlci4uLgYAPnw=
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Form = "ACL Monitor" :"Replication Monitor": "Event":"Statistic Monitor" &amp; Form=" ACL Monitor":"Statistic Monitor":"Replication Monitor":"Event"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_V3_Stats_and_Events")</formula></code>
+<actionbar borderstyle='none' bgcolor='#b1b1d2' bordercolor='black'>
+<actionbuttonstyle bgcolor='#b1b1d2'/><border style='solid' width='0px 0px 1px'/>
+<action title='_Edit Monitor' icon='5' hide='previewedit' systemcommand='edit'/>
+<action title='Send Docu_ment' showinmenu='false' showinbar='false' hide='previewedit'
+ systemcommand='send'/>
+<action title='Categori_ze' showinmenu='false' showinbar='false' hide='previewedit'
+ systemcommand='categorize'/>
+<action title='_Forward' showinmenu='false' showinbar='false' hide='previewedit'
+ systemcommand='forward'/>
+<action title='_Move to Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove from Folder...' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$11' width='2' resizable='false'
+ separatemultiplevalues='true' sortnoaccent='true' sortnocase='true' showaslinks='false'
+ categorized='true' twisties='true'><font size='9pt' color='navy'/><columnheader
+><font size='9pt'/></columnheader><code event='value'><formula>FormName:= "ACL Monitor" :"Replication Monitor": "Event":"Statistic Monitor";
+@Select(@Member(Form;FormName);"ACL Monitors";"Replication Monitors";"Events";"Statistic Monitors")</formula></code></column>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='$5'
+ width='16.8750' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false'><font size='9pt'/><columnheader title='Server'><font
+ size='9pt'/></columnheader><datetimeformat legacy='true' show='date' date='yearmonthday'
+ time='hourminutesecond' zone='never'/><code event='value'><formula>@Name([Abbreviate]; ServerName)</formula></code></column>
+<column hidedetailrows='false' itemname='$10' width='55.2500' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='Description'><font size='9pt'/></columnheader><code
+ event='value'><formula>@If(Form!="Statistic Monitor";@If(Enabled = "0"; "DISABLED - "; "") + Description;@If(Enabled != "0"; StatName + " " + @If(Operator = "&gt;" | Operator = "Greater than"; "exceeding"; @If(Operator = "&lt;" | Operator = "less than"; "falling below"; "becoming a multiple of")) + " " + @Text(Value) + " generates a " + @Select(@TextToNumber(severity); "Fatal"; "Failure"; "Warning (high)"; "Warning (low)"; "Normal") + " statistic event."; StatName + " statistic monitor is DISABLED."))</formula></code></column></view>
 

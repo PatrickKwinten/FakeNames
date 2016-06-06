@@ -1,76 +1,50 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='3de' unid='F97935FE994A13E4052568B2005880DA' sequence='5062'>
+<view name='Server\Directory Servers' alias=' Directories' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='false'
+ allowdocselection='true' publicaccess='false' designerversion='6' language='en'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='false' showresponsehierarchy='true' showmargin='true' shrinkrows='true'
+ extendlastcolumn='true' showhierarchies='false' unreadcolor='black' rowlinecount='2'
+ headerlinecount='1' rowspacing='1.25' haslinkcolumn='true' bgcolor='white'
+ altrowcolor='#f8f8fc' totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false'
+ evaluateactions='false' allownewdocuments='false' allowcustomizations='true'
+ hidemarginborder='false' marginwidth='0px' marginbgcolor='white' uniquekeys='false'
+ initialbuildrestricted='false' noemptycategories='true' formatnoteid='85255E01001356A8852554C200753106'>
+<noteinfo noteid='3da' unid='F97935FE994A13E4052568B2005880DA' sequence='5062'>
 <created><datetime>20000330T110641,54-05</datetime></created>
-<modified><datetime dst='true'>20150507T110152,79+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,20+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,00-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,78+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,78+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,20+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,20+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140241,52-04</datetime><datetime
 >20100304T144051,65-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$FormatNote' summary='true' sign='true'>
-<rawitemdata type='4'>
-AQCoVhMAAV4lhQYxdQDCVCWF
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>Server\Directory Servers| Directories</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-oAECAFYAAwAkMTgABQAKAENmZ05BQm9ubHkBAAEAMAAKAq8AMgAYAAEADgBQcmltYXJ5IERvbWlu
-b64AGgABAA0AQ29uZmlndXJhdGlvbgCuAAQAtQMDAAIAJgADACQxOQACAAUAAAAAAAAABQAKAFNl
-cnZlck5hbWW0AgMAAgA+AAMAJDIwAAUACABOb0NudERpcgEAAQAxAAoCrwAcAA4AAQADAFllcwCu
-AA4AAQACAE5vrgAEALUDAwACAE4AAwAkMjEABQARAE1hc3RlckFkZHJlc3NCb29rAGgBrwAoABwA
-BQARAE1hc3RlckFkZHJlc3NCb29rAK4ADAABAAAArgAEALUDAwAFAC4AKQAGAAMAAwADAAMACQAE
-ACQxOCQxOSQyMCQyMSRDb25mbGljdCRSRUYABAAEAAAAZAAFAAQAVHlwZQEABgBTZXJ2ZXIKAgUA
-CABOb0NudERpcmgBrwA4AC4ABQAIAE5vQ250RGlyAQABADEACgKvABIACAArAK4ACgAqAK4ABAC1
-A64ACgArAK4ABAC1AxwCAwA=
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-JAADAABECWYHAAADAIFmAAMAAwCBZgAGAAMAJDE4JDE5JDIw
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQAEABYAiEgAAFZDBwQDAA4AZAAAAHAAAQAACQAhAAAAAAAAAAICAAAAVkMFAAMACwA0AAAAcAAB
-AAAJACAAAAAAAAAAAgIAAABWQwUAAwAOAEwAAABQAAEAAAkAIAAAAAAAAAACAgAAAFZDAAADACIA
-XAAAAMAAAQAACQAgAAAAAAAAAAICAAAAJDE4RGlyZWN0b3J5IFR5cGVkAAIAVgADACQxOAAFAAoA
-Q2ZnTkFCb25seQEAAQAwAAoCrwAyABgAAQAOAFByaW1hcnkgRG9taW5vrgAaAAEADQBDb25maWd1
-cmF0aW9uAK4ABAC1AwMABwAMAAUACTNTNFMAJDE5U2VydmVyIE5hbWU0AAIAJgADACQxOQACAAUA
-AAAAAAAABQAKAFNlcnZlck5hbWW0AgMABwAMAAUACTBTMEUAJDIwUmVtb3RlIFByaW1hcnlMAAIA
-PgADACQyMAAFAAgATm9DbnREaXIBAAEAMQAKAq8AHAAOAAEAAwBZZXMArgAOAAEAAgBOb64ABAC1
-AwMABwAMAAUACTNTNFMAJDIxRGlyZWN0b3J5IEFzc2lzdGFuY2UgRGF0YWJhc2UgTmFtZVwAAgBO
-AAMAJDIxAAUAEQBNYXN0ZXJBZGRyZXNzQm9vawBoAa8AKAAcAAUAEQBNYXN0ZXJBZGRyZXNzQm9v
-awCuAAwAAQAAAK4ABAC1AwMABwAMAAUACTBTMEUAJgABAAAAAQEACQEAAAoBAQQKAAAvAK0rAgEB
-AAEBAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAQAQAAAALAD//wAAAAAAAAAAAAAAAAAA
-V0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAA
-AAAAAAAAAAAAAAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAA
-AAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8AAQD4+PwAAQAAAAAAAAAAAAAAAAAB
-AP///wABALGx0gAAAAEAAAAAAAEAAAD/AAAAAAAAAAAA9v8sAAAAAAADABMACgAAAAAAAAAAAAAA
-AAAAAAAAAAAAAHR3aXN0eS5naWYIAAAAAAABAA==
-</rawitemdata></item>
-<item name='$FormFormula' summary='true' sign='true'><formula>@If(@TextToNumber(@Version) &lt; 159; "(46Person)";Form)</formula></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Directories")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$WebFlags' sign='true'><text>YS</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAACAHn/bAABALGx0gABAAAAAAABAAAAAAABAMDAwAAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/2IAAAABAAAAniERAAYAAAAhAAAAU2VhcmNoRgAHAB4A
-GABXZWIgb25seSAtIHVzZWQgaW4gVmlld3MHAAoAAwAJMVMAAAASAAIAkBcAAAAAAADtAQMABwAK
-AAMACTBSAPb/LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABidG5TZWFyY2guZ2lmPw==
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAACAL7/YgAAAAEAAACeIREABgAAACEAAABTZWFyY2hG
-AAcAHgAYAFdlYiBvbmx5IC0gdXNlZCBpbiBWaWV3cwcACgADAAkxUwAAABIAAgCQFwAAAAAAAO0B
-AwAHAAoAAwAJMFIA
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Server" &amp; @If(@IsAvailable(NoCntDir); @If(NoCntDir = "1"; @True; @False); @True)</formula></code><code
+ event='form'><formula>@If(@TextToNumber(@Version) &lt; 159; "(46Person)";Form)</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Directories")</formula></code>
+<actionbar useappletinbrowser='true' bgcolor='#b1b1d2' bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<sharedactionref id='33'>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action></sharedactionref></actionbar>
+<column sort='descending' hidedetailrows='false' itemname='$18' width='14'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='true' sortnocase='true'
+ showaslinks='true' categorized='true' twisties='true'><font size='9pt'/><columnheader
+ title='Directory Type'><font size='9pt'/></columnheader><code event='value'><formula
+>@If(CfgNABonly = "0";"Primary Domino";"Configuration")</formula></code><twistieimage
+><imageref database='0000000000000000' name='twisty.gif'/></twistieimage></column>
+<column sort='descending' hidedetailrows='false' itemname='$19' width='14'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Server Name'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate];ServerName)</formula></code></column>
+<column sort='descending' hidedetailrows='false' itemname='$20' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Remote Primary'><font
+ size='9pt'/></columnheader><code event='value'><formula>@If(NoCntDir = "1";"Yes";"No")</formula></code></column>
+<column hidedetailrows='false' itemname='$21' width='24' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='true'><font
+ size='9pt'/><columnheader title='Directory Assistance Database Name'><font
+ size='9pt'/></columnheader><code event='value'><formula>@If(@IsAvailable(MasterAddressBook);MasterAddressBook;"")</formula></code></column></view>
 

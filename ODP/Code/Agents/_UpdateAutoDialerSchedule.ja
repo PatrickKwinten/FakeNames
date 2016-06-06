@@ -1,154 +1,172 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='276' unid='B669ED86A4317F66052569B5006B4907' sequence='5010'>
+<agent name='_UpdateAutoDialerSchedule' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' hide='v3' publicaccess='false'
+ designerversion='8' language='en' restrictions='unrestricted'>
+<noteinfo noteid='272' unid='B669ED86A4317F66052569B5006B4907' sequence='5010'>
 <created><datetime>20001214T143150,47-05</datetime></created>
-<modified><datetime dst='true'>20150507T110151,07+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114056,54+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,84-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,06+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,06+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114056,54+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114056,54+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20011005T162643,26-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FILE' summary='true' sign='true' seal='true'><object><file hosttype='msdos'
- compression='none' flags='sign' encoding='none' name='%%source%%.jar' size='1673'>
-<created><datetime dst='true'>20000510T155328,60-04</datetime></created>
-<modified><datetime>20070315T125639,30-05</datetime></modified><filedata>
-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
-BQYAAAAAAgACAHcAAAD8BQAAAAA=
-</filedata></file></object></item>
-<item name='$FILE' summary='true' sign='true' seal='true'><object><file hosttype='msdos'
- compression='none' flags='sign' encoding='none' name='%%object%%.jar' size='2545'>
-<created><datetime>20070315T125639,30-05</datetime></created>
-<modified><datetime>20070315T125639,31-05</datetime></modified><filedata>
-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
-</filedata></file></object></item>
-<item name='$TITLE' sign='true'><text>_UpdateAutoDialerSchedule</text></item>
-<item name='$AssistType' sign='true'><number>65427</number></item>
-<item name='$AssistLastRun' sign='true'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$AssistDocCount' sign='true'><number>0</number></item>
-<item name='$FlagsExt' sign='true'><text/></item>
-<item name='$AssistFlags' sign='true'><text>Es</text></item>
-<item name='$AssistTrigger' sign='true'><text>4</text></item>
-<item name='$AssistInfo' sign='true'>
-<rawitemdata type='11'>
-AQAEAAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</rawitemdata></item>
-<item name='$AssistQuery' sign='true'>
-<rawitemdata type='f'>
-gQYAAAAA
-</rawitemdata></item>
-<item name='$AssistAction' sign='true'>
-<rawitemdata type='10'>
-gQKT/1MADwATAB8AAAAAAAAAAABKYXZhQWdlbnQuY2xhc3NkOlxsb3R1c1xub3Rlc1xkYXRhJSVz
-b3VyY2UlJS5qYXIAJSVvYmplY3QlJS5qYXIAAAA=
-</rawitemdata></item>
-<item name='$AssistAction_Ex' sign='true'>
-<rawitemdata type='14'>
-gQI=
-</rawitemdata></item>
-<item name='$Restricted' sign='true'><number>0</number></item>
-<item name='$Flags'><text>fJj3</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$AssistRunInfo' summary='true'>
-<rawitemdata type='3'>
-BgAAAgAACAByAgAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAALZJiAJ9yJYW2LXAArnAlhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqq
-</rawitemdata></item>
-<item name='$AssistVersion'><datetime dst='true'>20130909T095355,08-04</datetime></item>
-<item name='$POID'><datetime dst='true'>20130909T095403,84-04</datetime></item></note>
+<designchange><datetime dst='true'>20130909T095355,08-04</datetime></designchange>
+<trigger type='actionsmenu'/>
+<documentset type='modified'/><code event='action'><javaproject class='JavaAgent.class'
+ codepath='d:\lotus\notes\data'><java name='DTParser.java'>import java.util.Vector;
+import java.util.Enumeration;
+
+public class DTParser {
+
+	private int posHyphen;
+	private int posSemicolon;
+	
+	DTParser(int iHyphen, int iSemicolon)
+	{
+		setPosHyphen(iHyphen);
+		setPosSemicolon(iSemicolon);
+	}
+	
+	private void setPosHyphen(int iHyphen)
+	{
+		posHyphen = iHyphen;
+	}
+	
+	private void setPosSemicolon(int iSemicolon)
+	{
+		posSemicolon = iSemicolon;
+	}
+
+	public void resetPos(int iHyphen, int iSemicolon)
+	{
+		setPosHyphen(iHyphen);
+		setPosSemicolon(iSemicolon);
+	}
+	
+	public boolean isDateTimeRange(String sDateTime)
+	{
+		posHyphen = sDateTime.indexOf("-", posHyphen);
+		posSemicolon = sDateTime.indexOf(";", posSemicolon);
+		
+		// Encountered an individual DateTime entry
+		if ((posSemicolon &lt; posHyphen) &amp;&amp; !(posSemicolon == -1))
+		{
+			posHyphen = 0;
+			posSemicolon++;
+			return false;
+		}
+		
+		// Encountered a DateTime range
+		if ((posHyphen &lt; posSemicolon) &amp;&amp; !(posHyphen == -1))
+		{
+			posHyphen++;
+			posSemicolon++;
+			return true;
+		}
+		
+		// Encountered a DateTime range - last in the list
+		if (!(posHyphen == -1) &amp;&amp; (posSemicolon == -1))
+		{
+			return true;
+		}
+		
+		// Encountered an individual DateTime entry - either no DateTime ranges follow this entry or this entry is the last in the list of DateTimes
+		if (posHyphen == -1)
+		{
+			return false;
+		}
+		return false;
+	}
+}
+
+</java><java name='JavaAgent.java'>import lotus.domino.*;
+import java.util.Vector;
+import java.util.Enumeration;
+
+public class JavaAgent extends AgentBase {
+
+	public void NotesMain() {
+
+		try {
+			Session session = getSession();
+			AgentContext agentContext = session.getAgentContext();
+
+			Database currentDb = agentContext.getCurrentDatabase();
+			DateTime curDate = session.createDateTime("01/01/1990");
+			DocumentCollection dcCurrentDoc = agentContext.unprocessedSearch("@Contains(UseAutoDlr; \"1\")", curDate, 0);
+			Document currentDoc = dcCurrentDoc.getFirstDocument();
+			while (currentDoc != null)
+			{
+				Vector vItemValue = currentDoc.getItemValue("UseAutoDlr");
+				if (vItemValue.toString().equals("[1]"))
+				{
+					Vector vSchedule = new Vector();
+					Vector vNewSchedule = new Vector();
+					Vector vDays = new Vector();
+					Vector vInterval = new Vector();
+					DTParser dtpSchedule = new DTParser(0,0);
+					int iVectorCount = 0;
+					vItemValue = currentDoc.getItemValue("AutoDlrConnName");
+					String sAutoDialerConnName = vItemValue.toString();
+					sAutoDialerConnName = sAutoDialerConnName.substring(1, sAutoDialerConnName.length()-1);
+					if (!sAutoDialerConnName.equals(""))
+					{
+						Enumeration enumItems;
+						DateTime dtScheduleItem;
+						Item iSchedule;
+						String sSchedule;
+						Integer iZero = new Integer(0);
+							
+						vSchedule = currentDoc.getItemValue("Schedule");
+						vInterval.addElement(iZero);
+						vDays = currentDoc.getItemValue("WeekDays");
+						iSchedule = currentDoc.getFirstItem("Schedule");
+						sSchedule = iSchedule.getText();
+						
+						DocumentCollection dcSearchResults = currentDb.search("@Contains(AutoDlrConnName; \""+sAutoDialerConnName+"\")");
+						Document foundDoc = dcSearchResults.getFirstDocument();
+						while (foundDoc != null)
+						{
+							if (foundDoc.getItemValue("AutoDlrTsk").toString().equals("[1]"))
+							{	
+								int decrementTime = (((Double)((foundDoc.getItemValue("AutoDlrConnName_1")).firstElement())).intValue() *-1);
+								dtpSchedule.resetPos(0,0);
+								
+								for (enumItems = vSchedule.elements(); enumItems.hasMoreElements();)
+								{
+									dtScheduleItem = (DateTime)enumItems.nextElement();
+									dtScheduleItem.adjustMinute(decrementTime);
+									if (dtpSchedule.isDateTimeRange(sSchedule) &amp;&amp; enumItems.hasMoreElements())
+									{
+										dtScheduleItem = (DateTime)enumItems.nextElement();
+									}
+									else
+									{
+										vNewSchedule.addElement(dtScheduleItem);
+									}
+								}
+								// String sTemp = dtpSchedule.assembleDTString(vNewSchedule);
+								foundDoc.replaceItemValue("Schedule", vNewSchedule);
+								foundDoc.replaceItemValue("Interval", vInterval);
+								foundDoc.replaceItemValue("WeekDays", vDays);
+								foundDoc.save();
+							}							
+							foundDoc = dcSearchResults.getNextDocument();
+						}
+					}
+				}
+				currentDoc = dcCurrentDoc.getNextDocument();
+			}
+
+		} catch(Exception e) {
+			System.out.println("Exception: "+e+"  "+e.getMessage());
+			e.printStackTrace();
+		}
+	}
+}
+</java></javaproject></code>
+<rundata processeddocs='0' exitcode='0'>
+<agentmodified><datetime>20070315T125639,49-05</datetime></agentmodified></rundata>
+<item name='$POID'><datetime dst='true'>20130909T095403,84-04</datetime></item></agent>
 

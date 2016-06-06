@@ -1,153 +1,110 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='2de' unid='852560B300643B9A852556C300042C1A' sequence='5088'>
+<view name='Server\Connections ' alias='Connections' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
+ allowdocselection='true' publicaccess='false' designerversion='8' language='en'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='true' showresponsehierarchy='true' showmargin='true' shrinkrows='false'
+ extendlastcolumn='true' showhierarchies='false' unreadcolor='black' rowlinecount='1'
+ headerlinecount='1' rowspacing='1' haslinkcolumn='true' bgcolor='white' altrowcolor='#f8f8fc'
+ totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' initialbuildrestricted='false'
+ noemptycategories='true'>
+<noteinfo noteid='2da' unid='852560B300643B9A852556C300042C1A' sequence='5088'>
 <created><datetime dst='true'>19870903T204534,34-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,51+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114056,92+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095404,20-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,50+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,50+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114056,92+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114056,92+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144051,25-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$Author' sign='true'><text>Greg Pflaum</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>Server\Connections |Connections</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' sign='true'><formula compiled='true'>
-zgUCACIAAwAkMjIAAgAFAAAAAAAAAAUABgBTb3VyY2W0AgMAAgAoAAMAJDIzAAIABQAAAAAAAAAF
-AAsARGVzdGluYXRpb24AtAIDAAIAOgEDACQzNQAFAA4AQ29ubmVjdGlvblR5cGUBAAAACgKvABQB
-DAABAAEAPwCuAAgBBQAOAENvbm5lY3Rpb25UeXBlAQABAGIACgKvAOoAEgABAAgAU2FtZXRpbWWu
-ANgABQAOAENvbm5lY3Rpb25UeXBlAQABAGEACgKvALoADgABAAQATk5UUK4ArAAFAA4AQ29ubmVj
-dGlvblR5cGVYAQAAAAAAAAAA8D8iAgEADQBMb2NhbCBOZXR3b3JrAAEABQBNb2RlbQABAA8AUGFz
-c3RocnUgU2VydmVyAAEABQBYLjQwMAABAAQAU01UUAEAEgBSZW1vdGUgTEFOIFNlcnZpY2UBAAQA
-WC4yNQEABwBjYzpNYWlsAAEAAwBTTkEAAQAKAEh1bnQgR3JvdXB3C64ABAC1BwMAAgA8AAIAJDUF
-AAcARW5hYmxlZAABAAEAMAAKAgEADAAtLURJU0FCTEVELS0FAAgAU2NoZWR1bGVKAwMAAgBAAAMA
-JDIxAAUABwBFbmFibGVkAAEAAQAwAAoCrwAeAAoAAQAAAK4AFAAFAAgASW50ZXJ2YWyuAAQAtQMD
-AAIA2AADACQzMAAFAAcARW5hYmxlZAABAAEAMAAKAq8AtgAKAAEAAACuAKwABQAFAFRhc2tzAAEA
-CwBSZXBsaWNhdGlvbgABAAwATWFpbCBSb3V0aW5nHwIBABEAWDQwMCBNYWlsIFJvdXRpbmcAHwIB
-ABEAU01UUCBNYWlsIFJvdXRpbmcAHwIBAA4AY2NNYWlsIFJvdXRpbmcfAgEAAwBSZXAAAQAEAE1h
-aWwfAgEABABYNDAwHwIBAAQAU01UUB8CAQAGAGNjTWFpbB8CjQOuAAQAtQMDAAIAvgADACQyNAAB
-AAsAUmVwbGljYXRpb24ABQAFAFRhc2tzAHQCrwCUAIgABQALAFJlcFByaW9yaXR5AAEAAQAyAAoC
-rwBoAAwAAQABAEgArgBcAAUACwBSZXBQcmlvcml0eQABAAEAMQAKAq8AQAAOAAEAAwBIJk0ArgAy
-AAUACwBSZXBQcmlvcml0eQBoAa8AHAAQAAEABQBIJk0mTACuAAwAAQAAAK4ABAC1B64ADAABAAAA
-rgAEALUDAwACAGIBAwAkMjgABQAOAENvbm5lY3Rpb25UeXBlAQABADEACgKvADoBcgAFAAcAQ291
-bnRyeQBWAQUACABBcmVhQ29kZQEAAAALAq8AMAAkAAEAAQAoAAUACABBcmVhQ29kZVYBIgIBAAEA
-KQAiAq4ADAABAAAArgAEALUDIgIFABIAUGhvbmVOdW1iZXJEaXNwbGF5IgKuAMgABQAOAENvbm5l
-Y3Rpb25UeXBlAQABADIACgKvAKoAJAACAAUAAAAAAAAABQAOAFBhc3N0aHJ1U2VydmVytAKuAIYA
-BQAOAENvbm5lY3Rpb25UeXBlAQABADMACgKvAGgAFgAFAAsAUkxBTlRhZ1RleHQArgBSAAUADgBD
-b25uZWN0aW9uVHlwZQEAAQA3AAoCrwA0ABwABQASAENDTUNEaXNwbGF5QWRkcmVzc64AGAAFAAsA
-UGhvbmVOdW1iZXIArgAEALUJAwAFAEoARgALAAMAAwADAAgAAgADAAMAAwADAAkABAAkMjIkMjMk
-MzVQb3J0TmFtZSQ1JDIxJDMwJDI0JDI4JENvbmZsaWN0JFJFRgQABAAAAIYABQAEAFR5cGUBAAoA
-Q29ubmVjdGlvbgoCBQAEAEZvcm0BABIATmV0d29yayBDb25uZWN0aW9uAQAGAHJlbW90ZR8CAQAF
-AGxvY2FsAB8CAQAXAFJlbW90ZSBDb25uZWN0aW9uIChYMjUpAB8CAQAKAENvbm5lY3Rpb24fAgoC
-HAIDAA==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-KQADAABEAGYHAAADAABmAAMAAwABZgAGAAgAJDIyJDIzUG9ydE5hbWU=
-</rawitemdata></item>
-<item name='$FormFormula' summary='true' sign='true'><formula>@If(@BrowserInfo("BrowserType" )!="Notes" &amp; ConnectionType="5";"(wEncrypted)";"Connection")</formula></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Connections")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAJACQAiUAAAFZDAwQDAAQALgAAACgAAQAKCQAAAAAAAAAAAAACAAAgVkMBAAMAAgA0AAAAfAAB
-AAAJACACAAAAAAAAAAIAACBWQwAAAwAEAGoBAABMAAEAAAkAIAAAAAAAAAACAgAAAFZDBQAIAAQA
-AAAAADQAAQAACQAgAgAAAAAAAAACAAAgVkMAAAIACAA+AAAAVgABAAAJACACAAAAAgEAAQEAACBW
-QwAAAwAIAFIAAAAsAAEAAAkCIAAAAAAAAAAAAgAAIFZDAAADAAUA/gAAADMAAQAACQAgAAAAAAAA
-AAICAAAgVkMAAAMACgDgAAAAOAABAAAJACAAAAAAAAAAAgIAACBWQwAAAwANAHgBAACdAAEAAAkA
-IAAAAAAAAAAAAgAAICQyMkZyb20uAAIAIgADACQyMgACAAUAAAAAAAAABQAGAFNvdXJjZbQCAwAH
-AAoAAwAJNFMAJDIzVG80AAIAKAADACQyMwACAAUAAAAAAAAABQALAERlc3RpbmF0aW9uALQCAwAH
-AAoAAwAJNFMAJDM1VHlwZWoBAgA6AQMAJDM1AAUADgBDb25uZWN0aW9uVHlwZQEAAAAKAq8AFAEM
-AAEAAQA/AK4ACAEFAA4AQ29ubmVjdGlvblR5cGUBAAEAYgAKAq8A6gASAAEACABTYW1ldGltZa4A
-2AAFAA4AQ29ubmVjdGlvblR5cGUBAAEAYQAKAq8AugAOAAEABABOTlRQrgCsAAUADgBDb25uZWN0
-aW9uVHlwZVgBAAAAAAAAAADwPyICAQANAExvY2FsIE5ldHdvcmsAAQAFAE1vZGVtAAEADwBQYXNz
-dGhydSBTZXJ2ZXIAAQAFAFguNDAwAAEABABTTVRQAQASAFJlbW90ZSBMQU4gU2VydmljZQEABABY
-LjI1AQAHAGNjOk1haWwAAQADAFNOQQABAAoASHVudCBHcm91cHcLrgAEALUHAwAHAC4AJwAJMlJU
-NlJUVDhSVDEyUlRUMTRSVDE4UlRUMjBSVDM1UzM3UzQ5UlQAUG9ydE5hbWVQb3J0JDVTY2hlZHVs
-ZT4AAgA8AAIAJDUFAAcARW5hYmxlZAABAAEAMAAKAgEADAAtLURJU0FCTEVELS0FAAgAU2NoZWR1
-bGVKAwMAJDIxSW50ZXJ2YWxSAAIAQAADACQyMQAFAAcARW5hYmxlZAABAAEAMAAKAq8AHgAKAAEA
-AACuABQABQAIAEludGVydmFsrgAEALUDAwAHABAACQAJM1M0UzZTOFMAJDMwVGFza3P+AAIA2AAD
-ACQzMAAFAAcARW5hYmxlZAABAAEAMAAKAq8AtgAKAAEAAACuAKwABQAFAFRhc2tzAAEACwBSZXBs
-aWNhdGlvbgABAAwATWFpbCBSb3V0aW5nHwIBABEAWDQwMCBNYWlsIFJvdXRpbmcAHwIBABEAU01U
-UCBNYWlsIFJvdXRpbmcAHwIBAA4AY2NNYWlsIFJvdXRpbmcfAgEAAwBSZXAAAQAEAE1haWwfAgEA
-BABYNDAwHwIBAAQAU01UUB8CAQAGAGNjTWFpbB8CjQOuAAQAtQMDAAcAJAAeAAkzUzRTNlM4UzEy
-UzEzUzE0UzIwUjIyUzIzUzI0UyQyNFByaW9yaXRpZXPgAAIAvgADACQyNAABAAsAUmVwbGljYXRp
-b24ABQAFAFRhc2tzAHQCrwCUAIgABQALAFJlcFByaW9yaXR5AAEAAQAyAAoCrwBoAAwAAQABAEgA
-rgBcAAUACwBSZXBQcmlvcml0eQABAAEAMQAKAq8AQAAOAAEAAwBIJk0ArgAyAAUACwBSZXBQcmlv
-cml0eQBoAa8AHAAQAAEABQBIJk0mTACuAAwAAQAAAK4ABAC1B64ADAABAAAArgAEALUDAwAHACAA
-GQAJMTJTMTNTMTVTMTdTMThTMTlTMjFTMjNTACQyOENvbm5lY3QgVXNpbmd4AQIAYgEDACQyOAAF
-AA4AQ29ubmVjdGlvblR5cGUBAAEAMQAKAq8AOgFyAAUABwBDb3VudHJ5AFYBBQAIAEFyZWFDb2Rl
-AQAAAAsCrwAwACQAAQABACgABQAIAEFyZWFDb2RlVgEiAgEAAQApACICrgAMAAEAAACuAAQAtQMi
-AgUAEgBQaG9uZU51bWJlckRpc3BsYXkiAq4AyAAFAA4AQ29ubmVjdGlvblR5cGUBAAEAMgAKAq8A
-qgAkAAIABQAAAAAAAAAFAA4AUGFzc3RocnVTZXJ2ZXK0Aq4AhgAFAA4AQ29ubmVjdGlvblR5cGUB
-AAEAMwAKAq8AaAAWAAUACwBSTEFOVGFnVGV4dACuAFIABQAOAENvbm5lY3Rpb25UeXBlAQABADcA
-CgKvADQAHAAFABIAQ0NNQ0Rpc3BsYXlBZGRyZXNzrgAYAAUACwBQaG9uZU51bWJlcgCuAAQAtQkD
-AAcAFAANAAkzMVIzNVMzN1M0MlMAJgABAAAAAQEACQEAAAoBAQQKAAAvAK0rAQABAAEBAAAAAAAA
-AABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAQAQAAAALAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD/
-/wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAA
-AAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wABAPj4/AABAAAAAAAAAAAAAAAAAAEA////AAEA
-sbHSAAAAAQAAAAAAAQAAAP8AAQAAAAAAAAD2/ywAAAAAAAMAEwAKAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAdHdpc3R5LmdpZggAAAAAAAEA
-</rawitemdata></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-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
-b3ZlIEZyb20gRm9sZGVySwwAPnw=
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAL7/TgEAAAEAAACeQRAADgAAAAAAAABBZGQgQ29u
-bmVjdGlvbioBAQAkAA0AQ3VycmVudFNlcnZlcgCLAAAAAAAAAAAA8D9rAgMABwAMAAUACTBTMEUA
-AADmAAUADQBDdXJyZW50U2VydmVyAAEAAAAKAq8AxgAgAAIA6AMAAAAAAAABAAoAQ29ubmVjdGlv
-brECrgCmAAEADABbTmV0Q3JlYXRvcl3nAHQCrwCOACAAAgDoAwAAAAAAAAEACgBDb25uZWN0aW9u
-sQKuAG4AAgANAAAAAAAAAAEADgBOb3QgQXV0aG9yaXplZAEARABZb3UgYXJlIG5vdCBhdXRob3Jp
-emVkIHRvIGFkZCBDb25uZWN0aW9uIGRvY3VtZW50cyB0byB0aGlzIGRhdGFiYXNlLrADrgAEALUF
-AwAHABIACwAJMFI2UjEwUzEzUgC+/yQAAAAHAAAAniEQAA4AAAAAAAAAQWRkIENvbm5lY3Rpb26+
-/0YAAAABAAAAnkAQAA8AAAAAAAAARWRpdCBDb25uZWN0aW9uSyAAAAASAAIA6AcAAAAAAADtAQMA
-BwAMAAUACTBTMEUAvv9IAAAAAQAAAJ4BEAARAAAAAAAAAERlbGV0ZSBDb25uZWN0aW9u3SAAAAAS
-AAIATB0AAAAAAACxAQMABwAMAAUACTBTMEUAvv9CAAAAAQAAAJ4hEAALAAAAHQAAAEVtcHR5IFRy
-YXNoSyAAAAASAAIA/QcAAAAAAADtAQMABwAMAAUACTBTMEUAvv9iAAAAAQAAAJ4hEAAGAAAAIQAA
-AFNlYXJjaEYABwAeABgAV2ViIG9ubHkgLSB1c2VkIGluIFZpZXdzBwAKAAMACTFTAAAAEgACAJAX
-AAAAAAAA7QEDAAcACgADAAkwUgC+/yYAAAAFAAAAnAEAAAsAAAAAAAAAQ2F0ZWdvcmlfemVLBwBO
-fL7/KAAAAAUAAACdAQAADgAAAAAAAABfRWRpdCBEb2N1bWVudAgAAgq+/ygAAAAFAAAAnQEAAA0A
-AAAAAAAAU2VuZCBEb2N1bWVudN0JAAMKvv8iAAAABQAAAJ0BAAAIAAAAAAAAAF9Gb3J3YXJkCgAE
-Cr7/LAAAAAUAAACdAQAAEgAAAAAAAABfTW92ZSBUbyBGb2xkZXIuLi4LAD18vv8uAAAABQAAAJ0B
-AAATAAAAAAAAAF9SZW1vdmUgRnJvbSBGb2xkZXJLDAA+fA==
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Connection" &amp; Form = "Network Connection" : "remote" : "local" : "Remote Connection (X25)" : "Connection"</formula></code><code
+ event='form'><formula>@If(@BrowserInfo("BrowserType" )!="Notes" &amp; ConnectionType="5";"(wEncrypted)";"Connection")</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Connections")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Add Connection' showinmenu='false' hide='web'><imageref name='btnNewDoc.gif'/><code
+ event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+@If(CurrentServer="";
+@PostedCommand([Compose]; "Connection");
+@IsMember("[NetCreator]";@UserRoles);@PostedCommand([Compose];"Connection");@Prompt([Ok];"Not Authorized";"You are not authorized to add Connection documents to this database."))</formula></code></action>
+<action title='Add Connection' showinmenu='false' hide='notes'><imageref name='btnNewDoc.gif'/><code
+ event='onClick' for='web'><javascript>ntNewDoc('Connection', '[NetCreator]')</javascript></code></action>
+<action title='Edit Connection' showinmenu='false' hide='previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Delete Connection' showinmenu='false'><imageref name='btnDelete.gif'/><code
+ event='click'><formula>@PostedCommand([MoveToTrash])</formula></code></action>
+<action title='Empty Trash' showinmenu='false' hide='notes'><imageref name='btnEmpty.gif'/><code
+ event='click'><formula>@Command([EmptyTrash])</formula></code></action>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action>
+<action title='Categori_ze' showinmenu='false' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Document' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='$22'
+ width='5' resizable='true' separatemultiplevalues='true' sortnoaccent='true'
+ sortnocase='true' showaslinks='false' categorized='true' twisties='true'><font
+ size='9pt' color='navy'/><columnheader title='From'><font size='9pt'/></columnheader><datetimeformat
+ legacy='true' show='date' date='yearmonthday' time='hourminutesecond' zone='never'/><code
+ event='value'><formula>@Name([Abbreviate]; Source)</formula></code><twistieimage
+><imageref database='0000000000000000' name='twisty.gif'/></twistieimage></column>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='$23'
+ width='15.5000' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='true'><font size='9pt'/><columnheader title='To'><font
+ size='9pt'/></columnheader><datetimeformat legacy='true' show='date' date='yearmonthday'
+ time='hourminutesecond' zone='never'/><numberformat legacy='true' format='general'
+ digits='2' punctuated='false' parens='false' percent='false' bytes='false'/><code
+ event='value'><formula>@Name([Abbreviate]; Destination)</formula></code></column>
+<column hidedetailrows='false' itemname='$35' width='9.5000' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='true'><font
+ size='9pt'/><columnheader title='Type'><font size='9pt'/></columnheader><code
+ event='value'><formula>@If(
+	ConnectionType="";
+		"?";
+	ConnectionType="b";
+		"Sametime";
+	ConnectionType="a";
+		"NNTP";
+	@Select(@TextToNumber(ConnectionType)+1;"Local Network";"Modem";"Passthru Server"; "X.400"; "SMTP";"Remote LAN Service";"X.25";"cc:Mail";"SNA";"Hunt Group")
+	)</formula></code></column>
+<column sort='descending' hidedetailrows='false' listseparator='comma' itemname='PortName'
+ width='6.5000' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='true'><font size='9pt'/><columnheader title='Port'><font
+ size='9pt'/></columnheader><datetimeformat legacy='true' show='date' date='yearmonthday'
+ time='hourminutesecond' zone='never'/><numberformat legacy='true' format='general'
+ digits='2' punctuated='false' parens='false' percent='false' bytes='false'/></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$5' width='10.7500'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true' formatdatatype='datetime'><font size='9pt'/><columnheader
+ title='Schedule'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='time' date='monthday' time='hourminute' zone='never'/><numberformat
+ legacy='true' format='general' digits='2' punctuated='false' parens='false'
+ percent='false' bytes='false'/><code event='value'><formula>@V2If(Enabled = "0"; "--DISABLED--"; Schedule)</formula></code></column>
+<column align='center' hidedetailrows='false' listseparator='comma' itemname='$21'
+ width='5.5000' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='true'><font size='9pt'/><columnheader title='Interval'><font
+ size='9pt'/></columnheader><datetimeformat legacy='true' show='date' date='yearmonthday'
+ time='hourminutesecond' zone='never'/><code event='value'><formula>@If(Enabled = "0"; ""; Interval)</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$30' width='6.3750'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Tasks'><font size='9pt'/></columnheader><code
+ event='value'><formula>@If(Enabled = "0"; ""; @Replace(Tasks; "Replication" : "Mail Routing":"X400 Mail Routing":"SMTP Mail Routing":
+"ccMail Routing"; "Rep" : "Mail":"X400":"SMTP":"ccMail"))</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$24' width='7'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Priorities'><font
+ size='9pt'/></columnheader><code event='value'><formula>@If(@IsMember("Replication";Tasks);@If(RepPriority = "2"; "H"; RepPriority = "1"; "H&amp;M"; @IsAvailable(RepPriority);"H&amp;M&amp;L";"");"")</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$28' width='19.6250'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Connect Using'><font
+ size='9pt'/></columnheader><datetimeformat legacy='true' show='date' date='yearmonthday'
+ time='hourminutesecond' zone='never'/><code event='value'><formula>@If(ConnectionType="1";@Text(Country)+@If(AreaCode!="";"("+@Text(AreaCode)+")";"")+PhoneNumberDisplay;
+ConnectionType="2"; @Name( [Abbreviate];PassthruServer); ConnectionType="3";RLANTagText;ConnectionType="7";CCMCDisplayAddress;PhoneNumber)</formula></code></column>
+<item name='$Author' sign='true'><text>Greg Pflaum</text></item></view>
 

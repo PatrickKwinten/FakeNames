@@ -1,118 +1,42 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='932' unid='05F8AFB2CB26A0608525719A006B6653' sequence='65'>
+<agent name='(wWriteOutProxies) ' alias=' wWriteOutProxies' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' hide='v3'
+ runaswebuser='true' publicaccess='false' designerversion='8' restrictions='unrestricted'>
+<noteinfo noteid='922' unid='05F8AFB2CB26A0608525719A006B6653' sequence='65'>
 <created><datetime dst='true'>20060627T153305,47-04</datetime></created>
-<modified><datetime dst='true'>20150507T110159,32+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114104,46+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095406,98-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110159,31+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110159,31+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114104,46+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114104,46+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143920,17-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE' sign='true'><text>(wWriteOutProxies) | wWriteOutProxies</text></item>
-<item name='$AssistType' sign='true'><number>65413</number></item>
-<item name='$AssistLastRun' sign='true'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$AssistDocCount' sign='true'><number>0</number></item>
-<item name='$FlagsExt' sign='true'><text/></item>
-<item name='$AssistFlags' sign='true'><text>Eu</text></item>
-<item name='$AssistTrigger' sign='true'><text>4</text></item>
-<item name='$AssistInfo' sign='true'>
-<rawitemdata type='11'>
-AQAEAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</rawitemdata></item>
-<item name='$AssistQuery' sign='true'>
-<rawitemdata type='f'>
-gQYAAAAA
-</rawitemdata></item>
-<item name='$AssistAction' sign='true'>
-<rawitemdata type='10'>
-gQKF/7YCAAAAAKoCAAAnKytMb3R1c1NjcmlwdCBEZXZlbG9wbWVudCBFbnZpcm9ubWVudDoyOjU6
-KE9wdGlvbnMpOjA6NzQKT3B0aW9uIFB1YmxpYwpVc2UgIlBvbGljeU1hbmFnZW1lbnQiCgonKytM
-b3R1c1NjcmlwdCBEZXZlbG9wbWVudCBFbnZpcm9ubWVudDoyOjU6KEZvcndhcmQpOjA6MQpEZWNs
-YXJlIFN1YiBJbml0aWFsaXplCgonKytMb3R1c1NjcmlwdCBEZXZlbG9wbWVudCBFbnZpcm9ubWVu
-dDoyOjU6KERlY2xhcmF0aW9ucyk6MDoyCgonKytMb3R1c1NjcmlwdCBEZXZlbG9wbWVudCBFbnZp
-cm9ubWVudDoyOjI6SW5pdGlhbGl6ZToxOjEwClN1YiBJbml0aWFsaXplCgknIFRoaXMgYWdlbnQg
-c2lnbnMgcG9saWN5IGRvY3VtZW50cyB3aGljaCBhcmUgc2F2ZWQgb24gdGhlIFdlYgoJCglEaW0g
-aFNlc3Npb24gQXMgTmV3IE5vdGVzU2Vzc2lvbgoJRGltIGhEb2NDb250ZXh0IEFzIE5vdGVzRG9j
-dW1lbnQKCQoJT24gRXJyb3IgR290byBFUlJPUl9IQU5ETEVSCgkKCVNldCBoRG9jQ29udGV4dCA9
-IGhTZXNzaW9uLkRvY3VtZW50Q29udGV4dAoJQ2FsbCB3V3JpdGVPdXRQcm94aWVzKGhEb2NDb250
-ZXh0KQoJCgkKUk9VVElORV9FWElUOgoJRXhpdCBTdWIKCQpFUlJPUl9IQU5ETEVSOgoJUHJpbnQg
-IndXcml0ZU91dFByb3hpZXMgZXJyb3IgIiArIEVycm9yICsgIiBsaW5lICIgRXJsCglFeGl0IFN1
-YgoJCkVuZCBTdWIA
-</rawitemdata></item>
-<item name='$Restricted' sign='true'><number>0</number></item>
-<item name='$Flags'><text>fLu3</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$AssistRunInfo' summary='true'>
-<rawitemdata type='3'>
-BgAAAgAACAAuCQAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAhnxrAJpxJYUt1G4AlXElhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqq
-</rawitemdata></item>
-<item name='$AssistAction_Ex' sign='true'>
-<rawitemdata type='14'>
-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
-</rawitemdata></item>
-<item name='$AssistVersion'><datetime dst='true'>20130909T095358,27-04</datetime></item>
-<item name='$POID'><datetime dst='true'>20130909T095406,98-04</datetime></item></note>
+<designchange><datetime dst='true'>20130909T095358,27-04</datetime></designchange>
+<trigger type='actionsmenu'/>
+<documentset type='runonce'/><code event='options'><lotusscript>Option Public
+Use "PolicyManagement"
+
+</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+	' This agent signs policy documents which are saved on the Web
+	
+	Dim hSession As New NotesSession
+	Dim hDocContext As NotesDocument
+	
+	On Error Goto ERROR_HANDLER
+	
+	Set hDocContext = hSession.DocumentContext
+	Call wWriteOutProxies(hDocContext)
+	
+	
+ROUTINE_EXIT:
+	Exit Sub
+	
+ERROR_HANDLER:
+	Print "wWriteOutProxies error " + Error + " line " Erl
+	Exit Sub
+	
+End Sub</lotusscript></code>
+<rundata processeddocs='0' exitcode='0'>
+<agentmodified><datetime dst='true'>20060627T153402,30-04</datetime></agentmodified></rundata>
+<item name='$POID'><datetime dst='true'>20130909T095406,98-04</datetime></item></agent>
 

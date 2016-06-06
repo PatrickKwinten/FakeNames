@@ -1,59 +1,73 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='1f6' unid='C96566E54848795F85256B8A004B9392' sequence='5014'>
+<sharedfield name='DefaultAttr' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='7'>
+<noteinfo noteid='1f2' unid='C96566E54848795F85256B8A004B9392' sequence='5014'>
 <created><datetime>20020328T084529,78-05</datetime></created>
-<modified><datetime dst='true'>20150507T110150,70+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114056,18+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095406,50-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110150,69+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110150,69+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114056,18+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114056,18+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20020328T084529,93-05</datetime><datetime>20020328T121113,78-05</datetime><datetime
  dst='true'>20020416T102717,50+02</datetime><datetime dst='true'>20020418T095303,03-04</datetime><datetime
  dst='true'>20020515T100243,80-04</datetime><datetime dst='true'>20020522T140714,96-04</datetime><datetime
  dst='true'>20020717T084935,05-04</datetime><datetime dst='true'>20020718T082354,00-04</datetime><datetime
  dst='true'>20020719T100438,43-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ type='text' allowmultivalues='true' kind='computed' name='DefaultAttr' listinputseparators='comma semicolon'
+ listdisplayseparator='semicolon'><code event='defaultvalue'><formula>"AltFullName":
+"cn":
+"dominoCertificate":
+"givenName":
+"Location":
+"mail":
+"mailAddress":
+"mailDomain":
+"member":
+"objectClass":
+"publicKey":
+"userCertificate":
+"creatorsName":
+"modifiersName":
+"createTimestamp":
+"modifyTimestamp":
+"subschemasubentry":
+"namingContexts":
+"altServer":
+"supportedExtension":
+"supportedControl":
+"supportedSASLMechanisms":
+"supportedLDAPVersion":
+"vendorname":
+"vendorversion":
+"sn":
+"uid":
+"c":
+"o":
+"ou":
+"l":
+"st":
+"street":
+"dc":
+"objectClasses":
+"attributeTypes":
+"ditContentRules":
+"ldapSyntaxes":
+"extendedClassInfo":
+"extendedAttributeInfo":
+"certificateRevocationList":
+"authorityRevocationList":
+"uniqueMember":
+"crossCertificatePair":
+"deltaRevocationList":
+"dominoUNID":
+"dominoAccessGroups":
+"dominoMajMinVersion":
+"dominoVersionNumber":
+"ibm-enabledCapabilities":
+"ibm-supportedCapabilities":
+"displayName"</formula></code></field>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>
-</rawitemdata></item>
-<item name='$TITLE'><text>DefaultAttr</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>7</text></item>
-<item name='DefaultAttr' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><text>DefaultAttr</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAIr/rgSIAQEFBjACAAAAAAAAAgMAAAp+BAAAAAAAAAsAAAAAAH4E
-AADeAwEACwBBbHRGdWxsTmFtZQABAAIAY24fAgEAEQBkb21pbm9DZXJ0aWZpY2F0ZQAfAgEACQBn
-aXZlbk5hbWUAHwIBAAgATG9jYXRpb24fAgEABABtYWlsHwIBAAsAbWFpbEFkZHJlc3MAHwIBAAoA
-bWFpbERvbWFpbh8CAQAGAG1lbWJlch8CAQALAG9iamVjdENsYXNzAB8CAQAJAHB1YmxpY0tleQAf
-AgEADwB1c2VyQ2VydGlmaWNhdGUAHwIBAAwAY3JlYXRvcnNOYW1lHwIBAA0AbW9kaWZpZXJzTmFt
-ZQAfAgEADwBjcmVhdGVUaW1lc3RhbXAAHwIBAA8AbW9kaWZ5VGltZXN0YW1wAB8CAQARAHN1YnNj
-aGVtYXN1YmVudHJ5AB8CAQAOAG5hbWluZ0NvbnRleHRzHwIBAAkAYWx0U2VydmVyAB8CAQASAHN1
-cHBvcnRlZEV4dGVuc2lvbh8CAQAQAHN1cHBvcnRlZENvbnRyb2wfAgEAFwBzdXBwb3J0ZWRTQVNM
-TWVjaGFuaXNtcwAfAgEAFABzdXBwb3J0ZWRMREFQVmVyc2lvbh8CAQAKAHZlbmRvcm5hbWUfAgEA
-DQB2ZW5kb3J2ZXJzaW9uAB8CAQACAHNuHwIBAAMAdWlkAB8CAQABAGMAHwIBAAEAbwAfAgEAAgBv
-dR8CAQABAGwAHwIBAAIAc3QfAgEABgBzdHJlZXQfAgEAAgBkYx8CAQANAG9iamVjdENsYXNzZXMA
-HwIBAA4AYXR0cmlidXRlVHlwZXMfAgEADwBkaXRDb250ZW50UnVsZXMAHwIBAAwAbGRhcFN5bnRh
-eGVzHwIBABEAZXh0ZW5kZWRDbGFzc0luZm8AHwIBABUAZXh0ZW5kZWRBdHRyaWJ1dGVJbmZvAB8C
-AQAZAGNlcnRpZmljYXRlUmV2b2NhdGlvbkxpc3QAHwIBABcAYXV0aG9yaXR5UmV2b2NhdGlvbkxp
-c3QAHwIBAAwAdW5pcXVlTWVtYmVyHwIBABQAY3Jvc3NDZXJ0aWZpY2F0ZVBhaXIfAgEAEwBkZWx0
-YVJldm9jYXRpb25MaXN0AB8CAQAKAGRvbWlub1VOSUQfAgEAEgBkb21pbm9BY2Nlc3NHcm91cHMf
-AgEAEwBkb21pbm9NYWpNaW5WZXJzaW9uAB8CAQATAGRvbWlub1ZlcnNpb25OdW1iZXIAHwIBABcA
-aWJtLWVuYWJsZWRDYXBhYmlsaXRpZXMAHwIBABkAaWJtLXN1cHBvcnRlZENhcGFiaWxpdGllcwAf
-AgEACwBkaXNwbGF5TmFtZQAfAgMABwCeAJgACTJSNFI2UjhSMTBSMTJSMTRSMTZSMThSMjBSMjJS
-MjRSMjZSMjhSMzBSMzJSMzRSMzZSMzhSNDBSNDJSNDRSNDZSNDhSNTBSNTJSNTRSNTZSNThSNjBS
-NjJSNjRSNjZSNjhSNzBSNzJSNzRSNzZSNzhSODBSODJSODRSODZSODhSOTBSOTJSOTRSOTZSOThS
-MTAwUjEwMlJEZWZhdWx0QXR0cgDeBgAAiv+F/wgAAQAACg==
-</rawitemdata></item></note>
+</rawitemdata></item></sharedfield>
 

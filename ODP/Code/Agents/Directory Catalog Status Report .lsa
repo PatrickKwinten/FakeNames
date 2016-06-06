@@ -1,377 +1,280 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='filter' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='2c6' unid='F5BBB3629F33CFE18525692A0047A1F9' sequence='5030'>
+<agent name='Directory Catalog Status Report ' alias=' StatusReport' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' hide='v3'
+ publicaccess='false' designerversion='6' comment='A report is sent to the list of report recipients listed in the Configuration document. '
+ activatable='false' enabled='false'>
+<noteinfo noteid='2c2' unid='F5BBB3629F33CFE18525692A0047A1F9' sequence='5030'>
 <created><datetime dst='true'>20000728T090225,21-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,42+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114056,84+02</datetime></modified>
 <revised><datetime>20121205T144954,56-05</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,41+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,41+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114056,84+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114056,84+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20060907T133934,09-04</datetime><datetime
  dst='true'>20070502T071400,25-04</datetime><datetime dst='true'>20080416T105922,52-04</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE' sign='true'><text>Directory Catalog Status Report | StatusReport</text></item>
-<item name='$AssistType' sign='true'><number>65413</number></item>
-<item name='$AssistLastRun' sign='true'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$AssistDocCount' sign='true'><number>0</number></item>
-<item name='$Comment' sign='true'><text>A report is sent to the list of report recipients listed in the Configuration document. </text></item>
-<item name='$FlagsExt' sign='true'><text/></item>
-<item name='$AssistFlags' sign='true'><text>s</text></item>
-<item name='$AssistTrigger' sign='true'><text>1</text></item>
-<item name='$AssistInfo' sign='true'>
-<rawitemdata type='11'>
-AQABAAEAAwABAID8CgABAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-</rawitemdata></item>
-<item name='$AssistQuery' sign='true'>
-<rawitemdata type='f'>
-gQYAAAAA
-</rawitemdata></item>
-<item name='$AssistAction' sign='true'>
-<rawitemdata type='10'>
-gQKF/64gAAAAAKIgAAAnKytMb3R1c1NjcmlwdCBEZXZlbG9wbWVudCBFbnZpcm9ubWVudDoyOjU6
-KE9wdGlvbnMpOjA6NjYKT3B0aW9uIFB1YmxpYwoKJysrTG90dXNTY3JpcHQgRGV2ZWxvcG1lbnQg
-RW52aXJvbm1lbnQ6Mjo1OihGb3J3YXJkKTowOjEKRGVjbGFyZSBTdWIgSW5pdGlhbGl6ZQoKJysr
-TG90dXNTY3JpcHQgRGV2ZWxvcG1lbnQgRW52aXJvbm1lbnQ6Mjo1OihEZWNsYXJhdGlvbnMpOjA6
-MgoKJysrTG90dXNTY3JpcHQgRGV2ZWxvcG1lbnQgRW52aXJvbm1lbnQ6MjoyOkluaXRpYWxpemU6
-MToxMApTdWIgSW5pdGlhbGl6ZQoJCicgVGhpcyBhZ2VudCB3aWxsIHF1ZXJ5IHRoaXMgZGlyY2F0
-LCBhbmQgZWFjaCBkaXJlY3RvcnkgaXQgaW5jbHVkZXMsIGFuZCBlbWFpbCB5b3UgdGhlIHJlc3Vs
-dGluZyBpbmZvcm1hdGlvbi4KCQoJRGltIHNlc3Npb24gQXMgTmV3IE5vdGVzU2Vzc2lvbiAgICAg
-CglEaW0gZGlyY2F0IEFzIE5vdGVzRGF0YWJhc2UKCURpbSBtZW1vIEFzIE5vdGVzRG9jdW1lbnQK
-CURpbSBydGl0ZW0gQXMgTm90ZXNSaWNoVGV4dEl0ZW0KCURpbSBjZmdkb2MgQXMgTm90ZXNEb2N1
-bWVudAoJRGltIHZpZXcgQXMgTm90ZXNWaWV3CglEaW0gdGVtcCBBcyBTdHJpbmcKCURpbSB4IEFz
-IEludGVnZXIKCURpbSB0b3RhbHNpemUgQXMgRG91YmxlICAgICAKCURpbSBsZWZ0c2lkZSBBcyBT
-dHJpbmcsIHJpZ2h0c2lkZSBBcyBTdHJpbmcKCQonIGNyZWF0ZSByaWNoIHRleHQgc3R5bGUgZm9y
-IHRoZSBoZWFkaW5ncwoJRGltIEhlYWRpbmdTdHlsZSBBcyBOb3Rlc1JpY2hUZXh0U3R5bGUKCVNl
-dCBIZWFkaW5nU3R5bGUgPSBzZXNzaW9uLkNyZWF0ZVJpY2hUZXh0U3R5bGUKCUhlYWRpbmdTdHls
-ZS5Ob3Rlc0ZvbnQgPSBGT05UX0NPVVJJRVIgICAgIAoJSGVhZGluZ1N0eWxlLk5vdGVzQ29sb3Ig
-PSBDT0xPUl9EQVJLX0JMVUUKCUhlYWRpbmdTdHlsZS5Cb2xkID0gVHJ1ZQoJCglEaW0gTm9ybWFs
-U3R5bGUgQXMgTm90ZXNSaWNoVGV4dFN0eWxlCglTZXQgTm9ybWFsU3R5bGUgPSBzZXNzaW9uLkNy
-ZWF0ZVJpY2hUZXh0U3R5bGUKCU5vcm1hbFN0eWxlLk5vdGVzRm9udCA9IEZPTlRfQ09VUklFUiAg
-ICAgCglOb3JtYWxTdHlsZS5Ob3Rlc0NvbG9yID0gQ09MT1JfQkxBQ0sKCU5vcm1hbFN0eWxlLkJv
-bGQgPSBGYWxzZSAgICAgCgkKCVNldCBkaXJjYXQgPSBzZXNzaW9uLkN1cnJlbnREYXRhYmFzZQoJ
-U2V0IG1lbW8gPSBOZXcgTm90ZXNEb2N1bWVudCggZGlyY2F0ICkKCVNldCBydGl0ZW0gPSBOZXcg
-Tm90ZXNSaWNoVGV4dEl0ZW0oIG1lbW8sICJCb2R5IiApCgkKJyBnZXQgYXBwcm9wcmlhdGUgdmll
-dyBiYXNlZCBvbiBkYXRhYmFzZQoJSWYgZGlyY2F0LklzRGlyZWN0b3J5Q2F0YWxvZyBUaGVuCgkJ
-U2V0IHZpZXcgPSBkaXJjYXQuR2V0VmlldygiQ29uZmlndXJhdGlvbiIpCglFbHNlCgkJSWYgZGly
-Y2F0LklzUHVibGljQWRkcmVzc0Jvb2sgVGhlbgoJCQlTZXQgdmlldyA9IGRpcmNhdC5HZXRWaWV3
-KCIoJERpcmNhdENvbmZpZykiKQoJCUVuZCBJZgoJRW5kIElmCgkKCVNldCBjZmdkb2MgPSB2aWV3
-LkdldEZpcnN0RG9jdW1lbnQgICAgIAoJCglJZiBjZmdkb2MuR2V0SXRlbVZhbHVlKCJSZXBvcnRS
-ZWNpcGllbnRzIikoMCkgPSAiIiBUaGVuIEV4aXQgU3ViCgkKCUNhbGwgcnRpdGVtLkFwcGVuZFRl
-eHQoZGlyY2F0LnRpdGxlICYgIiA+PiAiKQoJQ2FsbCBydGl0ZW0uQXBwZW5kRG9jTGluayggZGly
-Y2F0LCBkaXJjYXQuVGl0bGUgKQoJQ2FsbCBydGl0ZW0uQXBwZW5kVGV4dCgiIDw8IikKCUNhbGwg
-cnRpdGVtLkFkZE5ld0xpbmUoIDIgKQoJCicgRGlyZWN0b3J5IENhdGFsb2cgU2VjdGlvbiAtLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0g
-ICAgICAgICAgICAgICAKCQoJQ2FsbCBydGl0ZW0uQXBwZW5kU3R5bGUoSGVhZGluZ1N0eWxlKQoJ
-Q2FsbCBydGl0ZW0uQXBwZW5kVGV4dCgiLS0gUHJvcGVydGllcyAtLSIpCglDYWxsIHJ0aXRlbS5B
-ZGROZXdMaW5lKCAxICkKCQoJQ2FsbCBydGl0ZW0uQXBwZW5kU3R5bGUoTm9ybWFsU3R5bGUpCglD
-YWxsIHJ0aXRlbS5BcHBlbmRUZXh0KCJUaXRsZSIpCglDYWxsIHJ0aXRlbS5BZGRUYWIoIDMgKQoJ
-Q2FsbCBydGl0ZW0uQXBwZW5kVGV4dCgiOiAiKQoJQ2FsbCBydGl0ZW0uQXBwZW5kVGV4dChkaXJj
-YXQudGl0bGUpCglDYWxsIHJ0aXRlbS5BZGROZXdMaW5lKCAxICkKCQoJRGltIEFicnZTZXJ2ZXJO
-YW1lIEFzIE5ldyBOb3Rlc05hbWUoZGlyY2F0LnNlcnZlcikKCUNhbGwgcnRpdGVtLkFwcGVuZFRl
-eHQoIlNlcnZlciIpCglDYWxsIHJ0aXRlbS5BZGRUYWIoIDIgKQoJQ2FsbCBydGl0ZW0uQXBwZW5k
-VGV4dCgiOiAiKQoJQ2FsbCBydGl0ZW0uQXBwZW5kVGV4dChBYnJ2U2VydmVyTmFtZS5hYmJyZXZp
-YXRlZCkKCUNhbGwgcnRpdGVtLkFkZE5ld0xpbmUoIDEgKSAgICAgCgkKCUNhbGwgcnRpdGVtLkFw
-cGVuZFRleHQoIlBhdGgiKQoJQ2FsbCBydGl0ZW0uQWRkVGFiKCAzICkKCUNhbGwgcnRpdGVtLkFw
-cGVuZFRleHQoIjogIikKCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoZGlyY2F0LmZpbGVwYXRoKQoJ
-Q2FsbCBydGl0ZW0uQWRkTmV3TGluZSggMSApCgkKCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIlNp
-emUiKQoJQ2FsbCBydGl0ZW0uQWRkVGFiKCAzICkKCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIjog
-IikKCXRlbXAgPSBGb3JtYXQgKCBkaXJjYXQuc2l6ZSAgLCAiU3RhbmRhcmQiICkKCUNhbGwgcnRp
-dGVtLkFwcGVuZFRleHQoTGVmdCAoIHRlbXAgLCBJbnN0ciAoIHRlbXAgLCAiLiIgKSAtIDEgKSAr
-ICIgYnl0ZXMiKQoJCglDYWxsIHJ0aXRlbS5BZGROZXdMaW5lKCAxICkKCQoJQ2FsbCBydGl0ZW0u
-QXBwZW5kVGV4dCgiVG90YWwgRW50cmllcyIpCglDYWxsIHJ0aXRlbS5BZGRUYWIoIDEgKQoJQ2Fs
-bCBydGl0ZW0uQXBwZW5kVGV4dCgiOiAiKQoJQ2FsbCBydGl0ZW0uQXBwZW5kVGV4dCggRm9ybWF0
-ICggY2ZnZG9jLlRvdGFsRW50cmllcygwKSAsICJTdGFuZGFyZCIgKSApCglDYWxsIHJ0aXRlbS5B
-ZGROZXdMaW5lKCAyICkKCQonIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCgkK
-CUNhbGwgcnRpdGVtLkFwcGVuZFN0eWxlKEhlYWRpbmdTdHlsZSkKCUNhbGwgcnRpdGVtLkFwcGVu
-ZFRleHQoIi0tIENvbmZpZ3VyYXRpb24gLS0iKQoJQ2FsbCBydGl0ZW0uQWRkTmV3TGluZSggMSAp
-CgkKCUNhbGwgcnRpdGVtLkFwcGVuZFN0eWxlKE5vcm1hbFN0eWxlKSAgICAgCglDYWxsIHJ0aXRl
-bS5BcHBlbmRUZXh0KCJWZXJzaW9uIikKCUNhbGwgcnRpdGVtLkFkZFRhYiggMiApCglDYWxsIHJ0
-aXRlbS5BcHBlbmRUZXh0KCI6ICIpCglDYWxsIHJ0aXRlbS5BcHBlbmRUZXh0KENzdHIoY2ZnZG9j
-LlZlcnNpb24oMCkgKSApCglDYWxsIHJ0aXRlbS5BZGROZXdMaW5lKCAxICkKCQonLS0tLS0tLS0t
-LS0tLS0tLSBEaXJlY3RvcnkgQ2F0YWxvZyBzcGVjaWZpYywgc2tpcCBpZiB3b3JraW5nIG9uIERv
-bWlubyBEaXJlY3RvcnkKCUlmIGRpcmNhdC5Jc0RpcmVjdG9yeUNhdGFsb2cgVGhlbgoJCQoJCUNh
-bGwgcnRpdGVtLkFwcGVuZFRleHQoIlNvcnQgS2V5IikKCQlDYWxsIHJ0aXRlbS5BZGRUYWIoIDIg
-KQoJCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIjogIikKCQlJZiBjZmdkb2MuU29ydEtleSgwKSA9
-ICIxIiBUaGVuCgkJCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIkRpc3Rpbmd1aXNoZWQgTmFtZSIp
-CgkJRWxzZWlmIGNmZ2RvYy5Tb3J0S2V5KDApID0gIjIiIFRoZW4KCQkJQ2FsbCBydGl0ZW0uQXBw
-ZW5kVGV4dCgiTGFzdCBOYW1lIikKCQlFbHNlaWYgY2ZnZG9jLlNvcnRLZXkoMCkgPSAiMyIgVGhl
-bgoJCQlDYWxsIHJ0aXRlbS5BcHBlbmRUZXh0KCJBbHRlcm5hdGUgRnVsbE5hbWUiKQkJCgkJRW5k
-IElmCgkJQ2FsbCBydGl0ZW0uQWRkTmV3TGluZSggMSApCgkJCgkJQ2FsbCBydGl0ZW0uQXBwZW5k
-VGV4dCgiVXNlIFNvdW5kZXgiKQoJCUNhbGwgcnRpdGVtLkFkZFRhYiggMiApCgkJQ2FsbCBydGl0
-ZW0uQXBwZW5kVGV4dCgiOiAiKQoJCUlmIGNmZ2RvYy5Tb3VuZGV4KDApID0gIjAiIFRoZW4KCQkJ
-Q2FsbCBydGl0ZW0uQXBwZW5kVGV4dCgiTm8iKQoJCUVsc2VpZiBjZmdkb2MuU291bmRleCgwKSA9
-ICIxIiBUaGVuCgkJCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIlllcyIpCgkJRW5kIElmICAgIAoJ
-CUNhbGwgcnRpdGVtLkFkZE5ld0xpbmUoIDEgKQoJCQoJRW5kIElmCgkKCUNhbGwgcnRpdGVtLkFw
-cGVuZFRleHQoIlJlbW92ZSBkdXBsaWNhdGVzIikKCUNhbGwgcnRpdGVtLkFkZFRhYiggMSApCglD
-YWxsIHJ0aXRlbS5BcHBlbmRUZXh0KCI6ICIpCglJZiBjZmdkb2MuRGVEdXAoMCkgPSAiMCIgVGhl
-bgoJCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIk5vIikKCUVsc2VpZiBjZmdkb2MuRGVEdXAoMCkg
-PSAiMSIgVGhlbgoJCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIlllcyIpCglFbmQgSWYgICAgCglD
-YWxsIHJ0aXRlbS5BZGROZXdMaW5lKCAxICkKCQoJQ2FsbCBydGl0ZW0uQXBwZW5kVGV4dCgiR3Jv
-dXAgVHlwZXMiKQoJQ2FsbCBydGl0ZW0uQWRkVGFiKCAyICkKCUNhbGwgcnRpdGVtLkFwcGVuZFRl
-eHQoIjogIikKCUlmIGNmZ2RvYy5Hcm91cFR5cGVzKDApID0gIjEiIFRoZW4KCQlDYWxsIHJ0aXRl
-bS5BcHBlbmRUZXh0KCJNYWlsIGFuZCBNdWx0aS1wdXJwb3NlIikKCUVsc2VpZiBjZmdkb2MuR3Jv
-dXBUeXBlcygwKSA9ICIyIiBUaGVuCgkJQ2FsbCBydGl0ZW0uQXBwZW5kVGV4dCgiQWxsIikKCUVu
-ZCBJZiAgICAKCUNhbGwgcnRpdGVtLkFkZE5ld0xpbmUoIDEgKQoJCictLS0tLS0tLS0tLS0tLS0t
-IERpcmVjdG9yeSBDYXRhbG9nIHNwZWNpZmljLCBza2lwIGlmIHdvcmtpbmcgb24gRG9taW5vIERp
-cmVjdG9yeQoJSWYgZGlyY2F0LklzRGlyZWN0b3J5Q2F0YWxvZyBUaGVuCgkJCgkJQ2FsbCBydGl0
-ZW0uQXBwZW5kVGV4dCgiUGFja2luZyBEZW5zaXR5IikKCQlDYWxsIHJ0aXRlbS5BZGRUYWIoIDEg
-KQoJCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIjoiKQoJCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQo
-IFN0cihjZmdkb2MuUGFja2luZ0RlbnNpdHkoMCkgKSApCgkJQ2FsbCBydGl0ZW0uQWRkTmV3TGlu
-ZSggMSApCgkJCglFbmQgSWYKCQoJdGVtcCA9ICIiCgl4ID0gMAoJRm9yIHggPSAwIFRvIFVib3Vu
-ZChjZmdkb2MuU2VsZWN0ZWRGaWVsZExpc3QpCgkJdGVtcCA9IHRlbXAgJiBjZmdkb2MuU2VsZWN0
-ZWRGaWVsZExpc3QoeCkgJiAiLCAiCglOZXh0CglDYWxsIHJ0aXRlbS5BcHBlbmRUZXh0KCJTZWxl
-Y3RlZCBGaWVsZHMiKQoJQ2FsbCBydGl0ZW0uQWRkVGFiKCAxICkKCUNhbGwgcnRpdGVtLkFwcGVu
-ZFRleHQoIjogIikKCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIHRlbXAgKQoJQ2FsbCBydGl0ZW0u
-QWRkTmV3TGluZSggMiApCgkKJyBJbmNsdWRlZCBEaXJlY3RvcmllcyBzZWN0aW9uIC0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoJCglD
-YWxsIHJ0aXRlbS5BcHBlbmRTdHlsZShIZWFkaW5nU3R5bGUpCglDYWxsIHJ0aXRlbS5BcHBlbmRU
-ZXh0KCItLSBEaXJlY3RvcmllcyB0byBJbmNsdWRlIC0tIikKCQoJQ2FsbCBydGl0ZW0uQXBwZW5k
-U3R5bGUoTm9ybWFsU3R5bGUpICAgICAKCXggPSAwCglGb3IgeCA9IDAgVG8gVWJvdW5kKGNmZ2Rv
-Yy5EaXJlY3RvcmllcykKCQkKCQlDYWxsIHJ0aXRlbS5BZGROZXdMaW5lKCAxICkgICAgICAgICAg
-CgkJCicgY2hlY2sgdG8gc2VlIGlmIGNmZy5kaXJlY3RvcmllcyBjb250YWlucyAiISEhIiAgICAg
-ICAgIAoJCXRlbXAgPSBjZmdkb2MuRGlyZWN0b3JpZXMoeCkKCQlJZiBJbnN0ciAoIGNmZ2RvYy5E
-aXJlY3Rvcmllcyh4KSAsICIhISEiICkgPSAgMCBUaGVuICAKCQkJU2V0IHNvdXJjZSA9IE5ldyBO
-b3Rlc0RhdGFiYXNlIChkaXJjYXQuc2VydmVyICwgY2ZnZG9jLkRpcmVjdG9yaWVzKHgpICkKCQkJ
-U2V0IEFicnZTb3VyY2VTZXJ2ZXJOYW1lID0gTmV3IE5vdGVzTmFtZShkaXJjYXQuc2VydmVyKQoJ
-CUVsc2UgICcgcGFyc2UgdGhlIG5hbWUsIHRvIHRoZSBsZWZ0IGlzIHNlcnZlciwgdG8gdGhlIHJp
-Z2h0IGlzIHBhdGgKCQkJbGVmdHNpZGUgPSAoTGVmdCAoIHRlbXAgLCBJbnN0ciAoIHRlbXAgLCAi
-ISEhIiApIC0gMSApICkKCQkJcmlnaHRzaWRlID0gKE1pZCAoIHRlbXAgLCBJbnN0ciAoIHRlbXAg
-LCAiISEhIiApICsgMyApICkKCQkJU2V0IHNvdXJjZSA9IE5ldyBOb3Rlc0RhdGFiYXNlIChsZWZ0
-c2lkZSAsIHJpZ2h0c2lkZSkKCQkJU2V0IEFicnZTb3VyY2VTZXJ2ZXJOYW1lICA9IE5ldyBOb3Rl
-c05hbWUobGVmdHNpZGUpCgkJRW5kIElmCgkJCgkJQ2FsbCBydGl0ZW0uQXBwZW5kVGV4dChzb3Vy
-Y2UudGl0bGUgJiAiID4+ICIpCgkJQ2FsbCBydGl0ZW0uQXBwZW5kRG9jTGluayggc291cmNlLCBz
-b3VyY2UuVGl0bGUgKQoJCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIiA8PCIpCgkJQ2FsbCBydGl0
-ZW0uQWRkTmV3TGluZSggMSApCgkJCgkJQ2FsbCBydGl0ZW0uQXBwZW5kVGV4dCgiU2VydmVyIikK
-CQlDYWxsIHJ0aXRlbS5BZGRUYWIoIDIgKQoJCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIjogIikK
-CQlDYWxsIHJ0aXRlbS5BcHBlbmRUZXh0KEFicnZTb3VyY2VTZXJ2ZXJOYW1lLmFiYnJldmlhdGVk
-KQoJCUNhbGwgcnRpdGVtLkFkZE5ld0xpbmUoIDEgKSAgICAgICAgICAKCQkKCQlDYWxsIHJ0aXRl
-bS5BcHBlbmRUZXh0KCJQYXRoIikKCQlDYWxsIHJ0aXRlbS5BZGRUYWIoIDMgKQoJCUNhbGwgcnRp
-dGVtLkFwcGVuZFRleHQoIjogIikKCQlDYWxsIHJ0aXRlbS5BcHBlbmRUZXh0KGNmZ2RvYy5EaXJl
-Y3Rvcmllcyh4KSkKCQlDYWxsIHJ0aXRlbS5BZGROZXdMaW5lKCAxICkKCQkKCQlDYWxsIHJ0aXRl
-bS5BcHBlbmRUZXh0KCJTaXplIikKCQlDYWxsIHJ0aXRlbS5BZGRUYWIoIDMgKQoJCUNhbGwgcnRp
-dGVtLkFwcGVuZFRleHQoIjogIikKCQl0ZW1wID0gRm9ybWF0ICggc291cmNlLnNpemUgICwgIlN0
-YW5kYXJkIiApCgkJQ2FsbCBydGl0ZW0uQXBwZW5kVGV4dChMZWZ0ICggdGVtcCAsIEluc3RyICgg
-dGVtcCAsICIuIiApIC0gMSApICsgIiBieXRlcyIpCgkJCgkJQ2FsbCBydGl0ZW0uQWRkTmV3TGlu
-ZSggMSApCgkJdG90YWxzaXplID0gdG90YWxzaXplICsgc291cmNlLnNpemUKCQkKCQlDYWxsIHJ0
-aXRlbS5BcHBlbmRUZXh0KCJVcGRhdGVkIGluIERpckNhdCIpCgkJQ2FsbCBydGl0ZW0uQWRkVGFi
-KCAxICkKCQlDYWxsIHJ0aXRlbS5BcHBlbmRUZXh0KCI6ICIpCgkJQ2FsbCBydGl0ZW0uQXBwZW5k
-VGV4dChjZmdkb2MuU2luY2UoeCkgKQoJCQoJCUNhbGwgcnRpdGVtLkFkZE5ld0xpbmUoIDEgKQoJ
-CQoJTmV4dAoJCicgUmVwb3J0IFNlY3Rpb24gLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tICAgICAKCQoJQ2FsbCBydGl0ZW0uQXBwZW5k
-U3R5bGUoSGVhZGluZ1N0eWxlKQoJQ2FsbCBydGl0ZW0uQWRkTmV3TGluZSggMSApCglDYWxsIHJ0
-aXRlbS5BcHBlbmRUZXh0KCItLSBSZXBvcnQgLS0iKQoJQ2FsbCBydGl0ZW0uQWRkTmV3TGluZSgg
-MSApCgkKCUNhbGwgcnRpdGVtLkFwcGVuZFN0eWxlKE5vcm1hbFN0eWxlKQoJdGVtcCA9IEZvcm1h
-dCAoIHRvdGFsc2l6ZSAgLCAiU3RhbmRhcmQiICkKCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoIlRv
-dGFsIHNpemUgb2YgU291cmNlIERpcmVjdG9yaWVzIGlzOiAiICsgTGVmdCAoIHRlbXAgLCBJbnN0
-ciAoIHRlbXAgLCAiLiIgKSAtIDEgKSArICIgYnl0ZXMiKQoJQ2FsbCBydGl0ZW0uQWRkTmV3TGlu
-ZSggMSApCgkKCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoZGlyY2F0LnRpdGxlICYgIiBpcyAiKQoJ
-Q2FsbCBydGl0ZW0uQXBwZW5kU3R5bGUoSGVhZGluZ1N0eWxlKSAgICAgCglDYWxsIHJ0aXRlbS5B
-cHBlbmRUZXh0ICggQ3N0ciAoIFJvdW5kICggKCAoZGlyY2F0LnNpemUgLyB0b3RhbHNpemUgKSAq
-IDEwMCApICwgMiApICkgKyAiJSIgKQoJQ2FsbCBydGl0ZW0uQXBwZW5kU3R5bGUoTm9ybWFsU3R5
-bGUpICAgICAKCUNhbGwgcnRpdGVtLkFwcGVuZFRleHQoICIgb2YgdGhlIHNpemUgb2YgdGhlIGRp
-cmVjdG9yaWVzIHVzZWQgdG8gY3JlYXRlIGl0LiIpCglDYWxsIHJ0aXRlbS5BZGROZXdMaW5lKCAx
-ICkKCQonIFNlbmQgZW1haWwgc2VjdGlvbiAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCQoJbWVtby5TdWJqZWN0ID0gZGlyY2F0LnRp
-dGxlICYgIiBzdGF0aXN0aWNzIHJlcG9ydCAoIiAmIE5vdyAmICIpIgoJQ2FsbCBtZW1vLlNlbmQo
-IEZhbHNlLCBjZmdkb2MuUmVwb3J0UmVjaXBpZW50cykJCQoJCkVuZCBTdWIAfg==
-</rawitemdata></item>
-<item name='$Restricted' sign='true'><number>1</number></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$AssistRunInfo' summary='true'>
-<rawitemdata type='3'>
-BgAAAgAACADCAgAAAAAAAAUAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAvLBlAJ5rJYUeZk0AeGclhQAAAAAAAAAAAAAAAAAAAAAAAAAAqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
-qqqqqqqqqqqqqqqqqqqqqqqq
-</rawitemdata></item>
-<item name='$AssistAction_Ex' sign='true'>
-<rawitemdata type='14'>
-gQKF/zokAAAAAC4kAAABAAACTFNPQgMAFAhlbgAABABIALEKAAAAAGAL4AsEAAAAAACcAKQFSAsA
-ACwAjAEgAEAAAACkAFwAAAAAAAAABAAAAAQAYAcAAAAAAAAAANAG0AYAAAAAAAAAAAAAAAAAAAAA
-BAAEAAAAAAAAAAAAGAdgBwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABwAAAKgApAVMAiADAAAAAPQE9AQAAAAAeAGkBQAA
-AAAAAAAAAAAAAAAAAAAAAAAAqAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAFAExvdHVzIFByb2R1Y3QAAABWMC4w
-AAAAAAAAAAAAAAAAAAAAAAAAAACxCgAAAAAAAGALAADgCwAAAAAAAAAAAAABAAAAAAAAAAAAAAAA
-AAAAAQAAAAAAAAAAAAAABAAAAFczMkklAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAADAOQLAAAAAHgBDQAkAEEAUwBTAEkAUwBUAEEAQwBUAEkATwBOAAAA
-dAADAE4ARQBXAAAAiAAGAEQARQBMAEUAVABFAAAAAACQAAoASQBOAEkAVABJAEEATABJAFoARQAA
-AAAA7AAJAFQARQBSAE0ASQBOAEEAVABFAAAAUAEGAE8AQgBKAEUAQwBUAAAAAADEAgAAAAAAAMQA
-BwBTAEUAUwBTAEkATwBOAAAAPAEMAE4ATwBUAEUAUwBTAEUAUwBTAEkATwBOAAAAAADYAAYAJQBM
-AFMAWABCAEUAAAAAAMwBBgBEAEkAUgBDAEEAVAAAAAAADAENAE4ATwBUAEUAUwBEAEEAVABBAEIA
-QQBTAEUAAAAcAQQATQBFAE0ATwAAAAAAnAENAE4ATwBUAEUAUwBEAE8AQwBVAE0ARQBOAFQAAAC0
-AQYAUgBUAEkAVABFAE0AAAAAAFgEEQBOAE8AVABFAFMAUgBJAEMASABUAEUAWABUAEkAVABFAE0A
-AADEAQYAQwBGAEcARABPAEMAAAAAAGACBABWAEkARQBXAAAAAADkAQkATgBPAFQARQBTAFYASQBF
-AFcAAACsAwQAVABFAE0AUAAAAAAA/AEBAFgAAAA0AgkAVABPAFQAQQBMAFMASQBaAEUAAABwAwgA
-TABFAEYAVABTAEkARABFAAAAAAAUAgkAUgBJAEcASABUAFMASQBEAEUAAABMAwwASABFAEEARABJ
-AE4ARwBTAFQAWQBMAEUAAAAAAIwCEgBOAE8AVABFAFMAUgBJAEMASABUAEUAWABUAFMAVABZAEwA
-RQAAAAAApAITAEMAUgBFAEEAVABFAFIASQBDAEgAVABFAFgAVABTAFQAWQBMAEUAAAAwAwkATgBP
-AFQARQBTAEYATwBOAFQAAACAAwwARgBPAE4AVABfAEMATwBVAFIASQBFAFIAAAAAAOACCgBOAE8A
-VABFAFMAQwBPAEwATwBSAAAAAAAEAw8AQwBPAEwATwBSAF8ARABBAFIASwBfAEIATABVAEUAAAAU
-AwQAQgBPAEwARAAAAAAAMAQLAE4ATwBSAE0AQQBMAFMAVABZAEwARQAAAMADCwBDAE8ATABPAFIA
-XwBCAEwAQQBDAEsAAAAIBQ8AQwBVAFIAUgBFAE4AVABEAEEAVABBAEIAQQBTAEUAAAC8BQQAQgBv
-AGQAeQAAAAAA4AMSAEkAUwBEAEkAUgBFAEMAVABPAFIAWQBDAEEAVABBAEwATwBHAAAAAAAMBAcA
-RwBFAFQAVgBJAEUAVwAAAKAEDQBDAG8AbgBmAGkAZwB1AHIAYQB0AGkAbwBuAAAA3AQTAEkAUwBQ
-AFUAQgBMAEkAQwBBAEQARABSAEUAUwBTAEIATwBPAEsAAACYBQ8AKAAkAEQAaQByAGMAYQB0AEMA
-bwBuAGYAaQBnACkAAAB4BBAARwBFAFQARgBJAFIAUwBUAEQATwBDAFUATQBFAE4AVAAAAAAAeAUM
-AEcARQBUAEkAVABFAE0AVgBBAEwAVQBFAAAAAADMBBAAUgBlAHAAbwByAHQAUgBlAGMAaQBwAGkA
-ZQBuAHQAcwAAAAAAvAQKAEEAUABQAEUATgBEAFQARQBYAFQAAAAAAGgFBQBUAEkAVABMAEUAAAD8
-BAQAIAA+AD4AIAAAAAAAiAcNAEEAUABQAEUATgBEAEQATwBDAEwASQBOAEsAAAAkBQMAIAA8ADwA
-AABABQoAQQBEAEQATgBFAFcATABJAE4ARQAAAAAAjAULAEEAUABQAEUATgBEAFMAVABZAEwARQAA
-ABgGEAAtAC0AIABQAHIAbwBwAGUAcgB0AGkAZQBzACAALQAtAAAAAADoBQUAVABpAHQAbABlAAAA
-1AYGAEEARABEAFQAQQBCAAAAAADUBQIAOgAgAAAAAABQBg4AQQBCAFIAVgBTAEUAUgBWAEUAUgBO
-AEEATQBFAAAAAAAoBgkATgBPAFQARQBTAE4AQQBNAEUAAAAABwYAUwBFAFIAVgBFAFIAAAAAAPwF
-BgBTAGUAcgB2AGUAcgAAAAAAQAYLAEEAQgBCAFIARQBWAEkAQQBUAEUARAAAAGAGBABQAGEAdABo
-AAAAAAC0BggARgBJAEwARQBQAEEAVABIAAAAAACABgQAUwBpAHoAZQAAAAAAlAYEAFMASQBaAEUA
-AAAAAHgGCABTAHQAYQBuAGQAYQByAGQAAAAAACgHAQAuAAAA//8GACAAYgB5AHQAZQBzAAAAAAAU
-CA0AVABvAHQAYQBsACAARQBuAHQAcgBpAGUAcwAAABQHDABUAE8AVABBAEwARQBOAFQAUgBJAEUA
-UwAAAAAAkAcTAC0ALQAgAEMAbwBuAGYAaQBnAHUAcgBhAHQAaQBvAG4AIAAtAC0AAABABwcAVgBl
-AHIAcwBpAG8AbgAAAFwHBwBWAEUAUgBTAEkATwBOAAAAVAgIAFMAbwByAHQAIABLAGUAeQAAAAAA
-VAcHAFMATwBSAFQASwBFAFkAAAAsCAEAMQAAAAwIEgBEAGkAcwB0AGkAbgBnAHUAaQBzAGgAZQBk
-ACAATgBhAG0AZQAAAAAA3AcBADIAAACoBwkATABhAHMAdAAgAE4AYQBtAGUAAACwBwEAMwAAAAAJ
-EgBBAGwAdABlAHIAbgBhAHQAZQAgAEYAdQBsAGwATgBhAG0AZQAAAAAA+AcLAFUAcwBlACAAUwBv
-AHUAbgBkAGUAeAAAACAIBwBTAE8AVQBOAEQARQBYAAAACAkBADAAAABkCAIATgBvAAAAAACcCAMA
-WQBlAHMAAACACBEAUgBlAG0AbwB2AGUAIABkAHUAcABsAGkAYwBhAHQAZQBzAAAALAkFAEQARQBE
-AFUAUAAAANAICwBHAHIAbwB1AHAAIABUAHkAcABlAHMAAABgCQoARwBSAE8AVQBQAFQAWQBQAEUA
-UwAAAAAA3AgWAE0AYQBpAGwAIABhAG4AZAAgAE0AdQBsAHQAaQAtAHAAdQByAHAAbwBzAGUAAAAA
-AMQJAwBBAGwAbAAAAFQJDwBQAGEAYwBrAGkAbgBnACAARABlAG4AcwBpAHQAeQAAAGgKAQA6AAAA
-XAsOAFAAQQBDAEsASQBOAEcARABFAE4AUwBJAFQAWQAAAAAA//8RAFMARQBMAEUAQwBUAEUARABG
-AEkARQBMAEQATABJAFMAVAAAAFgKAgAsACAAAAAAAIQJDwBTAGUAbABlAGMAdABlAGQAIABGAGkA
-ZQBsAGQAcwAAAOAJHAAtAC0AIABEAGkAcgBlAGMAdABvAHIAaQBlAHMAIAB0AG8AIABJAG4AYwBs
-AHUAZABlACAALQAtAAAAAACICgsARABJAFIARQBDAFQATwBSAEkARQBTAAAA7AkDACEAIQAhAAAA
-AAoGAFMATwBVAFIAQwBFAAAAAAAwChQAQQBCAFIAVgBTAE8AVQBSAEMARQBTAEUAUgBWAEUAUgBO
-AEEATQBFAAAAAADYChEAVQBwAGQAYQB0AGUAZAAgAGkAbgAgAEQAaQByAEMAYQB0AAAA//8FAFMA
-SQBOAEMARQAAAOgKDAAtAC0AIABSAGUAcABvAHIAdAAgAC0ALQAAAAAAqAslAFQAbwB0AGEAbAAg
-AHMAaQB6AGUAIABvAGYAIABTAG8AdQByAGMAZQAgAEQAaQByAGUAYwB0AG8AcgBpAGUAcwAgAGkA
-cwA6ACAAAAD//wQAIABpAHMAIAAAAAAA8AoBACUAAABwCzIAIABvAGYAIAB0AGgAZQAgAHMAaQB6
-AGUAIABvAGYAIAB0AGgAZQAgAGQAaQByAGUAYwB0AG8AcgBpAGUAcwAgAHUAcwBlAGQAIAB0AG8A
-IABjAHIAZQBhAHQAZQAgAGkAdAAuAAAAAACgCwcAUwBVAEIASgBFAEMAVAAAALgLFAAgAHMAdABh
-AHQAaQBzAHQAaQBjAHMAIAByAGUAcABvAHIAdAAgACgAAAAAAP//AQApAAAA//8EAFMARQBOAEQA
-AAAAAP//EABSAEUAUABPAFIAVABSAEUAQwBJAFAASQBFAE4AVABTAAAAAAAFAGQLAAAAAPZWbSgI
-AAAA0AYAAEQAAAAAAAAAEAAAAGgBsAoAAAAAEAPUBMQExAT0A/QDPAKwCgAAAADkA+QDAAAAAGgB
-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
-</rawitemdata></item>
-<item name='$AssistVersion'><datetime>20121205T144954,26-05</datetime></item>
-<item name='$Flags'><text>fL3S</text></item>
-<item name='$POID'><datetime>20121205T144954,56-05</datetime></item></note>
+<designchange><datetime>20121205T144954,26-05</datetime></designchange>
+<trigger type='scheduled'>
+<schedule type='weekly' dayofweek='sunday' runlocation='choose'>
+<starttime><datetime>T020000,00</datetime></starttime></schedule></trigger>
+<documentset type='all'/><code event='options'><lotusscript>Option Public
+
+</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+	
+' This agent will query this dircat, and each directory it includes, and email you the resulting information.
+	
+	Dim session As New NotesSession     
+	Dim dircat As NotesDatabase
+	Dim memo As NotesDocument
+	Dim rtitem As NotesRichTextItem
+	Dim cfgdoc As NotesDocument
+	Dim view As NotesView
+	Dim temp As String
+	Dim x As Integer
+	Dim totalsize As Double     
+	Dim leftside As String, rightside As String
+	
+' create rich text style for the headings
+	Dim HeadingStyle As NotesRichTextStyle
+	Set HeadingStyle = session.CreateRichTextStyle
+	HeadingStyle.NotesFont = FONT_COURIER     
+	HeadingStyle.NotesColor = COLOR_DARK_BLUE
+	HeadingStyle.Bold = True
+	
+	Dim NormalStyle As NotesRichTextStyle
+	Set NormalStyle = session.CreateRichTextStyle
+	NormalStyle.NotesFont = FONT_COURIER     
+	NormalStyle.NotesColor = COLOR_BLACK
+	NormalStyle.Bold = False     
+	
+	Set dircat = session.CurrentDatabase
+	Set memo = New NotesDocument( dircat )
+	Set rtitem = New NotesRichTextItem( memo, "Body" )
+	
+' get appropriate view based on database
+	If dircat.IsDirectoryCatalog Then
+		Set view = dircat.GetView("Configuration")
+	Else
+		If dircat.IsPublicAddressBook Then
+			Set view = dircat.GetView("($DircatConfig)")
+		End If
+	End If
+	
+	Set cfgdoc = view.GetFirstDocument     
+	
+	If cfgdoc.GetItemValue("ReportRecipients")(0) = "" Then Exit Sub
+	
+	Call rtitem.AppendText(dircat.title &amp; " &gt;&gt; ")
+	Call rtitem.AppendDocLink( dircat, dircat.Title )
+	Call rtitem.AppendText(" &lt;&lt;")
+	Call rtitem.AddNewLine( 2 )
+	
+' Directory Catalog Section ------------------------------------------------------------               
+	
+	Call rtitem.AppendStyle(HeadingStyle)
+	Call rtitem.AppendText("-- Properties --")
+	Call rtitem.AddNewLine( 1 )
+	
+	Call rtitem.AppendStyle(NormalStyle)
+	Call rtitem.AppendText("Title")
+	Call rtitem.AddTab( 3 )
+	Call rtitem.AppendText(": ")
+	Call rtitem.AppendText(dircat.title)
+	Call rtitem.AddNewLine( 1 )
+	
+	Dim AbrvServerName As New NotesName(dircat.server)
+	Call rtitem.AppendText("Server")
+	Call rtitem.AddTab( 2 )
+	Call rtitem.AppendText(": ")
+	Call rtitem.AppendText(AbrvServerName.abbreviated)
+	Call rtitem.AddNewLine( 1 )     
+	
+	Call rtitem.AppendText("Path")
+	Call rtitem.AddTab( 3 )
+	Call rtitem.AppendText(": ")
+	Call rtitem.AppendText(dircat.filepath)
+	Call rtitem.AddNewLine( 1 )
+	
+	Call rtitem.AppendText("Size")
+	Call rtitem.AddTab( 3 )
+	Call rtitem.AppendText(": ")
+	temp = Format ( dircat.size  , "Standard" )
+	Call rtitem.AppendText(Left ( temp , Instr ( temp , "." ) - 1 ) + " bytes")
+	
+	Call rtitem.AddNewLine( 1 )
+	
+	Call rtitem.AppendText("Total Entries")
+	Call rtitem.AddTab( 1 )
+	Call rtitem.AppendText(": ")
+	Call rtitem.AppendText( Format ( cfgdoc.TotalEntries(0) , "Standard" ) )
+	Call rtitem.AddNewLine( 2 )
+	
+' --------------------------------------------------------------------------------------------
+	
+	Call rtitem.AppendStyle(HeadingStyle)
+	Call rtitem.AppendText("-- Configuration --")
+	Call rtitem.AddNewLine( 1 )
+	
+	Call rtitem.AppendStyle(NormalStyle)     
+	Call rtitem.AppendText("Version")
+	Call rtitem.AddTab( 2 )
+	Call rtitem.AppendText(": ")
+	Call rtitem.AppendText(Cstr(cfgdoc.Version(0) ) )
+	Call rtitem.AddNewLine( 1 )
+	
+'---------------- Directory Catalog specific, skip if working on Domino Directory
+	If dircat.IsDirectoryCatalog Then
+		
+		Call rtitem.AppendText("Sort Key")
+		Call rtitem.AddTab( 2 )
+		Call rtitem.AppendText(": ")
+		If cfgdoc.SortKey(0) = "1" Then
+			Call rtitem.AppendText("Distinguished Name")
+		Elseif cfgdoc.SortKey(0) = "2" Then
+			Call rtitem.AppendText("Last Name")
+		Elseif cfgdoc.SortKey(0) = "3" Then
+			Call rtitem.AppendText("Alternate FullName")		
+		End If
+		Call rtitem.AddNewLine( 1 )
+		
+		Call rtitem.AppendText("Use Soundex")
+		Call rtitem.AddTab( 2 )
+		Call rtitem.AppendText(": ")
+		If cfgdoc.Soundex(0) = "0" Then
+			Call rtitem.AppendText("No")
+		Elseif cfgdoc.Soundex(0) = "1" Then
+			Call rtitem.AppendText("Yes")
+		End If    
+		Call rtitem.AddNewLine( 1 )
+		
+	End If
+	
+	Call rtitem.AppendText("Remove duplicates")
+	Call rtitem.AddTab( 1 )
+	Call rtitem.AppendText(": ")
+	If cfgdoc.DeDup(0) = "0" Then
+		Call rtitem.AppendText("No")
+	Elseif cfgdoc.DeDup(0) = "1" Then
+		Call rtitem.AppendText("Yes")
+	End If    
+	Call rtitem.AddNewLine( 1 )
+	
+	Call rtitem.AppendText("Group Types")
+	Call rtitem.AddTab( 2 )
+	Call rtitem.AppendText(": ")
+	If cfgdoc.GroupTypes(0) = "1" Then
+		Call rtitem.AppendText("Mail and Multi-purpose")
+	Elseif cfgdoc.GroupTypes(0) = "2" Then
+		Call rtitem.AppendText("All")
+	End If    
+	Call rtitem.AddNewLine( 1 )
+	
+'---------------- Directory Catalog specific, skip if working on Domino Directory
+	If dircat.IsDirectoryCatalog Then
+		
+		Call rtitem.AppendText("Packing Density")
+		Call rtitem.AddTab( 1 )
+		Call rtitem.AppendText(":")
+		Call rtitem.AppendText( Str(cfgdoc.PackingDensity(0) ) )
+		Call rtitem.AddNewLine( 1 )
+		
+	End If
+	
+	temp = ""
+	x = 0
+	For x = 0 To Ubound(cfgdoc.SelectedFieldList)
+		temp = temp &amp; cfgdoc.SelectedFieldList(x) &amp; ", "
+	Next
+	Call rtitem.AppendText("Selected Fields")
+	Call rtitem.AddTab( 1 )
+	Call rtitem.AppendText(": ")
+	Call rtitem.AppendText( temp )
+	Call rtitem.AddNewLine( 2 )
+	
+' Included Directories section ------------------------------------------------------------
+	
+	Call rtitem.AppendStyle(HeadingStyle)
+	Call rtitem.AppendText("-- Directories to Include --")
+	
+	Call rtitem.AppendStyle(NormalStyle)     
+	x = 0
+	For x = 0 To Ubound(cfgdoc.Directories)
+		
+		Call rtitem.AddNewLine( 1 )          
+		
+' check to see if cfg.directories contains "!!!"         
+		temp = cfgdoc.Directories(x)
+		If Instr ( cfgdoc.Directories(x) , "!!!" ) =  0 Then  
+			Set source = New NotesDatabase (dircat.server , cfgdoc.Directories(x) )
+			Set AbrvSourceServerName = New NotesName(dircat.server)
+		Else  ' parse the name, to the left is server, to the right is path
+			leftside = (Left ( temp , Instr ( temp , "!!!" ) - 1 ) )
+			rightside = (Mid ( temp , Instr ( temp , "!!!" ) + 3 ) )
+			Set source = New NotesDatabase (leftside , rightside)
+			Set AbrvSourceServerName  = New NotesName(leftside)
+		End If
+		
+		Call rtitem.AppendText(source.title &amp; " &gt;&gt; ")
+		Call rtitem.AppendDocLink( source, source.Title )
+		Call rtitem.AppendText(" &lt;&lt;")
+		Call rtitem.AddNewLine( 1 )
+		
+		Call rtitem.AppendText("Server")
+		Call rtitem.AddTab( 2 )
+		Call rtitem.AppendText(": ")
+		Call rtitem.AppendText(AbrvSourceServerName.abbreviated)
+		Call rtitem.AddNewLine( 1 )          
+		
+		Call rtitem.AppendText("Path")
+		Call rtitem.AddTab( 3 )
+		Call rtitem.AppendText(": ")
+		Call rtitem.AppendText(cfgdoc.Directories(x))
+		Call rtitem.AddNewLine( 1 )
+		
+		Call rtitem.AppendText("Size")
+		Call rtitem.AddTab( 3 )
+		Call rtitem.AppendText(": ")
+		temp = Format ( source.size  , "Standard" )
+		Call rtitem.AppendText(Left ( temp , Instr ( temp , "." ) - 1 ) + " bytes")
+		
+		Call rtitem.AddNewLine( 1 )
+		totalsize = totalsize + source.size
+		
+		Call rtitem.AppendText("Updated in DirCat")
+		Call rtitem.AddTab( 1 )
+		Call rtitem.AppendText(": ")
+		Call rtitem.AppendText(cfgdoc.Since(x) )
+		
+		Call rtitem.AddNewLine( 1 )
+		
+	Next
+	
+' Report Section ------------------------------------------------------------     
+	
+	Call rtitem.AppendStyle(HeadingStyle)
+	Call rtitem.AddNewLine( 1 )
+	Call rtitem.AppendText("-- Report --")
+	Call rtitem.AddNewLine( 1 )
+	
+	Call rtitem.AppendStyle(NormalStyle)
+	temp = Format ( totalsize  , "Standard" )
+	Call rtitem.AppendText("Total size of Source Directories is: " + Left ( temp , Instr ( temp , "." ) - 1 ) + " bytes")
+	Call rtitem.AddNewLine( 1 )
+	
+	Call rtitem.AppendText(dircat.title &amp; " is ")
+	Call rtitem.AppendStyle(HeadingStyle)     
+	Call rtitem.AppendText ( Cstr ( Round ( ( (dircat.size / totalsize ) * 100 ) , 2 ) ) + "%" )
+	Call rtitem.AppendStyle(NormalStyle)     
+	Call rtitem.AppendText( " of the size of the directories used to create it.")
+	Call rtitem.AddNewLine( 1 )
+	
+' Send email section ------------------------------------------------------------
+	
+	memo.Subject = dircat.title &amp; " statistics report (" &amp; Now &amp; ")"
+	Call memo.Send( False, cfgdoc.ReportRecipients)		
+	
+End Sub</lotusscript></code>
+<rundata processeddocs='0' exitcode='0'>
+<agentmodified><datetime dst='true'>20020417T143043,80-04</datetime></agentmodified></rundata>
+<item name='$POID'><datetime>20121205T144954,56-05</datetime></item></agent>
 

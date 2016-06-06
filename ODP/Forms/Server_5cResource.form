@@ -1,71 +1,26 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='4b6' unid='7AE7690FF39E81A78525633500036592' sequence='5121'>
+<form name='Server\Resource' alias='Resource' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' htmlallfields='true'
+ publicaccess='false' designerversion='6.5' language='en'>
+<noteinfo noteid='4b2' unid='7AE7690FF39E81A78525633500036592' sequence='5121'>
 <created><datetime dst='true'>19960524T203706,10-04</datetime></created>
-<modified><datetime dst='true'>20150507T110153,99+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114059,28+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095404,78-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110153,98+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110153,98+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114059,28+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114059,28+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140220,99-04</datetime><datetime
 >20100304T144033,84-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$Author' sign='true'><text>Len Kawell</text></item>
-<item name='Capacity' summary='false' sign='true'><number>0</number></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>Server\Resource</text><text>Resource</text></textlist></item>
-<item name='$FormUsers' sign='true'><text>[NetCreator]</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$SubForms' sign='true'><text>$ResourceExtensibleSchema</text></item>
-<item name='$SubForm_RepIDs' sign='true'><text>0000000000000000</text></item>
-<item name='$WINDOWTITLE' sign='true'><formula>@If(@IsNewDoc; "New Resource"; @Name([Abbreviate];FullName))</formula></item>
-<item name='$HTMLHeadTag' sign='true'><formula>_tDb	:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
-_is6	:= @TextToNumber(@Version) &gt; 171;
+<globals><code event='options'><lotusscript>Option Public
 
-"&lt;meta http-equiv='expires' content='0'&gt;
-&lt;link rel=stylesheet type='text/css' href='/" + _tDb + "/cssForm?ReadForm'&gt;
-&lt;script&gt;
-	var sDefaultView	= 'Mail-In Databases';
-	var sWebDbName		= '/" + _tDb + "/';
-&lt;/script&gt;" +
-@If(_is6;
-	"&lt;script src='/" + _tDb + "/WebJSTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;
-	 &lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
-
-	"&lt;script src='/" + _tDb + "/WebJSNavigationTools5?OpenPage'&gt;&lt;/script&gt;"
-)</formula></item>
-<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></item>
-<item name='$WEBQueryOpen' sign='true'><formula>@If(@IsNewDoc;@Command([ToolsRunMacro]; "(wSetAdminOwnFields)");"")</formula></item>
-<item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>F</text></item>
-<item name='$DesignerVersion' sign='true'><text>6.5</text></item>
-<item name='$Script' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
-Option Public
-
-'++LotusScript Development Environment:2:5:(Forward):0:1
-Declare Function GetString(Index As Integer) As String
-
-'++LotusScript Development Environment:2:5:(Declarations):0:10
-'Resource IDs
+</lotusscript></code><code event='declarations'><lotusscript>'Resource IDs
 'Audio/Video Ids used for Online Meetings
 Const NEITHER_AUDIO_NOR_VIDEO_ID = 0
 Const AUDIO_ID = 1
 Const VIDEO_ID = 2
 Const AUDIO_AND_VIDEO_ID = 3
-'++LotusScript Development Environment:2:1:GetString:1:8
-Function GetString(Index As Integer) As String
+</lotusscript></code><code event='GetString'><lotusscript>Function GetString(Index As Integer) As String
 	
 	Select Case Index
 	Case NEITHER_AUDIO_NOR_VIDEO_ID:
@@ -80,23 +35,26 @@ Function GetString(Index As Integer) As String
 		GetString = "Error: Unknown String"
 	End Select
 	
-End Function<break/></text></item>
-<item name='$$FormScript' summary='false' sign='true'><text>'++LotusScript Development Environment:2:5:(Options):0:66
+End Function</lotusscript></code></globals><code event='windowtitle'><formula
+>@If(@IsNewDoc; "New Resource"; @Name([Abbreviate];FullName))</formula></code><code
+ event='webqueryopen'><formula>@If(@IsNewDoc;@Command([ToolsRunMacro]; "(wSetAdminOwnFields)");"")</formula></code><code
+ event='htmlbody'><formula>"topmargin=0 leftmargin=0 marginheight=0 marginwidth=0"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_f_Resource")</formula></code><code
+ event='htmlhead'><formula>_tDb	:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_is6	:= @TextToNumber(@Version) &gt; 171;
 
-'++LotusScript Development Environment:2:5:(Forward):0:1
-Declare Sub Querysave(Source As Notesuidocument, Continue As Variant)
+"&lt;meta http-equiv='expires' content='0'&gt;
+&lt;link rel=stylesheet type='text/css' href='/" + _tDb + "/cssForm?ReadForm'&gt;
+&lt;script&gt;
+	var sDefaultView	= 'Mail-In Databases';
+	var sWebDbName		= '/" + _tDb + "/';
+&lt;/script&gt;" +
+@If(_is6;
+	"&lt;script src='/" + _tDb + "/WebJSTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;
+	 &lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
 
-'++LotusScript Development Environment:2:5:(Declarations):0:2
-
-'++LotusScript Development Environment:2:2:BindEvents:1:129
-Private Sub BindEvents(Byval Objectname_ As String)
-	Static Source As NOTESUIDOCUMENT
-	Set Source = Bind(Objectname_)
-	On Event Querysave From Source Call Querysave
-End Sub
-
-'++LotusScript Development Environment:2:2:Querysave:1:12
-Sub Querysave(Source As Notesuidocument, Continue As Variant)
+	"&lt;script src='/" + _tDb + "/WebJSNavigationTools5?OpenPage'&gt;&lt;/script&gt;"
+)</formula></code><code event='querysave'><lotusscript>Sub Querysave(Source As Notesuidocument, Continue As Variant)
 	Dim note As NotesDocument
 	Set note=Source.document
 	
@@ -122,678 +80,508 @@ Sub Querysave(Source As Notesuidocument, Continue As Variant)
 	
 	Call note.ReplaceItemValue("AVSlctLst",AudioVideoOptions)
 	
-End Sub<break/></text></item>
-<item name='$AppHelpFormula' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_f_Resource")</formula></item>
-<item name='ResourceType' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailDomain' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='FullName' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailServer' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='ConfDB' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='MailFile' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='SametimeServer' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AudioFlg' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='VidFlg' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AVFlg' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
+End Sub</lotusscript></code>
+<actionbar useappletinbrowser='true' bgcolor='#b1b1d2' bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Edit Resource' showinmenu='false' hide='edit previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Edit Resource' showinmenu='false' hide='edit previewedit notes'><imageref
+ name='btnEdit.gif'/><code event='onClick' for='web'><javascript>ntEditDoc('[NetModifier]')</javascript></code></action>
+<action title='Save &amp; Close' showinmenu='false' hide='preview read previewedit web'><imageref
+ name='btnSave.gif'/><code event='click'><formula>@PostedCommand([FileSave]);
+@PostedCommand([FileCloseWindow])</formula></code></action>
+<action title='Save &amp; Close' showinmenu='false' hide='preview read previewedit notes'><imageref
+ name='btnSave.gif'/><code event='onClick' for='web'><javascript>ntSaveAndClose()
+</javascript></code></action>
+<action title='Refresh' showinmenu='false' hide='preview read notes'><imageref
+ name='btnRefresh.gif'/><code event='click'><formula>@Command([ViewRefreshFields])</formula></code></action>
+<action title='Cancel' showinmenu='false' hide='preview previewedit web'><imageref
+ name='btnCancel.gif'/><code event='click'><formula>REM {Notes only};
+FIELD SaveOptions := 0;
+@Command([FileCloseWindow])</formula></code></action>
+<action title='Cancel' showinmenu='false' hide='notes'><imageref name='btnCancel.gif'/><code
+ event='onClick' for='web'><javascript>ntCancel()</javascript></code></action>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<body><richtext>
+<pardef id='1' align='none' leftmargin='1in' hide='notes web mobile'/>
+<par def='1'><run html='true'><font size='9pt'/></run><run html='true'><font
+ size='9pt'/><sharedfieldref name='$HTMLAttributes'/></run><run html='true'><font
+ size='9pt'/></run></par>
+<table widthtype='fitwindow' extrahtmlattrs='cellpadding=10' leftmargin='0.7500in'
+ refwidth='7.8021in'><tablecolumn width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<cellbackground repeat='hrepeat'><imageref name='location'/></cellbackground>
+<pardef id='3' leftmargin='0.0104in' hide='web' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt'/> </run></par>
+<pardef id='4' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font size='14pt' style='bold' color='#424282'/>  </run><run
+><font size='14pt' color='#424282'/>Resource</run><run><font size='14pt' color='#424282'
+ style='bold'/><field type='names' kind='computedfordisplay' name='DisplayName'
+ htmlid='DisplayName'><code event='defaultvalue'><formula>@If(FullName = ""; ""; ": " + @Name([Abbreviate];@Subset(FullName;1)))</formula></code></field></run></par>
+<pardef id='5' leftmargin='0.0104in' hide='web' keepwithnext='true' keeptogether='true'/>
+<par def='5'><run><font size='9pt'/>  </run></par></tablecell></tablerow></table>
+<pardef id='6' leftmargin='0.7500in' hide='notes web'/>
+<par def='6'><run><font size='9pt'/></run></par>
+<table widthtype='fitwindow' rowdisplay='tabscompute' htmlid='SrvrRes' extrahtmlattrs='cellpadding=7'
+ leftmargin='0.7500in' refwidth='7.8007in'><tablerowstyle><font size='9pt'
+ color='black'/></tablerowstyle><tablecolumn width='100%'/>
+<tablerow tablabel='Basics'>
+<tablecell borderwidth='0px'>
+<pardef id='8' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='8'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' cellbordercolor='silver' htmlclass='TableSpacing'
+ leftmargin='0.1000in' rightmargin='99%' rowspacing='0.0201in' refwidth='7.6229in'><tablecolumn
+ width='1.5000in'/><tablecolumn width='49.8368%'/><tablecolumn width='0.1250in'/><tablecolumn
+ width='1.5000in'/><tablecolumn width='50.1632%'/>
+<tablerow>
+<tablecell valign='center' borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='10' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='10'><run><font size='9pt' style='bold' color='white'/>Basics</run></par></tablecell>
+<tablecell valign='center' borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='11' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='11'><run><font size='9pt' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='12' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='12'><run><font size='9pt' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='13' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='13'><run><font size='9pt' style='bold' color='white'/>Location</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='14' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='14'><run><font size='9pt' style='bold' color='#f7f7f7'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='0px 0px 1px'>
+<pardef id='15' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='15'><run><font size='9pt'/>Resource type:</run></par></tablecell>
+<tablecell valign='center' borderwidth='0px 0px 1px'>
+<pardef id='16' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='16'><run><font size='9pt'/></run><run><font size='9pt'/><field lookupeachchar='false'
+ lookupaddressonrefresh='false' type='keyword' kind='editable' name='ResourceType'><keywords
+ recalconchange='true' columns='1' ui='dialoglist'><textlist><text>Room|1</text><text
+>Resource|2</text><text>Online Meeting|3</text></textlist></keywords><code
+ event='defaultvalue'><formula>"1"</formula></code></field></run><run><font
+ size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='12'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='17' leftmargin='0.0597in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='17'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the domain name of the server on which the database resides - e.g. Acme.</popuptext><run
+><font size='9pt'/>Domain:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='18' leftmargin='0.0597in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='18'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' protected='true' name='MailDomain' description='Domain name of server on which database resides - e.g. Acme.'><code
+ event='htmlattributes'><formula>htmlInputL</formula></code><code event='defaultvalue'><formula
+>@Domain</formula></code><code event='inputvalidation'><formula>L_ERR_MSG := "You must enter a domain before saving the document.";
+
+sMsg := @If(MailDomain=""; L_ERR_MSG; "");
+
+REM {return error message};
+_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_tMsg  := @ReplaceSubstring(sMsg; "\\":"'":"\""; "%5C":"%27":"%22");
+_tWeb1 := "&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+_tWeb2 := "&lt;script&gt;ntValidationFailure('" + _tMsg + "');&lt;/script&gt;";
+_tWeb  := _tWeb1 + _tWeb2;
+
+@If(sMsg = "";
+	@Success;
+	@Failure(@If(@ClientType = "Notes"; sMsg; _tWeb)))</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='10'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the name used to mail documents to the database - e.g. Sales News.</popuptext><run
+><font size='9pt'/>Resource name</run></popup><run><font size='9pt'/>:</run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<pardef id='19' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='19'><run><font size='9pt'/></run><run><font size='9pt'/><field lookupeachchar='false'
+ lookupaddressonrefresh='false' type='names' allowmultivalues='true' kind='editable'
+ protected='true' name='FullName' description='Name used to mail documents to database - e.g. Sales News.'
+ listinputseparators='semicolon newline blankline' listdisplayseparator='newline'><code
+ event='htmlattributes'><formula>htmlTextarea2L</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='12'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the distinguished name of the server on which  the database resides - e.g. Server1/Sales/Acme.</popuptext><run
+><font size='9pt'/>Server:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field choicesdialog='addressbook'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='names' kind='editable'
+ protected='true' name='MailServer' description='Distinguished name of server on which database resides - e.g. Server1/Sales/Acme.'><keywords
+ columns='1' ui='dialoglist' allownew='true'/><code event='htmlattributes'><formula
+>htmlInputL</formula></code><code event='inputtranslation'><formula>@Trim(MailServer)</formula></code><code
+ event='inputvalidation'><formula>L_ERR_MSG := "You must enter a server name before saving the document.";
+
+sMsg := @If(MailServer=""; L_ERR_MSG; "");
+
+REM {return error message};
+_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_tMsg  := @ReplaceSubstring(sMsg; "\\":"'":"\""; "%5C":"%27":"%22");
+_tWeb1 := "&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+_tWeb2 := "&lt;script&gt;ntValidationFailure('" + _tMsg + "');&lt;/script&gt;";
+_tWeb  := _tWeb1 + _tWeb2;
+
+@If(sMsg = "";
+	@Success;
+	@Failure(@If(@ClientType = "Notes"; sMsg; _tWeb)))</formula></code></field></run><run
+ html='true'><font size='9pt'/></run><run html='true'><font size='9pt'/><computedtext
+><code event='value'><formula>REM {Web address picker};
+
+@If(@ClientType = "Notes" | !@IsDocBeingEdited; @Return(""); "");
+
+
+_tLabelOneItem	:= "server";
+
+
+REM {DNT};
+_tFieldName	:= "MailServer";
+_tDb   		:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+
+"&lt;a onclick=\"
+
+	var hDlg = window.hDlgAddrSingle;
+
+	hDlg.sMsgOneEntry	= '"+ _tLabelOneItem +"';
+	hDlg.hDestField	= document.forms[0]." + _tFieldName + ";
+
+	hDlg.dlOpen();
+
+	return false;
+
+\" href=\"\"&gt;&lt;img src=\"/" + _tDb + "/btnPicker.gif?OpenImageResource\" width=\"15\" height=\"11\" border=\"0\" alt=\"\"&gt;&lt;/a&gt;"</formula></code></computedtext></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='1px 0px'>
+<pardef id='20' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ResourceType!="3"</formula></code></pardef>
+<par def='20'><run><font size='9pt'/>Online Meeting Database:</run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<pardef id='21' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ResourceType!="3"</formula></code></pardef>
+<par def='21'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='ConfDB'><code event='htmlattributes'><formula>htmlInputL</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='12'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='22' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='22'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the database path name - e.g. NEWS.</popuptext><run><font size='9pt'/>File name:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='23' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='23'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' protected='true' name='MailFile' description='Database path name - e.g. NEWS.'><code
+ event='htmlattributes'><formula>htmlInputL</formula></code><code event='inputtranslation'><formula
+>@Trim(MailFile)</formula></code><code event='inputvalidation'><formula>L_ERR_MSG := "You must enter a filename before saving the document.";
+
+sMsg := @If(MailFile=""; L_ERR_MSG; "");
+
+REM {return error message};
+_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_tMsg  := @ReplaceSubstring(sMsg; "\\":"'":"\""; "%5C":"%27":"%22");
+_tWeb1 := "&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+_tWeb2 := "&lt;script&gt;ntValidationFailure('" + _tMsg + "');&lt;/script&gt;";
+_tWeb  := _tWeb1 + _tWeb2;
+
+@If(sMsg = "";
+	@Success;
+	@Failure(@If(@ClientType = "Notes"; sMsg; _tWeb)))</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='20'><run><font size='9pt'/>Sametime Server:</run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='21'><run><font size='9pt'/></run><run><font size='9pt'/><field choicesdialog='addressbook'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='names' kind='editable'
+ name='SametimeServer'><keywords columns='1' ui='dialoglist' allownew='true'/><code
+ event='htmlattributes'><formula>htmlInputL</formula></code></field></run><run
+ html='true'><font size='9pt'/></run><run html='true'><font size='9pt'/><computedtext
+><code event='value'><formula>REM {Web address picker};
+
+@If(@ClientType = "Notes" | !@IsDocBeingEdited; @Return(""); "");
+
+
+_tLabelOneItem	:= "server";
+
+
+REM {DNT};
+_tFieldName	:= "SametimeServer";
+_tDb   		:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+
+"&lt;a onclick=\"
+
+	var hDlg = window.hDlgAddrSingle;
+
+	hDlg.sMsgOneEntry	= '"+ _tLabelOneItem +"';
+	hDlg.hDestField	= document.forms[0]." + _tFieldName + ";
+
+	hDlg.dlOpen();
+
+	return false;
+
+\" href=\"\"&gt;&lt;img src=\"/" + _tDb + "/btnPicker.gif?OpenImageResource\" width=\"15\" height=\"11\" border=\"0\" alt=\"\"&gt;&lt;/a&gt;"</formula></code></computedtext></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='12'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='24' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula>ResourceType!="3"</formula></code></pardef>
+<par def='24'><run><font size='9pt'/>Audio Video Support:</run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<pardef id='25' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula>ResourceType!="3"</formula></code></pardef>
+<par def='25'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' allowmultivalues='true'
+ kind='editable' name='AudioFlg' listinputseparators='comma' listdisplayseparator='comma'><keywords
+ helperbutton='false' columns='1' ui='checkbox'><formula>"Audio | 1"</formula></keywords></field></run><run
+><font size='9pt'/></run></par>
+<pardef id='26' leftmargin='0.0597in' rightmargin='100%' hide='notes web mobile'
+ keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula>ResourceType!="3"</formula></code></pardef>
+<par def='26'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' allowmultivalues='true'
+ kind='editable' name='VidFlg' listinputseparators='comma' listdisplayseparator='comma'><keywords
+ helperbutton='false' columns='1' ui='checkbox'><formula>"Video | 1"</formula></keywords></field></run><run
+><font size='9pt'/></run></par>
+<par def='21'><run><font size='9pt'/></run><run><font size='9pt'/><field borderstyle='none'
+ lookupeachchar='false' lookupaddressonrefresh='false' type='keyword' allowmultivalues='true'
+ kind='editable' name='AVFlg' listinputseparators='comma' listdisplayseparator='comma'><keywords
+ helperbutton='false' columns='1' ui='checkbox'><formula>"Audio and Video | 1"</formula></keywords></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='12'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='1px 0px'>
+<pardef id='27' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ResourceType="2" | ResourceType="3"</formula></code></pardef>
+<par def='27'><run><font size='9pt'/>Capacity:</run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<pardef id='28' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ResourceType="2" | ResourceType="3"</formula></code></pardef>
+<par def='28'><run><font size='9pt'/></run><run><font size='9pt'/><field type='number'
+ kind='editable' name='ResourceCapacity'><numberformat format='fixed' punctuated='false'
+ parens='false' percent='false' bytes='false'/><code event='htmlattributes'><formula
+>htmlInputS</formula></code><code event='defaultvalue'><formula>ResourceCapacity</formula></code></field></run><run
+><font size='9pt' style='bold'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='12'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='10'><run><font size='9pt'/>Resource</run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter a description for this mail-in database.</popuptext><run><font size='9pt'/> description:</run></popup><run
+><font size='9pt' style='bold'/></run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='19'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='editable' name='Description' description='Description of mail-in database.'
+ listinputseparators='semicolon newline blankline' listdisplayseparator='newline'><code
+ event='htmlattributes'><formula>htmlTextarea5XL</formula></code></field></run><run
+><font size='9pt' style='bold'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='12'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='10'><run><font size='9pt'/>Internet Address:</run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<par def='19'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' protected='true' name='InternetAddress' htmlid='InternetAddress'><code
+ event='htmlattributes'><formula>htmlInputXL</formula></code><code event='inputvalidation'><formula
+>L_ERR_MSG := @If(@TextToNumber(@Version)&lt;161;"";@IsNotMember(MailSystem;"1":"2":"6");"";@ValidateInternetAddress([Address821];InternetAddress));
+
+sMsg := @If(InternetAddress=""; ""; L_ERR_MSG=""; ""; "Error:"+L_ERR_MSG);
+
+REM {return error message};
+_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_tMsg  := @ReplaceSubstring(sMsg; "\\":"'":"\""; "%5C":"%27":"%22");
+_tWeb1 := "&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+_tWeb2 := "&lt;script&gt;ntValidationFailure('" + _tMsg + "');&lt;/script&gt;";
+_tWeb  := _tWeb1 + _tWeb2;
+
+@If(sMsg = "";
+	@Success;
+	@Failure(@If(@ClientType = "Notes"; sMsg; _tWeb)))</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='12'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='29' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='29'><run><font size='9pt'/>Comments:</run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<pardef id='30' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='30'><run><font size='9pt'/></run><run><font size='9pt'/><field type='richtext'
+ kind='editable' name='Comments'><code event='htmlattributes'><formula>htmlTextarea5XL</formula></code></field></run><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='12'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='22'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='23'><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='31' leftmargin='0.1500in' keepwithnext='true' keeptogether='true'/>
+<par def='31'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow tablabel='Other'>
+<tablecell borderwidth='0px'>
+<par def='8'><run><font size='9pt'/></run></par>
+<pardef id='32' leftmargin='1%' keepwithnext='true' keeptogether='true'/><subformref
+ name='$ResourceExtensibleSchema'/>
+<par def='32'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow tablabel='Administration'>
+<tablecell borderwidth='0px'>
+<par def='8'><run><font size='9pt'/></run></par>
+<table cellbordercolor='silver' htmlclass='TableSpacing' leftmargin='0.1000in'
+ rightmargin='50%' widthtype='fixedleft' rowspacing='0.0201in' refwidth='5.5000in'><tablecolumn
+ width='1.5000in'/><tablecolumn width='4in'/>
+<tablerow>
+<tablecell valign='center' borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='34' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='34'><run><font size='9pt' style='bold' color='white'/>Administration</run></par></tablecell>
+<tablecell valign='center' borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='35' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='35'><run><font size='9pt' style='bold' color='#f7f7f7'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='36' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='36'><run><font size='9pt'/>Owners:</run></par></tablecell>
+<tablecell valign='center' borderwidth='0px 0px 1px'>
+<pardef id='37' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='37'><run><font size='9pt'/></run><run><font size='9pt'/><sharedfieldref
+ name='Owner'/></run><run html='true'><font size='9pt'/></run><run html='true'><font
+ size='9pt'/><computedtext><code event='value'><formula>REM {Web address picker};
+
+@If(@ClientType = "Notes" | !@IsDocBeingEdited; @Return(""); "");
+
+
+_tLabelOneItem	:= "owner";
+
+
+REM {DNT};
+_tFieldName	:= "Owner";
+_tDb   		:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+
+"&lt;a onclick=\"
+
+	var hDlg = window.hDlgAddrMulti;
+
+	hDlg.sMsgOneEntry	= '"+ _tLabelOneItem +"';
+	hDlg.hDestField	= document.forms[0]." + _tFieldName + ";
+	hDlg.dlOpen();
+
+	return false;
+
+\" href=\"\"&gt;&lt;img src=\"/" + _tDb + "/btnPicker.gif?OpenImageResource\" width=\"15\" height=\"11\" border=\"0\" alt=\"\"&gt;&lt;/a&gt;"</formula></code></computedtext></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='38' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='38'><run><font size='9pt'/>Administrators:</run></par></tablecell>
+<tablecell valign='center' borderwidth='1px 0px'>
+<pardef id='39' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='39'><run><font size='9pt'/></run><run><font size='9pt'/><sharedfieldref
+ name='LocalAdmin'/></run><run html='true'><font size='9pt'/></run><run html='true'><font
+ size='9pt'/><computedtext><code event='value'><formula>REM {Web address picker};
+
+@If(@ClientType = "Notes" | !@IsDocBeingEdited; @Return(""); "");
+
+
+_tLabelOneItem	:= "administrator";
+
+
+REM {DNT};
+_tFieldName	:= "LocalAdmin";
+_tDb   		:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+
+"&lt;a onclick=\"
+
+	var hDlg = window.hDlgAddrMulti;
+
+	hDlg.sMsgOneEntry	= '"+ _tLabelOneItem +"';
+	hDlg.hDestField	= document.forms[0]." + _tFieldName + ";
+	hDlg.dlOpen();
+
+	return false;
+
+\" href=\"\"&gt;&lt;img src=\"/" + _tDb + "/btnPicker.gif?OpenImageResource\" width=\"15\" height=\"11\" border=\"0\" alt=\"\"&gt;&lt;/a&gt;"</formula></code></computedtext></run><run
+><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='29'><run><font size='9pt'/>Last updated:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='40' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='40'><run><font size='9pt'/></run><run><font size='9pt'/><sharedfieldref
+ name='LastMod'/></run><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='32'><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='41' leftmargin='2.7500in' firstlineleftmargin='1.2500in' hide='read edit preview previewedit'/>
+<par def='41'/>
+<pardef id='42' leftmargin='1in' hide='read edit preview previewedit'/>
+<par def='42'><run><font size='8pt'/></run><run><font size='8pt'/><field type='text'
+ kind='computedwhencomposed' protected='true' name='Type'><code event='defaultvalue'><formula
+>"Database"</formula></code></field></run><run><font size='8pt'/></run><run
+><font size='8pt'/><sharedfieldref name='DocumentAccess'/></run><run><font
+ size='8pt'/></run><run><font size='8pt'/><field type='text' kind='computed'
+ name='ResourceFlag'><code event='defaultvalue'><formula>"1"</formula></code></field></run><run
+><font size='8pt'/></run><run><font size='8pt'/><field type='text' kind='computedfordisplay'
+ name='$$Return'><code event='defaultvalue'><formula>_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+
+"&lt;link rel=stylesheet type='text/css' href='/" + _tDb + "/cssForm?ReadForm'&gt;
+&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;
+&lt;script&gt;
+	sWebDbName = '/" + _tDb + "/';
+	ntReturn();
+&lt;/script&gt;"</formula></code></field></run><run><font size='8pt'/></run><run
+><font size='8pt'/><field type='text' kind='editable' name='AVSlctLst'><code
+ event='defaultvalue'><formula>""</formula></code></field></run><run><font
+ size='8pt'/></run></par>
+<par def='42'><run><font size='8pt' color='blue'/></run><run><font size='8pt'
+ color='blue'/><field type='number' kind='editable' name='$SrvrRes'><numberformat
+ format='general' digits='2' punctuated='false' parens='false' percent='false'
+ bytes='false'/><code event='defaultvalue'><formula>0</formula></code></field></run><run
+><font size='8pt'/></run></par></richtext></body>
+<item name='$Author' sign='true'><text>Len Kawell</text></item>
+<item name='Capacity' summary='false' sign='true'><number>0</number></item>
+<item name='$FormUsers' sign='true'><text>[NetCreator]</text></item>
+<item name='$SubForm_RepIDs' sign='true'><text>0000000000000000</text></item>
 <item name='ResourceCapacity' summary='false' sign='true'><number>0</number></item>
-<item name='Description' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='InternetAddress' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Comments' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Owner' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='LocalAdmin' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Type' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='DocumentAccess' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='ResourceFlag' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='AVSlctLst' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
 <item name='$SrvrRes' summary='false' sign='true'><number>0</number></item>
-<item name='$FIELDS'><textlist><text>$SrvrRes</text><text>AVSlctLst</text><text
->ResourceFlag</text><text>DocumentAccess</text><text>Type</text><text>LocalAdmin</text><text
->Owner</text><text>Comments</text><text>InternetAddress</text><text>Description</text><text
->ResourceCapacity</text><text>AVFlg</text><text>VidFlg</text><text>AudioFlg</text><text
->SametimeServer</text><text>MailFile</text><text>ConfDB</text><text>MailServer</text><text
->FullName</text><text>MailDomain</text><text>ResourceType</text></textlist></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-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
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAAGAL7/RAAAAAEAAACOQBAADQAAAAAAAABFZGl0IFJl
-c291cmNlACAAAAASAAIA6AcAAAAAAADtAQMABwAMAAUACTBTMEUAvv8kAAAABwAAAI4gEAANAAAA
-AAAAAEVkaXQgUmVzb3VyY2UAvv9eAAAAAQAAAJJAEAAMAAAAAAAAAFNhdmUgJiBDbG9zZTwACAAS
-AAIAxgsAAAAAAACxAQMABwAMAAUACTBTMEUAAAASAAIA/BEAAAAAAACxAQMABwAKAAMACTBSAL7/
-IgAAAAcAAACSIBAADAAAAAAAAABTYXZlICYgQ2xvc2W+/z4AAAABAAAAkiEQAAcAAAAfAAAAUmVm
-cmVzaAAgAAAAEgACAIsTAAAAAAAA7QEDAAcADAAFAAkwUzBFAL7/ggAAAAEAAACaQBAABgAAABoA
-AABDYW5jZWxmAAcAEAAKAE5vdGVzIG9ubHkHAAoAAwAJMVMAAwAeAAsAU2F2ZU9wdGlvbnMAAAAA
-AAAAAAAAAAMABwAQAAkACTBSMVMyUzNTAAAAEgACAPwRAAAAAAAA7QEDAAcACgADAAkwUgC+/xwA
-AAAHAAAAniEQAAYAAAAAAAAAQ2FuY2Vsvv8mAAAABQAAAJ0BAAALAAAAAAAAAENhdGVnb3JpX3pl
-AAgATny+/ygAAAAFAAAAnQEAAA4AAAAAAAAAX0VkaXQgRG9jdW1lbnQJAAIKvv8oAAAABQAAAJ0B
-AAAOAAAAAAAAAFNlbmQgRG9jdV9tZW50CgADCr7/IgAAAAUAAACdAQAACAAAAAAAAABfRm9yd2Fy
-ZAsABAq+/ywAAAAFAAAAnQEAABIAAAAAAAAAX01vdmUgVG8gRm9sZGVyLi4uDAA9fL7/LgAAAAUA
-AACdAQAAEwAAAAAAAABfUmVtb3ZlIEZyb20gRm9sZGVyAA0APnw=
-</rawitemdata></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>Resource</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAEAAAAAAAAAKAFAACgBQAA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAACBAAAAAJWEoAUKAKAFCgAAAGQAAQAAAAYAAACDBAEAzP8IAAAAAACF/wgAAQAACd0G
-AACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv/EFYAJAAUAMAAACAAAAAACAQAACZAVAAAAAAAA
-DwAAAAAAkBUKAAQABwAwACoAIGRlZmluZSBIVE1MIGZpZWxkIGF0dHJpYnV0ZXMgZm9yIHRoZSB3
-ZWIgBwAKAAMACTFTAAgASAD7AAUBAQAFAE5vdGVzAAoCvwBYAQAAAAAAAABgZUAOAh0C4wAeAR0C
-rwAYAAwAAQAAAMIBrgAMAAEAAACuAAQAtQMDAAcAJAAdAAkwUlIzUzRTNVM2UzEwUzExUzEzUzE2
-UlQyMVJUAAEAMAAFAF9pc05OAAEACwBCcm93c2VyVHlwZQD7ARABAQAIAE5ldHNjYXBlCgIDAAcA
-EgAMAAkwUlIxVDJTNlM3UwEANgAGAF9pc05ONAUABQBfaXNOTgABAAcAVmVyc2lvbgD7ARABAAAA
-AAAAAAAUQA4CHAIDAAcAFgAPAAkwUjFUMlMzUzRTOFM5UwABADgABwBfaXNOTjRYAAUABgBfaXNO
-TjQBAAoAdXNlci1hZ2VudPsBLgEBAAMAWDExAEcCHAIDAAcAFAAOAAkwUjFUMlMzUzRTMTFTBwAM
-AAUAIENTUyAABwAMAAYACTBSUjFTAQAqAAkAX3RXaWR0aFhTAAEAEwBzdHlsZT0nd2lkdGg6MjVw
-eDsnAAMABwAOAAgACTBSMVRUMlMBACgACABfdFdpZHRoUwEAEwBzdHlsZT0nd2lkdGg6NTBweDsn
-AAMABwAOAAgACTBSMVRUMlMBACgACABfdFdpZHRoTQEAFABzdHlsZT0nd2lkdGg6MTAwcHg7JwMA
-BwAOAAgACTBSMVRUMlMBACgACABfdFdpZHRoTAEAFABzdHlsZT0nd2lkdGg6MTcwcHg7JwMABwAO
-AAgACTBSMVRUMlMBACoACQBfdFdpZHRoWEwAAQAUAHN0eWxlPSd3aWR0aDoyNTBweDsnAwAHAA4A
-CAAJMFIxVFQyUwEAKgAKAF90V2lkdGhYWEwBABQAc3R5bGU9J3dpZHRoOjQwMHB4OycDAAcADgAH
-AAkwUjFUMlMABwASAAwAIE5FVFNDQVBFIDQgBwAMAAYACTBSUjFTAQBIAAsAX3RTaXplTk40WFMA
-AQAFAHNpemU9AAUABwBfaXNOTjRYAK8AGgAMAAEAAQAzAK4ADgABAAEANgCuAAQAtQMiAgMABwAW
-ABAACTBSMVQyUzNTNFM4UzEwUwEARgAKAF90U2l6ZU5ONFMBAAUAc2l6ZT0ABQAHAF9pc05ONFgA
-rwAaAAwAAQABADYArgAOAAEAAgAxMq4ABAC1AyICAwAHABYAEAAJMFIxVDJTM1M0UzhTMTBTAQBG
-AAoAX3RTaXplTk40TQEABQBzaXplPQAFAAcAX2lzTk40WACvABoADAABAAIAMTWuAA4AAQACADMw
-rgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBAEYACgBfdFNpemVOTjRMAQAFAHNpemU9
-AAUABwBfaXNOTjRYAK8AGgAMAAEAAgAyNa4ADgABAAIANTCuAAQAtQMiAgMABwAWABAACTBSMVQy
-UzNTNFM4UzEwUwEASAALAF90U2l6ZU5ONFhMAAEABQBzaXplPQAFAAcAX2lzTk40WACvABoADAAB
-AAIANDCuAA4AAQACADgwrgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBAEoADABfdFNp
-emVOTjRYWEwBAAUAc2l6ZT0ABQAHAF9pc05ONFgArwAcAAwAAQACADY1rgAQAAEAAwAxMzAArgAE
-ALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBAEYACgBfdENvbHNOTjRTAQAFAGNvbHM9AAUA
-BwBfaXNOTjRYAK8AGgAMAAEAAQA4AK4ADgABAAIAMTWuAAQAtQMiAgMABwAYABEACTBSUjFUMlMz
-UzRTOFMxMFMAAQBGAAoAX3RDb2xzTk40TQEABQBjb2xzPQAFAAcAX2lzTk40WACvABoADAABAAIA
-MTWuAA4AAQACADMwrgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBAEYACgBfdENvbHNO
-TjRMAQAFAGNvbHM9AAUABwBfaXNOTjRYAK8AGgAMAAEAAgAyNa4ADgABAAIANTCuAAQAtQMiAgMA
-BwAWABAACTBSMVQyUzNTNFM4UzEwUwEASAALAF90Q29sc05ONFhMAAEABQBjb2xzPQAFAAcAX2lz
-Tk40WACvABoADAABAAIANDCuAA4AAQACADgwrgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMx
-MFMBAEoADABfdENvbHNOTjRYWEwBAAUAY29scz0ABQAHAF9pc05ONFgArwAcAAwAAQACADY1rgAQ
-AAEAAwAxMzAArgAEALUDIgIDAAcAFgAQAAkwUjFUMlMzUzRTOFMxMFMBACAACwBfdFdpZHRoTk40
-UwABAAgAd2lkdGg9NTADAAcADgAIAAkwUlIxVDJTAQAiAAsAX3RXaWR0aE5ONE0AAQAJAHdpZHRo
-PTEwMAADAAcADgAHAAkwUjFUMlMAAQAiAAsAX3RXaWR0aE5ONEwAAQAJAHdpZHRoPTE2MgADAAcA
-DgAHAAkwUjFUMlMAAQAiAAwAX3RXaWR0aE5ONFhMAQAJAHdpZHRoPTI1MAADAAcADgAHAAkwUjFU
-MlMAAQAkAA0AX3RXaWR0aE5ONFhYTAABAAkAd2lkdGg9NDAwAAMABwAOAAcACTBSMVQyUwAHAEYA
-QAAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gQlJPV1NFUlNOSUZGRVIgLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0gBwAMAAYACTBSUjFTAwBGAAUAaXNOTjQAbwCvADQACAAoAK4ALAAFAAYAX2lzTk40
-rwAYAAwAAQABADEArgAMAAEAAACuAAQAtQOuAAQAtQMDAAcAHAAWAAkwUlIxUzJUVFQzUzdTOVMx
-M1MxNVMHAD4ANwAgLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0gSU5QVVQgLS0tLS0tLS0tLS0tLS0t
-LS0tLS0tLS0gAAcADAAGAAkwUlIxUwMAYAALAGh0bWxJbnB1dFhTAG8ArwBIAAgAKACuAEAABQAG
-AF9pc05ONK8ALAAWAAUACwBfdFNpemVOTjRYUwCuABYABQAJAF90V2lkdGhYUwCuAAQAtQOuAAQA
-tQMDAAcAHAAVAAkwUlIxUzJUVDNTN1M5UzEzUzE1UwADAFoACgBodG1sSW5wdXRTbwCvAEQACAAo
-AK4APAAFAAYAX2lzTk40rwAoABQABQAKAF90U2l6ZU5ONFOuABQABQAIAF90V2lkdGhTrgAEALUD
-rgAEALUDAwAHABoAFAAJMFIxUzJUVDNTN1M5UzEzUzE1UwMAWgAKAGh0bWxJbnB1dE1vAK8ARAAI
-ACgArgA8AAUABgBfaXNOTjSvACgAFAAFAAoAX3RTaXplTk40Ta4AFAAFAAgAX3RXaWR0aE2uAAQA
-tQOuAAQAtQMDAAcAGgAUAAkwUjFTMlRUM1M3UzlTMTNTMTVTAwBaAAoAaHRtbElucHV0TG8ArwBE
-AAgAKACuADwABQAGAF9pc05ONK8AKAAUAAUACgBfdFNpemVOTjRMrgAUAAUACABfdFdpZHRoTK4A
-BAC1A64ABAC1AwMABwAaABQACTBSMVMyVFQzUzdTOVMxM1MxNVMDAGAACwBodG1sSW5wdXRYTABv
-AK8ASAAIACgArgBAAAUABgBfaXNOTjSvACwAFgAFAAsAX3RTaXplTk40WEwArgAWAAUACQBfdFdp
-ZHRoWEwArgAEALUDrgAEALUDAwAHABoAFAAJMFIxUzJUVDNTN1M5UzEzUzE1UwMAYAAMAGh0bWxJ
-bnB1dFhYTG8ArwBIAAgAKACuAEAABQAGAF9pc05ONK8ALAAWAAUADABfdFNpemVOTjRYWEyuABYA
-BQAKAF90V2lkdGhYWEyuAAQAtQOuAAQAtQMDAAcAGgAUAAkwUjFTMlRUM1M3UzlTMTNTMTVTBwBA
-ADoAIC0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tIFRFWFRBUkVBIC0tLS0tLS0tLS0tLS0tLS0tLS0t
-LS0tIAcADAAGAAkwUlIxUwMAbAAOAGh0bWxUZXh0QXJlYTJTbwCvAFIACAAoAK4ASgABAAcAcm93
-cz0yIAAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05ONFOuABQABQAIAF90V2lkdGhTrgAEALUD
-IgKuAAQAtQMDAAcAIgAbAAkwUlIxUzJTVDNTN1M5UzEwUzExUzE1UzE3UwADAGwADgBodG1sVGV4
-dEFyZWEyTW8ArwBSAAgAKACuAEoAAQAHAHJvd3M9MiAABQAGAF9pc05ONK8AKAAUAAUACgBfdENv
-bHNOTjRNrgAUAAUACABfdFdpZHRoTa4ABAC1AyICrgAEALUDAwAHACAAGgAJMFIxUzJTVDNTN1M5
-UzEwUzExUzE1UzE3UwMAbAAOAGh0bWxUZXh0QXJlYTJMbwCvAFIACAAoAK4ASgABAAcAcm93cz0y
-IAAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05ONEyuABQABQAIAF90V2lkdGhMrgAEALUDIgKu
-AAQAtQMDAAcAIAAaAAkwUjFTMlNUM1M3UzlTMTBTMTFTMTVTMTdTAwByAA8AaHRtbFRleHRBcmVh
-MlhMAG8ArwBWAAgAKACuAE4AAQAHAHJvd3M9MiAABQAGAF9pc05ONK8ALAAWAAUACwBfdENvbHNO
-TjRYTACuABYABQAJAF90V2lkdGhYTACuAAQAtQMiAq4ABAC1AwMABwAgABkACTBSMVMyVDNTN1M5
-UzEwUzExUzE1UzE3UwADAGwADgBodG1sVGV4dEFyZWE1U28ArwBSAAgAKACuAEoAAQAHAHJvd3M9
-NSAABQAGAF9pc05ONK8AKAAUAAUACgBfdENvbHNOTjRTrgAUAAUACABfdFdpZHRoU64ABAC1AyIC
-rgAEALUDAwAHACAAGgAJMFIxUzJTVDNTN1M5UzEwUzExUzE1UzE3UwMAbAAOAGh0bWxUZXh0QXJl
-YTVNbwCvAFIACAAoAK4ASgABAAcAcm93cz01IAAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05O
-NE2uABQABQAIAF90V2lkdGhNrgAEALUDIgKuAAQAtQMDAAcAIAAaAAkwUjFTMlNUM1M3UzlTMTBT
-MTFTMTVTMTdTAwBsAA4AaHRtbFRleHRBcmVhNUxvAK8AUgAIACgArgBKAAEABwByb3dzPTUgAAUA
-BgBfaXNOTjSvACgAFAAFAAoAX3RDb2xzTk40TK4AFAAFAAgAX3RXaWR0aEyuAAQAtQMiAq4ABAC1
-AwMABwAgABoACTBSMVMyU1QzUzdTOVMxMFMxMVMxNVMxN1MDAHIADwBodG1sVGV4dEFyZWE1WEwA
-bwCvAFYACAAoAK4ATgABAAcAcm93cz01IAAFAAYAX2lzTk40rwAsABYABQALAF90Q29sc05ONFhM
-AK4AFgAFAAkAX3RXaWR0aFhMAK4ABAC1AyICrgAEALUDAwAHACAAGQAJMFIxUzJUM1M3UzlTMTBT
-MTFTMTVTMTdTAAMAbgAPAGh0bWxUZXh0QXJlYTEwUwBvAK8AUgAIACgArgBKAAEACAByb3dzPTEw
-IAUABgBfaXNOTjSvACgAFAAFAAoAX3RDb2xzTk40U64AFAAFAAgAX3RXaWR0aFOuAAQAtQMiAq4A
-BAC1AwMABwAgABkACTBSMVMyVDNTN1M5UzEwUzExUzE1UzE3UwADAG4ADwBodG1sVGV4dEFyZWEx
-ME0AbwCvAFIACAAoAK4ASgABAAgAcm93cz0xMCAFAAYAX2lzTk40rwAoABQABQAKAF90Q29sc05O
-NE2uABQABQAIAF90V2lkdGhNrgAEALUDIgKuAAQAtQMDAAcAIAAZAAkwUjFTMlQzUzdTOVMxMFMx
-MVMxNVMxN1MAAwBuAA8AaHRtbFRleHRBcmVhMTBMAG8ArwBSAAgAKACuAEoAAQAIAHJvd3M9MTAg
-BQAGAF9pc05ONK8AKAAUAAUACgBfdENvbHNOTjRMrgAUAAUACABfdFdpZHRoTK4ABAC1AyICrgAE
-ALUDAwAHACAAGQAJMFIxUzJUM1M3UzlTMTBTMTFTMTVTMTdTAAMAcgAQAGh0bWxUZXh0QXJlYTEw
-WExvAK8AVgAIACgArgBOAAEACAByb3dzPTEwIAUABgBfaXNOTjSvACwAFgAFAAsAX3RDb2xzTk40
-WEwArgAWAAUACQBfdFdpZHRoWEwArgAEALUDIgKuAAQAtQMDAAcAIAAZAAkwUjFTMlQzUzdTOVMx
-MFMxMVMxNVMxN1MAAwB0ABEAaHRtbFRleHRBcmVhMTBYWEwAbwCvAFYACAAoAK4ATgABAAgAcm93
-cz0xMCAFAAYAX2lzTk40rwAsABYABQAMAF90Q29sc05ONFhYTK4AFgAFAAoAX3RXaWR0aFhYTK4A
-BAC1AyICrgAEALUDAwAHACAAGQAJMFIxUzJUM1M3UzlTMTBTMTFTMTVTMTdTAAcAPgA3ACAtLS0t
-LS0tLS0tLS0tLS0tLS0tLS0tLVNFTEVDVCAtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSAABwAMAAYA
-CTBSUjFTAwBeAAsAaHRtbFNlbGVjdFMAbwCvAEYACAAoAK4APgAFAAYAX2lzTk40rwAqABYABQAL
-AF90V2lkdGhOTjRTAK4AFAAFAAgAX3RXaWR0aFOuAAQAtQOuAAQAtQMDAAcAHAAVAAkwUlIxUzJU
-VDNTN1M5UzEzUzE1UwADAF4ACwBodG1sU2VsZWN0TQBvAK8ARgAIACgArgA+AAUABgBfaXNOTjSv
-ACoAFgAFAAsAX3RXaWR0aE5ONE0ArgAUAAUACABfdFdpZHRoTa4ABAC1A64ABAC1AwMABwAaABQA
-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
-ABABAQAAgQKC/1oAEgAAAAAAAQAAAE4jqS9OIwAAew9PGV4gAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAIYBAAAAAFSEVgAAAFYAAAAAAAAAAQAAAAQAAACDBBIAhf8IAAEAAAndBgAA
-iv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/LgAAAAAAAgAAAAAAAAAAAAAAFgAAABYAAAAUAAUA
-CgBodG1sSW5wdXRMAwCK/5ADggQABQAwAgAAAAAAAAIBAAAJCgAAAAAAHAMKADwAAAAKAAAACADA
-AAMAHAMKAAQAAQBKAAkATF9FUlJfTVNHAAEAMwBZb3UgbXVzdCBlbnRlciBhIGRvbWFpbiBiZWZv
-cmUgc2F2aW5nIHRoZSBkb2N1bWVudC4AAwAHAAwABQAJMVMyUwABAEIABABzTXNnBQAKAE1haWxE
-b21haW4BAAAACgKvACAAFAAFAAkATF9FUlJfTVNHAK4ADAABAAAArgAEALUDAwAHABQADQAJMFJS
-MVMyUzhTMTBTAAcAGgAUAHJldHVybiBlcnJvciBtZXNzYWdlBwAMAAYACTBSUjFTAQA6AAQAX3RE
-YosAAAAAAAAAAADwPxABawIBAAEAIAABAAEAXAAfAgEAAQArAAEAAQAvAB8ChAMDAAcAGgAUAAkw
-UjFTM0UyUzhTMTJTMTVTMTZTAQBKAAUAX3RNc2cABQAEAHNNc2cBAAEAXAABAAEAJwAfAgEAAQAi
-AB8CAQADACU1QwABAAMAJTI3AB8CAQADACUyMgAfAoQDAwAHABQADgAJMFIxUzJFMlM2UzEyUwEA
-ZgAGAF90V2ViMQEADgA8c2NyaXB0IHNyYz0nLwUABABfdERiIgIBADYAL1dlYkpTTmF2aWdhdGlv
-blRvb2xzP09wZW5KYXZhU2NyaXB0TGlicmFyeSc+PC9zY3JpcHQ+IgIDAAcAFgAPAAkwUjFTMlMz
-UzRTNVM2UwABAE4ABgBfdFdlYjIBAB0APHNjcmlwdD5udFZhbGlkYXRpb25GYWlsdXJlKCcABQAF
-AF90TXNnACICAQAMACcpOzwvc2NyaXB0PiICAwAHABYADwAJMFIxUzJTM1M0UzVTNlMAAQAkAAUA
-X3RXZWIABQAGAF90V2ViMQUABgBfdFdlYjIiAgMABwAUAA0ACTBSMVMyRTJTM1M0UwAAAFoABQAE
-AHNNc2cBAAAACgKvAEQACAB6AK4APAD7AAUBAQAFAE5vdGVzAAoCrwAgAA4ABQAEAHNNc2euABIA
-BQAFAF90V2ViAK4ABAC1A3sBrgAEALUDAwAHACAAGgAJMFJSM1M0UzZSVDhSVDEzUzE0UzE2UzE4
-U01haWxEb21haW5Eb21haW4gbmFtZSBvZiBzZXJ2ZXIgb24gd2hpY2ggZGF0YWJhc2UgcmVzaWRl
-cyAtIGUuZy4gQWNtZS7eBgAAiv+F/wgAAQAACdASAgDIBDgNAABQIgARAQEAAIECgwQKAIX/CAAB
-AAAJ3QYAAK3/qf9VAAEADAAAAEkARW50ZXIgdGhlIG5hbWUgdXNlZCB0byBtYWlsIGRvY3VtZW50
-cyB0byB0aGUgZGF0YWJhc2UgLSBlLmcuIFNhbGVzIE5ld3MuAACF/xUAAQAACVJlc291cmNlIG5h
-bWUAqgLeBgAArgCF/wkAAQAACToA0BICATgN1BkROFAiABEBAQAAgQKC/1oAEwAAAAAAAAAAAI4N
-1BmODQAAew9PGV4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAJSAVgAA
-AFYAAABlE2QAAQAAAAQAAACDBBMAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-ALD/MgAAAAAAAgAAAAAAAAAAAAAAGgAAABoAAAAYAAUADgBodG1sVGV4dGFyZWEyTAMAiv9mAIYE
-AQUcQAIAAAAAAAADAQAACQAAAAAAAAAACAA6AAAARnVsbE5hbWVOYW1lIHVzZWQgdG8gbWFpbCBk
-b2N1bWVudHMgdG8gZGF0YWJhc2UgLSBlLmcuIFNhbGVzIE5ld3Mu3gYAAIr/hf8IAAEAAAnQEgIC
-1BmIGgAAUAIAEQEBAACBAoMEDACF/wgAAQAACdASAgOIGvgiAABQAgARAQEAAIECgwQNAIX/CAAB
-AAAJ3QYAAK3/qf9xAAEADAAAAGUARW50ZXIgdGhlIGRpc3Rpbmd1aXNoZWQgbmFtZSBvZiB0aGUg
-c2VydmVyIG9uIHdoaWNoICB0aGUgZGF0YWJhc2UgcmVzaWRlcyAtIGUuZy4gU2VydmVyMS9TYWxl
-cy9BY21lLgAAhf8PAAEAAAlTZXJ2ZXI6AKoC3gYAAK4Ahf8IAAEAAAnQEgIE+CKpL284UAIAEQEB
-AACBAoMEDgCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsP8uAAAAAAACAAAA
-AQAAAAAAAAAWAAAAFgAAABQABQAKAGh0bWxJbnB1dEwDAIr/xAOGxAAFADAAAAgAAAAAAwEAAAkA
-ACQAAAAgAwoAUQAAACQAAAAWAAUACgBNYWlsU2VydmVyXgEDAAcADAAFAAkwUzBFACADCgAEAAEA
-TgAJAExfRVJSX01TRwABADgAWW91IG11c3QgZW50ZXIgYSBzZXJ2ZXIgbmFtZSBiZWZvcmUgc2F2
-aW5nIHRoZSBkb2N1bWVudC4DAAcADAAFAAkxUzJTAAEAQgAEAHNNc2cFAAoATWFpbFNlcnZlcgEA
-AAAKAq8AIAAUAAUACQBMX0VSUl9NU0cArgAMAAEAAACuAAQAtQMDAAcAFAANAAkwUlIxUzJTOFMx
-MFMABwAaABQAcmV0dXJuIGVycm9yIG1lc3NhZ2UHAAwABgAJMFJSMVMBADoABABfdERiiwAAAAAA
-AAAAAPA/EAFrAgEAAQAgAAEAAQBcAB8CAQABACsAAQABAC8AHwKEAwMABwAaABQACTBSMVMzRTJT
-OFMxMlMxNVMxNlMBAEoABQBfdE1zZwAFAAQAc01zZwEAAQBcAAEAAQAnAB8CAQABACIAHwIBAAMA
-JTVDAAEAAwAlMjcAHwIBAAMAJTIyAB8ChAMDAAcAFAAOAAkwUjFTMkUyUzZTMTJTAQBmAAYAX3RX
-ZWIxAQAOADxzY3JpcHQgc3JjPScvBQAEAF90RGIiAgEANgAvV2ViSlNOYXZpZ2F0aW9uVG9vbHM/
-T3BlbkphdmFTY3JpcHRMaWJyYXJ5Jz48L3NjcmlwdD4iAgMABwAWAA8ACTBSMVMyUzNTNFM1UzZT
-AAEATgAGAF90V2ViMgEAHQA8c2NyaXB0Pm50VmFsaWRhdGlvbkZhaWx1cmUoJwAFAAUAX3RNc2cA
-IgIBAAwAJyk7PC9zY3JpcHQ+IgIDAAcAFgAPAAkwUjFTMlMzUzRTNVM2UwABACQABQBfdFdlYgAF
-AAYAX3RXZWIxBQAGAF90V2ViMiICAwAHABQADQAJMFIxUzJFMlMzUzRTAAAAWgAFAAQAc01zZwEA
-AAAKAq8ARAAIAHoArgA8APsABQEBAAUATm90ZXMACgKvACAADgAFAAQAc01zZ64AEgAFAAUAX3RX
-ZWIArgAEALUDewGuAAQAtQMDAAcAIAAaAAkwUlIzUzRTNlJUOFJUMTNTMTRTMTZTMThTTWFpbFNl
-cnZlckRpc3Rpbmd1aXNoZWQgbmFtZSBvZiBzZXJ2ZXIgb24gd2hpY2ggZGF0YWJhc2UgcmVzaWRl
-cyAtIGUuZy4gU2VydmVyMS9TYWxlcy9BY21lLgDeBgAAiv/M/wgAAAAAAIX/CAABAAAJ3QYAAK3/
-qf+4AgEAGAAEAKwCrAIKAAQABwAYABIAV2ViIGFkZHJlc3MgcGlja2VyBwAKAAMACTFTAAgANgD7
-AAUBAQAFAE5vdGVzAAoC4wAeAR0CrwAYAAwAAQAAAMIBrgAMAAEAAACuAAQAtQMDAAcAGAARAAkw
-UlIzUzRTNVM2UzlTMTRTAAEAIAAOAF90TGFiZWxPbmVJdGVtAQAGAHNlcnZlcgMABwAQAAkACTBS
-UlIxVDJTAAcACgADAEROVAAHAA4ABwAJMFJSUjFTAAEAIgALAF90RmllbGROYW1lAAEACgBNYWls
-U2VydmVyAwAHAA4ABwAJMFIxVDJTAAEAOgAEAF90RGKLAAAAAAAAAAAA8D8QAWsCAQABACAAAQAB
-AFwAHwIBAAEAKwABAAEALwAfAoQDAwAHABwAFgAJMFIxUzNFVFQyUzhTMTJTMTVTMTZTAABGAQEA
-SAA8YSBvbmNsaWNrPSIAAAl2YXIgaERsZyA9IHdpbmRvdy5oRGxnQWRkclNpbmdsZTsAAAloRGxn
-LnNNc2dPbmVFbnRyeQk9ICcFAA4AX3RMYWJlbE9uZUl0ZW0iAgEAKAAnOwAJaERsZy5oRGVzdEZp
-ZWxkCT0gZG9jdW1lbnQuZm9ybXNbMF0uIgIFAAsAX3RGaWVsZE5hbWUAIgIBADkAOwAACWhEbGcu
-ZGxPcGVuKCk7AAAJcmV0dXJuIGZhbHNlOwAAIiBocmVmPSIiPjxpbWcgc3JjPSIvACICBQAEAF90
-RGIiAgEATwAvYnRuUGlja2VyLmdpZj9PcGVuSW1hZ2VSZXNvdXJjZSIgd2lkdGg9IjE1IiBoZWln
-aHQ9IjExIiBib3JkZXI9IjAiIGFsdD0iIj48L2E+ACICAwAHACIAGwAJMFJSMlMzUzVTNlM3UzhT
-OVMxMFMxMVMxMlMAhf8IAAEAAAmqAt4GAACuAM3/CAAAAAAAhf8IAAEAAAnQEgMAyAQ4DQAAUCIA
-EQEBAACBAoL/WgAUAAAAAAAAAAAAHgU4DR4FAAB7D08ZXiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAhgkAAAAAlIBWAAAAVgAAAHAIZAABAAAABAAAALv/OgAUAJ1hURsAADhKLAAA
-AB4ABQAMAFJlc291cmNlVHlwZQEAAQAzAAsCAwAHAAwABQAJMFMwRQCDBBQAhf8gAAEAAAlPbmxp
-bmUgTWVldGluZyBEYXRhYmFzZTrQEgMBOA3UGRE4UCIAEQEBAACBAoL/WgAVAAAAAAAAAAAAjg3U
-GY4NAAB7D08ZXiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgkAAAAAlIBWAAAA
-VgAAAGUTZAABAAAABAAAAIMEFQC8BhQAFQCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAsP8uAAAAAAACAAAAAAAAAAAAAAAWAAAAFgAAABQABQAKAGh0bWxJbnB1dEwDAIr/KgCK
-AAAFADACAAAAAAAAAgEAAAkAAAAAAAAAAAYAAAAAAENvbmZEQt4GAACK/4X/CAABAAAJ0BIDAtQZ
-iBoAAFACABEBAQAAgQKDBAwAhf8IAAEAAAnQEgMDiBr4IgAAUAIAEQEBAACBAoL/WgAWAAAAAAAA
-AAAA3hr4It4aAAB7D08ZXiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAA
-VIRWAAAAVgAAAAAAAAABAAAABAAAAIMEFgCF/wgAAQAACd0GAACt/6n/NgABAAwAAAAqAEVudGVy
-IHRoZSBkYXRhYmFzZSBwYXRoIG5hbWUgLSBlLmcuIE5FV1MuAIX/EgABAAAJRmlsZSBuYW1lOqoC
-3gYAAK4Ahf8IAAEAAAnQEgME+CKpL284UAIAEQEBAACBAoL/WgAXAAAAAAAAAAAATiOpL04jAAB7
-D08ZXiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVIRWAAAAVgAAAAAA
-AAABAAAABAAAAIMEFwCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsP8uAAAA
-AAACAAAAAAAAAAAAAAAWAAAAFgAAABQABQAKAGh0bWxJbnB1dEwDAIr/igOCBAAFADACAAAAAAAA
-AwEAAAkAACIAAAAcAwgAHwAAACIAAAAUAAUACABNYWlsRmlsZV4BAwAHAAwABQAJMFMwRQAcAwoA
-BAABAEwACQBMX0VSUl9NU0cAAQA1AFlvdSBtdXN0IGVudGVyIGEgZmlsZW5hbWUgYmVmb3JlIHNh
-dmluZyB0aGUgZG9jdW1lbnQuAAMABwAMAAUACTFTMlMAAQBAAAQAc01zZwUACABNYWlsRmlsZQEA
-AAAKAq8AIAAUAAUACQBMX0VSUl9NU0cArgAMAAEAAACuAAQAtQMDAAcAFAANAAkwUlIxUzJTOFMx
-MFMABwAaABQAcmV0dXJuIGVycm9yIG1lc3NhZ2UHAAwABgAJMFJSMVMBADoABABfdERiiwAAAAAA
-AAAAAPA/EAFrAgEAAQAgAAEAAQBcAB8CAQABACsAAQABAC8AHwKEAwMABwAaABQACTBSMVMzRTJT
-OFMxMlMxNVMxNlMBAEoABQBfdE1zZwAFAAQAc01zZwEAAQBcAAEAAQAnAB8CAQABACIAHwIBAAMA
-JTVDAAEAAwAlMjcAHwIBAAMAJTIyAB8ChAMDAAcAFAAOAAkwUjFTMkUyUzZTMTJTAQBmAAYAX3RX
-ZWIxAQAOADxzY3JpcHQgc3JjPScvBQAEAF90RGIiAgEANgAvV2ViSlNOYXZpZ2F0aW9uVG9vbHM/
-T3BlbkphdmFTY3JpcHRMaWJyYXJ5Jz48L3NjcmlwdD4iAgMABwAWAA8ACTBSMVMyUzNTNFM1UzZT
-AAEATgAGAF90V2ViMgEAHQA8c2NyaXB0Pm50VmFsaWRhdGlvbkZhaWx1cmUoJwAFAAUAX3RNc2cA
-IgIBAAwAJyk7PC9zY3JpcHQ+IgIDAAcAFgAPAAkwUjFTMlMzUzRTNVM2UwABACQABQBfdFdlYgAF
-AAYAX3RXZWIxBQAGAF90V2ViMiICAwAHABQADQAJMFIxUzJFMlMzUzRTAAAAWgAFAAQAc01zZwEA
-AAAKAq8ARAAIAHoArgA8APsABQEBAAUATm90ZXMACgKvACAADgAFAAQAc01zZ64AEgAFAAUAX3RX
-ZWIArgAEALUDewGuAAQAtQMDAAcAIAAaAAkwUlIzUzRTNlJUOFJUMTNTMTRTMTZTMThTTWFpbEZp
-bGVEYXRhYmFzZSBwYXRoIG5hbWUgLSBlLmcuIE5FV1MuAN4GAACK/4X/CAABAAAJ0BIEAMgEOA0A
-AFAiABEBAQAAgQKDBBQAhf8YAAEAAAlTYW1ldGltZSBTZXJ2ZXI60BIEATgN1BkROFAiABEBAQAA
-gQKDBBUAvAYUABUAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/LgAAAAAA
-AgAAAAEAAAAAAAAAFgAAABYAAAAUAAUACgBodG1sSW5wdXRMAwCK/zIAjsAABQAwAAAIAAAAAAIB
-AAAJAAAAAAAAAAAOAAAAAABTYW1ldGltZVNlcnZlct4GAACK/8z/CAAAAAAAhf8IAAEAAAndBgAA
-rf+p/7wCAQAYAAQAsAKwAgoABAAHABgAEgBXZWIgYWRkcmVzcyBwaWNrZXIHAAoAAwAJMVMACAA2
-APsABQEBAAUATm90ZXMACgLjAB4BHQKvABgADAABAAAAwgGuAAwAAQAAAK4ABAC1AwMABwAYABEA
-CTBSUjNTNFM1UzZTOVMxNFMAAQAgAA4AX3RMYWJlbE9uZUl0ZW0BAAYAc2VydmVyAwAHABAACQAJ
-MFJSUjFUMlMABwAKAAMARE5UAAcADgAHAAkwUlJSMVMAAQAmAAsAX3RGaWVsZE5hbWUAAQAOAFNh
-bWV0aW1lU2VydmVyAwAHAA4ABwAJMFIxVDJTAAEAOgAEAF90RGKLAAAAAAAAAAAA8D8QAWsCAQAB
-ACAAAQABAFwAHwIBAAEAKwABAAEALwAfAoQDAwAHABwAFgAJMFIxUzNFVFQyUzhTMTJTMTVTMTZT
-AABGAQEASAA8YSBvbmNsaWNrPSIAAAl2YXIgaERsZyA9IHdpbmRvdy5oRGxnQWRkclNpbmdsZTsA
-AAloRGxnLnNNc2dPbmVFbnRyeQk9ICcFAA4AX3RMYWJlbE9uZUl0ZW0iAgEAKAAnOwAJaERsZy5o
-RGVzdEZpZWxkCT0gZG9jdW1lbnQuZm9ybXNbMF0uIgIFAAsAX3RGaWVsZE5hbWUAIgIBADkAOwAA
-CWhEbGcuZGxPcGVuKCk7AAAJcmV0dXJuIGZhbHNlOwAAIiBocmVmPSIiPjxpbWcgc3JjPSIvACIC
-BQAEAF90RGIiAgEATwAvYnRuUGlja2VyLmdpZj9PcGVuSW1hZ2VSZXNvdXJjZSIgd2lkdGg9IjE1
-IiBoZWlnaHQ9IjExIiBib3JkZXI9IjAiIGFsdD0iIj48L2E+ACICAwAHACIAGwAJMFJSMlMzUzVT
-NlM3UzhTOVMxMFMxMVMxMlMAhf8IAAEAAAmqAt4GAACuAM3/CAAAAAAAhf8IAAEAAAnQEgQC1BmI
-GgAAUAIAEQEBAACBAoMEDACF/wgAAQAACdASBAOIGvgiAABQAgARAQEAAIECgwQWAIX/CAABAAAJ
-0BIEBPgiqS9vOFACABEBAQAAgQKDBBcAhf8IAAEAAAnQEgUAyAQ4DQAAUAIAEQEBAACBAoL/WgAY
-AAAAAAABAAAAHgU4DR4FAAB7D08ZXiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-hgkAAAAAlIBWAAAAVgAAAHAIZAABAAAABAAAAIMEGAC8BhQAGACF/xwAAQAACUF1ZGlvIFZpZGVv
-IFN1cHBvcnQ60BIFATgN1BkROFAiABEBAQAAgQKC/1oAGQAAAAAAAQAAAI4N1BmODQAAew9PGV4g
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYJAAAAAJSAVgAAAFYAAABlE2QAAQAA
-AAQAAACDBBkAvAYUABkAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/FAAA
-AAQgAAAAAAAAAAAAAAAAiv9EAIpCAQUCIAAACAAAAAACAQAACQAAAAAAAAAACAAAABgAQXVkaW9G
-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
-YjIBAB0APHNjcmlwdD5udFZhbGlkYXRpb25GYWlsdXJlKCcABQAFAF90TXNnACICAQAMACcpOzwv
-c2NyaXB0PiICAwAHABYADwAJMFIxUzJTM1M0UzVTNlMAAQAkAAUAX3RXZWIABQAGAF90V2ViMQUA
-BgBfdFdlYjIiAgMABwAUAA0ACTBSMVMyRTJTM1M0UwAAAFoABQAEAHNNc2cBAAAACgKvAEQACAB6
-AK4APAD7AAUBAQAFAE5vdGVzAAoCrwAgAA4ABQAEAHNNc2euABIABQAFAF90V2ViAK4ABAC1A3sB
-rgAEALUDAwAHACAAGgAJMFJSM1M0UzZSVDhSVDEzUzE0UzE2UzE4U0ludGVybmV0QWRkcmVzcwB6
-/yoADwAAAAAAAAAAAAAAAAAAAAAAAAAAAEludGVybmV0QWRkcmVzcwDeBgAAiv+F/wgAAQAACdAS
-CALUGYgaAABQAgARAQEAAIECgwQMAIX/CAABAAAJ0BIIA4ga+CIAAFACABEBAQAAgQKDBBYAhf8I
-AAEAAAnQEggE+CKpL284UAIAEQEBAACBAoMEFwCF/wgAAQAACdASCQDIBDgNAABQAgARAQEAAIEC
-gv9aAB0AAAAAAAAAAAAeBTgNHgUAAHsPTxleIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAACGAQAAAABUhFYAAABWAAAAAAAAAAEAAAAEAAAAgwQdAIX/EQABAAAJQ29tbWVudHM6ANAS
-CQE4DdQZEThQIgARAQEAAIECgv9aAB4AAAAAAAAAAACODdQZjg0AAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAABUhFYAAABWAAAAAAAAAAEAAAAEAAAAgwQeAIX/
-CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw/zQAAAAAAAIAAAAAAAAAAAAAABwA
-AAAcAAAAGgAFAA8AaHRtbFRleHRhcmVhNVhMAAMAiv8sAIIAAQAAMAIAAAAAAAACAQAACQAAAAAA
-AAAACAAAAAAAQ29tbWVudHPeBgAAiv+F/wgAAQAACdASCQLUGYgaAABQAgARAQEAAIECgwQMAIX/
-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
-IGRvY3VtZW50Lt4GAACK/8z/CAAAAAAAhf8IAAEAAAndBgAArf+p/7ICAQAYAAQApgKmAgoABAAH
-ABgAEgBXZWIgYWRkcmVzcyBwaWNrZXIHAAoAAwAJMVMACAA2APsABQEBAAUATm90ZXMACgLjAB4B
-HQKvABgADAABAAAAwgGuAAwAAQAAAK4ABAC1AwMABwAYABEACTBSUjNTNFM1UzZTOVMxNFMAAQAg
-AA4AX3RMYWJlbE9uZUl0ZW0BAAUAb3duZXIAAwAHABAACQAJMFJSUjFUMlMABwAKAAMARE5UAAcA
-DgAHAAkwUlJSMVMAAQAeAAsAX3RGaWVsZE5hbWUAAQAFAE93bmVyAAMABwAOAAcACTBSMVQyUwAB
-ADoABABfdERiiwAAAAAAAAAAAPA/EAFrAgEAAQAgAAEAAQBcAB8CAQABACsAAQABAC8AHwKEAwMA
-BwAcABYACTBSMVMzRVRUMlM4UzEyUzE1UzE2UwAARAEBAEcAPGEgb25jbGljaz0iAAAJdmFyIGhE
-bGcgPSB3aW5kb3cuaERsZ0FkZHJNdWx0aTsAAAloRGxnLnNNc2dPbmVFbnRyeQk9ICcABQAOAF90
-TGFiZWxPbmVJdGVtIgIBACgAJzsACWhEbGcuaERlc3RGaWVsZAk9IGRvY3VtZW50LmZvcm1zWzBd
-LiICBQALAF90RmllbGROYW1lACICAQA4ADsACWhEbGcuZGxPcGVuKCk7AAAJcmV0dXJuIGZhbHNl
-OwAAIiBocmVmPSIiPjxpbWcgc3JjPSIvIgIFAAQAX3REYiICAQBPAC9idG5QaWNrZXIuZ2lmP09w
-ZW5JbWFnZVJlc291cmNlIiB3aWR0aD0iMTUiIGhlaWdodD0iMTEiIGJvcmRlcj0iMCIgYWx0PSIi
-PjwvYT4AIgIDAAcAIgAbAAkwUlIyUzNTNVM2UzdTOFM5UzEwUzExUzEyUwCF/wgAAQAACaoC3gYA
-AK4Azf8IAAAAAACF/wgAAQAACdASAgDIBDgNAABQAgARAQEAAIECgv9aACYAAAAAAAAAAAAeBTgN
-HgUAAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyGAQAAAACUgFYAAABW
-AAAAlAdkAAEAAAAEAAAAgwQmAIX/FwABAAAJQWRtaW5pc3RyYXRvcnM6ANASAgE4DbgjAABQIgAR
-AQEAAIECgv9aACcAAAAAAAAAAACODbgjjg0AAHsPTxleIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACGAQAAAACUgFYAAABWAAAAsAlkAAEAAAAEAAAAgwQnAIX/CAABAAAJ3QYAAIr/
-/v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw/zQAAAAAAAIAAAIBAAAAAAAAABwAAAAcAAAAGgAFAA8A
-aHRtbFRleHRBcmVhNVhMAAMAiv9sAI/MAQUOQAAACAAAAAACAQAACQAAAAAAAAAACgA9AAAATG9j
-YWxBZG1pbkVudGVyIHRoZSB1c2VyIG9yIGdyb3VwIG5hbWUgYWxsb3dlZCB0byBtb2RpZnkgdGhp
-cyBkb2N1bWVudC4A3gYAAIr/zP8IAAAAAACF/wgAAQAACd0GAACt/6n/vgIBABgABACyArICCgAE
-AAcAGAASAFdlYiBhZGRyZXNzIHBpY2tlcgcACgADAAkxUwAIADYA+wAFAQEABQBOb3RlcwAKAuMA
-HgEdAq8AGAAMAAEAAADCAa4ADAABAAAArgAEALUDAwAHABgAEQAJMFJSM1M0UzVTNlM5UzE0UwAB
-ACgADgBfdExhYmVsT25lSXRlbQEADQBhZG1pbmlzdHJhdG9yAAMABwAQAAkACTBSUlIxVDJTAAcA
-CgADAEROVAAHAA4ABwAJMFJSUjFTAAEAIgALAF90RmllbGROYW1lAAEACgBMb2NhbEFkbWluAwAH
-AA4ABwAJMFIxVDJTAAEAOgAEAF90RGKLAAAAAAAAAAAA8D8QAWsCAQABACAAAQABAFwAHwIBAAEA
-KwABAAEALwAfAoQDAwAHABwAFgAJMFIxUzNFVFQyUzhTMTJTMTVTMTZTAABEAQEARwA8YSBvbmNs
-aWNrPSIAAAl2YXIgaERsZyA9IHdpbmRvdy5oRGxnQWRkck11bHRpOwAACWhEbGcuc01zZ09uZUVu
-dHJ5CT0gJwAFAA4AX3RMYWJlbE9uZUl0ZW0iAgEAKAAnOwAJaERsZy5oRGVzdEZpZWxkCT0gZG9j
-dW1lbnQuZm9ybXNbMF0uIgIFAAsAX3RGaWVsZE5hbWUAIgIBADgAOwAJaERsZy5kbE9wZW4oKTsA
-AAlyZXR1cm4gZmFsc2U7AAAiIGhyZWY9IiI+PGltZyBzcmM9Ii8iAgUABABfdERiIgIBAE8AL2J0
-blBpY2tlci5naWY/T3BlbkltYWdlUmVzb3VyY2UiIHdpZHRoPSIxNSIgaGVpZ2h0PSIxMSIgYm9y
-ZGVyPSIwIiBhbHQ9IiI+PC9hPgAiAgMABwAiABsACTBSUjJTM1M1UzZTN1M4UzlTMTBTMTFTMTJT
-AIX/CAABAAAJqgLeBgAArgDN/wgAAAAAAIX/CAABAAAJ0BIDAMgEOA0AAFACABEBAQAAgQKDBB0A
-hf8VAAEAAAlMYXN0IHVwZGF0ZWQ6ANASAwE4DbgjAABQAgARAQEAAIECgv9aACgAAAAAAAAAAACO
-Dbgjjg0AAHsPTxleIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAABUhFYA
-AABWAAAAAAAAAAEAAAAEAAAAgwQoAIX/CAABAAAJ3QYAAIr//v9UAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACIACAAAAAAABAgICAQEBAQcEAAAAAAAAAAAAAAAA
-AAAgLy86iv/AAIAJAQUOQAAACAAAAAAAAQAACZQAAAAAAAAABwAAAAAAlAABABAABABXaGVupABW
-AQMABwAMAAUACTFTMlMAAQA0AAMAV2hvAAIABQAAAAAAAAAFAAoAJFVwZGF0ZWRCeQAAAAAAAAAA
-8D8QAWsCtAIDAAcAEAAKAAkwUjFUMlMxMFMAACAABQAEAFdoZW4BAAEAIAAiAgUAAwBXaG8AIgID
-AAcAEgAMAAkwUlIxUzJTM1M0U0xhc3RNb2QA3gYAAIr/hf8IAAEAAAnRBgAAAACBAoMEIACF/wgA
-AQAACeP/jABBZG1pbmlzdHJhdGlvbgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIApQYAAAAAgQKC/1oAKQAAAAAAAAAAAHgPAAAI
-BwAAew9PGV4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADBhAAAAAJSEeA8cAAgH
-DQAAAAAAAQAAAAQAAACDBCkAhf8IAAEAAAqBAoL/WgAqAAAAAAAAAAAAoAUAAKAFAAB7D08ZXiAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGEAAAAAlISgBQsAoAULAAAAAAABAAAA
-BAAAAIMEKgCF/wgAAQAACN0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv88AIAEAAUAMAIA
-AAAAAAACAQAACBQAAAAAAAAABAAAAAAAFAAAABIAAQAIAERhdGFiYXNlAwBUeXBl3gYAAIr/hf8I
-AAEAAAjdBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/8gGEDAAHADACAAAAAAAAAgEAAAjA
-AQAAAAAAAA4AAAAAAMABAACKAQUABABUeXBlAQAGAFBlcnNvbgEAFwBBbHRMYW5ndWFnZVBlcnNv
-bmFsSW5mbwAfAgoCrwBQARgAAQAOAFtVc2VyTW9kaWZpZXJdrgA4AQUABABUeXBlAQAFAEdyb3Vw
-AAoCrwAgARoAAQAPAFtHcm91cE1vZGlmaWVyXQCuAAYBBQAEAFR5cGUBAAYAU2VydmVyCgKvAO4A
-GgABABAAW1NlcnZlck1vZGlmaWVyXa4A1AAFAAQAVHlwZQEADABQb2xpY3lNYXN0ZXIBAA0AUG9s
-aWN5QXJjaGl2ZQAfAgEAFQBQb2xpY3lBcmNoaXZlQ3JpdGVyaWEAHwIBAA0AUG9saWN5RGVza3Rv
-cAAfAgEAEgBQb2xpY3lSZWdpc3RyYXRpb24fAgEADgBQb2xpY3lTZWN1cml0eR8CAQALAFBvbGlj
-eVNldHVwAB8CCgKvADQAGgABABAAW1BvbGljeU1vZGlmaWVyXa4AGgABAA0AW05ldE1vZGlmaWVy
-XQCuAAQAtQkDAAcANAAuAAkzUzRTOFMxMFMxMVMxMlMxNFMxNlMxN1MxOFMyMFMyMlMyM1MyNFMz
-OFM0MFNEb2N1bWVudEFjY2Vzc94GAACK/4X/CAABAAAI3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAACK/z4AiAEABQAwAgAAAAAAAAIBAAAIDgAAAAAAAAAMAAAAAAAOAAAADAABAAEAMQADAFJl
-c291cmNlRmxhZ94GAACK/4X/CAABAAAI3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/5gB
-gAEABQAwAgAAAAAAAAIBAAAIbAEAAAAAAAAIAAAAAABsAQEAOgAEAF90RGKLAAAAAAAAAAAA8D8Q
-AWsCAQABACAAAQABAFwAHwIBAAEAKwABAAEALwAfAoQDAwAHABgAEgAJMVMzRTJTOFMxMlMxNVMx
-NlMAAPIAAQAsADxsaW5rIHJlbD1zdHlsZXNoZWV0IHR5cGU9J3RleHQvY3NzJyBocmVmPScvBQAE
-AF90RGIiAgEAIgAvY3NzRm9ybT9SZWFkRm9ybSc+ADxzY3JpcHQgc3JjPScvIgIFAAQAX3REYiIC
-AQBQAC9XZWJKU05hdmlnYXRpb25Ub29scz9PcGVuSmF2YVNjcmlwdExpYnJhcnknPjwvc2NyaXB0
-PgA8c2NyaXB0PgAJc1dlYkRiTmFtZSA9ICcvIgIFAAQAX3REYiICAQAaAC8nOwAJbnRSZXR1cm4o
-KTsAPC9zY3JpcHQ+IgIDAAcAJgAfAAkwUlIxUzJTM1M0UzVTNlM3UzhTOVMxMFMxMVMxMlMAJCRS
-ZXR1cm7eBgAAiv+F/wgAAQAACN0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv86AIoAAAUA
-MAIAAAAAAAACAQAACAwAAAAAAAAACQAAAAAADAAAAAoAAQAAAAMAQVZTbGN0THN0AN4GAACK/4X/
-CAABAAAIgQKDBCoA3QYAAIX/hf8IAAEABAjSCAEAAAD/AN4GAACF/90GAACK//7/UAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAiv8+AIoAAAMAMAIAAAAAAAACAQAECBIAAAAAAAAACAAAAAAAEgAAABAAAAAA
-AAAAAAAAAAMAJFNydnJSZXPeBgAAiv+F/wgAAQAACA==
-</rawitemdata></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQABwCNAAAAAABAATACAAAAAAAAAAAAAAAAAAA0ANABKABIAAAA//9k
-AAAAAAAAAAUAAAAIAIgAAAAAAAAAAAAAAAAAAAAAACgAKABoAGgASABIAAAAAAAIAAgAAAAAAIgA
-iAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAjQAAAAAAAABAAQAAMAIAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAQAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwA0AgAAAAD//xEAKABHAEwATwBCAEEATABTACkAUgBFAFMATwBVAFIAQwBFAAAAfAADAE4A
-RQBXAAAAkAAGAEQARQBMAEUAVABFAAAAAADkAAoASQBOAEkAVABJAEEATABJAFoARQAAAAAAmAAJ
-AFQARQBSAE0ASQBOAEEAVABFAAAA/AAGAE8AQgBKAEUAQwBUAAAAAAAUAQAAAAAAAKgABQBJAE4A
-RABFAFgAAAC0ARoATgBFAEkAVABIAEUAUgBfAEEAVQBEAEkATwBfAE4ATwBSAF8AVgBJAEQARQBP
-AF8ASQBEAAAAAABAAQgAQQBVAEQASQBPAF8ASQBEAAAAAAAAAggAVgBJAEQARQBPAF8ASQBEAAAA
-AABYARIAQQBVAEQASQBPAF8AQQBOAEQAXwBWAEkARABFAE8AXwBJAEQAAAAAAJgBCQBHAEUAVABT
-AFQAUgBJAE4ARwAAAP//HABOAGUAaQB0AGgAZQByACAAQQB1AGQAaQBvACAATgBvAHIAIABWAGkA
-ZABlAG8AIAB8ACAAMAA7AAAAAAD//woAQQB1AGQAaQBvACAAfAAgADEAOwAAAAAA//8KAFYAaQBk
-AGUAbwAgAHwAIAAyADsAAAAAAP//FABBAHUAZABpAG8AIABhAG4AZAAgAFYAaQBkAGUAbwAgAHwA
-IAAzADsAAAAAAP//FQBFAHIAcgBvAHIAOgAgAFUAbgBrAG4AbwB3AG4AIABTAHQAcgBpAG4AZwAA
-AAUARAEAAAAAcq/ijxkAGQAEABAAKAAAAKwAAQAAAAAAAAAAAAAAAAACAAAAAAAAAAQAEABIAAAA
-6AABAAAAAAABAAAAAAAAAAIAAAAAAAAABAAQAGgAAAAAAQEAAAAAAAIAAAAAAAAAAgAAAAAAAAAE
-ABAAiAAAABgBAQAAAAAAAwAAAAAAAAACAAAAAAAAAAcAEAAAAAAARAEGAAAAAAACAAAAIAEwAQAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAADABMAEAAAAAAAAAAAAAAAAgASABAAAAAAAAAAABAAAAAwAA
-AAMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAwABADABAABEAQYAAAAAAAMAAQAAAAAAnAABAAEAAAAEAJEAAAAAAB0AABoR
-ABs6dwAaEgAyfhgAsjgPADEaEwBdIAF9XAGlGzplABoUADJ+OACyOA8AMRoVAF0gAX2cAaUbOksA
-GhYAMn5YALI4DwAxGhcAXSABfbgBpRs6MQAaGAAyfngAsjgPADEaGQBdIAF91AGlGzoXADEaGwBd
-IAF9BAKlGzoIABtXAgEAOoH/Gh4AHQIAAAARABQAAAAAAP//AQADAAQAAAAHAEQBDgAKAAAAOQ==
-</rawitemdata></item>
-<item name='$$$FormScript_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAHQAHAQQAAAAUBogDAAAAAAQAJAJMBQAAAAAwABABJABEAJQAAABg
-AAAAAAAAAAYAAAAYAPgEAAAAAAAAAAAAAAAAAAAAALgEuARsAfgE2ATYBAAAAACYBJgEAAAAAAAA
-AAAAAAAAGAAYAAEAAABABEAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AEAEQAQAAAAAAAAAAAQAAADMAEwFzAAwAgAAAAAAAAAAAAAAAPQC9AIAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAABMBUwFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAEAAAABwEAAAAAAAAUBgAAiAMAAAAAAAAAAAAAAQAAAAAAAAABAAAAAAAAAAEAAAAAAAAAAAAA
-AAUAAABXMzJJJQMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAwAAAAAsAQ8AJAAkACQARgBPAFIATQBTAEMAUgBJAFAAVABfAE8AAAB4AAMATgBFAFcA
-AACMAAYARABFAEwARQBUAEUAAAAAAPgACgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAC8AAkAVABF
-AFIATQBJAE4AQQBUAEUAAABsAQYATwBCAEoARQBDAFQAAAAAAOQAAAAAAAAAFAIRACgARwBMAE8A
-QgBBAEwAUwApAFIARQBTAE8AVQBSAEMARQAAAKgBEQAoAEcAbABvAGIAYQBsAHMAKQBSAGUAcwBv
-AHUAcgBjAGUAAAA8AgYAUwBPAFUAUgBDAEUAAAAAAEgBCABDAE8ATgBUAEkATgBVAEUAAAAAAP//
-CgBCAEkATgBEAEUAVgBFAE4AVABTAAAAAACAAQsATwBCAEoARQBDAFQATgBBAE0ARQBfAAAAyAEP
-AE4ATwBUAEUAUwBVAEkARABPAEMAVQBNAEUATgBUAAAA7AIGACUATABTAFgAVQBJAAAAAACYAQkA
-UQBVAEUAUgBZAFMAQQBWAEUAAAD8AQQATgBPAFQARQAAAAAA3AENAE4ATwBUAEUAUwBEAE8AQwBV
-AE0ARQBOAFQAAACAAgYAJQBMAFMAWABCAEUAAAAAAJgCDQBOAE8AVABFAFMARABBAFQAQQBCAEEA
-UwBFAAAAcAIIAEQATwBDAFUATQBFAE4AVAAAAAAAXAIRAEEAVQBEAEkATwBWAEkARABFAE8ATwBQ
-AFQASQBPAE4AUwAAAFQCCABBAFUARABJAE8ARgBMAEcAAAAAAAQDAQAxAAAA//8GAFYASQBEAEYA
-TABHAAAAAAAwAwUAQQBWAEYATABHAAAA1AIJAEcARQBUAFMAVABSAEkATgBHAAAA//8aAE4ARQBJ
-AFQASABFAFIAXwBBAFUARABJAE8AXwBOAE8AUgBfAFYASQBEAEUATwBfAEkARAAAAAAA//8IAEEA
-VQBEAEkATwBfAEkARAAAAAAAWAMIAFYASQBEAEUATwBfAEkARAAAAAAA//8SAEEAVQBEAEkATwBf
-AEEATgBEAF8AVgBJAEQARQBPAF8ASQBEAAAAAABwAxAAUgBFAFAATABBAEMARQBJAFQARQBNAFYA
-QQBMAFUARQAAAAAA//8JAEEAVgBTAGwAYwB0AEwAcwB0AAAA//8JAE4ATwBUAEUAUwBJAFQARQBN
-AAAABQAYBgAAAAB/a4FNGAAAAAAAmADwIjsUAAAAAAAAAAAIAAAAbAEAABQBAAAAAAAAAgAAALAA
-XAEAAAAAAAAAAAAAAAAAAAAAsACwAAAAAAAAAAAAAAAAAAAAAAAAAAAAXAFcAQAAAAAAAAAAAQAA
-AAIAAAAGAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAMAAQBcAQAAMAEGCAAAAAAaAAAAcAH//wAAAAAQAAAAMAIwAkwBAAAA
-AAAAAQAAAPAD8AMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPAD
-8AMAAAAABBUTKe0uaRC/XQDdARGGtwAAAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAAAAAAAAgDA
-AAAA2AMAAAAACgABAP//AAADACAAAAAAAOgACQIAAMwACAAAAJgE+ASEAQAAAAAAAAQAAAAEAsgD
-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
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>Resource</text></item></form>
 

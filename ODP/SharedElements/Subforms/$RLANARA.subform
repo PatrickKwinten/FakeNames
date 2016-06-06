@@ -1,210 +1,135 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='72e' unid='9660BC9ADD5D5EEF8525632A000879AE' sequence='5067'>
+<subform name='$RLANARA' alias='AppleTalk Remote Access|ARA' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' insertdialog='false'
+ designerversion='6' language='en'>
+<noteinfo noteid='72a' unid='9660BC9ADD5D5EEF8525632A000879AE' sequence='5067'>
 <created><datetime dst='true'>19960513T213234,38-04</datetime></created>
-<modified><datetime dst='true'>20150507T110157,24+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,44+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,94-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110157,23+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,23+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114102,44+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,44+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20081007T114831,40-04</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
+<body><richtext>
+<pardef id='1' leftmargin='2.7500in' firstlineleftmargin='1.2500in' hide='read edit copy preview previewedit'
+ tabs='L1.2500in'/>
+<par def='1'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='text' kind='computed' name='StaticTag'><code
+ event='defaultvalue'><formula>"ARA$%^Connection document location:"</formula></code></field></run><run
+><font size='9pt' name='user-interface'/></run><run><font size='9pt' name='user-interface'/><field
+ type='text' kind='computed' name='Static1'><code event='defaultvalue'><formula
+>"ARA$%^ "</formula></code></field></run><run><font size='9pt' name='user-interface'/></run><run
+><font size='9pt' name='user-interface'/><field type='text' kind='computed'
+ name='Static2'><code event='defaultvalue'><formula>"ARA$%^ "</formula></code></field></run><run
+><font size='9pt' name='user-interface'/></run><run><font size='9pt' name='user-interface'/><field
+ type='text' kind='computed' name='Static3'><code event='defaultvalue'><formula
+>"ARA$%^ "</formula></code></field></run><run><font size='9pt' name='user-interface'/></run><run
+><font size='9pt' name='user-interface'/><field type='text' kind='computed'
+ name='Static4'><code event='defaultvalue'><formula>"ARA$%^ "</formula></code></field></run><run
+><font size='9pt' name='user-interface'/></run><run><font size='9pt' name='user-interface'/><field
+ type='text' kind='computed' name='RLAN1' description='Enter the login name for the remote LAN service.'><code
+ event='defaultvalue'><formula>""</formula></code></field></run><run><font
+ size='9pt' name='user-interface'/></run><run><font size='9pt' name='user-interface'/><field
+ type='text' kind='computed' name='RLAN2' description='Enter the password to be used to login to the remote LAN service.'><code
+ event='defaultvalue'><formula>""</formula></code></field></run><run><font
+ size='9pt' name='user-interface'/></run><run><font size='9pt' name='user-interface'/><field
+ type='text' kind='computed' name='RLAN3' description='Enter the phone number to dial to access the remote LAN service.'><code
+ event='defaultvalue'><formula>""</formula></code></field></run><run><font
+ size='9pt' name='user-interface'/></run><run><font size='9pt' name='user-interface'/><field
+ type='text' kind='computed' name='RLAN4' description='If the remote LAN service driver you are using requires extra parameters, enter them here.'><code
+ event='defaultvalue'><formula>""</formula></code></field></run><run><font
+ size='9pt' name='user-interface'/></run></par>
+<pardef id='2' leftmargin='2.7500in' firstlineleftmargin='1.2500in' hide='read edit copy preview previewedit'
+ tabs='L1.2500in'><code event='hidewhen'><formula>ConnectionType != "5"</formula></code></pardef>
+<par def='2'><run><font size='9pt' name='user-interface'/></run></par>
+<table minrowheight='1.1528in' leftmargin='1.2500in' widthtype='fixedleft'
+ colorstyle='solid' bgcolor='silver' refwidth='4.0632in'><tablecolumn width='4.0632in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system'>
+<pardef id='4' leftmargin='0.0799in' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font size='9pt' name='user-interface'/></run></par>
+<pardef id='5' leftmargin='0.0799in' spaceafter='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='5'><run><font size='9pt' name='user-interface'/>Connection document location</run></par>
+<pardef id='6' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='6'><run><font size='9pt' name='user-interface'/>  </run><run><font
+ size='9pt' name='user-interface'/><field usenotesstyle='false' height='0.2500in'
+ width='3.3229in' multiline='true' borderstyle='single' type='text' kind='editable'
+ name='RLANTag' description='The name of the connection description managed by the external remote LAN service.'/></run><run
+><font size='9pt' name='user-interface'/></run><actionhotspot hotspotstyle='none'><code
+ event='click'><formula>FIELD RLANTag:=@Prompt([LocalBrowse];"Choose Apple Remote Access Document";"";"");
+@True</formula></code><run><font size='9pt' name='user-interface'/> </run><picture
+ height='26px' width='25px' scaledheight='0.2708in' scaledwidth='0.2604in'><border
+/><notesbitmap>
+nwAWAAAACACVArACdwGGAS4IAAABAJsAOAgAAC4ILggBAAkAAAMXBAAAAAD9AwAAAAAEAAAAAwEI
+AAUAAAAMAub/GQAFAAAACwIAAAAA/QMAAEELIADMABoAGQAAAAAA5v8ZAAAAAAAoAAAAGQAAABoA
+AAABABgAAAAAALgHAAAAAAAAAAAAAAAAAAAAAAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAAMDAwICAgICA
+gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA
+gICAgICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgIDAwMAA////wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDA////AP//////////////////////////////////////////wMDAgICAwMDAAP///8DAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP///wD//////wD//////////////////////wD/////
+/8DAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD///8A//////8A////////
+//////8A///////////////////AwMCAgIDAwMAA////wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwMDA////////////////AP//////////////////////////wMDAgICAwMDAAP///8DAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwP///wD//////wD//////////////wD//////////wD/////
+/8DAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD///8A//////8A////
+///////////////////////////AwMCAgIDAwMAA////wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAgAAAgAAAgAAAgICA////AP//////////////////AP//////wMDAgICAwMDAAP///8DAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwIAAAIAAAICAgACAgIAAAIAAAP///wD//////wD/////////////
+/8DAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMCAAACAAACAgIDAwMD///8AgICAAACA
+gID///8A//////8A//8A///////AwMCAgIDAwMAA////wMDAwMDAwMDAwMDAwMDAwMDAgAAAgAAA
+gICAgAAAwMDA////////gICAgAAAAP//////////////////////wMDAgICAwMDAAP///8DAwMDA
+wMDAwMDAwMDAwMDAwIAAAICAgIAAAICAgIAAAP///////4CAgIAAAP///wD//////wD//////wD/
+/8DAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMCAAACAAACAgID////AwMCAAACAAACAAACA
+gIDAwMD////AwMD////AwMD////AwMCAgIDAwMAA////wMDAwMDAwMDAwMDAwMDAgAAAgAAAgICA
+////////////wMDAgICAgAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAgICAwMDAAP///8DAwMDA
+wMDAwMDAwIAAAIAAAICAgICAgIAAAMDAwMDAwICAgIAAAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwICAgMDAwAD////AwMDAwMDAwMCAAACAAACAgID////AwMCAgICAAACAAACAAADAwMDAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgIDAwMAA////wMDAwMDAgAAAgAAAgICA////wMDAwMDA
+gAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAgICAwMDAAP///8DAwIAA
+AIAAAICAgP///8DAwMDAwIAAAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwICAgMDAwAD////AwMCAAACAgID////AwMDAwMCAAADAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgIDAwMAA////wMDAgAAAgICAwMDAwMDAgAAAwMDAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAgICAwMDAAP///8DAwMDA
+wIAAAIAAAIAAAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgIDAwMAA////////////////////////////////////
+////////////////////////////////////////////////////////wMDAwMDAAMDAwMDAwMDA
+wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
+wMDAwMDAwMDAwAADAAAAAACVACYAAAAAAAAAAAAAAAAAAAAAAAAAGQAaAAgAAQAIAAEAAAEDAJYA
+rgEAAAAAAAAAAAAAGgCcAUADAAEHQAIBx//CBwH/QAIAxgcCpAcB/8IHwwRAAgADB6QHBP8HBKTC
+BwEEQAIAAqQHBf8HBKT/wgcBBM8HAqQHAv8HwgQCpP/CBwEEzgcCpAcB/8IHwgQCpP/CBwEEzQcC
+pAcB/8MHwgQEpP8HpMMEygcCpAcB/8QHwgTCpAEEwgcCpATJBwKkBwH/xQfCBAGkw/8DB6QEyAcC
+pAcB/8YHwgQDpP8HwwQKpAf/B/8H/wekBwH/xgcFBKQEpATC/wukBP/7//v/+wekBwH/xgfCBAOk
+BAfC/wOkBPvF/wMHpAcB/8cHwgQJpAf/AwSk//v/wvsE/wekBwH/yAfCBAKkA8IEBP/7//vD/wMH
+pAcB/8kHwwQDpP/7xP8F+/8HpAcB/8oHBP/7//vH/wMHpAcB/8kHBP/7//vD/wH7wv8F+/8HpAcB
+/8oHxP8B+8b/AwekBwH/yQcE//v/+8P/AfvE/wMHpAcB/8oHBP/7//vF/wX7/wekBwH/yQcC//vK
+/wMHpAcB/0ACAMYHAqQHAQdAAgLHpAEHQAMAAQeXAAYDAAAAAACAAAAAgACAgAAAAICAAIAAgIDA
+wMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACgQADAQADgQAAAYAAgYABA
+YABgYACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAAoAAgoABAoABgoACAoACg
+oADAoADgoAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg4ACA4ACg4ADA4ADg4AAA
+AEAgAEBAAEBgAECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDAIEDgIEAAQEAgQEBAQEBg
+QECAQECgQEDAQEDgQEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAggEBAgEBggECAgECggEDA
+gEDggEAAoEAgoEBAoEBgoECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECAwECgwEDAwEDgwEAA4EAg
+4EBA4EBg4ECA4ECg4EDA4EDg4EAAAIAgAIBAAIBgAICAAICgAIDAAIDgAIAAIIAgIIBAIIBgIICA
+IICgIIDAIIDgIIAAQIAgQIBAQIBgQICAQICgQIDAQIDgQIAAYIAgYIBAYIBgYICAYICgYIDAYIDg
+YIAAgIAggIBAgIBggICAgICggIDAgIDggIAAoIAgoIBAoIBgoICAoICgoIDAoIDgoIAAwIAgwIBA
+wIBgwICAwICgwIDAwIDgwIAA4IAg4IBA4IBg4ICA4ICg4IDA4IDg4IAAAMAgAMBAAMBgAMCAAMCg
+AMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDAIMDgIMAAQMAgQMBAQMBgQMCAQMCgQMDAQMDgQMAA
+YMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBAgMBggMCAgMCggMDAgMDggMAAoMAgoMBAoMBg
+oMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/+/CgoKSAgID/AAAA/wD//wAAAP//AP8A
+//////+YAE4AAAAHBwcHBwcHBwAA7AIBAAMAGgAAAHkCAAD//////////yRJAAAAAAAAJElORk8A
+/6+kpKSkpKSkpAEADAAAAAADIQAMAAEAAAM=
+</notesbitmap></picture><run><font size='9pt' name='user-interface'/></run></actionhotspot><run
+><font size='9pt' name='user-interface'/></run></par>
+<pardef id='7' leftmargin='0.0104in' hide='read edit copy preview previewedit'
+ keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula>ConnectionType != "5"</formula></code></pardef>
+<par def='7'><run><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow></table>
+<par def='2'><run><font size='9pt' name='user-interface'/></run></par></richtext></body>
 <item name='RLANItems' summary='false' sign='true'><number>0</number></item>
 <item name='RLANTotalParams' summary='false' sign='true'><number>0</number></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAEA/gACAAAAAAAAAF//EAABAMAAAgAAAAAAAAA=
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>$RLANARA</text><text>AppleTalk Remote Access</text><text
->ARA</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CU3x</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAABExTT0IDABQAZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP////8A
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAADAIwAAAAAAFQACAAqADQARgBEADQAMQBEAEUAAAAAAGwAAwBOAEUAVwAAAIAABgBEAEUATABF
-AFQARQAAAAAA//8KAEkATgBJAFQASQBBAEwASQBaAEUAAAAAAP//CQBUAEUAUgBNAEkATgBBAFQA
-RQAAAP//BgBPAEIASgBFAEMAVAAAAAAA//8AAAAAAAAFAAgAAAAAAFNcFRQEAAcAAAAAAB0AAAIA
-AAA=
-</rawitemdata></item>
-<item name='StaticTag' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Static1' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Static2' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Static3' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Static4' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN1' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN2' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN3' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN4' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLANTag' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>RLANTag</text><text>RLAN4</text><text
->RLAN3</text><text>RLAN2</text><text>RLAN1</text><text>Static4</text><text
->Static3</text><text>Static2</text><text>Static1</text><text>StaticTag</text></textlist></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>ARA</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-Y2UuAN4GAAD3/4X/CAADAAAJ3QYAAK3/rf92AAIAHAAAAGoAagADAEwABwBSTEFOVGFnAAIAGAAA
-AAAAAAABACMAQ2hvb3NlIEFwcGxlIFJlbW90ZSBBY2Nlc3MgRG9jdW1lbnQAAQAAAAEAAACwBAMA
-BwAKAAMACTFTAAAACAArAAMABwAKAAMACTBSAIX/CQADAAAJIADdBgEAmQCZABwAAAB3AYYBAAAA
-AAAAAAAAAAAAAQABAAAAnwAWAAAACACVArACdwGGAS4IAAABAJsAOAgAAC4ILggBAAkAAAMXBAAA
-AAD9AwAAAAAEAAAAAwEIAAUAAAAMAub/GQAFAAAACwIAAAAA/QMAAEELIADMABoAGQAAAAAA5v8Z
-AAAAAAAoAAAAGQAAABoAAAABABgAAAAAALgHAAAAAAAAAAAAAAAAAAAAAAAAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAAMDAwICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICA
-gICAgICAgICAgICAgICAgICAgICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgIDAwMAA////wMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDA////AP//////////////////////////////////////////wMDA
-gICAwMDAAP///8DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP///wD//////wD/////////
-/////////////wD//////8DAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMD/
-//8A//////8A//////////////8A///////////////////AwMCAgIDAwMAA////wMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwMDA////////////////AP//////////////////////////wMDA
-gICAwMDAAP///8DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwP///wD//////wD/////////////
-/wD//////////wD//////8DAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMD///8A//////8A///////////////////////////////AwMCAgIDAwMAA////wMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAgAAAgAAAgAAAgICA////AP//////////////////AP//////wMDA
-gICAwMDAAP///8DAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwIAAAIAAAICAgACAgIAAAIAAAP///wD/
-/////wD//////////////8DAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMCAAACAAACA
-gIDAwMD///8AgICAAACAgID///8A//////8A//8A///////AwMCAgIDAwMAA////wMDAwMDAwMDA
-wMDAwMDAwMDAgAAAgAAAgICAgAAAwMDA////////gICAgAAAAP//////////////////////wMDA
-gICAwMDAAP///8DAwMDAwMDAwMDAwMDAwMDAwIAAAICAgIAAAICAgIAAAP///////4CAgIAAAP//
-/wD//////wD//////wD//8DAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMCAAACAAACAgID/
-///AwMCAAACAAACAAACAgIDAwMD////AwMD////AwMD////AwMCAgIDAwMAA////wMDAwMDAwMDA
-wMDAwMDAgAAAgAAAgICA////////////wMDAgICAgAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-gICAwMDAAP///8DAwMDAwMDAwMDAwIAAAIAAAICAgICAgIAAAMDAwMDAwICAgIAAAMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwICAgMDAwAD////AwMDAwMDAwMCAAACAAACAgID////AwMCAgICA
-AACAAACAAADAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgIDAwMAA////wMDAwMDAgAAA
-gAAAgICA////wMDAwMDAgAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-gICAwMDAAP///8DAwIAAAIAAAICAgP///8DAwMDAwIAAAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwICAgMDAwAD////AwMCAAACAgID////AwMDAwMCAAADAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgIDAwMAA////wMDAgAAAgICA
-wMDAwMDAgAAAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-gICAwMDAAP///8DAwMDAwIAAAIAAAIAAAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwICAgMDAwAD////AwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMCAgIDAwMAA////////////////
-////////////////////////////////////////////////////////////////////////////
-wMDAwMDAAMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDA
-wMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwAADAAAAAACVACYAAAAAAAAAAAAAAAAAAAAAAAAAGQAa
-AAgAAQAIAAEAAAEDAJYArgEAAAAAAAAAAAAAGgCcAUADAAEHQAIBx//CBwH/QAIAxgcCpAcB/8IH
-wwRAAgADB6QHBP8HBKTCBwEEQAIAAqQHBf8HBKT/wgcBBM8HAqQHAv8HwgQCpP/CBwEEzgcCpAcB
-/8IHwgQCpP/CBwEEzQcCpAcB/8MHwgQEpP8HpMMEygcCpAcB/8QHwgTCpAEEwgcCpATJBwKkBwH/
-xQfCBAGkw/8DB6QEyAcCpAcB/8YHwgQDpP8HwwQKpAf/B/8H/wekBwH/xgcFBKQEpATC/wukBP/7
-//v/+wekBwH/xgfCBAOkBAfC/wOkBPvF/wMHpAcB/8cHwgQJpAf/AwSk//v/wvsE/wekBwH/yAfC
-BAKkA8IEBP/7//vD/wMHpAcB/8kHwwQDpP/7xP8F+/8HpAcB/8oHBP/7//vH/wMHpAcB/8kHBP/7
-//vD/wH7wv8F+/8HpAcB/8oHxP8B+8b/AwekBwH/yQcE//v/+8P/AfvE/wMHpAcB/8oHBP/7//vF
-/wX7/wekBwH/yQcC//vK/wMHpAcB/0ACAMYHAqQHAQdAAgLHpAEHQAMAAQeXAAYDAAAAAACAAAAA
-gACAgAAAAICAAIAAgIDAwMDA3MCmyvBAIABgIACAIACgIADAIADgIAAAQAAgQABAQABgQACAQACg
-QADAQADgQAAAYAAgYABAYABgYACAYACgYADAYADgYAAAgAAggABAgABggACAgACggADAgADggAAA
-oAAgoABAoABgoACAoACgoADAoADgoAAAwAAgwABAwABgwACAwACgwADAwADgwAAA4AAg4ABA4ABg
-4ACA4ACg4ADA4ADg4AAAAEAgAEBAAEBgAECAAECgAEDAAEDgAEAAIEAgIEBAIEBgIECAIECgIEDA
-IEDgIEAAQEAgQEBAQEBgQECAQECgQEDAQEDgQEAAYEAgYEBAYEBgYECAYECgYEDAYEDgYEAAgEAg
-gEBAgEBggECAgECggEDAgEDggEAAoEAgoEBAoEBgoECAoECgoEDAoEDgoEAAwEAgwEBAwEBgwECA
-wECgwEDAwEDgwEAA4EAg4EBA4EBg4ECA4ECg4EDA4EDg4EAAAIAgAIBAAIBgAICAAICgAIDAAIDg
-AIAAIIAgIIBAIIBgIICAIICgIIDAIIDgIIAAQIAgQIBAQIBgQICAQICgQIDAQIDgQIAAYIAgYIBA
-YIBgYICAYICgYIDAYIDgYIAAgIAggIBAgIBggICAgICggIDAgIDggIAAoIAgoIBAoIBgoICAoICg
-oIDAoIDgoIAAwIAgwIBAwIBgwICAwICgwIDAwIDgwIAA4IAg4IBA4IBg4ICA4ICg4IDA4IDg4IAA
-AMAgAMBAAMBgAMCAAMCgAMDAAMDgAMAAIMAgIMBAIMBgIMCAIMCgIMDAIMDgIMAAQMAgQMBAQMBg
-QMCAQMCgQMDAQMDgQMAAYMAgYMBAYMBgYMCAYMCgYMDAYMDgYMAAgMAggMBAgMBggMCAgMCggMDA
-gMDggMAAoMAgoMBAoMBgoMCAoMCgoMDAoMDgoMAAwMAgwMBAwMBgwMCAwMCgwMD/+/CgoKSAgID/
-AAAA/wD//wAAAP//AP8A//////+YAE4AAAAHBwcHBwcHBwAA7AIBAAMAGgAAAHkCAAD/////////
-/yRJAAAAAAAAJElORk8A/6+kpKSkpKSkpAEADAAAAAADIQAMAAEAAAP8/zoAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAMAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAA3gYBAJkAhf8IAAMAAAmu
-Al//EAABAOgAAAAAAAAAAADeBgAArgCF/wgAAwAACYECgv9SAAcAAAAAAAAAAAAXB+MdFwcAAAgH
-TxleIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC2awAAAABUBA8AAAAPAAAAAAAA
-AIMEBwC8BgIABwCF/wgAAwAACeIEfAbTCAkA1cy7AKUGAAAAAIECgwQCAIX/CAADAAAJ
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>ARA</text></item></subform>
 

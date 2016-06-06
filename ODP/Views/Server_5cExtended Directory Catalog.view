@@ -1,84 +1,47 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='2e6' unid='0C514059C2A571A605256893006733FE' sequence='5017'>
+<view name='Server\Extended Directory Catalog' alias=' AggregateDirConfig'
+ xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F'
+ showinmenu='false' allowdocselection='true' publicaccess='false' designerversion='6'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='beveled' opencollapsed='false' showresponsehierarchy='true' showmargin='true'
+ shrinkrows='false' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' haslinkcolumn='true'
+ bgcolor='white' totalscolor='gray' headerbgcolor='#b1b1d2' boldunreadrows='false'
+ evaluateactions='false' allownewdocuments='false' allowcustomizations='true'
+ hidemarginborder='false' marginwidth='0px' marginbgcolor='white' uniquekeys='false'
+ initialbuildrestricted='false' noemptycategories='true'>
+<noteinfo noteid='2e2' unid='0C514059C2A571A605256893006733FE' sequence='5017'>
 <created><datetime>20000228T134715,18-05</datetime></created>
-<modified><datetime dst='true'>20150507T110151,55+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114056,96+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,02-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,54+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,54+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114056,96+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114056,96+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140241,86-04</datetime><datetime
 >20100304T144051,88-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>Server\Extended Directory Catalog| AggregateDirConfig</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-XgACAAwAAgAkNZwAAwAFAB4AGQADAAIACQAEACQ1JENvbmZsaWN0JFJFRgAEAAQAAAAuAAUABABG
-b3JtAQAZAEFnZ3JlZ2F0aW9uIENvbmZpZ3VyYXRpb24ACgIDAA==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYAAAACACQ1
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQABAAYACAAAAFZDAQACACAADgAAAMABAQAACQAgAAAAAAAAAAICAAAgJDVFeHRlbmRlZCBEaXJl
-Y3RvcnkgQ2F0YWxvZyBUaXRsZQ4AAgAMAAIAJDWcAAMAJgABAAAAAQEACQEAAAoBAQ4KAAABAK0r
-AQABAAEBAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAD//wAAAAAAAAAAAAAA
-AAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABALGx0gAAAAEAAAAAAAEA
-gICAAAAAAAAAAAAACAAAAAAAAQA=
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$WebFlags' sign='true'><text>YS</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAACAHn/bAABALGx0gABAAAAAAABAAAAAAABAMDAwAAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/2IAAAABAAAAniERAAYAAAAhAAAAU2VhcmNoRgAHAB4A
-GABXZWIgb25seSAtIHVzZWQgaW4gVmlld3MHAAoAAwAJMVMAAAASAAIAkBcAAAAAAADtAQMABwAK
-AAMACTBSAPb/LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABidG5TZWFyY2guZ2lmP77/
-NAAAAAcAAACeIRAAHgAAAAAAAABBZGQgRXh0ZW5kZWQgRGlyZWN0b3J5IENhdGFsb2f2/y8AAAAA
-AAMAEwANAAAAAAAAAAAAAAAAAAAAAAAAAAAAYnRuTmV3RG9jLmdpZj/5/yAAAAAAAAEABAA2AAAA
-AAAAAAAAAAAAAAAAAAAAANz/SAD5/zYAIE4AAAAAAAAAAG50TmV3RG9jKCdBZ2dyZWdhdGlvbiBD
-b25maWd1cmF0aW9uJywgJ1tOZXRDcmVhdG9yXScpAF//EAACAAEABwAAAAAAAAC+/44BAAABAAAA
-nkEQAB4AAAAAAAAAQWRkIEV4dGVuZGVkIERpcmVjdG9yeSBDYXRhbG9nWgEBACQADQBDdXJyZW50
-U2VydmVyAIsAAAAAAAAAAADwP2sCAwAHAAwABQAJMFMwRQAAABYBBQANAEN1cnJlbnRTZXJ2ZXIA
-AQAAAAoCrwD2ADAAAgDoAwAAAAAAAAEAGQBBZ2dyZWdhdGlvbiBDb25maWd1cmF0aW9uALECrgDG
-AAEADABbTmV0Q3JlYXRvcl3nAHQCrwCuADAAAgDoAwAAAAAAAAEAGQBBZ2dyZWdhdGlvbiBDb25m
-aWd1cmF0aW9uALECrgB+AAIADQAAAAAAAAABAA4ATm90IEF1dGhvcml6ZWQBAFQAWW91IGFyZSBu
-b3QgYXV0aG9yaXplZCB0byBhZGQgRXh0ZW5kZWQgRGlyZWN0b3J5IENhdGFsb2cgZG9jdW1lbnRz
-IHRvIHRoaXMgZGF0YWJhc2UusAOuAAQAtQUDAAcAEgALAAkwUjZSMTBTMTNSAPb/LwAAAAAAAwAT
-AA0AAAAAAAAAAAAAAAAAAAAAAAAAAABidG5OZXdEb2MuZ2lmP77/VgAAAAEAAACeQBAAHwAAAAAA
-AABFZGl0IEV4dGVuZGVkIERpcmVjdG9yeSBDYXRhbG9nSyAAAAASAAIA6AcAAAAAAADtAQMABwAM
-AAUACTBTMEUA9v8tAAAAAAADABMACwAAAAAAAAAAAAAAAAAAAAAAAAAAAGJ0bkVkaXQuZ2lmP77/
-WAAAAAEAAACeARAAIQAAAAAAAABEZWxldGUgRXh0ZW5kZWQgRGlyZWN0b3J5IENhdGFsb2fdIAAA
-ABIAAgBMHQAAAAAAALEBAwAHAAwABQAJMFMwRQD2/y8AAAAAAAMAEwANAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAYnRuRGVsZXRlLmdpZj++/0IAAAABAAAAniEQAAsAAAAAAAAARW1wdHkgVHJhc2hLIAAA
-ABIAAgD9BwAAAAAAAO0BAwAHAAwABQAJMFMwRQD2/y4AAAAAAAMAEwAMAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAYnRuRW1wdHkuZ2lm
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAQABAAAAhQAAAAAAAAAAAAAACAACAL7/YgAAAAEAAACeIREABgAAACEAAABTZWFyY2hG
-AAcAHgAYAFdlYiBvbmx5IC0gdXNlZCBpbiBWaWV3cwcACgADAAkxUwAAABIAAgCQFwAAAAAAAO0B
-AwAHAAoAAwAJMFIAvv80AAAABwAAAJ4hEAAeAAAAAAAAAEFkZCBFeHRlbmRlZCBEaXJlY3Rvcnkg
-Q2F0YWxvZ77/jgEAAAEAAACeQRAAHgAAAAAAAABBZGQgRXh0ZW5kZWQgRGlyZWN0b3J5IENhdGFs
-b2daAQEAJAANAEN1cnJlbnRTZXJ2ZXIAiwAAAAAAAAAAAPA/awIDAAcADAAFAAkwUzBFAAAAFgEF
-AA0AQ3VycmVudFNlcnZlcgABAAAACgKvAPYAMAACAOgDAAAAAAAAAQAZAEFnZ3JlZ2F0aW9uIENv
-bmZpZ3VyYXRpb24AsQKuAMYAAQAMAFtOZXRDcmVhdG9yXecAdAKvAK4AMAACAOgDAAAAAAAAAQAZ
-AEFnZ3JlZ2F0aW9uIENvbmZpZ3VyYXRpb24AsQKuAH4AAgANAAAAAAAAAAEADgBOb3QgQXV0aG9y
-aXplZAEAVABZb3UgYXJlIG5vdCBhdXRob3JpemVkIHRvIGFkZCBFeHRlbmRlZCBEaXJlY3Rvcnkg
-Q2F0YWxvZyBkb2N1bWVudHMgdG8gdGhpcyBkYXRhYmFzZS6wA64ABAC1BQMABwASAAsACTBSNlIx
-MFMxM1IAvv9WAAAAAQAAAJ5AEAAfAAAAAAAAAEVkaXQgRXh0ZW5kZWQgRGlyZWN0b3J5IENhdGFs
-b2dLIAAAABIAAgDoBwAAAAAAAO0BAwAHAAwABQAJMFMwRQC+/1gAAAABAAAAngEQACEAAAAAAAAA
-RGVsZXRlIEV4dGVuZGVkIERpcmVjdG9yeSBDYXRhbG9n3SAAAAASAAIATB0AAAAAAACxAQMABwAM
-AAUACTBTMEUAvv9CAAAAAQAAAJ4hEAALAAAAAAAAAEVtcHR5IFRyYXNoSyAAAAASAAIA/QcAAAAA
-AADtAQMABwAMAAUACTBTMEUA
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Form = "Aggregation Configuration"</formula></code>
+<actionbar useappletinbrowser='true' bgcolor='#b1b1d2' bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<sharedactionref id='33'>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action></sharedactionref>
+<action title='Add Extended Directory Catalog' showinmenu='false' hide='notes'><imageref
+ name='btnNewDoc.gif'/><code event='onClick' for='web'><javascript>ntNewDoc('Aggregation Configuration', '[NetCreator]')</javascript></code></action>
+<action title='Add Extended Directory Catalog' showinmenu='false' hide='web'><imageref
+ name='btnNewDoc.gif'/><code event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+@If(CurrentServer="";
+@PostedCommand([Compose]; "Aggregation Configuration");
+@IsMember("[NetCreator]";@UserRoles);@PostedCommand([Compose];"Aggregation Configuration");@Prompt([Ok];"Not Authorized";"You are not authorized to add Extended Directory Catalog documents to this database."))</formula></code></action>
+<action title='Edit Extended Directory Catalog' showinmenu='false' hide='previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Delete Extended Directory Catalog' showinmenu='false'><imageref
+ name='btnDelete.gif'/><code event='click'><formula>@PostedCommand([MoveToTrash])</formula></code></action>
+<action title='Empty Trash' showinmenu='false' hide='notes'><imageref name='btnEmpty.gif'/><code
+ event='click'><formula>@Command([EmptyTrash])</formula></code></action></actionbar>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='$5'
+ width='56' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='true'><font size='9pt'/><columnheader title='Extended Directory Catalog Title'><font
+ size='9pt'/></columnheader><code event='value'><formula>@DbTitle</formula></code></column></view>
 

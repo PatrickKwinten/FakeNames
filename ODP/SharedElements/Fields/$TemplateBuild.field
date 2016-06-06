@@ -1,27 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='1a2' unid='ADAF54BBD8C06C9685256C6A0070835F' sequence='6'>
+<sharedfield name='$TemplateBuild' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F'>
+<noteinfo noteid='19e' unid='ADAF54BBD8C06C9685256C6A0070835F' sequence='6'>
 <created><datetime>20021107T152856,63-05</datetime></created>
-<modified><datetime dst='true'>20150507T110150,28+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114055,76+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095408,04-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110150,27+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110150,27+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114055,76+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,76+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20121114T141506,18-05</datetime><datetime>20130220T112939,61-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE'><text>$TemplateBuild</text></item>
-<item name='$FIELDS'><text>$TemplateBuild</text></item>
-<item name='$Flags'><text/></item>
-<item name='$INFO' sign='true'><text>$TemplateBuild</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAgwQBAIX/CAAAAAAA3QYAAIr/iv8yAIoAAAUAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAJFRlbXBsYXRlQnVpbGTeBgAAiv+F/wgAAAAAAA==
-</rawitemdata></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ type='text' kind='editable' name='$TemplateBuild'/>
 <item name='$TemplateBuild' sign='true'><text>9.0.1</text></item>
 <item name='$TemplateBuildName' sign='true'><text>StdR4PublicAddressBook</text></item>
 <item name='$TemplateBuildDate' sign='true'><datetime dst='true'>20130909T095316,00-04</datetime></item>
-<item name='$TemplateBuildTool' sign='true'><text>CICO</text></item></note>
+<item name='$TemplateBuildTool' sign='true'><text>CICO</text></item></sharedfield>
 

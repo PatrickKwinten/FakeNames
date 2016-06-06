@@ -1,268 +1,244 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='886' unid='F3D8101718BEF640852575CB006A8165' sequence='73'>
+<subform name='(CertListbox)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' insertdialog='false'
+ designerversion='8.5.3' renderpassthrough='true'>
+<noteinfo noteid='876' unid='F3D8101718BEF640852575CB006A8165' sequence='73'>
 <created><datetime dst='true'>20090604T152319,41-04</datetime></created>
-<modified><datetime dst='true'>20150507T110158,82+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114103,96+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095408,80-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110158,81+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110158,81+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114103,96+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114103,96+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20120604T114515,72-04</datetime><datetime
  dst='true'>20120604T114619,84-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAEAywAAAAAAAAAAAF//EAACAA8ABwAAAAAAAAA=
-</rawitemdata></item>
-<item name='$TITLE'><text>(CertListbox)</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUx3</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAAAAP////9U
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJIgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAAA4AAgAKgA4ADMANQAwAEQAMgA0AAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAACnUknGBAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='$$FormAction1' sign='true'><formula>@Command([RefreshWindow]);
-@Command([EditTop])</formula></item>
-<item name='$NCrossLinks' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$NCertLinks' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$ICrossLinks' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$ICertLinks' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$TrustLinkIds' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>$TrustLinkIds</text><text>$ICertLinks</text><text
->$ICrossLinks</text><text>$NCertLinks</text><text>$NCrossLinks</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>(CertListbox)</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-HgEFAAcAaWNsaW5rcwABAAAACwIcAgMABwAMAAUACTVTNlMAgwQaAIX/CAABAAAKgQKC/1oAGwAA
-AAAAAAAAAA8AUCIPAAgA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYJ
-AAAAAFSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBBsAvAYaABsAhf8oAAEAAApObyBJbnRlcm5ldCBD
-ZXJ0aWZpZXJzIGF2YWlsYWJsZdEGAAAAAIECgwQWAIX/CAABAAAK4/+MAEludGVybmV0IENlcnRp
-ZmllcnMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAgClBgAAAACBAoMEAgCF/wgAAQAACoECgwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAeAB4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAACK/44AiAEBBQYwAgAAAAAAAAIBAA4IXAAAAAAAAAANAAAAAABcAAAATgAF
-AAwAJE5Dcm9zc0xpbmtzBQALACROQ2VydExpbmtzAB8CBQAMACRJQ3Jvc3NMaW5rcx8CBQALACRJ
-Q2VydExpbmtzAB8CXgEDAAcADAAFAAkwUzBFACRUcnVzdExpbmtJZHMAYg4BAIQAAAAAAAAAAADe
-BgAAiv+F/wgAAQAACg==
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='postopen'><formula>@Command([RefreshWindow]);
+@Command([EditTop])</formula></code>
+<body><richtext>
+<pardef id='1' leftmargin='0' hide='notes web mobile'/>
+<par def='1'><run><font size='8pt' color='gray'/><field type='text' kind='computedfordisplay'
+ name='feedLinks'><code event='defaultvalue'><formula>$TrustLinkIds</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='8pt'
+ color='gray' name='user-interface'/><field type='text' kind='computedfordisplay'
+ name='nxButtonState'><code event='defaultvalue'><formula>REM {begin DNT};
+"D";
+REM {end DNT};</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='13' containertype='65418' aftercontainercount='1'
+ afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='8pt' color='gray' name='user-interface'/><field
+ type='text' kind='computedfordisplay' name='ncButtonState'><code event='defaultvalue'><formula
+>REM {begin DNT};
+"D";
+REM {end DNT};</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='19' containertype='65418' aftercontainercount='1'
+ afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='8pt' color='gray' name='user-interface'/><field
+ type='text' kind='computedfordisplay' name='ixButtonState'><code event='defaultvalue'><formula
+>REM {begin DNT};
+"D";
+REM {end DNT};</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='25' containertype='65418' aftercontainercount='1'
+ afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='8pt' color='gray' name='user-interface'/><field
+ type='text' kind='computedfordisplay' name='icButtonState'><code event='defaultvalue'><formula
+>REM {begin DNT};
+"D";
+REM {end DNT};</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='31' containertype='65418' aftercontainercount='1'
+ afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='8pt' color='gray'/><field
+ type='text' allowmultivalues='true' kind='computedfordisplay' name='nxlinks'
+ listinputseparators='comma semicolon newline' listdisplayseparator='newline'><code
+ event='defaultvalue'><formula>server:=@ServerName;
+db=@DbName;
+res:=@DbLookup("":"NoCache" ;@DbName;"(trustCertLkup)";"a";3);
+@If(@IsError(res);"";res)</formula></code></field></run><compositedata type='98'
+ prevtype='65418' nexttype='222' afterparcount='37' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='8pt'
+ color='gray'/><field type='text' allowmultivalues='true' kind='computedfordisplay'
+ name='ixlinks' listinputseparators='comma semicolon newline' listdisplayseparator='newline'><code
+ event='defaultvalue'><formula>server:=@ServerName;
+db=@DbName;
+res:=@DbLookup("":"NoCache" ;@DbName;"(trustCertLkup)";"b";3);
+@If(@IsError(res);"";res)</formula></code></field></run><compositedata type='98'
+ prevtype='65418' nexttype='222' afterparcount='43' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='8pt'
+ color='gray'/><field type='text' allowmultivalues='true' kind='computedfordisplay'
+ name='iclinks' listinputseparators='comma semicolon newline' listdisplayseparator='newline'><code
+ event='defaultvalue'><formula>server:=@ServerName;
+db=@DbName;
+res:=@DbLookup("":"NoCache" ;@DbName;"(trustCertLkup)";"c";3);
+@If(@IsError(res);"";res)</formula></code></field></run><compositedata type='98'
+ prevtype='65418' nexttype='222' afterparcount='49' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='8pt'
+ color='gray'/><field type='text' allowmultivalues='true' kind='computedfordisplay'
+ name='nclinks' listinputseparators='comma semicolon newline' listdisplayseparator='newline'><code
+ event='defaultvalue'><formula>server:=@ServerName;
+db=@DbName;
+res:=@DbLookup("":"NoCache" ;@DbName;"(trustCertLkup)";"d";3);
+@If(@IsError(res);"";res)</formula></code></field></run><compositedata type='98'
+ prevtype='65418' nexttype='222' afterparcount='55' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par>
+<pardef id='2' leftmargin='0'/>
+<par def='2'><run><font size='8pt' color='gray'/></run></par>
+<par def='1'><run><font size='8pt' color='gray'/></run></par>
+<table rowdisplay='tabs' leftmargin='0' widthtype='fixedleft' refwidth='6.1000in'><tablecolumn
+ width='6.1000in'/>
+<tablerow tablabel='Notes Cross Certificates'>
+<tablecell borderwidth='1px 1px 0px'>
+<pardef id='3' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>nxButtonState="D"</formula></code></pardef>
+<par def='3'><run><font size='8pt' name='user-interface'/></run><button width='0.2500in'
+ widthtype='fitcontent' wraptext='true' edge='rounded' bgcolor='system' name='b1'><code
+ event='click'><formula>FIELD $NCrossLinks :="";FIELD nxButtonState:="D";@Command([RefreshHideFormulas])</formula></code><font
+ size='8pt' name='user-interface'/>Deselect All</button><run><font name='user-interface'/></run></par>
+<pardef id='4' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>nxButtonState="S" | @IsError(nxlinks) | nxlinks=""</formula></code></pardef>
+<par def='4'><run><font size='8pt' name='user-interface'/></run><button width='0.2500in'
+ widthtype='fitcontent' wraptext='true' edge='rounded' bgcolor='system' name='b1'><code
+ event='click'><formula>REM {begin DNT};
+FIELD $NCrossLinks :=@RightBack(nxlinks;"|");FIELD nxButtonState:="S";@Command([RefreshHideFormulas]);
+REM {end DNT};</formula></code><font size='8pt' name='user-interface'/>Select All</button></par>
+<table widthtype='fitmargins' leftmargin='0.0104in' refwidth='6.0896in'><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='6' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>@IsError(nxlinks) | nxlinks=""</formula></code></pardef>
+<par def='6'><run><font color='navy'/><field usenotesstyle='false' height='4in'
+ width='6in' multiline='true' borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' allowmultivalues='true' kind='editable' name='$NCrossLinks'
+ listinputseparators='comma' listdisplayseparator='comma'><keywords helperbutton='false'
+ recalcchoices='true' columns='1' ui='listbox'><formula>nxlinks</formula></keywords><code
+ event='defaultvalue'><formula>feedLinks</formula></code></field></run></par>
+<pardef id='7' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>!@IsError(nxlinks) &amp; nxlinks!=""</formula></code></pardef>
+<par def='7'/>
+<pardef id='8' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'
+ keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula>!@IsError(nxlinks) &amp; nxlinks!=""</formula></code></pardef>
+<par def='8'>No Notes Cross Certicates available</par></tablecell></tablerow></table></tablecell></tablerow>
+<tablerow tablabel='Notes Certifiers'>
+<tablecell borderwidth='0px'>
+<pardef id='10' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>ncButtonState="D"</formula></code></pardef>
+<par def='10'><run><font size='8pt' name='user-interface'/></run><button width='0.2500in'
+ widthtype='fitcontent' wraptext='true' edge='rounded' bgcolor='system' name='b1'><code
+ event='click'><formula>FIELD $NCertLinks :="";FIELD ncButtonState:="D";@Command([RefreshHideFormulas])</formula></code><font
+ size='8pt' name='user-interface'/>Deselect All</button><run><font size='8pt'
+ name='user-interface'/></run></par>
+<pardef id='11' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>ncButtonState="S" | @IsError(nclinks) | nclinks=""</formula></code></pardef>
+<par def='11'><run><font size='8pt' name='user-interface'/></run><button width='0.2500in'
+ widthtype='fitcontent' wraptext='true' edge='rounded' bgcolor='system' name='b1'><code
+ event='click'><formula>REM {begin DNT};
+FIELD $NCertLinks :=@RightBack(nclinks;"|");FIELD ncButtonState:="S";@Command([RefreshHideFormulas]);
+REM {end DNT};</formula></code><font size='8pt' name='user-interface'/>Select All</button></par>
+<table widthtype='fitmargins' leftmargin='0' refwidth='6.1000in'><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='13' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>@IsError(nclinks) | nclinks=""</formula></code></pardef>
+<par def='13'><run><font color='navy'/><field usenotesstyle='false' height='4in'
+ width='6in' multiline='true' borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' allowmultivalues='true' kind='editable' name='$NCertLinks'
+ listinputseparators='comma' listdisplayseparator='comma'><keywords helperbutton='false'
+ recalcchoices='true' columns='1' ui='listbox'><formula>nclinks</formula></keywords><code
+ event='defaultvalue'><formula>feedLinks</formula></code></field></run></par>
+<pardef id='14' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>!@IsError(nxlinks) &amp; nxlinks!=""</formula></code></pardef>
+<par def='14'/>
+<pardef id='15' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'
+ keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula>!@IsError(nxlinks) &amp; nxlinks!=""</formula></code></pardef>
+<par def='15'>No Notes Cross Certicates available</par></tablecell></tablerow></table></tablecell></tablerow>
+<tablerow tablabel='Internet Cross Certificates'>
+<tablecell borderwidth='0px'>
+<pardef id='16' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>ixButtonState="D"</formula></code></pardef>
+<par def='16'><run><font size='8pt' name='user-interface'/></run><button width='0.2500in'
+ widthtype='fitcontent' wraptext='true' edge='rounded' bgcolor='system' name='b1'><code
+ event='click'><formula>FIELD $ICrossLinks :="";FIELD ixButtonState:="D";@Command([RefreshHideFormulas])</formula></code><font
+ size='8pt' name='user-interface'/>Deselect All</button><run><font name='user-interface'/></run></par>
+<pardef id='17' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>ixButtonState="S" | @IsError(ixlinks) | ixlinks=""</formula></code></pardef>
+<par def='17'><run><font size='8pt' name='user-interface'/></run><button width='0.2500in'
+ widthtype='fitcontent' wraptext='true' edge='rounded' bgcolor='system' name='b1'><code
+ event='click'><formula>REM {begin DNT};
+FIELD $ICrossLinks :=@RightBack(ixlinks;"|");FIELD ixButtonState:="S";@Command([RefreshHideFormulas]);
+REM {end DNT};</formula></code><font size='8pt' name='user-interface'/>Select All</button></par>
+<table widthtype='fitmargins' leftmargin='0.0104in' refwidth='6.0896in'><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='19' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>@IsError(ixlinks) | ixlinks=""</formula></code></pardef>
+<par def='19'><run><font color='navy'/><field usenotesstyle='false' height='4in'
+ width='6in' multiline='true' borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' allowmultivalues='true' kind='editable' name='$ICrossLinks'
+ listinputseparators='comma' listdisplayseparator='comma'><keywords helperbutton='false'
+ recalcchoices='true' columns='1' ui='listbox'><formula>ixlinks</formula></keywords><code
+ event='defaultvalue'><formula>feedLinks</formula></code></field></run></par>
+<pardef id='20' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>!@IsError(ixlinks) &amp; ixlinks!=""</formula></code></pardef>
+<par def='20'/>
+<pardef id='21' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'
+ keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula>!@IsError(ixlinks) &amp; ixlinks!=""</formula></code></pardef>
+<par def='21'>No Internet Cross Certificates available</par></tablecell></tablerow></table></tablecell></tablerow>
+<tablerow tablabel='Internet Certifiers'>
+<tablecell borderwidth='0px'>
+<pardef id='23' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>icButtonState="D"</formula></code></pardef>
+<par def='23'><run><font size='8pt' name='user-interface'/></run><button width='0.2500in'
+ widthtype='fitcontent' wraptext='true' edge='rounded' bgcolor='system' name='b1'><code
+ event='click'><formula>FIELD $ICertLinks :="";FIELD icButtonState:="D";@Command([RefreshHideFormulas])</formula></code><font
+ size='8pt' name='user-interface'/>Deselect All</button><run><font name='user-interface'/></run></par>
+<pardef id='24' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>icButtonState="S" |  @IsError(iclinks) | iclinks=""</formula></code></pardef>
+<par def='24'><run><font size='8pt' name='user-interface'/></run><button width='0.2500in'
+ widthtype='fitcontent' wraptext='true' edge='rounded' bgcolor='system' name='b1'><code
+ event='click'><formula>REM {begin DNT};
+FIELD $ICertLinks :=@RightBack(iclinks;"|");FIELD icButtonState:="S";@Command([RefreshHideFormulas]);
+REM {end DNT};</formula></code><font size='8pt' name='user-interface'/>Select All</button></par>
+<table widthtype='fitmargins' leftmargin='0.0104in' refwidth='6.0896in'><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='25' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+> @IsError(iclinks) | iclinks=""</formula></code></pardef>
+<par def='25'><run><font color='navy'/><field usenotesstyle='false' height='4in'
+ width='6in' multiline='true' borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' allowmultivalues='true' kind='editable' name='$ICertLinks'
+ listinputseparators='comma' listdisplayseparator='comma'><keywords helperbutton='false'
+ recalcchoices='true' columns='1' ui='listbox'><formula>iclinks</formula></keywords><code
+ event='defaultvalue'><formula>feedLinks</formula></code></field></run></par>
+<pardef id='26' keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula
+>!@IsError(iclinks) &amp; iclinks!=""</formula></code></pardef>
+<par def='26'/>
+<pardef id='27' tabs='L0.5000in L1in L1.5000in L2in L2.5000in L3in L3.5000in L4in'
+ keepwithnext='true' keeptogether='true'><code event='hidewhen'><formula>!@IsError(iclinks) &amp; iclinks!=""</formula></code></pardef>
+<par def='27'>No Internet Certifiers available</par></tablecell></tablerow></table></tablecell></tablerow></table>
+<par def='2'/>
+<par def='1'><run><font size='8pt' color='gray'/><field type='text' allowmultivalues='true'
+ kind='computed' name='$TrustLinkIds' listinputseparators='comma semicolon'
+ listdisplayseparator='semicolon'><code event='defaultvalue'><formula>@Trim($NCrossLinks:$NCertLinks:$ICrossLinks:$ICertLinks)</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>(CertListbox)</text></item></subform>
 

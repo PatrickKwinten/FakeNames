@@ -1,296 +1,261 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='3da' unid='01799A1B079F9AEE85256A02004DC205' sequence='5016'>
+<subform name='$organizationInheritableSchema' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='3d6' unid='01799A1B079F9AEE85256A02004DC205' sequence='5016'>
 <created><datetime>20010301T090919,41-05</datetime></created>
-<modified><datetime dst='true'>20150507T110152,77+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,18+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095404,64-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,76+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,76+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,18+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,18+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140119,07-04</datetime><datetime
 >20100304T143930,57-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSJTbWFsbCBGb250cwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'><run><font size='9pt'/></run></par>
+<table widthtype='fitwindow' rowdisplay='tabs' leftmargin='0.7500in' refwidth='10.2799in'><tablecolumn
+ width='100%'/>
+<tablerow tablabel='Mandatory'>
+<tablecell borderwidth='1px 1px 0px'>
+<pardef id='3' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt'/></run></par>
+<table leftmargin='0.1500in' rightmargin='50%' widthtype='fixedleft' refwidth='4.8292in'><tablecolumn
+ width='0.1500in'/><tablecolumn width='1.6313in'/><tablecolumn width='3.0479in'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='5' keepwithnext='true' keeptogether='true'/>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<pardef id='6' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='6'><run><font size='9pt' style='bold' color='white'/>Mandatory Attributes</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<pardef id='7' leftmargin='0' keepwithnext='true' keeptogether='true'/>
+<par def='7'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='8' leftmargin='0.1000in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='8'><run><font size='9pt'/>Object Class:</run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='9' leftmargin='0.0313in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='9'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='computedfordisplay' name='$dspType'><code event='defaultvalue'><formula
+>Type</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/>Organization</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='10' leftmargin='0.0375in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='10'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='o'/></run><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='3'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow tablabel='Optional'>
+<tablecell borderwidth='0px 1px'>
+<par def='3'><run><font size='9pt'/></run></par>
+<table leftmargin='0.1500in' rightmargin='50%' widthtype='fixedleft' refwidth='4.6979in'><tablecolumn
+ width='0.1500in'/><tablecolumn width='1.5000in'/><tablecolumn width='3.0479in'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<pardef id='11' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='11'><run><font size='9pt' style='bold' color='white'/>Optional Attributes</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#a0a0c5'>
+<pardef id='12' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='12'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='11'><run><font size='9pt'/>Password:</run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='12'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='userPassword'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='13' keepwithnext='true' keeptogether='true'/>
+<par def='13'><run><font size='9pt'/>Search Guide:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='14' keepwithnext='true' keeptogether='true'/>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='searchGuide'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>See Also:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='seeAlso'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Business Category:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='businessCategory'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>x121 Address:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='x121Address'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Registered Address:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='registeredAddress'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Destination Indicator:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='destinationIndicator'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Preferred Delivery Method:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='preferredDeliveryMethod'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Telex Number:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='telexNumber'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Teletex Terminal Identifier:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='teletexTerminalIdentifier'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Telephone Number:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='telephoneNumber'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>International ISDN Number:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='internationaliSDNNumber'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Fax Number:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='facsimileTelephoneNumber'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Street:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='street'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Post Office Box:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='postOfficeBox'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Postal Code:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='postalCode'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Postal Address:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='postalAddress'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Physical Delivery Office Name:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='physicalDeliveryOfficeName'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>ST:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='st'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>l:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='l'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='13'><run><font size='9pt'/>Description:</run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='description'/></run><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='3'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow tablabel='Operational'>
+<tablecell borderwidth='0px 1px'>
+<par def='3'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow tablabel='Comments'>
+<tablecell borderwidth='0px 1px'>
+<pardef id='15' keepwithnext='true' keeptogether='true'/>
+<par def='15'><run><font size='9pt'/></run></par>
+<pardef id='16' leftmargin='0.0500in' keepwithnext='true' keeptogether='true'/>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter any comments about the connection description.</popuptext><run><font
+ size='9pt'/></run></popup><run><font size='9pt'/></run><run><font size='9pt'/><field
+ showdelimiters='false' type='richtext' kind='editable' name='Comments' description='Comments about the connection description'/></run><run
+><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='1'><run><font size='9pt'/></run></par></richtext></body>
 <item name='$SignatureStatus'><text>1</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>$organizationInheritableSchema</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUAx3</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AAAA//9U
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAAD//wgAKgA1AEQAOQBFAEMARQAwAAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAAAqbJVgBAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='o' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='userPassword' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='searchGuide' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='seeAlso' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='businessCategory' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='x121Address' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='registeredAddress' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='destinationIndicator' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='preferredDeliveryMethod' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='telexNumber' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='teletexTerminalIdentifier' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='telephoneNumber' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='internationaliSDNNumber' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='facsimileTelephoneNumber' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Street' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='postOfficeBox' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='postalCode' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='PostalAddress' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='physicalDeliveryOfficeName' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='st' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='l' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Description' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Comments' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>Comments</text><text>description</text><text
->l</text><text>st</text><text>physicalDeliveryOfficeName</text><text>postalAddress</text><text
->postalCode</text><text>postOfficeBox</text><text>street</text><text>facsimileTelephoneNumber</text><text
->internationaliSDNNumber</text><text>telephoneNumber</text><text>teletexTerminalIdentifier</text><text
->telexNumber</text><text>preferredDeliveryMethod</text><text>destinationIndicator</text><text
->registeredAddress</text><text>x121Address</text><text>businessCategory</text><text
->seeAlso</text><text>searchGuide</text><text>userPassword</text><text>o</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$organizationInheritableSchema</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAJgQKC/1IAAgAAAAAAAAAAADgE
-AAA4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAJQEOAQA
-ADgEAAAAAAAAgwQCAN0GAQD7//v/LABBAAAABAEAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAQAAAAAA
-AAAAAAAAXP84AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAQAA
-CgAAAADeBgEA+/+jDjgEKAA8AAAAAABDAKQSAAA4BAs+gHAVAhEBAQEAAIECgv9SAAMAAAAAAAAA
-AABHBAs+RwQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAABU
-BA8AAAAPAAAAAAAAAIMEAwCF/wgAAQAACYECgv9SAAQAAAAAAAAAAAAQBSEhEAUAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAACUANgAAADYAAAAgSQyAIMEBADd
-BgEA+//7/ywAAAAAAAMDAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAFz/OAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAEAAAoAAAAA3gYBAPv/zw4Q
-BSgAPAAAAAAAAgDQEgAAEAXoBQAAAAIAAAEBAACBAoL/UgAFAAAAAAAAAAAAEAXoBRAFAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVAcAAAAAAAAAAAAAAACD
-BAUA3QYAAIX/hf8IAAEBAQnSCAEA////AN4GAACF/9ASAAHoBRUPAAAAAwAAAQHZAIECgv9SAAYA
-AAAAAAAAAAB4BhUPeAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACG
-AQAAAABUBJAAAACQAAAAAAAAAIMEBgDdBgAAhf+F/xwAAQEBCU1hbmRhdG9yeSBBdHRyaWJ1dGVz
-0ggBAP///wDeBgAAhf/TCAEAoKDFANASAAIVDzogAAAAAwAAAQHZAIECgv9SAAcAAAAAAAAAAAAV
-DzogFQ8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAABUBAAA
-AAAAAAAAAAAAAIMEBwCF/wgAAQAACdMIAQCgoMUA0BIBABAF6AUAAEACABABAQAAgQKDBAUA3QYA
-AIX/hf8IAAEBAQnSCAEA////AN4GAACF/9ASAQHoBRUPAABAAgAQAQEAAIECgv9SAAgAAAAAAAEA
-AAB4BhUPeAYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAABU
-BJAAAACQAAAAAAAAAIMECACF/xUAAQAACU9iamVjdCBDbGFzczoA0BIBAhUPOiAAAEACABABAQAA
-gQKC/1IACQAAAAAAAQAAAEIPOiBCDwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAIYBAAAAAFQELQAAAC0AAAAAAAAAgwQJAIX/CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACK/zwAgAEABQAwAgAAAAAAAAIBAAAJEAAAAAAAAAAIAAAAAAAQAAAADgAFAAQA
-VHlwZQMAJGRzcFR5cGXeBgAAiv+F/wgAAQAACdASAgAQBegFAABQAgARAQEAAIECgwQFAN0GAACF
-/4X/CAABAQEJ0ggBAP///wDeBgAAhf/QEgIB6AUVDwAAUAIAEQEBAACBAoMECACF/xQAAQAACU9y
-Z2FuaXphdGlvbtASAgIVDzogAABQAgARAQEAAIECgv9SAAoAAAAAAAEAAABLDzogSw8AAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAABUBDYAAAA2AAAAAAAAAIME
-CgCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv8mAIoAAAUAMAIAAAAAAAAC
-AQAACQAAAAAAAAAAAQAAAAAAbwDeBgAAiv+F/wgAAQAACdEGAAAAAIECgwQDAIX/CAABAAAJ4/+M
-AE1hbmRhdG9yeQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCkEgEAOAQLPoBwBQIRAAEBAACBAoMEAwCF/wgAAQAACYEC
-gwQEAN0GAQD7//v/LAAAAAAAFgMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAXP84
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAQAACgAAAADeBgEA
-+//PDhAFKAA8AAAAAAACANASAAAQBegFAAAAAgAAAQEAAIECgwQFAN0GAACF/4X/CAABAQEJ0ggB
-AP///wDeBgAAhf/QEgAB6AVYDgAAAAMAAAEB2QCBAoL/UgALAAAAAAAAAAAA9wVYDvcFAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVAQPAAAADwAAAAAAAACD
-BAsA3QYAAIX/hf8bAAEBAQlPcHRpb25hbCBBdHRyaWJ1dGVzANIIAQD///8A3gYAAIX/0wgBAKCg
-xQDQEgACWA59HwAAAAMAAAEB2QCBAoL/UgAMAAAAAAAAAAAAZw59H2cOAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVAQPAAAADwAAAAAAAACDBAwAhf8IAAEA
-AAnTCAEAoKDFANASAQAQBegFAABAAgAQAQEAAIECgwQFAN0GAACF/4X/CAABAQEJ0ggBAP///wDe
-BgAAhf/QEgEB6AVYDgAAQAIAEAEBAACBAoMECwCF/xEAAQAACVBhc3N3b3JkOgDQEgECWA59HwAA
-QAIAEAEBAACBAoMEDACF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv8wAIoA
-AAUAMAIAAAAAAAACAQAACQAAAAAAAAAADAAAAAAAdXNlclBhc3N3b3Jk3gYAAIr/hf8IAAEAAAnQ
-EgIAEAXoBQAAUAIAEQEBAACBAoMEBQDdBgAAhf+F/wgAAQEBCdIIAQD///8A3gYAAIX/0BICAegF
-WA4AAFACABEBAQAAgQKC/1IADQAAAAAAAAAAAOgFWA7oBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAFQHAAAAAAAAAAAAAAAAgwQNAIX/FQABAAAJU2VhcmNo
-IEd1aWRlOgDQEgICWA59HwAAUAIAEQEBAACBAoL/UgAOAAAAAAAAAAAAWA59H1gOAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVAcAAAAAAAAAAAAAAACDBA4A
-hf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/MACKAAAFADACAAAAAAAAAgEA
-AAkAAAAAAAAAAAsAAAAAAHNlYXJjaEd1aWRlAN4GAACK/4X/CAABAAAJ0BIDABAF6AUAAFACABEB
-AQAAgQKDBAUA3QYAAIX/hf8IAAEBAQnSCAEA////AN4GAACF/9ASAwHoBVgOAABQAgARAQEAAIEC
-gwQNAIX/EQABAAAJU2VlIEFsc286ANASAwJYDn0fAABQAgARAQEAAIECgwQOAIX/CAABAAAJ3QYA
-AIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/ywAigAABQAwAgAAAAAAAAIBAAAJAAAAAAAAAAAH
-AAAAAABzZWVBbHNvAN4GAACK/4X/CAABAAAJ0BIEABAF6AUAAFACABEBAQAAgQKDBAUA3QYAAIX/
-hf8IAAEBAQnSCAEA////AN4GAACF/9ASBAHoBVgOAABQAgARAQEAAIECgwQNAIX/GgABAAAJQnVz
-aW5lc3MgQ2F0ZWdvcnk60BIEAlgOfR8AAFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+/1AA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAIr/NACKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAABAAAAAAAGJ1
-c2luZXNzQ2F0ZWdvcnneBgAAiv+F/wgAAQAACdASBQAQBegFAABQAgARAQEAAIECgwQFAN0GAACF
-/4X/CAABAQEJ0ggBAP///wDeBgAAhf/QEgUB6AVYDgAAUAIAEQEBAACBAoMEDQCF/xUAAQAACXgx
-MjEgQWRkcmVzczoA0BIFAlgOfR8AAFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+/1AAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAIr/MACKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAAAsAAAAAAHgxMjFB
-ZGRyZXNzAN4GAACK/4X/CAABAAAJ0BIGABAF6AUAAFACABEBAQAAgQKDBAUA3QYAAIX/hf8IAAEB
-AQnSCAEA////AN4GAACF/9ASBgHoBVgOAABQAgARAQEAAIECgwQNAIX/GwABAAAJUmVnaXN0ZXJl
-ZCBBZGRyZXNzOgDQEgYCWA59HwAAUAIAEQEBAACBAoMEDgCF/wgAAQAACd0GAACK//7/UAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAiv82AIoAAAUAMAIAAAAAAAACAQAACQAAAAAAAAAAEQAAAAAAcmVnaXN0
-ZXJlZEFkZHJlc3MA3gYAAIr/hf8IAAEAAAnQEgcAEAXoBQAAUAIAEQEBAACBAoMEBQDdBgAAhf+F
-/wgAAQEBCdIIAQD///8A3gYAAIX/0BIHAegFWA4AAFACABEBAQAAgQKDBA0Ahf8eAAEAAAlEZXN0
-aW5hdGlvbiBJbmRpY2F0b3I60BIHAlgOfR8AAFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+
-/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/OACKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAABQAAAAA
-AGRlc3RpbmF0aW9uSW5kaWNhdG9y3gYAAIr/hf8IAAEAAAnQEggAEAXoBQAAUAIAEQEBAACBAoME
-BQDdBgAAhf+F/wgAAQEBCdIIAQD///8A3gYAAIX/0BIIAegFWA4AAFACABEBAQAAgQKDBA0Ahf8i
-AAEAAAlQcmVmZXJyZWQgRGVsaXZlcnkgTWV0aG9kOtASCAJYDn0fAABQAgARAQEAAIECgwQOAIX/
-CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/zwAigAABQAwAgAAAAAAAAIBAAAJ
-AAAAAAAAAAAXAAAAAABwcmVmZXJyZWREZWxpdmVyeU1ldGhvZADeBgAAiv+F/wgAAQAACdASCQAQ
-BegFAABQAgARAQEAAIECgwQFAN0GAACF/4X/CAABAQEJ0ggBAP///wDeBgAAhf/QEgkB6AVYDgAA
-UAIAEQEBAACBAoMEDQCF/xUAAQAACVRlbGV4IE51bWJlcjoA0BIJAlgOfR8AAFACABEBAQAAgQKD
-BA4Ahf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/MACKAAAFADACAAAAAAAA
-AgEAAAkAAAAAAAAAAAsAAAAAAHRlbGV4TnVtYmVyAN4GAACK/4X/CAABAAAJ0BIKABAF6AUAAFAC
-ABEBAQAAgQKDBAUA3QYAAIX/hf8IAAEBAQnSCAEA////AN4GAACF/9ASCgHoBVgOAABQAgARAQEA
-AIECgwQNAIX/JAABAAAJVGVsZXRleCBUZXJtaW5hbCBJZGVudGlmaWVyOtASCgJYDn0fAABQAgAR
-AQEAAIECgwQOAIX/CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/z4AigAABQAw
-AgAAAAAAAAIBAAAJAAAAAAAAAAAZAAAAAAB0ZWxldGV4VGVybWluYWxJZGVudGlmaWVyAN4GAACK
-/4X/CAABAAAJ0BILABAF6AUAAFACABEBAQAAgQKDBAUA3QYAAIX/hf8IAAEBAQnSCAEA////AN4G
-AACF/9ASCwHoBVgOAABQAgARAQEAAIECgwQNAIX/GQABAAAJVGVsZXBob25lIE51bWJlcjoA0BIL
-AlgOfR8AAFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AIr/NACKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAAA8AAAAAAHRlbGVwaG9uZU51bWJlcgDeBgAA
-iv+F/wgAAQAACdASDAAQBegFAABQAgARAQEAAIECgwQFAN0GAACF/4X/CAABAQEJ0ggBAP///wDe
-BgAAhf/QEgwB6AVYDgAAUAIAEQEBAACBAoMEDQCF/yIAAQAACUludGVybmF0aW9uYWwgSVNETiBO
-dW1iZXI60BIMAlgOfR8AAFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAIr/PACKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAABcAAAAAAGludGVybmF0aW9u
-YWxpU0ROTnVtYmVyAN4GAACK/4X/CAABAAAJ0BINABAF6AUAAFACABEBAQAAgQKDBAUA3QYAAIX/
-hf8IAAEBAQnSCAEA////AN4GAACF/9ASDQHoBVgOAABQAgARAQEAAIECgwQNAIX/EwABAAAJRmF4
-IE51bWJlcjoA0BINAlgOfR8AAFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+/1AAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAIr/PACKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAABgAAAAAAGZhY3NpbWls
-ZVRlbGVwaG9uZU51bWJlct4GAACK/4X/CAABAAAJ0BIOABAF6AUAAFACABEBAQAAgQKDBAUA3QYA
-AIX/hf8IAAEBAQnSCAEA////AN4GAACF/9ASDgHoBVgOAABQAgARAQEAAIECgwQNAIX/DwABAAAJ
-U3RyZWV0OgDQEg4CWA59HwAAUAIAEQEBAACBAoMEDgCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAiv8qAIoAAAUAMAIAAAAAAAACAQAACQAAAAAAAAAABgAAAAAAc3RyZWV03gYA
-AIr/hf8IAAEAAAnQEg8AEAXoBQAAUAIAEQEBAACBAoMEBQDdBgAAhf+F/wgAAQEBCdIIAQD///8A
-3gYAAIX/0BIPAegFWA4AAFACABEBAQAAgQKDBA0Ahf8YAAEAAAlQb3N0IE9mZmljZSBCb3g60BIP
-AlgOfR8AAFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AIr/MgCKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAAA0AAAAAAHBvc3RPZmZpY2VCb3gA3gYAAIr/
-hf8IAAEAAAnQEhAAEAXoBQAAUAIAEQEBAACBAoMEBQDdBgAAhf+F/wgAAQEBCdIIAQD///8A3gYA
-AIX/0BIQAegFWA4AAFACABEBAQAAgQKDBA0Ahf8UAAEAAAlQb3N0YWwgQ29kZTrQEhACWA59HwAA
-UAIAEQEBAACBAoMEDgCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv8uAIoA
-AAUAMAIAAAAAAAACAQAACQAAAAAAAAAACgAAAAAAcG9zdGFsQ29kZd4GAACK/4X/CAABAAAJ0BIR
-ABAF6AUAAFACABEBAQAAgQKDBAUA3QYAAIX/hf8IAAEBAQnSCAEA////AN4GAACF/9ASEQHoBVgO
-AABQAgARAQEAAIECgwQNAIX/FwABAAAJUG9zdGFsIEFkZHJlc3M6ANASEQJYDn0fAABQAgARAQEA
-AIECgwQOAIX/CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/zIAigAABQAwAgAA
-AAAAAAIBAAAJAAAAAAAAAAANAAAAAABwb3N0YWxBZGRyZXNzAN4GAACK/4X/CAABAAAJ0BISABAF
-6AUAAFACABEBAQAAgQKDBAUA3QYAAIX/hf8IAAEBAQnSCAEA////AN4GAACF/9ASEgHoBVgOAABQ
-AgARAQEAAIECgwQNAIX/JgABAAAJUGh5c2ljYWwgRGVsaXZlcnkgT2ZmaWNlIE5hbWU60BISAlgO
-fR8AAFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/
-PgCKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAABoAAAAAAHBoeXNpY2FsRGVsaXZlcnlPZmZpY2VO
-YW1l3gYAAIr/hf8IAAEAAAnQEhMAEAXoBQAAUAIAEQEBAACBAoMEBQDdBgAAhf+F/wgAAQEBCdII
-AQD///8A3gYAAIX/0BITAegFWA4AAFACABEBAQAAgQKDBA0Ahf8LAAEAAAlTVDoA0BITAlgOfR8A
-AFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/JgCK
-AAAFADACAAAAAAAAAgEAAAkAAAAAAAAAAAIAAAAAAHN03gYAAIr/hf8IAAEAAAnQEhQAEAXoBQAA
-UAIAEQEBAACBAoMEBQDdBgAAhf+F/wgAAQEBCdIIAQD///8A3gYAAIX/0BIUAegFWA4AAFACABEB
-AQAAgQKDBA0Ahf8KAAEAAAlsOtASFAJYDn0fAABQAgARAQEAAIECgwQOAIX/CAABAAAJ3QYAAIr/
-/v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACK/yYAigAABQAwAgAAAAAAAAIBAAAJAAAAAAAAAAABAAAA
-AABsAN4GAACK/4X/CAABAAAJ0BIVABAF6AUAAFACABEBAQAAgQKDBAUA3QYAAIX/hf8IAAEBAQnS
-CAEA////AN4GAACF/9ASFQHoBVgOAABQAgARAQEAAIECgwQNAIX/FAABAAAJRGVzY3JpcHRpb246
-0BIVAlgOfR8AAFACABEBAQAAgQKDBA4Ahf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAIr/MACKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAAAsAAAAAAGRlc2NyaXB0aW9uAN4GAACK
-/4X/CAABAAAJ0QYAAAAAgQKDBAMAhf8IAAEAAAnj/4wAT3B0aW9uYWwAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAKQS
-AgA4BAs+gHAFAhEAAQEAAIECgwQDAIX/CAABAAAJ4/+MAE9wZXJhdGlvbmFsAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCk
-EgMAOAQLPoBwBQIRAAEBAACBAoL/UgAPAAAAAAAAAAAARwQLPkcEAADMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMhgEAAAAAVAcAAAAAAAAAAAAAAACDBA8Ahf8IAAEAAAmB
-AoL/UgAQAAAAAAAAAAAAgAQLPoAEAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMhgEAAAAAVARIAAAASAAAAAAAAACDBBAAhf8IAAEAAAndBgAArf+p/0EAAQAMAAAANQBF
-bnRlciBhbnkgY29tbWVudHMgYWJvdXQgdGhlIGNvbm5lY3Rpb24gZGVzY3JpcHRpb24uAACF/wgA
-AQAACaoC3gYAAK4Ahf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/FAAAAAAA
-BAAAAAAAAAAAAAAAiv9WAIoAAQAAMAIACAAAAAACAQAACQAAAAAAAAAACAApAAAAQ29tbWVudHND
-b21tZW50cyBhYm91dCB0aGUgY29ubmVjdGlvbiBkZXNjcmlwdGlvbgDeBgAAiv+F/wgAAQAACeP/
-jABDb21tZW50cwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIApQYAAAAAgQKDBAEAhf8IAAEAAAk=
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>$organizationInheritableSchema</text></item></subform>
 

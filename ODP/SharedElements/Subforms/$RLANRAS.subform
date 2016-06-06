@@ -1,165 +1,117 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='726' unid='5F08D0BFED33541A8525632A000879AF' sequence='5050'>
+<subform name='$RLANRAS' alias='Microsoft Dial-Up Networking|RAS' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' insertdialog='false'
+ designerversion='8.5' language='en'>
+<noteinfo noteid='722' unid='5F08D0BFED33541A8525632A000879AF' sequence='5050'>
 <created><datetime dst='true'>19960513T213234,39-04</datetime></created>
-<modified><datetime dst='true'>20150507T110157,20+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,40+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,86-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110157,19+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,19+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114102,40+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,40+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20050824T134849,56-04</datetime><datetime
  dst='true'>20081007T114831,39-04</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>$RLANRAS</text><text>Microsoft Dial-Up Networking</text><text
->RAS</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CU3x</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAABExTT0IDABQAZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//AAA4AP////9U
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAADAIwAAAAAABgACAAqADMAMwA3AEQANAA1AEUAAAAAAGwAAwBOAEUAVwAAAIAABgBEAEUATABF
-AFQARQAAAAAA//8KAEkATgBJAFQASQBBAEwASQBaAEUAAAAAAP//CQBUAEUAUgBNAEkATgBBAFQA
-RQAAAP//BgBPAEIASgBFAEMAVAAAAAAA//8AAAAAAAAFAAgAAAAAAOEBcssEAAcAAAAAAB0AAAIA
-AAA=
-</rawitemdata></item>
-<item name='StaticTag' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
+<body><richtext>
+<pardef id='1' leftmargin='2.7500in' firstlineleftmargin='1.2500in' hide='read edit copy preview previewedit'
+ tabs='L1.2500in'><code event='hidewhen'><formula>ConnectionType != "5"</formula></code></pardef>
+<par def='1'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='text' kind='computed' name='StaticTag'><code
+ event='defaultvalue'><formula>"RAS$%^Dial-Up Networking name:"</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='8' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'
+ name='user-interface'/></run><run><font size='9pt' name='user-interface'/><field
+ type='number' kind='computed' name='RLANItems'><numberformat format='general'
+ punctuated='false' parens='false' percent='false' bytes='false'/><code event='defaultvalue'><formula
+>7</formula></code></field></run><run><font size='9pt' name='user-interface'/></run></par>
+<table widthtype='fixedleft' refwidth='5.2500in'><tablecolumn width='5.2500in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system'>
+<pardef id='3' leftmargin='1%' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ConnectionType != "5"</formula></code></pardef>
+<par def='3'><run><font size='9pt' name='user-interface'/></run></par>
+<table widthtype='fitmargins' htmlid='RASTbl' leftmargin='0' refwidth='5.2500in'><tablecolumn
+ width='1.4792in' sizetofit='true'/><tablecolumn width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system' htmlid='rt1'>
+<pardef id='5' align='right' leftmargin='0' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'><code event='hidewhen'><formula>ConnectionType != "5"</formula></code></pardef>
+<par def='5'><run><font size='9pt' name='user-interface'/>Dial-Up Networking name</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='system'>
+<pardef id='6' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>ConnectionType != "5"</formula></code></pardef>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field usenotesstyle='false' height='0.2000in'
+ width='2.5000in' multiline='true' borderstyle='single' type='text' kind='editable'
+ name='RLANTag' description='Enter the dial-up networking name' taborder='1'/></run><run
+><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system' htmlid='rt2'>
+<par def='5'><run><font size='9pt' name='user-interface'/>Login name</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='system'>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field usenotesstyle='false' height='0.2000in'
+ width='2.5000in' multiline='true' borderstyle='single' type='text' kind='editable'
+ name='RLAN1' description='Enter the login name' taborder='2'/></run><run
+><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system' htmlid='rt3'>
+<par def='5'><run><font size='9pt' name='user-interface'/>Password</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='system'>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='password' usenotesstyle='false'
+ height='0.2000in' width='2.5000in' multiline='true' borderstyle='single'
+ kind='editable' seal='true' name='RLAN2' description='Enter a password' taborder='3'/></run><run
+><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system' htmlid='rt4'>
+<par def='5'><run><font size='9pt' name='user-interface'/>Phone number</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='system'>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field usenotesstyle='false' height='0.2000in'
+ width='2.5000in' multiline='true' borderstyle='single' type='text' kind='editable'
+ name='RLAN3' description='Enter the phone number' taborder='4'/></run><run
+><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system' htmlid='rt5'>
+<par def='5'><run><font size='9pt' name='user-interface'/>Area code</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='system'>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field usenotesstyle='false' height='0.2000in'
+ width='2.5000in' multiline='true' borderstyle='single' type='text' kind='editable'
+ name='RLAN4' description='Enter the area code' taborder='5'/></run><run><font
+ size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system' htmlid='rt6'>
+<par def='5'><run><font size='9pt' name='user-interface'/>Country code</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='system'>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field usenotesstyle='false' height='0.2000in'
+ width='2.5000in' multiline='true' borderstyle='single' type='text' kind='editable'
+ name='RLAN5' description='Enter the country code' taborder='6'/></run><run
+><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system' htmlid='rt7'>
+<par def='5'><run><font size='9pt' name='user-interface'/>Dial-back phone number</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='system'>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field usenotesstyle='false' height='0.2000in'
+ width='2.5000in' multiline='true' borderstyle='single' type='text' kind='editable'
+ name='RLAN6' description='Enter the dial-back phone number' taborder='7'/></run><run
+><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' htmlid='rt8'>
+<par def='5'><run><font size='9pt' name='user-interface'/>Domain</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field usenotesstyle='false' height='0.2000in'
+ width='2.5000in' multiline='true' borderstyle='single' type='text' kind='editable'
+ name='RLAN7' description='Enter the domain' taborder='8'/></run></par></tablecell></tablerow></table>
+<par def='3'><run><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow></table>
+<pardef id='2' leftmargin='1in'><code event='hidewhen'><formula>ConnectionType != "5"</formula></code></pardef>
+<par def='2'><run><font size='9pt' name='user-interface'/></run></par></richtext></body>
 <item name='RLANItems' summary='false' sign='true'><number>0</number></item>
-<item name='RLANTag' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN1' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN2' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN3' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN4' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN5' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN6' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='RLAN7' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>RLAN7</text><text>RLAN6</text><text>RLAN5</text><text
->RLAN4</text><text>RLAN3</text><text>RLAN2</text><text>RLAN1</text><text>RLANTag</text><text
->RLANItems</text><text>StaticTag</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>RAS</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAHgPAAAIBwEACAdPGV4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAADBrAAAAAJSEeA8aAAgHDAAAAAAAAQAAAAQAAAC7/zwAAQATADLoAGLCGi4AAAAgAAUA
-DgBDb25uZWN0aW9uVHlwZQEAAQA1AAsCAwAHAAwABQAJMVMyUwCDBAEAhf8IAAMAAAndBgAAiv/+
-/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAIr/WACIAQAFADACAAAAAAAAAgMAAAkqAAAAAAAAAAkAAAAA
-ACoAAAAoAAEAHgBSQVMkJV5EaWFsLVVwIE5ldHdvcmtpbmcgbmFtZToDAFN0YXRpY1RhZwBiDgEA
-hAAAAAAAAAAAAN4GAACK/4X/CAADAAAJ3QYAAIr//v9UAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAA
-AAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuLCQA
-iv9AAIgBAAMAMAAAAAAAAAACAwAACRIAAAAAAAAACQAAAAAAEgAAABAAAAAAAAAAAAAcQAMAUkxB
-Tkl0ZW1zAN4GAACK/4X/CAADAAAJgQKC/1oAAgAAAAAAAAAAAKAFAACgBQAAAABPGV4gAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAJAAAAAJSEoAUaAKAFDAAAAAAAAQAAAAQAAACD
-BAIAvAYBAAIA3QYBAPv/+/8sAAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAA
-AABc/z4AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAABAAAKAAAA
-AAEAAAAAAN4GAQD7/6MOoAUoADwAAAAAAAIApBIAAKAFKCMAAAADAAABAQ8AgQKC/1oAAwAAAAAA
-AAAAAOwFKCPsBQAAAABPGV4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYJAAAA
-AKiEAAABAAAAAQAAAAAAAQAAAAQAAACDBAMAvAYBAAMAhf8IAAMAAAmBAoL/WgAEAAAAAAAAAAAA
-oAUoI6AFAAAAAE8ZXiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgkAAAAAFIQA
-AAEAAAABAAAAZAABAAAABAAAAIMEBAC8BgEABADdBgEA+//7/zIAAQAAAAgCAQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAEAAAAAAAYAAAAAAFJBU1RibFz/PgABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAOAAAAAAAAAAEAAAoAAAAAAQAAAAAAev8gAAYAAAAAAAAAAAAAAAAAAAAAAAAA
-AABSQVNUYmzeBgEA+//PDqAFKAA8AAAAAAADANASAACgBfINAAAAAwAAAQEPAIECgv9aAAUAAQAA
-AAAAAACgBfINoAUAAAAATxleIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGCQAA
-AACUgAAAAAAAAA8AlAlkAAEAAAAEAAAAgwQFALwGAQAFAIX/HwADAAAJRGlhbC1VcCBOZXR3b3Jr
-aW5nIG5hbWUA0wgJAMDAwAB7/x4AAwAAAAAAAAAAAAAAAAAAAAAAAAAAAHJ0MQDQEgAB8g0oI4Bw
-AAMAAAEBDwCBAoL/WgAGAAAAAAAAAAAAgg4oI4IOAAAAAE8ZXiAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAhgkAAAAAlISQAAEAkAABAAAAAAABAAAABAAAAIMEBgC8BgEABgCF/wgA
-AwAACd0GAAD3//f/JAABAACAAAAQDiABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7/VAAAAAEAAAAB
-AAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAALiwkALD/FAAAAAAAgAAAAAAAAAAAAAAAiv9MAIoAAAUAMAIAAAAAAAACAwAA
-CQAAAAABAAAABwAhAAAAUkxBTlRhZ0VudGVyIHRoZSBkaWFsLXVwIG5ldHdvcmtpbmcgbmFtZdII
-AQAAAAAA0ggJAP///wDeBgAA9/+F/wgAAwAACdMICQDAwMAA0BIBAKAF8g0AAAADAAABAQ8AgQKD
-BAUAvAYBAAUAhf8SAAMAAAlMb2dpbiBuYW1l0wgJAMDAwAB7/x4AAwAAAAAAAAAAAAAAAAAAAAAA
-AAAAAHJ0MgDQEgEB8g0oI4BwAAMAAAEBDwCBAoMEBgC8BgEABgCF/wgAAwAACd0GAAD3//f/JAAB
-AACAAAAQDiABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7/VAAAAAEAAAABAAAAAAAAAAAAAAAAAAAA
-AAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALiwk
-ALD/FAAAAAAAgAAAAAAAAAAAAAAAiv8+AIoAAAUAMAIAAAAAAAACAwAACQAAAAACAAAABQAUAAAA
-UkxBTjFFbnRlciB0aGUgbG9naW4gbmFtZQDSCAEAAAAAANIICQD///8A3gYAAPf/hf8IAAMAAAnT
-CAkAwMDAANASAgCgBfINAAAAAwAAAQEPAIECgwQFALwGAQAFAIX/EAADAAAJUGFzc3dvcmTTCAkA
-wMDAAHv/HgADAAAAAAAAAAAAAAAAAAAAAAAAAAAAcnQzANASAgHyDSgjgHAAAwAAAQEPAIECgwQG
-ALwGAQAGAIX/CAADAAAJ3QYAAPf/9/8kAAEAAIAAABAOIAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-/v9UAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuLCQAsP8UAAAAAACgAAAAAAAAAAAAAACK/zoAiiAABQAw
-AgAAAAAAAAIDAAAJAAAAAAMAAAAFABAAAABSTEFOMkVudGVyIGEgcGFzc3dvcmQA0ggBAAAAAADS
-CAkA////AN4GAAD3/4X/CAADAAAJ0wgJAMDAwADQEgMAoAXyDQAAAAMAAAEBDwCBAoMEBQC8BgEA
-BQCF/xQAAwAACVBob25lIG51bWJlctMICQDAwMAAe/8eAAMAAAAAAAAAAAAAAAAAAAAAAAAAAABy
-dDQA0BIDAfINKCOAcAADAAABAQ8AgQKDBAYAvAYBAAYAhf8IAAMAAAndBgAA9//3/yQAAQAAgAAA
-EA4gAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+/1QAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAA
-AQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4sJACw/xQA
-AAAAAIAAAAAAAAAAAAAAAIr/QACKAAAFADACAAAAAAAAAgMAAAkAAAAABAAAAAUAFgAAAFJMQU4z
-RW50ZXIgdGhlIHBob25lIG51bWJlcgDSCAEAAAAAANIICQD///8A3gYAAPf/hf8IAAMAAAnTCAkA
-wMDAANASBACgBfINAAAAAwAAAQEPAIECgwQFALwGAQAFAIX/EQADAAAJQXJlYSBjb2RlANMICQDA
-wMAAe/8eAAMAAAAAAAAAAAAAAAAAAAAAAAAAAABydDUA0BIEAfINKCOAcAADAAABAQ8AgQKDBAYA
-vAYBAAYAhf8IAAMAAAndBgAA9//3/yQAAQAAgAAAEA4gAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAD+
-/1QAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAC4sJACw/xQAAAAAAIAAAAAAAAAAAAAAAIr/PACKAAAFADAC
-AAAAAAAAAgMAAAkAAAAABQAAAAUAEwAAAFJMQU40RW50ZXIgdGhlIGFyZWEgY29kZdIIAQAAAAAA
-0ggJAP///wDeBgAA9/+F/wgAAwAACdMICQDAwMAA0BIFAKAF8g0AAAADAAABAQ8AgQKDBAUAvAYB
-AAUAhf8UAAMAAAlDb3VudHJ5IGNvZGXTCAkAwMDAAHv/HgADAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-cnQ2ANASBQHyDSgjgHAAAwAAAQEPAIECgwQGALwGAQAGAIX/CAADAAAJ3QYAAPf/9/8kAAEAAIAA
-ABAOIAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAA/v9UAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAA
-AAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuLCQAsP8U
-AAAAAACAAAAAAAAAAAAAAACK/0AAigAABQAwAgAAAAAAAAIDAAAJAAAAAAYAAAAFABYAAABSTEFO
-NUVudGVyIHRoZSBjb3VudHJ5IGNvZGUA0ggBAAAAAADSCAkA////AN4GAAD3/4X/CAADAAAJ0wgJ
-AMDAwADQEgYAoAXyDQAAAAMAAAEBDwCBAoMEBQC8BgEABQCF/x4AAwAACURpYWwtYmFjayBwaG9u
-ZSBudW1iZXLTCAkAwMDAAHv/HgADAAAAAAAAAAAAAAAAAAAAAAAAAAAAcnQ3ANASBgHyDSgjgHAA
-AwAAAQEPAIECgwQGALwGAQAGAIX/CAADAAAJ3QYAAPf/9/8kAAEAAIAAABAOIAEAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAA/v9UAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAuLCQAsP8UAAAAAACAAAAAAAAAAAAA
-AACK/0oAigAABQAwAgAAAAAAAAIDAAAJAAAAAAcAAAAFACAAAABSTEFONkVudGVyIHRoZSBkaWFs
-LWJhY2sgcGhvbmUgbnVtYmVyANIIAQAAAAAA0ggJAP///wDeBgAA9/+F/wgAAwAACdMICQDAwMAA
-0BIHAKAF8g0AAAACAAABAQAAgQKDBAUAvAYBAAUAhf8OAAMAAAlEb21haW57/x4AAwAAAAAAAAAA
-AAAAAAAAAAAAAAAAAHJ0OADQEgcB8g0oI4BwAAIAAAEBAACBAoMEBgC8BgEABgCF/wgAAwAACd0G
-AAD3//f/JAABAACAAAAQDiABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP7/VAAAAAEAAAABAAAAAAAA
-AAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAALiwkALD/FAAAAAAAgAAAAAAAAAAAAAAAiv86AIoAAAUAMAAACAAAAAACAwAACQAAAAAI
-AAAABQAQAAAAUkxBTjdFbnRlciB0aGUgZG9tYWluANIIAQAAAAAA0ggJAP///wDeBgAA9/+F/wgA
-AQAACtEGAAAAAIECgwQDALwGAQADAIX/CAADAAAJ0wgJAMDAwAClBgAAAACBAoMEAgC8BgEAAgCF
-/wgAAwAACQ==
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>RAS</text></item></subform>
 

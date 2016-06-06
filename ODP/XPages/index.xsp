@@ -7,13 +7,12 @@
 	<xp:panel xp:key="facet_1">
 	<xp:panel>
 	<h2>Directory</h2>
-	
-	<ul class="list-group">
+<ul class="list-group">
 	<xp:repeat id="rptPersons" rows="10"
+		value="#{javascript:com.quintessens.FakeNames.DASRest.getPersons('http://dev1/apps/tmp/fakenames40k.nsf/api/data/collections/name/people?count=100')}"
 		var="persons">
-
-		<xp:this.value><![CDATA[#{javascript:com.quintessens.FakeNames.DASRest.getPersons('http://dev1/fakenames40k.nsf/api/data/collections/name/people?count=100')
-}]]></xp:this.value><li class="list-group-item">
+		
+		 <li class="list-group-item">
 			<h4>
 				<xp:text escape="true"
 					value="#{javascript:persons.getName()}">
@@ -25,19 +24,18 @@
 				</xp:text>
 			</p>
 			<p>
-				<xp:text escape="true" id="computedField2"
-					value="#{javascript:persons.getJobtitle()}">
-				</xp:text>
+			<xp:text escape="true" id="computedField2"
+				value="#{javascript:persons.getJobtitle()}">
+			</xp:text>
 			</p>
 		</li>
 	</xp:repeat>
 	</ul>
 	<xc:ccInifiniteScroll repeatId="rptPersons"></xc:ccInifiniteScroll>
-	<xp:br></xp:br>
 	</xp:panel>
 	</xp:panel></xp:this.facets>
 	
 	
 	</xc:ccLayout>
-	</xp:view>
+</xp:view>
 

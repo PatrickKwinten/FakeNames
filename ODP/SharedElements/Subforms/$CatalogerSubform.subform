@@ -1,166 +1,146 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='65e' unid='B448E31D1A96386C85256BCD0050A21B' sequence='5016'>
+<subform name='$CatalogerSubform' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ renderpassthrough='true'>
+<noteinfo noteid='65a' unid='B448E31D1A96386C85256BCD0050A21B' sequence='5016'>
 <created><datetime dst='true'>20020603T104043,79-04</datetime></created>
-<modified><datetime dst='true'>20150507T110156,20+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114101,40+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095407,50-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110156,19+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110156,19+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114101,40+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114101,40+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140109,82-04</datetime><datetime
 >20100304T143922,13-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>$CatalogerSubform</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUAx3</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='EDFilenames' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Enabled' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='Schedule' summary='false' sign='true'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' cellbordercolor='silver' htmlid='Server_Tasks_DirCat1_1'
+ htmlclass='TableSpacing' rowspacing='0.0201in' refwidth='10.3417in'><tablecolumn
+ width='1.5000in'/><tablecolumn width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='3' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt' style='bold' color='white'/>Basics</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='4' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font size='9pt' color='#f7f7f7'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='5' spacebefore='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='5'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the filenames of the Directory Catalogs to be aggregated on this server.  Don't list any Directory Catalog files you don't want aggregate on this server.  Filenames should be relative to the server's data directory.</popuptext><run
+><font size='9pt'/>Directory Catalog filenames:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='6' spacebefore='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='6'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ allowmultivalues='true' kind='editable' name='EDFilenames' listinputseparators='comma semicolon newline'
+ listdisplayseparator='newline' htmlid='EDFilenames'><code event='htmlattributes'><formula
+>htmlTextArea5XL</formula></code></field></run><run><font size='9pt' color='white'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='3'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell>
+<tablecell borderwidth='0px'>
+<par def='4'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='7' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='7'><run><font size='9pt' style='bold' color='white'/>Schedule </run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='8' leftmargin='0.0201in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='8'><run><font size='9pt' color='#f7f7f7'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='9' leftmargin='0.0597in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='9'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specify whether the schedule for the Directory Catalog is Enabled or Disabled. The default is Disabled.</popuptext><run
+><font size='9pt'/>Schedule:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='10' leftmargin='0.0201in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='10'><run><font size='9pt'/></run><run><font size='9pt'/><field lookupeachchar='false'
+ lookupaddressonrefresh='false' type='keyword' kind='editable' name='Enabled'
+ description='Scheduled task enabled or disabled.' htmlid='Enabled'><keywords
+ recalconchange='true' columns='1' ui='dialoglist'><textlist><text>ENABLED | 1</text><text
+>DISABLED | 0</text></textlist></keywords><code event='defaultvalue'><formula
+>"0"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='11' leftmargin='0.0597in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='11'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter either a time range (ie. 08:00 AM - 10:00 PM) or a specific time or times (ie.  08:00 AM, 10:00 PM).
+Separate specific times with commas or semicolons.</popuptext><run><font size='9pt'/>Run Directory Catalog aggregator at:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='12' leftmargin='0.0201in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='12'><run><font size='9pt'/></run><run><font size='9pt'/><field type='datetime'
+ allowmultivalues='true' kind='editable' name='Schedule' description='Times to call the server - e.g. 8:00 AM,10:00 AM-6:00 PM'
+ listinputseparators='comma semicolon newline' listdisplayseparator='comma'
+ htmlid='Schedule'><datetimeformat show='time' date='monthday' time='hourminute'
+ zone='never'/><code event='htmlattributes'><formula>htmlTextArea5L</formula></code><code
+ event='defaultvalue'><formula>[08:00:00 - 22:00:00]</formula></code><code
+ event='inputvalidation'><formula>ErrorMsg := @If(ConnectionType="3"; "";ConnectionType="a" &amp; NNTPFeedType="3"; ""; Enabled="1" &amp; !@IsTime(Schedule); "You must enter a valid time range."; @If(Enabled = "1" &amp; Interval = "" &amp; Schedule = ""; "You must enter an Interval and/or a Schedule, or else specify DISABLED."; ""));
+WebBkgd := "&lt;style type=\"text/css\"&gt; body {font-family: \"Arial\"} &lt;/style&gt;&lt;body bgcolor=\"" + "#ffffff" + "\"&gt;";
+WebDisplay := "&lt;b&gt;** DATA ENTRY ERROR **&lt;/b&gt;&lt;p&gt;&lt;hr&gt;&lt;p&gt;&lt;h4&gt;" + ErrorMsg + "&lt;/h4&gt;&lt;p&gt;&lt;p&gt;";
+WebLink := "&lt;a href=\"javascript: onClick=history.back()\"&gt;&lt;p&gt;Go Back&lt;/a&gt;";
+WebText := WebBkgd + WebDisplay + WebLink;
+FailureText := @If(@ClientType = "Notes"; ErrorMsg;WebText);
+@If(ErrorMsg = ""; @Success; @Failure(FailureText))</formula></code></field></run><run
+><font size='9pt'/> each day</run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='11'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Enter the interval to run the Directory Catalog task. Default is 360 minutes. </popuptext><run
+><font size='9pt'/>Repeat interval of:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='12'><run><font size='9pt'/></run><run><font size='9pt'/><field type='number'
+ kind='editable' name='Interval' description='Interval to repeat calls - 0 means call once.'
+ htmlid='Interval'><numberformat format='general' punctuated='false' parens='false'
+ percent='false' bytes='false'/><code event='htmlattributes'><formula>htmlInputS</formula></code><code
+ event='defaultvalue'><formula>@If(ConnectionType="1";60;360)</formula></code><code
+ event='inputvalidation'><formula>sMsg := @If(
+	ConnectionType = "3"; "";
+	ConnectionType = "a" &amp; NNTPFeedType = "3"; "";
+	@If(Interval &lt; 0; "You entered an interval less than 0. You must enter an interval of 0 or above.";
+	""));
+
+REM {return error message};
+_tDb   := @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+_tMsg  := @ReplaceSubstring(sMsg; "\\":"'":"\""; "%5C":"%27":"%22");
+_tWeb1 := "&lt;script src='/" + _tDb + "/WebJSNavigationTools?OpenJavaScriptLibrary'&gt;&lt;/script&gt;";
+_tWeb2 := "&lt;script&gt;ntValidationFailure('" + _tMsg + "');&lt;/script&gt;";
+_tWeb  := _tWeb1 + _tWeb2;
+
+@If(sMsg = "";
+	@Success;
+	@Failure(@If(@ClientType = "Notes"; sMsg; _tWeb)))</formula></code></field></run><run
+><font size='9pt'/> minutes </run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='13' leftmargin='0.0597in' rightmargin='100%' tabs='L1.0625in L1.0625in'
+ keepwithnext='true' keeptogether='true'/>
+<par def='13'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Select the days of the week the Directory Catalog task should run. Default is every day: Sun, Mon, Tue, Wed, Thu, Fri, Sat.</popuptext><run
+><font size='9pt'/>Days of week:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='14' leftmargin='0.0201in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='14'><run><font size='9pt'/></run><run><font size='9pt'/><field lookupeachchar='false'
+ lookupaddressonrefresh='false' type='keyword' allowmultivalues='true' kind='editable'
+ name='WeekDays' description='Days of week - e.g. Mon, Tue, Wed' listinputseparators='comma'
+ listdisplayseparator='comma' htmlid='WeekDays' extrahtmlattrs='size=7'><keywords
+ columns='1' ui='dialoglist'><textlist><text>Sun | 1</text><text>Mon | 2</text><text
+>Tue | 3</text><text>Wed | 4</text><text>Thu | 5</text><text>Fri | 6</text><text
+>Sat | 7</text></textlist></keywords><code event='htmlattributes'><formula
+>htmlSelectM</formula></code><code event='defaultvalue'><formula> "Sun":"Mon" : "Tue" : "Wed" : "Thu" : "Fri" : "Sat"</formula></code><code
+ event='inputtranslation'><formula>@Trim(WeekDays)</formula></code></field></run><run
+><font size='9pt' style='bold'/></run></par></tablecell></tablerow></table>
+<par def='1'><run><font size='9pt'/></run></par></richtext></body>
 <item name='Interval' summary='false' sign='true'><number>0</number></item>
-<item name='WeekDays' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>WeekDays</text><text>Interval</text><text
->Schedule</text><text>Enabled</text><text>EDFilenames</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$CatalogerSubform</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAABPGV4gAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAmBAoL/WgACAAAA
-AAAAAAAAoAUAAKAFAAAAAE8ZXiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA
-AAAAlIUAAAAAoAUKAAAAAAABAAAABAAAAIMEAgDdBgEA+//7/ywAIQAAAAgCAQAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAEAwMDAAAAAAAAAAFz/PgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAOAAAAAAAAAAEAAAoAAAAAAQAAAAAAev88ABYADAAAAAAAAAAAAAAAAAAAAAAAAABTZXJ2
-ZXJfVGFza3NfRGlyQ2F0MV8xVGFibGVTcGFjaW5n3gYBAPv/ow6gBSgAPAAAAB0AAgCkEgAAoAUQ
-DgAAAAMAAAEB2ACBAoL/WgADAAAAAAAAAAAAoAUQDqAFAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMhgEAAAAAVIcAAAAAAAAAAAAAAAABAAAABAAAAIMEAwDdBgAAhf+F
-/w4AAQEBCUJhc2ljc9IIAQD///8A3gYAAIX/0wgBALGx0gCkEgABEA7MP4BwAAMAAAEB2ACBAoL/
-WgAEAAAAAAAAAAAAEA7MPxAOAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMhgEAAAAAVIcAAAAAAAAAAAAAAAABAAAABAAAAIMEBADdBgAAhf+F/wgAAQAvCdIIAQD39/cA
-3gYAAIX/0wgBALGx0gCkEgEAoAUQDgAAAAIAAAEBAACBAoL/WgAFAAAAAAABAAAAoAUQDqAFAADM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMhgEAAAAAVIcAAAAAAAAAAAAA
-AAABAAAABAAAAIMEBQCF/wgAAQAACd0GAACt/6n/6gABAAwAAADeAEVudGVyIHRoZSBmaWxlbmFt
-ZXMgb2YgdGhlIERpcmVjdG9yeSBDYXRhbG9ncyB0byBiZSBhZ2dyZWdhdGVkIG9uIHRoaXMgc2Vy
-dmVyLiAgRG9uJ3QgbGlzdCBhbnkgRGlyZWN0b3J5IENhdGFsb2cgZmlsZXMgeW91IGRvbid0IHdh
-bnQgYWdncmVnYXRlIG9uIHRoaXMgc2VydmVyLiAgRmlsZW5hbWVzIHNob3VsZCBiZSByZWxhdGl2
-ZSB0byB0aGUgc2VydmVyJ3MgZGF0YSBkaXJlY3RvcnkuAIX/JAABAAAJRGlyZWN0b3J5IENhdGFs
-b2cgZmlsZW5hbWVzOqoC3gYAAK4Ahf8IAAEAAAmkEgEBEA7MP4BwAAIAAAEBAACBAoL/WgAGAAAA
-AAABAAAAEA7MPxAOAADMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMhgEA
-AAAAVIcAAAAAAAAAAAAAAAABAAAABAAAAIMEBgCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAsP80AAAAAAACAAAAAAAAAAAAAAAcAAAAHAAAABoABQAPAGh0bWxUZXh0QXJlYTVY
-TAADAIr/MACKAAEFDkAAAAgAAAAAAgEAAAkAAAAAAAAAAAsAAAAAAEVERmlsZW5hbWVzAHr/JgAL
-AAAAAAAAAAAAAAAAAAAAAAAAAAAARURGaWxlbmFtZXMA3gYAAIr/3QYAAIX/hf8IAAEAAQnSCAEA
-////AN4GAACF/6QSAgCgBRAOAAAAAgAAAQEAAIECgwQDAN0GAACF/4X/CAABAQEJ0ggBAP///wDe
-BgAAhf+kEgIBEA7MP4BwAAIAAAEBAACBAoMEBADdBgAAhf+F/wgAAQEBCdIIAQD///8A3gYAAIX/
-pBIDAKAFEA4AAAADAAABAdgAgQKC/1oABwAAAAAAAAAAAPYFEA72BQAAzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYBAAAAAJSAVgAFAFYABgAsBmQAAQAAAAQAAACDBAcA
-3QYAAIX/hf8RAAEBAQlTY2hlZHVsZSAA0ggBAP///wDeBgAAhf/TCAEAsbHSAKQSAwEQDsw/gHAA
-AwAAAQHYAIECgv9aAAgAAAAAAAAAAAAtDsw/LQ4AAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzM
-zMzMzMzMzMzMzMzMzMyGAQAAAACUgB0ABQAdAAUAsAlkAAEAAAAEAAAAgwQIAN0GAACF/4X/CAAB
-AC8J0ggBAPf39wDeBgAAhf/TCAEAsbHSAKQSBACgBRAOAABAAgAQAQEAAIECgv9aAAkAAAAAAAEA
-AAD2BRAO9gUAAMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMyGAQAAAACU
-gFYABQBWAAYALAZkAAEAAAAEAAAAgwQJAIX/CAABAAAJ3QYAAK3/qf90AAEADAAAAGgAU3BlY2lm
-eSB3aGV0aGVyIHRoZSBzY2hlZHVsZSBmb3IgdGhlIERpcmVjdG9yeSBDYXRhbG9nIGlzIEVuYWJs
-ZWQgb3IgRGlzYWJsZWQuIFRoZSBkZWZhdWx0IGlzIERpc2FibGVkLgCF/xEAAQAACVNjaGVkdWxl
-OgCqAt4GAACuAIX/CAABAAAJpBIEARAOzD+AcEACABABAQAAgQKC/1oACgAAAAAAAQAAAC0OzD8t
-DgAAzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzMzIYBAAAAAJSAHQAFAB0A
-BQCwCWQAAQAAAAQAAACDBAoAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/
-FAAAAAIAAAAAAAAAAAAAAAAAiv96AIICAAUAIAIAAAAAAAACAQAACQ4AAAAAAAAABwAjAB0ADgAA
-AAwAAQABADAAAwBFbmFibGVkU2NoZWR1bGVkIHRhc2sgZW5hYmxlZCBvciBkaXNhYmxlZC4CAAsA
-DABFTkFCTEVEIHwgMURJU0FCTEVEIHwgMAB6/yIABwAAAAAAAAAAAAAAAAAAAAAAAAAAAEVuYWJs
-ZWQA3gYAAIr/hf8IAAEAAAmkEgUAoAUQDgAAUAIAEQEBAACBAoL/WgALAAAAAAAAAAAA9gUQDvYF
-AAAAAE8ZXiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAlIBWAAUAVgAF
-ACwGZAABAAAABAAAAIMECwCF/wgAAQAACd0GAACt/6n/qwABAAwAAACfAEVudGVyIGVpdGhlciBh
-IHRpbWUgcmFuZ2UgKGllLiAwODowMCBBTSAtIDEwOjAwIFBNKSBvciBhIHNwZWNpZmljIHRpbWUg
-b3IgdGltZXMgKGllLiAgMDg6MDAgQU0sIDEwOjAwIFBNKS4NClNlcGFyYXRlIHNwZWNpZmljIHRp
-bWVzIHdpdGggY29tbWFzIG9yIHNlbWljb2xvbnMuAACF/ywAAQAACVJ1biBEaXJlY3RvcnkgQ2F0
-YWxvZyBhZ2dyZWdhdG9yIGF0OqoC3gYAAK4Ahf8IAAEAAAmkEgUBEA7MP4BwUAIAEQEBAACBAoL/
-WgAMAAAAAAAAAAAALQ7MPy0OAAAAAE8ZXiAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAhgEAAAAAlIAdAAIAHQACAPMLZAABAAAABAAAAIMEDACF/wgAAQAACd0GAACK//7/VAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAASAAgABAAAAAQECAgEBAQEG
-BQIAAAAAAAAAAAAAAAAAIC8vOrD/MgAAAAAAAgAAAAAAAAAAAAAAGgAAABoAAAAYAAUADgBodG1s
-VGV4dEFyZWE1TAMAiv+gBIIAAQQOIAIACAACAQABAQAACRoAAAAAACIECAA4AAAAGgAAABgABgAA
-8isA/////4DZeAD/////AwAiBAoABAABAHIBCABFcnJvck1zZwUADgBDb25uZWN0aW9uVHlwZQEA
-AQAzAAoCrwBGAQoAAQAAAK4APAEFAA4AQ29ubmVjdGlvblR5cGUBAAEAYQAKAgUADABOTlRQRmVl
-ZFR5cGUBAAEAMwAKAhwCrwAEAQoAAQAAAK4A+gAFAAcARW5hYmxlZAABAAEAMQAKAgUACABTY2hl
-ZHVsZV0BHgEcAq8A0AAsAAEAIgBZb3UgbXVzdCBlbnRlciBhIHZhbGlkIHRpbWUgcmFuZ2UurgCk
-AAUABwBFbmFibGVkAAEAAQAxAAoCBQAIAEludGVydmFsAQAAAAoCHAIFAAgAU2NoZWR1bGUBAAAA
-CgIcAq8AXgBSAAEARwBZb3UgbXVzdCBlbnRlciBhbiBJbnRlcnZhbCBhbmQvb3IgYSBTY2hlZHVs
-ZSwgb3IgZWxzZSBzcGVjaWZ5IERJU0FCTEVELgCuAAwAAQAAAK4ABAC1A64ABAC1BwMABwBKAEMA
-CTFTMlM4UzEzUzE0UzE4UzIwUzIzUzI0UzMwUzMyUzM1UzM2UzM3UzM4UzM5UzQwUzQxUzQyUzQz
-UzQ0UzQ2UzQ4UwABAHYABwBXZWJCa2dkAAEASwA8c3R5bGUgdHlwZT0idGV4dC9jc3MiPiBib2R5
-IHtmb250LWZhbWlseTogIkFyaWFsIn0gPC9zdHlsZT48Ym9keSBiZ2NvbG9yPSIAAQAHACNmZmZm
-ZmYAIgIBAAIAIj4iAgMABwAWAA8ACTBSMVMyUzNTNFM1UzZTAAEAYgAKAFdlYkRpc3BsYXkBACsA
-PGI+KiogREFUQSBFTlRSWSBFUlJPUiAqKjwvYj48cD48aHI+PHA+PGg0PgAFAAgARXJyb3JNc2ci
-AgEACwA8L2g0PjxwPjxwPgAiAgMABwAWAA8ACTBSMVMyUzNTNFM1UzZTAAEAUAAHAFdlYkxpbmsA
-AQA7ADxhIGhyZWY9ImphdmFzY3JpcHQ6IG9uQ2xpY2s9aGlzdG9yeS5iYWNrKCkiPjxwPkdvIEJh
-Y2s8L2E+AAMABwAOAAcACTBSMVMyUwABADoABwBXZWJUZXh0AAUABwBXZWJCa2dkAAUACgBXZWJE
-aXNwbGF5IgIFAAcAV2ViTGluawAiAgMABwAWAA8ACTBSMVMyUzNTNFM1UzZTAAEATAALAEZhaWx1
-cmVUZXh0APsABQEBAAUATm90ZXMACgKvACYAEgAFAAgARXJyb3JNc2euABQABQAHAFdlYlRleHQA
-rgAEALUDAwAHABQADQAJMFIxUzJTNVM2UzhTAAAAPAAFAAgARXJyb3JNc2cBAAAACgKvACIACAB6
-AK4AGgAFAAsARmFpbHVyZVRleHQAewGuAAQAtQMDAAcAEgALAAkwUjNTNFM2UzhTAFNjaGVkdWxl
-VGltZXMgdG8gY2FsbCB0aGUgc2VydmVyIC0gZS5nLiA4OjAwIEFNLDEwOjAwIEFNLTY6MDAgUE16
-/yIACAAAAAAAAAAAAAAAAAAAAAAAAAAAAFNjaGVkdWxl3gYAAIr/hf8RAAEAAAkgZWFjaCBkYXkA
-pBIGAKAFEA4AAFACABEBAQAAgQKDBAsAhf8IAAEAAAndBgAArf+p/1sAAQAMAAAATwBFbnRlciB0
-aGUgaW50ZXJ2YWwgdG8gcnVuIHRoZSBEaXJlY3RvcnkgQ2F0YWxvZyB0YXNrLiBEZWZhdWx0IGlz
-IDM2MCBtaW51dGVzLiAAAIX/GwABAAAJUmVwZWF0IGludGVydmFsIG9mOgCqAt4GAACuAIX/CAAB
-AAAJpBIGARAOzD+AcFACABEBAQAAgQKDBAwAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAALD/LgAAAAAAAgAAAAAAAAAAAAAAFgAAABYAAAAUAAUACgBodG1sSW5wdXRTAwCK/1QE
-igAAAwAwAAAAAAAAAAMBAAAJUgAAAAAAqAMIAC0AAABSAAAARAAFAA4AQ29ubmVjdGlvblR5cGUB
-AAEAMQAKAq8AIgAQAAAAAAAAAAAATkCuABIAAAAAAAAAAIB2QK4ABAC1AwMABwAMAAUACTBTMEUA
-qAMKAAQAAQD6AAQAc01zZwUADgBDb25uZWN0aW9uVHlwZQEAAQAzAAoCrwDSAAoAAQAAAK4AyAAF
-AA4AQ29ubmVjdGlvblR5cGUBAAEAYQAKAgUADABOTlRQRmVlZFR5cGUBAAEAMwAKAhwCrwCQAAoA
-AQAAAK4AhgAFAAgASW50ZXJ2YWwAAAAAAAAAAAAADgKvAGQAWAABAE4AWW91IGVudGVyZWQgYW4g
-aW50ZXJ2YWwgbGVzcyB0aGFuIDAuIFlvdSBtdXN0IGVudGVyIGFuIGludGVydmFsIG9mIDAgb3Ig
-YWJvdmUurgAMAAEAAACuAAQAtQOuAAQAtQUDAAcAPgA4AAkxUzJTNFJUNVM2UzhTMTBSVDExUzEy
-UzEzUzE0UzE1UzE2UzE4UzIwUlQyM1MyNFMyNlMyOFJUBwAaABQAcmV0dXJuIGVycm9yIG1lc3Nh
-Z2UHAAwABgAJMFJSMVMBADoABABfdERiiwAAAAAAAAAAAPA/EAFrAgEAAQAgAAEAAQBcAB8CAQAB
-ACsAAQABAC8AHwKEAwMABwAaABQACTBSMVMzRTJTOFMxMlMxNVMxNlMBAEoABQBfdE1zZwAFAAQA
-c01zZwEAAQBcAAEAAQAnAB8CAQABACIAHwIBAAMAJTVDAAEAAwAlMjcAHwIBAAMAJTIyAB8ChAMD
-AAcAFAAOAAkwUjFTMkUyUzZTMTJTAQBmAAYAX3RXZWIxAQAOADxzY3JpcHQgc3JjPScvBQAEAF90
-RGIiAgEANgAvV2ViSlNOYXZpZ2F0aW9uVG9vbHM/T3BlbkphdmFTY3JpcHRMaWJyYXJ5Jz48L3Nj
-cmlwdD4iAgMABwAWAA8ACTBSMVMyUzNTNFM1UzZTAAEATgAGAF90V2ViMgEAHQA8c2NyaXB0Pm50
-VmFsaWRhdGlvbkZhaWx1cmUoJwAFAAUAX3RNc2cAIgIBAAwAJyk7PC9zY3JpcHQ+IgIDAAcAFgAP
-AAkwUjFTMlMzUzRTNVM2UwABACQABQBfdFdlYgAFAAYAX3RXZWIxBQAGAF90V2ViMiICAwAHABQA
-DQAJMFIxUzJFMlMzUzRTAAAAWgAFAAQAc01zZwEAAAAKAq8ARAAIAHoArgA8APsABQEBAAUATm90
-ZXMACgKvACAADgAFAAQAc01zZ64AEgAFAAUAX3RXZWIArgAEALUDewGuAAQAtQMDAAcAIAAaAAkw
-UlIzUzRTNlJUOFJUMTNTMTRTMTZTMThTSW50ZXJ2YWxJbnRlcnZhbCB0byByZXBlYXQgY2FsbHMg
-LSAwIG1lYW5zIGNhbGwgb25jZS4Aev8iAAgAAAAAAAAAAAAAAAAAAAAAAAAAAABJbnRlcnZhbN4G
-AACK/4X/EQABAAAJIG1pbnV0ZXMgAKQSBwCgBRAOAABQAgARAQEAAIECgv9aAA0AAAAAAAAAAAD2
-BRAO9gUCAPoF+gVeIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAACUgFYA
-BQBWAAUAcAhkAAEAAAAEAAAAgwQNAIX/CAABAAAJ3QYAAK3/qf+IAAEADAAAAHwAU2VsZWN0IHRo
-ZSBkYXlzIG9mIHRoZSB3ZWVrIHRoZSBEaXJlY3RvcnkgQ2F0YWxvZyB0YXNrIHNob3VsZCBydW4u
-IERlZmF1bHQgaXMgZXZlcnkgZGF5OiBTdW4sIE1vbiwgVHVlLCBXZWQsIFRodSwgRnJpLCBTYXQu
-AIX/FQABAAAJRGF5cyBvZiB3ZWVrOgCqAt4GAACuAIX/CAABAAAJpBIHARAOzD+AcFACABEBAQAA
-gQKC/1oADgAAAAAAAAAAAC0OzD8tDgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAIYBAAAAAJSAHQACAB0AAgDzC2QAAQAAAAQAAACDBA4Ahf8IAAEAAAndBgAAiv/+/1AA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAALD/MAAAAAAAAgAAAAAAAAAAAAAAGAAAABgAAAAWAAUACwBodG1s
-U2VsZWN0TQADAIr/HAGKAgEFAiACAAAAAAAAAgEAAAlsACIAAAAAAAgAIQBBAGwAAABKAAEAAwBT
-dW4AAQADAE1vbgAfAgEAAwBUdWUAHwIBAAMAV2VkAB8CAQADAFRodQAfAgEAAwBGcmkAHwIBAAMA
-U2F0AB8CAwAHACAAGgAJMFMzUzRTNVM2UzdTOFM5UzEwUzExUzEyUyIAAAAUAAUACABXZWVrRGF5
-c14BAwAHAAwABQAJMFMwRQBXZWVrRGF5c0RheXMgb2Ygd2VlayAtIGUuZy4gTW9uLCBUdWUsIFdl
-ZAcABwAHAAcABwAHAAcABwBTdW4gfCAxTW9uIHwgMlR1ZSB8IDNXZWQgfCA0VGh1IHwgNUZyaSB8
-IDZTYXQgfCA3ev8oAAgAAAAAAAAABgAAAAAAAAAAAAAAAABXZWVrRGF5c3NpemU9N94GAACK/4X/
-CAABAQAJpQYAAAAAgQKDBAEAhf8IAAEAAAk=
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>$CatalogerSubform</text></item></subform>
 

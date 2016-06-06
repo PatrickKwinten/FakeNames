@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="b72" sequence="34" unid="FBF53AB2ECB580FCC1257FCA002B56A5">
+<created><datetime dst="true">20160606T095322,29+02</datetime></created>
+<modified><datetime dst="true">20160606T180449,62+02</datetime></modified>
+<revised><datetime dst="true">20160606T180449,61+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160606T180449,62+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160606T095322,30+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
+<item name="$Flags"><text>34567Cg~[</text></item>
+<item name="$TITLE"><text>com/quintessens/FakeNames/PersonsJSON.java</text></item>
+
+
+
+<item name="$DesignerVersion"><text>8.5.3</text></item>
+
+
+<item name="$FileNames" sign="true"><text>com/quintessens/FakeNames/PersonsJSON.java</text></item>
+
+</note>

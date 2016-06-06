@@ -1,38 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='18a' unid='848F9C2F0FE8EB75052569650062A029' sequence='5016'>
+<sharedfield name='Schedule' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='186' unid='848F9C2F0FE8EB75052569650062A029' sequence='5016'>
 <created><datetime>20000925T125715,29-05</datetime></created>
-<modified><datetime dst='true'>20150507T110150,16+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114055,64+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,14-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110150,15+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110150,15+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114055,64+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,64+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE'><text>Schedule</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='Schedule' summary='false' sign='true'>
-<rawitemdata type='400'>
-AAAAAAAAAAA=
-</rawitemdata></item>
-<item name='$FIELDS'><text>Schedule</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9UAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABIACAAEAAAABAQICAQEBAQYFAgAA
-AAAAAAAAAAAAAAAgLy86iv8qAYIAAQQOIAIAAAACAQABAQAACRoAFgACAJYACAA4AAAAGgAAABgA
-BgAA8isA/////4DZeAD/////AwAWAAAAFAAFAAgAU2NoZWR1bGVMAQMAlgAAAJQABQAHAEVuYWJs
-ZWQAAQABADEACgIFAAgASW50ZXJ2YWwBAAAACgIcAgUACABTY2hlZHVsZQEAAAAKAhwCAQBHAFlv
-dSBtdXN0IGVudGVyIGFuIEludGVydmFsIGFuZC9vciBhIFNjaGVkdWxlLCBvciBlbHNlIHNwZWNp
-ZnkgRElTQUJMRUQuAHsBegBKAwMAU2NoZWR1bGVUaW1lcyB0byBjYWxsIHRoZSBzZXJ2ZXIgLSBl
-LmcuIDg6MDAgQU0sMTA6MDAgQU0tNjowMCBQTXr/IgAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAU2No
-ZWR1bGXeBgAAiv+F/wgAAQAACg==
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ type='datetime' allowmultivalues='true' kind='editable' name='Schedule' description='Times to call the server - e.g. 8:00 AM,10:00 AM-6:00 PM'
+ taborder='2' listinputseparators='comma semicolon newline' listdisplayseparator='comma'
+ htmlid='Schedule'><datetimeformat show='time' date='monthday' time='hourminute'
+ zone='never'/><code event='defaultvalue'><formula>[08:00:00 - 22:00:00]</formula></code><code
+ event='inputtranslation'><formula>@Time(Schedule)</formula></code><code event='inputvalidation'><formula
+>@V2If(Enabled = "1" &amp; Interval = "" &amp; Schedule = ""; @Failure("You must enter an Interval and/or a Schedule, or else specify DISABLED."); @Success)</formula></code></field></sharedfield>
 

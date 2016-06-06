@@ -1,39 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='39a' unid='B89001075F8514A1852561C20060141C' sequence='5027'>
+<view name='($Profiles)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false' designerversion='6'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='false' showmargin='true'
+ shrinkrows='false' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='silver'
+ headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' indexrefresh='automatic' initialbuildrestricted='false'
+ noemptycategories='false'>
+<noteinfo noteid='396' unid='B89001075F8514A1852561C20060141C' sequence='5027'>
 <created><datetime dst='true'>19950520T132926,04-04</datetime></created>
-<modified><datetime dst='true'>20150507T110152,45+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,86+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,62-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202408,18+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,44+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,81+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,86+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144045,61-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>($Profiles)</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-oAACABwAAgAkMAUACwBQcm9maWxlTmFtZQBeAQMABwAMAAUACTBTMEUABQAYABMAAgACAAkAJDAk
-Q29uZmxpY3QABAAEAAAARgAFAAQAVHlwZQEABwBQcm9maWxlAAoCBQAEAEZvcm0BAAcAUHJvZmls
-ZQAKAhwCBQAJACRDb25mbGljdABZARwCAwAHABQADgAJTDFTMlM0UzVTOFM5Uw==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYAAAACACQw
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQABAAMACgQAAFZDAQACAAsAKgAAAKEAAQEECQAAAAAIAAAAAAICAAAAJDBQcm9maWxlTmFtZSoA
-AgAcAAIAJDAFAAsAUHJvZmlsZU5hbWUAXgEDAAcADAAFAAkwUzBFACYAAQAAAAEBAAkBAAAKAQEP
-CgAAAACtKwEAAQABAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAEAwAAAAAAA//8AAAAA
-AAAAAAAAAAAAAEIAAAAAAAEA////AAUAAAAAAAEAAAAAAAAAAAAAAAAAAQD///8AAQCxsdIAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAEAWEMADIACAAAAAAABAgICAQEBAQEABAAAAAAAAAAA
-IC8vOllDAAAIAAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAu
-LCQA
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type ="Profile" &amp; Form="Profile" &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='$0' width='20.1250'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt' color='blue' style='bold'/><columnheader
+ title='ProfileName'><font size='9pt'/></columnheader><datetimeformat show='datetime'
+ date='weekdaymonthdayyear' time='hourminutesecondhundredths' zone='never'
+ dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='fourdigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/><code event='value'><formula>@Trim(ProfileName)</formula></code></column></view>
 

@@ -1,42 +1,25 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='35a' unid='804A4365CD8FBAE5852569C800567A12' sequence='5016'>
+<view name='($ACPLookup)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='false' useapplet='true' publicaccess='false'
+ designerversion='6' language='en' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='simple' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='true' extendlastcolumn='true' showhierarchies='false'
+ unreadcolor='black' rowlinecount='2' headerlinecount='1' rowspacing='1.25'
+ bgcolor='white' altrowcolor='#f8f8fc' totalscolor='blue' headerbgcolor='#b1b1d2'
+ boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false' formatnoteid='85255E01001356A8852554C200753106'>
+<noteinfo noteid='356' unid='804A4365CD8FBAE5852569C800567A12' sequence='5016'>
 <created><datetime>20010102T104433,46-05</datetime></created>
-<modified><datetime dst='true'>20150507T110152,13+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,54+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,48-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110152,12+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110152,12+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,54+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,54+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144042,30-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$FormatNote' summary='true' sign='true'>
-<rawitemdata type='4'>
-AQCoVhMAAV4lhQYxdQDCVCWF
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>($ACPLookup)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-lAACABwACABGdWxsTmFtZQUACABGdWxsTmFtZQMABQAkAB8AAwAIAAkABABGdWxsTmFtZSRDb25m
-bGljdCRSRUYABAAEAAAAPAAFAAQAVHlwZQEAFQBQb2xpY3lBcmNoaXZlQ3JpdGVyaWEACgIFAAkA
-JENvbmZsaWN0AFkBHAIDAAcAEgAMAAlMMVMyUzNTNFM1Uw==
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-FQABAABEgGYAAAAIAEZ1bGxOYW1l
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQABABIAiEwAAFZDAQAIAAAAHgAAAFAAAQAACgAAAAAAAAAAAAICAAAARnVsbE5hbWUeAAIAHAAI
-AEZ1bGxOYW1lBQAIAEZ1bGxOYW1lAwAmAAEAAAABAQAJAQAACgEBBAoAAC8ArSsCAQEAAQAAAAAA
-AAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAABAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAAB
-AP///wABAPj4/AABAAAAAAAAAAAAAAAAAAEA////AAEAsbHSAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAIAAAAAAABAA==
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text>Y</text></item>
-<item name='$WebFlags' sign='true'><text>YB</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "PolicyArchiveCriteria" &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='FullName' width='10'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader><font size='9pt'/></columnheader></column></view>
 

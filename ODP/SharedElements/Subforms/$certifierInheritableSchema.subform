@@ -1,27 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='5ca' unid='D8D27D8F84A71F808525690300601898' sequence='5023'>
+<subform name='$certifierInheritableSchema' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='5c6' unid='D8D27D8F84A71F808525690300601898' sequence='5023'>
 <created><datetime dst='true'>20000619T132937,52-04</datetime></created>
-<modified><datetime dst='true'>20150507T110155,46+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114100,66+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095401,28-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110155,45+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110155,45+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114100,66+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114100,66+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143922,71-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE'><text>$certifierInheritableSchema</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUAx3</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$certifierInheritableSchema</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK
-</rawitemdata></item></note>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'/></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>$certifierInheritableSchema</text></item></subform>
 

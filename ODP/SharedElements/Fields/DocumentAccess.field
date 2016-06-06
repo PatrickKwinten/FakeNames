@@ -1,47 +1,20 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='1ca' unid='93A610B6F5290551852561C2005829DA' sequence='5025'>
+<sharedfield name='DocumentAccess' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='8'
+ language='en'>
+<noteinfo noteid='1c6' unid='93A610B6F5290551852561C2005829DA' sequence='5025'>
 <created><datetime dst='true'>19950520T120258,82-04</datetime></created>
-<modified><datetime dst='true'>20150507T110150,48+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114055,96+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,74-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110150,47+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110150,47+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114055,96+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,96+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20080617T114430,15-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ type='authors' kind='computedwhencomposed' protected='true' name='DocumentAccess'><code
+ event='defaultvalue'><formula>@If(Type = "Person":"AltLanguagePersonalInfo"; "[UserModifier]"; Type = "Group"; "[GroupModifier]"; Type = "Server"; "[ServerModifier]"; Type = "PolicyMaster":"PolicyArchive":"PolicyArchiveCriteria":"PolicyDesktop":"PolicyRegistration":"PolicySecurity":"PolicySetup":"PolicyActivities":"PolicyTraveler":"PolicyMail":"PolicyProdTools":"PolicyRoaming"; "[PolicyModifier]"; "[NetModifier]")</formula></code></field>
 <item name='OriginalModTime' sign='true'><datetime dst='true'>20050609T080405,08-04</datetime></item>
 <item name='$HTMLCode' sign='true'>
 <rawitemdata type='1'>
-</rawitemdata></item>
-<item name='$TITLE'><text>DocumentAccess</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='DocumentAccess' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><text>DocumentAccess</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJSHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAArdBgAAiv/+/1AA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAIr/VgKEBAAHADACAAAAAAAAAgEAAAokAgAAAAAAAA4AAAAAACQC
-AADuAQUABABUeXBlAQAGAFBlcnNvbgEAFwBBbHRMYW5ndWFnZVBlcnNvbmFsSW5mbwAfAgoCrwC0
-ARgAAQAOAFtVc2VyTW9kaWZpZXJdrgCcAQUABABUeXBlAQAFAEdyb3VwAAoCrwCEARoAAQAPAFtH
-cm91cE1vZGlmaWVyXQCuAGoBBQAEAFR5cGUBAAYAU2VydmVyCgKvAFIBGgABABAAW1NlcnZlck1v
-ZGlmaWVyXa4AOAEFAAQAVHlwZQEADABQb2xpY3lNYXN0ZXIBAA0AUG9saWN5QXJjaGl2ZQAfAgEA
-FQBQb2xpY3lBcmNoaXZlQ3JpdGVyaWEAHwIBAA0AUG9saWN5RGVza3RvcAAfAgEAEgBQb2xpY3lS
-ZWdpc3RyYXRpb24fAgEADgBQb2xpY3lTZWN1cml0eR8CAQALAFBvbGljeVNldHVwAB8CAQAQAFBv
-bGljeUFjdGl2aXRpZXMfAgEADgBQb2xpY3lUcmF2ZWxlch8CAQAKAFBvbGljeU1haWwfAgEADwBQ
-b2xpY3lQcm9kVG9vbHMAHwIBAA0AUG9saWN5Um9hbWluZwAfAgoCrwA0ABoAAQAQAFtQb2xpY3lN
-b2RpZmllcl2uABoAAQANAFtOZXRNb2RpZmllcl0ArgAEALUJAwAHADQALgAJM1M0UzhTMTBTMTFT
-MTJTMTRTMTZTMTdTMThTMjBTMjJTMjNTMjRTNDhTNTBTRG9jdW1lbnRBY2Nlc3PeBgAAiv+F/wgA
-AQAACg==
-</rawitemdata></item></note>
+</rawitemdata></item></sharedfield>
 

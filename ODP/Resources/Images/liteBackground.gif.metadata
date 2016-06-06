@@ -1,18 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="43e" sequence="5017" unid="13B19913E841E2108525684F005E4F4B">
+<?xml version="1.0" encoding="UTF-8"?><imageresource alias="liteBackground.gif" colorizegrays="true" designerversion="5" language="en" maintenanceversion="1.5" name="liteBackground.gif" publicaccess="false" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="43a" sequence="5017" unid="13B19913E841E2108525684F005E4F4B">
 <created><datetime>19991222T121006,83-05</datetime></created>
-<modified><datetime dst="true">20150507T110153,27+02</datetime></modified>
+<modified><datetime dst="true">20150512T114058,68+02</datetime></modified>
 <revised><datetime dst="true">20130909T095401,32-04</datetime></revised>
-<lastaccessed><datetime dst="true">20150507T110153,26+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150507T110153,26+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20150512T114058,68+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150512T114058,68+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name="$ImagesWide" sign="true"><number>1</number></item>
-<item name="$ImagesHigh" sign="true"><number>1</number></item>
-
-<item name="$ImageNames" sign="true"><text>liteBackground.gif</text></item>
-<item name="$TITLE" sign="true"><textlist><text>liteBackground.gif</text><text>liteBackground.gif</text></textlist></item>
-<item name="$ImagesColorize" sign="true"><number>1</number></item>
-<item name="$DesignerVersion" sign="true"><text>5</text></item>
-<item name="$Flags"><text>34CiQ</text></item>
-<item name="$LANGUAGE" sign="true"><text>en</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby></imageresource>

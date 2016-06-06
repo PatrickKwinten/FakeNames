@@ -1,119 +1,73 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='2ee' unid='10E55809B24B12318525614200112DDF' sequence='5061'>
+<view name='Server\Domains ' alias='Domains' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
+ allowdocselection='true' publicaccess='false' designerversion='6' language='en'
+ unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator' headers='beveled'
+ opencollapsed='true' showresponsehierarchy='true' showmargin='true' shrinkrows='false'
+ extendlastcolumn='true' showhierarchies='false' unreadcolor='black' rowlinecount='1'
+ headerlinecount='1' rowspacing='1' haslinkcolumn='true' bgcolor='white' altrowcolor='#f8f8fc'
+ totalscolor='blue' headerbgcolor='#b1b1d2' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' initialbuildrestricted='false'
+ noemptycategories='true'>
+<noteinfo noteid='2ea' unid='10E55809B24B12318525614200112DDF' sequence='5061'>
 <created><datetime>19950111T220738,55-05</datetime></created>
-<modified><datetime dst='true'>20150507T110151,59+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,00+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,64-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,58+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,58+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,00+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,00+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20090514T140241,69-04</datetime><datetime
 >20100304T144051,76-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$TITLE' sign='true'><text>Server\Domains |Domains</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-8AICAEIBAgAkNwUACgBEb21haW5UeXBlAQANAEZvcmVpZ25Eb21haW4AAQARAE5vbkFkamFjZW50
-RG9tYWluAB8CAQAOAEFkamFjZW50RG9tYWluHwIBAAoARG9tYWluUnVsZR8CAQAKAFNNVFBEb21h
-aW4fAgEADABjY01haWxEb21haW4fAgEADABHbG9iYWxEb21haW4fAgEADgBGb3JlaWduIERvbWFp
-bgEAEwBOb24tYWRqYWNlbnQgRG9tYWluAB8CAQAPAEFkamFjZW50IERvbWFpbgAfAgEAFABGb3Jl
-aWduIFguNDAwIERvbWFpbh8CAQATAEZvcmVpZ24gU01UUCBEb21haW4AHwIBABYARm9yZWlnbiBj
-YzpNYWlsIERvbWFpbh8CAQANAEdsb2JhbCBEb21haW4AHwKNAwMAAgDoAAIAJDYFAAoARG9tYWlu
-VHlwZQEACgBEb21haW5SdWxlCgKvAL4AqAABAAEALwAFAAcAQ291bnRyeQAiAgEAAQAvACICBQAE
-AEFETUQiAgEAAQAvACICBQAEAFBSTUQiAgEAAQAvACICBQADAE9yZwAiAgEAAQAvACICBQAIAE9y
-Z1VuaXQxIgIBAAEALwAiAgUACABPcmdVbml0MiICAQABAC8AIgIFAAgAT3JnVW5pdDMiAgEAAQAv
-ACICBQAIAE9yZ1VuaXQ0IgKuABYABQAKAERvbWFpbk5hbWWuAAQAtQMDAAIAXgACACQ1AgAFAAAA
-AAAAAAUACgBTZXJ2ZXJOYW1laAGvACoAFAAFAAoAU2VydmVyTmFtZa4AFgAFAAoATWFpbFNlcnZl
-cq4ABAC1AwAAAAAAAAAA8D9rArQCAwAFADIALQAGAAIAAgAKAAIACQAEACQ3JDZOZXh0RG9tYWlu
-JDUkQ29uZmxpY3QkUkVGAAQABAAAADAABQAEAFR5cGUBAAYARG9tYWluCgIFAAQARm9ybQEABgBE
-b21haW4KAhwCAwA=
-</formula></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-GAACAABEAGYHAAACAABmAAIAAgAkNyQ2
-</rawitemdata></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAEAAgAiUAAAFZDgwQCAAAAUgEAABAAAQAKCQAAAAAAAAAAAAICAAAAVkMBAAIABgBUAQAAdAAB
-AAAJACAAAAAAAAAAAAAAACBWQwAACgALAAAAAACMAAEAAAkAIAAAAAAAAAAAAgAAIFZDAAACABIA
-cgAAAIgAAQAACQAgAAAAAAAAAAACAAAgJDdSAQIAQgECACQ3BQAKAERvbWFpblR5cGUBAA0ARm9y
-ZWlnbkRvbWFpbgABABEATm9uQWRqYWNlbnREb21haW4AHwIBAA4AQWRqYWNlbnREb21haW4fAgEA
-CgBEb21haW5SdWxlHwIBAAoAU01UUERvbWFpbh8CAQAMAGNjTWFpbERvbWFpbh8CAQAMAEdsb2Jh
-bERvbWFpbh8CAQAOAEZvcmVpZ24gRG9tYWluAQATAE5vbi1hZGphY2VudCBEb21haW4AHwIBAA8A
-QWRqYWNlbnQgRG9tYWluAB8CAQAUAEZvcmVpZ24gWC40MDAgRG9tYWluHwIBABMARm9yZWlnbiBT
-TVRQIERvbWFpbgAfAgEAFgBGb3JlaWduIGNjOk1haWwgRG9tYWluHwIBAA0AR2xvYmFsIERvbWFp
-bgAfAo0DAwAHAA4ABwAJMThSMjhSACQ2RG9tYWluVAECAOgAAgAkNgUACgBEb21haW5UeXBlAQAK
-AERvbWFpblJ1bGUKAq8AvgCoAAEAAQAvAAUABwBDb3VudHJ5ACICAQABAC8AIgIFAAQAQURNRCIC
-AQABAC8AIgIFAAQAUFJNRCICAQABAC8AIgIFAAMAT3JnACICAQABAC8AIgIFAAgAT3JnVW5pdDEi
-AgEAAQAvACICBQAIAE9yZ1VuaXQyIgIBAAEALwAiAgUACABPcmdVbml0MyICAQABAC8AIgIFAAgA
-T3JnVW5pdDQiAq4AFgAFAAoARG9tYWluTmFtZa4ABAC1AwMABwBqAGMACTNTNFM2UzdTOFM5UzEw
-UzExUzEyUzEzUzE0UzE1UzE2UzE3UzE4UzE5UzIwUzIxUzIyUzIzUzI0UzI1UzI2UzI3UzI4UzI5
-UzMwUzMxUzMyUzMzUzM0UzM1UzM2UzM4UzJFAE5leHREb21haW5OZXh0IERvbWFpbiQ1RGVzdGlu
-YXRpb24gU2VydmVycgACAF4AAgAkNQIABQAAAAAAAAAFAAoAU2VydmVyTmFtZWgBrwAqABQABQAK
-AFNlcnZlck5hbWWuABYABQAKAE1haWxTZXJ2ZXKuAAQAtQMAAAAAAAAAAPA/awK0AgMABwASAAwA
-CTRTMTNTMTVTMThTJgABAAAAAQEACQEAAAoBAQQKAAAvAK0rAQABAAEBAAAAAAAAAABXQwEAAAkA
-AAAAAAAAAAAAAAAAAAAAAAAQAAAALAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAA
-AAAAAAAAQgAAAAAAAQD///8AAQD4+PwAAQAAAAAAAAAAAAAAAAABAP///wABALGx0gAAAAEAAAAA
-AAEAAAD/AAAAAAAAAAAA9v8sAAAAAAADABMACgAAAAAAAAAAAAAAAAAAAAAAAAAAAHR3aXN0eS5n
-aWYIAAAAAAABAA==
-</rawitemdata></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Domains")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-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
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAL7/PgEAAAEAAACeQRAACgAAAAAAAABBZGQgRG9t
-YWluHgEBACQADQBDdXJyZW50U2VydmVyAIsAAAAAAAAAAADwP2sCAwAHAAwABQAJMFMwRQAAANoA
-BQANAEN1cnJlbnRTZXJ2ZXIAAQAAAAoCrwC6ABwAAgDoAwAAAAAAAAEABgBEb21haW6xAq4AngAB
-AAwAW05ldENyZWF0b3Jd5wB0Aq8AhgAcAAIA6AMAAAAAAAABAAYARG9tYWlusQKuAGoAAgANAAAA
-AAAAAAEADgBOb3QgQXV0aG9yaXplZAEAQABZb3UgYXJlIG5vdCBhdXRob3JpemVkIHRvIGFkZCBE
-b21haW4gZG9jdW1lbnRzIHRvIHRoaXMgZGF0YWJhc2UusAOuAAQAtQUDAAcAEgALAAkwUjZSMTBT
-MTNSAL7/IAAAAAcAAACeIRAACgAAAAAAAABBZGQgRG9tYWluvv9CAAAAAQAAAJ5AEAAMAAAAAAAA
-AF9FZGl0IERvbWFpbiAAAAASAAIA6AcAAAAAAADtAQMABwAMAAUACTBTMEUAvv9EAAAAAQAAAJ4B
-EAANAAAAAAAAAERlbGV0ZSBEb21haW7dIAAAABIAAgBMHQAAAAAAAO0BAwAHAAwABQAJMFMwRQC+
-/0IAAAABAAAAniEQAAsAAAAdAAAARW1wdHkgVHJhc2hLIAAAABIAAgD9BwAAAAAAAO0BAwAHAAwA
-BQAJMFMwRQC+/2IAAAABAAAAniEQAAYAAAAhAAAAU2VhcmNoRgAHAB4AGABXZWIgb25seSAtIHVz
-ZWQgaW4gVmlld3MHAAoAAwAJMVMAAAASAAIAkBcAAAAAAADtAQMABwAKAAMACTBSAL7/JgAAAAUA
-AACdAQAACwAAAAAAAABDYXRlZ29yaV96ZUsHAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAAAF9FZGl0
-IERvY3VtZW50CAACCr7/KAAAAAUAAACdAQAADQAAAAAAAABTZW5kIERvY3VtZW503QkAAwq+/yIA
-AAAFAAAAnQEAAAgAAAAAAAAAX0ZvcndhcmQKAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3Zl
-IFRvIEZvbGRlci4uLgsAPXy+/y4AAAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRl
-cksMAD58
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Domain" &amp; Form = "Domain"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_Domains")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<action title='Add Domain' showinmenu='false' hide='web'><imageref name='btnNewDoc.gif'/><code
+ event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+@If(CurrentServer="";
+@PostedCommand([Compose]; "Domain");
+@IsMember("[NetCreator]";@UserRoles);@PostedCommand([Compose];"Domain");@Prompt([Ok];"Not Authorized";"You are not authorized to add Domain documents to this database."))</formula></code></action>
+<action title='Add Domain' showinmenu='false' hide='notes'><imageref name='btnNewDoc.gif'/><code
+ event='onClick' for='web'><javascript>ntNewDoc('Domain', '[NetCreator]')</javascript></code></action>
+<action title='_Edit Domain' showinmenu='false' hide='previewedit web'><imageref
+ name='btnEdit.gif'/><code event='click'><formula>@Command([EditDocument])</formula></code></action>
+<action title='Delete Domain' showinmenu='false'><imageref name='btnDelete.gif'/><code
+ event='click'><formula>@Command([MoveToTrash])</formula></code></action>
+<action title='Empty Trash' showinmenu='false' hide='notes'><imageref name='btnEmpty.gif'/><code
+ event='click'><formula>@Command([EmptyTrash])</formula></code></action>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Document' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$7' width='2' resizable='false'
+ separatemultiplevalues='true' sortnoaccent='true' sortnocase='true' showaslinks='false'
+ categorized='true' twisties='true'><font size='9pt' color='navy'/><columnheader
+><font size='9pt'/></columnheader><code event='value'><formula>@Replace(DomainType;"ForeignDomain":"NonAdjacentDomain":"AdjacentDomain":"DomainRule":"SMTPDomain":"ccMailDomain":"GlobalDomain";
+"Foreign Domain":"Non-adjacent Domain":"Adjacent Domain":"Foreign X.400 Domain":"Foreign SMTP Domain":
+"Foreign cc:Mail Domain":"Global Domain")</formula></code><twistieimage><imageref
+ database='0000000000000000' name='twisty.gif'/></twistieimage></column>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='$6'
+ width='14.5000' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='true' formatdatatype='number'><font size='9pt'/><columnheader
+ title='Domain'><font size='9pt'/></columnheader><datetimeformat legacy='true'
+ show='date' date='yearmonthday' time='hourminutesecond' zone='never'/><code
+ event='value'><formula>@If(DomainType = "DomainRule"; "/" + Country + "/" + ADMD + "/" + PRMD + "/" + Org + "/" + OrgUnit1 + "/" + OrgUnit2 + "/" + OrgUnit3 + "/" + OrgUnit4;  DomainName)</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='NextDomain'
+ width='17.5000' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='true'><font size='9pt'/><columnheader title='Next Domain'><font
+ size='9pt'/></columnheader><datetimeformat legacy='true' show='date' date='yearmonthday'
+ time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$5' width='17'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='true'><font size='9pt'/><columnheader title='Destination Server'><font
+ size='9pt'/></columnheader><datetimeformat legacy='true' show='date' date='yearmonthday'
+ time='hourminutesecond' zone='never'/><code event='value'><formula>@Name([Abbreviate]; @Subset(@If(@IsAvailable(ServerName); ServerName; MailServer); 1))</formula></code></column></view>
 

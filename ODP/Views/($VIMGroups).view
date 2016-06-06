@@ -1,45 +1,35 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='6de' unid='4A170FAEE3E022AF852561C20069B845' sequence='5020'>
+<view name='($VIMGroups)' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false' designerversion='8'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='simple' opencollapsed='false' showresponsehierarchy='true' showmargin='true'
+ shrinkrows='false' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white' totalscolor='blue'
+ headerbgcolor='#a0a0c5' boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
+ allowcustomizations='true' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
+ uniquekeys='false'>
+<noteinfo noteid='6da' unid='4A170FAEE3E022AF852561C20069B845' sequence='5020'>
 <created><datetime dst='true'>19950520T151444,53-04</datetime></created>
-<modified><datetime dst='true'>20150507T110156,84+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,04+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,46-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110156,83+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110156,83+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114102,04+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,04+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20050824T134849,52-04</datetime><datetime
  dst='true'>20060426T134644,69-04</datetime><datetime dst='true'>20060427T135352,59-04</datetime><datetime
  dst='true'>20081007T114831,47-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$Author' sign='true'><text>Brian Lambert</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($VIMGroups)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-/gACAC4AAgAkMQIABQAAAAAAAAAFAAgATGlzdE5hbWUAAAAAAAAAAPA/awK0AgMABQA4ADMABQAC
-AA8ABwAJAAQAJDFMaXN0RGVzY3JpcHRpb25NZW1iZXJzJENvbmZsaWN0JFJFRgAEAAQAAABsAAUA
-BABUeXBlAQAFAEdyb3VwAAoCBQAJACRDb25mbGljdABZARwCBQAQACRBdXRvQ3JlYXRlZExpc3Ro
-AR4BBQAQACRBdXRvQ3JlYXRlZExpc3RiAQEAAwBESVAACgIeAR0CBAAcAgMABwAmAB8ACUwxUzJT
-M1M0UzVTOVMxMFMxNlMxN1MyMlMyRTIzUwA=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYAAAACACQx
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQADAAQACAQAAFZDAQACAAkAMAAAAKAAAQAACQAAAAAAAAAAAAICAAAgVkMAAA8ACwAAAAAAoAAB
-AAAJAAAAAAAAAAAAAgIAAABWQwAABwAHAAAAAADoAQEAAAkAAAAAAAAAAAACAgAAICQxTGlzdCBO
-YW1lMAACAC4AAgAkMQIABQAAAAAAAAAFAAgATGlzdE5hbWUAAAAAAAAAAPA/awK0AgMATGlzdERl
-c2NyaXB0aW9uRGVzY3JpcHRpb25NZW1iZXJzTWVtYmVycyYAAQAAAAEBAAkBAAAKAQEECgAAAACt
-KwEAAQABAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAA//8AAAAAAAAAAAAA
-AAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQAAAAAA
-AQAAAAAAAAAAAAAAAAABAP///wABAKCgxQAAAAEAAAAAAAEAAAD/AAEAAAAAAAAACAAAAAAAAQA=
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Group" &amp; @IsUnavailable($Conflict) &amp; (!@IsAvailable($AutoCreatedList) | !@UpperCase($AutoCreatedList)  = "DIP")</formula></code>
+<column sort='ascending' hidedetailrows='false' listseparator='comma' itemname='$1'
+ width='20' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
+ sortnocase='true' showaslinks='false'><font size='9pt'/><columnheader title='List Name'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate]; @Subset(ListName; 1))</formula></code></column>
+<column hidedetailrows='false' itemname='ListDescription' width='20' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='Description'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' listseparator='comma' itemname='Members' width='61'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt'/><columnheader title='Members'><font
+ size='9pt'/></columnheader></column>
+<item name='$Author' sign='true'><text>Brian Lambert</text></item></view>
 

@@ -1,34 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='1c2' unid='A3CC267EC1A71A0E0525696500629E32' sequence='5016'>
+<sharedfield name='Interval' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='1be' unid='A3CC267EC1A71A0E0525696500629E32' sequence='5016'>
 <created><datetime>20000925T125710,26-05</datetime></created>
-<modified><datetime dst='true'>20150507T110150,44+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114055,92+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,02-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110150,43+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110150,43+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114055,92+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114055,92+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE'><text>Interval</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='Interval' summary='false' sign='true'><number>0</number></item>
-<item name='$FIELDS'><text>Interval</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACK/wABggAAAwAwAAAAAAAAAAMBAAAJEgAAAAMAlAAIAC0AAAASAAAAEAAAAAAA
-AAAAAE5AAwCUAAAAhgAFAAgASW50ZXJ2YWwAAAAAAAAAAAAADgKvAGYAXAABAE8AWW91IGVudGVy
-ZWQgYW4gaW50ZXJ2YWwgbGVzcyB0aGFuIDAuICBZb3UgbXVzdCBlbnRlciBhbiBpbnRlcnZhbCBv
-ZiAwIG9yIGFib3ZlLgB7Aa4ACgB6AK4ABAC1AwMABwAMAAUACTBTMEUASW50ZXJ2YWxJbnRlcnZh
-bCB0byByZXBlYXQgY2FsbHMgLSAwIG1lYW5zIGNhbGwgb25jZS4Aev8iAAgAAAAAAAAAAAAAAAAA
-AAAAAAAAAABJbnRlcnZhbN4GAACK/4X/CAABAAAK
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ type='number' kind='editable' name='Interval' description='Interval to repeat calls - 0 means call once.'
+ taborder='3' htmlid='Interval'><numberformat format='general' punctuated='false'
+ parens='false' percent='false' bytes='false'/><code event='defaultvalue'><formula
+>60</formula></code><code event='inputvalidation'><formula>@If(Interval&lt;0;@Failure("You entered an interval less than 0.  You must enter an interval of 0 or above.");@Success)</formula></code></field>
+<item name='Interval' summary='false' sign='true'><number>0</number></item></sharedfield>
 

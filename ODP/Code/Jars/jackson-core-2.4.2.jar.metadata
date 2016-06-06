@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="9fe" sequence="2" unid="9CDFD3735C0C8FEBC1257E42003DC9C3">
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="98a" sequence="2" unid="9CDFD3735C0C8FEBC1257E42003DC9C3">
 <created><datetime dst="true">20150511T131453,47+02</datetime></created>
-<modified><datetime dst="true">20150511T131453,56+02</datetime></modified>
+<modified><datetime dst="true">20150512T114104,98+02</datetime></modified>
 <revised><datetime dst="true">20150511T131453,55+02</datetime></revised>
-<lastaccessed><datetime dst="true">20150511T131453,55+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150511T131453,47+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst="true">20150512T114104,98+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20150512T114104,98+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
 <wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
 <item name="$TITLE"><text>jackson-core-2.4.2.jar</text></item>

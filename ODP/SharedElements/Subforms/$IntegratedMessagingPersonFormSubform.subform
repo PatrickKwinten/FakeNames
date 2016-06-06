@@ -1,28 +1,18 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='5ea' unid='DD63FF40FA0376AB8525633A00792FCA' sequence='5032'>
+<subform name='$IntegratedMessagingPersonFormSubform' alias='1.0|$IntegratedMessagingPersonFormSubform'
+ xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F'
+ designerversion='6' language='en'>
+<noteinfo noteid='5e6' unid='DD63FF40FA0376AB8525633A00792FCA' sequence='5032'>
 <created><datetime dst='true'>19960530T180340,90-04</datetime></created>
-<modified><datetime dst='true'>20150507T110155,62+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114100,82+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095401,44-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110155,61+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110155,61+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114100,82+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114100,82+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143928,43-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE'><textlist><text>$IntegratedMessagingPersonFormSubform</text><text
->1.0</text><text>$IntegratedMessagingPersonFormSubform</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUA3x</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$IntegratedMessagingPersonFormSubform</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAHBjAAAAAJQEoAUMAKAFDAAAAAAAgwQBAIX/CAABAAAJ
-</rawitemdata></item></note>
+<body><richtext>
+<pardef id='1' leftmargin='1in' hide='read edit print copy preview previewedit'/>
+<par def='1'><run><font size='9pt'/></run></par></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>$IntegratedMessagingPersonFormSubform</text></item></subform>
 

@@ -1,51 +1,33 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='466' unid='252FC89AECEB791285256A450071F7DD' sequence='5038'>
+<page name='Top' alias='Top' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' publicaccess='false'
+ designerversion='6' language='en' bgcolor='#b1b1d2'>
+<noteinfo noteid='462' unid='252FC89AECEB791285256A450071F7DD' sequence='5038'>
 <created><datetime dst='true'>20010507T164450,21-04</datetime></created>
-<modified><datetime dst='true'>20150507T110153,47+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114058,88+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,68-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110153,46+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110153,46+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114058,88+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114058,88+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144041,50-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='windowtitle'><formula>@DbTitle</formula></code><code event='htmlbody'><formula
+>"topmargin=7 leftmargin=12 marginheight=5 marginwidth=10 class='MainHeader'"</formula></code><code
+ event='htmlhead'><formula>"&lt;link rel=stylesheet type='text/css' href='/" + @Subset(@DbName;-1) + "/cssForm?ReadForm'&gt;"</formula></code>
+<body><richtext>
+<pardef id='1' leftmargin='1in' hide='notes web'/>
+<par def='1'/>
+<table widthtype='fitwindow' leftmargin='0.7500in' refwidth='8.8125in'><border
+ outsidewidth='6px 0px 0px'/><tablecolumn width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px' htmlclass='MainHeader'>
+<pardef id='3' leftmargin='0.0750in' hide='web' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='14pt' name='Arial' pitch='variable' truetype='true'
+ familyid='20'/>Domino Directory</run></par>
+<pardef id='4' leftmargin='0' hide='notes' keepwithnext='true' keeptogether='true'/>
+<par def='4'>Domino Directory</par></tablecell></tablerow></table>
+<pardef id='5' leftmargin='0.7500in'/>
+<par def='5'><run><font style='bold'/></run></par></richtext></body>
 <item name='$SignatureStatus'><text>1</text></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><textlist><text>Top</text><text>Top</text></textlist></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgLAIAAAAAAgAAA2AABALGx0gAAAAAA
-</rawitemdata></item>
-<item name='$WINDOWTITLE' sign='true'><formula>@DbTitle</formula></item>
-<item name='$HTMLHeadTag' sign='true'><formula>"&lt;link rel=stylesheet type='text/css' href='/" + @Subset(@DbName;-1) + "/cssForm?ReadForm'&gt;"</formula></item>
-<item name='$HTMLBodyTag' sign='true'><formula>"topmargin=7 leftmargin=12 marginheight=5 marginwidth=10 class='MainHeader'"</formula></item>
-<item name='$Flags'><text>C34WQ</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSZBcmlhbAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>Top</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAACBAAAAAJUEoAUAAKAFAAAAAAAAgwQBAIX/CAABAAAKgQKC/1IAAgAAAAAAAAAAADgE
-AAA4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAABQEOAQA
-ADgEAAAAAGQAgwQCAN0GAQD7//v/LABBAAAAAQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAA
-AAAAAAAAXP84AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAQAA
-CgAAAAD8/zoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAAAABAAAAAAAAAAAA
-AAAAAAAA3gYBAPv/ow44BCgAPAAAAAAAAwCkEgAAOATKNYBwAAIAAAEBAACBAoL/UgADAAAAAAAA
-AAAApATKNaQEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAA
-lQRsAAEAbAABAAAAAACDBAMAhf8YAAUAAA5Eb21pbm8gRGlyZWN0b3J5gQKC/1IABAAAAAAAAAAA
-ADgEyjU4BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIaBAAAAAJQE
-AAABAAAAAQAAAAAAgwQEAIX/GAABAAAKRG9taW5vIERpcmVjdG9yeXv/JAAAAAoAAAAAAAAAAAAA
-AAAAAAAAAAAATWFpbkhlYWRlcqUGAAAAAIECgv9SAAUAAAAAAAAAAAA4BAAAOAQAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAACUBDgEAAA4BAAAAAAAAIMEBQCF
-/wgAAQEACg==
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>Top</text></item></page>
 

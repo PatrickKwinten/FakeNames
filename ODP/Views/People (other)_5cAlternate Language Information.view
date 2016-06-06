@@ -1,76 +1,52 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='33a' unid='512D7E60D80525AB852565DF004B8AEC' sequence='5032'>
+<view name='People (other)\Alternate Language Information' alias='AlternateLanguageInformation'
+ xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F'
+ showinmenu='true' allowdocselection='true' publicaccess='false' designerversion='6.5'
+ language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
+ headers='beveled' opencollapsed='true' showresponsehierarchy='false' showmargin='true'
+ shrinkrows='false' extendlastcolumn='false' showhierarchies='false' unreadcolor='black'
+ rowlinecount='1' headerlinecount='1' rowspacing='1' haslinkcolumn='true'
+ bgcolor='white' totalscolor='gray' headerbgcolor='#b1b1d2' boldunreadrows='false'
+ evaluateactions='false' allownewdocuments='false' allowcustomizations='true'
+ hidemarginborder='false' marginwidth='0px' marginbgcolor='white' uniquekeys='false'
+ initialbuildrestricted='false' noemptycategories='true'>
+<noteinfo noteid='336' unid='512D7E60D80525AB852565DF004B8AEC' sequence='5032'>
 <created><datetime dst='true'>19980407T094507,64-04</datetime></created>
-<modified><datetime dst='true'>20150507T110151,97+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114057,38+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,20-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110151,96+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110151,96+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114057,38+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114057,38+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T144048,97-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>People (other)\Alternate Language Information|AlternateLanguageInformation</text></item>
-<item name='$Index' sign='true'><text>/C</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-WgECAEIAAgAkMQIABQAAAAAAAAAFAAgARnVsbE5hbWW0AgIABQAAAAAAAAAFAAsAQWx0RnVsbE5h
-bWUAtAIfAl4BAwAKAAQAAgBYAAIAJDK/AFgBAAAAAAAAACBkQA8CrwA8ACQAAgDOAAAAAAAAAAUA
-CwBBbHRMYW5ndWFnZQD7AhMBrgAYAAUACwBBbHRMYW5ndWFnZQCuAAQAtQMDAAIAOAAMAFNhbWV0
-aW1lSW5mbwIABQAAAAAAAAAFAAgAZnVsbG5hbWUAAAAAAAAAAPA/awK0AgMABQAqACUABAACAAIA
-DAAJACQxJDJTYW1ldGltZUluZm8kQ29uZmxpY3QABAAEAAAAVAAFAAQAVHlwZQEAFwBBbHRMYW5n
-dWFnZVBlcnNvbmFsSW5mbwAKAgUABABGb3JtAQAXAEFsdExhbmd1YWdlUGVyc29uYWxJbmZvAAoC
-HAIDAA==
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-DwABAABECGYHAAACACQx
-</rawitemdata></item>
-<item name='$VIEWFORMAT' summary='true' sign='true'>
-<rawitemdata type='5'>
-AQADAAQACwAAAFZDgwQCAAAAUAAAABgAAQAKCQABAAAAAAAAAAICAAAAVkMAAAIACQBsAAAAtQAB
-AAAJACAAAAAAAAAAAgIAAABWQwgADAAUAEYAAABQAAEAAAoAAAAAAAAAAAACAgAAACQxUAACAEIA
-AgAkMQIABQAAAAAAAAAFAAgARnVsbE5hbWW0AgIABQAAAAAAAAAFAAsAQWx0RnVsbE5hbWUAtAIf
-Al4BAwAHAAwABQAJMFMwRQAkMkxhbmd1YWdlc2wACgAEAAIAWAACACQyvwBYAQAAAAAAAAAgZEAP
-Aq8APAAkAAIAzgAAAAAAAAAFAAsAQWx0TGFuZ3VhZ2UA+wITAa4AGAAFAAsAQWx0TGFuZ3VhZ2UA
-rgAEALUDAwAHAA4ABwAJNlM3UzlTAFNhbWV0aW1lSW5mb1NhbWV0aW1lIEluZm9ybWF0aW9uRgAC
-ADgADABTYW1ldGltZUluZm8CAAUAAAAAAAAABQAIAGZ1bGxuYW1lAAAAAAAAAADwP2sCtAIDAAcA
-DAAFAAkwUzBFACYAAQAAAAEBAAkBAAAKAQEOCgAAAQCtKwEAAQABAQAAAAAAAAAAV0MBAAAJAAAA
-AAAAAAAAAAAAAAAAAAEAEAgAACwA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEBAAkAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAD/
-/wAAAAAAAAAAAAAAAAAAQgAAAAAAAQD///8ABQD///8AAQAAAAAAAAAAAAAAAAABAP///wABALGx
-0gAAAAEAAAAAAAEAgICAAAAAAAAAAAAA9v8sAAAAAAADABMACgAAAAAAAAAAAAAAAAAAAAAAAAAA
-AHR3aXN0eS5naWYIAAAAAAABAGBDKAADAAAADAAAAAAAAAAAAAAAAAAAAAAAAABTYW1ldGltZUlu
-Zm8=
-</rawitemdata></item>
-<item name='$AppHelpFormula' summary='true' sign='true'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_AlternateLanguageInformation")</formula></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$WebFlags' sign='true'><text>S</text></item>
-<item name='$DesignerVersion' sign='true'><text>6.5</text></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAHn/bAABALGx0gABAAAAAAABAAAAAAABALGx0gAA
-AB8AAAAAAAAAAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPz/OgAAAAAAAQAAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAEAAAAAAAAAAAAAAAAAAAC+/2IAAAABAAAAniERAAYAAAAhAAAAU2VhcmNoRgAHAB4A
-GABXZWIgb25seSAtIHVzZWQgaW4gVmlld3MHAAoAAwAJMVMAAAASAAIAkBcAAAAAAADtAQMABwAK
-AAMACTBSAPb/LwAAAAAAAwATAA0AAAAAAAAAAAAAAAAAAAAAAAAAAABidG5TZWFyY2guZ2lmP77/
-JgAAAAUAAACdAQAACwAAAAAAAABDYXRlZ29yaV96ZQACAE58vv8oAAAABQAAAJ0BAAAOAAAAAAAA
-AF9FZGl0IERvY3VtZW50AwACCr7/KAAAAAUAAACdAQAADQAAAAAAAABTZW5kIERvY3VtZW50dAQA
-Awq+/yIAAAAFAAAAnQEAAAgAAAAAAAAAX0ZvcndhcmQFAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAA
-AF9Nb3ZlIFRvIEZvbGRlci4uLgYAPXy+/y4AAAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9t
-IEZvbGRlcjEHAD58
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzYAAAAAwABAAAAhQAAAAAAAAAAAAAACAAGAL7/YgAAAAEAAACeIREABgAAACEAAABTZWFyY2hG
-AAcAHgAYAFdlYiBvbmx5IC0gdXNlZCBpbiBWaWV3cwcACgADAAkxUwAAABIAAgCQFwAAAAAAAO0B
-AwAHAAoAAwAJMFIAvv8mAAAABQAAAJ0BAAALAAAAAAAAAENhdGVnb3JpX3plAAIATny+/ygAAAAF
-AAAAnQEAAA4AAAAAAAAAX0VkaXQgRG9jdW1lbnQDAAIKvv8oAAAABQAAAJ0BAAANAAAAAAAAAFNl
-bmQgRG9jdW1lbnQABAADCr7/IgAAAAUAAACdAQAACAAAAAAAAABfRm9yd2FyZAUABAq+/ywAAAAF
-AAAAnQEAABIAAAAAAAAAX01vdmUgVG8gRm9sZGVyLi4uBgA9fL7/LgAAAAUAAACdAQAAEwAAAAAA
-AABfUmVtb3ZlIEZyb20gRm9sZGVyAAcAPnw=
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "AltLanguagePersonalInfo" &amp; Form = "AltLanguagePersonalInfo"</formula></code><code
+ event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_AlternateLanguageInformation")</formula></code>
+<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
+ bordercolor='black'>
+<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
+<sharedactionref id='33'>
+<action title='Search' showinmenu='false' hide='notes'><imageref name='btnSearch.gif'/><code
+ event='click'><formula>REM {Web only - used in Views};
+@Command([ViewShowSearchBar])</formula></code></action></sharedactionref>
+<action title='Categori_ze' showinbar='false' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
+<action title='Send Document' showinbar='false' systemcommand='send'/>
+<action title='_Forward' showinbar='false' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$1' width='3' resizable='false'
+ separatemultiplevalues='true' sortnoaccent='true' sortnocase='true' showaslinks='false'
+ categorized='true' twisties='true'><font size='9pt' color='navy'/><columnheader
+><font size='9pt'/></columnheader><columnnamesformat showonline='true' columncontainsname='true'
+ columnname='SametimeInfo' verticalorientation='top'/><code event='value'><formula
+>@Trim(@Name([Abbreviate];FullName):@Name([Abbreviate];AltFullName))</formula></code><twistieimage
+><imageref database='0000000000000000' name='twisty.gif'/></twistieimage></column>
+<column hidedetailrows='false' itemname='$2' width='22.6250' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='true'><font
+ size='9pt'/><columnheader title='Languages'><font size='9pt'/></columnheader><code
+ event='value'><formula>@If(@TextToNumber(@Version) &gt; 161; @Locale([LanguageName];AltLanguage);AltLanguage)</formula></code></column>
+<column hidedetailrows='false' itemname='SametimeInfo' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'
+ hidden='true'><columnheader title='Sametime Information'><font size='9pt'
+ style='bold'/></columnheader><code event='value'><formula>@Name([Abbreviate];@Subset(fullname;1))</formula></code></column></view>
 

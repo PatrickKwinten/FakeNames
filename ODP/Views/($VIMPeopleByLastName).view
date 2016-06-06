@@ -1,81 +1,59 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='70a' unid='2D3C895C494E7ECB852561C20069B847' sequence='5020'>
+<view name='($VIMPeopleByLastName)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false'
+ designerversion='8' language='en' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='simple' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='false' extendlastcolumn='false' showhierarchies='false'
+ unreadcolor='black' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
+ totalscolor='blue' headerbgcolor='#a0a0c5' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false'>
+<noteinfo noteid='706' unid='2D3C895C494E7ECB852561C20069B847' sequence='5020'>
 <created><datetime dst='true'>19950520T151444,55-04</datetime></created>
-<modified><datetime dst='true'>20150507T110157,06+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,26+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,72-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110157,05+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,05+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114102,26+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,26+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20050824T134849,55-04</datetime><datetime
  dst='true'>20060426T134724,02-04</datetime><datetime dst='true'>20060427T135346,68-04</datetime><datetime
  dst='true'>20081007T114831,43-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$Author' sign='true'><text>Brian Lambert</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($VIMPeopleByLastName)</text></item>
-<item name='$Index' sign='true'><text/></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-MAICACIAAgAkNgUACABMYXN0TmFtZQAAAAAAAAAA8D9rAgMAAgAuAAIAJDECAAUAAAAAAAAABQAI
-AEZ1bGxuYW1lAAAAAAAAAADwP2sCtAIDAAIAJAACACQwBQAJAEZpcnN0TmFtZQAAAAAAAAAAAPA/
-awIDAAIAKAACACQyBQANAE1pZGRsZUluaXRpYWwAAAAAAAAAAADwP2sCAwABAFgAEABYRG9tYWlu
-AA48cQBoYCUABQAKAE1haWxEb21haW4BAAAACwKvACoAHgABAAMAIEAgAAUACgBNYWlsRG9tYWlu
-IgKuAAwAAQAAAK4ABAC1AwMAAgBuAAIAJDQFAAsATWFpbEFkZHJlc3MAAQAAAAsCrwBMABYABQAL
-AE1haWxBZGRyZXNzAK4ANgAFAAgARnVsbE5hbWUAAAAAAAAAAPA/awIFABAAWERvbWFpbgAOPHEA
-aGAlACICrgAEALUDAwAFADYAMgAIAAIAAgACAAIAAgAHAAkABAAkNiQxJDAkMiQ0Q29tbWVudCRD
-b25mbGljdCRSRUYEAAQAAABsAAUABABUeXBlAQAGAFBlcnNvbgoCBQAJACRDb25mbGljdABZARwC
-BQAQACRBdXRvQ3JlYXRlZExpc3RoAR4BBQAQACRBdXRvQ3JlYXRlZExpc3RiAQEAAwBESVAACgIe
-AR0CBAAcAgMABwAmAB8ACUwxUzJTM1M0UzVTOVMxMFMxNlMxN1MyMlMyRTIzUwA=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-DwABAABEAGYAAAACACQ2
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAGAAcACAQAAFZDAQACAAgALgAAAE0AAQAACQAAAAAAAAAAAAICAAAAVkMAAAIACAAwAAAAWAAB
-AAAJAAAAAAAAAAAAAgIAACBWQwAAAgAJACYAAABYAAEAAAkAAAAAAAAAAAACAgAAAFZDAAACAAsA
-KgAAAFgAAQAACQAAAAAAAAAAAAICAAAgVkMAAAIACwDIAAAAWAABAAAJAAAAAAAAAAAAAgIAAABW
-QwAABwAHAAAAAABYAAEAAAkAAAAAAAAAAAACAgAAACQ2TGFzdE5hbWUuAAIAIgACACQ2BQAIAExh
-c3ROYW1lAAAAAAAAAADwP2sCAwAHAAoAAwAJNFMAJDFGdWxsTmFtZTAAAgAuAAIAJDECAAUAAAAA
-AAAABQAIAEZ1bGxuYW1lAAAAAAAAAADwP2sCtAIDACQwRmlyc3ROYW1lJgACACQAAgAkMAUACQBG
-aXJzdE5hbWUAAAAAAAAAAADwP2sCAwAkMk1pZGRsZSBOYW1lKgACACgAAgAkMgUADQBNaWRkbGVJ
-bml0aWFsAAAAAAAAAAAA8D9rAgMAJDRNYWlsQWRkcmVzc8gAAQBYABAAWERvbWFpbgAOPHEAaGAl
-AAUACgBNYWlsRG9tYWluAQAAAAsCrwAqAB4AAQADACBAIAAFAAoATWFpbERvbWFpbiICrgAMAAEA
-AACuAAQAtQMDAAIAbgACACQ0BQALAE1haWxBZGRyZXNzAAEAAAALAq8ATAAWAAUACwBNYWlsQWRk
-cmVzcwCuADYABQAIAEZ1bGxOYW1lAAAAAAAAAADwP2sCBQAQAFhEb21haW4ADjxxAGhgJQAiAq4A
-BAC1AwMAQ29tbWVudENvbW1lbnQmAAEAAAABAQAJAQAACgEBBAoAAAAArSsBAAEAAQAAAAAAAAAA
-AFdDAQAACQAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//
-AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAA
-AAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAEIAAAAAAAEA
-////AAUAAAAAAAEAAAAAAAAAAAAAAAAAAQD///8AAQCgoMUAAAABAAAAAAABAAAA/wABAAAAAAAA
-AAgAAAAAAAEA
-</rawitemdata></item>
-<item name='$V5ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzpAAAAAQABAAAAVR0AAAAAAAABAAEJCAAGAHn/bAABAGBgmAABAAAAAAABAP///wABAMDAwAAC
-ACAAAAABAZAAAwADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAPb/MgAAAAAAAwATABAAAAAAAAAAAAAAAAAAAAAAAAAAAABB
-Y3Rpb25CdXR0b24uZ2lm/P86AAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AQAAAAAAAAAAAAAAAAAAAL7/JgAAAAUAAACdAAAACwAAAAAAAABDYXRlZ29yaV96ZUsBAE58vv8o
-AAAABQAAAJ0AAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUAAACdAAAADgAAAAAA
-AABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQAAAAgAAAAAAAAAX0ZvcndhcmQEAAQKvv8s
-AAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4AAAAFAAAAnQEAABMA
-AAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcksGAD58
-</rawitemdata></item>
-<item name='$ACTIONS' sign='true'>
-<rawitemdata type='1'>
-vRzpAAAAAQABAAAAVR0AAAAAAAABAAEJCAAGAL7/JgAAAAUAAACdAAAACwAAAAAAAABDYXRlZ29y
-aV96ZUsBAE58vv8oAAAABQAAAJ0AAAAOAAAAAAAAAF9FZGl0IERvY3VtZW50AgACCr7/KAAAAAUA
-AACdAAAADgAAAAAAAABTZW5kIERvY3VfbWVudAMAAwq+/yIAAAAFAAAAnQAAAAgAAAAAAAAAX0Zv
-cndhcmQEAAQKvv8sAAAABQAAAJ0BAAASAAAAAAAAAF9Nb3ZlIFRvIEZvbGRlci4uLgUAPXy+/y4A
-AAAFAAAAnQEAABMAAAAAAAAAX1JlbW92ZSBGcm9tIEZvbGRlcksGAD58
-</rawitemdata></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Person" &amp; @IsUnavailable($Conflict) &amp; (!@IsAvailable($AutoCreatedList) | !@UpperCase($AutoCreatedList)  = "DIP")</formula></code>
+<actionbar bgcolor='#606098' bordercolor='black'>
+<actionbuttonstyle heighttype='background' margintype='fixed' margin='6' bgcolor='none'
+ displayborder='never' widthtype='background' textalign='center' internalmargin='3px'><imageref
+ name='ActionButton.gif'/></actionbuttonstyle><font size='9pt' color='white'/><border
+ width='0px 0px 1px'/>
+<action title='Categori_ze' showinbar='false' hide='previewedit' systemcommand='categorize'/>
+<action title='_Edit Document' showinbar='false' hide='previewedit' systemcommand='edit'/>
+<action title='Send Docu_ment' showinbar='false' hide='previewedit' systemcommand='send'/>
+<action title='_Forward' showinbar='false' hide='previewedit' systemcommand='forward'/>
+<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
+<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/></actionbar>
+<column sort='ascending' hidedetailrows='false' itemname='$6' width='9.6250'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt'/><columnheader title='LastName'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Subset(LastName; 1)</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$1' width='11'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt'/><columnheader title='FullName'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Name([Abbreviate]; @Subset(Fullname; 1))</formula></code></column>
+<column hidedetailrows='false' itemname='$0' width='11' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='true' sortnocase='true' showaslinks='false'><font size='9pt'/><columnheader
+ title='FirstName'><font size='9pt'/></columnheader><code event='value'><formula
+>@Subset(FirstName; 1)</formula></code></column>
+<column hidedetailrows='false' listseparator='comma' itemname='$2' width='11'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><font size='9pt'/><columnheader title='Middle Name'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Subset(MiddleInitial; 1)</formula></code></column>
+<column hidedetailrows='false' itemname='$4' width='11' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='true' sortnocase='true' showaslinks='false'><font size='9pt'/><columnheader
+ title='MailAddress'><font size='9pt'/></columnheader><code event='value'><formula
+>XDomain := @If(MailDomain != ""; " @ " + MailDomain; "");
+@If(MailAddress != ""; MailAddress; @Subset(FullName; 1) + XDomain)</formula></code></column>
+<column hidedetailrows='false' itemname='Comment' width='11' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><font
+ size='9pt'/><columnheader title='Comment'><font size='9pt'/></columnheader></column>
+<item name='$Author' sign='true'><text>Brian Lambert</text></item></view>
 

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+
+	<xe:restService id="restService1">
+		<xe:this.service>
+			<xe:viewJsonService viewName="peopleplus">
+				<xe:this.columns>
+					<xe:restViewColumn columnName="FirstName"
+						name="first">
+					</xe:restViewColumn>
+					<xe:restViewColumn name="job"></xe:restViewColumn>
+				</xe:this.columns>
+			</xe:viewJsonService>
+		</xe:this.service>
+	</xe:restService></xp:view>

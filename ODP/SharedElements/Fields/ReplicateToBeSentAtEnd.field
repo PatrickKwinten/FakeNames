@@ -1,36 +1,19 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='sharedfield' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='1ee' unid='C5EDBF57836316E2052569650062B32F' sequence='5017'>
+<sharedfield name='ReplicateToBeSentAtEnd' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='1ea' unid='C5EDBF57836316E2052569650062B32F' sequence='5017'>
 <created><datetime>20000925T125803,99-05</datetime></created>
-<modified><datetime dst='true'>20150507T110150,66+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114056,14+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095402,18-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110150,65+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110150,65+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114056,14+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114056,14+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$TITLE'><text>ReplicateToBeSentAtEnd</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='ReplicateToBeSentAtEnd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><text>ReplicateToBeSentAtEnd</text></item>
-<item name='$BODY' summary='true' sign='true'>
-<rawitemdata type='1'>
-gQKC/1IAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAABAAAAAJQHAAAAAAAAAAAAAAAAgwQBAIX/CAABAAAK3QYAAIr//v9QAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACw/xQAAAAEIAAAAAAAAAAAAAAAAIr/BgGKQgEFAiACAAAAAAAAAgEAAAkAAKQA
-AAAAABYAAAAnAKQAAwBuABYAUmVwbGljYXRlVG9CZVNlbnRBdEVuZAUAFgBSZXBsaWNhdGVUb0Jl
-U2VudEF0RW5kAQAAAAoCrwAuAAwAAQABADAArgAiAAUAFgBSZXBsaWNhdGVUb0JlU2VudEF0RW5k
-rgAEALUDAwAHAAoAAwAJMVMAAAAgAAUAFgBSZXBsaWNhdGVUb0JlU2VudEF0RW5kAwAHAAoAAwAJ
-MFIAUmVwbGljYXRlVG9CZVNlbnRBdEVuZAEAIwBJZiBhbnl0aGluZyBpcyB3YWl0aW5nIHRvIGJl
-IHNlbnR8MQDeBgAAiv+F/wgAAQAACg==
-</rawitemdata></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item></note>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><field
+ borderstyle='none' lookupeachchar='false' lookupaddressonrefresh='false'
+ type='keyword' allowmultivalues='true' kind='editable' name='ReplicateToBeSentAtEnd'
+ listinputseparators='comma' listdisplayseparator='comma'><keywords helperbutton='false'
+ columns='1' ui='checkbox'><textlist><text>If anything is waiting to be sent|1</text></textlist></keywords><code
+ event='inputtranslation'><formula>FIELD ReplicateToBeSentAtEnd:=@If(ReplicateToBeSentAtEnd="";"0";ReplicateToBeSentAtEnd);
+ReplicateToBeSentAtEnd</formula></code></field></sharedfield>
 

@@ -1,73 +1,72 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='view' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='75e' unid='85255E3D0072854A85255D89004B96AC' sequence='5040'>
+<view name='($Certifiers)' xmlns='http://www.lotus.com/dxl' version='9.0'
+ maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true' publicaccess='false'
+ designerversion='8.5.3' language='en' unreadmarks='none' onopengoto='lastopened'
+ onrefresh='displayindicator' headers='simple' opencollapsed='false' showresponsehierarchy='true'
+ showmargin='true' shrinkrows='false' extendlastcolumn='false' showhierarchies='false'
+ unreadcolor='black' rowlinecount='1' headerlinecount='1' rowspacing='1' bgcolor='white'
+ totalscolor='blue' headerbgcolor='#a0a0c5' boldunreadrows='false' evaluateactions='false'
+ allownewdocuments='false' allowcustomizations='true' hidemarginborder='false'
+ marginwidth='0px' marginbgcolor='white' uniquekeys='false' indexrefresh='automatic'
+ initialbuildrestricted='false' noemptycategories='false'>
+<noteinfo noteid='75a' unid='85255E3D0072854A85255D89004B96AC' sequence='5040'>
 <created><datetime dst='true'>19920603T094537,72-04</datetime></created>
-<modified><datetime dst='true'>20150507T110157,48+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,68+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,36-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150915T202351,68+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,47+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20160606T174912,59+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,68+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime dst='true'>20050824T134849,62-04</datetime><datetime
  dst='true'>20081007T114831,45-04</datetime><datetime>20121114T141900,81-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='selection'><formula>SELECT Type = "Certifier" &amp; Form="Certifier" &amp; @IsUnavailable($Conflict)</formula></code>
+<column sort='ascending' hidedetailrows='false' itemname='$0' width='19.2500'
+ resizable='true' separatemultiplevalues='true' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='IssuedTo and AlternateSubjectList'><font
+ size='9pt'/></columnheader><code event='value'><formula>@Trim(@If(@Begins(IssuedTo;"/");@Right(IssuedTo;"/");IssuedTo):@If(@TextToNumber(@Version) &lt;164;"";@Certificate([AlternateSubjectList];Certificate_NoEnc)))</formula></code></column>
+<column sort='ascending' hidedetailrows='false' itemname='IssuedTo' width='21'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
+ showaslinks='false'><columnheader title='Issued To'><font size='9pt'/></columnheader><datetimeformat
+ legacy='true' show='date' date='yearmonthday' time='hourminutesecond' zone='never'/></column>
+<column hidedetailrows='false' itemname='CertificateType' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
+ title='CertificateType'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='GlobalDomainDocument' width='16'
+ resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
+ showaslinks='false'><columnheader title='Global Domain Document'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='OrgDatabaseDir' width='12' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Database Directory'><font size='9pt'/></columnheader></column>
+<column hidedetailrows='false' itemname='OrgDescName' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Descriptive Name'><font size='9pt'/></columnheader><datetimeformat
+ show='datetime' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='twodigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column hidedetailrows='false' itemname='$1' width='10' resizable='true' separatemultiplevalues='false'
+ sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='Is a Hosted Org'><font size='9pt'/></columnheader><datetimeformat
+ show='datetime' date='weekdaymonthdayyear' time='hourminutesecondhundredths'
+ zone='never' dateformat='weekdaymonthdayyear' dayformat='twodigitday' monthformat='twodigitmonth'
+ yearformat='twodigityear' weekdayformat='shortname' dateseparator1=' ' dateseparator2='/'
+ dateseparator3='/' timeseparator=':' preference='usersetting'/><numberformat
+ format='general' varying='true' punctuated='false' parens='false' percent='false'
+ bytes='false' decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/><code event='value'><formula>@If(IsHostedOrg="";"";"Yes")</formula></code></column>
+<column hidedetailrows='false' itemname='PRDisplay' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='PRDisplay'><font size='9pt'/></columnheader><numberformat format='general'
+ varying='true' punctuated='false' parens='false' percent='false' bytes='false'
+ decimalsym='.' thousandssep=',' currencysymtype='custom' currencysym='$'
+ usecustomsym='false'/></column>
+<column hidedetailrows='false' itemname='$CertNoEnc' width='10' resizable='true'
+ separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
+ title='$CertNoEnc'><font size='9pt'/></columnheader><code event='value'><formula
+>Certificate_NoEnc</formula></code></column>
 <item name='$TYPE'><text>$SUBVIEW</text></item>
-<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$FormulaClass' sign='true'><text>1</text></item>
-<item name='$TITLE' sign='true'><text>($Certifiers)</text></item>
-<item name='$Index' sign='true'><text>/O</text></item>
-<item name='$Formula' summary='true' sign='true'><formula compiled='true'>
-YAICAJgAAgAkMAUACABJc3N1ZWRUbwEAAQAvAEYCrwAuABoABQAIAElzc3VlZFRvAQABAC8AYAKu
-ABQABQAIAElzc3VlZFRvrgAEALUDvwBYAQAAAAAAAACAZEAOAq8ANAAKAAEAAACuACoAAgDiAAAA
-AAAAAAUAEQBDZXJ0aWZpY2F0ZV9Ob0VuYwCtAq4ABAC1Ax8CXgEDAAIANAAUAEdsb2JhbERvbWFp
-bkRvY3VtZW50BQAUAEdsb2JhbERvbWFpbkRvY3VtZW50AwACACQACwBPcmdEZXNjTmFtZQAFAAsA
-T3JnRGVzY05hbWUAAwACADwAAgAkMQUACwBJc0hvc3RlZE9yZwABAAAACgKvABoACgABAAAArgAQ
-AAEAAwBZZXMArgAEALUDAwACACAACQBQUkRpc3BsYXkABQAJAFBSRGlzcGxheQADAAIAKAAKACRD
-ZXJ0Tm9FbmMFABEAQ2VydGlmaWNhdGVfTm9FbmMAAwAFAIYAggALAAIACAAPABQADgALAAIACQAK
-AAkABAAkMElzc3VlZFRvQ2VydGlmaWNhdGVUeXBlR2xvYmFsRG9tYWluRG9jdW1lbnRPcmdEYXRh
-YmFzZURpck9yZ0Rlc2NOYW1lJDFQUkRpc3BsYXkkQ2VydE5vRW5jJENvbmZsaWN0JFJFRgQABAAA
-AEoABQAEAFR5cGUBAAkAQ2VydGlmaWVyAAoCBQAEAEZvcm0BAAkAQ2VydGlmaWVyAAoCHAIFAAkA
-JENvbmZsaWN0AFkBHAIDAAcAFgAQAAlMMVMyUzNTNFM1UzhTOVM=
-</formula></item>
-<item name='$Collation' summary='true'>
-<rawitemdata type='2'>
-HgACAABECGYAAAACAABmAAIACAAkMElzc3VlZFRv
-</rawitemdata></item>
-<item name='$Comment' sign='true'><text/></item>
-<item name='$Flags'><text/></item>
-<item name='$DesignerVersion' sign='true'><text>8.5.3</text></item>
-<item name='$VIEWFORMAT' sign='true'>
-<rawitemdata type='5'>
-AQAJAAIACAQAAFZDAQACACEApAAAAJoAAQAACgABAAAAAAAAAAICAAAAVkMBAAgACQAAAAAAqAAB
-AAAKAAAAAAAAAAAAAAIAAABWQwAADwAPAAAAAABQAAEAAAoAAAAAAAAAAAACAgAAAFZDAAAUABYA
-NgAAAIAAAQAACgAAAAAAAAAAAAICAAAAVkMAAA4AEgAAAAAAYAABAAAKAAAAAAAAAAAAAgIAAABW
-QwAACwAQACYAAABQAAEAAAoAAAAACAAAAAACAgAAAFZDAAACAA8ASgAAAFAAAQAACgAAAAAIAAAA
-AAICAAAAVkMAAAkACQAiAAAAUAABAAAKAAAAAAgAAAAAAgIAAABWQwAACgAKACoAAABQAAEAAAoA
-AAAAAAAAAAACAgAAACQwSXNzdWVkVG8gYW5kIEFsdGVybmF0ZVN1YmplY3RMaXN0pAACAJgAAgAk
-MAUACABJc3N1ZWRUbwEAAQAvAEYCrwAuABoABQAIAElzc3VlZFRvAQABAC8AYAKuABQABQAIAElz
-c3VlZFRvrgAEALUDvwBYAQAAAAAAAACAZEAOAq8ANAAKAAEAAACuACoAAgDiAAAAAAAAAAUAEQBD
-ZXJ0aWZpY2F0ZV9Ob0VuYwCtAq4ABAC1Ax8CXgEDAAcACgAEAAkyN1NJc3N1ZWRUb0lzc3VlZCBU
-b0NlcnRpZmljYXRlVHlwZUNlcnRpZmljYXRlVHlwZUdsb2JhbERvbWFpbkRvY3VtZW50R2xvYmFs
-IERvbWFpbiBEb2N1bWVudDYAAgA0ABQAR2xvYmFsRG9tYWluRG9jdW1lbnQFABQAR2xvYmFsRG9t
-YWluRG9jdW1lbnQDAE9yZ0RhdGFiYXNlRGlyRGF0YWJhc2UgRGlyZWN0b3J5T3JnRGVzY05hbWVE
-ZXNjcmlwdGl2ZSBOYW1lJgACACQACwBPcmdEZXNjTmFtZQAFAAsAT3JnRGVzY05hbWUAAwAkMUlz
-IGEgSG9zdGVkIE9yZ0oAAgA8AAIAJDEFAAsASXNIb3N0ZWRPcmcAAQAAAAoCrwAaAAoAAQAAAK4A
-EAABAAMAWWVzAK4ABAC1AwMABwAMAAUACTBTMEUAUFJEaXNwbGF5UFJEaXNwbGF5IgACACAACQBQ
-UkRpc3BsYXkABQAJAFBSRGlzcGxheQADACRDZXJ0Tm9FbmMkQ2VydE5vRW5jKgACACgACgAkQ2Vy
-dE5vRW5jBQARAENlcnRpZmljYXRlX05vRW5jAAMAJgABAAAAAQEACQEAAAoBAQQKAAAAAK0rAQAB
-AAEAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAD//wAAAAAAAAAAAAAAAAAA
-V0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAABXQwEAAAkAAAAAAAAAAAAAAAAAAAAA
-AAAEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAA//8A
-AAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAAAAAAAMQAAAAAAP//AAAAAAAAAAAAAAAA
-AABXQwEAAAkAAAAAAAAAAAAAAAAAAAAAAADEAAAAAAD//wAAAAAAAAAAAAAAAAAAV0MBAAAJAAAA
-AAAAAAAAAAAAAAAAAAAAhAAAAAAA//8AAAAAAAAAAAAAAAAAAFdDAQAACQAAAAAAAAAAAAAAAAAA
-AAAAAAQAAAAAAP//AAAAAAAAAAAAAAAAAABCAAAAAAABAP///wAFAAAAAAABAAAAAAAAAAAAAAAA
-AAEA////AAEAoKDFAAAAAQAAAAAAAQAAAP8AAQAAAAAAAAAIAAAAAAABAFhDAAyAAgAAAAAAAQEC
-AgEBAQEBAAQAAAAAAAAAACAvLzpYQwAMgAIAAAAAAAEBAgIBAQEBAQAEAAAAAAAAAAAgLy86WUMA
-AAgAAAABAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAC4sJFlDAAAI
-AAAAAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAuLCRZQwAACAAA
-AAEAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAALiwkAAAA
-</rawitemdata></item></note>
+<item name='$TABLEFORMAT' sign='true'><text>DomainName\Domain Name:23</text></item></view>
 

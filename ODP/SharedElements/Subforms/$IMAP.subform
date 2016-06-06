@@ -1,394 +1,357 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='53e' unid='40E5FC6765E7FD6785256B730070984F' sequence='5039'>
+<subform name='$IMAP' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
+ replicaid='C1257E4300352F3F' designerversion='8' renderpassthrough='true'>
+<noteinfo noteid='53a' unid='40E5FC6765E7FD6785256B730070984F' sequence='5039'>
 <created><datetime>20020305T152950,23-05</datetime></created>
-<modified><datetime dst='true'>20150507T110154,75+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114059,96+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095405,04-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110154,74+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110154,74+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114059,96+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114059,96+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143927,42-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>$IMAP</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAQAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUAx3</text></item>
-<item name='$DesignerVersion' sign='true'><text>8</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//AAA4AP////9U
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJgAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAAAYAAgAKgBDAEMANwAyADgAMQA4AAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAAASA61YBAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='IMAPMaxSess' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPSessTO' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPAutoLgnCnvrt' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPNamespace' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPShowNS' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPShrdRoot' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPNSShrdDbLinks' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPOthersRoot' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPDomainDelimiter' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPNSOthersUnrd' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPGreet' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPSSLGreet' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPSSLRedirGreet' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPMaxThrds' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPMaxRespThrdsPerFetch' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPMaxTtlFetchThrds' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='IMAPMaxTtlRespThrds' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
+<body><richtext>
+<pardef id='1' hide='notes web'/>
+<par def='1'><run><font size='9pt'/></run></par>
+<table widthtype='fitmargins' rowdisplay='tabscompute' htmlid='Config_IMAP_Tabs'
+ extrahtmlattrs='cellpadding=7' refwidth='7.9882in'><tablerowstyle><font size='9pt'
+ color='black'/></tablerowstyle><tablecolumn width='100%'/>
+<tablerow tablabel='Basics'>
+<tablecell borderwidth='0px'>
+<pardef id='3' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt'/></run></par>
+<table cellbordercolor='silver' htmlid='Config_IMAP_Basics' htmlclass='TableSpacing'
+ leftmargin='0.1000in' widthtype='fixedleft' refwidth='5in'><tablecolumn width='2in'/><tablecolumn
+ width='3in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='4' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='4'><run><font size='9pt' style='bold' color='white'/>Basics</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='5' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='5'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='6' leftmargin='0.0597in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='6'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the maximum number of concurrent client connections the IMAP service allows.</popuptext><run
+><font size='9pt'/>Maximum number of IMAP sessions:</run></popup><run><font
+ size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='7' leftmargin='0.0201in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPMaxSess' description='Prevents servers from running out of memory by limiting the number of IMAP sessions allowed. Default is no limit. '><code
+ event='htmlattributes'><formula>htmlInputS</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='8' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='4'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the time, in minutes, that the IMAP service waits before it drops idle IMAP client sessions.</popuptext><run
+><font size='9pt'/>IMAP Session timeout:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='8' leftmargin='0.0201in' keepwithnext='true' keeptogether='true'/>
+<par def='8'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPSessTO' description='Number of minutes before the IMAP service drops idle client sessions.'><code
+ event='htmlattributes'><formula>htmlInputS</formula></code><code event='defaultvalue'><formula
+>"30"</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='8' containertype='65418' aftercontainercount='1'
+ afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/> minutes</run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='9' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='9'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Set this field to Enabled to have Domino automatically convert user mail files to Notes 6 IMAP format the first time a user accesses mail from an IMAP client.  Set to Disabled if you want to convert mail files manually, using the mail conversion utility, before users can access mail from IMAP clients.</popuptext><run
+><font size='9pt'/>Enable IMAP during login:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run><run><font size='9pt'/><field type='keyword'
+ kind='editable' name='IMAPAutoLgnCnvrt' description='Enabled to automatically convert mail files for IMAP use during user&apos;s first IMAP login; Disabled to require manual conversion for mail files'><keywords
+ ui='dialoglist'><textlist><text>Enabled|1</text><text>Disabled|0</text></textlist></keywords><code
+ event='defaultvalue'><formula>"1"</formula></code></field></run><run><font
+ size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='10' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='10'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow tablabel='Public and Other Users&apos; Folders'>
+<tablecell borderwidth='0px'>
+<pardef id='11' leftmargin='0.1000in' keepwithnext='true' keeptogether='true'/>
+<par def='11'><run><font size='9pt'/></run></par>
+<table cellbordercolor='silver' htmlid='Config_IMAP_Public' htmlclass='TableSpacing'
+ leftmargin='0.1000in' widthtype='fixedleft' refwidth='5in'><tablecolumn width='2in'/><tablecolumn
+ width='3in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='4'><run><font size='9pt' style='bold' color='white'/>Basics</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='12' keepwithnext='true' keeptogether='true'/>
+<par def='12'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='6'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Select Enabled to allow IMAP clients to open personal mail files to which they have been delegated access and Notes databases that are configured as IMAP public folders.  Select Disabled to prevent IMAP clients from accessing other users' mail files and IMAP public folders.</popuptext><run
+><font size='9pt'/>Public and other users' folders support:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field lookupeachchar='false'
+ lookupaddressonrefresh='false' type='keyword' kind='editable' name='IMAPNamespace'
+ description='Enabled lets IMAP clients access public folders and other users&apos; mail files. Disabled limits IMAP clients to accessing their own mail files.'><keywords
+ recalconchange='true' columns='1' ui='dialoglist'><textlist><text>Enabled|1</text><text
+>Disabled|0</text></textlist></keywords><code event='defaultvalue'><formula
+>"1"</formula></code></field></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px 0px'>
+<pardef id='13' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>IMAPNamespace="0"</formula></code></pardef>
+<par def='13'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>If set to Disabled (default), the IMAP service displays available folders in the other users' and public namespaces only if the connecting client supports the NAMESPACE extension.  If set to Enabled, the IMAP service always displays all available folders to the connecting client.</popuptext><run
+><font size='9pt'/>Include all public and other users' folders when a folder list is requested:</run></popup><run
+><font size='9pt' color='#f7f7f7'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px 0px'>
+<pardef id='14' leftmargin='0.0201in' keepwithnext='true' keeptogether='true'><code
+ event='hidewhen'><formula>IMAPNamespace="0"</formula></code></pardef>
+<par def='14'><run><font size='9pt' style='bold' color='#f7f7f7'/></run><run
+><font size='9pt'/><field type='keyword' kind='editable' name='IMAPShowNS'
+ description='Disabled (default) displays public and other users&apos; folders only to clients that request them using the NAMESPACE command.  Enabled displays them to all clients.'><keywords
+ ui='dialoglist'><textlist><text>Enabled|1</text><text>Disabled|0</text></textlist></keywords><code
+ event='defaultvalue'><formula>"0"</formula></code></field></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='4'><run><font size='9pt' style='bold' color='white'/>Public Folders</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='15' keepwithnext='true' keeptogether='true'/>
+<par def='15'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='6'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the root name for the folder hierarchy that contains Notes databases configured as IMAP public folders. In the IMAP client, the specified string becomes the name of the root folder in the hierarchy the client uses to display public folders available to a user.</popuptext><run
+><font size='9pt'/>Public folder prefix:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPShrdRoot' description='The virtual directory where the server organizes Notes databases available to IMAP users as public folders. '><code
+ event='htmlattributes'><formula>htmlInputL</formula></code><code event='defaultvalue'><formula
+>"Public Folders"</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='7' containertype='65418' aftercontainercount='1'
+ afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px 0px'>
+<pardef id='16' leftmargin='0.0597in' hide='web' keepwithnext='true' keeptogether='true'/>
+<par def='16'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the Notes databases to be made available as public folders to IMAP clients.  To designate a Notes database as an IMAP public folder, copy its database link and paste it into this field.  You must also add users to the ACL of the database before they can access it.</popuptext><run
+><font size='9pt'/>Public folder database links:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px 0px'>
+<pardef id='17' leftmargin='0.0201in' hide='web' keepwithnext='true' keeptogether='true'/>
+<par def='17'><run><font size='9pt'/></run><run><font size='9pt'/><field type='richtext'
+ kind='editable' name='IMAPNSShrdDbLinks' description='Paste in links to Notes databases to be shared as IMAP public folders. Users access is limited by entries in the database ACL.'/></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAEAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='4'><run><font size='9pt' style='bold' color='white'/>Other Users' Folders</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='15'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='6'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the root name for the folder hierarchy that contains Notes mail files whose owners delegated access to other users. In the IMAP client, the specified string becomes the name of the root folder in the hierarchy the client uses to display mail files other than the personal mail file that are available to a user.</popuptext><run
+><font size='9pt'/>Other users' folder prefix:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPOthersRoot' description='The virtual directory where the server organizes mail files shared by IMAP users through delegated access.'><code
+ event='htmlattributes'><formula>htmlInputL</formula></code><code event='defaultvalue'><formula
+>"Other Users"</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='7' containertype='65418' aftercontainercount='1'
+ afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='9'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the character to use in place of the default Notes hierarchy delimiter ( / ) when sending the other users' folder list.  This enables the IMAP service to support clients that cannot display folders with Notes hierarchical names.  Example: Enter the pipe character ( | ) to send the folder named "Jada Mendez/Westford/IBM" as "Jada Mendez|Westford|IBM".</popuptext><run
+><font size='9pt'/>Other users' domain delimiter:</run></popup><run><font
+ size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPDomainDelimiter' description='Specifies the separator character to use in Notes hierarchical names when sending the other users&apos; folder list to the client.'><code
+ event='htmlattributes'><formula>htmlInputS</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='4'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the fully-qualified Notes names of IMAP users or applications allowed to change the unread status of messages in other users's mail files.  To change unread marks, the designated user must also have Designer access in the ACL of a mail file.</popuptext><run
+><font size='9pt'/>IMAP users who can change other users' unread marks:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px' extrahtmlattrs='nowrap'>
+<par def='8'><run><font size='9pt'/><field choicesdialog='addressbook' lookupeachchar='false'
+ lookupaddressonrefresh='false' type='names' allowmultivalues='true' kind='editable'
+ name='IMAPNSOthersUnrd' description='The full Notes names of users allowed to change unread marks in other users&apos; mail files.'
+ listinputseparators='comma semicolon newline' listdisplayseparator='newline'><keywords
+ columns='1' ui='dialoglist' allownew='true'/><code event='htmlattributes'><formula
+>htmlTextArea5XL</formula></code></field></run><run html='true'><font size='9pt'/></run><run
+ html='true'><font size='9pt'/><computedtext><code event='value'><formula
+>REM {Web address picker};
+
+@If(@ClientType = "Notes" | !@IsDocBeingEdited; @Return(""); "");
+
+
+_tLabelOneItem	:= "IMAP user";
+
+
+REM {DNT};
+_tFieldName	:= "IMAPNSOthersUnrd";
+_tDb   		:= @ReplaceSubstring(@Subset(@DbName; -1); " ":"\\" ; "+":"/");
+
+"&lt;a onclick=\"
+
+	initTools();
+
+	var hDlg = window.hDlgAddrMulti;
+
+	hDlg.sMsgOneEntry	= '"+ _tLabelOneItem +"';
+	hDlg.hDestField	= document.forms[0]." + _tFieldName + ";
+	hDlg.dlOpen();
+
+	return false;
+
+\" href=\"\"&gt;&lt;img src=\"/" + _tDb + "/btnPicker.gif?OpenImageResource\" width=\"15\" height=\"11\" border=\"0\" alt=\"\"&gt;&lt;/a&gt;"</formula></code></computedtext></run><run
+><font size='9pt'/></run></par>
+<pardef id='18' leftmargin='0.0201in' hide='read print notes' keepwithnext='true'
+ keeptogether='true'/>
+<par def='18'><run><font size='9pt'/> </run></par></tablecell></tablerow></table>
+<par def='10'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow tablabel='Advanced'>
+<tablecell borderwidth='0px'>
+<par def='3'><run><font size='9pt'/></run></par>
+<table cellbordercolor='silver' htmlid='Config_IMAP_Adv' htmlclass='TableSpacing'
+ leftmargin='0.1000in' widthtype='fixedleft' refwidth='5in'><tablecolumn width='2in'/><tablecolumn
+ width='3in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='4'><run><font size='9pt' style='bold' color='white'/>Greeting</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='19' leftmargin='0.0597in' keepwithnext='true' keeptogether='true'/>
+<par def='19'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='6'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the greeting the IMAP service sends to clients connecting over TCP/IP.</popuptext><run
+><font size='9pt'/>IMAP server greeting:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<pardef id='20' leftmargin='0.0201in' spacebefore='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='20'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPGreet' description='The greeting the IMAP service sends to clients connecting over TCP/IP.'><code
+ event='htmlattributes'><formula>htmlInputXL</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='8' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='4'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the greeting the IMAP service sends to clients connecting over SSL.</popuptext><run
+><font size='9pt'/>IMAP SSL greeting:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<pardef id='21' leftmargin='0.0201in' keepwithnext='true' keeptogether='true'/>
+<par def='21'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPSSLGreet' description='The greeting the IMAP service sends to clients connecting over SSL.'><code
+ event='htmlattributes'><formula>htmlInputXL</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='8' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px 0px'>
+<par def='4'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the message the IMAP service sends to clients attempting to connect over TCP/IP when the TCP/IP port is configured to redirect to SSL.</popuptext><run
+><font size='9pt'/>IMAP SSL redirect greeting:</run></popup><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px 0px'>
+<par def='21'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPSSLRedirGreet' description='The message the IMAP service sends to clients redirected to SSL after attempting to connect over TCP/IP.'><code
+ event='htmlattributes'><formula>htmlInputXL</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='4'><run><font size='9pt' style='bold' color='white'/>Worker thread pool</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='19'><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='6'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies the total number of threads available in IMAP service's thread pool, including Login conversion threads for converting mail files to Notes 6 IMAP format; FETCH threads for transmitting validated client requests to the Domino mail server; and FETCH response threads for transmitting message data from the mail server in response to client FETCH requests.</popuptext><run
+><font size='9pt'/>Maximum number of IMAP worker threads:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='20'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPMaxThrds' description='Total number of threads in the IMAP internal thread pool.'><code
+ event='htmlattributes'><formula>htmlInputS</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='4'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies how many threads are available to transmit message data to fulfill a given FETCH request.</popuptext><run
+><font size='9pt'/>Maximum number of response threads per FETCH:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='21'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPMaxRespThrdsPerFetch' description=' Number of threads the IMAP service can use to transmit data when servicing a single FETCH request. '><code
+ event='htmlattributes'><formula>htmlInputS</formula></code><code event='defaultvalue'><formula
+>"4"</formula></code></field></run><compositedata type='98' prevtype='65418'
+ nexttype='222' afterparcount='7' containertype='65418' aftercontainercount='1'
+ afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='4'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+> Specifies how many threads the IMAP service has available for transmitting validated client FETCH requests to the Domino mail server.</popuptext><run
+><font size='9pt'/>Maximum number of FETCH threads allowed:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='21'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPMaxTtlFetchThrds' description='Number of concurrent threads the IMAP service can use to handle client requests to FETCH message data.'><code
+ event='htmlattributes'><formula>htmlInputS</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='4'><run><font size='9pt'/></run><popup show='onclick' hotspotstyle='none'><popuptext
+>Specifies how many threads the IMAP service has available for transmitting message data from the Domino mail server in response to client FETCH requests received from all active IMAP sessions.</popuptext><run
+><font size='9pt'/>Maximum number of FETCH response threads allowed:</run></popup><run
+><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='21'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='IMAPMaxTtlRespThrds' description='Number of concurrent threads the IMAP service can use to return message data in response to client requests.'><code
+ event='htmlattributes'><formula>htmlInputS</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='4'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<par def='10'><run><font size='9pt'/></run></par></tablecell></tablerow></table>
+<pardef id='22' hide='read edit copy preview previewedit'/>
+<par def='22'><run><font size='9pt' color='blue'/><field type='number' kind='editable'
+ name='$Config_IMAP_Tabs'><numberformat format='general' digits='2' punctuated='false'
+ parens='false' percent='false' bytes='false'/><code event='defaultvalue'><formula
+>0</formula></code></field></run><run><font size='9pt'/></run></par></richtext></body>
 <item name='$Config_IMAP_Tabs' summary='false' sign='true'><number>0</number></item>
-<item name='$FIELDS'><textlist><text>$Config_IMAP_Tabs</text><text>IMAPMaxTtlRespThrds</text><text
->IMAPMaxTtlFetchThrds</text><text>IMAPMaxRespThrdsPerFetch</text><text>IMAPMaxThrds</text><text
->IMAPSSLRedirGreet</text><text>IMAPSSLGreet</text><text>IMAPGreet</text><text
->IMAPNSOthersUnrd</text><text>IMAPDomainDelimiter</text><text>IMAPOthersRoot</text><text
->IMAPNSShrdDbLinks</text><text>IMAPShrdRoot</text><text>IMAPShowNS</text><text
->IMAPNamespace</text><text>IMAPAutoLgnCnvrt</text><text>IMAPSessTO</text><text
->IMAPMaxSess</text></textlist></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$IMAP</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-gQKC/1oAAQAAAAAAAAAAAKAFAACgBQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAACBAAAAAJWHAAAAAAAAAAAAAAAAAQAAAAQAAACDBAEAhf8IAAEAAAmBAoL/WgACAAAA
-AAAAAAAAoAUAAKAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIEA
-AAAAlYUAAAAAoAUKAAAAAAABAAAABAAAAIMEAgDdBgEA+//7/zwAiQAAAAMBAAAAAAAAAAAFAAAA
-AAAAAAAAAAAAAAEAAAAAABAAAAAAAENvbmZpZ19JTUFQX1RhYnNc/z4AAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAADgAAAAAAAAABAAAJAAAAAAEAAAAAAHr/OAAQAAAAAAAAAA0A
-AAAAAAAAAAAAAAAAQ29uZmlnX0lNQVBfVGFic2NlbGxwYWRkaW5nPTcA3gYBAPv/ow6gBSgAPAAA
-AAAAQwCkEgAAoAWPMoBwAAIAAAEBAACBAoL/WgADAAAAAAAAAAAAMAaPMjAGAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVISQAAAAkAAAAAAAAAABAAAABAAA
-AIMEAwCF/wgAAQAACYECgwQDAN0GAQD7//v/LAAgAAAABAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AQDAwMAAAAAAAAAAXP8+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAA
-AAAAAQAACgAAAAABAAAAAAB6/zgAEgAMAAAAAAAAAAAAAAAAAAAAAAAAAENvbmZpZ19JTUFQX0Jh
-c2ljc1RhYmxlU3BhY2luZ94GAQD7/88OMAYoADwAAAAAAAIA0BIAADAGcBEAAAADAAABAdgAgQKC
-/1oABAAAAAAAAAAAAIYGcBGGBgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAIYBAAAAAFSEVgAAAFYAAAAAAAAAAQAAAAQAAACDBAQA3QYAAIX/hf8OAAEBAQlCYXNpY3PS
-CAEA////AN4GAACF/9MIAQCxsdIA0BIAAXARUCIAAAADAAABAdgAgQKC/1oABQAAAAAAAAAAAH8R
-UCJ/EQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAFSEDwAA
-AA8AAAAAAAAAAQAAAAQAAACDBAUAhf8IAAEAAAnTCAEAsbHSANASAQAwBnARAABAAgAQAQEAAIEC
-gv9aAAYAAAAAAAEAAACGBnARhgYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAACGAQAAAABUhFYAAABWAAAAAAAAAAEAAAAEAAAAgwQGAIX/CAABAAAJ3QYAAK3/qf9jAAEA
-DAAAAFcAU3BlY2lmaWVzIHRoZSBtYXhpbXVtIG51bWJlciBvZiBjb25jdXJyZW50IGNsaWVudCBj
-b25uZWN0aW9ucyB0aGUgSU1BUCBzZXJ2aWNlIGFsbG93cy4AAIX/KAABAAAJTWF4aW11bSBudW1i
-ZXIgb2YgSU1BUCBzZXNzaW9uczqqAt4GAACuAIX/CAABAAAJ0BIBAXARUCIAAEACABABAQAAgQKC
-/1oABwAAAAAAAQAAAI0RUCKNEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAIYBAAAAAJSEHQAAAB0AAAAAAAAAAQAAAAQAAACDBAcAhf8IAAEAAAndBgAAiv/+/1AAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAALD/LgAAAAAAAgAAAAAAAAAAAAAAFgAAABYAAAAUAAUACgBodG1sSW5w
-dXRTAwCK/6IAigAABQAwAgAAAAAAAAIBAAAJAAAAAAAAAAALAHIAAABJTUFQTWF4U2Vzc1ByZXZl
-bnRzIHNlcnZlcnMgZnJvbSBydW5uaW5nIG91dCBvZiBtZW1vcnkgYnkgbGltaXRpbmcgdGhlIG51
-bWJlciBvZiBJTUFQIHNlc3Npb25zIGFsbG93ZWQuIERlZmF1bHQgaXMgbm8gbGltaXQuIABiDgEA
-hAAAAAAAAAAAAN4GAACK/4X/CAABAAAJ0BICADAGcBEAAFACABEBAQAAgQKDBAQAhf8IAAEAAAnd
-BgAArf+p/3MAAQAMAAAAZwBTcGVjaWZpZXMgdGhlIHRpbWUsIGluIG1pbnV0ZXMsIHRoYXQgdGhl
-IElNQVAgc2VydmljZSB3YWl0cyBiZWZvcmUgaXQgZHJvcHMgaWRsZSBJTUFQIGNsaWVudCBzZXNz
-aW9ucy4AAIX/HQABAAAJSU1BUCBTZXNzaW9uIHRpbWVvdXQ6AKoC3gYAAK4Ahf8IAAEAAAnQEgIB
-cBFQIgAAUAIAEQEBAACBAoL/WgAIAAAAAAAAAAAAjRFQIo0RAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAlIQdAAAAHQAAAAAAAAABAAAABAAAAIMECACF/wgA
-AQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsP8uAAAAAAACAAAAAAAAAAAAAAAWAAAA
-FgAAABQABQAKAGh0bWxJbnB1dFMDAIr/ggCKAAAFADACAAAAAAAAAgEAAAkOAAAAAAAAAAoARQAA
-AA4AAAAMAAEAAgAzMAMASU1BUFNlc3NUT051bWJlciBvZiBtaW51dGVzIGJlZm9yZSB0aGUgSU1B
-UCBzZXJ2aWNlIGRyb3BzIGlkbGUgY2xpZW50IHNlc3Npb25zLgBiDgEAhAAAAAAAAAAAAN4GAACK
-/4X/EAABAAAJIG1pbnV0ZXPQEgMAMAZwEQAAUAIAEQEBAACBAoL/WgAJAAAAAAAAAAAAhgZwEYYG
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAlIRWAAAAVgAA
-AAAAAAABAAAABAAAAIMECQCF/wgAAQAACd0GAACt/6n/OwEBAAwAAAAvAVNldCB0aGlzIGZpZWxk
-IHRvIEVuYWJsZWQgdG8gaGF2ZSBEb21pbm8gYXV0b21hdGljYWxseSBjb252ZXJ0IHVzZXIgbWFp
-bCBmaWxlcyB0byBOb3RlcyA2IElNQVAgZm9ybWF0IHRoZSBmaXJzdCB0aW1lIGEgdXNlciBhY2Nl
-c3NlcyBtYWlsIGZyb20gYW4gSU1BUCBjbGllbnQuICBTZXQgdG8gRGlzYWJsZWQgaWYgeW91IHdh
-bnQgdG8gY29udmVydCBtYWlsIGZpbGVzIG1hbnVhbGx5LCB1c2luZyB0aGUgbWFpbCBjb252ZXJz
-aW9uIHV0aWxpdHksIGJlZm9yZSB1c2VycyBjYW4gYWNjZXNzIG1haWwgZnJvbSBJTUFQIGNsaWVu
-dHMuAACF/yEAAQAACUVuYWJsZSBJTUFQIGR1cmluZyBsb2dpbjoAqgLeBgAArgCF/wgAAQAACdAS
-AwFwEVAiAABQAgARAQEAAIECgwQIAIX/CAABAAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AACK/+gAigIABQAgAAAIAAAAAAIBAAAJDgAAAAAAAAAQAI0AGQAOAAAADAABAAEAMQADAElNQVBB
-dXRvTGduQ252cnRFbmFibGVkIHRvIGF1dG9tYXRpY2FsbHkgY29udmVydCBtYWlsIGZpbGVzIGZv
-ciBJTUFQIHVzZSBkdXJpbmcgdXNlcidzIGZpcnN0IElNQVAgbG9naW47IERpc2FibGVkIHRvIHJl
-cXVpcmUgbWFudWFsIGNvbnZlcnNpb24gZm9yIG1haWwgZmlsZXMCAAkACgBFbmFibGVkfDFEaXNh
-YmxlZHww3gYAAIr/hf8IAAEAAAnRBgAAAACBAoL/WgAKAAAAAAAAAAAArwWPMq8FAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVIQPAAAADwAAAAAAAAABAAAA
-BAAAAIMECgCF/wgAAQAACeP/jABCYXNpY3MAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIApBIBAKAFjzKAcAACAAAB
-AQAAgQKC/1oACwAAAAAAAAAAADAGjzIwBgAA0AKgBXAIQAsQDuAQsBOAFgAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAIYBAAAAAFSEkAAAAJAAAAAAAAAAAQAAAAQAAACDBAsAhf8IAAEAAAmBAoMECwDd
-BgEA+//7/ywAIAAAAAoCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAwMDAAAAAAAAAAFz/PgAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOAAAAAAAAAAEAAAoAAAAAAQAAAAAAev84
-ABIADAAAAAAAAAAAAAAAAAAAAAAAAABDb25maWdfSU1BUF9QdWJsaWNUYWJsZVNwYWNpbmfeBgEA
-+//PDjAGKAA8AAAAAAACANASAAAwBnARAAAAAwAAAQHYAIECgwQEAN0GAACF/4X/DgABAQEJQmFz
-aWNz0ggBAP///wDeBgAAhf/TCAEAsbHSANASAAFwEVAiAAAAAwAAAQHYAIECgv9aAAwAAAAAAAAA
-AABwEVAicBEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGAQAAAABU
-hwAAAAAAAAAAAAAAAAEAAAAEAAAAgwQMAIX/CAABAAAJ0wgBALGx0gDQEgEAMAZwEQAAQAIAEAEB
-AACBAoMEBgCF/wgAAQAACd0GAACt/6n/HwEBAAwAAAATAVNlbGVjdCBFbmFibGVkIHRvIGFsbG93
-IElNQVAgY2xpZW50cyB0byBvcGVuIHBlcnNvbmFsIG1haWwgZmlsZXMgdG8gd2hpY2ggdGhleSBo
-YXZlIGJlZW4gZGVsZWdhdGVkIGFjY2VzcyBhbmQgTm90ZXMgZGF0YWJhc2VzIHRoYXQgYXJlIGNv
-bmZpZ3VyZWQgYXMgSU1BUCBwdWJsaWMgZm9sZGVycy4gIFNlbGVjdCBEaXNhYmxlZCB0byBwcmV2
-ZW50IElNQVAgY2xpZW50cyBmcm9tIGFjY2Vzc2luZyBvdGhlciB1c2VycycgbWFpbCBmaWxlcyBh
-bmQgSU1BUCBwdWJsaWMgZm9sZGVycy4AAIX/MAABAAAJUHVibGljIGFuZCBvdGhlciB1c2Vycycg
-Zm9sZGVycyBzdXBwb3J0OqoC3gYAAK4Ahf8IAAEAAAnQEgEBcBFQIgAAQAIAEAEBAACBAoMEBwCF
-/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsP8UAAAAAgAAAAAAAAAAAAAAAACK
-/+QAigIABQAgAAAIAAAAAAIBAAAJDgAAAAAAAAANAIwAGQAOAAAADAABAAEAMQADAElNQVBOYW1l
-c3BhY2VFbmFibGVkIGxldHMgSU1BUCBjbGllbnRzIGFjY2VzcyBwdWJsaWMgZm9sZGVycyBhbmQg
-b3RoZXIgdXNlcnMnIG1haWwgZmlsZXMuIERpc2FibGVkIGxpbWl0cyBJTUFQIGNsaWVudHMgdG8g
-YWNjZXNzaW5nIHRoZWlyIG93biBtYWlsIGZpbGVzLgIACQAKAEVuYWJsZWR8MURpc2FibGVkfDDe
-BgAAiv+F/wgAAQAACdASAgAwBnARAAAQAgABAQEAAIECgv9aAA0AAAAAAAAAAACGBnARhgYAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACGCQAAAACUhFYAAABWAAAAAAAA
-AAEAAAAEAAAAu/88AA0AEwCiMfxhHR0uAAAAIAAFAA0ASU1BUE5hbWVzcGFjZQABAAEAMAAKAgMA
-BwAMAAUACTBTMEUAgwQNAIX/CAABAAAJ3QYAAK3/qf8lAQEADAAAABkBSWYgc2V0IHRvIERpc2Fi
-bGVkIChkZWZhdWx0KSwgdGhlIElNQVAgc2VydmljZSBkaXNwbGF5cyBhdmFpbGFibGUgZm9sZGVy
-cyBpbiB0aGUgb3RoZXIgdXNlcnMnIGFuZCBwdWJsaWMgbmFtZXNwYWNlcyBvbmx5IGlmIHRoZSBj
-b25uZWN0aW5nIGNsaWVudCBzdXBwb3J0cyB0aGUgTkFNRVNQQUNFIGV4dGVuc2lvbi4gIElmIHNl
-dCB0byBFbmFibGVkLCB0aGUgSU1BUCBzZXJ2aWNlIGFsd2F5cyBkaXNwbGF5cyBhbGwgYXZhaWxh
-YmxlIGZvbGRlcnMgdG8gdGhlIGNvbm5lY3RpbmcgY2xpZW50LgAAhf9UAAEAAAlJbmNsdWRlIGFs
-bCBwdWJsaWMgYW5kIG90aGVyIHVzZXJzJyBmb2xkZXJzIHdoZW4gYSBmb2xkZXIgbGlzdCBpcyBy
-ZXF1ZXN0ZWQ6qgLeBgAArgDdBgAAhf+F/wgAAQAvCdIIAQD39/cA3gYAAIX/0BICAXARUCIAABAC
-AAEBAQAAgQKC/1oADgAAAAAAAAAAAI0RUCKNEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAIYJAAAAAJSEHQAAAB0AAAAAAAAAAQAAAAQAAACDBA4AvAYNAA4A3QYAAIX/
-hf8IAAEBLwnSCAEA9/f3AN4GAACF/90GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv/2AIoC
-AAUAIAAACAAAAAACAQAACQ4AAAAAAAAACgChABkADgAAAAwAAQABADAAAwBJTUFQU2hvd05TRGlz
-YWJsZWQgKGRlZmF1bHQpIGRpc3BsYXlzIHB1YmxpYyBhbmQgb3RoZXIgdXNlcnMnIGZvbGRlcnMg
-b25seSB0byBjbGllbnRzIHRoYXQgcmVxdWVzdCB0aGVtIHVzaW5nIHRoZSBOQU1FU1BBQ0UgY29t
-bWFuZC4gIEVuYWJsZWQgZGlzcGxheXMgdGhlbSB0byBhbGwgY2xpZW50cy4CAAkACgBFbmFibGVk
-fDFEaXNhYmxlZHww3gYAAIr/hf8IAAEAAArQEgMAMAZwEQAAAAMAAAEB2ACBAoMEBADdBgAAhf+F
-/xYAAQEBCVB1YmxpYyBGb2xkZXJz0ggBAP///wDeBgAAhf/TCAEAsbHSANASAwFwEVAiAAAAAwAA
-AQHYAIECgv9aAA8AAAAAAAAAAABwEVAicBEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAACGAQAAAACUhx0AAAAdAAAAAAAAAAEAAAAEAAAAgwQPAIX/CAABAAAJ0wgBALGx
-0gDQEgQAMAZwEQAAQAIAEAEBAACBAoMEBgCF/wgAAQAACd0GAACt/6n/GwEBAAwAAAAPAVNwZWNp
-ZmllcyB0aGUgcm9vdCBuYW1lIGZvciB0aGUgZm9sZGVyIGhpZXJhcmNoeSB0aGF0IGNvbnRhaW5z
-IE5vdGVzIGRhdGFiYXNlcyBjb25maWd1cmVkIGFzIElNQVAgcHVibGljIGZvbGRlcnMuIEluIHRo
-ZSBJTUFQIGNsaWVudCwgdGhlIHNwZWNpZmllZCBzdHJpbmcgYmVjb21lcyB0aGUgbmFtZSBvZiB0
-aGUgcm9vdCBmb2xkZXIgaW4gdGhlIGhpZXJhcmNoeSB0aGUgY2xpZW50IHVzZXMgdG8gZGlzcGxh
-eSBwdWJsaWMgZm9sZGVycyBhdmFpbGFibGUgdG8gYSB1c2VyLgAAhf8dAAEAAAlQdWJsaWMgZm9s
-ZGVyIHByZWZpeDoAqgLeBgAArgCF/wgAAQAACdASBAFwEVAiAABAAgAQAQEAAIECgwQHAIX/CAAB
-AAAJ3QYAAIr//v9QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACw/y4AAAAAAAIAAAAAAAAAAAAAABYAAAAW
-AAAAFAAFAAoAaHRtbElucHV0TAMAiv+2AIoAAAUAMAIAAAAAAAACAQAACRoAAAAAAAAADABsAAAA
-GgAAABgAAQAOAFB1YmxpYyBGb2xkZXJzAwBJTUFQU2hyZFJvb3RUaGUgdmlydHVhbCBkaXJlY3Rv
-cnkgd2hlcmUgdGhlIHNlcnZlciBvcmdhbml6ZXMgTm90ZXMgZGF0YWJhc2VzIGF2YWlsYWJsZSB0
-byBJTUFQIHVzZXJzIGFzIHB1YmxpYyBmb2xkZXJzLiBiDgEAhAAAAAAAAAAAAN4GAACK/4X/CAAB
-AAAJ0BIFADAGcBEAABACAAEBAQAAgQKC/1oAEAAAAAAAAAAAAIYGcBGGBgAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAAAFWEVgAAAFYAAAAAAAAAAQAAAAQAAACD
-BBAAhf8IAAEAAAndBgAArf+p/x8BAQAMAAAAEwFTcGVjaWZpZXMgdGhlIE5vdGVzIGRhdGFiYXNl
-cyB0byBiZSBtYWRlIGF2YWlsYWJsZSBhcyBwdWJsaWMgZm9sZGVycyB0byBJTUFQIGNsaWVudHMu
-ICBUbyBkZXNpZ25hdGUgYSBOb3RlcyBkYXRhYmFzZSBhcyBhbiBJTUFQIHB1YmxpYyBmb2xkZXIs
-IGNvcHkgaXRzIGRhdGFiYXNlIGxpbmsgYW5kIHBhc3RlIGl0IGludG8gdGhpcyBmaWVsZC4gIFlv
-dSBtdXN0IGFsc28gYWRkIHVzZXJzIHRvIHRoZSBBQ0wgb2YgdGhlIGRhdGFiYXNlIGJlZm9yZSB0
-aGV5IGNhbiBhY2Nlc3MgaXQuAACF/yUAAQAACVB1YmxpYyBmb2xkZXIgZGF0YWJhc2UgbGlua3M6
-AKoC3gYAAK4Ahf8IAAEAAAnQEgUBcBFQIgAAEAIAAQEBAACBAoL/WgARAAAAAAAAAAAAjRFQIo0R
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAlYQdAAAAHQAA
-AAAAAAABAAAABAAAAIMEEQCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv+0
-AIIAAQAAAAIAAAAAAAACAQAACQAAAAAAAAAAEQB+AAAASU1BUE5TU2hyZERiTGlua3NQYXN0ZSBp
-biBsaW5rcyB0byBOb3RlcyBkYXRhYmFzZXMgdG8gYmUgc2hhcmVkIGFzIElNQVAgcHVibGljIGZv
-bGRlcnMuIFVzZXJzIGFjY2VzcyBpcyBsaW1pdGVkIGJ5IGVudHJpZXMgaW4gdGhlIGRhdGFiYXNl
-IEFDTC4AYg4BAIQAAAAAAAEAAADeBgAAiv+F/wgAAQAACdASBgAwBnARAAAAAwAAAQHYAIECgwQE
-AN0GAACF/4X/HAABAQEJT3RoZXIgVXNlcnMnIEZvbGRlcnPSCAEA////AN4GAACF/9MIAQCxsdIA
-0BIGAXARUCIAAAADAAABAdgAgQKDBA8Ahf8IAAEAAAnTCAEAsbHSANASBwAwBnARAABAAgAQAQEA
-AIECgwQGAIX/CAABAAAJ3QYAAK3/qf9OAQEADAAAAEIBU3BlY2lmaWVzIHRoZSByb290IG5hbWUg
-Zm9yIHRoZSBmb2xkZXIgaGllcmFyY2h5IHRoYXQgY29udGFpbnMgTm90ZXMgbWFpbCBmaWxlcyB3
-aG9zZSBvd25lcnMgZGVsZWdhdGVkIGFjY2VzcyB0byBvdGhlciB1c2Vycy4gSW4gdGhlIElNQVAg
-Y2xpZW50LCB0aGUgc3BlY2lmaWVkIHN0cmluZyBiZWNvbWVzIHRoZSBuYW1lIG9mIHRoZSByb290
-IGZvbGRlciBpbiB0aGUgaGllcmFyY2h5IHRoZSBjbGllbnQgdXNlcyB0byBkaXNwbGF5IG1haWwg
-ZmlsZXMgb3RoZXIgdGhhbiB0aGUgcGVyc29uYWwgbWFpbCBmaWxlIHRoYXQgYXJlIGF2YWlsYWJs
-ZSB0byBhIHVzZXIuAIX/IwABAAAJT3RoZXIgdXNlcnMnIGZvbGRlciBwcmVmaXg6AKoC3gYAAK4A
-hf8IAAEAAAnQEgcBcBFQIgAAQAIAEAEBAACBAoMEBwCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAsP8uAAAAAAACAAAAAAAAAAAAAAAWAAAAFgAAABQABQAKAGh0bWxJbnB1dEwD
-AIr/tACKAAAFADAAAAgAAAAAAgEAAAkYAAAAAAAAAA4AagAAABgAAAAWAAEACwBPdGhlciBVc2Vy
-cwADAElNQVBPdGhlcnNSb290VGhlIHZpcnR1YWwgZGlyZWN0b3J5IHdoZXJlIHRoZSBzZXJ2ZXIg
-b3JnYW5pemVzIG1haWwgZmlsZXMgc2hhcmVkIGJ5IElNQVAgdXNlcnMgdGhyb3VnaCBkZWxlZ2F0
-ZWQgYWNjZXNzLmIOAQCEAAAAAAAAAAAA3gYAAIr/hf8IAAEAAAnQEggAMAZwEQAAUAIAEQEBAACB
-AoMECQCF/wgAAQAACd0GAACt/6n/dwEBAAwAAABrAVNwZWNpZmllcyB0aGUgY2hhcmFjdGVyIHRv
-IHVzZSBpbiBwbGFjZSBvZiB0aGUgZGVmYXVsdCBOb3RlcyBoaWVyYXJjaHkgZGVsaW1pdGVyICgg
-LyApIHdoZW4gc2VuZGluZyB0aGUgb3RoZXIgdXNlcnMnIGZvbGRlciBsaXN0LiAgVGhpcyBlbmFi
-bGVzIHRoZSBJTUFQIHNlcnZpY2UgdG8gc3VwcG9ydCBjbGllbnRzIHRoYXQgY2Fubm90IGRpc3Bs
-YXkgZm9sZGVycyB3aXRoIE5vdGVzIGhpZXJhcmNoaWNhbCBuYW1lcy4gIEV4YW1wbGU6IEVudGVy
-IHRoZSBwaXBlIGNoYXJhY3RlciAoIHwgKSB0byBzZW5kIHRoZSBmb2xkZXIgbmFtZWQgIkphZGEg
-TWVuZGV6L1dlc3Rmb3JkL0lCTSIgYXMgIkphZGEgTWVuZGV6fFdlc3Rmb3JkfElCTSIuAACF/yYA
-AQAACU90aGVyIHVzZXJzJyBkb21haW4gZGVsaW1pdGVyOqoC3gYAAK4Ahf8IAAEAAAnQEggBcBFQ
-IgAAUAIAEQEBAACBAoMECACF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsP8u
-AAAAAAACAAAAAAAAAAAAAAAWAAAAFgAAABQABQAKAGh0bWxJbnB1dFMDAIr/tACKAAAFADAAAAgA
-AAAAAgEAAAkAAAAAAAAAABMAfQAAAElNQVBEb21haW5EZWxpbWl0ZXJTcGVjaWZpZXMgdGhlIHNl
-cGFyYXRvciBjaGFyYWN0ZXIgdG8gdXNlIGluIE5vdGVzIGhpZXJhcmNoaWNhbCBuYW1lcyB3aGVu
-IHNlbmRpbmcgdGhlIG90aGVyIHVzZXJzJyBmb2xkZXIgbGlzdCB0byB0aGUgY2xpZW50LmIOAQCE
-AAAAAAAAAAAA3gYAAIr/hf8IAAEAAArQEgkAMAZwEQAAUAIAEQEBAACBAoMEBACF/wgAAQAACd0G
-AACt/6n/CAEBAAwAAAD8AFNwZWNpZmllcyB0aGUgZnVsbHktcXVhbGlmaWVkIE5vdGVzIG5hbWVz
-IG9mIElNQVAgdXNlcnMgb3IgYXBwbGljYXRpb25zIGFsbG93ZWQgdG8gY2hhbmdlIHRoZSB1bnJl
-YWQgc3RhdHVzIG9mIG1lc3NhZ2VzIGluIG90aGVyIHVzZXJzJ3MgbWFpbCBmaWxlcy4gIFRvIGNo
-YW5nZSB1bnJlYWQgbWFya3MsIHRoZSBkZXNpZ25hdGVkIHVzZXIgbXVzdCBhbHNvIGhhdmUgRGVz
-aWduZXIgYWNjZXNzIGluIHRoZSBBQ0wgb2YgYSBtYWlsIGZpbGUuAIX/PAABAAAJSU1BUCB1c2Vy
-cyB3aG8gY2FuIGNoYW5nZSBvdGhlciB1c2VycycgdW5yZWFkIG1hcmtzOqoC3gYAAK4Ahf8IAAEA
-AAnQEgkBcBFQIgAAUAIAEQEBAACBAoMECACF/wgAAQAACt0GAACK//7/UAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAsP80AAAAAAACAAAAAQAAAAAAAAAcAAAAHAAAABoABQAPAGh0bWxUZXh0QXJlYTVYTAAD
-AIr/jACOwAEFDkAAAAgAAAAAAgEAAAkAAAAAAAAAABAAWAAAAElNQVBOU090aGVyc1VucmRUaGUg
-ZnVsbCBOb3RlcyBuYW1lcyBvZiB1c2VycyBhbGxvd2VkIHRvIGNoYW5nZSB1bnJlYWQgbWFya3Mg
-aW4gb3RoZXIgdXNlcnMnIG1haWwgZmlsZXMu3gYAAIr/zP8IAAAAAACF/wgAAQAACd0GAACt/6n/
-zgIBABgABADCAsICCgAEAAcAGAASAFdlYiBhZGRyZXNzIHBpY2tlcgcACgADAAkxUwAIADYA+wAF
-AQEABQBOb3RlcwAKAuMAHgEdAq8AGAAMAAEAAADCAa4ADAABAAAArgAEALUDAwAHABgAEQAJMFJS
-M1M0UzVTNlM5UzE0UwABACQADgBfdExhYmVsT25lSXRlbQEACQBJTUFQIHVzZXIAAwAHABAACQAJ
-MFJSUjFUMlMABwAKAAMARE5UAAcADgAHAAkwUlJSMVMAAQAoAAsAX3RGaWVsZE5hbWUAAQAQAElN
-QVBOU090aGVyc1VucmQDAAcADgAHAAkwUjFUMlMAAQA6AAQAX3REYosAAAAAAAAAAADwPxABawIB
-AAEAIAABAAEAXAAfAgEAAQArAAEAAQAvAB8ChAMDAAcAHAAWAAkwUjFTM0VUVDJTOFMxMlMxNVMx
-NlMAAFIBAQBWADxhIG9uY2xpY2s9IgAACWluaXRUb29scygpOwAACXZhciBoRGxnID0gd2luZG93
-LmhEbGdBZGRyTXVsdGk7AAAJaERsZy5zTXNnT25lRW50cnkJPSAnBQAOAF90TGFiZWxPbmVJdGVt
-IgIBACgAJzsACWhEbGcuaERlc3RGaWVsZAk9IGRvY3VtZW50LmZvcm1zWzBdLiICBQALAF90Rmll
-bGROYW1lACICAQA4ADsACWhEbGcuZGxPcGVuKCk7AAAJcmV0dXJuIGZhbHNlOwAAIiBocmVmPSIi
-PjxpbWcgc3JjPSIvIgIFAAQAX3REYiICAQBPAC9idG5QaWNrZXIuZ2lmP09wZW5JbWFnZVJlc291
-cmNlIiB3aWR0aD0iMTUiIGhlaWdodD0iMTEiIGJvcmRlcj0iMCIgYWx0PSIiPjwvYT4AIgIDAAcA
-IgAbAAkwUlIyUzNTNVM2UzdTOFM5UzEwUzExUzEyUwCF/wgAAQAACaoC3gYAAK4Azf8IAAAAAACF
-/wgAAQAACYECgv9aABIAAAAAAAAAAACNEVAijREAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAADWgQAAAACUhB0AAAAdAAAAAAAAAAEAAAAEAAAAgwQSAIX/CQABAAAJIAB7
-/yAAAAAAAAAAAAAGAAAAAAAAAAAAAAAAAG5vd3JhcNEGAAAAAIECgwQKAIX/CAABAAAJ4/+MAFB1
-YmxpYyBhbmQgT3RoZXIgVXNlcnMnIEZvbGRlcnMAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAgCkEgIAoAWPMoBwAAIAAAEBAACBAoMEAwCF/wgAAQAACYECgwQD
-AN0GAQD7//v/LAAgAAAACQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQDAwMAAAAAAAAAAXP8+AAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAQAACgAAAAABAAAAAAB6
-/zYADwAMAAAAAAAAAAAAAAAAAAAAAAAAAENvbmZpZ19JTUFQX0FkdlRhYmxlU3BhY2luZwDeBgEA
-+//PDjAGKAA8AAAAAAACANASAAAwBnARAAAAAwAAAQHYAIECgwQEAN0GAACF/4X/EAABAQEJR3Jl
-ZXRpbmfSCAEA////AN4GAACF/9MIAQCxsdIA0BIAAXARUCIAAAADAAABAdgAgQKC/1oAEwAAAAAA
-AAAAAMYRUCLGEQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIYBAAAA
-AFSEVgAAAFYAAAAAAAAAAQAAAAQAAACDBBMAhf8IAAEAAAnTCAEAsbHSANASAQAwBnARAABAAgAQ
-AQEAAIECgwQGAIX/CAABAAAJ3QYAAK3/qf9dAAEADAAAAFEAU3BlY2lmaWVzIHRoZSBncmVldGlu
-ZyB0aGUgSU1BUCBzZXJ2aWNlIHNlbmRzIHRvIGNsaWVudHMgY29ubmVjdGluZyBvdmVyIFRDUC9J
-UC4AAIX/HQABAAAJSU1BUCBzZXJ2ZXIgZ3JlZXRpbmc6AKoC3gYAAK4Ahf8IAAEAAAnQEgEBcBFQ
-IgAAQAIAEAEBAACBAoL/WgAUAAAAAAABAAAAjRFQIo0RAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVIQdAAAAHQAAAAAAAAABAAAABAAAAIMEFACF/wgAAQAA
-Cd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsP8wAAAAAAACAAAAAAAAAAAAAAAYAAAAGAAA
-ABYABQALAGh0bWxJbnB1dFhMAAMAiv90AIoAAAUAMAIAAAAAAAACAQAACQAAAAAAAAAACQBGAAAA
-SU1BUEdyZWV0VGhlIGdyZWV0aW5nIHRoZSBJTUFQIHNlcnZpY2Ugc2VuZHMgdG8gY2xpZW50cyBj
-b25uZWN0aW5nIG92ZXIgVENQL0lQLgBiDgEAhAAAAAAAAAAAAN4GAACK/4X/CAABAAAJ0BICADAG
-cBEAAFACABEBAQAAgQKDBAQAhf8IAAEAAAndBgAArf+p/1oAAQAMAAAATgBTcGVjaWZpZXMgdGhl
-IGdyZWV0aW5nIHRoZSBJTUFQIHNlcnZpY2Ugc2VuZHMgdG8gY2xpZW50cyBjb25uZWN0aW5nIG92
-ZXIgU1NMLgCF/xoAAQAACUlNQVAgU1NMIGdyZWV0aW5nOqoC3gYAAK4Ahf8IAAEAAAnQEgIBcBFQ
-IgAAUAIAEQEBAACBAoL/WgAVAAAAAAAAAAAAjRFQIo0RAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAhgEAAAAAVIQdAAAAHQAAAAAAAAABAAAABAAAAIMEFQCF/wgAAQAA
-Cd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsP8wAAAAAAACAAAAAAAAAAAAAAAYAAAAGAAA
-ABYABQALAGh0bWxJbnB1dFhMAAMAiv90AIoAAAUAMAIAAAAAAAACAQAACQAAAAAAAAAADABDAAAA
-SU1BUFNTTEdyZWV0VGhlIGdyZWV0aW5nIHRoZSBJTUFQIHNlcnZpY2Ugc2VuZHMgdG8gY2xpZW50
-cyBjb25uZWN0aW5nIG92ZXIgU1NMLgBiDgEAhAAAAAAAAAAAAN4GAACK/4X/CAABAAAJ0BIDADAG
-cBEAABACAAEBAQAAgQKDBAQAhf8IAAEAAAndBgAArf+p/50AAQAMAAAAkQBTcGVjaWZpZXMgdGhl
-IG1lc3NhZ2UgdGhlIElNQVAgc2VydmljZSBzZW5kcyB0byBjbGllbnRzIGF0dGVtcHRpbmcgdG8g
-Y29ubmVjdCBvdmVyIFRDUC9JUCB3aGVuIHRoZSBUQ1AvSVAgcG9ydCBpcyBjb25maWd1cmVkIHRv
-IHJlZGlyZWN0IHRvIFNTTC4AAIX/IwABAAAJSU1BUCBTU0wgcmVkaXJlY3QgZ3JlZXRpbmc6AKoC
-3gYAAK4Ahf8IAAEAAAnQEgMBcBFQIgAAEAIAAQEBAACBAoMEFQCF/wgAAQAACd0GAACK//7/UAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAsP8wAAAAAAACAAAAAAAAAAAAAAAYAAAAGAAAABYABQALAGh0bWxJ
-bnB1dFhMAAMAiv+eAIoAAAUAMAIAAAAAAAACAQAACQAAAAAAAAAAEQBoAAAASU1BUFNTTFJlZGly
-R3JlZXRUaGUgbWVzc2FnZSB0aGUgSU1BUCBzZXJ2aWNlIHNlbmRzIHRvIGNsaWVudHMgcmVkaXJl
-Y3RlZCB0byBTU0wgYWZ0ZXIgYXR0ZW1wdGluZyB0byBjb25uZWN0IG92ZXIgVENQL0lQLgBiDgEA
-hAAAAAAAAAAAAN4GAACK/4X/CAABAAAJ0BIEADAGcBEAAAADAAABAdgAgQKDBAQA3QYAAIX/hf8a
-AAEBAQlXb3JrZXIgdGhyZWFkIHBvb2zSCAEA////AN4GAACF/9MIAQCxsdIA0BIEAXARUCIAAAAD
-AAABAdgAgQKDBBMAhf8IAAEAAAnTCAEAsbHSANASBQAwBnARAABAAgAQAQEAAIECgwQGAIX/CAAB
-AAAJ3QYAAK3/qf94AQEADAAAAGwBU3BlY2lmaWVzIHRoZSB0b3RhbCBudW1iZXIgb2YgdGhyZWFk
-cyBhdmFpbGFibGUgaW4gSU1BUCBzZXJ2aWNlJ3MgdGhyZWFkIHBvb2wsIGluY2x1ZGluZyBMb2dp
-biBjb252ZXJzaW9uIHRocmVhZHMgZm9yIGNvbnZlcnRpbmcgbWFpbCBmaWxlcyB0byBOb3RlcyA2
-IElNQVAgZm9ybWF0OyBGRVRDSCB0aHJlYWRzIGZvciB0cmFuc21pdHRpbmcgdmFsaWRhdGVkIGNs
-aWVudCByZXF1ZXN0cyB0byB0aGUgRG9taW5vIG1haWwgc2VydmVyOyBhbmQgRkVUQ0ggcmVzcG9u
-c2UgdGhyZWFkcyBmb3IgdHJhbnNtaXR0aW5nIG1lc3NhZ2UgZGF0YSBmcm9tIHRoZSBtYWlsIHNl
-cnZlciBpbiByZXNwb25zZSB0byBjbGllbnQgRkVUQ0ggcmVxdWVzdHMuAIX/LgABAAAJTWF4aW11
-bSBudW1iZXIgb2YgSU1BUCB3b3JrZXIgdGhyZWFkczqqAt4GAACuAIX/CAABAAAJ0BIFAXARUCIA
-AEACABABAQAAgQKDBBQAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/LgAA
-AAAAAgAAAAAAAAAAAAAAFgAAABYAAAAUAAUACgBodG1sSW5wdXRTAwCK/2oAigAABQAwAgAAAAAA
-AAIBAAAJAAAAAAAAAAAMADkAAABJTUFQTWF4VGhyZHNUb3RhbCBudW1iZXIgb2YgdGhyZWFkcyBp
-biB0aGUgSU1BUCBpbnRlcm5hbCB0aHJlYWQgcG9vbC4AYg4BAIQAAAAAAAAAAADeBgAAiv+F/wgA
-AQAACdASBgAwBnARAABQAgARAQEAAIECgwQEAIX/CAABAAAJ3QYAAK3/qf9wAAEADAAAAGQAU3Bl
-Y2lmaWVzIGhvdyBtYW55IHRocmVhZHMgYXJlIGF2YWlsYWJsZSB0byB0cmFuc21pdCBtZXNzYWdl
-IGRhdGEgdG8gZnVsZmlsbCBhIGdpdmVuIEZFVENIIHJlcXVlc3QuAIX/NQABAAAJTWF4aW11bSBu
-dW1iZXIgb2YgcmVzcG9uc2UgdGhyZWFkcyBwZXIgRkVUQ0g6AKoC3gYAAK4Ahf8IAAEAAAnQEgYB
-cBFQIgAAUAIAEQEBAACBAoMEFQCF/wgAAQAACd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-sP8uAAAAAAACAAAAAAAAAAAAAAAWAAAAFgAAABQABQAKAGh0bWxJbnB1dFMDAIr/rgCKAAAFADAC
-AAAAAAAAAgEAAAkOAAAAAAAAABgAZAAAAA4AAAAMAAEAAQA0AAMASU1BUE1heFJlc3BUaHJkc1Bl
-ckZldGNoIE51bWJlciBvZiB0aHJlYWRzIHRoZSBJTUFQIHNlcnZpY2UgY2FuIHVzZSB0byB0cmFu
-c21pdCBkYXRhIHdoZW4gc2VydmljaW5nIGEgc2luZ2xlIEZFVENIIHJlcXVlc3QuIGIOAQCEAAAA
-AAAAAAAA3gYAAIr/hf8IAAEAAAnQEgcAMAZwEQAAUAIAEQEBAACBAoMEBACF/wgAAQAACd0GAACt
-/6n/kwABAAwAAACHACBTcGVjaWZpZXMgaG93IG1hbnkgdGhyZWFkcyB0aGUgSU1BUCBzZXJ2aWNl
-IGhhcyBhdmFpbGFibGUgZm9yIHRyYW5zbWl0dGluZyB2YWxpZGF0ZWQgY2xpZW50IEZFVENIIHJl
-cXVlc3RzIHRvIHRoZSBEb21pbm8gbWFpbCBzZXJ2ZXIuAACF/zAAAQAACU1heGltdW0gbnVtYmVy
-IG9mIEZFVENIIHRocmVhZHMgYWxsb3dlZDqqAt4GAACuAIX/CAABAAAJ0BIHAXARUCIAAFACABEB
-AQAAgQKDBBUAhf8IAAEAAAndBgAAiv/+/1AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAALD/LgAAAAAAAgAA
-AAAAAAAAAAAAFgAAABYAAAAUAAUACgBodG1sSW5wdXRTAwCK/54AigAABQAwAgAAAAAAAAIBAAAJ
-AAAAAAAAAAAUAGYAAABJTUFQTWF4VHRsRmV0Y2hUaHJkc051bWJlciBvZiBjb25jdXJyZW50IHRo
-cmVhZHMgdGhlIElNQVAgc2VydmljZSBjYW4gdXNlIHRvIGhhbmRsZSBjbGllbnQgcmVxdWVzdHMg
-dG8gRkVUQ0ggbWVzc2FnZSBkYXRhLmIOAQCEAAAAAAAAAAAA3gYAAIr/hf8IAAEAAAnQEggAMAZw
-EQAAUAIAEQEBAACBAoMEBACF/wgAAQAACd0GAACt/6n/zQABAAwAAADBAFNwZWNpZmllcyBob3cg
-bWFueSB0aHJlYWRzIHRoZSBJTUFQIHNlcnZpY2UgaGFzIGF2YWlsYWJsZSBmb3IgdHJhbnNtaXR0
-aW5nIG1lc3NhZ2UgZGF0YSBmcm9tIHRoZSBEb21pbm8gbWFpbCBzZXJ2ZXIgaW4gcmVzcG9uc2Ug
-dG8gY2xpZW50IEZFVENIIHJlcXVlc3RzIHJlY2VpdmVkIGZyb20gYWxsIGFjdGl2ZSBJTUFQIHNl
-c3Npb25zLgAAhf85AAEAAAlNYXhpbXVtIG51bWJlciBvZiBGRVRDSCByZXNwb25zZSB0aHJlYWRz
-IGFsbG93ZWQ6AKoC3gYAAK4Ahf8IAAEAAAnQEggBcBFQIgAAUAIAEQEBAACBAoMEFQCF/wgAAQAA
-Cd0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAsP8uAAAAAAACAAAAAAAAAAAAAAAWAAAAFgAA
-ABQABQAKAGh0bWxJbnB1dFMDAIr/pACKAAAFADACAAAAAAAAAgEAAAkAAAAAAAAAABMAbAAAAElN
-QVBNYXhUdGxSZXNwVGhyZHNOdW1iZXIgb2YgY29uY3VycmVudCB0aHJlYWRzIHRoZSBJTUFQIHNl
-cnZpY2UgY2FuIHVzZSB0byByZXR1cm4gbWVzc2FnZSBkYXRhIGluIHJlc3BvbnNlIHRvIGNsaWVu
-dCByZXF1ZXN0cy4AYg4BAIQAAAAAAAAAAADeBgAAiv+F/wgAAQAACdEGAAAAAIECgwQKAIX/CAAB
-AAAJ4/+MAEFkdmFuY2VkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgClBgAAAACBAoL/WgAWAAAAAAAAAAAAoAUAAKAF
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMGMAAAAAlIcAAAAAAAAA
-AAAAAAABAAAABAAAAIMEFgCF/wgAAQAACt0GAACK//7/UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAiv9I
-AIoAAAMAMAIAAAAAAAACAQAECRIAAAAAAAAAEQAAAAAAEgAAABAAAAAAAAAAAAAAAAMAJENvbmZp
-Z19JTUFQX1RhYnMA3gYAAIr/hf8IAAEAAAk=
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>$IMAP</text></item></subform>
 

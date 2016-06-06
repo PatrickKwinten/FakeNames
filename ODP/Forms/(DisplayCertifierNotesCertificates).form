@@ -1,139 +1,147 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='722' unid='2108EA2647D66EDD0525684F0077F70C' sequence='5009'>
+<form name='(DisplayCertifierNotesCertificates)' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' nocompose='true'
+ noquery='true' htmlallfields='true' publicaccess='false' designerversion='8.5'
+ language='en' inherit='true'>
+<noteinfo noteid='71e' unid='2108EA2647D66EDD0525684F0077F70C' sequence='5009'>
 <created><datetime>19991222T165020,28-05</datetime></created>
-<modified><datetime dst='true'>20150507T110157,18+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114102,38+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095409,84-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110157,17+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110157,17+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114102,38+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114102,38+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20020326T142702,03-05</datetime><datetime dst='true'>20020509T090011,47-04</datetime><datetime
  dst='true'>20020509T090522,86-04</datetime><datetime dst='true'>20020613T131311,53-04</datetime><datetime
  dst='true'>20020830T101527,97-04</datetime><datetime dst='true'>20030718T143538,22-04</datetime><datetime
  dst='true'>20040914T151148,81-04</datetime><datetime dst='true'>20050824T134849,56-04</datetime><datetime
  dst='true'>20080606T085205,88-04</datetime><datetime dst='true'>20081007T114831,38-04</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
+<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><code
+ event='helprequest'><formula>@If(@Subset(@DbName;1)="";@Command([OpenHelpDocument];[ClientHelp];"(Help)";"pernames_f_displ_cert");@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_f_displ_cert"))</formula></code>
+<body><richtext>
+<pardef id='1' hide='read edit copy preview previewedit'/>
+<par def='1'/>
+<table widthtype='fixedleft' refwidth='5in'><tablecolumn width='5in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='system'>
+<pardef id='3' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='3'><run><font size='9pt' name='user-interface'/></run></par>
+<table widthtype='fitmargins' leftmargin='0.1000in' rightmargin='98%' refwidth='4.8000in'><tablecolumn
+ width='100%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='5' leftmargin='0.0104in' spaceafter='1.5' keepwithnext='true'
+ keeptogether='true'/>
+<par def='5'><run><font size='9pt' name='user-interface'/>Certificates issued by</run></par>
+<pardef id='6' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='6'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field usenotesstyle='false' height='0.7500in'
+ width='4.7500in' multiline='true' borderstyle='single' lookupeachchar='false'
+ lookupaddressonrefresh='false' type='keyword' kind='editable' name='CertificateList'><keywords
+ helperbutton='false' recalconchange='true' recalcchoices='true' columns='1'
+ ui='listbox'><formula>list:="":
+@ReplaceSubstring(@X509Certificates([Issuer];"";Certificate_NoEnc);",";"");
+@If(@LowerCase(@ClientType)="notes";@Trim(list);list)</formula></keywords></field></run><run
+><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow></table>
+<par def='3'><run><font size='9pt' name='user-interface'/></run></par>
+<table widthtype='fitmargins' leftmargin='0.1000in' rightmargin='98%' refwidth='4.8000in'><tablecolumn
+ width='25%'/><tablecolumn width='75%'/>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='7' leftmargin='0' keepwithnext='true' keeptogether='true'/>
+<par def='7'><run><font size='9pt' name='user-interface'/>Issued to</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='8' leftmargin='0.1000in' rightmargin='100%' keepwithnext='true'
+ keeptogether='true'/>
+<par def='8'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='text' kind='computedfordisplay'
+ name='Subject'><code event='defaultvalue'><formula>@If(CertificateList="";"";@X509Certificates([IssuedTo];"";Certificate_NoEnc;CertificateList))</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='7' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'
+ name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<pardef id='9' leftmargin='0' spacebefore='1.5' keepwithnext='true' keeptogether='true'/>
+<par def='9'><run><font size='9pt' name='user-interface'/>Activated</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<pardef id='10' leftmargin='0.1000in' rightmargin='100%' spacebefore='1.5'
+ keepwithnext='true' keeptogether='true'/>
+<par def='10'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='datetime' kind='computedfordisplay'
+ name='Valid'><datetimeformat show='datetime' date='weekdaymonthdayyear' showtodaywhenappropriate='true'
+ time='hourminute' zone='sometimes' dateformat='weekdaymonthdayyear' dayformat='twodigitday'
+ monthformat='twodigitmonth' yearformat='twodigityear' weekdayformat='shortname'
+ dateseparator1=' ' dateseparator2='/' dateseparator3='/' timeseparator=':'
+ preference='usersetting'/><code event='defaultvalue'><formula>@If(CertificateList="";"";@X509Certificates([ValidAfter];"";Certificate_NoEnc;CertificateList))</formula></code></field></run><run
+><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='9'><run><font size='9pt' name='user-interface'/>Expires</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<par def='10'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='datetime' kind='computedfordisplay'
+ name='Expires'><datetimeformat show='datetime' date='weekdaymonthdayyear'
+ showtodaywhenappropriate='true' time='hourminute' zone='sometimes' dateformat='weekdaymonthdayyear'
+ dayformat='twodigitday' monthformat='twodigitmonth' yearformat='twodigityear'
+ weekdayformat='shortname' dateseparator1=' ' dateseparator2='/' dateseparator3='/'
+ timeseparator=':' preference='usersetting'/><code event='defaultvalue'><formula
+>@If(CertificateList="";"";@X509Certificates([Expiration];"";Certificate_NoEnc;CertificateList))</formula></code></field></run><run
+><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='9'><run><font size='9pt' name='user-interface'/>Serial number</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<par def='10'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='text' kind='computedfordisplay'
+ name='SerialNumber'><code event='defaultvalue'><formula>X:=@If(CertificateList="";"";@X509Certificates([SerialNumber];"";Certificate_NoEnc;CertificateList));
+Y:=@Length(X);
+@If(Y &lt; 48; X; @Left(X;48) + @NewLine + @Right(X;@Left(X;48)))</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'
+ name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='9'><run><font size='9pt' name='user-interface'/>Key Identifier</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<par def='10'><run><font size='9pt' name='user-interface'/></run><run><font
+ size='9pt' name='user-interface'/><field type='text' kind='computedfordisplay'
+ name='AuthCode'><code event='defaultvalue'><formula>@If(CertificateList="";"";@X509Certificates([SubjectPublicKey];"";Certificate_NoEnc;CertificateList))</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'
+ name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='7'><run><font size='9pt' name='user-interface'/>Key Strength</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<par def='10'><run><font size='9pt' name='user-interface'/><field type='text'
+ kind='computedfordisplay' name='KeyStrength'><code event='defaultvalue'><formula
+>@If(CertificateList="";"";@X509Certificates([KeyLength];"";Certificate_NoEnc;CertificateList))</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'
+ name='user-interface'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px'>
+<par def='9'><run><font size='9pt' name='user-interface'/>Certificate Usage</run></par></tablecell>
+<tablecell borderwidth='0px'>
+<par def='10'><run><font size='9pt' name='user-interface'/><field type='text'
+ allowmultivalues='true' kind='computedfordisplay' name='CertificateUsage'
+ listinputseparators='comma semicolon' listdisplayseparator='comma'><code
+ event='defaultvalue'><formula>@If(CertificateList="";"";@X509Certificates([CertificateUsage];"";Certificate_NoEnc;CertificateList))</formula></code></field></run><compositedata
+ type='98' prevtype='65418' nexttype='222' afterparcount='6' containertype='65418'
+ aftercontainercount='1' afterbegincount='3'>
+Yg4BAIQAAAAAAAAAAAA=
+</compositedata><run><font size='9pt'
+ name='user-interface'/></run></par></tablecell></tablerow></table>
+<par def='3'><run><font size='9pt' name='user-interface'/></run></par></tablecell></tablerow></table>
+<pardef id='11'/>
+<par def='11'/></richtext></body>
 <item name='OriginalModTime' sign='true'><datetime dst='true'>20050512T135419,80-04</datetime></item>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAIADwAHAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$TITLE'><text>(DisplayCertifierNotesCertificates)</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIEAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CD</text></item>
-<item name='$WebFlags' sign='true'><text>F</text></item>
-<item name='$DesignerVersion' sign='true'><text>8.5</text></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//GAA4AP//AABU
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABABMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJNAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAAD//wgAKgA3ADcAQgBEAEQAOQA4AAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAACGIiz1BAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='$AppHelpFormula' sign='true'><formula>@If(@Subset(@DbName;1)="";@Command([OpenHelpDocument];[ClientHelp];"(Help)";"pernames_f_displ_cert");@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_f_displ_cert"))</formula></item>
-<item name='CertificateList' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><text>CertificateList</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>(DisplayCertifierNotesCertificates)</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-AAo=
-</rawitemdata></item></note>
+<item name='$$ScriptName' summary='false' sign='true'><text>(DisplayCertifierNotesCertificates)</text></item></form>
 

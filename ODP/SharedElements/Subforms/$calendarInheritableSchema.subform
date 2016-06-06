@@ -1,153 +1,113 @@
 <?xml version='1.0' encoding='utf-8'?>
-<note class='form' xmlns='http://www.lotus.com/dxl' version='9.0' maintenanceversion='1.5'
- replicaid='C1257E3E003196C7'>
-<noteinfo noteid='64a' unid='BE30E4CF2A20295785256952004A7311' sequence='5025'>
+<subform name='$calendarInheritableSchema' xmlns='http://www.lotus.com/dxl'
+ version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' designerversion='6'
+ language='en'>
+<noteinfo noteid='646' unid='BE30E4CF2A20295785256952004A7311' sequence='5025'>
 <created><datetime dst='true'>20000906T093311,21-04</datetime></created>
-<modified><datetime dst='true'>20150507T110156,10+02</datetime></modified>
+<modified><datetime dst='true'>20150512T114101,30+02</datetime></modified>
 <revised><datetime dst='true'>20130909T095403,70-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150507T110156,09+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150507T110156,09+02</datetime></addedtofile></noteinfo>
+<lastaccessed><datetime dst='true'>20150512T114101,30+02</datetime></lastaccessed>
+<addedtofile><datetime dst='true'>20150512T114101,30+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
 <revisions><datetime>20100304T143921,96-05</datetime></revisions>
 <wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby>
-<item name='$HTMLCode' sign='true'>
-<rawitemdata type='1'>
-X/8QAAEA/gACAAAAAAAAAF//EAABAMAAAgAAAAAAAABf/xAAAgAPAAcAAAAAAAAA
-</rawitemdata></item>
-<item name='$TITLE'><text>$calendarInheritableSchema</text></item>
-<item name='$INFO' sign='true'>
-<rawitemdata type='1'>
-hhgBAIAAAAAAgAAAAQABAP///wAAAAAA
-</rawitemdata></item>
-<item name='$Flags'><text>CUAx3</text></item>
-<item name='$DesignerVersion' sign='true'><text>6</text></item>
-<item name='$Fonts'>
-<rawitemdata type='1'>
-i/8oAAEABSJTbWFsbCBGb250cwAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-</rawitemdata></item>
-<item name='$$Script_O' sign='true'>
-<rawitemdata type='14'>
-AQAAAkxTT0IDABQIZW4AAAQAAAADAAAAAAAEAIgAAAAAAAAAAAAAAAAAAAAkAP//AAA4AP////9U
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAEABQBMb3R1cyBQcm9kdWN0AAAAVjAuMAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAwAAAAAAAAAEAAAAiAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAA
-AAAAAABXMzJJQAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-AAAAAwCMAAAAAAAYAAgAKgA3AEUAQgAwADAARgA0AAAAAABsAAMATgBFAFcAAACAAAYARABFAEwA
-RQBUAEUAAAAAAP//CgBJAE4ASQBUAEkAQQBMAEkAWgBFAAAAAAD//wkAVABFAFIATQBJAE4AQQBU
-AEUAAAD//wYATwBCAEoARQBDAFQAAAAAAP//AAAAAAAABQAIAAAAAAA4p/PUBAAHAAAAAAAdAAAC
-AAAACgAAAA==
-</rawitemdata></item>
-<item name='$dspType' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='calEntry' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='calCalURI' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='calFBURL' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='calCAPURI' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='calCalAdrURI' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='calOtherCalURIs' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='calOtherFBURLs' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='calOtherCAPURIs' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='calOtherCalAdrURIs' placeholder='true'>
-<rawitemdata type='0'>
-</rawitemdata></item>
-<item name='$FIELDS'><textlist><text>calOtherCalAdrURIs</text><text>calOtherCAPURIs</text><text
->calOtherFBURLs</text><text>calOtherCalURIs</text><text>calCalAdrURI</text><text
->calCAPURI</text><text>calFBURL</text><text>calCalURI</text><text>calEntry</text><text
->$dspType</text></textlist></item>
-<item name='$LANGUAGE' sign='true'><text>en</text></item>
-<item name='$$ScriptName' summary='false' sign='true'><text>$calendarInheritableSchema</text></item>
-<item name='$BODY' sign='true'>
-<rawitemdata type='1'>
-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
-</rawitemdata></item></note>
+<body><richtext>
+<pardef id='1'/>
+<par def='1'><run><font size='3pt' name='Small Fonts' pitch='variable' truetype='false'
+ familyid='20'/></run></par>
+<table widthtype='fitwindow' rowdisplay='tabs' leftmargin='0.7500in' refwidth='7.7188in'><tablecolumn
+ width='100%'/>
+<tablerow tablabel='Mandatory'>
+<tablecell borderwidth='1px 1px 0px'>
+<pardef id='3' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='3'/>
+<table widthtype='fitwindow' leftmargin='0.1500in' rightmargin='50%' refwidth='4.9083in'><tablecolumn
+ width='1.5000in'/><tablecolumn width='3.4083in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='5' leftmargin='0.0375in' keepwithnext='true' keeptogether='true'/>
+<par def='5'><run><font size='9pt' style='bold' color='white'/>Mandatory Attributes</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='6' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='6'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='5'>Object Class:</par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='6'><field type='text' kind='computed' name='$dspType'><code event='defaultvalue'><formula
+>Type</formula></code></field></par></tablecell></tablerow></table></tablecell></tablerow>
+<tablerow tablabel='Optional'>
+<tablecell borderwidth='0px 1px'>
+<par def='3'/>
+<table widthtype='fitwindow' leftmargin='0.1500in' rightmargin='50%' refwidth='4.9083in'><tablecolumn
+ width='1.5000in'/><tablecolumn width='3.4083in'/>
+<tablerow>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<par def='5'><run><font size='9pt' style='bold' color='white'/>Optional Attributes</run></par></tablecell>
+<tablecell borderwidth='0px' bgcolor='#b1b1d2'>
+<pardef id='7' leftmargin='0.0375in' keepwithnext='true' keeptogether='true'/>
+<par def='7'><run><font size='9pt' style='bold' color='white'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='5'><run><font size='9pt'/>Calendar Entry</run></par></tablecell>
+<tablecell borderwidth='0px 0px 1px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='calEntry'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<pardef id='8' leftmargin='0.0104in' keepwithnext='true' keeptogether='true'/>
+<par def='8'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='calCalURI'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='calFBURL'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='calCAPURI'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='calCalAdrURI'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='calOtherCalURIs'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='calOtherFBURLs'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='calOtherCAPURIs'/></run><run><font size='9pt'/></run></par></tablecell></tablerow>
+<tablerow>
+<tablecell borderwidth='1px 0px'>
+<par def='8'><run><font size='9pt'/></run></par></tablecell>
+<tablecell borderwidth='1px 0px'>
+<par def='7'><run><font size='9pt'/></run><run><font size='9pt'/><field type='text'
+ kind='editable' name='calOtherCalAdrURIs'/></run><run><font size='9pt'/></run></par></tablecell></tablerow></table></tablecell></tablerow>
+<tablerow tablabel='Operational'>
+<tablecell borderwidth='0px 1px'>
+<pardef id='9' leftmargin='0.0104in' hide='read edit copy preview previewedit embedded'
+ keepwithnext='true' keeptogether='true'/>
+<par def='9'/></tablecell></tablerow></table>
+<par def='1'/>
+<par def='1'/></richtext></body>
+<item name='$$ScriptName' summary='false' sign='true'><text>$calendarInheritableSchema</text></item></subform>
 
