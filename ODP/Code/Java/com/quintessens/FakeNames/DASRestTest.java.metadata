@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E3E003196C7" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="a3a" sequence="41" unid="13BE1D2825B32A4AC1257E430033D776">
-<created><datetime dst="true">20150512T112614,94+02</datetime></created>
-<modified><datetime dst="true">20150513T093547,21+02</datetime></modified>
-<revised><datetime dst="true">20150513T093547,20+02</datetime></revised>
-<lastaccessed><datetime dst="true">20150513T093547,20+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20150512T112614,95+02</datetime></addedtofile></noteinfo>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257FCA0029A307" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="746" sequence="6" unid="40644F8386803167C1257FCA0029B0E0">
+<created><datetime dst="true">20160606T093522,56+02</datetime></created>
+<modified><datetime dst="true">20160606T093606,94+02</datetime></modified>
+<revised><datetime dst="true">20160606T093606,93+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160606T093606,94+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160606T093517,79+02</datetime></addedtofile></noteinfo>
 <updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
 <wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
 <item name="$Flags"><text>34567Cg~[</text></item>
 <item name="$TITLE"><text>com/quintessens/FakeNames/DASRestTest.java</text></item>
-
 <item name="$DesignerVersion"><text>8.5.3</text></item>
 
 
 <item name="$FileNames" sign="true"><text>com/quintessens/FakeNames/DASRestTest.java</text></item>
+
 
 </note>
