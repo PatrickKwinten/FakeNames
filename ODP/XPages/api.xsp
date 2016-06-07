@@ -1,13 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xp:view xmlns:xp="http://www.ibm.com/xsp/core"
 	xmlns:xe="http://www.ibm.com/xsp/coreex">
-
-	<xe:restService id="restService1" pathInfo="data">
-		<xe:this.service>
-			<xe:customRestService contentType="application/json"
-				serviceBean="se.tradechannel.kk.mdata.rest.SecurityService" />
-		</xe:this.service>
-	</xe:restService>
 	
 	<xe:restService id="restService2" pathInfo="Persons">
 		<xe:this.service>

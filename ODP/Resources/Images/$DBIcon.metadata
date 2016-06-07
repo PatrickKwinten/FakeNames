@@ -1,17 +1,6 @@
-<?xml version='1.0' encoding='utf-8'?>
-<imageresource name='$DBIcon' xmlns='http://www.lotus.com/dxl' version='9.0'
- maintenanceversion='1.5' replicaid='C1257E4300352F3F' publicaccess='false'
- designerversion='8.5.3' imagename='C:\temp\branding\pubnames\after\Directory.png'>
-<noteinfo noteid='85a' unid='71569B9E2EEA902485257AAD00504ACB' sequence='55'>
-<created><datetime>20121105T093700,27-05</datetime></created>
-<modified><datetime dst='true'>20150512T114103,82+02</datetime></modified>
-<revised><datetime dst='true'>20130909T095409,32-04</datetime></revised>
-<lastaccessed><datetime dst='true'>20150512T114103,82+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150512T114103,82+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></updatedby>
-<revisions><datetime>20121105T093700,27-05</datetime></revisions>
-<wassignedby><name>CN=Lotus Notes Template Development/O=Lotus Notes</name></wassignedby><jpeg
->
+<?xml version="1.0" encoding="UTF-8"?>
+<imageresource xmlns="http://www.lotus.com/dxl" imagename="C:\temp\branding\pubnames\after\Directory.png" name="$DBIcon" publicaccess="false">
+  <jpeg>
 iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAACXBIWXMAAAsTAAALEwEAmpwYAAAK
 T2lDQ1BQaG90b3Nob3AgSUNDIHByb2ZpbGUAAHjanVNnVFPpFj333vRCS4iAlEtvUhUIIFJCi4AU
 kSYqIQkQSoghodkVUcERRUUEG8igiAOOjoCMFVEsDIoK2AfkIaKOg6OIisr74Xuja9a89+bN/rXX
@@ -68,6 +57,4 @@ FIvFDwcsm3w+T5IkJaVU387CAgClVH+EYGG+G0Ecx+MZmHcXmESwdhY8iMj+aKPdbhNFkVEEnxs4
 WLUF64UgjYZGEfxbAEQisveVBXEc02g0lipUrVbnNlBZZEGhUJh7wN+wwCiCNBb8bgTAnYicAGit
 aTabdLvdlVpwumoLXNcdI8jii2jyp3ctZmBmer0enucZb+B1AHVcrBIdonsOAAAAAElFTkSuQmCC
 </jpeg>
-<item name='$FileSize' sign='true'><number>3135</number></item>
-<item name='$FileModDT' sign='true'><datetime>20121102T100454,00-05</datetime></item></imageresource>
-
+</imageresource>

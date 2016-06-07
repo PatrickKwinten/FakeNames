@@ -7,14 +7,10 @@ import java.util.Vector;
 import lotus.domino.NotesException;
 
 import lotus.domino.Database;
-import lotus.domino.Document;
 import lotus.domino.Session;
 import lotus.domino.View;
 import lotus.domino.ViewEntry;
-import lotus.domino.ViewColumn;
 import lotus.domino.ViewEntryCollection;
-import lotus.domino.ViewNavigator;
-
 import com.ibm.commons.util.io.json.JsonException;
 import com.ibm.commons.util.io.json.JsonJavaFactory;
 import com.ibm.commons.util.io.json.JsonJavaObject;
@@ -26,10 +22,6 @@ import com.ibm.domino.xsp.module.nsf.NotesContext;
 public class Persons implements Serializable{
 	public static final long serialVersionUID = 1L;	
 	
-	private ArrayList<JsonJavaObject> PersonCollection = new ArrayList<JsonJavaObject>();
-	
-	
-
 	public Persons(){
 		System.out.println("FakePeople Constructor");
 	}

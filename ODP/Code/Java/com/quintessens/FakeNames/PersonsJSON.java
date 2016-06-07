@@ -3,11 +3,9 @@ package com.quintessens.FakeNames;
 import java.io.PrintWriter;
 import java.util.Vector;
 
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import lotus.domino.ViewEntry;
-import lotus.domino.ViewEntryCollection;
 import lotus.domino.ViewNavigator;
 
 import com.ibm.commons.util.io.json.JsonJavaArray;
@@ -22,14 +20,11 @@ import org.openntf.domino.utils.XSPUtil;
 import org.openntf.domino.Database;
 import org.openntf.domino.Session;
 import org.openntf.domino.View;
-import org.openntf.domino.DocumentCollection;
-import org.openntf.domino.Document;
 
 public class PersonsJSON extends CustomServiceBean{
 
 	@Override
 	public void renderService(CustomService service,RestServiceEngine engine){
-		HttpServletRequest request = engine.getHttpRequest();
 		HttpServletResponse response = engine.getHttpResponse();		
 		System.out.println("===");
 		response.setHeader("Content-Type", "application/json; charset=UTF-8");
@@ -50,9 +45,6 @@ public class PersonsJSON extends CustomServiceBean{
 			//VN_ENTRYOPT_NOCOUNTDATA we are not interested in the number of children, we can go a little faster
 			navigator.setEntryOptions(ViewNavigator.VN_ENTRYOPT_NOCOUNTDATA);
 			
-			ViewEntryCollection vec;
-			
-			vec = view.getAllEntries();		
 			ViewEntry entry = navigator.getFirstDocument();
 			
 			Integer count = 0;
@@ -67,8 +59,6 @@ public class PersonsJSON extends CustomServiceBean{
 				*/
 				
 				Vector<?> columnValues = entry.getColumnValues();
-				String colJson = String.valueOf(columnValues.get(1));
-
 				JsonJavaObject jo = new JsonJavaObject();
 				
 				
