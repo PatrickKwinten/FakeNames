@@ -14,5 +14,12 @@
 				<th>Company</th>
 			</tr>
 		</thead>
+		<tfoot>
+			<tr>
+				<th>Firstname</th>
+				<th>Lastname</th>
+				<th>Company</th>
+			</tr>
+		</tfoot>
 	</table>
 </xp:view>
