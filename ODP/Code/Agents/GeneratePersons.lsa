@@ -1,18 +1,9 @@
-<?xml version='1.0' encoding='utf-8'?>
-<agent name='GeneratePersons' xmlns='http://www.lotus.com/dxl' version='9.0'
- maintenanceversion='1.5' replicaid='C1257E4300352F3F' hide='v3' publicaccess='false'
- designerversion='8.5.3'>
-<noteinfo noteid='b82' unid='557BB8453C7DF85CC1257FCA002E5AF9' sequence='3'>
-<created><datetime dst='true'>20160606T102619,45+02</datetime></created>
-<modified><datetime dst='true'>20160606T102639,07+02</datetime></modified>
-<revised><datetime dst='true'>20160606T102639,06+02</datetime></revised>
-<lastaccessed><datetime dst='true'>20160606T102639,07+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20160606T102619,77+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
-<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
-<designchange><datetime dst='true'>20160606T102639,08+02</datetime></designchange>
-<trigger type='actionsmenu'/>
-<documentset type='selected'/><code event='options'><lotusscript>%REM
+<?xml version="1.0" encoding="UTF-8"?>
+<agent xmlns="http://www.lotus.com/dxl" name="GeneratePersons" hide="v3" publicaccess="false">
+  <trigger type="actionsmenu"/>
+  <documentset type="runonce"/>
+  <code event="options">
+    <lotusscript>%REM
 	Agent GenerateRandomPersons
 	Created Apr 4, 2016 by Patrick Kwinten/quintessens
 	Description: Comments for Agent
@@ -20,23 +11,29 @@
 Option Public
 Option Declare
 
-</lotusscript></code><code event='declarations'><lotusscript>	
+</lotusscript>
+  </code>
+  <code event="declarations">
+    <lotusscript>	
 	
 
 	Dim db As NotesDatabase
 	Dim uiview As NotesUIView
   	Dim view As NotesView
 	Dim doc As NotesDocument
-	Dim arr_fname(0 To 25) As String
-	Dim arr_lname(0 To 25) As String
-	Dim arr_organization(0 To 10) As String
-	Dim arr_company(0 To 10) As String
-	Dim arr_department(0 To 10) As String
+	Dim arr_fname(0 To 40) As String
+	Dim arr_lname(0 To 40) As String
+	Dim arr_organization(0 To 20) As String
+	Dim arr_company(0 To 20) As String
+	Dim arr_department(0 To 20) As String
 	Dim arr_jobtitle(0 To 10) As String	
 	Dim arr_level(0 To 6) As String
 	Dim arr_country(0 To 23) As String
 
-</lotusscript></code><code event='initialize'><lotusscript>Sub Initialize
+</lotusscript>
+  </code>
+  <code event="initialize">
+    <lotusscript>Sub Initialize
 	
 	Dim session As New NotesSession	
 	Dim ws As New NotesUIWorkspace
@@ -73,7 +70,23 @@ Option Declare
 	arr_fname(22) = "Wanda"
 	arr_fname(23) = "Xander"
 	arr_fname(24) = "Yvonne"
-	arr_fname(25) = "Zander"																
+	arr_fname(25) = "Zander"
+	arr_fname(26) = "Alice"	
+	arr_fname(27) = "Bernd"	
+	arr_fname(28) = "Carol"		
+	arr_fname(29) = "Dan"
+	arr_fname(30) = "Elsa"	
+	arr_fname(31) = "Frida"	
+	arr_fname(32) = "Gerda"
+	arr_fname(33) = "Hans"
+	arr_fname(34) = "Ida"
+	arr_fname(35) = "Jelle"
+	arr_fname(36) = "Klaas"
+	arr_fname(37) = "Lisa"
+	arr_fname(38) = "Mona"
+	arr_fname(39) = "Nova"
+	arr_fname(40) = "Oman"
+																									
 
 	'List of last names
 	arr_lname(0) = "Abrahams"
@@ -102,6 +115,20 @@ Option Declare
 	arr_lname(23) = "Xiang"
 	arr_lname(24) = "Yamamoto"
 	arr_lname(25) = "Zabel"
+	arr_lname(26) = "Andersson"
+	arr_lname(27) = "Belles"
+	arr_lname(28) = "Codina"
+	arr_lname(29) = "DiAnno"
+	arr_lname(30) = "Ernest"
+	arr_lname(31) = "Faber"
+	arr_lname(32) = "Gleeson"
+	arr_lname(33) = "Hansson"
+	arr_lname(34) = "Ibrahimovitz"
+	arr_lname(36) = "Joplin"
+	arr_lname(37) = "Kinte"
+	arr_lname(38) = "Long"
+	arr_lname(39) = "Manson"
+	arr_lname(40) = "Newton"
 	
 	'List of organizations
 	arr_organization(0) = "Acme"
@@ -114,6 +141,16 @@ Option Declare
 	arr_organization(8) = "Independent"
 	arr_organization(9) = "Jazz"
 	arr_organization(10) = "King"
+	arr_organization(11) = "Live"
+	arr_organization(12) = "Mega"
+	arr_organization(13) = "Nova"
+	arr_organization(14) = "Omega"
+	arr_organization(15) = "Prius"
+	arr_organization(16) = "Quartz"
+	arr_organization(17) = "Ratio"
+	arr_organization(18) = "Status"
+	arr_organization(19) = "Thy"
+	arr_organization(20) = "Utero"
 	
 	'List of companies
 	arr_company(0) = "Allied Forces"
@@ -126,7 +163,19 @@ Option Declare
 	arr_company(7) = "Hello World Online"
 	arr_company(8) = "Inc Gmhb"
 	arr_company(9) = "Joenaited AB"
-	arr_company(10) = "Koninklijke Schippers"	
+	arr_company(10) = "Koninklijke Schippers"
+	arr_company(11) = "Liberty Ltd"
+	arr_company(12) = "MegaCorp"
+	arr_company(13) = "New Foundation"
+	arr_company(14) = "Opera House"
+	arr_company(15) = "Public Limited"
+	arr_company(16) = "Queens Hotels"
+	arr_company(17) = "Royal House"
+	arr_company(18) = "System Sounds"
+	arr_company(19) = "The Corp"
+	arr_company(20) = "Univeral Stadium"
+	
+		
 	
 	arr_department(0) = "Administration"
 	arr_department(2) = "BioBank"
@@ -138,6 +187,16 @@ Option Declare
 	arr_department(8) = "IT"
 	arr_department(9) = "Juniors Support"
 	arr_department(10) = "Knowledge Centre"
+	arr_department(11) = "Legal Affairs"
+	arr_department(12) = "Management"
+	arr_department(13) = "Natural Resources"
+	arr_department(14) = "Office Equipment"
+	arr_department(15) = "Personnel"
+	arr_department(16) = "Relational Management"
+	arr_department(17) = "System Administration"
+	arr_department(18) = "Telephony"
+	arr_department(19) = "Universal services"
+	arr_department(20) = "Vice Management"
 	
 	'List of job titles
 	arr_jobtitle(0) = "Accountant"
@@ -187,7 +246,7 @@ Option Declare
 		
 	Print "asking for number of new persons"	
 	Dim persons As Integer
-	persons% = CInt(InputBox$("How many persons do you want to create? (5,10 or 25"))
+	persons% = Cint(Inputbox$("How many persons do you want to create? (5,10 or 25"))
 	
 	Dim vc As NotesViewEntryCollection
 	Set vc = view.AllEntries
@@ -211,14 +270,14 @@ Option Declare
 	Print "creating new person entries"
 	For i = 1 To persons
 		 
-		firstname = arr_fname( Round(Rnd()* UBound(arr_fname) ,0) )
-		lastname = arr_lname( Round(Rnd()* UBound(arr_lname) ,0) )
-		organization = arr_organization( Round(Rnd()* UBound(arr_organization) ,0) )
-		company = arr_company( Round(Rnd()* UBound(arr_company) ,0) )
-		department = arr_department( Round(Rnd()* UBound(arr_department) ,0) )
-		company = arr_company( Round(Rnd()* UBound(arr_company) ,0) )
-		country = arr_country( Round(Rnd()* UBound(arr_country) ,0) )
-		title = arr_jobtitle( Round(Rnd()* UBound(arr_jobtitle) ,0) )
+		firstname = arr_fname( Round(Rnd()* Ubound(arr_fname) ,0) )
+		lastname = arr_lname( Round(Rnd()* Ubound(arr_lname) ,0) )
+		organization = arr_organization( Round(Rnd()* Ubound(arr_organization) ,0) )
+		company = arr_company( Round(Rnd()* Ubound(arr_company) ,0) )
+		department = arr_department( Round(Rnd()* Ubound(arr_department) ,0) )
+		company = arr_company( Round(Rnd()* Ubound(arr_company) ,0) )
+		country = arr_country( Round(Rnd()* Ubound(arr_country) ,0) )
+		title = arr_jobtitle( Round(Rnd()* Ubound(arr_jobtitle) ,0) )
 		
 		fullname = "CN=" + firstname + " " + lastname + "/O=" + organization
 		shortname = Left$(firstname, 1) + lastname
@@ -243,14 +302,6 @@ Option Declare
 	
 	view.Autoupdate = True	
 	
-End Sub</lotusscript></code>
-<rundata processeddocs='0' exitcode='0' agentdata='96FFA204D1AB3BD5C1257FCA002E6554'>
-<agentmodified><datetime dst='true'>20160606T102639,07+02</datetime></agentmodified>
-<agentrun><datetime dst='true'>20160606T102702,87+02</datetime></agentrun>
-<runlog>Started running agent 'GeneratePersons' on 2016-06-06 10:26:46
-Running on selected documents: 1 total
-Found 1 document(s) that match search criteria
-Ran LotusScript code
-Done running agent 'GeneratePersons' on 2016-06-06 10:27:02
-</runlog></rundata></agent>
-
+End Sub</lotusscript>
+  </code>
+</agent>

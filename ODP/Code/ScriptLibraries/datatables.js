@@ -13,7 +13,57 @@ $(document).ready( function() {
 
 });
 
-function initPersons2() {
+function initPersons(){
+	
+	$('#persons tfoot th').each( function () {
+        var title = $(this).text();
+        $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
+    } );
+	
+	var db = $("#persons").DataTable();
+	db.destroy();
+	localStorage.clear();
+	var table = $("#persons").DataTable( {
+		stateSave : saveState,
+		fixedHeader: true,
+		"language" : {
+			"lengthMenu" : "Entries per page _MENU_",
+			// "info" : "Page _PAGE_ of _PAGES_",
+			"infoEmpty" : "No entries found",
+			"infoFiltered" : ""
+		},
+		scrollY : yScroll,
+		"ajax" : "api.xsp/Persons" ,
+		"columns" : [ 
+		{
+			data : "firstname",
+			"defaultContent": "<i>Not set</i>"
+		},{
+			data : "lastname",
+			"defaultContent": "<i>Not set</i>"
+		},{
+			data : "company"
+		}				
+		],
+		initComplete: function(){
+			this.api().columns().every( function () {
+                var column = this;
+                
+                $( 'input', this.footer() ).on( 'keyup change', function () {
+                    if ( column.search() !== this.value ) {
+                    	column
+                            .search( this.value )
+                            .draw();
+                    }
+                } );
+                
+                
+            } );
+		}
+	});
+}
+
+function initPersonsPlainTable() {
 	var db = $("#persons").DataTable();
 	db.destroy();
 	localStorage.clear();
@@ -42,7 +92,7 @@ function initPersons2() {
 	});
 }
 
-function initPersons(){
+function initPersonsSelectInput(){
 	var db = $("#persons").DataTable();
 	db.destroy();
 	localStorage.clear();
@@ -89,6 +139,5 @@ function initPersons(){
             } );
 		}
 	});
-	
 }
 
