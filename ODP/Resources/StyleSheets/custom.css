@@ -4,3 +4,8 @@
 .filter-form div {
   margin-bottom: 10px; 
 }
+
+span.markSearched {
+  background: yellow;
+  color: black;
+}

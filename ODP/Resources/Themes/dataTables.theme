@@ -26,4 +26,9 @@
 		<content-type>text/css</content-type>
 		<href>custom.css</href>
 	</resource>
+	
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>mark/jquery.mark.js</href>
+	</resource>
 </theme>

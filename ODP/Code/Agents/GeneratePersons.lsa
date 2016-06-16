@@ -21,8 +21,8 @@ Option Declare
 	Dim uiview As NotesUIView
   	Dim view As NotesView
 	Dim doc As NotesDocument
-	Dim arr_fname(0 To 40) As String
-	Dim arr_lname(0 To 40) As String
+	Dim arr_fname(0 To 60) As String
+	Dim arr_lname(0 To 60) As String
 	Dim arr_organization(0 To 20) As String
 	Dim arr_company(0 To 20) As String
 	Dim arr_department(0 To 20) As String
@@ -44,6 +44,8 @@ Option Declare
 	Set view = uiview.View	
 	view.Autoupdate = False
 	
+	'Get your inspiration here: 
+	'http://baby-names.familyeducation.com/browse/letter/a
 	'List of first names
 	arr_fname(0) = "Adam"
 	arr_fname(1) = "Bianca"
@@ -86,6 +88,26 @@ Option Declare
 	arr_fname(38) = "Mona"
 	arr_fname(39) = "Nova"
 	arr_fname(40) = "Oman"
+	arr_fname(41) = "Peter"
+	arr_fname(42) = "Qiana"
+	arr_fname(43) = "Renee"
+	arr_fname(44) = "Sam"
+	arr_fname(45) = "Tania"
+	arr_fname(46) = "Udo"
+	arr_fname(47) = "Vera"
+	arr_fname(48) = "Winnie"
+	arr_fname(49) = "Xandra"
+	arr_fname(50) = "Yaala"
+	arr_fname(51) = "Zabrina"
+	arr_fname(52) = "Agatha"
+	arr_fname(53) = "Benny"
+	arr_fname(54) = "Cindy"
+	arr_fname(55) = "Dana"
+	arr_fname(56) = "Ema"
+	arr_fname(57) = "Frits"
+	arr_fname(58) = "Gabriele"
+	arr_fname(59) = "Hyldagard"
+	arr_fname(60) = "Ingrid"
 																									
 
 	'List of last names
@@ -129,6 +151,26 @@ Option Declare
 	arr_lname(38) = "Long"
 	arr_lname(39) = "Manson"
 	arr_lname(40) = "Newton"
+	arr_lname(41) = "Onasis"
+	arr_lname(42) = "Petterson"
+	arr_lname(43) = "Quaker"
+	arr_lname(44) = "Rune"
+	arr_lname(45) = "Stanson"
+	arr_lname(46) = "Teeven"
+	arr_lname(47) = "Ulvson"
+	arr_lname(48) = "Van den Broek"
+	arr_lname(49) = "Wilsson"
+	arr_lname(50) = "Xenzen"
+	arr_lname(51) = "Zeeland"
+	arr_lname(52) = "Akkerman"
+	arr_lname(53) = "Benoit"
+	arr_lname(54) = "Clemens"
+	arr_lname(55) = "DeVille"
+	arr_lname(56) = "Energo"
+	arr_lname(57) = "Fargo"
+	arr_lname(58) = "Hewton"
+	arr_lname(59) = "Innerson"
+	arr_lname(60) = "Jennesee"
 	
 	'List of organizations
 	arr_organization(0) = "Acme"
