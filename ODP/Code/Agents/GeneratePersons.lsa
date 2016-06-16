@@ -26,7 +26,7 @@ Option Declare
 	Dim arr_organization(0 To 20) As String
 	Dim arr_company(0 To 20) As String
 	Dim arr_department(0 To 20) As String
-	Dim arr_jobtitle(0 To 10) As String	
+	Dim arr_jobtitle(0 To 20) As String	
 	Dim arr_level(0 To 6) As String
 	Dim arr_country(0 To 23) As String
 
@@ -209,6 +209,16 @@ Option Declare
 	arr_jobtitle(8) = "Insurance officer"
 	arr_jobtitle(9) = "Junior Chef"
 	arr_jobtitle(10) = "Kindergarten Teacher"
+	arr_jobtitle(11) = "Headhunter"
+	arr_jobtitle(12) = "Senior Officer"
+	arr_jobtitle(13) = "Senior Assistant"
+	arr_jobtitle(14) = "Head Deployment"
+	arr_jobtitle(15) = "Test engineer"
+	arr_jobtitle(16) = "Transporter"
+	arr_jobtitle(17) = "Constructor"
+	arr_jobtitle(18) = "Contractor"
+	arr_jobtitle(19) = "Surveillance"
+	arr_jobtitle(20) = "Guard"
 	
 	'List of toplevel domains
 	arr_level(0) = "com"

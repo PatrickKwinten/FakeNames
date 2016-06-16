@@ -21,4 +21,9 @@
 		<content-type>application/x-javascript</content-type>
 		<href>DataTables/DataTables-1.10.12/js/jquery.dataTables.js</href>
 	</resource>
+	
+	<resource>
+		<content-type>text/css</content-type>
+		<href>custom.css</href>
+	</resource>
 </theme>

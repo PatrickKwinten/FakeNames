@@ -1,16 +1,19 @@
-<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
-<noteinfo noteid="dc6" sequence="24" unid="1DF90DF83B5585A6C1257FCA00567D0F">
-<created><datetime dst="true">20160606T174441,11+02</datetime></created>
-<modified><datetime dst="true">20160606T175354,49+02</datetime></modified>
-<revised><datetime dst="true">20160606T175354,48+02</datetime></revised>
-<lastaccessed><datetime dst="true">20160606T175354,49+02</datetime></lastaccessed>
-<addedtofile><datetime dst="true">20160606T174441,14+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
-<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
-<item name="$TITLE"><text>dataTables.theme</text></item>
-<item name="$Flags"><text>34567Cg~`</text></item>
-<item name="$DesignerVersion"><text>8.5.3</text></item>
-
-
-<item name="$FileNames" sign="true"><text>dataTables.theme</text></item>
-<item name="$CSSFiles"><textlist><text>DataTables/DataTables-1.10.12/css/jquery.dataTables.css</text><text>DataTables/DataTables-1.10.12/css/dataTables.bootstrap.css</text></textlist></item></note>
+<?xml version="1.0" encoding="UTF-8"?>
+<note xmlns="http://www.lotus.com/dxl" class="form">
+  <item name="$TITLE">
+    <text>dataTables.theme</text>
+  </item>
+  <item name="$Flags">
+    <text>34567Cg~`</text>
+  </item>
+  <item name="$FileNames" sign="true">
+    <text>dataTables.theme</text>
+  </item>
+  <item name="$CSSFiles">
+    <textlist>
+      <text>DataTables/DataTables-1.10.12/css/jquery.dataTables.css</text>
+      <text>DataTables/DataTables-1.10.12/css/dataTables.bootstrap.css</text>
+      <text>custom.css</text>
+    </textlist>
+  </item>
+</note>

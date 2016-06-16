@@ -75,6 +75,10 @@ public class PersonsJSON extends CustomServiceBean{
 				if (null!=company){
 					jo.put("company",company);
 				}
+				String job = String.valueOf(columnValues.get(10));
+				if (null!=job){
+					jo.put("job",job);
+				}
 				
 				// add the json object to the json array
 				arr.put(count, jo);

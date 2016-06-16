@@ -3,7 +3,8 @@ var saveState = true;
 var yScroll = 360;
 // DataTables init
 $(document).ready( function() {	
-	initPersons();
+	//initPersons();
+	initPersonExternal();
 	/*
 	table.on("click", "tr", function() {
 		var data = table.row(this).data();
@@ -139,5 +140,55 @@ function initPersonsSelectInput(){
             } );
 		}
 	});
+}
+
+function initPersonExternal(){
+	var db = $("#persons").DataTable();
+	db.destroy();
+	localStorage.clear();
+	var table = $("#persons").DataTable( {
+		stateSave : saveState,
+		fixedHeader: true,
+		"language" : {
+			"lengthMenu" : "Entries per page _MENU_",
+			// "info" : "Page _PAGE_ of _PAGES_",
+			"infoEmpty" : "No entries found",
+			"infoFiltered" : ""
+		},
+		scrollY : yScroll,
+		"ajax" : "api.xsp/Persons" ,
+		"columns" : [ 
+		{
+			data : "firstname",
+			"defaultContent": "<i>Not set</i>"
+		},{
+			data : "lastname",
+			"defaultContent": "<i>Not set</i>"
+		},{
+			data : "company"
+		}	
+		,{
+			data : "job"
+		}
+		],
+		initComplete: function(){
+			var db = $("#persons").DataTable();
+			$('.filter').on('keyup change', function () {
+		        //clear global search values
+		        db.search('');
+		        db.column($(this).data('columnIndex')).search(this.value).draw();
+		    });
+		    
+		    $( ".dataTables_filter input" ).on( 'keyup change',function() {
+			   //clear column search values
+		        db.columns().search('');
+		       //clear input values
+		       $('.filter').val('');
+			});	
+			
+
+		}
+	});
+	
 }
 
