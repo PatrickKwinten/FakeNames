@@ -11,7 +11,7 @@
 	<!-- datatable component -->
 	<resource>
 		<content-type>text/css</content-type>
-		<href>DataTables/DataTables-1.10.12/css/jquery.dataTables.css</href>
+		<href>DataTables/DataTables-1.10.12/css/jquery.dataTables.min.css</href>
 	</resource>
 	<resource>
 		<content-type>text/css</content-type>
@@ -31,4 +31,39 @@
 		<content-type>application/x-javascript</content-type>
 		<href>mark/jquery.mark.js</href>
 	</resource>
+	
+	<!-- adding buttons -->
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>DataTables/buttons-1.2.1/js/dataTables.buttons.js</href>
+	</resource>
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>DataTables/buttons-1.2.1/js/buttons.flash.js</href>
+	</resource>
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>DataTables/jszip-2.5.0/jszip.js</href>
+	</resource>
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>DataTables/pdfmake-0.1.18/build/pdfmake.js</href>
+	</resource>
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>DataTables/pdfmake-0.1.18/build/vfs_fonts.js</href>
+	</resource>
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>DataTables/buttons-1.2.1/js/buttons.html5.js</href>
+	</resource>
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>DataTables/buttons-1.2.1/js/buttons.print.js</href>
+	</resource>
+	<resource>
+		<content-type>text/css</content-type>
+		<href>DataTables/buttons-1.2.1/css/buttons.dataTables.min.css</href>
+	</resource>
+	
 </theme>

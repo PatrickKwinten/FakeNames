@@ -11,9 +11,10 @@
   </item>
   <item name="$CSSFiles">
     <textlist>
-      <text>DataTables/DataTables-1.10.12/css/jquery.dataTables.css</text>
+      <text>DataTables/DataTables-1.10.12/css/jquery.dataTables.min.css</text>
       <text>DataTables/DataTables-1.10.12/css/dataTables.bootstrap.css</text>
       <text>custom.css</text>
+      <text>DataTables/buttons-1.2.1/css/buttons.dataTables.min.css</text>
     </textlist>
   </item>
 </note>

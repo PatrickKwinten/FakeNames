@@ -3,7 +3,7 @@
  */
 
 (function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
+	if ( typeof define === 'function' && false ) {
 		// AMD
 		define( ['jquery', 'datatables.net'], function ( $ ) {
 			return factory( $, window, document );

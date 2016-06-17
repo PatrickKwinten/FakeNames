@@ -6,6 +6,7 @@ $(document).ready( function() {
 	//initPersons();
 	//initPersonExternal();
 	//initPersonExternalMark();
+	initPersonBtn();
 	/*
 	table.on("click", "tr", function() {
 		var data = table.row(this).data();
@@ -16,12 +17,10 @@ $(document).ready( function() {
 });
 
 function initPersons(){
-	
 	$('#persons tfoot th').each( function () {
         var title = $(this).text();
         $(this).html( '<input type="text" placeholder="Search '+title+'" />' );
-    } );
-	
+    } );	
 	var db = $("#persons").DataTable();
 	db.destroy();
 	localStorage.clear();
@@ -190,7 +189,7 @@ function initPersonExternal(){
 		}
 	});
 }
-
+/*
 $(function() {
 	var db = $("#persons").DataTable();
 	db.destroy();
@@ -205,10 +204,21 @@ $(function() {
 
 	  // Initialize DataTables
 	  var db = $("#persons").DataTable({
-		  
-		  
+		  dom: 'Bfrtip',
+	        buttons: [
+	            'copy',
+	            'csv',
+	            'excel',
+	            {
+	                extend: 'pdfHtml5',
+	                orientation: 'landscape',
+	                pageSize: 'LEGAL',
+	                title: 'Person Details'
+	            },
+	            'print'
+	        ],
 		  stateSave : saveState,
-			fixedHeader: true,
+		  fixedHeader: true,
 			"language" : {
 				"lengthMenu" : "Entries per page _MENU_",
 				// "info" : "Page _PAGE_ of _PAGES_",
@@ -231,6 +241,7 @@ $(function() {
 				data : "job"
 			}
 			],  
+			
 		  
 	    // Set elements per page
 	    pageLength: 10,
@@ -274,6 +285,101 @@ $(function() {
 	  });
 	
 });
+*/
+function initPersonBtn(){
+	var db = $("#persons").DataTable();
+	db.destroy();
+	localStorage.clear();
+	// Map inputs with columns (nth-child(X))
+	  var inputMapper = {
+	    "firstname": 1,
+	    "lastname": 2,
+	    "company": 3,
+	    "job": 4
+	  };
+
+	  // Initialize DataTables
+	  var db = $("#persons").DataTable({
+		  dom: 'Bfrtip',
+	        buttons: [
+	            'copy',
+	            'csv',
+	            'excel',
+	            {
+	                extend: 'pdfHtml5',
+	                orientation: 'landscape',
+	                pageSize: 'LEGAL',
+	                title: 'Person Details'
+	            },
+	            'print'
+	        ],
+		  stateSave : saveState,
+		  fixedHeader: true,
+			"language" : {
+				"lengthMenu" : "Entries per page _MENU_",
+				// "info" : "Page _PAGE_ of _PAGES_",
+				"infoEmpty" : "No entries found",
+				"infoFiltered" : ""
+			},
+			scrollY : yScroll,
+			"ajax" : "api.xsp/Persons" ,
+			"columns" : [ 
+			{
+				data : "firstname",
+				"defaultContent": "<i>Not set</i>"
+			},{
+				data : "lastname",
+				"defaultContent": "<i>Not set</i>"
+			},{
+				data : "company"
+			}	
+			,{
+				data : "job"
+			}
+			],  
+			
+		  
+	    // Set elements per page
+	    pageLength: 10,
+	    // Disable entry selection
+	    bLengthChange: false,
+	    // Act on table rendering
+	    drawCallback: function() {
+	      // Iterate over all inputs (by mapper names)
+				$.each(inputMapper, function(colName, index) {
+			        // Determine the entered keyword
+					
+			        var val = $("input[name='" + colName + "']").val();
+			        // Determine the column related to the input
+			        var $col = $(".datatables-table tbody tr > td:nth-child(" + index + ")");
+			        // Remove marks in related column
+			        $col.unmark({
+			          "element": "span",
+			          "className": "markSearched"
+			        });
+			        // Mark in related column
+			        $col.mark(val, {
+			          // Define mark.js options (see https://markjs.io/)
+			          "element": "span",
+			          "className": "markSearched"
+			        });
+			      })
+	    }
+	  });
+
+	  // Trigger table redraw on search keyword change
+	  $("input").on("keyup change", function() {
+		  var db = $("#persons").DataTable();
+		  var $this = $(this);
+		  var val = $this.val();
+		  var key = $this.attr("name");
+
+	    // Search inside DataTable column
+	    // subtract -1 because :nth-child starts with 1,
+	    // DataTables with 0
+	    db.columns(inputMapper[key] - 1).search(val).draw();
+	  });
+}
 
 
 
