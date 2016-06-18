@@ -4,7 +4,7 @@
  */
 
 (function( factory ){
-	if ( typeof define === 'function' && define.amd ) {
+	if ( typeof define === 'function' && false ) {
 		// AMD
 		define( ['jquery', 'datatables.net', 'datatables.net-buttons'], function ( $ ) {
 			return factory( $, window, document );

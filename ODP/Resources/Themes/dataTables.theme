@@ -66,4 +66,9 @@
 		<href>DataTables/buttons-1.2.1/css/buttons.dataTables.min.css</href>
 	</resource>
 	
+	<resource>
+		<content-type>application/x-javascript</content-type>
+		<href>DataTables/buttons-1.2.1/js/buttons.colVis.js</href>
+	</resource>
+	
 </theme>

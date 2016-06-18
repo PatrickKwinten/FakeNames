@@ -1,12 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<note xmlns="http://www.lotus.com/dxl" class="form">
-  <item name="$Flags">
-    <text>gC~4K</text>
-  </item>
-  <item name="$TITLE" sign="true">
-    <text>dtPersonsExtBtn.xsp</text>
-  </item>
-  <item name="$FileNames" sign="true">
-    <text>dtPersonsExtBtn.xsp</text>
-  </item>
+<?xml version="1.0" encoding="UTF-8"?><note class="form" maintenanceversion="1.5" replicaid="C1257E4300352F3F" version="9.0" xmlns="http://www.lotus.com/dxl">
+<noteinfo noteid="1016" sequence="39" unid="63AB7BF209E617BAC1257FD50043102E">
+<created><datetime dst="true">20160617T141230,54+02</datetime></created>
+<modified><datetime dst="true">20160617T145635,21+02</datetime></modified>
+<revised><datetime dst="true">20160617T145635,20+02</datetime></revised>
+<lastaccessed><datetime dst="true">20160617T145635,21+02</datetime></lastaccessed>
+<addedtofile><datetime dst="true">20160617T141230,56+02</datetime></addedtofile></noteinfo>
+<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
+<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
+<item name="$Flags"><text>gC~4K</text></item>
+<item name="$TITLE" sign="true"><text>dtPersonsExtBtn.xsp</text></item>
+
+<item name="$DesignerVersion"><text>8.5</text></item>
+
+
+
+
+<item name="$FileNames" sign="true"><text>dtPersonsExtBtn.xsp</text></item>
+
 </note>
