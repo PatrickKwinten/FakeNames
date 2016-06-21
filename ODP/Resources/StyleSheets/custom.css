@@ -9,3 +9,7 @@ span.markSearched {
   background: yellow;
   color: black;
 }
+
+span.btn-primary a{
+	color: white;
+}

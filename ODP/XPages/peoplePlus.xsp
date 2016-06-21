@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xp:view xmlns:xp="http://www.ibm.com/xsp/core"
+	xmlns:xe="http://www.ibm.com/xsp/coreex">
+	<xp:this.afterPageLoad><![CDATA[#{javascript:var allCols:java.util.ArrayList = new java.util.ArrayList();
+allCols.add("company");
+allCols.add("lastname");
+allCols.add("firstname");
+allCols.add("fullname");
+allCols.add("department");
+allCols.add("email");
+allCols.add("gender");
+allCols.add("title");
+allCols.add("jobtitle");
+allCols.add("location");
+allCols.add("birthday");
+viewScope.columnValues = new java.util.Vector(allCols);
+sessionScope.columnValues = new java.util.Vector(allCols);
+sessionScope.columnValuesAll = new java.util.Vector(allCols);}]]></xp:this.afterPageLoad>
+	<xp:this.resources>
+		<xp:script src="/xpageDynamicColumns.jss" clientSide="false"></xp:script>
+	</xp:this.resources>
+	<div class="container-fluid" style="margin-top:5px;">
+		<div class="row">
+			<div class="col-md-2">
+				<span class="btn btn-primary">
+					<span style="margin-right:5px;">
+						<i class="glyphicon glyphicon-eye-close" aria-hidden="true"></i>
+					</span>
+					<xe:valuePicker id="columnPicker"
+						pickerText="Adjust column visibility"
+						dojoType="extlib.dijit.PickerCheckbox"
+						dialogTitle="Display columns" for="djextShowColumns">
+						<xe:this.dataProvider>
+							<xe:simpleValuePicker
+								valueList="#{javascript:sessionScope.columnValues}" />
+						</xe:this.dataProvider>
+					</xe:valuePicker>
+				</span><!-- /.btn-primary -->
+			</div><!-- /.col-md-2 -->
+			<div class="col-md-1"></div>
+			<div class="col-md-9">
+				<xe:djextListTextBox id="djextShowColumns"
+					multipleSeparator="," multipleTrim="true"
+					defaultValue="#{javascript:viewScope.columnValues}"
+					styleClass="columnValues" value="#{viewScope.columnValues}">
+					<xe:this.style><![CDATA[#{javascript:"float: left; width: 100%; word-wrap: break-word;"}]]></xe:this.style>
+					<xp:eventHandler event="onChange" submit="true"
+						refreshMode="partial" refreshId="pnlResult" id="eventHandler3" />
+				</xe:djextListTextBox>
+			</div><!-- /.col-md-9 -->
+		</div><!-- /.row -->
+	</div><!-- /.container-fluid -->
+
+	<xp:panel id="pnlResult" styleClass="container-fluid">
+		<xp:viewPanel rows="8" id="viewPanel1"
+			viewStyle="width:100%">
+			<xp:this.data>
+				<xp:dominoView var="viewPeoplePlus"
+					viewName="peopleplus">
+				</xp:dominoView>
+			</xp:this.data>
+			<xp:viewColumn columnName="CompanyName" id="viewColumn1">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("company")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="company"
+					id="viewColumnHeader1">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="lastnamesort" id="viewColumn2">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("lastname")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="lastname"
+					id="viewColumnHeader2">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="FirstName" id="viewColumn3">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("firstname")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="firstname"
+					id="viewColumnHeader3">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			
+			<xp:viewColumn columnName="$29" id="viewColumn5">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("fullname")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="fullname"
+					id="viewColumnHeader5">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="department" id="viewColumn6">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("department")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="department"
+					id="viewColumnHeader6">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="mail" id="viewColumn7">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("email")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="email"
+					id="viewColumnHeader7">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="sex" id="viewColumn8">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("gender")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="gender"
+					id="viewColumnHeader8">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="title" id="viewColumn9">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("title")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="title"
+					id="viewColumnHeader9">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="job" id="viewColumn10">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("jobtitle")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="job title"
+					id="viewColumnHeader10">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:viewColumn columnName="Location" id="viewColumn11">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("location")}]]></xp:this.rendered>
+				<xp:viewColumnHeader value="location"
+					id="viewColumnHeader11">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:viewColumn 
+			columnName="$1" 
+			id="viewColumn12">
+				<xp:this.rendered><![CDATA[#{javascript:showColumn("birthday")}]]></xp:this.rendered>
+				<xp:viewColumnHeader 
+					value="birthday"
+					id="viewColumnHeader12">
+				</xp:viewColumnHeader>
+			</xp:viewColumn>
+			<xp:this.facets>
+				<xp:pager 
+					partialRefresh="true"
+					layout="Previous Group Next" 
+					xp:key="footerPager" 
+					id="pager2" 
+					for="viewPanel1" 
+					panelPosition="right">
+				</xp:pager>
+			</xp:this.facets>
+		</xp:viewPanel>
+	</xp:panel>
+</xp:view>

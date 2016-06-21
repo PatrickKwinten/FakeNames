@@ -30,6 +30,8 @@ Option Declare
 	Dim arr_level(0 To 6) As String
 	Dim arr_country(0 To 23) As String
 
+	Dim arr_birthyear(0 To 10) As String
+
 </lotusscript>
   </code>
   <code event="initialize">
@@ -264,6 +266,7 @@ Option Declare
 	
 	'List of toplevel domains
 	arr_level(0) = "com"
+	arr_level(1) = "tv"
 	arr_level(2) = "net"
 	arr_level(3) = "info"
 	arr_level(4) = "org"
@@ -295,6 +298,19 @@ Option Declare
 	arr_country(21) = "Venuzuala"
 	arr_country(22) = "Waterworld"
 	arr_country(23) = "Zambia"
+	
+	'List of date of birth
+	arr_birthyear(0) = "1955"
+	arr_birthyear(1) = "1961"
+	arr_birthyear(2) = "1966"
+	arr_birthyear(3) = "1970"
+	arr_birthyear(4) = "1983"
+	arr_birthyear(5) = "1990"
+	arr_birthyear(6) = "1991"
+	arr_birthyear(7) = "1993"
+	arr_birthyear(8) = "1994"
+	arr_birthyear(9) = "1995"
+	arr_birthyear(10) = "1996"
 		
 	Print "asking for number of new persons"	
 	Dim persons As Integer
@@ -315,6 +331,11 @@ Option Declare
 	Dim department As String
 	Dim country As String
 	Dim title As String
+	Dim birth As String
+	
+	Dim bday As Integer
+	Dim bmonth As Integer
+	Dim byear As String
 	
 	Dim fullname As String
 	Dim shortname As String	
@@ -331,6 +352,17 @@ Option Declare
 		country = arr_country( Round(Rnd()* Ubound(arr_country) ,0) )
 		title = arr_jobtitle( Round(Rnd()* Ubound(arr_jobtitle) ,0) )
 		
+		bday = Round(Rnd()* 28 ,0)
+		If bday = 0 Then
+			bday = 1
+		End If
+		bmonth = Round(Rnd()* 12 ,0)
+		If bmonth = 0 Then
+			bmonth = 1
+		End If
+		byear = arr_birthyear( Round(Rnd()* UBound(arr_birthyear) ,0) )	
+		birth = CStr(bmonth) + "-" + CStr(bday) + "-" + byear
+		
 		fullname = "CN=" + firstname + " " + lastname + "/O=" + organization
 		shortname = Left$(firstname, 1) + lastname
 		
@@ -344,6 +376,13 @@ Option Declare
 		namesItem.Isnames = True
 		doc.CompanyName = company
 		doc.JobTitle = title
+		Dim dateTime As NotesDateTime
+		Set dateTime = session.CreateDateTime( birth )
+		Call doc.ReplaceItemValue("Birthday", dateTime)
+		'doc.byear = byear
+		'doc.bmonth = bmonth
+		'doc.bday = bday
+		
 		doc.Department = department
 		doc.OfficeCountry = country
 		'set roaming user for view appearance

@@ -80,6 +80,11 @@ public class PersonsJSON extends CustomServiceBean{
 					jo.put("job",job);
 				}
 				
+				String birthday = String.valueOf(columnValues.get(12));
+				if (null!=birthday){
+					jo.put("bday",birthday);
+				}
+				
 				// add the json object to the json array
 				arr.put(count, jo);
 				

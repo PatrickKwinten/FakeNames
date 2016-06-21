@@ -1,50 +1,59 @@
-<?xml version='1.0' encoding='utf-8'?>
-<view name='PeoplePlus' alias='peopleplus' xmlns='http://www.lotus.com/dxl'
- version='9.0' maintenanceversion='1.5' replicaid='C1257E4300352F3F' showinmenu='true'
- noreplace='true' allowdocselection='true' publicaccess='false' designerversion='8.5.3'
- language='en' unreadmarks='none' onopengoto='lastopened' onrefresh='displayindicator'
- headers='beveled' opencollapsed='false' showresponsehierarchy='false' showmargin='true'
- shrinkrows='true' extendlastcolumn='true' showhierarchies='false' unreadcolor='black'
- rowlinecount='2' headerlinecount='1' rowspacing='1.25' haslinkcolumn='true'
- bgcolor='white' altrowcolor='#f8f8fc' totalscolor='blue' headerbgcolor='#b1b1d2'
- boldunreadrows='false' evaluateactions='false' allownewdocuments='false'
- allowcustomizations='false' hidemarginborder='false' marginwidth='0px' marginbgcolor='white'
- uniquekeys='false' initialbuildrestricted='false' noemptycategories='true'>
-<noteinfo noteid='7c2' unid='829C9786F4693F2CC1257E35003B230C' sequence='31'>
-<created><datetime dst='true'>20150428T124555,96+02</datetime></created>
-<modified><datetime dst='true'>20160606T104639,74+02</datetime></modified>
-<revised><datetime dst='true'>20160606T104639,73+02</datetime></revised>
-<lastaccessed><datetime dst='true'>20160606T104639,74+02</datetime></lastaccessed>
-<addedtofile><datetime dst='true'>20150512T114103,12+02</datetime></addedtofile></noteinfo>
-<updatedby><name>CN=Patrick Kwinten/O=quintessens</name></updatedby>
-<wassignedby><name>CN=Patrick Kwinten/O=quintessens</name></wassignedby>
-<globals><code event='options'><lotusscript>Option Public
+<?xml version="1.0" encoding="UTF-8"?>
+<view xmlns="http://www.lotus.com/dxl" name="PeoplePlus" alias="peopleplus" showinmenu="true" noreplace="true" allowdocselection="true" publicaccess="false" language="en" unreadmarks="none" onopengoto="lastopened" onrefresh="displayindicator" headers="beveled" opencollapsed="false" showresponsehierarchy="false" showmargin="true" shrinkrows="true" extendlastcolumn="true" showhierarchies="false" unreadcolor="black" rowlinecount="2" headerlinecount="1" rowspacing="1.25" haslinkcolumn="true" bgcolor="white" altrowcolor="#f8f8fc" totalscolor="blue" headerbgcolor="#b1b1d2" boldunreadrows="false" evaluateactions="false" allownewdocuments="false" allowcustomizations="false" hidemarginborder="false" marginwidth="0px" marginbgcolor="white" uniquekeys="false" initialbuildrestricted="false" noemptycategories="true">
+  <globals>
+    <code event="options">
+      <lotusscript>Option Public
 
-</lotusscript></code><code event='declarations'><lotusscript>%INCLUDE "lsconst.lss"</lotusscript></code></globals><code
- event='selection'><formula>SELECT Type = "Person"</formula></code><code event='form'><formula
->@If(@TextToNumber(@Version) &lt; 159; "(46Person)";Form)</formula></code><code
- event='helprequest'><formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_People")</formula></code>
-<actionbar linestyle='triple' useappletinbrowser='true' bgcolor='#b1b1d2'
- bordercolor='black'>
-<actionbuttonstyle bgcolor='none'/><border style='solid' width='0px 0px 3px'/>
-<action title='Add Person' showinmenu='false' hide='web'><imageref name='btnNewDoc.gif'/><code
- event='click'><formula>CurrentServer:=@Subset(@DbName;1);
+</lotusscript>
+    </code>
+    <code event="declarations">
+      <lotusscript>%INCLUDE "lsconst.lss"</lotusscript>
+    </code>
+  </globals>
+  <code event="selection">
+    <formula>SELECT Type = "Person"</formula>
+  </code>
+  <code event="form">
+    <formula>@If(@TextToNumber(@Version) &lt; 159; "(46Person)";Form)</formula>
+  </code>
+  <code event="helprequest">
+    <formula>@Command([OpenHelpDocument];[AdminHelp];"(Help)";"pubnames_v_People")</formula>
+  </code>
+  <actionbar linestyle="triple" useappletinbrowser="true" bgcolor="#b1b1d2" bordercolor="black">
+    <actionbuttonstyle bgcolor="none"/>
+    <border style="solid" width="0px 0px 3px" color="system"/>
+    <action title="Add Person" showinmenu="false" hide="web">
+      <imageref name="btnNewDoc.gif"/>
+      <code event="click">
+        <formula>CurrentServer:=@Subset(@DbName;1);
 @If(CurrentServer="" | @IsMember("[UserCreator]";@UserRoles);
 	@If(@TextToNumber(@Version) &lt; 166; @PostedCommand([Compose];"(46Person)");@PostedCommand([Compose];"Person"));
-@Prompt([Ok];"Not Authorized";"You are not authorized to add Person documents to this database."))</formula></code></action>
-<action title='Add Person' showinmenu='false' hide='notes'><imageref name='btnNewDoc.gif'/><code
- event='onClick' for='web'><javascript>ntNewDoc('Person', '[UserCreator]', 'People', '&amp;OldForm=(46Person)')</javascript></code></action>
-<action title='Edit Person' showinmenu='false' hide='previewedit web'><imageref
- name='btnEdit.gif'/><code event='click'><formula>@If(@TextToNumber(@Version) &lt; 166; @Command([EditDocument]); @Do(
+@Prompt([Ok];"Not Authorized";"You are not authorized to add Person documents to this database."))</formula>
+      </code>
+    </action>
+    <action title="Add Person" showinmenu="false" hide="notes">
+      <imageref name="btnNewDoc.gif"/>
+      <code event="onClick" for="web">
+        <javascript>ntNewDoc('Person', '[UserCreator]', 'People', '&amp;OldForm=(46Person)')</javascript>
+      </code>
+    </action>
+    <action title="Edit Person" showinmenu="false" hide="previewedit web">
+      <imageref name="btnEdit.gif"/>
+      <code event="click">
+        <formula>@If(@TextToNumber(@Version) &lt; 166; @Command([EditDocument]); @Do(
 CurrentServer:=@Subset(@DbName;1);
 @If(CurrentServer="" | @TextToNumber(@Subset(@UserAccess(@DbName);1)) &gt; 2 |
 (  @TextToNumber(@Subset(@UserAccess(@DbName);1)) = 3 &amp;
    @IsMember("[UserModifier]";@UserRoles)  &amp;
    @IsMember(@V3UserName;localAdmin) &amp;
    @IsMember(@V3UserName;Owner));@Command([EditDocument]);
-@Prompt([Ok];"Not Authorized";"You are not authorized to edit Person documents in this database."))))</formula></code></action>
-<action title='Delete Person (6)' showinmenu='false' hide='web'><imageref
- name='btnDelete.gif'/><code event='click'><formula>FIELD MailVerify:="0";
+@Prompt([Ok];"Not Authorized";"You are not authorized to edit Person documents in this database."))))</formula>
+      </code>
+    </action>
+    <action title="Delete Person (6)" showinmenu="false" hide="web">
+      <imageref name="btnDelete.gif"/>
+      <code event="click">
+        <formula>FIELD MailVerify:="0";
 FIELD DeleteNTUserAccount:="0";
 FIELD GroupName:="";
 synch:="";
@@ -74,10 +83,19 @@ PersonFirstName:=FirstName;
            	@Return(@Do(@SetField("DeleteNTUserAccount";@Unavailable);@Prompt([Ok];"Insufficient Access";"You do not have sufficient access to  perform the requested operation."))));
 
 @Return("")
-)</formula></code><code event='hidewhen'><formula>@Subset(@V4UserAccess(@DbName);-1)= "0" | @TextToNumber(@Version)&lt;178</formula></code><code
- event='label'><formula>"Delete Person"</formula></code></action>
-<action title='Delete Person' showinmenu='false' hide='web'><imageref name='btnDelete.gif'/><code
- event='click'><formula>msg1 := "You have requested to delete the selected person records. Deleting these records will remove the user's names from the Domino Directory for this domain,  Access Control Lists, Reader and Author fields. Do you wish to continue?";
+)</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>@Subset(@V4UserAccess(@DbName);-1)= "0" | @TextToNumber(@Version)&lt;178</formula>
+      </code>
+      <code event="label">
+        <formula>"Delete Person"</formula>
+      </code>
+    </action>
+    <action title="Delete Person" showinmenu="false" hide="web">
+      <imageref name="btnDelete.gif"/>
+      <code event="click">
+        <formula>msg1 := "You have requested to delete the selected person records. Deleting these records will remove the user's names from the Domino Directory for this domain,  Access Control Lists, Reader and Author fields. Do you wish to continue?";
 msg2 := "You have cancelled deleting the person record(s).";
 msg3 := "By selecting 'Yes' the action you have requested will take place immediately, and affect all references to the selected people in this Directory.  (NOTE:  This may take awhile...)";
 msg4 := "The people(s) name have been removed completely from this Domino Directory.";
@@ -167,9 +185,16 @@ DeleteVerify:=@If(@Prompt([YesNo];"Verification"; msg1);@True;@Return(@Prompt([O
 
 );
 @Return("")
-)</formula></code><code event='hidewhen'><formula>@Subset(@V4UserAccess(@DbName);-1)= "0" | @TextToNumber(@Version) &lt; 141| @TextToNumber(@Version) &gt;= 178</formula></code></action>
-<action title='Delete Person' showinmenu='false' hide='web'><imageref name='btnDelete.gif'/><code
- event='click'><formula>synch:="";
+)</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>@Subset(@V4UserAccess(@DbName);-1)= "0" | @TextToNumber(@Version) &lt; 141| @TextToNumber(@Version) &gt;= 178</formula>
+      </code>
+    </action>
+    <action title="Delete Person" showinmenu="false" hide="web">
+      <imageref name="btnDelete.gif"/>
+      <code event="click">
+        <formula>synch:="";
 AdminFileName:="admin4.nsf";
 AdminServer:=@If(@TextToNumber(@Version) &lt; 171;"";@DbAdminServer);
 CurrentServer:=@Subset(@DbName;1);
@@ -233,12 +258,24 @@ DeleteVerify:=@Prompt([YesNo];"Verification";"You have requested to delete the s
     )
 );
 @Return(@Prompt([Ok];"Action Cancelled";"You have cancelled deleting this person."))
-)</formula></code><code event='hidewhen'><formula>@Subset(@V4UserAccess(@DbName);-1)= "0" | @TextToNumber(@Version) &gt;= 141</formula></code></action>
-<action title='Copy to Personal Address Book' showinmenu='false' hide='web'><imageref
- name='btnAddressBook.gif'/><code event='click'><formula>@Command([ToolsRunMacro];"(Copy to Personal Address Book)")</formula></code><code
- event='hidewhen'><formula>@If(@Subset(@DbName;1)="")</formula></code></action>
-<action title='Recertify Selected People' showinbar='false' hide='web'><code
- event='click'><formula>AdminFileName:="admin4.nsf";
+)</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>@Subset(@V4UserAccess(@DbName);-1)= "0" | @TextToNumber(@Version) &gt;= 141</formula>
+      </code>
+    </action>
+    <action title="Copy to Personal Address Book" showinmenu="false" hide="web">
+      <imageref name="btnAddressBook.gif"/>
+      <code event="click">
+        <formula>@Command([ToolsRunMacro];"(Copy to Personal Address Book)")</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>@If(@Subset(@DbName;1)="")</formula>
+      </code>
+    </action>
+    <action title="Recertify Selected People" showinbar="false" hide="web">
+      <code event="click">
+        <formula>AdminFileName:="admin4.nsf";
 CertLogFileName:="certlog.nsf";
 CurrentServer:=@Subset(@DbName;1);
 AdminPExist:=@DbExists(CurrentServer:AdminFileName);
@@ -262,9 +299,15 @@ CertLogCreateAccess:=@TextToNumber(@Subset(@Subset(CertLogAccess;2);-1));
                                             @Prompt([Ok];"Error";"You have received the following error trying to open the Certification Log database: "+@Text(CertLogExist)+"  Please correct the error and retry.");
                                     @Text(CertLogExist)="0" ;
                                            @Prompt([Ok];"Error";"This action requires a Certification Log file.  This file was not found.  Please see your Administrator.");""))
-        )</formula></code><code event='hidewhen'><formula>@If(@TextToNumber(@Subset(@V4UserAccess(@DbName);1))&lt;3)</formula></code></action>
-<action title='Add Internet Cert to Selected People' showinbar='false' hide='web'><code
- event='click'><formula>AdminFileName:="admin4.nsf";
+        )</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>@If(@TextToNumber(@Subset(@V4UserAccess(@DbName);1))&lt;3)</formula>
+      </code>
+    </action>
+    <action title="Add Internet Cert to Selected People" showinbar="false" hide="web">
+      <code event="click">
+        <formula>AdminFileName:="admin4.nsf";
 CertLogFileName:="certlog.nsf";
 CurrentServer:=@Subset(@DbName;1);
 AdminPExist:=@DbExists(CurrentServer:AdminFileName);
@@ -288,10 +331,16 @@ CertLogCreateAccess:=@TextToNumber(@Subset(@Subset(CertLogAccess;2);-1));
                                             @Prompt([Ok];"Error";"You have received the following error trying to open the Certification Log database: "+@Text(CertLogExist)+"  Please correct the error and retry.");
                                     @Text(CertLogExist)="0" ;
                                            @Prompt([Ok];"Error";"This action requires a Certification Log file.  This file was not found.  Please see your Administrator.");""))
-        )</formula></code><code event='hidewhen'><formula>LCPlat := @LowerCase(@Platform);
-@If(@TextToNumber(@Subset(@V4UserAccess(@DbName);1))&lt;3) | @Contains(LCPlat; "mac")</formula></code></action>
-<action title='Rename Selected People' showinbar='false' hide='web'><code
- event='click'><formula>AdminFileName:="admin4.nsf";
+        )</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>LCPlat := @LowerCase(@Platform);
+@If(@TextToNumber(@Subset(@V4UserAccess(@DbName);1))&lt;3) | @Contains(LCPlat; "mac")</formula>
+      </code>
+    </action>
+    <action title="Rename Selected People" showinbar="false" hide="web">
+      <code event="click">
+        <formula>AdminFileName:="admin4.nsf";
 CertLogFileName:="certlog.nsf";
 CurrentServer:=@Subset(@DbName;1);
 AdminPExist:=@DbExists(CurrentServer:AdminFileName);
@@ -315,9 +364,15 @@ CertLogCreateAccess:=@TextToNumber(@Subset(@Subset(CertLogAccess;2);-1));
                                             @Prompt([Ok];"Error";"You have received the following error trying to open the Certification Log database: "+@Text(CertLogExist)+"  Please correct the error and retry.");
                                     @Text(CertLogExist)="0" ;
                                            @Prompt([Ok];"Error";"This action requires a Certification Log file.  This file was not found.  Please see your Administrator.");""))
-        )</formula></code><code event='hidewhen'><formula>@If(@TextToNumber(@Subset(@V4UserAccess(@DbName);1))&lt;3)</formula></code></action>
-<action title='Set Password Fields' showinbar='false' hide='web'><code event='click'><formula
->CheckPasswordSave:=CheckPassword;
+        )</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>@If(@TextToNumber(@Subset(@V4UserAccess(@DbName);1))&lt;3)</formula>
+      </code>
+    </action>
+    <action title="Set Password Fields" showinbar="false" hide="web">
+      <code event="click">
+        <formula>CheckPasswordSave:=CheckPassword;
 PasswordGracePeriodSave:=PasswordGracePeriod;
 PasswordChangeIntervalSave:=PasswordChangeInterval;
 HTTPPasswordForceChangeSave:=HTTPPasswordForceChange;
@@ -360,23 +415,35 @@ HTTPPasswordForceChange);
                      )
 );
 @Return(@Prompt([Ok];"Insufficient Access";"You do not have sufficient access in the Domino Directory to complete this action."))
-)</formula></code><code event='hidewhen'><formula>@If(@TextToNumber(@Subset(@V4UserAccess(@DbName);1))&lt;3) | @If(@Subset(@DbName;1) = "")</formula></code></action>
-<action title='Categori_ze' showinmenu='false' showinbar='false' systemcommand='categorize'/>
-<sharedactionref id='40'>
-<action title='Add to Sametime Contacts...' hide='web'><code event='click'><formula
->Who := @If(form="Group";ListName;@Subset(fullname;1));
+)</formula>
+      </code>
+      <code event="hidewhen">
+        <formula>@If(@TextToNumber(@Subset(@V4UserAccess(@DbName);1))&lt;3) | @If(@Subset(@DbName;1) = "")</formula>
+      </code>
+    </action>
+    <action title="Categori_ze" showinmenu="false" showinbar="false" systemcommand="categorize"/>
+    <sharedactionref id="40">
+      <action title="Add to Sametime Contacts..." hide="web">
+        <code event="click">
+          <formula>Who := @If(form="Group";ListName;@Subset(fullname;1));
 CN1 := @Trim(@Name([Abbreviate]; Who));
 Rname:=@If(@Contains(CN1; "@"); @Left(CN1; "@");CN1);
 @If(@TextToNumber(@Version) &lt; 250;"";
-@Command([AddToIMContactList];Rname))</formula></code><code event='hidewhen'><formula
->@TextToNumber(@Version) &lt; 250</formula></code></action></sharedactionref>
-<action title='_Edit Document' showinbar='false' systemcommand='edit'/>
-<action title='Send Docu_ment' showinbar='false' systemcommand='send'/>
-<action title='_Forward' showinbar='false' systemcommand='forward'/>
-<action title='_Move To Folder...' showinbar='false' systemcommand='movetofolder'/>
-<action title='_Remove From Folder' showinbar='false' systemcommand='removefromfolder'/>
-<action title='Send Upgrade Notifications' icon='1' hide='web'><code event='click'><lotusscript
->Sub Click(Source As Button)
+@Command([AddToIMContactList];Rname))</formula>
+        </code>
+        <code event="hidewhen">
+          <formula>@TextToNumber(@Version) &lt; 250</formula>
+        </code>
+      </action>
+    </sharedactionref>
+    <action title="_Edit Document" showinbar="false" systemcommand="edit"/>
+    <action title="Send Docu_ment" showinbar="false" systemcommand="send"/>
+    <action title="_Forward" showinbar="false" systemcommand="forward"/>
+    <action title="_Move To Folder..." showinbar="false" systemcommand="movetofolder"/>
+    <action title="_Remove From Folder" showinbar="false" systemcommand="removefromfolder"/>
+    <action title="Send Upgrade Notifications" icon="1" hide="web">
+      <code event="click">
+        <lotusscript>Sub Click(Source As Button)
 	
 	On Error Resume Next
 	
@@ -423,56 +490,128 @@ Rname:=@If(@Contains(CN1; "@"); @Left(CN1; "@");CN1);
 	
 	Exit Sub
 	
-End Sub</lotusscript></code><code event='hidewhen'><formula>@If(@IsNotMember(@UserRoles;"[NetModifier]":"[UserModifier]"))</formula></code></action></actionbar>
-<column sort='ascending' hidedetailrows='false' itemname='CompanyName' width='17.2500'
- resizable='true' separatemultiplevalues='true' sortnoaccent='true' sortnocase='true'
- showaslinks='true'><font size='9pt'/><columnheader title='Company'><font
- size='9pt'/></columnheader></column>
-<column sort='ascending' hidedetailrows='false' itemname='lastnamesort' width='10'
- resizable='true' separatemultiplevalues='false' sortnoaccent='false' sortnocase='true'
- showaslinks='false'><columnheader title='lastname'><font size='9pt' style='bold'/></columnheader><code
- event='value'><formula>LastName</formula></code></column>
-<column hidedetailrows='false' itemname='FirstName' width='10' resizable='true'
- separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='false'><columnheader
- title='firstname'><font size='9pt' style='bold'/></columnheader></column>
-<column sort='ascending' hidedetailrows='false' itemname='LastName' width='10'
- resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
- showaslinks='false'><columnheader title='name'><font size='9pt' style='bold'/></columnheader></column>
-<column hidedetailrows='false' itemname='$29' width='18.6250' resizable='true'
- separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
- title='FullName'><font size='9pt' style='bold'/></columnheader><code event='value'><formula
->@Name([Abbreviate];FullName)</formula></code></column>
-<column hidedetailrows='false' listseparator='newline' itemname='department'
- width='16' resizable='true' separatemultiplevalues='false' sortnoaccent='true'
- sortnocase='true' showaslinks='true'><font size='9pt'/><columnheader title='Department'><font
- size='9pt'/></columnheader><datetimeformat legacy='true' show='date' date='yearmonthday'
- time='hourminutesecond' zone='never'/><numberformat legacy='true' format='general'
- digits='2' punctuated='false' parens='false' percent='false' bytes='false'/><code
- event='value'><formula>Department</formula></code></column>
-<column hidedetailrows='false' itemname='CompanyName' width='17.2500' resizable='true'
- separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='true'><font
- size='9pt'/><columnheader title='Company'><font size='9pt'/></columnheader></column>
-<column hidedetailrows='false' listseparator='comma' itemname='mail' width='18.6250'
- resizable='true' separatemultiplevalues='false' sortnoaccent='true' sortnocase='true'
- showaslinks='true'><font size='9pt'/><columnheader title='E-Mail'><font size='9pt'/></columnheader><datetimeformat
- legacy='true' show='date' date='yearmonthday' time='hourminutesecond' zone='never'/><code
- event='value'><formula>name := @Name([Abbreviate]; @Subset(FullName;1));
-@If(MailDomain != "" &amp; MailAddress != ""; @Name([Abbreviate];MailAddress) + " @ " + MailDomain; MailAddress != ""; @Name([Abbreviate];MailAddress);MailDomain != ""; name + " @ " + MailDomain;  name)</formula></code></column>
-<column hidedetailrows='false' itemname='sex' width='10' resizable='true'
- separatemultiplevalues='false' sortnoaccent='true' sortnocase='true' showaslinks='true'><font
- size='9pt'/><columnheader title='Sex'><font size='9pt'/></columnheader><code
- event='value'><formula>Sex</formula></code></column>
-<column hidedetailrows='false' itemname='title' width='10' resizable='true'
- separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
- title='Title'><font size='9pt'/></columnheader><code event='value'><formula
->Title</formula></code></column>
-<column hidedetailrows='false' itemname='job' width='10' resizable='true'
- separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
- title='Job Title'><font size='9pt'/></columnheader><code event='value'><formula
->JobTitle</formula></code></column>
-<column hidedetailrows='false' itemname='Location' width='10' resizable='true'
- separatemultiplevalues='false' sortnoaccent='false' sortnocase='true' showaslinks='false'><columnheader
- title='Location'><font size='9pt'/></columnheader></column>
-<item name='$TYPE'><text>$SUBVIEW</text></item>
-<item name='$TABLEFORMAT' sign='true'><text>LastName\Last Name:15;FirstName\First Name:15;PhoneNumber\Phone Number:15</text></item></view>
-
+End Sub
+</lotusscript>
+      </code>
+      <code event="hidewhen">
+        <formula>@If(@IsNotMember(@UserRoles;"[NetModifier]":"[UserModifier]"))</formula>
+      </code>
+    </action>
+  </actionbar>
+  <column sort="ascending" hidedetailrows="false" itemname="CompanyName" width="17.2500" resizable="true" separatemultiplevalues="true" sortnoaccent="true" sortnocase="true" showaslinks="true">
+    <font size="9pt"/>
+    <columnheader title="Company">
+      <font size="9pt"/>
+    </columnheader>
+  </column>
+  <column sort="ascending" hidedetailrows="false" itemname="lastnamesort" width="10" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <columnheader title="lastname">
+      <font size="9pt" style="bold"/>
+    </columnheader>
+    <code event="value">
+      <formula>LastName</formula>
+    </code>
+  </column>
+  <column hidedetailrows="false" itemname="FirstName" width="10" resizable="true" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="false">
+    <columnheader title="firstname">
+      <font size="9pt" style="bold"/>
+    </columnheader>
+  </column>
+  <column sort="ascending" hidedetailrows="false" itemname="LastName" width="10" resizable="true" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="false">
+    <columnheader title="name">
+      <font size="9pt" style="bold"/>
+    </columnheader>
+  </column>
+  <column hidedetailrows="false" itemname="$29" width="18.6250" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <columnheader title="FullName">
+      <font size="9pt" style="bold"/>
+    </columnheader>
+    <code event="value">
+      <formula>@Name([Abbreviate];FullName)</formula>
+    </code>
+  </column>
+  <column hidedetailrows="false" listseparator="newline" itemname="department" width="16" resizable="true" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="true">
+    <font size="9pt"/>
+    <columnheader title="Department">
+      <font size="9pt"/>
+    </columnheader>
+    <datetimeformat legacy="true" show="date" date="yearmonthday" time="hourminutesecond" zone="never"/>
+    <numberformat legacy="true" format="general" digits="2" punctuated="false" parens="false" percent="false" bytes="false"/>
+    <code event="value">
+      <formula>Department</formula>
+    </code>
+  </column>
+  <column hidedetailrows="false" itemname="CompanyName" width="17.2500" resizable="true" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="true">
+    <font size="9pt"/>
+    <columnheader title="Company">
+      <font size="9pt"/>
+    </columnheader>
+  </column>
+  <column hidedetailrows="false" listseparator="comma" itemname="mail" width="18.6250" resizable="true" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="true">
+    <font size="9pt"/>
+    <columnheader title="E-Mail">
+      <font size="9pt"/>
+    </columnheader>
+    <datetimeformat legacy="true" show="date" date="yearmonthday" time="hourminutesecond" zone="never"/>
+    <code event="value">
+      <formula>name := @Name([Abbreviate]; @Subset(FullName;1));
+@If(MailDomain != "" &amp; MailAddress != ""; @Name([Abbreviate];MailAddress) + " @ " + MailDomain; MailAddress != ""; @Name([Abbreviate];MailAddress);MailDomain != ""; name + " @ " + MailDomain;  name)</formula>
+    </code>
+  </column>
+  <column hidedetailrows="false" itemname="sex" width="10" resizable="true" separatemultiplevalues="false" sortnoaccent="true" sortnocase="true" showaslinks="true">
+    <font size="9pt"/>
+    <columnheader title="Sex">
+      <font size="9pt"/>
+    </columnheader>
+    <code event="value">
+      <formula>Sex</formula>
+    </code>
+  </column>
+  <column hidedetailrows="false" itemname="title" width="10" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <columnheader title="Title">
+      <font size="9pt"/>
+    </columnheader>
+    <code event="value">
+      <formula>Title</formula>
+    </code>
+  </column>
+  <column hidedetailrows="false" itemname="job" width="10" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <columnheader title="Job Title">
+      <font size="9pt"/>
+    </columnheader>
+    <code event="value">
+      <formula>JobTitle</formula>
+    </code>
+  </column>
+  <column hidedetailrows="false" itemname="Location" width="10" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <columnheader title="Location">
+      <font size="9pt"/>
+    </columnheader>
+  </column>
+  <column hidedetailrows="false" itemname="$1" width="10" resizable="true" separatemultiplevalues="false" sortnoaccent="false" sortnocase="true" showaslinks="false">
+    <columnheader title="Birthday">
+      <font size="9pt" style="bold"/>
+    </columnheader>
+    <datetimeformat show="date" date="yearmonthday" fourdigityear="true" time="hourminutesecond" zone="never" dateformat="yearmonthdayweekday" dayformat="twodigitday" monthformat="twodigitmonth" yearformat="fourdigityear" weekdayformat="shortname" dateseparator1="-" dateseparator2="-" dateseparator3=" " timeseparator=":" timeformat24="true" preference="usersetting"/>
+    <numberformat format="general" punctuated="false" parens="false" percent="false" bytes="false"/>
+    <code event="value">
+      <formula>@Text(@Year(birthday)) +"-"+
+@If(
+	@Length(@Text(@Month(birthday))) &lt;2;
+		"0" + @Text(@Month(birthday));
+		@Text(@Month(birthday))
+	)  +"-"+
+@If(
+	@Length(@Text(@Day(birthday))) &lt;2;
+		"0" + @Text(@Day(birthday));
+		@Text(@Day(birthday))
+	)</formula>
+    </code>
+  </column>
+  <item name="$TYPE">
+    <text>$SUBVIEW</text>
+  </item>
+  <item name="$TABLEFORMAT" sign="true">
+    <text>LastName\Last Name:15;FirstName\First Name:15;PhoneNumber\Phone Number:15</text>
+  </item>
+</view>
